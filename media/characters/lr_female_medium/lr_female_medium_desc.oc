@@ -1,0 +1,17 @@
+lr_female_medium_desc extends  base/StandardG3CharacterDesc
+{
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#lr_female_standard/list_actions_animations,
+			#lr_female_standard/list_dialog_animations,
+			#lr_female_standard/list_walks_animations,
+			#lr_female_standard/list_runs_animations,
+			#lr_female_standard/list_guard_animations,
+			#lr_female_standard/list_idles_animations,
+			#lr_female_standard/list_fight_animations,
+			#lr_female_standard/list_businesses_animations,
+		);
+	};
+}

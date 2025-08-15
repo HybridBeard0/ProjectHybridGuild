@@ -1,0 +1,12 @@
+base/chariotg3characterdesc
+{
+	Visual = "lr_female_chariot";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#lr_female_standard/list_chariot_animations,
+		);
+	};
+	
+}
