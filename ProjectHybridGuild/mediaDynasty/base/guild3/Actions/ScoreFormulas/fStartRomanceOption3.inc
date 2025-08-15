@@ -1,2 +1,0 @@
-"SourceScoreFormula" = "(Perception + 5) + Source.Level";	
-"TargetScoreFormula" = "(Target.Perception + 5) + Target.Level * (0.85 + ((((Source.DoesHaveTag.Catholic && Target.DoesHaveTag.Protestant) || (Source.DoesHaveTag.Protestant && Target.DoesHaveTag.Catholic)) * 0.5) + (((Source.DoesHaveTag.Religious && Target.DoesNotHaveTag.Religious) || (Source.DoesNotHaveTag.Religious && Target.DoesHaveTag.Religious)) * 0.25)))";

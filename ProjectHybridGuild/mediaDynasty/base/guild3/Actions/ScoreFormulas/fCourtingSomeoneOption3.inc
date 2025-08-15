@@ -1,2 +1,0 @@
-"SourceScoreFormula" = "RelationshipScore/50 + (Perception + 5) + SocialInteractionsOppositeSex + Target.DoesHaveTag.RomPrefMoreDistance";	
-"TargetScoreFormula" = "(Target.Perception + 5) * (0.5 + ((((Source.DoesHaveTag.Catholic && Target.DoesHaveTag.Protestant) || (Source.DoesHaveTag.Protestant && Target.DoesHaveTag.Catholic)) * 1.5) + (((Source.DoesHaveTag.Religious && Target.DoesNotHaveTag.Religious) || (Source.DoesNotHaveTag.Religious && Target.DoesHaveTag.Religious)) * 3)))";

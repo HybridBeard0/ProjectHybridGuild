@@ -1,5 +1,0 @@
-citizen2 extends G3Character
-{
-	static var Description = #lr_male_fat/citizen2_desc;
-
-};

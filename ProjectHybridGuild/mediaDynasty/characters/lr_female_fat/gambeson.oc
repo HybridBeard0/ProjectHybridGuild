@@ -1,5 +1,0 @@
-gambeson extends G3Character
-{
-	static var Description = #lr_female_fat/gambeson_desc;
-
-};

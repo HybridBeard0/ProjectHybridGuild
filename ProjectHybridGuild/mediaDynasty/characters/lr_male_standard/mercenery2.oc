@@ -1,5 +1,0 @@
-mercenery2 extends G3Character
-{
-	static var Description = #lr_male_standard/mercenery2_desc;
-
-};
