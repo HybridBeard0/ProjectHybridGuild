@@ -1,0 +1,9 @@
+inn_03 extends BuildingVisualUpgrade
+{
+	static var Description = ActorDesc
+	{
+		Visual = "inn_03";
+	};
+	BusinessLevel = 3;
+	UpgradeOf = inn;	
+}

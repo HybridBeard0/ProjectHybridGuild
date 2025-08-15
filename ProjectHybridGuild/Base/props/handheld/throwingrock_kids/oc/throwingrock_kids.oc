@@ -1,0 +1,13 @@
+throwingrock_kids extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "throwingrock_kids";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+	EditorName = "ThrowingRock_kids";
+	EditorCategory = 3;		
+}

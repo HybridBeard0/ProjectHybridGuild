@@ -1,0 +1,7 @@
+priest extends G3Character
+{
+	static var Description = #lr_male_fat/priest_desc;
+
+	ProfessionId = "Priest";
+	DateOfBirth = 1376.21; // Characters have an eternal life span by default (unless a finite life expectancy is assigned)
+};

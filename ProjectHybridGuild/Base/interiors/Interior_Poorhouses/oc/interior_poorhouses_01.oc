@@ -1,0 +1,8 @@
+interior_poorhouses_01 extends InteriorScene
+{
+	static var Description = #Interior_Poorhouses/interior_poorhouses_01_anim_desc;
+	
+	EditorName = "Interior Poorhouses 01";
+	EditorIcon = "media/UserInterface/BusinessIcons/Other/poorhouse_01.png";
+	EditorCategory = 0;
+}

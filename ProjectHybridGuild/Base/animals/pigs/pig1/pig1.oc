@@ -1,0 +1,9 @@
+pig1 extends G3Animal
+{
+	static var Description = #pig1/pig1_desc;
+	Behaviour = "Pig";
+	EditorName = "Pig";
+	
+	MaxRoamingDistance = 340;
+    RoamingDivFactor = 2;
+};

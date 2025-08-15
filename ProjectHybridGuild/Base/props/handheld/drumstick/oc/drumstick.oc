@@ -1,0 +1,14 @@
+drumstick extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "drumstick";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";		
+	};
+	EditorName = "Drumstick";
+	EditorIcon = "media/UserInterface/PropIcons/Longsword.png";
+	EditorCategory = 3;
+}

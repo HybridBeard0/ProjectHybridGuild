@@ -1,0 +1,21 @@
+interiorprop_officeswindow extends G3PropsInstance
+{
+	static var Description = G3PropDesc
+	{
+		Visual = "interiorprop_officeswindow";
+		
+		Interaction = G3ActorInteraction 
+		{
+			Name = "$props.name.OfficesOverview";
+			TooltipText = "$action.OpenOfficesOverview";
+			TooltipIcon = "MoreInfos";
+			UiEvent = "ToggleOfficesWindow";
+		};
+	};
+	
+	Interactable = true;
+	
+	EditorName = "Interiorprop OfficesWindow";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

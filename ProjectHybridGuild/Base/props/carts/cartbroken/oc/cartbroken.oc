@@ -1,0 +1,10 @@
+cartbroken extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "cartbroken";
+	};
+	EditorName = "cartbroken";
+	EditorIcon = "media/UserInterface/PropIcons/cartbroken.png";
+	EditorCategory = 3;		
+}

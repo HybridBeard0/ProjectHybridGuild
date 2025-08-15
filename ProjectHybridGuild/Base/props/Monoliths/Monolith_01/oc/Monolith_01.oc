@@ -1,0 +1,15 @@
+Monolith_01 extends G3PropsInstance
+{
+	CustomFadeAlpha = 1.0;
+
+	Destructible = false;
+	BlocksBuildings = true;
+
+	static var Description = ActorDesc
+	{
+		Visual = "monolith_01";
+	};
+	EditorName = "Monolith_01";
+	EditorIcon = "media/UserInterface/PropIcons/Cliff01.png";
+	EditorCategory = 2;		
+}

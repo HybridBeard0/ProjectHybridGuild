@@ -1,0 +1,11 @@
+G3ActorDesc
+{
+	Visual = "building_broken_small";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#buildingbrokensmall/list_walks_animations,
+		);
+	};
+}

@@ -1,0 +1,13 @@
+/*tallgrass_mesh extends G3PropsInstance
+{
+
+	static var Description = ActorDesc
+	{
+		Visual = "tallgrass_mesh";
+	};
+	EditorName = "Tallgrass mesh";
+	EditorIcon = "media/UserInterface/PropIcons/Tallgrassmesh.png";
+	EditorCategory = 1;	
+
+}
+*/

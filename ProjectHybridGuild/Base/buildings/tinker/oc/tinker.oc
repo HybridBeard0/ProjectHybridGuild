@@ -1,0 +1,405 @@
+tinker extends Building
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "tinker";
+		
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc {
+					Name = "streetconnection";
+					Position = ( -5.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "enter";
+					Position = ( 0.0, 140.0, 25.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+				},
+				SnapPointDesc {
+					Name = "exit";
+					Position = ( 0.0, 140.0, 25.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+
+				SnapPointDesc {
+					Name = "master01";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Master"; // actions: OverseeWorkers, WhipTransporters, MotivateWorkers, Smear, Commend
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "master02";
+					Position = ( -180.0, 60.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 110.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Master"; // actions: OverseeWorkers, WhipTransporters, MotivateWorkers, Smear, Commend
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "master03";
+					Position = ( -170.0, 110.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 90.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Master"; // actions: OverseeWorkers, WhipTransporters, MotivateWorkers, Smear, Commend
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "artefact01";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Artefact"; // actions: ApplyPowderOfHygeia, UsePestAway, UseStrongDoorLatch, ApplyMuralPainting, ApplySlateTile, FreemasonsGift
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "artefact02";
+					Position = ( -188.0, 272.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 210.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Artefact"; // actions: ApplyPowderOfHygeia, UsePestAway, UseStrongDoorLatch, ApplyMuralPainting, ApplySlateTile, FreemasonsGift
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "artefact03";
+					Position = ( 215.0, 45.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Artefact"; // actions: ApplyPowderOfHygeia, UsePestAway, UseStrongDoorLatch, ApplyMuralPainting, ApplySlateTile, FreemasonsGift
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "intruder01";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Intruder"; // actions: AuditBooks, Vandalize, CatchRats, RaidTheKitchens, Sabotage
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "intruder02";
+					Position = ( -150.0, 345.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 80.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Intruder"; // actions: AuditBooks, Vandalize, CatchRats, RaidTheKitchens, Sabotage
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "raid01";
+					Position = ( 95.0, 50.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Intruder"; // actions: AuditBooks, Vandalize, CatchRats, RaidTheKitchens, Sabotage
+						},
+					};
+				},
+
+				SnapPointDesc
+				{
+					Name = "CollectProtectionMoney";
+					Position = ( -120.0, 20.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 120.0 );
+				},
+
+				SnapPointDesc
+				{
+					Name = "frontstore00";
+					Position = ( -42.0, 112.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 110.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "shopping";
+							Animation = "LookAtObject";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "shopping";
+							Animation = "talk1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "frontstore01";
+					Position = ( -55.0, 75.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 115.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "shopping";
+							Animation = "LookAtObject";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "shopping";
+							Animation = "talk1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "frontstore02";
+					Position = ( -27.0, 40.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "shopping";
+							Animation = "LookAtObject";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "shopping";
+							Animation = "talk1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee01"; // sitting in front of table
+					Animations = array 
+					{
+						G3SnapPointAnimation {
+							Context = "idle";
+							Animation = "SitFadeIn";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "sit_idle1";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation {
+							Context = "idle";
+							Animation = "SitFadeOut";
+						},
+						G3SnapPointAnimation {
+							Context = "work";
+							Animation = "SitFadeIn";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "work";
+							Animation = "SitBinding";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation {
+							Context = "work";
+							Animation = "SitFadeOut";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee02"; // standing at the anvil
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "work";
+							Animation = "blacksmith1";
+							Prop = "hammer/hammer";
+							Repeat = 2;
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "work";
+							Animation = "LookAtObject";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "work";
+							Animation = "blacksmith1";
+							Prop = "hammer/hammer";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee03"; // grinder
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "ManipulateMiddle";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "Interior_WorkTable3";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "Interior_WorkTable4";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "ManipulateMiddle";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "Interior_WorkTable3";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee04"; // grinder
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "ManipulateMiddle";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "Interior_WorkTable3";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "Interior_WorkTable4";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "WipeForehead";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "Interior_WorkTable3";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee05"; // frontdoor
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "work";
+							Animation = "sweep1";
+							Repeat = 2;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee06"; // corner
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "work";
+							Animation = "idle_readbook1";
+							Prop = "workingplan/workingplan";
+							Repeat = 3;
+						},
+					};
+				},
+			};
+		};
+	};
+	EditorName = "Tinker";
+	EditorIcon = "media/UserInterface/Icons/BuildingImages/Businesses/Tinker.png";
+	EditorCategory = 1;	
+}

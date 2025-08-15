@@ -1,0 +1,11 @@
+lr_female_fat/lr_female_fat_desc
+
+{
+	Visual = "citizen3female_fat_game";
+
+	Poor = false;
+	Rich = true;
+	Male = false;
+	TrotSpeed = 0.000;
+	AverageAge = 0.000;
+}

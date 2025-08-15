@@ -1,0 +1,11 @@
+ActorDesc
+{
+	Visual = "ground_dust";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#Ground_Dust/list_walks_animations,
+		);
+	};
+}

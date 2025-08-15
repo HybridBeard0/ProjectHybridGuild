@@ -1,0 +1,9 @@
+InteriorProp_SoundRats extends InteriorProp_Sounds/InteriorProp_SoundBase
+{
+	SoundSettings = G3SoundSettings {
+		EditorName = "Rats";
+		MinInterval = 2.0;
+		MaxInterval = 12.0;
+	};
+	EditorName = "Interior sound_prop rats";
+}

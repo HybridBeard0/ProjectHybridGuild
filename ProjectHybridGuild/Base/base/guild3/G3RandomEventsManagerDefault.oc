@@ -1,0 +1,2405 @@
+G3RandomEventsManagerDefault extends RandomEventsManager
+{
+	Groups = array
+	{
+		RandomEventsGroup
+		{
+			Name = "G3World::TradeMarkets"; // This group is partially hard-coded. Each trade market of the current map is automatically registered as possible receiver for these events
+			
+			InitialDelayYearsMin = 0.5; // The minimum delay until the first occurrence of an event from this group after the start of a game
+			InitialDelayYearsMax = 1.5; // The maximum delay until the first occurrence of an event from this group after the start of a game
+			RepeatDelayYearsMin = 0.5; // The minimum delay until the a new event gets triggered after having triggered once. Note: some events (MarketRandomEventStart) can add an additional delay on top.
+			RepeatDelayYearsMax = 1.5; // The maximum delay until the a new event gets triggered after having triggered once. Note: some events (MarketRandomEventStart) can add an additional delay on top.
+			
+			RequiresReceiver = true; // Determines if this group can trigger events even when there are no receivers registered
+			TriggerParallelEventsForEachReceiver = false; // If true, each receiver will get an event triggered for it after 1 delay and each receiver has its own delay until the next event triggers. Otherwise, a single receiver is picked each time from all registered receivers and there is only a shared delay between events.
+
+			// ************* MARKET RANDOM EVENT START
+			// NOTE: Currently MarketRandomEvents only deal with FarTradeMarkets!
+			EventsPool = array 
+			{
+				MarketRandomEventStart
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 2;
+					Descriptions = array 
+					{
+						"FarTradeOpportunityOfferRawMaterial"
+					};
+					IsOffer = true;
+					ItemType = 1; // EG3GameItemTypes (TypeProduct = 1, TypeFartrade = 2, TypeSocial = 3)
+					ProductType = 1; // EProductsType
+					DurationYears = 0.5;
+					DurationVariationPercentage = 15; // +/- 15% of DurationYears
+					ItemPriceVariationMultiplicator = 0.66; // smaller then 1 -> price decrease
+				},
+				MarketRandomEventStart
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 2;
+					Descriptions = array 
+					{
+						"FarTradeOpportunityOfferFood"
+					};
+					IsOffer = true;
+					ItemType = 1; // EG3GameItemTypes (TypeProduct = 1, TypeFartrade = 2, TypeSocial = 3)
+					ProductType = 2; // EProductsType (Food = 2)
+					DurationYears = 0.5;
+					DurationVariationPercentage = 15; // +/- 15% of DurationYears
+					ItemPriceVariationMultiplicator = 0.66; // smaller then 1 -> price decrease
+				},
+				MarketRandomEventStart
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 2;
+					Descriptions = array 
+					{
+						"FarTradeOpportunityOfferWeapon"
+					};
+					IsOffer = true;
+					ItemType = 1; // EG3GameItemTypes (TypeProduct = 1, TypeFartrade = 2, TypeSocial = 3)
+					ProductType = 3; // EProductsType
+					DurationYears = 0.5;
+					DurationVariationPercentage = 15; // +/- 15% of DurationYears
+					ItemPriceVariationMultiplicator = 0.66; // smaller then 1 -> price decrease
+				},
+				MarketRandomEventStart
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 2;
+					Descriptions = array 
+					{
+						"FarTradeOpportunityOfferClothing"
+					};
+					IsOffer = true;
+					ItemType = 1; // EG3GameItemTypes (TypeProduct = 1, TypeFartrade = 2, TypeSocial = 3)
+					ProductType = 4; // EProductsType
+					DurationYears = 0.5;
+					DurationVariationPercentage = 15; // +/- 15% of DurationYears
+					ItemPriceVariationMultiplicator = 0.66; // smaller then 1 -> price decrease
+				},
+				MarketRandomEventStart
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 2;
+					Descriptions = array 
+					{
+						"FarTradeOpportunityOfferTrinkets"
+					};
+					IsOffer = true;
+					ItemType = 1; // EG3GameItemTypes (TypeProduct = 1, TypeFartrade = 2, TypeSocial = 3)
+					ProductType = 5; // EProductsType
+					DurationYears = 0.5;
+					DurationVariationPercentage = 15; // +/- 15% of DurationYears
+					ItemPriceVariationMultiplicator = 0.66; // smaller then 1 -> price decrease
+				},
+				MarketRandomEventStart
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 2;
+					Descriptions = array 
+					{
+						"FarTradeOpportunityOfferLuxury"
+					};
+					IsOffer = true;
+					ItemType = 1; // EG3GameItemTypes (TypeProduct = 1, TypeFartrade = 2, TypeSocial = 3)
+					ProductType = 6; // EProductsType
+					DurationYears = 0.5;
+					DurationVariationPercentage = 15; // +/- 15% of DurationYears
+					ItemPriceVariationMultiplicator = 0.66; // smaller then 1 -> price decrease
+				},
+				MarketRandomEventStart
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 2;
+					Descriptions = array 
+					{
+						"FarTradeOpportunityOfferTinctury"
+					};
+					IsOffer = true;
+					ItemType = 1; // EG3GameItemTypes (TypeProduct = 1, TypeFartrade = 2, TypeSocial = 3)
+					ProductType = 7; // EProductsType
+					DurationYears = 0.5;
+					DurationVariationPercentage = 15; // +/- 15% of DurationYears
+					ItemPriceVariationMultiplicator = 0.66; // smaller then 1 -> price decrease
+				},
+				MarketRandomEventStart
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 2;
+					Descriptions = array 
+					{
+						"FarTradeOpportunityOfferComponents"
+					};
+					IsOffer = true;
+					ItemType = 1; // EG3GameItemTypes (TypeProduct = 1, TypeFartrade = 2, TypeSocial = 3)
+					ProductType = 8; // EProductsType
+					DurationYears = 0.5;
+					DurationVariationPercentage = 15; // +/- 15% of DurationYears
+					ItemPriceVariationMultiplicator = 0.66; // smaller then 1 -> price decrease
+				},
+				MarketRandomEventStart
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 2;
+					Descriptions = array 
+					{
+						"FarTradeOpportunityOfferTransportation"
+					};
+					IsOffer = true;
+					ItemType = 1; // EG3GameItemTypes (TypeProduct = 1, TypeFartrade = 2, TypeSocial = 3)
+					ProductType = 9; // EProductsType
+					DurationYears = 0.5;
+					DurationVariationPercentage = 15; // +/- 15% of DurationYears
+					ItemPriceVariationMultiplicator = 0.66; // smaller then 1 -> price decrease
+				},
+				MarketRandomEventStart
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 2;
+					Descriptions = array 
+					{
+						"FarTradeOpportunityOfferLivestock"
+					};
+					IsOffer = true;
+					ItemType = 1; // EG3GameItemTypes (TypeProduct = 1, TypeFartrade = 2, TypeSocial = 3)
+					ProductType = 10; // EProductsType
+					DurationYears = 0.5;
+					DurationVariationPercentage = 15; // +/- 15% of DurationYears
+					ItemPriceVariationMultiplicator = 0.66; // smaller then 1 -> price decrease
+				},
+				
+				
+				MarketRandomEventStart
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 2;
+					Descriptions = array 
+					{
+						"FarTradeOpportunityDemandRawMaterials"
+					};
+					IsDemand = true;
+					ItemType = 1; // EG3GameItemTypes (TypeProduct = 1, TypeFartrade = 2, TypeSocial = 3)
+					ProductType = 1; // EProductsType
+					DurationYears = 0.5;
+					DurationVariationPercentage = 15; // +/- 15% of DurationYears
+					ItemPriceVariationMultiplicator = 1.5; // smaller then 1 -> price decrease
+				},
+				MarketRandomEventStart
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 2;
+					Descriptions = array 
+					{
+						"FarTradeOpportunityDemandFood"
+					};
+					IsDemand = true;
+					ItemType = 1; // EG3GameItemTypes (TypeProduct = 1, TypeFartrade = 2, TypeSocial = 3)
+					ProductType = 2; // EProductsType (Food = 2)
+					DurationYears = 0.5;
+					DurationVariationPercentage = 15; // +/- 15% of DurationYears
+					ItemPriceVariationMultiplicator = 1.5; // smaller then 1 -> price decrease
+				},
+				MarketRandomEventStart
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 2;
+					Descriptions = array 
+					{
+						"FarTradeOpportunityDemandWeapon"
+					};
+					IsDemand = true;
+					ItemType = 1; // EG3GameItemTypes (TypeProduct = 1, TypeFartrade = 2, TypeSocial = 3)
+					ProductType = 3; // EProductsType
+					DurationYears = 0.5;
+					DurationVariationPercentage = 15; // +/- 15% of DurationYears
+					ItemPriceVariationMultiplicator = 1.5; // smaller then 1 -> price decrease
+				},
+				MarketRandomEventStart
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 2;
+					Descriptions = array 
+					{
+						"FarTradeOpportunityDemandClothing"
+					};
+					IsDemand = true;
+					ItemType = 1; // EG3GameItemTypes (TypeProduct = 1, TypeFartrade = 2, TypeSocial = 3)
+					ProductType = 4; // EProductsType
+					DurationYears = 0.5;
+					DurationVariationPercentage = 15; // +/- 15% of DurationYears
+					ItemPriceVariationMultiplicator = 1.5; // smaller then 1 -> price decrease
+				},
+				MarketRandomEventStart
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 2;
+					Descriptions = array 
+					{
+						"FarTradeOpportunityDemandTrinkets"
+					};
+					IsDemand = true;
+					ItemType = 1; // EG3GameItemTypes (TypeProduct = 1, TypeFartrade = 2, TypeSocial = 3)
+					ProductType = 5; // EProductsType
+					DurationYears = 0.5;
+					DurationVariationPercentage = 15; // +/- 15% of DurationYears
+					ItemPriceVariationMultiplicator = 1.5; // smaller then 1 -> price decrease
+				},
+				MarketRandomEventStart
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 2;
+					Descriptions = array 
+					{
+						"FarTradeOpportunityDemandLuxury"
+					};
+					IsDemand = true;
+					ItemType = 1; // EG3GameItemTypes (TypeProduct = 1, TypeFartrade = 2, TypeSocial = 3)
+					ProductType = 6; // EProductsType
+					DurationYears = 0.5;
+					DurationVariationPercentage = 15; // +/- 15% of DurationYears
+					ItemPriceVariationMultiplicator = 1.5; // smaller then 1 -> price decrease
+				},
+				MarketRandomEventStart
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 2;
+					Descriptions = array 
+					{
+						"FarTradeOpportunityDemandTinctures"
+					};
+					IsDemand = true;
+					ItemType = 1; // EG3GameItemTypes (TypeProduct = 1, TypeFartrade = 2, TypeSocial = 3)
+					ProductType = 7; // EProductsType
+					DurationYears = 0.5;
+					DurationVariationPercentage = 15; // +/- 15% of DurationYears
+					ItemPriceVariationMultiplicator = 1.5; // smaller then 1 -> price decrease
+				},
+				MarketRandomEventStart
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 2;
+					Descriptions = array 
+					{
+						"FarTradeOpportunityDemandComponents"
+					};
+					IsDemand = true;
+					ItemType = 1; // EG3GameItemTypes (TypeProduct = 1, TypeFartrade = 2, TypeSocial = 3)
+					ProductType = 8; // EProductsType
+					DurationYears = 0.5;
+					DurationVariationPercentage = 15; // +/- 15% of DurationYears
+					ItemPriceVariationMultiplicator = 1.5; // smaller then 1 -> price decrease
+				},
+				MarketRandomEventStart
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 2;
+					Descriptions = array 
+					{
+						"FarTradeOpportunityDemandTransportation"
+					};
+					IsDemand = true;
+					ItemType = 1; // EG3GameItemTypes (TypeProduct = 1, TypeFartrade = 2, TypeSocial = 3)
+					ProductType = 9; // EProductsType
+					DurationYears = 0.5;
+					DurationVariationPercentage = 15; // +/- 15% of DurationYears
+					ItemPriceVariationMultiplicator = 1.5; // smaller then 1 -> price decrease
+				},
+				MarketRandomEventStart
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 2;
+					Descriptions = array 
+					{
+						"FarTradeOpportunityDemandLivestock"
+					};
+					IsDemand = true;
+					ItemType = 1; // EG3GameItemTypes (TypeProduct = 1, TypeFartrade = 2, TypeSocial = 3)
+					ProductType = 10; // EProductsType
+					DurationYears = 0.5;
+					DurationVariationPercentage = 15; // +/- 15% of DurationYears
+					ItemPriceVariationMultiplicator = 1.5; // smaller then 1 -> price decrease
+				}
+			};
+		};
+		
+		RandomEventsGroup
+		{
+			Name = "PlayerEvents"; // This group is partially hard-coded. Each player family of the current map is automatically registered as possible receiver for these events
+			
+			InitialDelayYearsMin = 0.5; // The minimum delay until the first occurrence of an event from this group after the start of a game
+			InitialDelayYearsMax = 1.5; // The maximum delay until the first occurrence of an event from this group after the start of a game
+			RepeatDelayYearsMin = 0.5; // The minimum delay until the a new event gets triggered after having triggered once. Note: some events (MarketRandomEventStart) can add an additional delay on top.
+			RepeatDelayYearsMax = 1.5; // The maximum delay until the a new event gets triggered after having triggered once. Note: some events (MarketRandomEventStart) can add an additional delay on top.
+			
+			RequiresReceiver = true; // Determines if this group can trigger events even when there are no receivers registered
+			TriggerParallelEventsForEachReceiver = true; // If true, each receiver will get an event triggered for it after 1 delay and each receiver has its own delay until the next event triggers. Otherwise, a single receiver is picked each time from all registered receivers and there is only a shared delay between events.
+
+			// ************* MARKET RANDOM EVENT START
+			// NOTE: Currently MarketRandomEvents only deal with FarTradeMarkets!
+			EventsPool = array 
+			{
+		// ************* NEUTRAL RANDOM REWARD EVENTS
+				G3RewardEvent
+				{
+					Alignment = 1; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 12;
+					Descriptions = array  // if a string ends with .#.narration, then it will be used as the title for the message. ex : $randomEvents.neutral.1 -> $randomEvents.neutral.1.narration
+					{
+						"RandomEventNeutral1",
+						"RandomEventNeutral2",
+						"RandomEventNeutral3",
+						"RandomEventNeutral4",
+						"RandomEventNeutral5",
+						"RandomEventNeutral6",
+						"RandomEventNeutral7",
+						"RandomEventNeutral8",
+						"RandomEventNeutral9",
+						"RandomEventNeutral10",
+						"RandomEventNeutral11",
+						"RandomEventNeutral12",
+						"RandomEventNeutral13",
+						"RandomEventNeutral14",
+						"RandomEventNeutral15",
+						"RandomEventNeutral16",
+						"RandomEventNeutral17",
+						"RandomEventNeutral18",
+						"RandomEventNeutral19",
+						"RandomEventNeutral20",
+						"RandomEventNeutral21",
+						"RandomEventNeutral22"
+					};
+				},		
+		// ************* POSITIVE RANDOM REWARD EVENTS
+				G3RewardEvent
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 10;
+					Descriptions = array 
+					{
+						"RandomEventPositive1",
+						"RandomEventPositive2",
+						"RandomEventPositive3",
+						"RandomEventPositive4",
+						"RandomEventPositive5"
+					};
+					OpinionRange = array {3, 6}; // values can be negative
+					SourceType = 0; // RandomCharacter
+				},
+				G3RewardEvent
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 5;
+					Descriptions = array 
+					{
+						"RandomEventPositive6",
+						"RandomEventPositive7",
+						"RandomEventPositive8",
+						"RandomEventPositive9",
+						"RandomEventPositive10"
+					};
+					CoinRange = array {5, 10}; // values can be negative
+				},
+				G3RewardEvent
+				{
+					Alignment = 0; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 10;
+					Descriptions = array 
+					{
+						"RandomEventPositive11",
+						"RandomEventPositive12",
+						"RandomEventPositive13",
+						"RandomEventPositive14",
+						"RandomEventPositive15"
+					};	
+					OpinionRange = array {3, 6}; // values can be negative
+					SourceType = 1; // RandomNeighborhood
+				},		  
+
+		// ************* NEGATIVE RANDOM REWARD EVENTS
+				G3RewardEvent
+				{
+					Alignment = 2; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 7;
+					Descriptions = array 
+					{
+						"RandomEventNegative1",
+						"RandomEventNegative2",
+						"RandomEventNegative3",
+						"RandomEventNegative4",
+						"RandomEventNegative5"
+					};
+					OpinionRange = array {-3, -6}; // values can be negative
+					SourceType = 0; // RandomCharacter
+				},
+				G3RewardEvent
+				{
+					Alignment = 2; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 4;
+					Descriptions = array 
+					{
+						"RandomEventNegative6",
+						"RandomEventNegative7",
+						"RandomEventNegative8",
+						"RandomEventNegative9",
+						"RandomEventNegative10"
+					};
+					CoinRange = array {-10, -25}; // values can be negative
+				},
+				G3RewardEvent
+				{
+					Alignment = 2; // AlignmentQualifier (Good = 0, Neutral = 1, Evil = 2)
+					RandomWeight = 4;
+					Descriptions = array 
+					{
+						"RandomEventNegative11",
+						"RandomEventNegative12",
+						"RandomEventNegative13",
+						"RandomEventNegative14",
+						"RandomEventNegative15"
+					};
+					OpinionRange = array {-3, -6}; // values can be negative
+					SourceType = 1; // RandomNeighborhood
+				},
+			};
+		};
+		
+		RandomEventsGroup
+		{
+			Name = "WarEvents";
+			
+			InitialDelayYearsMin = 1.5; // The minimum delay until the first occurrence of an event from this group after the start of a game
+			InitialDelayYearsMax = 2.5; // The maximum delay until the first occurrence of an event from this group after the start of a game
+			RepeatDelayYearsMin = 0.75; // The minimum delay until the a new event gets triggered after having triggered once. Note: some events (MarketRandomEventStart) can add an additional delay on top.
+			RepeatDelayYearsMax = 1.25; // The maximum delay until the a new event gets triggered after having triggered once. Note: some events (MarketRandomEventStart) can add an additional delay on top.
+			
+			RequiresReceiver = false; // Determines if this group can trigger events even when there are no receivers registered
+			TriggerParallelEventsForEachReceiver = false; // If true, each receiver will get an event triggered for it after 1 delay and each receiver has its own delay until the next event triggers. Otherwise, a single receiver is picked each time from all registered receivers and there is only a shared delay between events.
+
+			EventsPool = array 
+			{
+
+				// War is won
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "WarEvent", "Won" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "War1Won";
+								ObjectiveName = "$n.arsenal.event.war.title.1";
+								ObjectiveDescription = "$n.arsenal.event.war.body.1";
+								StartNotification = "WarEvent1Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.1";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "War1Won";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.1";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "WarEventWon";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "WarEvent", "Won" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "War2Won";
+								ObjectiveName = "$n.arsenal.event.war.title.2";
+								ObjectiveDescription = "$n.arsenal.event.war.body.2";
+								StartNotification = "WarEvent2Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.2";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "War2Won";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.2";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "WarEventWon";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "WarEvent", "Won" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "War3Won";
+								ObjectiveName = "$n.arsenal.event.war.title.3";
+								ObjectiveDescription = "$n.arsenal.event.war.body.3";
+								StartNotification = "WarEvent3Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.3";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "War3Won";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.3";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "WarEventWon";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "WarEvent", "Won" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "War4Won";
+								ObjectiveName = "$n.arsenal.event.war.title.4";
+								ObjectiveDescription = "$n.arsenal.event.war.body.4";
+								StartNotification = "WarEvent4Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.4";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "War4Won";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.4";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "WarEventWon";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+				},
+
+				// War is lost
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "WarEvent", "Lost" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "War1Lost";
+								ObjectiveName = "$n.arsenal.event.war.title.1";
+								ObjectiveDescription = "$n.arsenal.event.war.body.1";
+								StartNotification = "WarEvent1Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.1";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "War1Lost";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.1";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "WarEventLost";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "WarEvent", "Lost" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "War2Lost";
+								ObjectiveName = "$n.arsenal.event.war.title.2";
+								ObjectiveDescription = "$n.arsenal.event.war.body.2";
+								StartNotification = "WarEvent2Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.2";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "War2Lost";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.2";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "WarEventLost";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "WarEvent", "Lost" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "War3Lost";
+								ObjectiveName = "$n.arsenal.event.war.title.3";
+								ObjectiveDescription = "$n.arsenal.event.war.body.3";
+								StartNotification = "WarEvent3Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.3";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "War3Lost";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.3";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "WarEventLost";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "WarEvent", "Lost" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "War4Lost";
+								ObjectiveName = "$n.arsenal.event.war.title.4";
+								ObjectiveDescription = "$n.arsenal.event.war.body.4";
+								StartNotification = "WarEvent4Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.4";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "War4Lost";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.4";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "WarEventLost";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+				},
+
+				// War ends in a truce
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "WarEvent", "Truce" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "War1Truce";
+								ObjectiveName = "$n.arsenal.event.war.title.1";
+								ObjectiveDescription = "$n.arsenal.event.war.body.1";
+								StartNotification = "WarEvent1Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.1";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "War1Truce";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.1";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "WarEventTruce";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "WarEvent", "Truce" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "War2Truce";
+								ObjectiveName = "$n.arsenal.event.war.title.2";
+								ObjectiveDescription = "$n.arsenal.event.war.body.2";
+								StartNotification = "WarEvent2Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.2";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "War2Truce";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.2";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "WarEventTruce";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "WarEvent", "Truce" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "War3Truce";
+								ObjectiveName = "$n.arsenal.event.war.title.3";
+								ObjectiveDescription = "$n.arsenal.event.war.body.3";
+								StartNotification = "WarEvent3Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.3";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "War3Truce";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.3";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "WarEventTruce";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "WarEvent", "Truce" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "War4Truce";
+								ObjectiveName = "$n.arsenal.event.war.title.4";
+								ObjectiveDescription = "$n.arsenal.event.war.body.4";
+								StartNotification = "WarEvent4Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.4";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "War4Truce";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.war.title.4";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "WarEventTruce";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"WarEventTarget"};
+						},
+					};
+				},
+			};
+		};
+
+		RandomEventsGroup
+		{
+			Name = "GuildEvents";
+			
+			InitialDelayYearsMin = 1.25; // The minimum delay until the first occurrence of an event from this group after the start of a game
+			InitialDelayYearsMax = 2.0; // The maximum delay until the first occurrence of an event from this group after the start of a game
+			RepeatDelayYearsMin = 0.75; // The minimum delay until the a new event gets triggered after having triggered once. Note: some events (MarketRandomEventStart) can add an additional delay on top.
+			RepeatDelayYearsMax = 1.25; // The maximum delay until the a new event gets triggered after having triggered once. Note: some events (MarketRandomEventStart) can add an additional delay on top.
+			
+			RequiresReceiver = false; // Determines if this group can trigger events even when there are no receivers registered
+			TriggerParallelEventsForEachReceiver = false; // If true, each receiver will get an event triggered for it after 1 delay and each receiver has its own delay until the next event triggers. Otherwise, a single receiver is picked each time from all registered receivers and there is only a shared delay between events.
+
+			EventsPool = array 
+			{
+
+				// MerchantsGuild
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "GuildEvent", "MerchantsGuildEvent" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "MerchantsGuildEvent1";
+								ObjectiveName = "$n.arsenal.event.MerchantsGuild.title.1";
+								ObjectiveDescription = "$n.arsenal.event.MerchantsGuild.body.1";
+								StartNotification = "MerchantsGuildEvent1Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.MerchantsGuild.title.1";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "MerchantsGuildEvent1";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.MerchantsGuild.title.1";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "MerchantsGuildEventEnd";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "GuildEvent", "MerchantsGuildEvent" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "MerchantsGuildEvent2";
+								ObjectiveName = "$n.arsenal.event.MerchantsGuild.title.2";
+								ObjectiveDescription = "$n.arsenal.event.MerchantsGuild.body.2";
+								StartNotification = "MerchantsGuildEvent2Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.MerchantsGuild.title.2";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "MerchantsGuildEvent2";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.MerchantsGuild.title.2";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "MerchantsGuildEventEnd";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "GuildEvent", "MerchantsGuildEvent" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "MerchantsGuildEvent3";
+								ObjectiveName = "$n.arsenal.event.MerchantsGuild.title.3";
+								ObjectiveDescription = "$n.arsenal.event.MerchantsGuild.body.3";
+								StartNotification = "MerchantsGuildEvent3Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.MerchantsGuild.title.3";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "MerchantsGuildEvent3";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.MerchantsGuild.title.3";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "MerchantsGuildEventEnd";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "GuildEvent", "MerchantsGuildEvent" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "MerchantsGuildEvent4";
+								ObjectiveName = "$n.arsenal.event.MerchantsGuild.title.4";
+								ObjectiveDescription = "$n.arsenal.event.MerchantsGuild.body.4";
+								StartNotification = "MerchantsGuildEvent4Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.MerchantsGuild.title.4";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "MerchantsGuildEvent4";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.MerchantsGuild.title.4";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "MerchantsGuildEventEnd";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+				},
+
+				// Freemasons
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "GuildEvent", "FreemasonsEvent" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "FreemasonsEvent1";
+								ObjectiveName = "$n.arsenal.event.Freemasons.title.1";
+								ObjectiveDescription = "$n.arsenal.event.Freemasons.body.1";
+								StartNotification = "FreemasonsEvent1Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.Freemasons.title.1";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "FreemasonsEvent1";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.Freemasons.title.1";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "FreemasonsEventEnd";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "GuildEvent", "FreemasonsEvent" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "FreemasonsEvent2";
+								ObjectiveName = "$n.arsenal.event.Freemasons.title.2";
+								ObjectiveDescription = "$n.arsenal.event.Freemasons.body.2";
+								StartNotification = "FreemasonsEvent2Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.Freemasons.title.2";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "FreemasonsEvent2";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.Freemasons.title.2";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "FreemasonsEventEnd";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "GuildEvent", "FreemasonsEvent" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "FreemasonsEvent3";
+								ObjectiveName = "$n.arsenal.event.Freemasons.title.3";
+								ObjectiveDescription = "$n.arsenal.event.Freemasons.body.3";
+								StartNotification = "FreemasonsEvent3Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.Freemasons.title.3";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "FreemasonsEvent3";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.Freemasons.title.3";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "FreemasonsEventEnd";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "GuildEvent", "FreemasonsEvent" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "FreemasonsEvent4";
+								ObjectiveName = "$n.arsenal.event.Freemasons.title.4";
+								ObjectiveDescription = "$n.arsenal.event.Freemasons.body.4";
+								StartNotification = "FreemasonsEvent4Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.Freemasons.title.4";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "FreemasonsEvent4";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.Freemasons.title.4";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "FreemasonsEventEnd";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+				},
+
+				// Alchimists
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "GuildEvent", "AlchimistsEvent" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "AlchimistsEvent1";
+								ObjectiveName = "$n.arsenal.event.Alchimists.title.1";
+								ObjectiveDescription = "$n.arsenal.event.Alchimists.body.1";
+								StartNotification = "AlchimistsEvent1Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.Alchimists.title.1";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "AlchimistsEvent1";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.Alchimists.title.1";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "AlchimistsEventEnd";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "GuildEvent", "AlchimistsEvent" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "AlchimistsEvent2";
+								ObjectiveName = "$n.arsenal.event.Alchimists.title.2";
+								ObjectiveDescription = "$n.arsenal.event.Alchimists.body.2";
+								StartNotification = "AlchimistsEvent2Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.Alchimists.title.2";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "AlchimistsEvent2";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.Alchimists.title.2";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "AlchimistsEventEnd";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "GuildEvent", "AlchimistsEvent" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "AlchimistsEvent3";
+								ObjectiveName = "$n.arsenal.event.Alchimists.title.3";
+								ObjectiveDescription = "$n.arsenal.event.Alchimists.body.3";
+								StartNotification = "AlchimistsEvent3Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.Alchimists.title.3";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "AlchimistsEvent3";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.Alchimists.title.3";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "AlchimistsEventEnd";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "GuildEvent", "AlchimistsEvent" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "AlchimistsEvent4";
+								ObjectiveName = "$n.arsenal.event.Alchimists.title.4";
+								ObjectiveDescription = "$n.arsenal.event.Alchimists.body.4";
+								StartNotification = "AlchimistsEvent4Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.Alchimists.title.4";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "AlchimistsEvent4";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.Alchimists.title.4";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "AlchimistsEventEnd";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+				},
+
+				// CraftmensGuild
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "GuildEvent", "CraftmensGuildEvent" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "CraftmensGuildEvent1";
+								ObjectiveName = "$n.arsenal.event.CraftmensGuild.title.1";
+								ObjectiveDescription = "$n.arsenal.event.CraftmensGuild.body.1";
+								StartNotification = "CraftmensGuildEvent1Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.CraftmensGuild.title.1";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "CraftmensGuildEvent1";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.CraftmensGuild.title.1";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "CraftmensGuildEventEnd";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "GuildEvent", "CraftmensGuildEvent" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "CraftmensGuildEvent2";
+								ObjectiveName = "$n.arsenal.event.CraftmensGuild.title.2";
+								ObjectiveDescription = "$n.arsenal.event.CraftmensGuild.body.2";
+								StartNotification = "CraftmensGuildEvent2Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.CraftmensGuild.title.2";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "CraftmensGuildEvent2";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.CraftmensGuild.title.2";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "CraftmensGuildEventEnd";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "GuildEvent", "CraftmensGuildEvent" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "CraftmensGuildEvent3";
+								ObjectiveName = "$n.arsenal.event.CraftmensGuild.title.3";
+								ObjectiveDescription = "$n.arsenal.event.CraftmensGuild.body.3";
+								StartNotification = "CraftmensGuildEvent3Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.CraftmensGuild.title.3";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "CraftmensGuildEvent3";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.CraftmensGuild.title.3";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "CraftmensGuildEventEnd";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "GuildEvent", "CraftmensGuildEvent" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "CraftmensGuildEvent4";
+								ObjectiveName = "$n.arsenal.event.CraftmensGuild.title.4";
+								ObjectiveDescription = "$n.arsenal.event.CraftmensGuild.body.4";
+								StartNotification = "CraftmensGuildEvent4Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.CraftmensGuild.title.4";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "CraftmensGuildEvent4";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.CraftmensGuild.title.4";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "CraftmensGuildEventEnd";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+				},
+
+				// ThievesGuild
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "GuildEvent", "ThievesGuildEvent" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "ThievesGuildEvent1";
+								ObjectiveName = "$n.arsenal.event.ThievesGuild.title.1";
+								ObjectiveDescription = "$n.arsenal.event.ThievesGuild.body.1";
+								StartNotification = "ThievesGuildEvent1Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.ThievesGuild.title.1";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "ThievesGuildEvent1";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.ThievesGuild.title.1";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "ThievesGuildEventEnd";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "GuildEvent", "ThievesGuildEvent" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "ThievesGuildEvent2";
+								ObjectiveName = "$n.arsenal.event.ThievesGuild.title.2";
+								ObjectiveDescription = "$n.arsenal.event.ThievesGuild.body.2";
+								StartNotification = "ThievesGuildEvent2Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.ThievesGuild.title.2";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "ThievesGuildEvent2";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.ThievesGuild.title.2";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "ThievesGuildEventEnd";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "GuildEvent", "ThievesGuildEvent" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "ThievesGuildEvent3";
+								ObjectiveName = "$n.arsenal.event.ThievesGuild.title.3";
+								ObjectiveDescription = "$n.arsenal.event.ThievesGuild.body.3";
+								StartNotification = "ThievesGuildEvent3Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.ThievesGuild.title.3";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "ThievesGuildEvent3";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.ThievesGuild.title.3";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "ThievesGuildEventEnd";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+				},
+				ScriptEvent
+				{
+					DurationYearsMin = 0.35;
+					DurationYearsMax = 0.55;
+					
+					Tags = array { "GuildEvent", "ThievesGuildEvent" };
+					
+					OnStartResult = array 
+					{
+						FunctionAddObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							
+							Objective = G3ObjectiveBase
+							{
+								ID = "ThievesGuildEvent4";
+								ObjectiveName = "$n.arsenal.event.ThievesGuild.title.4";
+								ObjectiveDescription = "$n.arsenal.event.ThievesGuild.body.4";
+								StartNotification = "ThievesGuildEvent4Start";
+								// The duration of this objective is copied from the parent ScriptEvent (there is some custom code in FunctionAddObjective to make this work)
+							};
+						},
+						FunctionAddUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.ThievesGuild.title.4";
+						},
+						// Choose a trade market target and tag it accordingly.
+						FunctionTagEventTradeMarket
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+					
+					OnEndResult = array 
+					{
+						FunctionRemoveObjective
+						{
+							ApplyTo = "All"; // apply to all families
+							ObjectiveID = "ThievesGuildEvent4";
+						},
+						FunctionRemoveUiNotice
+						{
+							ApplyTo = "All"; // apply to all families
+							NoticeId = "notice.quests";
+							Reason = "$n.arsenal.event.ThievesGuild.title.4";
+						},
+						FunctionSendMessage
+						{
+							ApplyTo = "All"; // apply to all families
+							Description = "ThievesGuildEventEnd";
+						},
+						FunctionRemoveTagsFromTradeMarkets
+						{
+							Tags = array{"GuildEventTarget"};
+						},
+					};
+				},
+			};
+		};
+	};
+};

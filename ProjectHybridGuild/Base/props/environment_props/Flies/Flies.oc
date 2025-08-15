@@ -1,0 +1,23 @@
+Flies extends EffectProp
+{
+	static var Description = ActorDesc
+	{
+		Visual = "";
+	};
+	
+	EditorName = "Flies";
+	EditorIcon = "Editoreffect_flies";
+	Destructible = true;
+	EditorCategory = 7;
+	
+	// EffectName defines the particle system to spawn when effect prop should be active
+	EffectName = "Flies_01";
+	// Tags are used to define when the effect should be active (seasons, weather)
+	// Valid tags: "Winter", "Spring", "Summer", "Fall", "IronSky", "Rain", "Snow"
+	Tags = array { "Spring", "Summer", "Fall", "IronSky" };
+	// If Effect should be active the whole day set remove DaytimeStart and DaytimeEnd from script file or set both to 0.0f
+	// day time in 24h format when effect should start
+	DaytimeStart = 8.0f;
+	// day time in 24h format when effect should end
+	DaytimeEnd = 19.0f;
+}

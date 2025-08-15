@@ -1,0 +1,17 @@
+lr_male_standard/lr_male_standard_desc
+{
+	Visual = "platemail_male_game";
+	
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 30;
+
+	Poor = false;
+	MiddleClass = true;
+	Rich = false;
+	
+	Male = true;
+	
+	Player = false;
+	Employee = false;
+}

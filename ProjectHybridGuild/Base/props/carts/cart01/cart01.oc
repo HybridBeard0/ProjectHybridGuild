@@ -1,0 +1,4 @@
+cart01 extends G3Character
+{
+	static var Description = #cart01/cart01_desc;
+};

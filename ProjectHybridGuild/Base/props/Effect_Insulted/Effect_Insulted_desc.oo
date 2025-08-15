@@ -1,0 +1,16 @@
+G3ActorDesc
+{
+	Visual = "effect_insulted";
+	MoveStateListArray = MoveStateListArray
+	{
+	};
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#Effect_Insulted/list_idles_animations,
+		);
+	};
+	AttachType = "AttachToNode";
+	AttachChildNode = "Snap";
+}

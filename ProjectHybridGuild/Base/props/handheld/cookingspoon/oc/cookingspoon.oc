@@ -1,0 +1,14 @@
+cookingspoon extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "cookingspoon";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";		
+	};
+	EditorName = "Cooking Spoon";
+	EditorIcon = "media/UserInterface/PropIcons/Longsword.png";
+	EditorCategory = 3;
+}

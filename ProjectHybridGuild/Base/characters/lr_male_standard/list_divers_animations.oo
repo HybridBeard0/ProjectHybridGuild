@@ -1,0 +1,13 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1430845779;
+			Name = "waiting_camera";
+			AnimationName = "waiting_camera";
+			Looping = true;
+		},
+	);
+}

@@ -1,0 +1,10 @@
+CS5 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "CS5";
+	};
+	EditorName = "CS5";
+	EditorIcon = "media/UserInterface/PropIcons/CS5.png";
+	EditorCategory = 4;		
+}

@@ -1,0 +1,14 @@
+rapier extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "rapier";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";		
+	};
+	EditorName = "Rapier";
+	EditorIcon = "media/UserInterface/PropIcons/Rapier.png";
+	EditorCategory = 3;		
+}

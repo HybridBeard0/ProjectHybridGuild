@@ -1,0 +1,17 @@
+base/standardg3characterdesc
+{
+	Visual = "cat";
+	
+	WalkSpeed = 25;//10
+	TrotSpeed = 150;//50
+	RunSpeed = 250;
+	
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#cat/list_idles_animations,
+			#cat/list_walks_animations,
+		);
+	};
+}

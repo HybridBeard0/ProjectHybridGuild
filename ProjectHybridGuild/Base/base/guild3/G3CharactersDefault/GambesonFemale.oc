@@ -1,0 +1,65 @@
+GambesonFemale extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = false;
+	MiddleClass = true;
+	Rich = false;
+	
+	Male = false;
+	Player = false;
+	Employee = false;
+	Profession = false;
+	
+	LowResCharacter = "gambeson";
+	HighResCharacter = "gambeson";
+	
+	HairTexturesDiff= array
+	{
+		"Citizen1Female_Hair_LOD01_diff",
+		"Citizen1Female_Hair_02_LOD01_diff",		
+		"Citizen1Female_Hair_03_LOD01_diff",
+		"Citizen1Female_Hair_04_LOD01_diff",
+		"Citizen1Female_Hair_05_LOD01_diff"
+	};	
+	HairTexturesNorm= array
+	{
+		"Citizen1Female_Hair_LOD01_NRM",
+		"Citizen1Female_Hair_LOD01_NRM",		
+		"Citizen1Female_Hair_LOD01_NRM",
+		"Citizen1Female_Hair_LOD01_NRM",
+		"Citizen1Female_Hair_LOD01_NRM"
+	};	
+	HairTexturesMask= array
+	{
+		"Citizen1Female_Hair_LOD01_MASK",
+		"Citizen1Female_Hair_LOD01_MASK",		
+		"Citizen1Female_Hair_LOD01_MASK",
+		"Citizen1Female_Hair_LOD01_MASK",
+		"Citizen1Female_Hair_LOD01_MASK"
+	};	
+	
+	BodyTexturesDiff= array
+	{
+		"GambesonFemale_LOD01_diff",
+		"GambesonFemale_LOD01_diff",
+		"GambesonFemale_LOD01_diff",		
+		"GambesonFemale_LOD01_diff"			
+	};
+	BodyTexturesNorm= array
+	{
+		"GambesonFemale_LOD01_NRM",
+		"GambesonFemale_LOD01_NRM",
+		"GambesonFemale_LOD01_NRM",
+		"GambesonFemale_LOD01_NRM"
+	};
+	BodyTexturesMask= array
+	{
+		"GambesonFemale_LOD01_MASK",
+		"GambesonFemale_LOD01_MASK",
+		"GambesonFemale_LOD01_MASK",
+		"GambesonFemale_LOD01_MASK"
+	};
+}

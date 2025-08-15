@@ -1,0 +1,65 @@
+Citizen1Female extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = true;
+	MiddleClass = true;
+	Rich = false;
+	
+	Male = false;
+	Player = true;
+	Employee = true;
+	Profession = false;
+	
+	LowResCharacter = "citizen1";
+	HighResCharacter = "citizen1";
+	
+	HairTexturesDiff= array
+	{
+		"Citizen1Female_Hair_LOD01_diff",
+		"Citizen1Female_Hair_02_LOD01_diff",		
+		"Citizen1Female_Hair_03_LOD01_diff",
+		"Citizen1Female_Hair_04_LOD01_diff",
+		"Citizen1Female_Hair_05_LOD01_diff"
+	};	
+	HairTexturesNorm= array
+	{
+		"Citizen1Female_Hair_LOD01_NRM",
+		"Citizen1Female_Hair_LOD01_NRM",		
+		"Citizen1Female_Hair_LOD01_NRM",
+		"Citizen1Female_Hair_LOD01_NRM",
+		"Citizen1Female_Hair_LOD01_NRM"
+	};	
+	HairTexturesMask= array
+	{
+		"Citizen1Female_Hair_LOD01_MASK",
+		"Citizen1Female_Hair_LOD01_MASK",		
+		"Citizen1Female_Hair_LOD01_MASK",
+		"Citizen1Female_Hair_LOD01_MASK",
+		"Citizen1Female_Hair_LOD01_MASK"
+	};	
+	
+	BodyTexturesDiff= array
+	{
+		"Citizen1Female_diff",
+		"Citizen1Female_diff",
+		"Citizen1Female_diff",		
+		"Citizen1Female_diff"			
+	};
+	BodyTexturesNorm= array
+	{
+		"Citizen1Female_NORM",
+		"Citizen1Female_NORM",
+		"Citizen1Female_NORM",
+		"Citizen1Female_NORM"
+	};
+	BodyTexturesMask= array
+	{
+		"Citizen1Female_MASK",
+		"Citizen1Female_MASK",
+		"Citizen1Female_MASK",
+		"Citizen1Female_MASK"
+	};
+}

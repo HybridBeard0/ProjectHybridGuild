@@ -1,0 +1,13 @@
+lr_male_fat/lr_male_fat_desc
+{
+	Visual = "gravedigger_male_game";
+
+	Poor = true;
+	MiddleClass = false;
+	Rich = false;
+	Male = true;
+	Player = false;
+	Employee = true;
+	TrotSpeed = 0.000;
+	AverageAge = 0.000;
+}

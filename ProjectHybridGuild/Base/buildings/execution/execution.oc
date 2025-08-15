@@ -1,0 +1,74 @@
+execution extends Building
+{
+	static var Description = #execution/execution_anim_desc
+	{
+		Visual = "execution";
+		
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc
+				{
+					Name = "Snap_Guard_idle";
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Animation = "Execution_GuardIdle";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "Snap_Character_idle";
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Animation = "Execution_Character_idle";
+							Prop = "hood/hood";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "Snap_Guard";
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Animation = "Execution_Guard";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "Snap_Bailiff";
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Animation = "Execution_Bailiff";
+							Prop = "executionletter/executionletter";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "Snap_Character";
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Animation = "Execution_Character";
+							Prop = "hood/hood";
+						},
+					};
+				},
+			};
+		};
+	};
+	
+	EditorName = "Execution";
+	EditorIcon = "media/UserInterface/BusinessIcons/Other/Execution.png";
+	EditorCategory = 2;		
+}

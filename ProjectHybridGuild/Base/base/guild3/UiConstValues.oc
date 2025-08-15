@@ -1,0 +1,523 @@
+UiConstValues extends UiConstants
+{
+	ColorNameOwned = array{0.529, 0.658, 0.874, 1.0};
+	ColorNameDefault = array{1.0, 1.0, 1.0, 1.0};
+	ColorNameAllied = array{0.474, 0.913, 0.149, 1.0};
+	ColorNameHostile = array{0.980, 0.031, 0.031, 1.0};
+	
+    ColorTitleDefault = array{1.0, 0.960, 0.835, 1.0};
+    ColorTitleOffice = array{0.929, 0.678, 0.192, 1.0};
+    ColorTitleProfession = array{1.0, 0.960, 0.835, 1.0};
+	
+	ColorHighlightingHover = array{3.25, 3.25, 3.25};
+	ColorHighlightingValidTarget = array{0.0, 6.0, 0.0};
+	ColorHighlightingValidTargetHover = array{2.0, 6.0, 2.0};
+	ColorHighlightingInvalidTargetHover = array{5.0, 0.0, 0.0};
+	
+	SelectionOutlineColorAndThickness = array{1.0, 1.0, 1.0, 2.0};
+
+	// ActorValueDefinition for specifying how ActorValues show up in the various UIs.
+	// Hidden (bool) General knockout, will override all other visibility options below. Default: false.
+	// Primary (bool) If true, this is a primary attribute, otherwise it's a secondary attribute. Default: false.
+	// Classes (array of String) Lists all the classes that show the actor value. Example: Classes = array{ "G3Character", "Building" }; Default: empty.
+	// CombatText (bool) If this actor value shows up on combat text. Works together with Character/Building to determine if it should show up. Default: true.
+	// Info (bool) If this actor value shows up in info windows. Works together with Character/Building to determine if it should show up. Default: true.
+	// Expression (bool) If this actor value shows up in expressions (like the action success chance). Works together with Character/Building to determine if it should show up. Default: true.
+	// Tooltip (bool) If this actor value shows up in tooltips. Works together with Character/Building to determine if it should show up. Default: true.
+	// Offset (float) Bias for the value, applied before showing it. Final value is 'Offset + Value * Multiplier'. Default: 0.0.
+	// Multiplier (float) Gain for the value, applied before showing it. Final value is 'Offset + Value * Multiplier'. Use e.g. 100.0 to properly display percentages.
+	// Format (String) Format string for displaying. See printf format documentation. Default: %.2f.
+	ActorValueDefinitions = array
+	{
+		// Primary character attributes first.
+		ActorValueDefinition
+		{
+			Id = "Strength";
+			Primary = true;
+			Classes = array{ "G3Character" };
+		},
+		ActorValueDefinition
+		{
+			Id = "Dexterity";
+			Primary = true;
+			Classes = array{ "G3Character" };
+		},
+		ActorValueDefinition
+		{
+			Id = "Intelligence";
+			Primary = true;
+			Classes = array{ "G3Character" };
+		},
+		ActorValueDefinition
+		{
+			Id = "Perception";
+			Primary = true;
+			Classes = array{ "G3Character" };
+		},
+		ActorValueDefinition
+		{
+			Id = "Charisma";
+			Primary = true;
+			Classes = array{ "G3Character" };
+		},
+		// Rest are secondary attributes.
+		// First the ones for characters AND buildings.
+		ActorValueDefinition
+		{
+			Id = "Health";
+			Classes = array{ "G3Character", "Building" };
+		},
+		ActorValueDefinition
+		{
+			Id = "Productivity";
+			Classes = array{ "G3Character", "Building" };
+			Multiplier = 100.0;
+			Format = "%.2f%%";
+		},
+		// Character only attributes.
+		ActorValueDefinition
+		{
+			Id = "Fertility";
+			Classes = array{ "G3Character" };
+			Multiplier = 100.0;
+			Format = "%.2f%%";
+		},
+		ActorValueDefinition
+		{
+			Id = "Stealth";
+			Classes = array{ "G3Character" };
+		},
+		ActorValueDefinition
+		{
+			Id = "AttackPower";
+			Classes = array{ "G3Character" };
+		},
+		ActorValueDefinition
+		{
+			Id = "BargainingBonus";
+			Classes = array{ "G3Character" };
+		},
+		ActorValueDefinition
+		{
+			Id = "Armor";
+			Classes = array{ "G3Character" };
+		},
+		ActorValueDefinition
+		{
+			Id = "DamageReduction";
+			Classes = array{ "G3Character" };
+			Multiplier = 100.0;
+			Format = "%.2f%%";
+		},
+		ActorValueDefinition
+		{
+			Id = "Damage";
+			Classes = array{ "G3Character" };
+		},
+		ActorValueDefinition
+		{
+			Id = "DefensePower";
+			Classes = array{ "G3Character" };
+		},
+		ActorValueDefinition
+		{
+			Id = "ReputationBonus";
+			Classes = array{ "G3Character" };
+			Multiplier = 100.0;
+			Format = "%.2f%%";
+		},
+		ActorValueDefinition
+		{
+			Id = "Resistance";
+			Classes = array{ "G3Character" };
+		},
+		ActorValueDefinition
+		{
+			Id = "MovementSpeedMult";
+			Classes = array{ "G3Character" };
+			Multiplier = 100.0;
+			Format = "%.2f%%";
+		},
+		ActorValueDefinition
+		{
+			Id = "ExperienceGainMult";
+			Classes = array{ "G3Character" };
+			Multiplier = 100.0;
+			Format = "%.2f%%";
+		},
+		ActorValueDefinition
+		{
+			Id = "PrestigeGainMult";
+			Classes = array{ "G3Character" };
+			Multiplier = 100.0;
+			Format = "%.2f%%";
+		},
+		ActorValueDefinition
+		{
+			Id = "MedicineMastery";
+			Classes = array{ "G3Character" };
+		},
+		ActorValueDefinition
+		{
+			Id = "GoodGenetics";
+			Classes = array{ "G3Character" };
+			Multiplier = 100.0;
+			Format = "%.2f%%";
+		},
+		ActorValueDefinition
+		{
+			Id = "HealthRegeneration";
+			Classes = array{ "G3Character" };
+		},
+		ActorValueDefinition
+		{
+			Id = "Intimidation";
+			Classes = array{ "G3Character" };
+		},
+		ActorValueDefinition
+		{
+			Id = "Entertainment";
+			Classes = array{ "G3Character" };
+			CombatText = false; // why?
+		},
+		ActorValueDefinition
+		{
+			Id = "LifeExpectancy";
+			Classes = array{ "G3Character" };
+			Info = false;
+		},
+		// Building only attributes.
+		ActorValueDefinition
+		{
+			Id = "Attractiveness";
+			Classes = array{ "Building" };
+		},
+		ActorValueDefinition
+		{
+			Id = "BuildingSecurity";
+			Classes = array{ "Building" };
+		},
+		ActorValueDefinition
+		{
+			Id = "FireProtection";
+			Classes = array{ "Building" };
+		},
+		ActorValueDefinition
+		{
+			Id = "FrontStoreSlots";
+			Classes = array{ "Building" };
+		},
+		ActorValueDefinition
+		{
+			Id = "FrontStoreSpace";
+			Classes = array{ "Building" };
+		},
+		ActorValueDefinition
+		{
+			Id = "StorageSlots";
+			Classes = array{ "Building" };
+		},
+		ActorValueDefinition
+		{
+			Id = "StorageSpace";
+			Classes = array{ "Building" };
+		},
+		ActorValueDefinition
+		{
+			Id = "NaturalDecayMult";
+			Positive = false;
+			Multiplier = 100.0;
+			Format = "%.2f%%";
+		},
+		// A few completely hidden attributes.
+		ActorValueDefinition
+		{
+			Id = "MaxAIObjectives";
+			Hidden = true;
+		},
+		ActorValueDefinition
+		{
+			Id = "CookedBooks";
+			Hidden = true;
+		},
+	};
+
+	PositiveDisplayEffects = array{"perfume", "buffed", "pregnant", "protected", "catholic", "protestant", "guild-alchimists", "guild-craftsmenguild", "guild-merchantguild", "guild-freemasons", "guild-thieves"};
+	
+	PlaqueFarClippingDistanceSquared = 10000000.0; // distance (squared) at which plaques stop to be visible
+	
+	ActionProbabilityColorRamp = map
+	{
+		0.0 = array{0.980, 0.031, 0.031, 1.0}, // negative
+		0.33 = array{1.0, 1.0, 1.0, 1.0}, // neutral
+		0.66 = array{0.474, 0.913, 0.149, 1.0} // positive
+	};
+	
+	CharacterCursor = CharacterCursorConfig
+	{
+		MainCharacterCursorColor = array{1.0, 0.86, 0.0};
+		PlayerCharactersCursorColor = array{0.24, 0.52, 1.0};
+		FightingOpponentCursorColor = array{1.0, 0.0, 0.0};
+		
+		SelectedCharacterCursorOpacity = 1.0;
+		DeselectedCharacterCursorOpacity = 0.625;
+		
+		SelectedCharacterCursorScale = 1.15;
+		DeselectedCharacterCursorScale = 1.0;
+	};
+	
+	NobilityPanel = NobilityPanelConfig
+	{
+		ColorCategories = array{0.874f, 0.752f, 0.529f, 1.0f};
+		ColorTitles = array{1.0f, 0.960f, 0.835f, 1.0f};
+		ColorLevels = array{0.427f, 0.294f, 0.211f, 1.0f};
+	};
+	
+	SelectionPanel = SelectionPanelConfig
+	{
+		ActionsPageSize = 15;
+	};
+	
+	CombatText = CombatTextConfig
+	{
+		// Combat text font size
+		FontSize = 19.0;
+		// CombatText's default life expectancy
+		DefaultLifespan = 7.0;
+		// movement speed in pixels per second
+		MovementSpeed = -25.0;
+		// how much of the lifespan should pass before fading starts. Should be between 0.0 and 1.0
+		FadeFactor = 0.85;
+		// the furthest distance squared from the camera to still show combat texts
+		FarPlaneDistanceSquared = 32500000.0;
+		// enables game time acceleration for lifetime and movement speed
+		UseTimeAcceleration = true;
+		// The gap, in pixels, between combat text entries
+		TextGap = 10.0;
+	};
+	
+	MessageLog = MessageLogConfig
+	{
+		// The maximum number of messages to preview in the HUD
+		MaxHudMessages = 5;
+		
+		// The maximum number of urgent notifications shown in the HUD
+		MaxHudUrgentNotifications = 6;
+		
+		// Number of seconds to flash an urgent notification message. Is affected by time acceleration
+		HudMessageFlashDuration = 5;
+		
+		// Whitelist of filters to list in the UI
+		MessageFilters = array
+		{
+			Building,
+			Combat,
+			//Death,
+			Dialogue,
+			Diplomacy,
+			Dynasty,
+			Employee,
+			Event,
+			Guild,
+			Justice,
+			Love,
+			//Peace,
+			RandomEvent, //new
+			Reputation,  //new
+			Politics,
+			Production,
+			//Rumors,
+			Trade
+		};
+		
+		// The background color for neutral message icons
+		ColorNeutral = array{0.2, 0.2, 0.2, 1.0};
+		ColorNegative = array{0.392, 0.0124, 0.0124, 1.0};
+		ColorPositive = array{0.1422, 0.2739, 0.0447, 1.0};
+		ColorQuest = array{0.055, 0.192, 0.329, 1.0};
+		
+		// Number of entries shown in the message log
+		MaxMessagesInLog = 100;
+	};
+	
+	DialogueLodLevels = map
+	{
+		// needs to be sorted by highest detail/closest first
+		// squared distance thresholds to LOD level
+		 12500000‬.0 = 2,  // readable lines
+		 64000000.0 = 1, // dialogue indicators
+		128000000.0 = 0 // hidden
+	};
+	
+	DialogueBubbleMinAlpha = 0.5f;  // The min alpha for bubbles outside the safe area
+	
+	HideDialogueBubblesSeparately = true; // Changes how we fade bubbles i.e. single bubble or the whole stack
+	
+	StatisticsWindow = StatisticsWindowConfig
+	{
+		// Three configurations, one for each budget post listing in the statistics window.
+		
+		BusinessConfig = StatisticsCategoryConfig
+		{
+			HideEmptyRows = false; // If false (default), will show rows even if they have no budget associated. If true, will only show rows with expense and/or revenue not zero.
+			HideZeroValues = true; // If true (default), will not show "0" gold amounts. If false, will show them.
+			
+			// The next sorting options all work together.
+			SortMode = "None"; // Determines the sort mode:
+			// "None" (default) will not sort rows specially.
+			// "Expense" will sort rows by expense, decreasing.
+			// "Revenue" will sort rows by revenue, decreasing.
+			// "Absolute" will sort rows by the sum of expense + revenue, decreasing.
+			
+			SortEmptyLast = true; // If true (default), will sort rows with neither expense nor revenue under rows that have at least some budget associated. If false, will not affect sort order.
+			
+			// This specifies visibility and sort order for each budget post.
+			// The key specifies the budget post the settings should apply to.
+			// The first value specifies the sorting priority, with lower numbers moving rows further up.
+			// The second value (true/false) determines visibility)
+			// The third value (if specified) is a loca key to use for this specific post in this configuration. E.g. "$gui.Budget.Family.MyVerySpecialKey"			
+			// The entry with an empty "" budget post determines the default if there is no specific entry in the list.
+			BudgetPosts = map {
+				"" = 				( 0, true), // DEFAULT
+				"Initial" = 		( 1, false),
+				"Inheritance" = 	( 2, false),
+				"Trading" = 		( 3, true),
+				"Services" = 		( 4, true),
+				
+				"Buildings" = 		( 6, true),
+				"Renovation" = 		( 7, true),
+				"UpgradesAddons" = 	( 8, true),
+				"Employees" = 		( 9, true),
+				"Equipment" = 		(10, false),
+				"Fines" = 			(11, true),
+				"Offices" = 		(12, false),
+				"Leases" = 			(13, false),
+				"TitlesSkills" = 	(14, false),
+				"DynastyTrade" = 	(15, false),
+				"Events" = 			(16, false),
+				
+				"Actions" = 		( 17, false),
+				
+				"Urgent" = 			(18, false);
+				"Fighting" = 		(19, true);
+				"Rogue" = 			(20, true);
+				"Romance" = 		(21, false);
+				"Family" = 			(22, false);
+				"Diplomacy" = 		(23, false);
+				"Religion" = 		(24, true);
+				"Artifact" = 		(25, false);
+			};
+		};
+		
+		ResourceProviderConfig = StatisticsCategoryConfig
+		{
+			HideEmptyRows = false; // If false (default), will show rows even if they have no budget associated. If true, will only show rows with expense and/or revenue not zero.
+			HideZeroValues = true; // If true (default), will not show "0" gold amounts. If false, will show them.
+			
+			// The next sorting options all work together.
+			SortMode = "None"; // Determines the sort mode:
+			// "None" (default) will not sort rows specially.
+			// "Expense" will sort rows by expense, decreasing.
+			// "Revenue" will sort rows by revenue, decreasing.
+			// "Absolute" will sort rows by the sum of expense + revenue, decreasing.
+			
+			SortEmptyLast = true; // If true (default), will sort rows with neither expense nor revenue under rows that have at least some budget associated. If false, will not affect sort order.
+			
+			// This specifies visibility and sort order for each budget post.
+			// The key specifies the budget post the settings should apply to.
+			// The first value specifies the sorting priority, with lower numbers moving rows further up.
+			// The second value (true/false) determines visibility)
+			// The third value (if specified) is a loca key to use for this specific post in this configuration. E.g. "$gui.Budget.Family.MyVerySpecialKey"			
+			// The entry with an empty "" budget post determines the default if there is no specific entry in the list.
+			BudgetPosts = map {
+				"" = 				( 0, true), // DEFAULT
+				"Initial" = 		( 1, false),
+				"Inheritance" = 	( 2, false),
+				"Trading" = 		( 3, true),
+				"Services" = 		( 4, true),
+				
+				"Buildings" = 		( 6, false),
+				"Renovation" = 		( 7, false),
+				"UpgradesAddons" = 	( 8, false),
+				"Employees" = 		( 9, true),
+				"Equipment" = 		(10, false),
+				"Fines" = 			(11, false),
+				"Offices" = 		(12, false),
+				"Leases" = 			(13, true),
+				"TitlesSkills" = 	(14, false),
+				"DynastyTrade" = 	(15, false),
+				"Events" = 			(16, false),
+								
+				"Actions" = 		( 17, false),
+				
+				"Urgent" = 			(18, false);
+				"Fighting" = 		(19, true);
+				"Rogue" = 			(20, true);
+				"Romance" = 		(21, false);
+				"Family" = 			(22, false);
+				"Diplomacy" = 		(23, false);
+				"Religion" = 		(24, false);
+				"Artifact" = 		(25, false);
+			};
+		};
+
+		FamilyConfig = StatisticsCategoryConfig
+		{
+			HideEmptyRows = false; // If false (default), will show rows even if they have no budget associated. If true, will only show rows with expense and/or revenue not zero.
+			HideZeroValues = true; // If true (default), will not show "0" gold amounts. If false, will show them.
+			
+			// The next sorting options all work together.
+			SortMode = "None"; // Determines the sort mode:
+			// "None" (default) will not sort rows specially.
+			// "Expense" will sort rows by expense, decreasing.
+			// "Revenue" will sort rows by revenue, decreasing.
+			// "Absolute" will sort rows by the sum of expense + revenue, decreasing.
+			
+			SortEmptyLast = true; // If true (default), will sort rows with neither expense nor revenue under rows that have at least some budget associated. If false, will not affect sort order.
+			
+			// This specifies visibility and sort order for each budget post.
+			// The key specifies the budget post the settings should apply to.
+			// The first value specifies the sorting priority, with lower numbers moving rows further up.
+			// The second value (true/false) determines visibility)
+			// The third value (if specified) is a loca key to use for this specific post in this configuration. E.g. "$gui.Budget.Family.MyVerySpecialKey"
+			// The entry with an empty "" budget post determines the default if there is no specific entry in the list.
+			BudgetPosts = map {
+				"" = 				( 0, true), // DEFAULT
+				"Initial" = 		( 1, true),
+				"Inheritance" = 	( 2, true),
+				"Trading" = 		( 3, true),
+				"Services" = 		( 4, true),
+				"Buildings" = 		( 6, true, "$gui.Budget.Residences"),
+				"Renovation" = 		( 7, true, "$gui.Budget.ResidenceRenovation"),
+				"UpgradesAddons" = 	( 8, true, "$gui.Budget.ResidencesUpgrades"),
+				"Employees" = 		( 9, true),
+				"Equipment" = 		(10, false),
+				"Fines" = 			(11, true),
+				"Offices" = 		(12, true),
+				"Leases" = 			(13, false),
+				"TitlesSkills" = 	(14, true),
+				"DynastyTrade" = 	(15, true),
+				"Events" = 			(16, true),
+				
+				"Actions" = 		(17, false),
+				
+				"Urgent" = 			(18, false),
+				"Fighting" = 		(19, true),
+				"Rogue" = 			(20, true),
+				"Romance" = 		(21, false),
+				"Family" = 			(22, true),
+				"Diplomacy" = 		(23, true),
+				"Religion" = 		(24, true),
+				"Artifact" = 		(25, false),
+			};
+		};		
+	};
+	
+	// Defines the threshold values and indicators that we display in tooltips for action that affect the moral alignment of the family.
+	MoralAlignmentTooltipIndicators = array
+	{
+		(0.0, ""),
+		(0.01, "+"),
+		(0.09, "++"),
+	};
+};

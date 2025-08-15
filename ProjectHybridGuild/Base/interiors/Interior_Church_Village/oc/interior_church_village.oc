@@ -1,0 +1,8 @@
+interior_church_village extends InteriorScene
+{
+	static var Description = #Interior_Church_Village/interior_church_village_anim_desc;
+	
+	EditorName = "Interior Church Village";
+	EditorIcon = "media/UserInterface/BusinessIcons/Other/Church.png";
+	EditorCategory = 0;	
+}

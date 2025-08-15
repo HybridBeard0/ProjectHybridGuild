@@ -1,0 +1,481 @@
+market extends Building
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "market";
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc {
+					Name = "streetconnection";
+					Position = ( 0.0, -50.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc
+				{
+					Name = "customer00";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "scholar1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "StorageKeeper";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "NavigateRoute";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "StackBoxes";
+							Animation = "PutOutFire";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "SpreadFleas";
+							Animation = "reap_herbs1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "customer01";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "Survey";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "StorageKeeper";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "NavigateRoute";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "StackBoxes";
+							Animation = "PutOutFire";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "SpreadFleas";
+							Animation = "reap_herbs1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "customer02";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "StorageKeeper";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "NavigateRoute";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "StackBoxes";
+							Animation = "PutOutFire";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "SpreadFleas";
+							Animation = "reap_herbs1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "customer03";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "GuardBuilding1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "StorageKeeper";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "NavigateRoute";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "StackBoxes";
+							Animation = "PutOutFire";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "SpreadFleas";
+							Animation = "reap_herbs1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "customer04";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "scholar1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "StorageKeeper";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "NavigateRoute";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "StackBoxes";
+							Animation = "PutOutFire";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "SpreadFleas";
+							Animation = "reap_herbs1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "customer05";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "Survey";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "StorageKeeper";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "NavigateRoute";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "StackBoxes";
+							Animation = "PutOutFire";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "SpreadFleas";
+							Animation = "reap_herbs1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "customer06";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "StorageKeeper";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "NavigateRoute";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "StackBoxes";
+							Animation = "PutOutFire";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "SpreadFleas";
+							Animation = "reap_herbs1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "customer07";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "GuardBuilding1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "StorageKeeper";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "NavigateRoute";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "StackBoxes";
+							Animation = "PutOutFire";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "SpreadFleas";
+							Animation = "reap_herbs1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "customer08";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "scholar1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "StorageKeeper";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "NavigateRoute";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "StackBoxes";
+							Animation = "PutOutFire";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "SpreadFleas";
+							Animation = "reap_herbs1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "customer09";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "scholar1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "StorageKeeper";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "NavigateRoute";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "StackBoxes";
+							Animation = "PutOutFire";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "SpreadFleas";
+							Animation = "reap_herbs1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "customer10";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "scholar1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "StorageKeeper";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "NavigateRoute";
+							Animation = "listen1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "StackBoxes";
+							Animation = "PutOutFire";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "SpreadFleas";
+							Animation = "reap_herbs1";
+						},
+					};
+				},
+			};
+		};
+	};
+	EditorName = "Market 1";
+	EditorIcon = "media/UserInterface/Icons/BuildingImages/Other/Market.png";
+	EditorCategory = 2;		
+}

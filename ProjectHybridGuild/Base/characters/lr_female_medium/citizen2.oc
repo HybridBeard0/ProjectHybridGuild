@@ -1,0 +1,5 @@
+citizen2 extends G3Character
+{
+	static var Description = #lr_female_medium/citizen2_desc;
+
+};
