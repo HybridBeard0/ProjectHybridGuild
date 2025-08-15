@@ -1,0 +1,14 @@
+perfume extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "perfume";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+	EditorName = "perfume";
+	EditorIcon = "media/UserInterface/PropIcons/Perfume.png";
+	EditorCategory = 3;		
+}

@@ -1,0 +1,13 @@
+/*shrub_05 extends G3PropsInstance
+{
+
+	static var Description = ActorDesc
+	{
+		Visual = "shrub_05";
+	};
+	EditorName = "Shrub05";
+	EditorIcon = "media/UserInterface/PropIcons/Shrub05.png";
+	EditorCategory = 1;
+
+}
+*/

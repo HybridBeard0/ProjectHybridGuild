@@ -1,0 +1,10 @@
+haystack_01 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "haystack_01";
+	};
+	EditorName = "Haystack01";
+	EditorIcon = "media/UserInterface/PropIcons/Haystack01.png";
+	EditorCategory = 3;		
+}

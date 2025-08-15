@@ -1,0 +1,14 @@
+plate_pork extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "plate_pork";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 L Foot";
+		AttachChildNode = "Snap";		
+	};
+	EditorName = "PlatePork";
+	EditorIcon = "media/UserInterface/PropIcons/Shortsword.png";
+	EditorCategory = 3;		
+}

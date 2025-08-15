@@ -1,0 +1,9 @@
+neighbor_selection_RED extends G3Actor
+{
+	static var Description = #neighbor_selection_RED/neighbor_selection_RED_desc;
+
+	function onInit()
+	{
+		this.playAnimationByName("walk1");
+	}
+};

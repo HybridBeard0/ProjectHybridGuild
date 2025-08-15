@@ -1,0 +1,10 @@
+interiorprop_churchvillage_parishregister extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "interiorprop_churchvillage_parishregister";
+	};
+	EditorName = "Interiorprop ChurchVillage Parishregister";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

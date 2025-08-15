@@ -1,0 +1,23 @@
+BigGroundMist extends EffectProp
+{
+	static var Description = ActorDesc
+	{
+		Visual = "";
+	};
+	
+	EditorName = "BigGroundMist";
+	EditorIcon = "Editoreffect_morninglakemist";
+	Destructible = false;
+	EditorCategory = 7;
+	
+	// EffectName defines the particle system to spawn when effect prop should be active
+	EffectName = "BigGroundMist";
+	// Tags are used to define when the effect should be active (seasons, weather)
+	// Valid tags: "Winter", "Spring", "Summer", "Fall", "IronSky", "Rain", "Snow"
+	Tags = array { "Spring", "Summer", "Fall", "IronSky" };
+	// If Effect should be active the whole day set remove DaytimeStart and DaytimeEnd from script file or set both to 0.0f
+	// day time in 24h format when effect should start
+	DaytimeStart = 21.0f;
+	// day time in 24h format when effect should end
+	DaytimeEnd = 5.0f;
+}

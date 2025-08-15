@@ -1,0 +1,30 @@
+schloss_03 extends Building
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "schloss_3";
+
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc {
+					Name = "streetconnection";
+					Position = ( -20.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "enter";
+					Position = ( -360.0, 782.0, 5.0 );
+					Rotation = ( 0.0, 0.0, 220.0 );
+				},
+				SnapPointDesc {
+					Name = "exit";
+					Position = ( -360.0, 782.0, 5.0 );
+					Rotation = ( 0.0, 0.0, 40.0 );
+				},
+			};
+		};
+	};
+	EditorName = "Schloss_03";
+	EditorIcon = "media/UserInterface/Icons/BuildingImages/Other/Schloss.png";
+	EditorCategory = 2;		
+}

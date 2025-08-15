@@ -1,0 +1,14 @@
+towel extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "towel";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+	EditorName = "Towel";
+	EditorIcon = "media/UserInterface/GameItems/Large/ShadowDagger.png";
+	EditorCategory = 3;		
+}

@@ -1,0 +1,4 @@
+kid1female extends G3Character
+{
+	static var Description = #lr_female_kid/kid1female_desc;
+};

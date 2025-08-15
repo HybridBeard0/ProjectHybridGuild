@@ -1,0 +1,11 @@
+lr_female_fat/lr_female_fat_desc
+
+{
+	Visual = "Commoner4Female_Fat_Game";
+
+	Poor = false;
+	Player = false;
+	TrotSpeed = 0.000;
+	AverageAge = 0.000;
+	CustomCollisionRadius = 0.000;
+}

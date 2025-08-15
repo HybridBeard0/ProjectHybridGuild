@@ -1,0 +1,40 @@
+ArtisanFemale extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = true;
+	MiddleClass = false;
+	Rich = false;
+	
+	Male = false;
+	Player = false;
+	Employee = true;
+	Profession = true;
+
+	LowResCharacter = "commoner4";
+	HighResCharacter = "commoner4";
+	
+	BodyTexturesDiff= array
+	{
+		"Commoner4Female_LOD01_diff",
+		"Commoner4Female_LOD01_diff",
+		"Commoner4Female_LOD01_diff",
+		"Commoner4Female_LOD01_diff"		
+	};
+	BodyTexturesNorm= array
+	{
+		"Commoner4Female_LOD01_NORM",
+		"Commoner4Female_LOD01_NORM",
+		"Commoner4Female_LOD01_NORM",
+		"Commoner4Female_LOD01_NORM"
+	};
+	BodyTexturesMask= array
+	{
+		"Commoner4Female_LOD01_MASK",
+		"Commoner4Female_LOD01_MASK",
+		"Commoner4Female_LOD01_MASK",
+		"Commoner4Female_LOD01_MASK"
+	};
+}

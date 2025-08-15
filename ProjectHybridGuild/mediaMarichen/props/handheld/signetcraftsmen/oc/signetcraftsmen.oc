@@ -1,0 +1,14 @@
+signetcraftsmen extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "signetcraftsmen";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";			
+	};
+	EditorName = "signetcraftsmen";
+	EditorIcon = "media/UserInterface/PropIcons/Axe.png";
+	EditorCategory = 3;		
+}

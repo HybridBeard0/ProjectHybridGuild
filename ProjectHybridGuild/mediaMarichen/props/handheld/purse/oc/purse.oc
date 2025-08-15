@@ -1,0 +1,14 @@
+purse extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "purse";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+	EditorName = "Purse";
+	EditorIcon = "media/UserInterface/PropIcons/Bag.png";
+	EditorCategory = 3;		
+}

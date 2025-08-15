@@ -1,0 +1,9 @@
+bakery_02 extends BuildingVisualUpgrade
+{
+	static var Description = ActorDesc
+	{
+		Visual = "bakery_02";
+	};
+	BusinessLevel = 2;
+	UpgradeOf = bakery;
+}

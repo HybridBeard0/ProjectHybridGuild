@@ -1,0 +1,15 @@
+G3ActorDesc
+{
+	Visual = "ridinghorse";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#horses/list_idles_animations,
+			#horses/list_walks_animations,
+			#horses/list_runs_animations,
+		);
+	};
+	AttachType = "AttachToNode";
+	CrowdControlRadius = 30.000;
+}

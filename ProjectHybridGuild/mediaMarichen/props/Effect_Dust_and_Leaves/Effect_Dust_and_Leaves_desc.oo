@@ -1,0 +1,11 @@
+G3ActorDesc
+{
+	Visual = "effect_dust";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#Effect_Dust_and_Leaves/list_idles_animations,
+		);
+	};
+}

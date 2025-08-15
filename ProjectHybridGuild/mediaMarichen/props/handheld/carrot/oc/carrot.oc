@@ -1,0 +1,14 @@
+carrot extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "carrot";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 L Hand";
+		AttachChildNode = "Snap";		
+	};
+	EditorName = "Carrot";
+	EditorIcon = "media/UserInterface/PropIcons/Longsword.png";
+	EditorCategory = 3;
+}

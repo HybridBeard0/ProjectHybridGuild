@@ -1,0 +1,10 @@
+bush_01_line extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "bush_01_line";
+	};
+	EditorName = "Bush01 (line)";
+	EditorIcon = "media/UserInterface/PropIcons/Bush01line.png";
+	EditorCategory = 1;		
+}

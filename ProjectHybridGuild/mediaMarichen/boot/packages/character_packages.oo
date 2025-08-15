@@ -1,0 +1,26 @@
+ResourcePackageNames
+{
+	Names = array
+	{
+//		"hr_archetype_farmer",
+//		"hr_archetype_thief",
+//		"hr_female_fat",
+//		"hr_female_medium",
+//		"hr_female_standard",
+//		"hr_male_fat",
+//		"hr_male_medium",
+//		"hr_male_standard",
+		"lr_female_fat",
+		"lr_female_kid",
+		"lr_female_medium",
+		"lr_female_old",
+		"lr_female_standard",
+		"lr_male_fat",
+		"lr_male_kid",
+		"lr_male_medium",
+		"lr_male_old",
+		"lr_male_standard",
+		"shared_female",
+		"shared_male"
+	};
+}

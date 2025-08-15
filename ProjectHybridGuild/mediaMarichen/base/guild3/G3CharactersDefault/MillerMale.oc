@@ -1,0 +1,40 @@
+MillerMale extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = true;
+	MiddleClass = false;
+	Rich = false;
+	
+	Male = true;
+	Player = false;
+	Employee = true;
+	Profession = true;
+	
+	LowResCharacter = "commoner2";
+	HighResCharacter = "commoner2";
+	
+	BodyTexturesDiff= array
+	{
+		"Commoner2Male_diff",
+		"Commoner2Male_diff",
+		"Commoner2Male_diff",		
+		"Commoner2Male_diff"			
+	};
+	BodyTexturesNorm= array
+	{
+		"Commoner2Male_NORM",
+		"Commoner2Male_NORM",
+		"Commoner2Male_NORM",
+		"Commoner2Male_NORM"
+	};
+	BodyTexturesMask= array
+	{
+		"Commoner2Male_MASK",
+		"Commoner2Male_MASK",
+		"Commoner2Male_MASK",
+		"Commoner2Male_MASK"
+	};
+}

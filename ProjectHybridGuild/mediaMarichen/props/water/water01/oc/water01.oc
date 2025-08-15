@@ -1,0 +1,10 @@
+water01 extends G3PropsInstance
+{
+	Destructible = false;
+	EditorCategory = 2; // Terrain prop
+	CustomFadeAlpha = 1.0;
+	static var Description = ActorDesc
+	{
+		Visual = "water01";
+	};
+}

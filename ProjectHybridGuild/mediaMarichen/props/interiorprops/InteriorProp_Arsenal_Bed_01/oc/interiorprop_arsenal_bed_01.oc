@@ -1,0 +1,43 @@
+interiorprop_arsenal_bed_01 extends G3PropsInstance
+{
+	static var Description = G3PropDesc
+	{
+		Visual = "interiorprop_arsenal_bed_01";
+
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc
+				{
+					Name = "lay00";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Animation = "bed_getin";
+							Context = "SitOnBench";
+						},
+						G3SnapPointAnimation 
+						{
+							Animation = "bed_idle";
+							Context = "SitOnBench";
+							Repeat = 8;
+						},
+						G3SnapPointAnimation 
+						{
+							Animation = "bed_getout";
+							Context = "SitOnBench";
+						},
+					};
+				},
+			};
+		};
+	};
+	
+	Interactable = true;
+	
+	EditorName = "InteriorProp Arsenal_bed_01";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

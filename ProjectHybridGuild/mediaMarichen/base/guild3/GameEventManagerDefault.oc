@@ -1,0 +1,13 @@
+GameEventManagerDefault extends GameEventManager
+{
+	ApplyForOfficeOpenEvent 		= "base/applyforoffice_open";
+	ApplyForOfficeCloseEvent 		= "base/applyforoffice_close";
+	ElectionEvent 					= "base/election";
+
+    ReleaseToSociety                = "base/ReleaseFromPrison";
+
+	SecretSocietyElectionEvent		= "base/SecretSocietyElection";
+	
+	TrialEvent						= "base/TrialEventDesc";
+    WeddingEvent					= "base/wedding";
+};

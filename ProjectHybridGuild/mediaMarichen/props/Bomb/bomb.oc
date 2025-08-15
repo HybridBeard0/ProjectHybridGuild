@@ -1,0 +1,5 @@
+bomb extends G3Actor
+{
+	static var Description = #Bomb/bomb_desc;
+
+};

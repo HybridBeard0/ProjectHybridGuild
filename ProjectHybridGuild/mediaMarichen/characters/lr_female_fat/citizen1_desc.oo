@@ -1,0 +1,13 @@
+lr_female_fat/lr_female_fat_desc
+{
+	Visual = "citizen1female_fat_game";
+	Poor = true;
+	MiddleClass = true;
+	Rich = true;
+	Male = true;
+	Player = true;
+	Employee = true;
+	TrotSpeed = 0.000;
+	AverageAge = 0.000;
+	CustomCollisionRadius = 8109777920.000;
+}

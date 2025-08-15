@@ -1,0 +1,9 @@
+bull2 extends G3Animal
+{
+	static var Description = #bulls/bull2_desc;
+	Behaviour = "Horse";
+	EditorName = "Bull 2";
+	
+	MaxRoamingDistance = 3000;
+	RoamingDivFactor = 2.5;
+};

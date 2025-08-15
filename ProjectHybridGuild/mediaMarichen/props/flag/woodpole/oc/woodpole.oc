@@ -1,0 +1,10 @@
+woodpole extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "woodpole";
+	};
+	EditorName = "woodpole";
+	EditorIcon = "media/UserInterface/PropIcons/woodpole.png";
+	EditorCategory = 3;		
+}

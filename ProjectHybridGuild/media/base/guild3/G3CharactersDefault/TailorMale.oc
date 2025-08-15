@@ -1,0 +1,40 @@
+TailorMale extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = true;
+	MiddleClass = false;
+	Rich = false;
+	
+	Male = true;
+	Player = false;
+	Employee = true;
+	Profession = true;
+
+	LowResCharacter = "citizen3";
+	HighResCharacter = "citizen3";
+	
+	BodyTexturesDiff= array
+	{
+		"Citizen3Male_diff",
+		"Citizen3Male_diff",
+		"Citizen3Male_diff",
+		"Citizen3Male_diff"		
+	};
+	BodyTexturesNorm= array
+	{
+		"Citizen3Male_NORM",
+		"Citizen3Male_NORM",
+		"Citizen3Male_NORM",
+		"Citizen3Male_NORM"
+	};
+	BodyTexturesMask= array
+	{
+		"Citizen3Male_MASK",
+		"Citizen3Male_MASK",
+		"Citizen3Male_MASK",
+		"Citizen3Male_MASK"
+	};
+}

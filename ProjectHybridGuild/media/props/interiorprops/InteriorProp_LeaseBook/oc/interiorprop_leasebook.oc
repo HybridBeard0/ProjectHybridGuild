@@ -1,0 +1,21 @@
+interiorprop_leasebook extends G3PropsInstance
+{
+	static var Description = G3PropDesc
+	{
+		Visual = "interiorprop_leasebook";
+		
+		Interaction = G3ActorInteraction 
+		{
+			Name = "$props.name.BookOfLeases";
+			TooltipText = "$action.OpenBookOfLeases";
+			TooltipIcon = "OpenLeasingPanel";
+			UiEvent = "ToggleLeaseWindow";
+		};
+	};
+	
+	Interactable = true;
+	
+	EditorName = "Interiorprop Leasebook";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

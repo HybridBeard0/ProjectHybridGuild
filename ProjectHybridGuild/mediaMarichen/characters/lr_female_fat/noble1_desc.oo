@@ -1,0 +1,19 @@
+lr_female_fat/lr_female_fat_desc
+
+{
+	Visual = "noble1female_fat_game";
+
+	SoundDesc = SoundDesc
+	{
+		Name = "weapon_block";
+	};
+	Poor = false;
+	MiddleClass = false;
+	Rich = false;
+	Male = true;
+	Player = false;
+	Employee = false;
+	TrotSpeed = 0.082;
+	AverageAge = 8109777920.000;
+	CustomCollisionRadius = 0.082;
+}

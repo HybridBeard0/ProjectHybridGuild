@@ -1,0 +1,41 @@
+ChainmailMale extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = false;
+	MiddleClass = true;
+	Rich = false;
+	
+	Male = true;
+	Player = false;
+	Employee = false;
+	Profession = false;
+	
+	
+	LowResCharacter = "chainmail";
+	HighResCharacter = "chainmail";
+	
+	BodyTexturesDiff= array
+	{
+		"Chainmail_Color_DIFF",
+		"Chainmail_Color_DIFF",
+		"Chainmail_Color_DIFF",		
+		"Chainmail_Color_DIFF"			
+	};
+	BodyTexturesNorm= array
+	{
+		"Chainmail_Color_NORM",
+		"Chainmail_Color_NORM",
+		"Chainmail_Color_NORM",
+		"Chainmail_Color_NORM"
+	};
+	BodyTexturesMask= array
+	{
+		"Chainmail_Color_MASK",
+		"Chainmail_Color_MASK",
+		"Chainmail_Color_MASK",
+		"Chainmail_Color_MASK"
+	};
+}

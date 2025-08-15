@@ -1,0 +1,64 @@
+MansionLevel extends G3BuildingTemplateLevel
+{
+    NBAddons = 17;
+
+	Results = array 
+	{
+		TagEffect
+		{
+			Tags = array{"Mansion"};
+		},
+		DisplayEffect
+		{
+			Tags = array{"Bathroom"};
+			ApplyTo = "Self";
+			DisplayGroup = "RoomFixture";
+			DisplayName = "$Bathroom";
+			Duration = 0.0;
+		};
+		DisplayEffect
+		{
+			Tags = array{"Salon"};
+			ApplyTo = "Self";
+			DisplayGroup = "RoomFixture";
+			DisplayName = "$Salon";
+			Duration = 0.0;
+		};
+		ModifierEffect
+		{
+			ActorValue = "Productivity";
+			Mod = -0.05;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "MaxEmployees";
+			Mod = 200.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "StorageSlots";
+			Mod = 16.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "StorageSpace";
+			Mod = 60.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "FireProtection";
+			Mod = 2.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "BuildingSecurity";
+			Mod = 2.0;
+			Recover = true;
+		};
+	};
+};

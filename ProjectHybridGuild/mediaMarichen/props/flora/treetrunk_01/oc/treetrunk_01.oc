@@ -1,0 +1,10 @@
+treetrunk_01 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "treetrunk_01";
+	};
+	EditorName = "Tree trunk01";
+	EditorIcon = "media/UserInterface/PropIcons/Treetrunk01.png";
+	EditorCategory = 0;		
+}

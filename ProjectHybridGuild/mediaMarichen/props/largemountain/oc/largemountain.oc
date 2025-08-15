@@ -1,0 +1,10 @@
+largemountain extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "largemountain";
+	};
+	EditorName = "largemountain";
+	EditorIcon = "media/UserInterface/PropIcons/largemountain.png";
+	EditorCategory = 6;		
+}

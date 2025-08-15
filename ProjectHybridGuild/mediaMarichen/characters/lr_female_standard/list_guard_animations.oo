@@ -1,0 +1,83 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1452628120;
+			Name = "blaming1";
+			AnimationName = "blaming1";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 38;
+					SoundEvent = 1201;
+					FadeStart = 100; // Faster silent
+					FadeOut = 500.0; // Not too loud
+					EventLoops = false;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 92;
+					SoundEvent = 1201;
+					FadeStart = 100; // Faster silent
+					FadeOut = 500.0; // Not too loud
+					EventLoops = false;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1475261478;
+			Name = "GuardBuilding1";
+			AnimationName = "GuardBuilding1";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1475263915;
+			Name = "GuardBuilding2";
+			AnimationName = "GuardBuilding2";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1427903221;
+			Name = "lr_city_guard_idle1";
+			AnimationName = "lr_city_guard_idle1";
+		},
+		AnimationDesc
+		{
+			ID = 1452628144;
+			Name = "spotted1";
+			AnimationName = "spotted1";
+			Looping = true;
+		},
+	);
+}

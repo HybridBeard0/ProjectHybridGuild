@@ -1,0 +1,13 @@
+Smuggler2 extends G3BuildingTemplateLevel
+{
+    NBAddons = 13;
+	Results = array 
+	{
+		ModifierEffect
+		{
+			ActorValue = "StorageSlots";
+			Mod = 2.0;
+			Recover = true;
+		};
+	};
+};

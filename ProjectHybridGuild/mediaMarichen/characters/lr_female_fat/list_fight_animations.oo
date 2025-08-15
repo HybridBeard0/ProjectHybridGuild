@@ -1,0 +1,210 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1504032340;
+			Name = "backstab";
+			AnimationName = "backstab";
+			Looping = true;
+		},
+		AnimationDesc
+		{
+			ID = 1477080009;
+			Name = "backstab_victim";
+			AnimationName = "backstab_victim";
+		},
+		AnimationDesc
+		{
+			ID = 1484169974;
+			Name = "break_bone";
+			AnimationName = "break_bone";
+		},
+		AnimationDesc
+		{
+			ID = 1484170000;
+			Name = "break_bone_victim";
+			AnimationName = "break_bone_victim";
+		},
+		AnimationDesc
+		{
+			ID = 1484850655;
+			Name = "challenge_for_duel";
+			AnimationName = "challenge_for_duel";
+		},
+		AnimationDesc
+		{
+			ID = 1429884932;
+			Name = "fight1";
+			AnimationName = "fight1";
+		},
+		AnimationDesc
+		{
+			ID = 1429884940;
+			Name = "fight2";
+			AnimationName = "fight2";
+		},
+		AnimationDesc
+		{
+			ID = 1429884948;
+			Name = "fight3";
+			AnimationName = "fight3";
+		},
+		AnimationDesc
+		{
+			ID = 1429884956;
+			Name = "fight4";
+			AnimationName = "fight4";
+		},
+		AnimationDesc
+		{
+			ID = 1429884970;
+			Name = "fightidle1";
+			AnimationName = "fightidle1";
+		},
+		AnimationDesc
+		{
+			ID = 1481050549;
+			Name = "get_up1";
+			AnimationName = "get_up1";
+		},
+		AnimationDesc
+		{
+			ID = 1477423370;
+			Name = "is_kidnapped_backpack";
+			AnimationName = "is_kidnapped_backpack";
+		},
+		AnimationDesc
+		{
+			ID = 1477504936;
+			Name = "kidnap_character_backpack";
+			AnimationName = "kidnap_character_backpack";
+		},
+		AnimationDesc
+		{
+			ID = 1485292699;
+			Name = "KillCharacter";
+			AnimationName = "KillCharacter";
+		},
+		AnimationDesc
+		{
+			ID = 1485292731;
+			Name = "KillCharacter_victim";
+			AnimationName = "KillCharacter_victim";
+		},
+		AnimationDesc
+		{
+			ID = 1784583351;
+			Name = "kill_unconscious_character";
+			AnimationName = "kill_unconscious_character";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 0;
+					SpawnName = "dagger/dagger";
+				},
+				VoiceTrigger
+				{
+					TriggerFrame = 29;
+					SoundEvent = 286;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;					
+				},
+				
+				VoiceTrigger
+				{
+					TriggerFrame = 93;
+					SoundEvent = 276;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;					
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1484938973;
+			Name = "shoot_crossbow";
+			AnimationName = "shoot_crossbow";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 18;
+					SoundEvent = 1101;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1484864223;
+			Name = "shoot_pistol";
+			AnimationName = "shoot_pistol";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 21;
+					SoundEvent = 1100;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1480965310;
+			Name = "weapon_attack";
+			AnimationName = "weapon_attack";
+		},
+		AnimationDesc
+		{
+			ID = 1481034579;
+			Name = "weapon_block";
+			AnimationName = "weapon_block";
+		},
+		AnimationDesc
+		{
+			ID = 1481042711;
+			Name = "weapon_idle";
+			AnimationName = "weapon_idle";
+		},
+		AnimationDesc
+		{
+			ID = 1481043277;
+			Name = "weapon_lose";
+			AnimationName = "weapon_lose";
+		},
+		AnimationDesc
+		{
+			ID = 1481039056;
+			Name = "weapon_receive_hit";
+			AnimationName = "weapon_receive_hit";
+		},
+	);
+}

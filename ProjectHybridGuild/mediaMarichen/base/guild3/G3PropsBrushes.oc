@@ -1,0 +1,874 @@
+G3PropsBrushes extends G3PropsBrushesContainer
+{
+	Definitions = map
+	{
+		"Ground Ivy" = G3PropsBrush
+		{
+			InverseDensity = 70;
+			BrushComponents = array
+			{
+				1 = G3PropsBrushComponent
+				{
+					Model = "ground_ivy_01/ground_ivy_01";
+					MinimumSize = 0.0;
+					MaximumSize = 1.15;
+					CollisionRadius = 35;
+				};
+				2 = G3PropsBrushComponent
+				{
+					Model = "ground_ivy_02/ground_ivy_02";
+					MinimumSize = 0.5;
+					MaximumSize = 1.15;
+					CollisionRadius = 35;
+				};	
+				3 = G3PropsBrushComponent
+				{
+					Model = "ground_ivy_03/ground_ivy_03";
+					MinimumSize = 0.5;
+					MaximumSize = 1.15;
+					CollisionRadius = 35;
+				};	
+			};
+		};
+		
+		"Rocks" = G3PropsBrush
+		{
+			BrushComponents = array
+			{
+				1 = G3PropsBrushComponent
+				{
+					Model = "rock_01/rock_01";
+					Frequency = 1;
+					MinimumSize = 0.50;
+					MaximumSize = 1.10;
+					CollisionRadius = 45;
+				};
+				2 = G3PropsBrushComponent
+				{
+					Model = "rock_02/rock_02";
+					Frequency = 1;
+					MinimumSize = 0.50;
+					MaximumSize = 1.10;
+					CollisionRadius = 45;
+				};
+				3 = G3PropsBrushComponent
+				{
+					Model = "rock_03/rock_03";
+					Frequency = 1;
+					MinimumSize = 0.50;
+					MaximumSize = 1.10;
+					CollisionRadius = 45;
+				};
+				4 = G3PropsBrushComponent
+				{
+					Model = "rock_04/rock_04";
+					Frequency = 1;
+					MinimumSize = 0.50;
+					MaximumSize = 1.10;
+					CollisionRadius = 45;
+				};
+				5 = G3PropsBrushComponent
+				{
+					Model = "rock_05/rock_05";
+					Frequency = 1;
+					MinimumSize = 0.50;
+					MaximumSize = 1.10;
+					CollisionRadius = 45;
+				};
+			};
+		};
+		
+		"Stumps" = G3PropsBrush
+		{
+			InverseDensity = 120;
+			BrushComponents = array
+			{
+				1 = G3PropsBrushComponent
+				{
+					Model = "stump_01/stump_01";
+					Frequency = 1;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 60;
+				};
+				2 = G3PropsBrushComponent
+				{
+					Model = "stump_02/stump_02";
+					Frequency = 1;
+					MinimumSize = 0.50;
+					MaximumSize = 1.10;
+					CollisionRadius = 60;
+				};
+				3 = G3PropsBrushComponent
+				{
+					Model = "stump_03/stump_03";
+					Frequency = 1;
+					MinimumSize = 0.50;
+					MaximumSize = 1.10;
+					CollisionRadius = 60;
+				};
+			};
+		};
+		
+		"Trees - Leaf" = G3PropsBrush
+		{
+			InverseDensity = 120;
+			BrushComponents = array
+			{
+				1 = G3PropsBrushComponent
+				{
+					Model = "tree_20/tree_20";
+					Frequency = 0.16;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				2 = G3PropsBrushComponent
+				{
+					Model = "tree_10/tree_10";
+					Frequency = 0.16;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				3 = G3PropsBrushComponent
+				{
+					Model = "tree_11_small/tree_11_small";
+					Frequency = 0.16;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				4 = G3PropsBrushComponent
+				{
+					Model = "tree_19/tree_19";
+					Frequency = 0.16;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				5 = G3PropsBrushComponent
+				{
+					Model = "tree_18/tree_18";
+					Frequency = 0.16;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				6 = G3PropsBrushComponent
+				{
+					Model = "tree_17/tree_17";
+					Frequency = 0.16;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+			};
+		};
+		
+		"Trees - Dead" = G3PropsBrush
+		{
+			InverseDensity = 120;
+			BrushComponents = array
+			{
+				1 = G3PropsBrushComponent
+				{
+					Model = "tree_16/tree_16";
+					Frequency = 0.5;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				2 = G3PropsBrushComponent
+				{
+					Model = "tree_15/tree_15";
+					Frequency = 0.5;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+			};
+		};
+		
+		"Trees - Needle" = G3PropsBrush
+		{
+			InverseDensity = 120;
+			BrushComponents = array
+			{
+				1 = G3PropsBrushComponent
+				{
+					Model = "tree_09/tree_09";
+					Frequency = 0.11;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				2 = G3PropsBrushComponent
+				{
+					Model = "tree_08/tree_08";
+					Frequency = 0.11;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				3 = G3PropsBrushComponent
+				{
+					Model = "tree_07/tree_07";
+					Frequency = 0.11;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				4 = G3PropsBrushComponent
+				{
+					Model = "tree_06/tree_06";
+					Frequency = 0.11;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				5 = G3PropsBrushComponent
+				{
+					Model = "tree_05/tree_05";
+					Frequency = 0.11;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				6 = G3PropsBrushComponent
+				{
+					Model = "tree_04/tree_04";
+					Frequency = 0.11;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				7 = G3PropsBrushComponent
+				{
+					Model = "tree_03/tree_03";
+					Frequency = 0.11;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				8 = G3PropsBrushComponent
+				{
+					Model = "tree_02/tree_02";
+					Frequency = 0.11;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				9 = G3PropsBrushComponent
+				{
+					Model = "tree_01/tree_01";
+					Frequency = 0.11;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+			};
+		};
+		
+		"Trees - All" = G3PropsBrush
+		{
+			InverseDensity = 120;
+			BrushComponents = array
+			{
+				1 = G3PropsBrushComponent
+				{
+					Model = "tree_09/tree_09";
+					Frequency = 0.11;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				2 = G3PropsBrushComponent
+				{
+					Model = "tree_08/tree_08";
+					Frequency = 0.11;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				3 = G3PropsBrushComponent
+				{
+					Model = "tree_07/tree_07";
+					Frequency = 0.11;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				4 = G3PropsBrushComponent
+				{
+					Model = "tree_06/tree_06";
+					Frequency = 0.11;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				5 = G3PropsBrushComponent
+				{
+					Model = "tree_05/tree_05";
+					Frequency = 0.11;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				6 = G3PropsBrushComponent
+				{
+					Model = "tree_04/tree_04";
+					Frequency = 0.11;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				7 = G3PropsBrushComponent
+				{
+					Model = "tree_03/tree_03";
+					Frequency = 0.11;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				8 = G3PropsBrushComponent
+				{
+					Model = "tree_02/tree_02";
+					Frequency = 0.11;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				9 = G3PropsBrushComponent
+				{
+					Model = "tree_01/tree_01";
+					Frequency = 0.11;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				10 = G3PropsBrushComponent
+				{
+					Model = "tree_16/tree_16";
+					Frequency = 0.5;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				11 = G3PropsBrushComponent
+				{
+					Model = "tree_15/tree_15";
+					Frequency = 0.5;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				12 = G3PropsBrushComponent
+				{
+					Model = "tree_20/tree_20";
+					Frequency = 0.16;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				13 = G3PropsBrushComponent
+				{
+					Model = "tree_10/tree_10";
+					Frequency = 0.16;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				14 = G3PropsBrushComponent
+				{
+					Model = "tree_11_small/tree_11_small";
+					Frequency = 0.16;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				15 = G3PropsBrushComponent
+				{
+					Model = "tree_19/tree_19";
+					Frequency = 0.16;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				16 = G3PropsBrushComponent
+				{
+					Model = "tree_18/tree_18";
+					Frequency = 0.16;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+				17 = G3PropsBrushComponent
+				{
+					Model = "tree_17/tree_17";
+					Frequency = 0.16;
+					MinimumSize = 0.5;
+					MaximumSize = 1.0;
+					CollisionRadius = 210;
+				};
+			};
+		};
+		
+		
+		"Bushes - Forest" = G3PropsBrush
+		{
+			InverseDensity = 120;
+			BrushComponents = array
+			{
+				1 = G3PropsBrushComponent
+				{
+					Model = "bush_06_single/bush_06_single";
+					Frequency = 0.14;
+					MinimumSize = 0.5;
+					MaximumSize = 1.15;
+					CollisionRadius = 30;
+				};
+				2 = G3PropsBrushComponent
+				{
+					Model = "bush_04_single/bush_04_single";
+					Frequency = 0.14;
+					MinimumSize = 0.5;
+					MaximumSize = 1.15;
+					CollisionRadius = 30;
+				};
+				3 = G3PropsBrushComponent
+				{
+					Model = "bush_05_single/bush_05_single";
+					Frequency = 0.14;
+					MinimumSize = 0.5;
+					MaximumSize = 1.15;
+					CollisionRadius = 30;
+				};
+				4 = G3PropsBrushComponent
+				{
+					Model = "bush_07_single/bush_07_single";
+					Frequency = 0.14;
+					MinimumSize = 0.5;
+					MaximumSize = 1.15;
+					CollisionRadius = 30;
+				};
+				5 = G3PropsBrushComponent
+				{
+					Model = "bush_11_single/bush_11_single";
+					Frequency = 0.14;
+					MinimumSize = 0.5;
+					MaximumSize = 1.15;
+					CollisionRadius = 30;
+				};
+				6 = G3PropsBrushComponent
+				{
+					Model = "bush_13_single/bush_13_single";
+					Frequency = 0.14;
+					MinimumSize = 0.5;
+					MaximumSize = 1.15;
+					CollisionRadius = 30;
+				};
+				7 = G3PropsBrushComponent
+				{
+					Model = "bush_14_single/bush_14_single";
+					Frequency = 0.14;
+					MinimumSize = 0.5;
+					MaximumSize = 1.15;
+					CollisionRadius = 30;
+				};
+			};
+		};
+		
+		"Mushrooms" = G3PropsBrush
+		{
+			InverseDensity = 120;
+			BrushComponents = array
+			{
+				1 = G3PropsBrushComponent
+				{
+					Model = "mushrooms_02/mushrooms_02";
+					Frequency = 0.3;
+					MinimumSize = 0.5;
+					MaximumSize = 1.20;
+					CollisionRadius = 40;
+				};
+				2 = G3PropsBrushComponent
+				{
+					Model = "mushrooms_03/mushrooms_03";
+					Frequency = 0.3;
+					MinimumSize = 0.5;
+					MaximumSize = 1.20;
+					CollisionRadius = 40;
+				};
+				3 = G3PropsBrushComponent
+				{
+					Model = "mushrooms_04/mushrooms_04";
+					Frequency = 0.3;
+					MinimumSize = 0.5;
+					MaximumSize = 1.20;
+					CollisionRadius = 40;
+				};
+			};
+		};
+		
+		"Flowers - Wild" = G3PropsBrush
+		{
+			InverseDensity = 100;
+			BrushComponents = array
+			{
+				1 = G3PropsBrushComponent
+				{
+					Model = "flower_01/flower_01";
+					Frequency = 0.16;
+					MinimumSize = 0.8;
+					MaximumSize = 1.40;
+					CollisionRadius = 60;
+				};
+				2 = G3PropsBrushComponent
+				{
+					Model = "flower_02/flower_02";
+					Frequency = 0.16;
+					MinimumSize = 0.8;
+					MaximumSize = 1.40;
+					CollisionRadius = 60;
+				};
+				3 = G3PropsBrushComponent
+				{
+					Model = "flower_03/flower_03";
+					Frequency = 0.16;
+					MinimumSize = 0.8;
+					MaximumSize = 1.40;
+					CollisionRadius = 60;
+				};
+				4 = G3PropsBrushComponent
+				{
+					Model = "flower_04/flower_04";
+					Frequency = 0.16;
+					MinimumSize = 0.8;
+					MaximumSize = 1.40;
+					CollisionRadius = 60;
+				};
+				5 = G3PropsBrushComponent
+				{
+					Model = "flower_05/flower_05";
+					Frequency = 0.16;
+					MinimumSize = 0.8;
+					MaximumSize = 1.40;
+					CollisionRadius = 60;
+				};
+				6 = G3PropsBrushComponent
+				{
+					Model = "flower_06/flower_06";
+					Frequency = 0.16;
+					MinimumSize = 0.8;
+					MaximumSize = 1.40;
+					CollisionRadius = 20;
+				};
+			};
+		};
+		
+		"Forest Fauna - mixed" = G3PropsBrush
+		{
+			InverseDensity = 150;
+			BrushComponents = array
+			{
+				1 = G3PropsBrushComponent
+				{
+					Model = "bush_06_single/bush_06_single";
+					Frequency = 0.06;
+					MinimumSize = 0.5;
+					MaximumSize = 1.15;
+					CollisionRadius = 30;
+				};
+				2 = G3PropsBrushComponent
+				{
+					Model = "bush_04_single/bush_04_single";
+					Frequency = 0.06;
+					MinimumSize = 0.5;
+					MaximumSize = 1.15;
+					CollisionRadius = 30;
+				};
+				3 = G3PropsBrushComponent
+				{
+					Model = "bush_05_single/bush_05_single";
+					Frequency = 0.06;
+					MinimumSize = 0.5;
+					MaximumSize = 1.15;
+					CollisionRadius = 30;
+				};
+				4 = G3PropsBrushComponent
+				{
+					Model = "bush_07_single/bush_07_single";
+					Frequency = 0.06;
+					MinimumSize = 0.5;
+					MaximumSize = 1.15;
+					CollisionRadius = 30;
+				};
+				5 = G3PropsBrushComponent
+				{
+					Model = "bush_11_single/bush_11_single";
+					Frequency = 0.06;
+					MinimumSize = 0.5;
+					MaximumSize = 1.15;
+					CollisionRadius = 30;
+				};
+				6 = G3PropsBrushComponent
+				{
+					Model = "bush_13_single/bush_13_single";
+					Frequency = 0.06;
+					MinimumSize = 0.5;
+					MaximumSize = 1.15;
+					CollisionRadius = 30;
+				};
+				7 = G3PropsBrushComponent
+				{
+					Model = "bush_14_single/bush_14_single";
+					Frequency = 0.06;
+					MinimumSize = 0.5;
+					MaximumSize = 1.15;
+					CollisionRadius = 30;
+				};
+				8 = G3PropsBrushComponent
+				{
+					Model = "mushrooms_02/mushrooms_02";
+					Frequency = 0.06;
+					MinimumSize = 0.5;
+					MaximumSize = 1.20;
+					CollisionRadius = 40;
+				};
+				9 = G3PropsBrushComponent
+				{
+					Model = "mushrooms_03/mushrooms_03";
+					Frequency = 0.06;
+					MinimumSize = 0.5;
+					MaximumSize = 1.20;
+					CollisionRadius = 40;
+				};
+				10 = G3PropsBrushComponent
+				{
+					Model = "mushrooms_04/mushrooms_04";
+					Frequency = 0.06;
+					MinimumSize = 0.5;
+					MaximumSize = 1.20;
+					CollisionRadius = 40;
+				};
+				11 = G3PropsBrushComponent
+				{
+					Model = "flower_01/flower_01";
+					Frequency = 0.06;
+					MinimumSize = 0.8;
+					MaximumSize = 1.40;
+					CollisionRadius = 100;
+				};
+				12 = G3PropsBrushComponent
+				{
+					Model = "flower_02/flower_02";
+					Frequency = 0.06;
+					MinimumSize = 0.8;
+					MaximumSize = 1.40;
+					CollisionRadius = 100;
+				};
+				13 = G3PropsBrushComponent
+				{
+					Model = "flower_03/flower_03";
+					Frequency = 0.06;
+					MinimumSize = 0.8;
+					MaximumSize = 1.40;
+					CollisionRadius = 100;
+				};
+				14 = G3PropsBrushComponent
+				{
+					Model = "flower_04/flower_04";
+					Frequency = 0.06;
+					MinimumSize = 0.8;
+					MaximumSize = 1.40;
+					CollisionRadius = 100;
+				};
+				15 = G3PropsBrushComponent
+				{
+					Model = "flower_05/flower_05";
+					Frequency = 0.06;
+					MinimumSize = 0.8;
+					MaximumSize = 1.40;
+					CollisionRadius = 100;
+				};
+				16 = G3PropsBrushComponent
+				{
+					Model = "flower_06/flower_06";
+					Frequency = 0.06;
+					MinimumSize = 0.8;
+					MaximumSize = 1.40;
+					CollisionRadius = 100;
+				};
+			};
+		};
+		
+		"Rocks - Small" = G3PropsBrush
+		{
+			InverseDensity = 60;
+			BrushComponents = array
+			{
+				1 = G3PropsBrushComponent
+				{
+					Model = "rock_01/rock_01";
+					Frequency = 0.02;
+					MinimumSize = 0.20;
+					MaximumSize = 0.40;
+					CollisionRadius = 5;
+				};
+				2 = G3PropsBrushComponent
+				{
+					Model = "rock_02/rock_02";
+					Frequency = 0.05;
+					MinimumSize = 0.20;
+					MaximumSize = 0.40;
+					CollisionRadius = 5;
+				};
+				3 = G3PropsBrushComponent
+				{
+					Model = "rock_03/rock_03";
+					Frequency = 0.05;
+					MinimumSize = 0.20;
+					MaximumSize = 0.40;
+					CollisionRadius = 5;
+				};
+				4 = G3PropsBrushComponent
+				{
+					Model = "rock_04/rock_04";
+					Frequency = 0.05;
+					MinimumSize = 0.20;
+					MaximumSize = 0.40;
+					CollisionRadius = 5;
+				};
+			};
+		};
+		
+		"Rocks - Medium" = G3PropsBrush
+		{
+			InverseDensity = 80;
+			BrushComponents = array
+			{
+				1 = G3PropsBrushComponent
+				{
+					Model = "rock_01/rock_01";
+					Frequency = 0.03;
+					MinimumSize = 0.90;
+					MaximumSize = 1.10;
+					CollisionRadius = 30;
+				};
+				2 = G3PropsBrushComponent
+				{
+					Model = "rock_02/rock_02";
+					Frequency = 0.05;
+					MinimumSize = 0.90;
+					MaximumSize = 1.10;
+					CollisionRadius = 30;
+				};
+				3 = G3PropsBrushComponent
+				{
+					Model = "rock_03/rock_03";
+					Frequency = 0.05;
+					MinimumSize = 0.90;
+					MaximumSize = 1.10;
+					CollisionRadius = 30;
+				};
+				4 = G3PropsBrushComponent
+				{
+					Model = "rock_04/rock_04";
+					Frequency = 0.05;
+					MinimumSize = 0.90;
+					MaximumSize = 1.10;
+					CollisionRadius = 30;
+				};
+				5 = G3PropsBrushComponent
+				{
+					Model = "rock_05/rock_05";
+					Frequency = 0.05;
+					MinimumSize = 0.90;
+					MaximumSize = 1.10;
+					CollisionRadius = 30;
+				};
+				6 = G3PropsBrushComponent
+				{
+					Model = "rock_06/rock_06";
+					Frequency = 0.05;
+					MinimumSize = 0.90;
+					MaximumSize = 1.10;
+					CollisionRadius = 30;
+				};
+			};
+		};
+		
+		"Rocks - Large" = G3PropsBrush
+		{
+			InverseDensity = 90;
+			BrushComponents = array
+			{
+				1 = G3PropsBrushComponent
+				{
+					Model = "rock_01/rock_01";
+					Frequency = 0.02;
+					MinimumSize = 1.00;
+					MaximumSize = 1.50;
+					CollisionRadius = 40;
+				};
+				2 = G3PropsBrushComponent
+				{
+					Model = "rock_02/rock_02";
+					Frequency = 0.04;
+					MinimumSize = 1.00;
+					MaximumSize = 2.00;
+					CollisionRadius = 40;
+				};
+				3 = G3PropsBrushComponent
+				{
+					Model = "rock_03/rock_03";
+					Frequency = 0.05;
+					MinimumSize = 1.00;
+					MaximumSize = 2.00;
+					CollisionRadius = 40;
+				};
+				4 = G3PropsBrushComponent
+				{
+					Model = "rock_04/rock_04";
+					Frequency = 0.05;
+					MinimumSize = 1.00;
+					MaximumSize = 2.00;
+					CollisionRadius = 40;
+				};
+				5 = G3PropsBrushComponent
+				{
+					Model = "rock_05/rock_05";
+					Frequency = 0.05;
+					MinimumSize = 1.00;
+					MaximumSize = 2.00;
+					CollisionRadius = 40;
+				};
+				6 = G3PropsBrushComponent
+				{
+					Model = "rock_06/rock_06";
+					Frequency = 0.05;
+					MinimumSize = 1.00;
+					MaximumSize = 2.00;
+					CollisionRadius = 40;
+				};
+				7 = G3PropsBrushComponent
+				{
+					Model = "rock_07/rock_07";
+					Frequency = 0.07;
+					MinimumSize = 1.00;
+					MaximumSize = 6.00;
+					CollisionRadius = 40;
+				};
+				8 = G3PropsBrushComponent
+				{
+					Model = "rock_08/rock_08";
+					Frequency = 0.07;
+					MinimumSize = 1.00;
+					MaximumSize = 6.00;
+					CollisionRadius = 40;
+				};
+			};
+		};	
+	};
+};

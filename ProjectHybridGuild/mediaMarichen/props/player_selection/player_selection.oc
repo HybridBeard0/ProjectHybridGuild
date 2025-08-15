@@ -1,0 +1,9 @@
+player_selection extends G3Actor
+{
+	static var Description = #player_selection/player_selection_desc;
+
+	function onInit()
+	{
+		this.playAnimationByName("walk1");
+	}
+};

@@ -1,0 +1,10 @@
+smallforest extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "smallforest";
+	};
+	EditorName = "smallforest";
+	EditorIcon = "media/UserInterface/PropIcons/smallforest.png";
+	EditorCategory = 6;		
+}

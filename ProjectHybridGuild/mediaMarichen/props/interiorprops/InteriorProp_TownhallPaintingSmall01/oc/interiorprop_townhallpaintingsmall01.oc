@@ -1,0 +1,10 @@
+interiorprop_townhallpaintingsmall01 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "interiorprop_townhallpaintingsmall01";
+	};
+	EditorName = "Interiorprop TownhallPaintingSmall01";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

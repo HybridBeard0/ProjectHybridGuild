@@ -1,0 +1,2 @@
+"SourceScoreFormula" = "(Intelligence * 2) + Luck";	
+"TargetScoreFormula" = "Target.Intelligence * (0.75 + ((((Source.DoesHaveTag.Catholic && Target.DoesHaveTag.Protestant) || (Source.DoesHaveTag.Protestant && Target.DoesHaveTag.Catholic)) * 0.5) + (((Source.DoesHaveTag.Religious && Target.DoesNotHaveTag.Religious) || (Source.DoesNotHaveTag.Religious && Target.DoesHaveTag.Religious)) * 0.25)))";

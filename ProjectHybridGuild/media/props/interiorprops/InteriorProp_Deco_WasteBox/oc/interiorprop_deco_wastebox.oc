@@ -1,0 +1,18 @@
+interiorprop_deco_wastebox extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "interiorprop_deco_wastebox";
+		AnimationArray = AnimationListArray
+		{
+			AnimationLists = array
+			(
+				#InteriorProp_Deco_WasteBox/wastebox_idles_animations,
+			);
+		};
+
+	};
+	EditorName = "InteriorProp Deco WasteBox";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

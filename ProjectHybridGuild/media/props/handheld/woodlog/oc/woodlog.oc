@@ -1,0 +1,14 @@
+woodlog extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "woodlog";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";		
+	};
+	EditorName = "Woodlog";
+	EditorIcon = "media/UserInterface/PropIcons/Longsword.png";
+	EditorCategory = 3;
+}

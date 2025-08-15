@@ -1,0 +1,2135 @@
+GameplayDefault extends GameplayElements
+{
+	//NormalYearTime = 180.0;				// 3 minutes
+	//NormalYearTime = 720.0;					// 12 minutes
+	//NormalYearTime = 1080.0;				// 18 minutes
+	NormalYearTime = 1800.0;				// 30 minutes
+	WorkdayBegin = 4.0;						//24h format, 12.5 = 12:30h, 0.5 = 00:30h
+	WorkdayEnd = 22.0;						//24h format, 12.5 = 12:30h, 0.5 = 00:30h
+	SnoozeTime = 0.5;						// Snooze timer, in hours (0.5 = 30 minutes). Employees are allowed to oversleep by at most this much. If their sleep action would extend beyond this overtime, they are woken up.
+	WellRestedDuration = 0.2;				// Duration (in years) that a character has to sleep in order to get the 'WellRested' buff. The sleep action should be a bit longer than this at least, otherwise characters will never be well rested.
+	DaylightBegin = 4.0;					// dayhour when night starts visually! 24h format, 12.5 = 12:30h, 0.5 = 00:30h
+	DaylightEnd = 22.0;						// dayhour when night ends visually! 24h format, 12.5 = 12:30h, 0.5 = 00:30h
+	EnableLightsBegin = 20.0;				// dayhour when lights for buildings should be enabled! 24h format (hours only)
+	EnableLightsEnd = 6.0;					// dayhour when lights for buildings should be disabled! 24h format (hours only)
+	YearsPerRoundDefault = 2;				// Default value for: How many years we jump when going from 23:59h to 00:00h
+	YearsPerRoundOptions = array { 1, 2, 3, 4 };	// Options for starting a map for: How many years we jump when going from 23:59h to 00:00h
+	ScoreRecalculationFrequency = 4;		// How often scores for families are recalculated per round.
+	
+	WorldUnitsToPaces = 0.03; // Conversion factor from world units to paces. I.e. (WorldUnits * WorldUnitsToPaces = Paces)
+
+	Score_FamilyTitle_PerLevel = 20.0;
+	Score_FamilySize_PerAdult = 5.0;
+	Score_FamilyResidence_PerTier = 20.0;
+	Score_BuildingsBusinesses_PerLevel = 5.0;
+	Score_BuildingsEmployees_PerLevel = 1.0;
+	Score_BuildingsWealth_MarketValue = 0.25;
+	Score_BuildingsWealth_Total = 0.001;
+	Score_PoliticsOffices_PerStage = 1.0;
+	Score_PoliticsSovereign = 100.0;
+	Score_PoliticsGuildMember = 50.0;
+	Score_PoliticsInfluence_Multiplier = 0.02;
+
+	EmployeeSalaryPerYear = "100 + Level * (hasTag.BuffEasy * 5 + hasTag.BuffNormal * 15 + hasTag.BuffHard * 40 + hasTag.BuffImpossible * 75) * (Source.hasTag.IsLowTier + Source.hasTag.IsHighTier * 1.5)"; // Source.hasTag is the building, just hasTag is the employee
+//	EmployeeSalaryPerYear = "100 + Level * (hasTag.BuffEasy * 5 + hasTag.BuffNormal * 15 + hasTag.BuffHard * 40 + hasTag.BuffImpossible * 75)";
+	
+	BuildingsOnFireCountLow = 1;
+	BuildingsOnFireCountMid = 5;
+	BuildingsOnFireCountHigh = 10;
+	
+	//Character Market Value Calculation
+	CharMarketVal_ItemsWeight = 0.05f;
+	CharMarketVal_OfficeWeight = 0.15f;
+	CharMarketVal_LevelWeight = 300.0f;
+	CharMarketVal_LeaderWeight = 5000.0f;
+	CharMarketVal_LeaderSpouseWeight = 1500.0f;
+	CharMarketVal_HeirWeight = 4500.0f;
+	CharMarketVal_NormalFamilyMemberWeight = 750.0f;
+	CharMarketVal_CitizenWeight = 1500.0f;
+	
+	BuildingDecommissionCostMult = 0.75; // percentage of the building's cost that will be refunded
+	BuildingDecommissionAddonCostMult = 0.5; // percentage of the addon's cost that will be refunded
+
+	BusinessSellItemXPAdjustment = 0.1;		//! XP multiplier when an item is sold in the frontstore of a business
+	BuildUnitValue = 0.9;					//! price of build unit (in money)
+	BuildUnitValueResource = 4.0;			//! price of build unit for resources (in money)
+	
+	CityNormalStockResource = 1.3;
+	CityNormalStockProductsLvl0 = 1.0;		//! nb year of items a city want to have (in year)
+	CityNormalStockProductsLvl1 = 0.75;
+	CityNormalStockProductsLvl2 = 0.5;
+	CityNormalStockProductsLvl3 = 0.25;
+	
+	MinItemNormalStock = 10;			//! Minimum normal stock an Item should get, to prevent prices jumping from min to max all the time if normal for an item is very small
+	MaxItemNormalStock = 3300;			//! Maximum normal stock an Item should get, so that items with huge normal stock aren't constantly on the cheapest price
+	
+	StockFractionForMaxMarketPrice = 0.1;		//Percentage of NormalStock at which the price modifier reaches it's Maximum
+	StockFractionForMinMarketPrice = 3.0;		//Percentage of NormalStock at which the price modifier reaches it's minimum
+	MarketVariationLower = -0.4;			//! maximum down variation from the base price (in %) ATTENTION: this will be added to a value of 1.0f, so if you want min price to be 50% of the base price you need to set this to -0.5
+	MarketVariationUpper = 0.4;			//! maximum up variation from the base price (in %) ATTENTION: this will be added to a value of 1.0f, so if you want min price to be 200% of the base price you need to set this to 1.0
+	MarketSellingProfit = 0.5;				//! difference between the market purchasing and selling price (in %)
+	MaxBargainingBonus = 50;				//! If bargaining bonus is higher than this, it won't have any additional affect on prices MUST NOT BE 0!
+	MarketCommonFrontstoreSlots = 400;		//! Number of inventory slots the market has for products.
+	MarketCommonFrontstoreSlotSize = 20000; //! How many copies of one item the market can have.
+
+// *** market restocking *** -->
+
+	// Constants needed to drive the refilling of components
+	AllowedUnderstockPercentage = 0.25;		// fraction of the minimum understock currently allowed - this is when the system will start filling the market
+	FillStockUpToPercentage = 0.5;			// percentage of the normal stock at which the system should stop refilling an item.
+	StockRefillDelay = 0.15; 				// fraction of a year till we start refilling components
+	RefillItemPercentage = 0.5;				// Percentage of normal stock of an item that is added to the market with each caravan load when refilling
+
+	// Constants needed to drive the reduction of products
+	AllowedOverstockPercentage = 3.5f;		// fraction of maximum overstock percentage currently allowed
+	StockMaxAllowedItems = 25;				// For low normal stock items, a second barrier, the amount of items allowed, defines allowed overstock
+	StockReductionDelay = 0.35;				// 25% of a year till we start to reduce products
+	StockToKeepPercentage = 2.0;			// Percentage of the normal stock to keep after reduction (so a value of 1.0 would keep 100% of the normal stock)
+	MonthlyReductionItemPercengtage = 0.1; 	// Percentage of current stock of an item that is removed from the market each month when reducing stock.
+	
+	MaxPriceChangePercentage = 0.025f;
+	
+	StockCheckDelayMin = 0.04;				// Min. delay between economies checking their stock.
+	StockCheckDelayMax = 0.06;				// Max. delay between economies checking their stock.
+	
+	ResupplyCaravanGuards = 2;				// Number of guards that protect the resupply transporter.
+
+// *** market restocking *** <--
+	
+	FrontstorePriceDifferencePositiveEffectThreshold = 0.95; //! Difference to market price in percent when the front store price will start having a positive effect
+	FrontstorePriceDifferenceNegativeEffectThreshold = 1.05;  //! Difference to market price in percent when the front store price will start having a negative effect
+	MaxReputationChangeFrontstoreTrade = 3;					  //! Maximum the reputation can change per trade
+	MaxAttractivenessChangeFrontstoreTrade = 5;				  //! Maximum the Customer Satisfaction can be affected per trade (temporarily)
+	
+	ProductivityLeaderBonus = 1.25;
+	ProductivityLevel1Bonus = 0.9;
+	ProductivityLevel2Bonus = 1.0;
+	ProductivityLevel3Bonus = 1.15;
+	
+	ActionFailedXPModifier = 0.5;
+	
+	ActionAmbushScanDistance = 185.0f;		// Original value 400.0
+	ActionAmbushMinimumDelayYears = 0.005; 	// Original value 0.001
+	ActionAmbushMinimumGold = 70.0; 		// Original value 75.0
+
+	ChildAge = 5;
+	MaturityAge = 15;
+	
+	InitialLeaderAge = 18;
+	InitialChildrenAge = 0;
+	InitialEmployeeAge = 16;
+	
+	FriendlyRelationshipScore = 50;
+	EnemyRelationshipScore = -50;
+
+	// other gameplay concepts
+	MedicusHealPrice = 250;
+
+	// *** MORAL ALIGNMENT *** -->
+	// Global multiplier for alignment changes through actions.
+	MoralAlignmentActionMultiplier = 1.0;
+	
+	// - Linear = direct impact. Uses the alignment of actions as direction for the shift. MoralAlignmentActionMultiplier is used as a multiplier for the shift distance.
+	// - EaseOut = similar to 'Linear', but impact slows down when closer to the extremes, but accelerates movement away from extremes
+	// - Smooth = similar to 'Linear', but slows down any movement close to the extremes and leaves movement towards the middle unaffected
+	// - Lerp = shifts the alignment towards that of the action that gets executed. In this mode, the alignment of the action is used as DESTINATION of the shift, and NOT as direction! The shift is a fixed percentage of the delta to the alignment of the action. The percentage is defined by 'MoralAlignmentActionMultiplier' * 'MoralAlignmentShift' (the latter is found in the G3ActionTemplate).
+	// - OneWayLerp = similar to 'Lerp', except it only moves in one direction (towards the positive end of the range for actions with a positive alignment and towards the negative end of the range for actions with a negative alignment). If the current alignment value is already beyond the destination value, no change happens. The alignment will NOT be shifted back towards neutral in such a case.
+	MoralShiftFunction = "OneWayLerp";
+	// *** MORAL ALIGNMENT *** <--
+
+	
+	DefaultStealthDetectionFormula = "randInterval(-(Target.Perception + Target.BuildingSecurity + Target.SumGuards.Perception) * (IsActionSuccessful ? 1.0 : 1.5), Source.Stealth * (IsActionSuccessful ? 1.5 : 1.0)) <= 0"; // A formula that is used for deciding if a stealth aggressive action gets detected by the target. Values > 0 are interpreted as 'got detected'. Actions can override this with custom formulas.
+	
+	MaxBuildingDamageForDeprecation = 500.0f;
+	MaxBuildingHealth = 1000.0;
+	MaxFireLevel = 100.0;
+	FireAccelerationMultiplier = 100.0f; // How much does a fire grow per YEAR on a 0 protection building
+	FireProtectionAccelerationInfluence = 0.5f; // How much fire protection influences acceleration. Formula = accel / (1.0 + FireProtection * FireProtectionAccelerationInfluence)
+	//FireReductionPerExtinguishCycle = 1.05f; //How much a building's fire level is reduced everytime the extinguish fire animation finishes (~2.3sec)
+	FireReductionPerExtinguishCycle = 0.5f; //How much a building's fire level is reduced everytime the extinguish fire animation finishes (~2.3sec)
+	FireWeatherMod = 0.5f; // How much does heavy weather (rain, snow) affect fires. This will slow down growth of the fire level by at most this amount based on weather intensity (0..1). Formula: accel * (1.0 - WeatherIntensity * FireWeatherMod)
+	
+	ProductsPriceUpdateInterval = 0.125; //within a year, all price categories get updated 8 times
+	FarTradePriceUpdateInterval = 0.01;
+	
+	FractionFamMoneyBuilding = 0.25;
+	FractionFamMoneyEmployee = 0.25;
+	FractionFamMoneyMember = 0.5;
+	FractionMoneyCitizen = 0.1;
+	
+	FractionFamPrestigeBuilding = 0.25;
+	FractionFamPrestigeEmployee = 0.25;
+	FractionFamPrestigeMember = 0.5;
+	FractionPrestigeCitizen = 0.1;
+
+	NpcWealthMoney = array { 2500, 20000, 75000 };
+	NpcWealthPrestige = array { 500, 2000, 5000 };
+
+	//Health formula: CharacterMinHealth + actorLevel * HpPerCharLevel + Sum(CharacterHealthAttrArray) * CharacterHealthAttrMultiplier
+	CharacterMinHealth = 100;
+	HpPerCharLevel = 8;
+	CharacterHealthAttrArray = array {"Strength", "Dexterity"};
+	CharacterHealthAttrMultiplier = 0.5;
+	Character_HealingTickFrequency = 20.0; // How often healing ticks happen, one tick every n seconds scaled realtime. (standard: 10)
+	
+	// Character attribute formulas.
+	// Hardcoded derived actor values:
+	// - Productivity (only one left!)
+	// Don't bother using "Source." and "Target." in here, as there is no separate source or target - only the character itself.
+	Character_ActorValue_Expressions = map {
+		"AttackPower" 			= "max(1, 1 + (Dexterity + Perception) * 0.5)";
+		"BargainingBonus" 		= "max(0, (Intelligence + Charisma) * 0.25)";
+		"Damage"				= "max(12, 12 + Strength * 0.25 + Perception * 0.25)";
+		"DamageReduction"		= "(Armor > Gameplay.MaxArmorAmount) ? Gameplay.MaxArmorDamageReduction : Gameplay.MaxArmorDamageReduction * ((Armor / Gameplay.MaxArmorAmount) / (1 - Gameplay.ArmorDamageReductionCurve * (1 - (Armor / Gameplay.MaxArmorAmount))))";
+		"DefensePower" 			= "max(0, Dexterity * 0.5)";
+		"Entertainment"			= "Dexterity * 0.75 + Charisma";
+		"ExperienceGainMult"	= "max(0.5, 1 + Intelligence * 0.02)";
+		"Fertility"				= "IsMale ? 1 : sqrt(clamp(invlerp(Gameplay.MenopauseAge, Gameplay.FullFertilityAge, Age) / (1 + 0.5 * LiveBirths), 0, 1))"; // Full fertility until FullFertilityAge, then decay until Menopause, sqrt so decay is slow at start and fast at end. Attenuated with no. of live births.
+		"GoodGenetics"			= "max(0, Level * 0.003 + Intelligence * 0.003 + Strength * 0.01 + Charisma * 0.005)";
+		"Health"				= "100 + Level * 8 + (Strength + Dexterity) * 0.5";
+		//"HealthRegeneration" 	= "0.75 + Strength * 0.125 + Level * 0.25";
+		"HealthRegeneration" 	= "Strength * 0.125 + Level * 0.25";
+		"Intimidation"			= "max(0, Strength * 0.5 + Charisma * 0.25)";
+		"MedicineMastery"		= "max(0, Intelligence * 1.75 + Perception * 0.5)";
+		"MovementSpeedMult"		= "max(0.5, 1.0 + Strength * 0.005 + Dexterity * 0.005)";
+		"PrestigeGainMult"		= "max(0.5, 1 + Charisma * 0.02)";
+		"ReputationBonus"		= "max(0, Charisma * 0.075)";
+		"Resistance" 			= "max(0, Level * 0.25 + Perception + Strength * 0.5)";
+		"Stealth" 				= "max(0, Dexterity * 0.85 + Perception * 0.5)";
+	};
+	
+	/// Pregnancy Values
+	FullFertilityAge = 30; // Age until which fertility is 100%.
+	MenopauseAge = 48;
+	
+	PregnancyChildrenLimit = 6; // Used by ProduceOffspring action to limit the number of children you can have.
+	
+	BuildingDecayFormula = "Health.max / 600"; // decay is reducing building health every month; / 600 = means without repair a building last for 50 years
+	
+	BuildingAlmostDestroyedThreshold = 0.1;
+	BuildingRepairThreshold = 0.75; 					// as percentage of the max health: defines when should the AI master trigger a repair building action
+
+	/// Prestige Multipliers
+	RichPeoplePrestigeMult = 0.75;
+	MiddlePeoplePrestigeMult = 0.5;
+	PoorPeoplePrestigeMult = 0.25;
+
+	InterceptorSpeedMult = 1.40; // Movement speed multiplier when intercepting a character
+	
+	MaxArmorDamageReduction = 0.85; // Maximum achievable damage reduction through armor. 0.85 = only 15% of incoming damage is actually taken.
+	MaxArmorAmount = 1000.0; // Armor amount at which the maximum damage reduction is reached. Higher armor amounts don't improve damage reduction beyond this.
+	ArmorDamageReductionCurve = 0.75; // How steep the curve is. 0.5 is no curve - linear. 0.99999 is maximum curvature, so strong early gains.
+	
+	UnconsciousThreshold = 0.05; // 0.0, ..., 1.0 fraction of Health that will make the character unconscious (when below)
+	ReviveThreshold = 0.1; // [0...1], fraction of health at which an unconscious character will get up again
+	CombatFirstStrikeDamageModifier = 2.0; // Multiplier for character damage when using a first strike weapon
+	CombatDamageVariation = 0.5; // Variation in percent, damage will be between dmg * CombatDamageVariation and dmg * (1.0f+CombatDamageVariation)
+
+	DynastyFinancesLowerLimit = 500; // Any families' money value lower than this is considered a threat to the dynasty, in this case the family AI will start SaveDynastyFinancesObjective (critical priority)
+	DynastyMembersLowerLimit = 4; // Any families' member count lower than this is considered a threat to the dynasty, in this case the family AI will start SaveDynastyReproduction (critical priority). It counts members younger than 'DynastyMembersLowerLimitMaxAge'. Unborn babies (pregnancies) already count as members of the family!
+	DynastyMembersLowerLimitMaxAge = 35.0f; // A max age for 'DynastyMembersLowerLimit'. Characters that are older than that are not counted!
+	Trade_RelationshipChangeValue = 50.0f; // Defines the amount by which the relationship is changed (+/-) on proposal accept/deny
+	Trade_NumMaxMarriageProposalsPerTrade = 4; // Defines the max number of marriage proposals allowed in a single trade
+	DiplomacyTradeRequests_ScoreWeight = 80.0f; // defines the impact of the score on the money value calculation of AskAllianceRequests/BreakFeudRequests (DynastyTrade)
+	/// Morality Parameters
+	MoralityRandomModifier = 0.1; // AI will get their morality values + or - a random modifier in the range -MoralityRandomModifier, +MoralityRandomModifier
+	
+	//For each season the game will roll between MaxDecrease and MaxIncrease every month to decide how fast the cloud factor becomes bigger, or smaller
+	MaxRainIncreaseSpring = 0.40; 		//Maximum the cloud factor can increase within a certain ingame time (defined by cloudChangeSpeed) in spring
+	MaxRainDecreaseSpring = -0.60; 		//Maximum the cloud factor can decrease within a certain ingame time (defined by cloudChangeSpeed) in spring
+	MaxRainIncreaseSummer = 0.35; 		//Maximum the cloud factor can increase within a certain ingame time (defined by cloudChangeSpeed) in summer
+	MaxRainDecreaseSummer = -0.65; 		//Maximum the cloud factor can decrease within a certain ingame time (defined by cloudChangeSpeed) in summer
+	MaxRainIncreaseFall = 0.45; 		//Maximum the cloud factor can increase within a certain ingame time (defined by cloudChangeSpeed) in fall
+	MaxRainDecreaseFall = -0.55; 		//Maximum the cloud factor can decrease within a certain ingame time (defined by cloudChangeSpeed) in fall
+	MaxRainIncreaseWinter = 0.5; 		//Maximum the cloud factor can increase within a certain ingame time (defined by cloudChangeSpeed) in winter
+	MaxRainDecreaseWinter = -0.5; 		//Maximum the cloud factor can decrease within a certain ingame time (defined by cloudChangeSpeed) in winter
+	LightningHitChance = 0.8; 			// hit chance (0.0 0% - 1.0 100%) that during thunder start a lighting hit a building and starts fire
+	BlizzardHitChance = 0.5; 			// hit chance (0.0 0% - 1.0 100%) that a blizzard damages a building
+	BlizzardDamage = 50.0; 				// when a blizzard starts and hits a building this defines the damage
+	HeavyRainHitChance = 0.75; 			// hit chance (0.0 0% - 1.0 100%) that a autumn heavy rain damages a building
+	HeavyRainDamage = 35.0; 			// when a autumn heavy rain starts and hits a building this defines the damage
+	CloudChangeSpeed = 12.0;			// defines how fast weather changes happen (how many times a year the cloud factor could go from 0 clouds to max clouds within a round)
+	StartStormThreshold = 0.9; 			// The cloud value is randomly changing (0.0 and 1.0f) depending on the season, this defines the threshold when a blizzard or thunderstorm starts, has to be greater than StartRainOrSnowThreshold
+	StartRainOrSnowThreshold = 0.75;	// The cloud value is randomly changing (0.0 and 1.0f) depending on the season, this defines the threshold when a blizzard or thunderstorm starts, has to be smaller than StartStormThreshold
+	StormEffectsInterval = 0.16; 		// interval (fraction of a year) for negative effects of storm like fire or damaged buildings. If a storm goes on for long, the negative effects should be reapplied on a regular interval
+	
+	NumMaxRouteNodes = 10; // Maximum number of route nodes a manual route is allowed to have
+	RouteStartRetryDelayYears = 0.007f; // The duration a character will wait before retrying, when a route fails to 'fill', i.e. find any items that need to be transported.
+	RouteStopMinDelayYears = 0.005f; 	// The minimum duration a character will wait at each stop in the route before moving on.
+	RouteStopMaxDelayYears = 0.015f; 	// The maximum duration a character will wait at each stop in the route before moving on. This duration is used when the transporter failed to transfer all items he wanted (e.g. something was sold out). He will then do a second attempt to transfer the missing items after wait time is over.
+	
+	PoorPeopleOpinionWeight = 1.0; 		// Multiplied with the number of poor people in a neighborhood to get how much impact a neighborhood has on the "Expected Sentence" of a trial
+	CommonPeopleOpinionWeight = 5.0;	// Multiplied with the number of common people in a neighborhood to get how much impact a neighborhood has on the "Expected Sentence" of a trial
+	RichPeopleOpinionWeight = 20.0;		// Multiplied with the number of rich people in a neighborhood to get how much impact a neighborhood has on the "Expected Sentence" of a trial
+	
+	AllowedDistanceFromWarehouse = 15000.0f;
+
+	Guild_KickMemberWarningThreshold = 0.85f; 	   // Defines when the family is warned that it is pending for a kick if moral alignment affinity differs more
+	Guild_KickMemberThreshold = 0.75f; 			   // Defines when the family is kicked regarding to the moral alignment affinity
+	Guild_KickMemberCheckIntervalInYears = 0.125f; // Duration in game-years between checks for kicking guild members
+	Guild_InviteMemberAffinityThreshold = 0.85f;   // how much the MoralAlignment can diverge from the guild to get an invitation
+	Guild_InviteMemberScoreThreshold = 500f;
+	Guild_InviteMemberNobilityTitleThreshold = 9;
+	Guild_MembersReputationLoss = 20;
+	Guild_MembersReputationGain = 20;
+	
+	Distance_CharacterInteraction = 55.0;
+	Distance_EnterBuilding = 300.0;
+    Distance_Close = 500.0;
+	
+	ProductionStallNotificationDelay = 0.5f; // (in-game years) Describes the delay between the stall of a production and the point in time where an urgent notification is send (also the interval in which a player can receive those notifications in a worst case, per building)
+//	MaxWaitingCustomers = 12; // Defines the default maximum size of the waiting customers queue (is set on building initialization and saved later)
+//	WaitingCustomersPerEmployee = 5; // Defines for how many waiting customers an employee is responsible (ex.: for 4 waiting customers, we would tell 2 employees to service them)
+//	HealthcareServiceInterval = 5;
+
+	MaxWaitingCustomers = 6; // A hard upper limit for the maximum number of waiting customers in the queue
+	WaitingCustomersPerEmployee = 2; // Defines the number of customers that are allowed to wait in the queue for each service worker present. Even with many service workers, the value can never exceed 'MaxWaitingCustomers'
+	HealthcareServiceInterval = 5;
+
+
+	// keep them sorted (ascending) by RelationshipValue (first value in array)
+	NeighborhoodProductivityModifiers = array
+	{
+//		RelationshipModifier = array{ -100.0f, -0.75f }; // RelationshipValue, ProductionModifier
+//		RelationshipModifier = array{ -80.0f, -0.50f }; // Relationship with neighborhood between -80 and -100, productivity mod -50% for the current production
+//		RelationshipModifier = array{ -60.0f, -0.25f };
+//		RelationshipModifier = array{ -40.0f, -0.10f };
+//		RelationshipModifier = array{ 89.0f, 0.0f }; // range from -39 to 89 is not giving any production boost
+//		RelationshipModifier = array{ 90.0f, 0.10f }; // Relationship with neighborhood between 90 and 100, productivity mod +10% for the current production
+
+		RelationshipModifier = array{ -100.0f, -0.50f }; // RelationshipValue, ProductionModifier
+		RelationshipModifier = array{ -80.0f, -0.25f }; // Relationship with neighborhood between -80 and -100, productivity mod -50% for the current production
+		RelationshipModifier = array{ -50.0f, -0.10f };
+		RelationshipModifier = array{ 89.0f, 0.0f }; // range from -39 to 89 is not giving any production boost
+		RelationshipModifier = array{ 90.0f, 0.10f }; // Relationship with neighborhood between 90 and 100, productivity mod +10% for the current production
+	};
+	
+	Sovereign_DefaultInfluencePledgeValue = 50; // Defines the default value to pledge shown in the UI when the sovereign election is open
+	Sovereign_AI_ApplicationAllowanceInfluenceThreshold = 0.4f; // Defines how much more influence the AI needs than the sovereign application fee
+	Sovereign_AI_MaintainRankPledgeFraction = 0.1f; // Which % (default here: 10%) of the allowed influence pot will be pledged to maintain the rank
+	Sovereign_AI_IncreaseRankPledgeFraction = 0.2f; // Which % (default here: 20%) of the allowed influence pot will be pledged to increase the rank
+	Sovereign_AI_IncreaseRankTimerInSeconds = 1.0f; // Interval in which the AI pledges to increase the rank (accelerated realtime seconds)
+	Sovereign_AI_MaintainRankTimerInSeconds = 3.0f; // Interval in which the AI pledges to maintain the rank (accelerated realtime seconds)
+	
+	History_EventRelevanceYears = 0.5f; // The time window in which an event (fire / death / marriage / etc) will be considered 'recent' and used for NPC dialog topics.
+	History_CacheDurationYears = 0.1f; // The duration for which certain statistics (recent deaths per neighborhood) will be cached
+	History_MarketDataMaxRoundsSingleplayer = 20; // In Singleplayer: The maximum time that market needs and price data is recorded for, in rounds. This is recorded monthly, so we have 12 * 20 = 240 record entries max.
+	History_MarketDataMaxRoundsMultiplayer = 10; // In Multiplayer: The maximum time that market needs and price data is recorded for, in rounds. This is recorded monthly, so we have 12 * 10 = 120 record entries max.
+	History_MarketDataDefaultRounds = 4; // The default number of rounds that the market needs and price history will show.
+	
+	Leasing_RentPeriodRounds = 1; // 1 Round per rent.
+	Leasing_RentPeriodDaytime = 0.5; // This makes the rent period expire at noon.
+	Leasing_RentPeriodEndWarningTime = 0.0416; // Warning about bidding end comes 1 hour before the period ends.
+	Leasing_MinimumBid = 1500;
+	Leasing_MinimumRaise = 50;
+	Leasing_StartingFee = 1600;
+	Leasing_AdjustmentFee = 20;
+	Leasing_AllowConsecutiveLeases = true;
+	
+	OrphanMinAge = 5.0; // years; has to be at least old enough to be allowed to run around the game world, and not just be shackled at home
+	OrphanMaxAge = 6.0; // years
+
+	OrphanAdoptionLimit = 2; // If a couple has this many living children, they can no longer adopt more children. This will consider all living, non banished children in the same family.
+
+	// Possible equipments:
+	
+	//body 1 = CommonerClothes1, CommonerClothes2, CommonerClothes3, CommonerClothes4, Gambeson, Chainmail
+				// CitizenClothes1, CitizenClothes2, CitizenClothes3, CitizenClothes4, LeatherArmor
+				// NobleClothes1, NobleClothes2, NobleClothes3, NobleClothes4, Platemail, CamouflageCloak, PlagueSuit
+	//weapon 2 = Dagger, PoisonDagger, Axe, Rapier, ShortSword, RubinStaff, Longsword, Mace
+	//special 3 = Torch, ShadowDagger, Blanket, Comb, DogCompanion, ArgusEyeglasses, WeaponPoison
+				// SlateBoard, SpinningTop, Diamond, LuckyStone, StoneSoldier, MoneyBag, BeltOfMetaphysics, Nightcap
+	//jewelery 4 = OakwoodRing, GemRing, SilverRing, SilverChain, GoldChain, BoneTalisman
+	//hand 5 = IronBracelet, BoneBracelet, LeatherGloves, Shield, Pistol, Crossbow		
+
+	// This struct contains two maps for equiping family members and henchmen
+	// The key of the map is the equipment slot for the character and the value
+	// of the map is an array of product types that the character can equip.
+	AICharacterEquipmentSlots = AICharacterEquipmentSlots
+	{
+		EquipmentInterval = 0.25f; //every quarter game year
+		
+		FamilyMembersEquipmentSlotPriorities = array
+		{
+			2, // weapon
+			1, // body
+			4, // jewelery
+			3, // special
+			5, // hand
+			6  // inventory
+		};
+		
+		FamilyMembers = map
+		{
+			1 = array{"CommonerClothes1", "CommonerClothes2", "CommonerClothes3", "CommonerClothes4", "CitizenClothes1", "CitizenClothes2", "CitizenClothes3", "CitizenClothes4", "PlagueSuit", "NobleClothes1", "NobleClothes2", "NobleClothes3", "NobleClothes4" };
+			2 = array{"Dagger", "WalkingStick", "ShadowDagger", "RubinStaff", "ShortSword", "Axe", "Rapier", "Mace", "Longsword" };
+			3 = array{"Comb", "DogCompanion", "StoneSoldier", "SlateBoard", "SpinningTop", "ArgusEyeglasses", "BeltOfMetaphysics", "LuckyStone", "MoneyBag", "Diamond", "Blanket", "GemRing", "SilverRing", "OakwoodRing" };
+			4 = array{"SilverChain", "GoldChain", "BoneTalisman", "DarkTalisman", "CopperBracelet" };
+			5 = array{"IronBracelet", "BoneBracelet", "LeatherGloves", "Shield", "Crossbow", "Pistol", "ThrowingKnife", "WoodenShield" };
+			6 = array{"Backpack", "RidingHorse"};
+		};
+		
+		HenchmenEquipmentSlotPriorities = array
+		{
+			2, // weapon
+			1, // body
+			5, // hand
+			3, // special
+			4, // jewelery
+		};
+		
+		Henchmen = map
+		{
+			1 = array{"Gambeson", "CamouflageCloak", "LeatherArmor", "Chainmail", "Platemail" };
+			2 = array{"Dagger", "PoisonDagger", "ShortSword", "Axe", "Rapier", "Mace", "Longsword" };
+			3 = array{"DogCompanion", "ArgusEyeglasses", "BeltOfMetaphysics", "Nightcap", "Blanket", "WeaponPoison" };
+			5 = array{"IronBracelet", "BoneBracelet", "LeatherGloves", "Shield", "Crossbow", "Pistol", "ThrowingKnife", "WoodenShield" };
+		};
+	};
+	
+	// needs for items
+	NeedWeightsMap = map
+	{
+		//Poor person need per month
+		0 = array
+		{
+			1.25, // RawMaterial = 1,
+			0.25, // Food,
+			0.125, // WeaponArmor,
+			0.21, // Clothing,
+			0.42, // Trinkets,
+			0.09, // Luxury,
+			0.42, // Tinctures,
+			13.0, // Components,
+			1.09, // Transportation,
+			0.90, // Livestock,
+		},
+		//Middle person need per month
+		1 = array
+		{
+			1.0, // RawMaterial = 1,
+			1.0, // Food,
+			0.5, // WeaponArmor,
+			0.7, // Clothing,
+			0.90, // Trinkets,
+			0.42, // Luxury,
+			0.42, // Tinctures,
+			0.75, // Components,
+			0.17, // Transportation,
+			0.5, // Livestock,
+		},
+		//Rich person need per month
+		2 = array
+		{
+			0.42, // RawMaterial = 1,
+			2.0, // Food,
+			1.25, // WeaponArmor,
+			1.7, // Clothing,
+			0.34, // Trinkets,
+			1.25, // Luxury,
+			0.75, // Tinctures,
+			0.42, // Components,
+			0.67, // Transportation,
+			0.42, // Livestock,
+		}
+	};
+	
+	// needs for services
+	// NOTE: all service needs must be in this list so that the neighborhood can track them
+	// if the value is not important you can set it to 0 and do the same in the actions
+	ServiceNeedWeightsMap = map
+	{
+		//Poor person service needs per month
+		0 = NeedWeights
+		{
+			Values = map
+			{
+				// (e.g. Amount of recreational services a poor person needs per month)
+//				"RecreationNeed" = 0.02;
+				"RecreationNeed" = 0.015;
+			};
+		},
+		//Middle person service needs per month
+		1 = NeedWeights
+		{
+			Values = map
+			{
+//				"RecreationNeed" = 0.035;
+				"RecreationNeed" = 0.025;
+			};
+		},
+		//Rich person service needs per month
+		2 = NeedWeights
+		{
+			Values = map
+			{
+//				"RecreationNeed" = 0.045;
+				"RecreationNeed" = 0.03;
+			};
+		}
+	};	
+	
+	// Market stock is calculating by summing up all monthly needs for each category and then multiplying it with the factor below.
+	// A factor of 12.0 means that the market will consider one year's supply (12 months) as its nominal target.
+	NominalStockAmounts = array
+	{
+		12.0, 	// RawMaterial = 1,
+		12.0, 	// Food,
+		12.0, 	// WeaponArmor,
+		12.0, 	// Clothing,
+		12.0, 	// Trinkets,
+		12.0, 	// Luxury,
+		12.0, 	// Tinctures,
+		12.0, 	// Components,
+		12.0, 	// Transportation,
+		12.0, 	// Livestock = 10
+	};
+	
+	NeedsDecay = 0.1; // Factor by which leftover item needs will decay at midnight, so the population and markets have a chance to catch up when understocked.
+	ServiceNeedsDecay = 0.1; // Factor by which leftover service needs will decay at midnight, so the population have a chance to catch up
+	
+	PopulationChangeFactor = 0.0; // Factor by which a population will shrink/grow. Fractional people will be random rounded.
+	PopulationGrowthThreshold = 0.9f; // If ALL needs are at least this satisfied (e.g. 0.9 == 90%), population will grow at the end of the year.
+	PopulationShrinkThreshold = 0.5f; // If ANY need is less than this satisfied (e.g. 0.5 == 50%), population will shrink at the end of the year.
+	
+	StartupSkills = map
+	{
+		//PoorFellow
+		3 = array
+		{
+			Farming extends StartupSkill 
+			{ 
+				SkillName = "Farming"; 
+				LocalizationKey = "$profession.Farmer"; 
+				Level = 0;
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { 0.1, 0.2, 0.05 };
+			},
+
+			Orchardist extends StartupSkill 
+			{ 
+				SkillName = "Orchardist"; 
+				LocalizationKey = "$profession.Orchardist"; 
+				Level = 0;
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { 0.1, 0.2, 0.05 };
+			},
+
+			Fishing extends StartupSkill 
+			{ 
+				SkillName = "Fishing"; 
+				LocalizationKey = "$profession.Fisher"; 
+				Level = 0;
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { 0.1, 0.2, 0.05 };
+			},
+
+			Artisan extends StartupSkill
+			{
+				SkillName = "Artisan";
+				LocalizationKey = "$profession.Artisan";
+				Level = 0;
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { 0.1, 0.05, 0.0 };
+			},
+
+			Tinker extends StartupSkill
+			{
+				SkillName = "Tinker";
+				LocalizationKey = "$profession.Tinker";
+				Level = 0;
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { 0.1, 0.05, 0.0 };
+			},
+
+			Masonery extends StartupSkill
+			{
+				SkillName = "Masonery";
+				LocalizationKey = "$profession.Masonery";
+				Level = 0;
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { 0.1, 0.05, 0.0 };
+			},
+			
+			Herbalism extends StartupSkill
+			{
+				SkillName = "Herbalist";
+				LocalizationKey = "$profession.Herbalist";
+				Level = 0;
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { -0.1, 0.2, -0.05 };
+			},
+
+			Preacher extends StartupSkill
+			{
+				SkillName = "Preacher";
+				LocalizationKey = "$profession.Preacher";
+				Level = 0;
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { -0.1, 0.2, -0.05 };
+			},
+
+			Barber extends StartupSkill
+			{
+				SkillName = "Barber";
+				LocalizationKey = "$profession.Barber";
+				Level = 0;
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { -0.1, 0.2, -0.05 };
+			},
+						
+			Robber extends StartupSkill 
+			{ 
+				SkillName = "Robber"; 
+				LocalizationKey = "$profession.Robber"; 
+				Level = 0; 
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { -0.2, -0.05, -0.2 };
+			},
+
+			Gravedigger extends StartupSkill 
+			{ 
+				SkillName = "Gravediggery"; 
+				LocalizationKey = "$profession.Gravedigger"; 
+				Level = 0; 
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { -0.2, -0.05, -0.2 };
+			},
+
+			Gleeman extends StartupSkill 
+			{ 
+				SkillName = "Gleeman"; 
+				LocalizationKey = "$profession.Gleeman"; 
+				Level = 0; 
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { -0.2, -0.05, -0.2 };
+			}
+
+
+		};
+		//Career
+		5 = array
+		{
+			Farmer extends StartupSkill
+			{
+				SkillName = "Farming";
+				LocalizationKey = "$profession.BigFarmer";
+				Level = 1;
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { 0.15, 0.2, 0.05 };
+			};
+			Baker extends StartupSkill
+			{
+				SkillName = "Baker";
+				LocalizationKey = "$profession.Baker";
+				Level = 0;
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { 0.18, 0.18, 0.05 };
+			};
+			Innkeeper extends StartupSkill
+			{
+				SkillName = "CrowdManagement";
+				LocalizationKey = "$profession.Innkeeper";
+				Level = 0;
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { 0.18, 0.18, 0.05 };
+			};
+			Smith extends StartupSkill
+			{
+				SkillName = "HandicraftMetal";
+				LocalizationKey = "$profession.Blacksmith";
+				Level = 0;
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { 0.12, 0.05, 0.0 };
+			};
+			StoneMason extends StartupSkill
+			{
+				SkillName = "HandicraftStone";
+				LocalizationKey = "$profession.Stonemason";
+				Level = 0;
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { 0.10, 0.05, 0.0 };
+			};
+			Carpenter extends StartupSkill
+			{
+				SkillName = "HandicraftWood";
+				LocalizationKey = "$profession.Carpenter";
+				Level = 0;
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { 0.05, 0.05, 0.0 };
+			};
+			Apothecary extends StartupSkill
+			{
+				SkillName = "Apothecary";
+				LocalizationKey = "$profession.Apothecary";
+				Level = 0;
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { -0.05, 0.10, 0.0 };
+			};
+			CityPreacher extends StartupSkill
+			{
+				SkillName = "Preacher";
+				LocalizationKey = "$profession.CityPreacher";
+				Level = 2;
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { 0.18, 0.18, 0.05 };
+			};
+			Scholarly extends StartupSkill
+			{
+				SkillName = "Scholarly";
+				LocalizationKey = "$profession.Scholar";
+				Level = 0;
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { 0.05, 0.09, 0.2 };
+			};
+			Medecine extends StartupSkill
+			{
+				SkillName = "Medecine";
+				LocalizationKey = "$profession.Medicus";
+				Level = 0;
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { -0.05, 0.10, 0.0 };
+			};
+			Thief extends StartupSkill
+			{
+				SkillName = "SleightOfHand";
+				LocalizationKey = "$profession.Thief";
+				Level = 0;
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { -0.2, -0.15, -0.1 };
+			};
+			Lansquenet extends StartupSkill
+			{
+				SkillName = "Fighting";
+				LocalizationKey = "$profession.Lansquenet";
+				Level = 0;
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { 0.15, 0.1, -0.15 };
+			};
+			Smuggler extends StartupSkill
+			{
+				SkillName = "Smuggling";
+				LocalizationKey = "$profession.Smuggler";
+				Level = 0;
+				BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose", "BucketOfWater"};
+				MoralAlignment = array { 0.1, 0.1, 1.0 };
+			};
+		};
+	};
+
+	PoorFellowMode_StartingTitle = "Serf";
+	CareerMode_StartingTitle = "Citizen";
+
+	DifficultySettings = DifficultySettings
+	{
+		PlayerEntries = array
+		{
+			DifficultyEntry
+			{
+				Id = "tutorialdifficulty";
+				StartMoney = 10000;
+				StartPrestige = 3000;
+				StartNobilityTitle = 1;
+				XPBonusFactor = 5.0f;
+				StartupItemCount = 20;
+				LeaderGetsBackpack = false;
+				ResultObjectIds = array{"EasyDifficultyPlayerForward", "TagNotAI"};
+				FamilySizeLowerLimit = 5;
+				FamilySizeUpperLimit = 10;
+				FamilySizeAdoptionLimit = 8;
+			},
+			DifficultyEntry
+			{
+				Id = "easy";
+				StartMoney = 5000;
+				StartPrestige = 200;
+				StartNobilityTitle = 1;
+				XPBonusFactor = 2.0f;
+				StartupItemCount = 20;
+				LeaderGetsBackpack = true;
+				ResultObjectIds = array{"EasyDifficultyPlayerForward", "TagNotAI"};
+				FamilySizeLowerLimit = 12;
+				FamilySizeUpperLimit = 24;
+				FamilySizeAdoptionLimit = 20;
+			},
+			DifficultyEntry
+			{
+				Id = "normal";
+				StartMoney = 3000;
+				StartPrestige = 100;
+				StartNobilityTitle = 1;
+				XPBonusFactor = 1.2f;
+				StartupItemCount = 10;
+				LeaderGetsBackpack = false;
+				ResultObjectIds = array{"NormalDifficultyPlayerForward", "TagNotAI"};
+				FamilySizeLowerLimit = 10;
+				FamilySizeUpperLimit = 20;
+				FamilySizeAdoptionLimit = 20;
+			},
+			DifficultyEntry
+			{
+				Id = "hard";
+				StartMoney = 2600;
+				StartPrestige = 50;
+				StartNobilityTitle = 1;
+				XPBonusFactor = 1.0f;
+				StartupItemCount = 5;
+				LeaderGetsBackpack = false;
+				ResultObjectIds = array{"HardDifficultyPlayerForward", "TagNotAI"};
+				FamilySizeLowerLimit = 10;
+				FamilySizeUpperLimit = 20;
+				FamilySizeAdoptionLimit = 15;
+			},
+			DifficultyEntry
+			{
+				Id = "impossible";
+				StartMoney = 2100;
+				StartPrestige = 0;
+				StartNobilityTitle = 1;
+				XPBonusFactor = 0.8f;
+				StartupItemCount = 5;
+				LeaderGetsBackpack = false;
+				ResultObjectIds = array{"ImpossibleDifficultyPlayerForward", "TagNotAI"};
+				FamilySizeLowerLimit = 12;
+				FamilySizeUpperLimit = 15;
+				FamilySizeAdoptionLimit = 15;
+			},
+		};
+		
+		AiEntries = array
+		{
+			DifficultyEntry
+			{
+				Id = "tutorialdifficulty";
+				StartMoney = 3000;
+				StartPrestige = 0;
+				StartNobilityTitle = 1;
+				XPBonusFactor = 0.75f;
+				StartupItemCount = 5;
+				LeaderGetsBackpack = false;
+				AIFamilyDecisionsPerYear = 24;
+				ResultObjectIds = array{"NormalDifficultyAIForward", "TagAI"};
+				FamilySizeLowerLimit = 5;
+				FamilySizeUpperLimit = 10;
+				FamilySizeAdoptionLimit = 8;
+			},
+			DifficultyEntry
+			{
+				Id = "easy";
+				StartMoney = 3000;
+				StartPrestige = 0;
+				StartNobilityTitle = 1;
+				XPBonusFactor = 0.75f;
+				StartupItemCount = 5;
+				LeaderGetsBackpack = false;
+				AIFamilyDecisionsPerYear = 24;
+				ResultObjectIds = array{"HardDifficultyAIForward", "TagAI"};
+				FamilySizeLowerLimit = 12;
+				FamilySizeUpperLimit = 24;
+				FamilySizeAdoptionLimit = 20;
+			},
+			DifficultyEntry
+			{
+				Id = "normal";
+				StartMoney = 4000;
+				StartPrestige = 100;
+				StartNobilityTitle = 1;
+				XPBonusFactor = 1.0f;
+				StartupItemCount = 5;
+				LeaderGetsBackpack = false;
+				AIFamilyDecisionsPerYear = 36;
+				ResultObjectIds = array{"NormalDifficultyAIForward", "TagAI"};
+				FamilySizeLowerLimit = 15;
+				FamilySizeUpperLimit = 25;
+				FamilySizeAdoptionLimit = 25;
+			},
+			DifficultyEntry
+			{
+				Id = "hard";
+				StartMoney = 5000;
+				StartPrestige = 200;
+				StartNobilityTitle = 1;
+				XPBonusFactor = 1.25f;
+				StartupItemCount = 5;
+				LeaderGetsBackpack = false;
+				AIFamilyDecisionsPerYear = 48;
+				ResultObjectIds = array{"EasyDifficultyAIForward", "TagAI"};
+				FamilySizeLowerLimit = 15;
+				FamilySizeUpperLimit = 30;
+				FamilySizeAdoptionLimit = 25;
+			},
+			DifficultyEntry
+			{
+				Id = "impossible";
+				StartMoney = 7000;
+				StartPrestige = 500;
+				StartNobilityTitle = 1;
+				XPBonusFactor = 1.5f;
+				StartupItemCount = 5;
+				LeaderGetsBackpack = false;
+				AIFamilyDecisionsPerYear = 50;
+				ResultObjectIds = array{"EasyDifficultyAIForward", "TagAI"};
+				FamilySizeLowerLimit = 15;
+				FamilySizeUpperLimit = 35;
+				FamilySizeAdoptionLimit = 30;
+			},
+		};
+		
+		NpcEntries = array
+		{
+			DifficultyEntry
+			{
+				Id = "tutorialdifficulty";
+				ResultObjectIds = array{"TagNPC"};
+			},
+			DifficultyEntry
+			{
+				Id = "easy";
+				ResultObjectIds = array{"TagNPC"};
+			},
+			DifficultyEntry
+			{
+				Id = "normal";
+				ResultObjectIds = array{"TagNPC"};
+			},
+			DifficultyEntry
+			{
+				Id = "hard";
+				ResultObjectIds = array{"TagNPC"};
+			},
+			DifficultyEntry
+			{
+				Id = "impossible";
+				ResultObjectIds = array{"TagNPC"};
+			},
+		};
+	};
+
+	BuildingSettings = BuildingSettings
+	{
+		// Color used for tinting a building when it can be placed at a position.
+		BuildingPlacementValidColor = array{0.1, 1.0, 0.1};
+		
+		// Color used for tinting a building when it CAN'T be placed at a position.
+		BuildingPlacementInvalidColor = array{1.0, 0.1, 0.1};
+	
+		// Scale multiplier, this is relative to the full building bounding box.
+		BuildingMarkerScale = array{1.0, 1.0, 1.0};
+		
+		// Near/far falloff values. Near falloff starts at 0 at [x], increases to 1 at [y].
+		// Far falloff starts at 1 at [z], decreases to 0 at [w].
+		BuildingMarkerFalloffs = array{0.0, 0.5, 0.5, 1.0};
+		
+		// Color multiplier.
+		BuildingMarkerColorMultiplier = array{1.0, 1.0, 1.0, 1.0};
+
+		// If the building marker should sample G-buffer light.
+		BuildingMarkerLit = false;
+		
+		// If false, will respect surface orientation/normal maps. If true, fully blasts illumination out.
+		BuildingMarkerXray = true;
+		
+		// Blend mode, as found in ShaderBuilder::BlendMode:
+		// BLENDMODE_OPAQUE			= 0,
+		// BLENDMODE_BLEND			= 1,
+		// BLENDMODE_ADDITIVE		= 2,
+		// BLENDMODE_MODULATE		= 3,
+		// BLENDMODE_ONE			= 4,
+		// BLENDMODE_ACCUMULATE		= 5,
+		// BLENDMODE_REPLACE		= 6,
+		// BLENDMODE_SUBTRACT		= 7,
+		// BLENDMODE_SCREEN			= 8,
+		// BLENDMODE_LIGHTEN		= 9,
+		// BLENDMODE_DARKEN			= 10,
+		// BLENDMODE_ALPHA			= 11,		
+		BuildingMarkerBlendMode = 2;
+
+		// Source package where all textures can be found.
+		BuildingMarkerPackage = "ui_core";
+		
+		// Base diffuse texture.
+		BuildingMarkerTexture = "BuildingMarker";
+		
+		// Emissive texture for self-illumination.
+		BuildingMarkerEmissiveTexture = "BuildingMarkerIllumination";
+		
+		// Normal texture for added bumpiness.
+		BuildingMarkerNormalTexture = "";
+	};
+	
+	UnlockDefinitions = UnlockDefinitions
+	{
+		JailTimeMult = 0.8; // Jail time reduced to 80% of normal with JailTimeReduction unlock.
+	};
+
+	LawSettings = @base/LawSettings
+
+	// needed XP to attain nobility title
+	Nobility = map
+	{
+		//"PublicEntertainment",
+		//"BuyProducts",
+		//"MakeProduct",
+		//"SellProduct",
+		//"BegForgiveness",
+		//"SendToSchool",
+		//"PickPocket",
+		//"Commerce",
+		//"HireEmployee",
+		//"BuyBusiness",
+		//"KidnapCharacter",
+		
+		0 = GNobilityData 
+		{
+			NonEssentialsPotPerc = 0.0;
+			
+			Results = array
+			{
+				UnlockEffect
+				{
+					Names = array
+					{
+						//"StartConversation",
+						"GetHealService",
+						"GetDiseaseService",
+						"GetDiseaseServiceMedicus",
+						"GetPoisonService",
+						"GetGastronomyService",
+						"GetBodyCareService",
+						"GetSpeakeasyService",
+						"MoreInfos",
+						"Enter",
+						"Exit",
+						"CombatFight",
+						"CombatFlee",
+						"Surrender",
+						"BreakBone",
+						"StealFromCharacter",
+						"KillCharacter",
+						"GoHome",
+						"GoMarket",
+						"Sleep",
+						"WakeUpAction",
+						"PutOutFire",
+						"EndLiaison",
+						"BreakAlliance",
+						"BreakFeud",
+						"RepairBuilding",
+						"ChainHostage",
+						"CourtingSomeone",
+						"LookAt",
+						"LookInside",
+						"LookInsideBuilding",
+						"LookInsideJail",
+						"TalkBadlyAboutOthers",
+						"Begging",
+						"FireEmployee",
+						"AttackCharacter",
+						"StartRomance",
+						"StartLiaison",
+						"ProposeMarriage",
+						"StartWedding",
+						"InstantWedding",
+						"ChurchWedding",
+						"ChurchWeddingStart",
+						"KissSpouse",
+						"DanceWithSpouse",
+						"KissLiaison",
+						"DanceWithLiaison",
+						"ProduceOffspring",
+						"BuyOrphan",
+						"DoBuyOrphan",
+						"TradeUI",
+						"AskFeud",
+						"AskAlliance",
+						"GoIntoExile",
+						"BuyReligion",
+						"BuyCatholic",
+						"BuyProtestant",
+						"BuyNoReligion",
+						"WaveHello",
+						"LaughAtSomeone",
+						"PrayForLuck",
+						"PlayOutside",
+						"KissCheek",
+						"SweetTalk",
+						"BoastAboutYourExploits",
+						"TearOffTrashLetter",
+						"TrainStrength",
+						"TrainDexterity",
+						"TrainIntelligence",
+						"TrainPerception",
+						"TrainCharisma",
+						//"MakePeaceBetweenEnemies",
+					//AI only
+						"AISellItem",
+						"BuyBusiness",
+						// "AIBuyOrphan", // This is now covered by DoBuyOrphan, which the AI starts directly.
+						"AISelectNewHeir",
+						// "BuildingLevelUp", // LORDS-9175, AIs no longer autonomously upgrade their buildings
+						"BuildAddOn",
+						"DestroyBuilding",
+						"ChangeMainBuilding",
+						"LeaveOffice",
+						"MakeOfferOnBuilding",
+						"NPCDynRandomFollowUpShort",
+						"NPCFindRandomSpot",
+						"NPCFindRandomBuilding",
+						"NPCRandomFollowUpShort",
+						"NPCWaitShort",
+						"NPCDrinkShort",
+						"NPCEatBreadShort",
+						"NPCReadLetterShort",
+						"NPCReadBookShort",
+						"NPCSellAllAtMarketpace",
+						"BribePrisonerRelease", // This action must be unlocked for the AI to consider using it for objectives. (Even though the ActionGUIData does not enforce that the action must be unlocked).
+					//Resource Producer Items
+						"Clay",
+						"Slate",
+						"GraniteBlock",
+						"Charcoal",
+						"Pinewood",
+						"Oakwood",
+						"IronOre",
+						"GoldOre",
+						"SilverOre",
+						"PreciousStone",
+					// Party management
+						"MakeRightHand",
+						"MakeLeftHand",
+						"KickPartyMember",
+					//test actions
+//						"Test1",
+//						"Test2",
+//						"Test3",
+//						"Test4",
+//						"DevTeleport";
+//						"TestBoastAboutYourExploits",
+					};
+				},
+				
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxAIObjectives";
+					Mod = 3.0; // Total: 3
+					Recover = true;
+				}
+			};			
+		};
+		
+		1 = GNobilityData // Serf
+		{
+			Money = 0; // Money is the gold needed to claim the title
+			Prestige = 0; // Prestige is a currency used for actions and buy titles/skills
+			NonEssentialsPotPerc = 0.0;
+			
+			ObjectiveWeights = array
+			{
+				array { "MakeMoneyLow", 1.0 },
+				array { "MakeMoneyMed", 0 },
+				array { "MakeMoneyHigh", 0 },
+				array { "BuildingMaintenance", 1.0 },
+				array { "IncreasePrestigeMultistepLOW", 0 },
+				array { "IncreasePrestigeMultistepMID", 0 },
+				array { "IncreasePrestigeMultistepHIGH", 0 },
+				array { "IncreaseSecurityMultistepLOW", 0.5 },
+				array { "IncreaseSecurityMultistepMID", 0 },
+				array { "IncreaseSecurityMultistepHIGH", 0 },
+				array { "IncreaseRelationshipLow", 0.5 },
+				array { "IncreaseRelationshipMed", 0 },
+				array { "IncreaseRelationshipHigh", 0 },
+				array { "DecreaseRelationshipLow", 0 },
+				array { "DecreaseRelationshipMed", 0 },
+				array { "DecreaseRelationshipHigh", 0 },
+				array { "GuildActions", 0 },
+				array { "IncreaseRankDefault", 0.5 },
+				array { "GetLiaison", 0 },
+				array { "ExploitLiaison", 0 },
+				array { "RunForOffice", 0 },
+				array { "GetOfficeUsePowers", 0 },
+				array { "Archetype-AgressiveShadyDrink", 0 },
+				array { "Archetype-AgreessiveShadyAttack", 0 },
+				array { "Archetype-HonestDiplomaticPolitics", 0 },
+				array { "Archetype-HonestDiplomaticActions", 0 },
+				array { "KidnapSomeone", 0 },
+				/*
+				//these objectives will always stay 0 as they are executed by other systems
+				array { "AttackFeudOpponent", 0 },
+				array { "CriticalConstructBuildingObjective", 0 },
+				array { "SaveDynastyHome", 0 },
+				array { "SaveDynastyFinances", 0 },
+				array { "SaveDynastySuccession", 0 },
+				array { "SaveDynastyReproduction", 0 },
+				*/
+			};
+			
+			Results = array
+			{
+				UnlockEffect
+				{
+					Names = array
+					{
+						// Buildings
+						"CountryHouse",
+					};
+				},
+				UnlockEffect
+				{
+					Names = array
+					{
+						"WashCloth",
+						"FlowerBouqet"
+					};
+				},
+				
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxOwnedBusinesses";
+					Mod = 1.0; //Total: 1
+					Recover = true;
+				},
+				
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxTrials";
+					Mod = 1.0; //Total: 1
+					Recover = true;
+				},
+				
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxAIObjectives";
+					Mod = 1.0; // Total: 4
+					Recover = true;
+				}
+			};
+		};
+		2 = GNobilityData // Commoner
+		{
+			Money = 1000;
+			Prestige = 0;
+			NonEssentialsPotPerc = 0.0;
+			
+			ObjectiveWeights = array
+			{
+				array { "MakeMoneyLow", 1.0 },
+				array { "MakeMoneyMed", 0 },
+				array { "MakeMoneyHigh", 0 },
+				array { "IncreasePrestigeMultistepLOW", 0 },
+				array { "IncreasePrestigeMultistepMID", 0 },
+				array { "IncreasePrestigeMultistepHIGH", 0 },
+				array { "IncreaseSecurityMultistepLOW", 1.0 },
+				array { "IncreaseSecurityMultistepMID", 0 },
+				array { "IncreaseSecurityMultistepHIGH", 0 },
+				array { "IncreaseRelationshipLow", 0.5 },
+				array { "IncreaseRelationshipMed", 0 },
+				array { "IncreaseRelationshipHigh", 0 },
+				array { "DecreaseRelationshipLow", 0.5 },
+				array { "DecreaseRelationshipMed", 0 },
+				array { "DecreaseRelationshipHigh", 0 },
+				array { "GuildActions", 0 },
+				array { "IncreaseRankDefault", 0 },
+				array { "GetLiaison", 0.5 },
+				array { "ExploitLiaison", 0.05 },
+				array { "RunForOffice", 0 },
+				array { "GetOfficeUsePowers", 0 },
+				array { "Archetype-AgressiveShadyDrink", 0 },
+				array { "Archetype-AgreessiveShadyAttack", 0 },
+				array { "Archetype-HonestDiplomaticPolitics", 0 },
+				array { "Archetype-HonestDiplomaticActions", 0 },
+				array { "KidnapSomeone", 0 },
+				array { "BuildingMaintenance", 1 },
+			};
+			
+			Results = array
+			{
+				UnlockEffect
+				{
+					Names = array{
+						"OverseeWorkers",
+						"DistractGuard",
+						"StackBoxes",
+						"CatchRats",
+						"DonateToChurch",
+						"Denounce",
+						"Praise",
+					};
+				},
+				ModifierEffect
+				{
+					ActorValue = "MaxOwnedBusinesses";
+					Mod = 1.0; //Total: 2
+					Recover = true;
+				}
+			};
+		};
+		3 = GNobilityData // Yeoman
+		{
+			Money = 1500;
+			Prestige = 0;
+			NonEssentialsPotPerc = 0.0;
+		
+			ObjectiveWeights = array
+			{
+				array { "MakeMoneyLow", 0.7 },
+				array { "MakeMoneyMed", 0 },
+				array { "MakeMoneyHigh", 0 },
+				array { "IncreasePrestigeMultistepLOW", 0.2 },
+				array { "IncreasePrestigeMultistepMID", 0 },
+				array { "IncreasePrestigeMultistepHIGH", 0 },
+				array { "IncreaseSecurityMultistepLOW", 0.1 },
+				array { "IncreaseSecurityMultistepMID", 0 },
+				array { "IncreaseSecurityMultistepHIGH", 0 },
+				array { "IncreaseRelationshipLow", 0.15 },
+				array { "IncreaseRelationshipMed", 0 },
+				array { "IncreaseRelationshipHigh", 0 },
+				array { "DecreaseRelationshipLow", 0.05 },
+				array { "DecreaseRelationshipMed", 0 },
+				array { "DecreaseRelationshipHigh", 0 },
+				array { "GuildActions", 0 },
+				array { "IncreaseRankDefault", 0 },
+				array { "GetLiaison", 0.05 },
+				array { "ExploitLiaison", 0.05 },
+				array { "RunForOffice", 0 },
+				array { "GetOfficeUsePowers", 0 },
+				array { "Archetype-AgressiveShadyDrink", 0 },
+				array { "Archetype-AgreessiveShadyAttack", 0 },
+				array { "Archetype-HonestDiplomaticPolitics", 0 },
+				array { "Archetype-HonestDiplomaticActions", 0 },
+				array { "KidnapSomeone", 0 },
+				array { "BuildingMaintenance", 1 },
+			};
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxOwnedBusinesses";
+					Mod = 1.0; //Total: 3
+					Recover = true;
+				},
+				UnlockEffect
+				{
+					Names = array{
+						"PromoteYourBusinesses",
+						"ThrowStones",
+						"AskFavor",
+						"ApologizeToNeighbors",
+						"RaidTheKitchens",
+					};
+				}
+			};
+		};
+		4 = GNobilityData // Resident
+		{
+			Money = 2500;
+			Prestige = 0;
+			NonEssentialsPotPerc = 0.0;
+			
+			ObjectiveWeights = array
+			{
+				array { "MakeMoneyLow", 0.5 },
+				array { "MakeMoneyMed", 0.2 },
+				array { "MakeMoneyHigh", 0 },
+				array { "IncreasePrestigeMultistepLOW", 0.75 },
+				array { "IncreasePrestigeMultistepMID", 0.3 },
+				array { "IncreasePrestigeMultistepHIGH", 0 },
+				array { "IncreaseSecurityMultistepLOW", 0.15  },
+				array { "IncreaseSecurityMultistepMID", 0 },
+				array { "IncreaseSecurityMultistepHIGH", 0 },
+				array { "IncreaseRelationshipLow", 0.3 },
+				array { "IncreaseRelationshipMed", 0.15 },
+				array { "IncreaseRelationshipHigh", 0 },
+				array { "DecreaseRelationshipLow", 0.3 },
+				array { "DecreaseRelationshipMed", 0 },
+				array { "DecreaseRelationshipHigh", 0 },
+				array { "GuildActions", 0 },
+				array { "IncreaseRankDefault", 0 },
+				array { "GetLiaison", 0.1 },
+				array { "ExploitLiaison", 0.2 },
+				array { "RunForOffice", 0 },
+				array { "GetOfficeUsePowers", 0 },
+				array { "Archetype-AgressiveShadyDrink", 0 },
+				array { "Archetype-AgreessiveShadyAttack", 0 },
+				array { "Archetype-HonestDiplomaticPolitics", 0 },
+				array { "Archetype-HonestDiplomaticActions", 0 },
+				array { "KidnapSomeone", 0 },
+				array { "BuildingMaintenance", 1 },
+			};
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxOwnedBusinesses";
+					Mod = 1.0; //Total: 4
+					Recover = true;
+				},
+				UnlockEffect
+				{
+					Names = array{ 
+						"Warehouse_Country",
+						"SpreadFleas",
+						"UseConnections",
+						"GoCampaigning",
+						"BribeOfficeHolder"
+					};
+				},
+			};
+		};
+		5 = GNobilityData // Citizen
+		{
+			Money = 4000;
+			Prestige = 250;
+			NonEssentialsPotPerc = 0.15;
+			
+			ObjectiveWeights = array
+			{
+				array { "MakeMoneyLow", 0.5 },
+				array { "MakeMoneyMed", 0.5 },
+				array { "MakeMoneyHigh", 0 },
+				array { "IncreasePrestigeMultistepLOW", 0.3 },
+				array { "IncreasePrestigeMultistepMID", 0.75 },
+				array { "IncreasePrestigeMultistepHIGH", 0 },
+				array { "IncreaseSecurityMultistepLOW", 0.25  },
+				array { "IncreaseSecurityMultistepMID", 0.15 },
+				array { "IncreaseSecurityMultistepHIGH", 0.05 },
+				array { "IncreaseRelationshipLow", 0.2 },
+				array { "IncreaseRelationshipMed", 0.2 },
+				array { "IncreaseRelationshipHigh", 0.1 },
+				array { "DecreaseRelationshipLow", 0.2 },
+				array { "DecreaseRelationshipMed", 0.2 },
+				array { "DecreaseRelationshipHigh", 0.1 },
+				array { "GuildActions", 0 },
+				array { "IncreaseRankDefault", 0.25 },
+				array { "GetLiaison", 0.1 },
+				array { "ExploitLiaison", 0.2 },
+				array { "RunForOffice", 0.1 },
+				array { "GetOfficeUsePowers", 0.2 },
+				array { "Archetype-AgressiveShadyDrink", 0 },
+				array { "Archetype-AgreessiveShadyAttack", 0 },
+				array { "Archetype-HonestDiplomaticPolitics", 0 },
+				array { "Archetype-HonestDiplomaticActions", 0 },
+				array { "KidnapSomeone", 0 },
+				array { "BuildingMaintenance", 1 },
+			};
+			
+			Results = array
+			{
+				UnlockEffect
+				{
+					Names = array 
+					{
+						"PoorHouse",
+						// Actions
+						"RunForOffice",
+						"SendToSchool",
+						"HireHenchmen",
+						"GuardBuildingHenchmen",
+						"EscortCharacter",
+						"FindEvidence",
+						"WhipTransporters",
+						"ReadStories",
+						"OpenLeasingPanel", // Should always go together with "ResourceProviderLeasingAvailable"
+						// AI only
+						"AIBidAction", // Should always go together with "ResourceProviderLeasingAvailable"
+						// General unlocks
+						"ResourceProviderLeasingAvailable",
+						"EventParticipation"
+					};
+				},
+				UnlockEffect
+				{
+					Names = array
+					{
+						"SlideRule",
+						"SignetRing"
+					};
+				},
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxOwnedBusinesses";
+					Mod = 1.0; //Total: 5
+					Recover = true;
+				},
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxHenchmen";
+					Mod = 1.0; //Total: 1
+					Recover = true;
+				},
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxTrials";
+					Mod = 1.0; //Total: 2
+					Recover = true;
+				},				
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxAIObjectives";
+					Mod = 1.0; // Total: 5
+					Recover = true;
+				}
+			};
+		};
+		6 = GNobilityData // FreeCitizen
+		{
+			Money = 8000;
+			Prestige = 500;
+			NonEssentialsPotPerc = 0.20;
+			
+			ObjectiveWeights = array
+			{
+				array { "MakeMoneyLow", 0.25 },
+				array { "MakeMoneyMed", 0.75 },
+				array { "MakeMoneyHigh", 0.1 },
+				array { "IncreasePrestigeMultistepLOW", 0.2 },
+				array { "IncreasePrestigeMultistepMID", 0.85 },
+				array { "IncreasePrestigeMultistepHIGH", 0 },
+				array { "IncreaseSecurityMultistepLOW", 0.25  },
+				array { "IncreaseSecurityMultistepMID", 0.25 },
+				array { "IncreaseSecurityMultistepHIGH", 0.15 },
+				array { "IncreaseRelationshipLow", 0.1 },
+				array { "IncreaseRelationshipMed", 0.3 },
+				array { "IncreaseRelationshipHigh", 0.2 },
+				array { "DecreaseRelationshipLow", 0.1 },
+				array { "DecreaseRelationshipMed", 0.3 },
+				array { "DecreaseRelationshipHigh", 0.2 },
+				array { "GuildActions", 0.1 },
+				array { "IncreaseRankDefault", 0.3 },
+				array { "GetLiaison", 0.1 },
+				array { "ExploitLiaison", 0.2 },
+				array { "RunForOffice", 0.1 },
+				array { "GetOfficeUsePowers", 0.2 },
+				array { "Archetype-AgressiveShadyDrink", 0 },
+				array { "Archetype-AgreessiveShadyAttack", 0 },
+				array { "Archetype-HonestDiplomaticPolitics", 0 },
+				array { "Archetype-HonestDiplomaticActions", 0 },
+				array { "KidnapSomeone", 0 },
+				array { "BuildingMaintenance", 1 },
+			};
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxOwnedBusinesses";
+					Mod = 1.0; //Total: 6
+					Recover = true;
+				},
+				UnlockEffect
+				{
+					Names = array 
+					{
+						// Buildings
+						"Well",
+						"Stage",
+						// Actions
+						"TradeMission",
+						"WriteTrashLetter",
+						"WriteRecommandationLetter",
+						"BoastAboutYourExploitsOnStage",
+						// General unlocks
+						"FarMarketAvailable"
+					};
+				},
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxHenchmen";
+					Mod = 1.0; //Total: 2
+					Recover = true;
+				},
+			};		
+		};
+		7 = GNobilityData // Patrician
+		{
+			Money = 12000;
+			Prestige = 750;
+			NonEssentialsPotPerc = 0.20;
+			
+			ObjectiveWeights = array
+			{
+				array { "MakeMoneyLow", 0.2 },
+				array { "MakeMoneyMed", 0.75 },
+				array { "MakeMoneyHigh", 0.2 },
+				array { "IncreasePrestigeMultistepLOW", 0 },
+				array { "IncreasePrestigeMultistepMID", 0.85 },
+				array { "IncreasePrestigeMultistepHIGH", 0.2 },
+				array { "IncreaseSecurityMultistepLOW", 0.1  },
+				array { "IncreaseSecurityMultistepMID", 0.4 },
+				array { "IncreaseSecurityMultistepHIGH", 0.3 },
+				array { "IncreaseRelationshipLow", 0 },
+				array { "IncreaseRelationshipMed", 0.3 },
+				array { "IncreaseRelationshipHigh", 0.3 },
+				array { "DecreaseRelationshipLow", 0 },
+				array { "DecreaseRelationshipMed", 0.3 },
+				array { "DecreaseRelationshipHigh", 0.3 },
+				array { "GuildActions", 0.1 },
+				array { "IncreaseRankDefault", 0.35 },
+				array { "GetLiaison", 0.1 },
+				array { "ExploitLiaison", 0.2 },
+				array { "RunForOffice", 0.1 },
+				array { "GetOfficeUsePowers", 0.2 },
+				array { "Archetype-AgressiveShadyDrink", 0 },
+				array { "Archetype-AgreessiveShadyAttack", 0 },
+				array { "Archetype-HonestDiplomaticPolitics", 0 },
+				array { "Archetype-HonestDiplomaticActions", 0 },
+				array { "KidnapSomeone", 0 },
+				array { "BuildingMaintenance", 1 },
+			};
+			
+			Results = array
+			{
+				UnlockEffect
+				{
+					Names = array
+					{
+						"Warehouse",
+						// Actions
+						"DuelInsult",
+						//"BegForgiveness",
+						"Longshore",
+						"GoSpyBuilding",
+						"GreaseTheWheels",
+						"InnDiceGame",
+						"InitiateIntrigue",
+						"LetterFromInquisition",
+						// General unlocks
+						"SecondOfficeLevel"
+					};
+				},
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxOwnedBusinesses";
+					Mod = 1.0; //Total: 7
+					Recover = true;
+				}
+			};		
+		};
+		8 = GNobilityData // Nobleman
+		{
+			Money = 20000;
+			Prestige = 1000;
+			NonEssentialsPotPerc = 0.21;
+			
+			ObjectiveWeights = array
+			{
+				array { "MakeMoneyLow", 0 },
+				array { "MakeMoneyMed", 0.5 },
+				array { "MakeMoneyHigh", 0.5 },
+				array { "IncreasePrestigeMultistepLOW", 0 },
+				array { "IncreasePrestigeMultistepMID", 0.5 },
+				array { "IncreasePrestigeMultistepHIGH", 0.5 },
+				array { "IncreaseSecurityMultistepLOW", 0  },
+				array { "IncreaseSecurityMultistepMID", 0.3 },
+				array { "IncreaseSecurityMultistepHIGH", 0.4 },
+				array { "IncreaseRelationshipLow", 0 },
+				array { "IncreaseRelationshipMed", 0.2 },
+				array { "IncreaseRelationshipHigh", 0.3 },
+				array { "DecreaseRelationshipLow", 0 },
+				array { "DecreaseRelationshipMed", 0.2 },
+				array { "DecreaseRelationshipHigh", 0.3 },
+				array { "GuildActions", 0.2 },
+				array { "IncreaseRankDefault", 0.75 },
+				array { "GetLiaison", 0.2 },
+				array { "ExploitLiaison", 0.5 },
+				array { "RunForOffice", 0.2 },
+				array { "GetOfficeUsePowers", 0.3 },
+				array { "Archetype-AgressiveShadyDrink", 0 },
+				array { "Archetype-AgreessiveShadyAttack", 0 },
+				array { "Archetype-HonestDiplomaticPolitics", 0 },
+				array { "Archetype-HonestDiplomaticActions", 0 },
+				array { "KidnapSomeone", 0.05 },
+				array { "BuildingMaintenance", 1 },
+			};
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxOwnedBusinesses";
+					Mod = 1.0; //Total: 8
+					Recover = true;
+				},
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxTrials";
+					Mod = 1.0; //Total: 3
+					Recover = true;
+				},
+				UnlockEffect
+				{
+					Names = array
+					{
+						"CityHouse",
+						// Actions
+						"PlantSibling",
+						"TakeBathHome",
+						"StartHenchmenConquerBuilding"
+					};
+				},
+				UnlockEffect
+				{
+					Names = array
+					{
+						"FamilySword",
+						"CouncilorsChain"
+					};
+				},
+
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxHenchmen";
+					Mod = 1.0; //Total: 3
+					Recover = true;
+				}
+			};
+		};
+		9 = GNobilityData // Squire
+		{
+			Money = 30000;
+			Prestige = 1500;
+			NonEssentialsPotPerc = 0.22;
+			
+			ObjectiveWeights = array
+			{
+				array { "MakeMoneyLow", 0 },
+				array { "MakeMoneyMed", 0.25 },
+				array { "MakeMoneyHigh", 0.75 },
+				array { "IncreasePrestigeMultistepLOW", 0 },
+				array { "IncreasePrestigeMultistepMID", 0.25 },
+				array { "IncreasePrestigeMultistepHIGH", 0.75 },
+				array { "IncreaseSecurityMultistepLOW", 0  },
+				array { "IncreaseSecurityMultistepMID", 0.3 },
+				array { "IncreaseSecurityMultistepHIGH", 0.4 },
+				array { "IncreaseRelationshipLow", 0 },
+				array { "IncreaseRelationshipMed", 0.2 },
+				array { "IncreaseRelationshipHigh", 0.3 },
+				array { "DecreaseRelationshipLow", 0 },
+				array { "DecreaseRelationshipMed", 0.2 },
+				array { "DecreaseRelationshipHigh", 0.2 },
+				array { "GuildActions", 0.3 },
+				array { "IncreaseRankDefault", 0.75 },
+				array { "GetLiaison", 0.2 },
+				array { "ExploitLiaison", 0.5 },
+				array { "RunForOffice", 0.2 },
+				array { "GetOfficeUsePowers", 0.3 },
+				array { "Archetype-AgressiveShadyDrink", 0.1 },
+				array { "Archetype-AgreessiveShadyAttack", 0.1 },
+				array { "Archetype-HonestDiplomaticPolitics", 0.1 },
+				array { "Archetype-HonestDiplomaticActions", 0.1 },
+				array { "KidnapSomeone", 0.1 },
+				array { "BuildingMaintenance", 1 },
+			};
+			
+			Results = array
+			{
+				UnlockEffect
+				{
+					Names = array
+					{
+						// Actions
+						"Longshore2",
+						"SendCourtierToKing",
+						"JoinSecretSociety", // This is not an action, but a 'fake' unlock for indicating that the family can now receive invitations from secret societies. See: "Guild_InviteMemberNobilityTitleThreshold"
+						"LeaveSecretSociety",
+						"InnDiceGameRisky",
+						"HighestOfficeLevel"
+					};
+					Level = 1;
+				},
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxOwnedBusinesses";
+					Mod = 1.0; //Total: 9
+					Recover = true;
+				},
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxAIObjectives";
+					Mod = 1.0; // Total: 6
+					Recover = true;
+				}
+			};
+		};
+		10 = GNobilityData // Lord
+		{
+			Money = 42000;
+			Prestige = 2500;
+			NonEssentialsPotPerc = 0.23;
+			
+			ObjectiveWeights = array
+			{
+				array { "MakeMoneyLow", 0 },
+				array { "MakeMoneyMed", 0.15 },
+				array { "MakeMoneyHigh", 0.75 },
+				array { "IncreasePrestigeMultistepLOW", 0 },
+				array { "IncreasePrestigeMultistepMID", 0.15 },
+				array { "IncreasePrestigeMultistepHIGH", 0.75 },
+				array { "IncreaseSecurityMultistepLOW", 0  },
+				array { "IncreaseSecurityMultistepMID", 0.3 },
+				array { "IncreaseSecurityMultistepHIGH", 0.5 },
+				array { "IncreaseRelationshipLow", 0 },
+				array { "IncreaseRelationshipMed", 0.2 },
+				array { "IncreaseRelationshipHigh", 0.4 },
+				array { "DecreaseRelationshipLow", 0 },
+				array { "DecreaseRelationshipMed", 0.2 },
+				array { "DecreaseRelationshipHigh", 0.4 },
+				array { "GuildActions", 0.4 },
+				array { "IncreaseRankDefault", 0.75 },
+				array { "GetLiaison", 0.2 },
+				array { "ExploitLiaison", 0.5 },
+				array { "RunForOffice", 0.2 },
+				array { "GetOfficeUsePowers", 0.3 },
+				array { "Archetype-AgressiveShadyDrink", 0.1 },
+				array { "Archetype-AgreessiveShadyAttack", 0.1 },
+				array { "Archetype-HonestDiplomaticPolitics", 0.1 },
+				array { "Archetype-HonestDiplomaticActions", 0.1 },
+				array { "KidnapSomeone", 0.1 },
+				array { "BuildingMaintenance", 1 },
+			};
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxOwnedBusinesses";
+					Mod = 2.0; //Total: 11
+					Recover = true;
+				},
+				UnlockEffect
+				{
+					Names = array
+					{
+						"Statue",
+						// privileges
+						"ManipulateLiaison",
+						"BecomeSovereign",
+						"WarAsOfficer"
+					};
+				},
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxHenchmen";
+					Mod = 1.0; //Total: 4
+					Recover = true;
+				}
+			};
+		};
+
+		11 = GNobilityData // Baron
+		{
+			Money = 80000;
+			Prestige = 4000;
+			NonEssentialsPotPerc = 0.24;
+			
+			ObjectiveWeights = array
+			{
+				array { "MakeMoneyLow", 0 },
+				array { "MakeMoneyMed", 0.15 },
+				array { "MakeMoneyHigh", 0.75 },
+				array { "IncreasePrestigeMultistepLOW", 0 },
+				array { "IncreasePrestigeMultistepMID", 0.15 },
+				array { "IncreasePrestigeMultistepHIGH", 0.75 },
+				array { "IncreaseSecurityMultistepLOW", 0  },
+				array { "IncreaseSecurityMultistepMID", 0.3 },
+				array { "IncreaseSecurityMultistepHIGH", 0.6 },
+				array { "IncreaseRelationshipLow", 0 },
+				array { "IncreaseRelationshipMed", 0.2 },
+				array { "IncreaseRelationshipHigh", 0.5 },
+				array { "DecreaseRelationshipLow", 0 },
+				array { "DecreaseRelationshipMed", 0.2 },
+				array { "DecreaseRelationshipHigh", 0.4 },
+				array { "GuildActions", 0.4 },
+				array { "IncreaseRankDefault", 0.75 },
+				array { "GetLiaison", 0.2 },
+				array { "ExploitLiaison", 0.5 },
+				array { "RunForOffice", 0.2 },
+				array { "GetOfficeUsePowers", 0.3 },
+				array { "Archetype-AgressiveShadyDrink", 0.1 },
+				array { "Archetype-AgreessiveShadyAttack", 0.1 },
+				array { "Archetype-HonestDiplomaticPolitics", 0.1 },
+				array { "Archetype-HonestDiplomaticActions", 0.1 },
+				array { "KidnapSomeone", 0.1 },
+				array { "BuildingMaintenance", 1 },
+			};
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxOwnedBusinesses";
+					Mod = 1.0; //Total: 12
+					Recover = true;
+				},
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxTrials";
+					Mod = 1.0; //Total: 4
+					Recover = true;
+				},
+				UnlockEffect
+				{
+					Names = array
+					{
+						"Mansion",
+						"Banquet",
+//						"GiveAFeast"
+					};
+				},
+			};
+		};
+
+		12 = GNobilityData // Count
+		{
+			Money = 160000;
+			Prestige = 6000;
+			NonEssentialsPotPerc = 0.25;
+			
+			ObjectiveWeights = array
+			{
+				array { "MakeMoneyLow", 0 },
+				array { "MakeMoneyMed", 0.1 },
+				array { "MakeMoneyHigh", 0.5 },
+				array { "IncreasePrestigeMultistepLOW", 0 },
+				array { "IncreasePrestigeMultistepMID", 0.1 },
+				array { "IncreasePrestigeMultistepHIGH", 0.5 },
+				array { "IncreaseSecurityMultistepLOW", 0  },
+				array { "IncreaseSecurityMultistepMID", 0.3 },
+				array { "IncreaseSecurityMultistepHIGH", 0.5 },
+				array { "IncreaseRelationshipLow", 0 },
+				array { "IncreaseRelationshipMed", 0.2 },
+				array { "IncreaseRelationshipHigh", 0.6 },
+				array { "DecreaseRelationshipLow", 0 },
+				array { "DecreaseRelationshipMed", 0.2 },
+				array { "DecreaseRelationshipHigh", 0.4 },
+				array { "GuildActions", 0.4 },
+				array { "IncreaseRankDefault", 0.75 },
+				array { "GetLiaison", 0.2 },
+				array { "ExploitLiaison", 0.5 },
+				array { "RunForOffice", 0.2 },
+				array { "GetOfficeUsePowers", 0.3 },
+				array { "Archetype-AgressiveShadyDrink", 0.1 },
+				array { "Archetype-AgreessiveShadyAttack", 0.1 },
+				array { "Archetype-HonestDiplomaticPolitics", 0.1 },
+				array { "Archetype-HonestDiplomaticActions", 0.1 },
+				array { "KidnapSomeone", 0.1 },
+				array { "BuildingMaintenance", 1 },
+			};
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxOwnedBusinesses";
+					Mod = 1.0; //Total: 13
+					Recover = true;
+				},
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxHenchmen";
+					Mod = 1.0; //Total: 5
+					Recover = true;
+				}
+			};
+		};
+		13 = GNobilityData // Marquis
+		{
+			Money = 320000;
+			Prestige = 8500;
+			NonEssentialsPotPerc = 0.26;
+			
+			ObjectiveWeights = array
+			{
+				array { "MakeMoneyLow", 0 },
+				array { "MakeMoneyMed", 0.1 },
+				array { "MakeMoneyHigh", 0.5 },
+				array { "IncreasePrestigeMultistepLOW", 0 },
+				array { "IncreasePrestigeMultistepMID", 0.1 },
+				array { "IncreasePrestigeMultistepHIGH", 0.5 },
+				array { "IncreaseSecurityMultistepLOW", 0  },
+				array { "IncreaseSecurityMultistepMID", 0.2 },
+				array { "IncreaseSecurityMultistepHIGH", 0.4 },
+				array { "IncreaseRelationshipLow", 0 },
+				array { "IncreaseRelationshipMed", 0.2 },
+				array { "IncreaseRelationshipHigh", 0.6 },
+				array { "DecreaseRelationshipLow", 0 },
+				array { "DecreaseRelationshipMed", 0.2 },
+				array { "DecreaseRelationshipHigh", 0.4 },
+				array { "GuildActions", 0.4 },
+				array { "IncreaseRankDefault", 0.75 },
+				array { "GetLiaison", 0.2 },
+				array { "ExploitLiaison", 0.5 },
+				array { "RunForOffice", 0.2 },
+				array { "GetOfficeUsePowers", 0.3 },
+				array { "Archetype-AgressiveShadyDrink", 0.1 },
+				array { "Archetype-AgreessiveShadyAttack", 0.1 },
+				array { "Archetype-HonestDiplomaticPolitics", 0.1 },
+				array { "Archetype-HonestDiplomaticActions", 0.1 },
+				array { "KidnapSomeone", 0.1 },
+				array { "BuildingMaintenance", 1 },
+			};
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxOwnedBusinesses";
+					Mod = 2.0; //Total: 15
+					Recover = true;
+				},
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxTrials";
+					Mod = 1.0; //Total: 5
+					Recover = true;
+				},
+			};
+		};
+
+		14 = GNobilityData // Duke
+		{
+			Money = 640000;
+			Prestige = 12000;
+			NonEssentialsPotPerc = 0.27;
+			
+			ObjectiveWeights = array
+			{
+				array { "MakeMoneyLow", 0 },
+				array { "MakeMoneyMed", 0.1 },
+				array { "MakeMoneyHigh", 0.5 },
+				array { "IncreasePrestigeMultistepLOW", 0 },
+				array { "IncreasePrestigeMultistepMID", 0.1 },
+				array { "IncreasePrestigeMultistepHIGH", 0.5 },
+				array { "IncreaseSecurityMultistepLOW", 0  },
+				array { "IncreaseSecurityMultistepMID", 0.2 },
+				array { "IncreaseSecurityMultistepHIGH", 0.4 },
+				array { "IncreaseRelationshipLow", 0 },
+				array { "IncreaseRelationshipMed", 0.2 },
+				array { "IncreaseRelationshipHigh", 0.6 },
+				array { "DecreaseRelationshipLow", 0 },
+				array { "DecreaseRelationshipMed", 0.2 },
+				array { "DecreaseRelationshipHigh", 0.4 },
+				array { "GuildActions", 0.4 },
+				array { "IncreaseRankDefault", 0.75 },
+				array { "GetLiaison", 0.2 },
+				array { "ExploitLiaison", 0.5 },
+				array { "RunForOffice", 0.2 },
+				array { "GetOfficeUsePowers", 0.3 },
+				array { "Archetype-AgressiveShadyDrink", 0.1 },
+				array { "Archetype-AgreessiveShadyAttack", 0.1 },
+				array { "Archetype-HonestDiplomaticPolitics", 0.1 },
+				array { "Archetype-HonestDiplomaticActions", 0.1 },
+				array { "KidnapSomeone", 0.1 },
+				array { "BuildingMaintenance", 1 },
+			};
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxOwnedBusinesses";
+					Mod = 1.0; //Total: 16
+					Recover = true;
+				},
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxHenchmen";
+					Mod = 1.0; // Total 6
+					Recover = true;
+				}
+			};
+		};
+
+		15 = GNobilityData // Archduke
+		{
+			Money = 1280000;
+			Prestige = 16000;
+			NonEssentialsPotPerc = 0.60;
+			
+			ObjectiveWeights = array
+			{
+				array { "MakeMoneyLow", 0 },
+				array { "MakeMoneyMed", 0.1 },
+				array { "MakeMoneyHigh", 0.5 },
+				array { "IncreasePrestigeMultistepLOW", 0 },
+				array { "IncreasePrestigeMultistepMID", 0.1 },
+				array { "IncreasePrestigeMultistepHIGH", 0.5 },
+				array { "IncreaseSecurityMultistepLOW", 0  },
+				array { "IncreaseSecurityMultistepMID", 0.1 },
+				array { "IncreaseSecurityMultistepHIGH", 0.4 },
+				array { "IncreaseRelationshipLow", 0 },
+				array { "IncreaseRelationshipMed", 0.2 },
+				array { "IncreaseRelationshipHigh", 0.6 },
+				array { "DecreaseRelationshipLow", 0 },
+				array { "DecreaseRelationshipMed", 0.2 },
+				array { "DecreaseRelationshipHigh", 0.4 },
+				array { "GuildActions", 0.4 },
+				array { "IncreaseRankDefault", 0.75 },
+				array { "GetLiaison", 0.2 },
+				array { "ExploitLiaison", 0.5 },
+				array { "RunForOffice", 0.2 },
+				array { "GetOfficeUsePowers", 0.3 },
+				array { "Archetype-AgressiveShadyDrink", 0.1 },
+				array { "Archetype-AgreessiveShadyAttack", 0.1 },
+				array { "Archetype-HonestDiplomaticPolitics", 0.1 },
+				array { "Archetype-HonestDiplomaticActions", 0.1 },
+				array { "KidnapSomeone", 0.1 },
+				array { "BuildingMaintenance", 1 },
+			};
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxHenchmen";
+					Mod = 2.0; //Total 8
+					Recover = true;
+				},
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxOwnedBusinesses";
+					Mod = 2; //Total: 18
+					Recover = true;
+				},
+				ModifierEffect
+				{
+					Filter = "IsFamilyMember";
+					ActorValue = "MaxTrials";
+					Mod = 1.0; //Total: 6
+					Recover = true;
+				},
+			};
+		};
+	};
+};

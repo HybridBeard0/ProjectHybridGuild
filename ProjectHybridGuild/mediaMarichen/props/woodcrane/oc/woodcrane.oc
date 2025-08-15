@@ -1,0 +1,10 @@
+woodcrane extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "woodcrane";
+	};
+	EditorName = "Woodcrane";
+	EditorIcon = "media/UserInterface/PropIcons/Woodcrane.png";
+	EditorCategory = 4;
+}

@@ -1,0 +1,276 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1430148281;
+			Name = "backwalk1";
+			AnimationName = "backwalk1";
+		},
+		AnimationDesc
+		{
+			ID = 1430148269;
+			Name = "spywalk1";
+			AnimationName = "spywalk1";
+		},
+		AnimationDesc
+		{
+			ID = 1430148233;
+			Name = "walk1";
+			AnimationName = "walk1";
+			Speed = 1.750;
+			Motion = 25.000;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 7;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 21;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1427902938;
+			Name = "walk_armor";
+			AnimationName = "walk1";
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 7;
+					SoundEvent = 1202;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 21;
+					SoundEvent = 1202;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1430148240;
+			Name = "walk2";
+			AnimationName = "walk2";
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 7;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 22;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1430148248;
+			Name = "walk3";
+			AnimationName = "walk3";
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 5;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 18;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1430148255;
+			Name = "walk4";
+			AnimationName = "walk4";
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 18;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1430168255;
+			Name = "walk_torch";
+			AnimationName = "walk_torch";
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 4;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 18;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1430168257;
+			Name = "suspicious_walk";
+			AnimationName = "suspicious_walk";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 29;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 59;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 87;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 123;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 147;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 180;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 208;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 240;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1432348257;
+			Name = "sadwalk1";
+			AnimationName = "sadwalk1";
+			Motion = 35.000;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 22;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 41;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1430145655;
+			Name = "walk1_torch";
+			AnimationName = "walk1_torch";
+		},
+		AnimationDesc
+		{
+			ID = 1482337648;
+			Name = "walk_walkstick";
+			AnimationName = "walk_walkstick";
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 2;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 19;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+	);
+}

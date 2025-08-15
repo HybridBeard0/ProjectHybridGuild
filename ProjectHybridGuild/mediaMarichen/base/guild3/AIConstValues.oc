@@ -1,0 +1,622 @@
+AIConstValues extends AIConstants
+{
+	// money 
+	Money_BuyBuffer = 1.1f; // Value is multiplied with needed money for titles/skills. If AI Family has more it will buy skill/title/etc
+	Money_ArtefactBuyBuffer = 3.0f;		// if FamilyMoney >= itemPrice * Money_ArtefactBuyBuffer, you can buy it
+	Money_ItemBuffer = 2.0f; 			// if FamilyMoney >= itemPrice * Money_ItemBuffer, you can buy it
+	Money_ActionBuffer = 1.2f; //if FamilyMoney >= actionPrice * Money_ActionBuffer, you can execute it
+	
+	//Prestige
+	Prestige_BuyBuffer = 1.25f; // Value is multiplied with needed prestige. If AI Family has more it will buy the skill/title/etc.
+	Prestige_ActionBuffer = 2.0f; //if FamilyPrestige >= actionPrice * Money_ActionBuffer, you can execute it
+	
+	// Budget - Budget Pot
+	
+	// These pots are used for dividing the AI family wealth into different spending pots.
+	// It's pretty freeform what you do here, but:
+	// - Do NOT make a pot named 'Invalid', it will never be used properly. Invalid is a hardcoded indicator for incorrect pot usage.
+	// - Do NOT make a pot named 'Force', it will never be used properly. Force is a hardcoded indicator for skipping pot considerations.
+	// - You should include a pot named 'Other', as that is the default pot used for miscellaneous stuff.
+	// Weights can be anything positive. All weights will be summed and normalized (so 10, 10, 20 is the same as 0.1, 0.1, 0.2, or 0.25, 0.25, 0.5)
+	// The second parameter can be true or false, and allows 'overflow' into the Other pot. If false, then only the funds from the pot
+	// itself will be considered, while if true, any drains on the given pot will additionally consider the 'Other' pot for satisfying the cost.
+	
+	// These pots govern gold spending.
+	Budget_MoneyPots = map {
+		"Equipment" = (7.0,	false),		// Buying equipment for dynasty members
+		"Unlocks" 	= (10.0, true),		// Unlocking skills or titles
+		"Business" 	= (10.0, true),		// All business transactions - hiring, salaries, buying materials
+		"Expansion" = (10.0, true),		// Anything related to growing the empire - buying residences or businesses, addons
+		"Diplomacy" = (3.0, true),		// Diplomacy related stuff - dynasty trades, political expenses
+		"Other" 	= (60.0, false)		// Everything else
+	};
+
+	// These pots govern prestige spending.
+	Budget_PrestigePots = map {
+		"Equipment" = (0.0, false),		// Buying equipment for dynasty members
+		"Unlocks" 	= (50.0, true),		// Unlocking skills or titles
+		"Business" 	= (0.0, true),		// All business transactions - hiring, salaries, buying materials
+		"Expansion" = (0.0, false),		// Anything related to growing the empire - buying residences or businesses, addons
+		"Diplomacy" = (40.0, false),	// Diplomacy related stuff - dynasty trades, political expenses
+		"Other" 	= (10.0, false)		// Everything else
+	};
+	
+	// How often the budget will be redistributed into buckets, in in game years. 0.25 = 4 times per year. 0.16 = 6 times per year
+	Budget_DistributionInterval = 0.16;
+	
+	// Bidding
+	Bidding_RevenueMultiplier = 0.6; // How much to tune down the very optimistic revenue estimation the AI does for a building. Limits the max. bid an AI will place on a building. Sensible values are 0..1, with 0 meaning "all buildings are considered to generate no revenue" (which means nothing will be bid on)
+	Bidding_DistanceScale = 1.0; // How much influence the distance of leasable buildings has on the AI placing a bid on them. Does not affect max. bid. Sensible values are 0..1, 0 means "distance doesn't matter", higher values will reduce chance to bid on distant buildings.
+
+	// Building placement
+	BuildingPlacement_AllowedResidences = array { // How many residential buildings the AI is allowed to have per nobility title. Nobility titles start at '1' with Serf, so the first entry should never be used...
+		1, // Unused
+		1, // Serf = 1,
+		1, // Commoner = 2,
+		1, // Yeoman = 3,
+		1, // Resident = 4,
+		1, // Citizen = 5,
+		2, // FreeCitizen = 6,
+		3, // Patrician = 7,
+		3, // Nobleman = 8,
+		4, // Squire = 9,
+		4, // Lord = 10,
+		5, // Baron = 11,
+		5, // Count = 12,
+		6, // Marquis = 13,
+		8, // Duke = 14,
+		10, // Archduke = 15,
+	};
+	
+	BuildingPlacement_WarehouseLimits = map {
+		2 = 1;  // 2 businesses -> 1 warehouse
+		5 = 2;  // 5 businesses -> 2 warehouses
+		9 = 3;  // 9 businesses -> 3 warehouses
+		14 = 4; // 14 businesses -> 4 warehouses
+	};
+
+    // Skills
+    Skill_ProblemWeight = 0.25f;
+	Skill_UnlockedBusinessBonus = 20.0f;
+
+	// trade
+	Trade_WiggleValue = 0.10f; // +/-10% // Affects how a trader adjusts his prices during dynasty trade depending on how much he likes the trading partner (and their relative score (winning points))
+	Trade_SubjectiveValueFactor_SellRequiredBuilding = 2.0f; // Affects how much the subjective market value of an owned building is multiplied by if it's part of the unlock build.
+	Trade_SubjectiveValueFactor_SellUselessBuilding = 0.75f; // Affects how much the subjective market value of an owned building is multiplied by if it's NOT of the unlock build.
+	Trade_SubjectiveValueFactor_BuyRequiredBuilding = 1.0f; // Affects how much the subjective market value of an offered building is multiplied by if it's part of the future unlock build.
+	Trade_SubjectiveValueFactor_BuyUselessBuilding = 0.5f; // Affects how much the subjective market value of an offered building is multiplied by if it's NOT part of the future unlock build.
+	
+	// building
+	Building_MarketValueUpdate_PlayerOwned = 0.125f; // in game years
+	Building_MarketValueUpdate_AIOwned = 0.013f; // in game years ~10 seconds
+	
+	// BuildingManager
+	Building_ProductionDecision_ItemProductionDefaultAmount = 1; // Produce one standard item per decision
+	Building_ProductionDecision_GatheringProductionDefaultAmount = 40; // Gather 10 items per gathering decision
+	Building_ProductionQueue_MergedProductsMaxStackSize = 20; // Max size of stack during merge of similar tasks (need of 80 items will result in 4 stacks with this configuration)
+	Building_BuildingManager_DeadlockGuardInterval = 10.0f; // Every 10 seconds the BuildingManager will check for a production deadlock and resolve it
+	Building_ProfessionsIgnoringWorktime = array{"Robber", "Thief", "Mercenary", "ResupplyTransporter"};
+	Building_BuildingManager_ProcessEmployeeCooldown = 0.005f; // Cooldown between how often the AI can make a decision for an automated employee, in years.
+	Building_BuildingManager_AllowedIdleDurationBeforeCallingHome = 0.0417f; // The IN-GAME time interval after which an employee should be called back from the BuildingManager when it is idling
+	// EBuildingAIPriority: NoEmployee = 0, NoResource = 1, Resource = 2, Employee = 3, CartUpgrade = 4, Addon = 5, Guard = 6, NotImportant = 7,
+	Building_BuildingManager_MoneyBufferValues = array( 0, 0, 0, 100, 1500, 1000, 3000, 1500 ); // Money buffer values - one entry per value in the enum EBuildingAIPriority - defines how much money the AI should keep as buffer when spending money for something.
+	
+	// city guards
+	CityGuards_Attributes = array ( 2.0f, 2.0f, 1.0f, 4.0f, 1.0f ); // in this order: Strength, Dexterity, Intelligence, Perception, Charisma
+	CityGuards_Level = 5; // start level for city guards
+	CityGuards_MinimumAge = 22.0f; // minimum age in years
+	CityGuards_AgeVariation = 5.0f; // variation in years
+	CityGuards_MaximumAge = 40.0f; // maximum age until the guard dies
+	CityGuards_RespawnInterval = 0.25f; // Interval in ingame years when the neighborhood should check if it should respawn one city guard
+	
+	//Guards and Lansquenets
+	Guards_MaxDistanceSight = 1000.0;
+	// Defines the score for the culprit when a cityguard or lansquenets should catch a character doing something illegal
+	// source actor = culprit, target actor = guard, default = culprit
+	Guards_CulpritScoreFormula = "Stealth";
+	// Defines the score for the guard when a cityguard or lansquenets should catch a character doing something illegal
+	// source actor = culprit, target actor = guard, default = culprit
+	Guards_GuardScoreFormula = "Perception + ((Source.DoesHaveTag.Catholic && Target.DoesHaveTag.Protestant) || (Source.DoesHaveTag.Protestant && Target.DoesHaveTag.Catholic) || (Source.DoesHaveTag.Religious && Target.DoesNotHaveTag.Religious) || (Source.DoesNotHaveTag.Religious && Target.DoesHaveTag.Religious))";
+	
+	//Citizens
+	LookForHealerThreshold = 0.5; //Health threshold below which a npc citizen, AI family member and employee would go and look for a healer.
+	
+	// NPC actions and weights which the NPC Manager can use to select random actions for its controlled NPC characters
+	// (lines marked with an asterisk * are hardcoded and don't attempt to start a custom action)
+	NpcActionWeights = map
+	{
+		"GoToBusinessToBuyItems"  = 100.0f, // 20.6% -> Go shopping *
+		"NPCCheerPointOfInterest" = 120.0f, // 24.7% -> Assign Point Of Interest *
+		"NPCTalk"                 = 20.0f,  //  4.1% -> Conversations *
+		"SitOnBench"              = 37.0f,  //  7.6% -> Sit on bench
+		"ChatWithMarketVendor"    = 38.0f,  //  7.8% -> Chatting with a market vendor
+		"GoToChurchToPray"        = 20.0f,  //  4.1% -> Go to a church to pray
+		"MournDeceasedRelative"   = 8.0f,   //  1.7% -> Mourn deceased relative in a cemetery
+		"InfectWithRandomDisease" = 15.0f,  //  3.1% -> Infect with disease
+		"GoToLocation"            = 67.0f,  // 13.8% -> Walk around *
+		"NPCGoHomeAndSleep"       = 20.0f,  //  4.1% -> ONLY 10pm to 4am!!! go to sleep in their home, if the home is a residence
+		"GetServiceAction"        = 40.0f,  //  8.3% -> Satisfy service needs *
+		// --------------------------------------------------------------------
+		"AttendWedding"			  = 400.0f, // Extremely high chance, this will fail if there's no wedding ongoing (and another action will be picked).
+	};
+	
+	// AIManager
+	AIManager_Actions_GuardAIDuration = 0.5f;
+	AIManager_Trades_Per_Year = 2;	
+	AIManager_Trade_OverbidBound = 1.25f; // Defines how much an AI is allowed to overbid the requested commodity (1.25f == it can propose up to 125% of the requested value to consider it a fair trade)
+	AIManager_Trade_UnderbidBound = 0.9f; // Defines how much an AI is allowed to underbid the requested commodity (0.9f == it can propose down to 90% of the requested value to consider it a fair trade)ested value to consider it a fair trade)
+	AIManager_Trade_Money_Per_Year_Fraction = 0.125f;
+	AIManager_Trade_Buildings_Per_Year_Fraction = 0.2f;
+	AIManager_Trade_Characters_Per_Year_Fraction = 0.2f;
+	
+	AIManager_Num_Objective_Slots_Usable_For_Quests = 1; // Number of slots the AI is allowed to use for quest progression if enabled
+	AIManager_Enable_Quest_Progression = true; // Defines whether the AI tries to pursue quests or not. If enabled it will use X slots to populate them with objectives equal to the quests.
+	AIManager_BlacklistTimeout = 0.1; // Duration in years that an objective group is blacklisted if one of its objectives fails.
+	
+	AIManager_Breakup_Next_Useless_Romance = 0.05; // Timer (in ingame years) to clean up useless romances for marriage (when the character needs to marry but there are only married romances)
+	AIManager_UnlockDecision_Interval = 0.083; // Interval in how often the AI tries to do an unlock decision like (buy skill, get nobility title, ...). 0.083 = 12 times per year
+	
+	AIManager_PoliticalDecisions_Per_Year = 6; // How often in one year is the AI checking political power votes and evidences against them
+	
+	// AI diplomacy
+	Diplomacy_Alliances_BreakAllianceTreshold = -20.0f; // When the relationship score goes below this value, the family will automatically break up alliances. The base value here will be modified by 'ThresholdShiftFromMoralAlignment' below!
+	Diplomacy_Alliances_DeclareFeudThreshold = -50.0f; // When the relationship score goes below this value, the family will automatically declare a feud. The base value here will be modified by 'ThresholdShiftFromMoralAlignment' below!
+	Diplomacy_Alliances_DeclareFeudThresholdShiftPerFeud = -15.0f; // An additional modifier for Diplomacy_Alliances_DeclareFeudThreshold. Per active feud, the relationship threshold will shift by this amount.
+	Diplomacy_Alliances_AskAllianceThreshold = 50.0f; // The relationship score has between 2 families has to be bigger than this value for the AI to propose/request an alliance in a dynasty trade. The base value here will be modified by 'ThresholdShiftFromMoralAlignment' below!
+	Diplomacy_Alliances_BreakFeudThreshold = 0.0f; // The relationship score has between 2 families has to be bigger than this value for the AI to propose/request breaking a feud in a dynasty trade. The base value here will be modified by 'ThresholdShiftFromMoralAlignment' below!
+	Diplomacy_Alliances_ThresholdShiftFromMoralAlignment = ( 0.0f, 0.0f, -20.0f ); // The threshold values above can be modified by the MoralAlignment of the family. The components of this vector are used as scale. The final threshold is calculated as: finalThreshold = baseThreshold + Diplomacy_Alliances_ThresholdShiftFromMoralAlignment.x * familyAlignment.honest + Diplomacy_Alliances_ThresholdShiftFromMoralAlignment.y * familyAlignment.philantropic + Diplomacy_Alliances_ThresholdShiftFromMoralAlignment.z * familyAlignment.diplomatic
+		// At max diplomacy rating, all threshold values will shift by -20; at max aggression rating they will shift by +20
+	
+	// PowerExpropriate constants
+	PowerExpropriateProposal_BuildingValueWeight = 0.1f; // how much the value of the building influences the picking decision
+	PowerExpropriateProposal_ResidenceWeight = -20f; // influences the likelihood that a main residence is picked as a target
+	
+	// businessWeight = customerSatisfactionWeight * attractiveness * (neutralDistance / buildingDistance) * relationshipScore * (1 - (storageRuleMultAvg / salesPriceMultUpper)) * isMarketWeight * homeNeighborhoodWeight
+	// - customerSatisfactionWeight -> AI constant NpcNeeds_CustomerSatisfactionWeight
+	// - neutralDistance -> AI constant NpcNeeds_NeutralBuildingDistance
+	// - relationshipScore -> goes from 0 (total hate) to 1 (total love)
+	// - (1 - (storageRuleMultAvg / salesPriceMultUpper)) -> goes from 0 to 1, with 0 being 'nothing available' and 1 being fancy crap limitted by SalesPriceMultiplierUpperBound
+	// - isMarketWeight -> 1 if building is not a market, AI constant NpcNeeds_IsMarketWeight if it is a market
+	// - homeNeighborhoodWeight -> 1 if the building is in the NPCs home neighborhood, AI Constant NpcNeeds_OtherNeighborhoodWeight if it's a different neighborhood
+	// NPC needs: constants for calculating the likeliness of visiting a certain business when an NPC attempts to buy items to satisfy his needs
+	NpcNeeds_NeutralBuildingDistance = 1000.0f; // A 'base' distance for calculating a distance multiplier
+	NpcNeeds_CustomerSatisfactionWeight = 2.0f; // The weight for the 'attractiveness' actor value of a business 
+	NpcNeeds_MinBuildingDistance = 100.f; //Min distance from a building for it to be considered as a store, to prevent that characters will always go to the same market
+	NpcNeeds_IsMarketWeight = 0.1f; //Weight to reduce a building's rating if it is a market, so that NPC that go shopping prefer businesses
+	NpcNeeds_OtherNeighborhoodWeight = 0.2f; //Weight to reduce building's rating if it is not from a NPC's home neighborhood, so they don't stray too far away from their home neighborhoods
+	
+	NpcManager_MaxDialoguesInPoi = 2; // max number of people talking simultaneously around a POI 
+	NpcManager_MaxSpotsInPoi = 10; // max number of spots available around a POI
+	
+	CitizenEquipmentBlacklist = array //Items that NPC Citizens shouldn't buy automatically
+	{
+		"Cart",
+		"CartBig"
+	};
+	
+	PredefinedArchetypeTraits = array {
+		// No Archetype (because the Weight i zero which means that we ignore the this Archetype and consider only the "learned" MoralAlignment to be used 100%)
+		ArchetypeTrait
+		{
+			Weight = 0.0; // percentage 0.0 to 1.0 
+			OriginalMoral = MoralAlignment{
+				Values = array {
+					0.0, // [-1.0 ... 1.0] -> HONEST to SHADY
+					0.0, // [-1.0 ... 1.0] -> PHILANTHROPIC to EGOISTIC
+					0.0, // [-1.0 ... 1.0] -> DIPLOMATIC to AGGRESSIVE
+				};
+			};
+			
+			ServiceSettings = ServiceSettings
+			{
+				FractionEmployeesAllowedToServe = 1.0f; // percentage of the workers allowed to serve
+				DisabledServices = array {}; // list of ServiceActions that this archeype will not provide
+			};
+			
+			EvidenceHoardingThreshold = "10 + 2 * SocialLevel"; // The total evidence severity a family must hoard against a single criminal in a single city, before they send it to court
+		},
+		// Neutral Archetype
+		ArchetypeTrait
+		{
+			Weight = 0.5; // percentage 0.0 to 1.0 
+			OriginalMoral = MoralAlignment {
+				Values = array {
+					0.0, // [-1.0 ... 1.0] -> HONEST to SHADY
+					0.0, // [-1.0 ... 1.0] -> PHILANTHROPIC to EGOISTIC
+					0.0, // [-1.0 ... 1.0] -> DIPLOMATIC to AGGRESSIVE
+				};
+			};
+			
+			ServiceSettings = ServiceSettings
+			{
+				FractionEmployeesAllowedToServe = 1.0f; // percentage of the workers allowed to serve
+				DisabledServices = array {}; // list of ServiceActions that this archeype will not provide
+			};
+			
+			EvidenceHoardingThreshold = "10 + 2 * SocialLevel"; // The total evidence severity a family must hoard against a single criminal in a single city, before they send it to court
+		},
+		// Shady Archetype
+		ArchetypeTrait
+		{
+			Weight = 0.9; // percentage 0.0 to 1.0 
+			OriginalMoral = MoralAlignment {
+				Values = array {
+					-0.9, // [-1.0 ... 1.0] -> HONEST to SHADY
+					-0.3, // [-1.0 ... 1.0] -> PHILANTHROPIC to EGOISTIC
+					0.2, // [-1.0 ... 1.0] -> DIPLOMATIC to AGGRESSIVE
+				};
+			};
+			
+			ServiceSettings = ServiceSettings
+			{
+				FractionEmployeesAllowedToServe = 0.5f; // percentage of the workers allowed to serve
+				DisabledServices = array {}; // list of ServiceActions that this archeype will not provide
+			};
+			
+			EvidenceHoardingThreshold = "10 + 3 * SocialLevel"; // The total evidence severity a family must hoard against a single criminal in a single city, before they send it to court
+		},
+		// Egoistic Archetype
+		ArchetypeTrait
+		{
+			Weight = 0.9; // percentage 0.0 to 1.0 
+			OriginalMoral = MoralAlignment {
+				Values = array {
+					0.0, // [-1.0 ... 1.0] -> HONEST to SHADY
+					-1.0, // [-1.0 ... 1.0] -> PHILANTHROPIC to EGOISTIC
+					0.0, // [-1.0 ... 1.0] -> DIPLOMATIC to AGGRESSIVE
+				};
+			};
+			
+			ServiceSettings = ServiceSettings
+			{
+				FractionEmployeesAllowedToServe = 0.8f; // percentage of the workers allowed to serve
+				DisabledServices = array { "HealServiceAction" }; // list of ServiceActions that this archeype will not provide
+			};
+			
+			EvidenceHoardingThreshold = "10 + SocialLevel"; // The total evidence severity a family must hoard against a single criminal in a single city, before they send it to court
+		},
+		// Aggressive Archetype
+		ArchetypeTrait
+		{
+			Weight = 0.9; // percentage 0.0 to 1.0 
+			OriginalMoral = MoralAlignment {
+				Values = array {
+					-0.3, // [-1.0 ... 1.0] -> HONEST to SHADY
+					-0.3, // [-1.0 ... 1.0] -> PHILANTHROPIC to EGOISTIC
+					-0.8, // [-1.0 ... 1.0] -> DIPLOMATIC to AGGRESSIVE
+				};
+			};
+			
+			ServiceSettings = ServiceSettings
+			{
+				FractionEmployeesAllowedToServe = 1.0f; // percentage of the workers allowed to serve
+				DisabledServices = array {}; // list of ServiceActions that this archeype will not provide
+			};
+			
+			EvidenceHoardingThreshold = "2 * SocialLevel"; // The total evidence severity a family must hoard against a single criminal in a single city, before they send it to court
+		},
+		// Friendly Archetype
+		ArchetypeTrait
+		{
+			Weight = 0.9; // percentage 0.0 to 1.0 
+			OriginalMoral = MoralAlignment {
+				Values = array {
+					0.5, // [-1.0 ... 1.0] -> HONEST to SHADY
+					0.1, // [-1.0 ... 1.0] -> PHILANTHROPIC to EGOISTIC
+					0.7, // [-1.0 ... 1.0] -> DIPLOMATIC to AGGRESSIVE
+				};
+			};
+			
+			ServiceSettings = ServiceSettings
+			{
+				FractionEmployeesAllowedToServe = 1.0f; // percentage of the workers allowed to serve
+				DisabledServices = array {}; // list of ServiceActions that this archeype will not provide
+			};
+			
+			EvidenceHoardingThreshold = "10 + 4 * SocialLevel"; // The total evidence severity a family must hoard against a single criminal in a single city, before they send it to court
+		},
+	};
+	
+	// Combat decision probabilities setup
+	Combat_CharacterCombatDecisions = array
+	{
+		// FamilyMembers - Currently only AI family members (we don't want to take action away from players)
+		CharacterCombatDecision
+		{
+			Type = "FamilyMember";
+			PreCombatDecisions = array
+			{
+				CombatDecisionProbability { Name = "CombatFight"; Probability = 0.5; };
+				CombatDecisionProbability { Name = "CombatFlee"; Probability = 0.25; };
+			};
+			PostCombatDecisions = array
+			{
+				CombatDecisionProbability { Name = "PostCombatNoAction"; Probability = 1.0; };
+				CombatDecisionProbability { Name = "StealFromCharacter"; Probability = 0.25; };
+				CombatDecisionProbability { Name = "BreakBone"; Probability = 0.25; };
+			};
+		},
+		// Henchmen
+		CharacterCombatDecision
+		{
+			Type = "Henchman";
+			PreCombatDecisions = array
+			{
+				CombatDecisionProbability { Name = "CombatFight"; Probability = 1.0; },
+				CombatDecisionProbability { Name = "CombatFlee"; Probability = 0.0; }
+			};
+			PostCombatDecisions = array
+			{
+				CombatDecisionProbability { Name = "PostCombatNoAction"; Probability = 1.0; };
+				CombatDecisionProbability { Name = "StealFromCharacter"; Probability = 0.25; },
+				CombatDecisionProbability { Name = "BreakBone"; Probability = 0.25; }
+			};
+		};
+		// Transporters
+		CharacterCombatDecision
+		{
+			Type = "Transporter";
+			PreCombatDecisions = array
+			{
+				CombatDecisionProbability { Name = "CombatFight"; Probability = 0.1; },
+				CombatDecisionProbability { Name = "CombatFlee"; Probability = 0.9; }
+			};
+			PostCombatDecisions = array
+			{
+				CombatDecisionProbability { Name = "PostCombatNoAction"; Probability = 1.0; };
+				CombatDecisionProbability { Name = "BreakBone"; Probability = 0.25; }
+			};
+		};
+		// FoodPreparationEmployees
+		CharacterCombatDecision
+		{
+			Type = "FoodPreparationEmployee";
+			PreCombatDecisions = array
+			{
+				CombatDecisionProbability { Name = "CombatFight"; Probability = 0.2; },
+				CombatDecisionProbability { Name = "CombatFlee"; Probability = 0.8; }
+			};
+			PostCombatDecisions = array
+			{
+				CombatDecisionProbability { Name = "PostCombatNoAction"; Probability = 1.0; };
+			};
+		};
+		// HandicraftEmployees
+		CharacterCombatDecision
+		{
+			Type = "HandicraftEmployee";
+			PreCombatDecisions = array
+			{
+				CombatDecisionProbability { Name = "CombatFight"; Probability = 0.2; },
+				CombatDecisionProbability { Name = "CombatFlee"; Probability = 0.8; }
+			};
+			PostCombatDecisions = array
+			{
+				CombatDecisionProbability { Name = "PostCombatNoAction"; Probability = 1.0; };
+			};
+		};
+		// HerbalistEmployees
+		CharacterCombatDecision
+		{
+			Type = "HerbalistEmployee";
+			PreCombatDecisions = array
+			{
+				CombatDecisionProbability { Name = "CombatFight"; Probability = 0.2; },
+				CombatDecisionProbability { Name = "CombatFlee"; Probability = 0.8; }
+			};
+			PostCombatDecisions = array
+			{
+				CombatDecisionProbability { Name = "PostCombatNoAction"; Probability = 1.0; };
+			};
+		};
+		// RogueEmployees
+		CharacterCombatDecision
+		{
+			Type = "RogueEmployee";
+			PreCombatDecisions = array
+			{
+				CombatDecisionProbability { Name = "CombatFight"; Probability = 0.75; },
+				CombatDecisionProbability { Name = "CombatFlee"; Probability = 0.5; }
+			};
+			PostCombatDecisions = array
+			{
+				CombatDecisionProbability { Name = "PostCombatNoAction"; Probability = 0.75; };
+				CombatDecisionProbability { Name = "StealFromCharacter"; Probability = 0.75; },
+				CombatDecisionProbability { Name = "BreakBone"; Probability = 0.25; }
+			};
+		};
+		// Mercenaries (formerly heavily misspelled 'LansequentEmployee') 
+		CharacterCombatDecision
+		{
+			Type = "Mercenary";
+			PreCombatDecisions = array
+			{
+				CombatDecisionProbability { Name = "CombatFight"; Probability = 0.9; },
+				CombatDecisionProbability { Name = "CombatFlee"; Probability = 0.1; }
+			};
+			PostCombatDecisions = array
+			{
+				CombatDecisionProbability { Name = "PostCombatNoAction"; Probability = 0.9; };
+				CombatDecisionProbability { Name = "StealFromCharacter"; Probability = 0.0; },
+				CombatDecisionProbability { Name = "BreakBone"; Probability = 0.0; }
+			};
+		};
+		// ResupplyTransporter 
+		CharacterCombatDecision
+		{
+			Type = "ResupplyTransporter";
+			PreCombatDecisions = array
+			{
+				CombatDecisionProbability { Name = "CombatFight"; Probability = 1.0; },
+			};
+			PostCombatDecisions = array
+			{
+				CombatDecisionProbability { Name = "PostCombatNoAction"; Probability = 1.0; };
+			};
+		};
+		// ResupplyGuard
+		CharacterCombatDecision
+		{
+			Type = "ResupplyGuard";
+			PreCombatDecisions = array
+			{
+				CombatDecisionProbability { Name = "CombatFight"; Probability = 1.0; },
+			};
+			PostCombatDecisions = array
+			{
+				CombatDecisionProbability { Name = "PostCombatNoAction"; Probability = 1.0; };
+			};
+		};
+	};
+	
+	Trade_MoneyCommodity_Min_Money_To_Request = 200.0f; // If the percentage value is below this boundary, we at least request X money from the trade partner
+	Trade_MoneyCommodity_Min_Percentage_Of_Objective = 0.15f; // If requesting money for a specific objective, request minimum of X% of the objectives final progress
+	Trade_MoneyCommodity_Max_Percentage_Of_Objective = 0.45f; // If requesting money for a specific objective, request maximum of X% of the objectives final progress
+	
+    Trade_Commodities = array
+    {
+        TradeCommodity
+        {
+			ID = "Wedding";
+			
+			ProposeIf = array
+			{
+				"MakeMoneyLow",
+				"MakeMoneyMed",
+				"MakeMoneyHigh",
+				//"GetResidence",
+				"IncreaseRankDefault",
+				"IncreaseRelationshipLow",
+				"IncreaseRelationshipMed",
+				"IncreaseRelationshipHigh",
+			};
+			
+			RequestIf = array
+			{
+				"IncreaseRelationshipLow",
+				"IncreaseRelationshipMed",
+				"IncreaseRelationshipHigh",
+				"IncreaseRankDefault",
+				"ExpandFamilyMultistep",
+				"ExpandFamilyMakeChild"
+			};
+        };
+		
+		TradeCommodity
+        {
+			ID = "Money";
+			
+			ProposeIf = array
+			{
+				"IncreaseRelationshipLow",
+				"IncreaseRelationshipMed",
+				"IncreaseRelationshipHigh",
+				"IncreaseRankDefault",
+				//"ProduceOffspring",
+				"ExpandFamilyMultistep",
+				//"GetResidence",
+				"MakeMoneyMed",
+				"MakeMoneyLow",
+			};
+		
+			RequestIf = array
+			{
+				"MakeMoneyLow",
+				"MakeMoneyMed",
+				"MakeMoneyHigh",
+				"IncreaseRankDefault"
+			};
+        };
+		
+		TradeCommodity
+        {
+			ID = "Building";
+			
+			ProposeIf = array
+			{
+				//"IncreaseRelationshipLow",
+				"IncreaseRelationshipMed",
+				"IncreaseRelationshipHigh",
+				"IncreaseRankDefault",
+				//"ProduceOffspring",
+				"ExpandFamilyMultistep",
+				"MakeMoneyHigh",
+			};
+			
+			RequestIf = array
+			{
+				//"GetResidence",
+				"IncreaseRankDefault",
+				"MakeMoneyMed",
+				//"MakeMoneyLow",
+				"MakeMoneyHigh"
+			};
+        };
+		
+		TradeCommodity
+		{
+			ID = "Diplomacy";
+						
+			ProposeIf = array
+			{
+				"MakeMoneyHigh",
+				//"GetResidence",
+				"IncreaseRelationshipLow",
+				"IncreaseRelationshipMed",
+				"IncreaseRelationshipHigh",
+				"IncreaseRankDefault",
+				//"ProduceOffspring",
+				"ExpandFamilyMultistep",
+				"MakeMoneyLow",
+				"MakeMoneyMed",
+				"MakeMoneyHigh"
+			};
+			
+			RequestIf = array
+			{
+				"IncreaseRelationshipLow",
+				"IncreaseRelationshipMed",
+				"IncreaseRelationshipHigh",
+				"IncreaseRankDefault",
+				"IncreaseSecurityLow",
+				"IncreaseSecurityMed",
+				"IncreaseSecurityHigh",
+			};
+		};
+	};
+	
+	// Building class weights for tuning the routing AI. Each building class has three weights for affecting
+	// the effect that travel distance, gold cost and amount of items has on the formula.
+	// totalCost = (distanceToBuilding * DistanceCost) + (priceOfItem * GoldCost) + (amountUnfulfilled * CoverageCost)
+	// amountUnfulfilled is a value between 0 and 1 ; example: transporter wants to buy 15 ore but the bsuiness has only 5, so amountUnfulfilled = 1 - (5/15) = 0.666
+	// The routing algorithm calculates the totalCost for all items and buildings, and it tries to hold them as low as possible
+
+	Routing_OwnWarehouse_DistanceCost = 0.01;			Routing_OwnWarehouse_GoldCost = 0.0;			Routing_OwnWarehouse_CoverageCost = 20.0;
+	Routing_OwnBuilding_DistanceCost = 0.01;			Routing_OwnBuilding_GoldCost = 0.0;				Routing_OwnBuilding_CoverageCost = 20.0;
+	Routing_AlliedFamilyBusiness_DistanceCost = 0.01;	Routing_AlliedFamilyBusiness_GoldCost = 1.8;	Routing_AlliedFamilyBusiness_CoverageCost = 40.0;
+	Routing_NeutralFamilyBusiness_DistanceCost = 0.04;	Routing_NeutralFamilyBusiness_GoldCost = 2.0;	Routing_NeutralFamilyBusiness_CoverageCost = 40.0;
+	Routing_FeudingFamilyBusiness_DistanceCost = 0.06;	Routing_FeudingFamilyBusiness_GoldCost = 4.0;	Routing_FeudingFamilyBusiness_CoverageCost = 80.0;
+	Routing_NeutralBusiness_DistanceCost = 0.04;		Routing_NeutralBusiness_GoldCost = 2.0;			Routing_NeutralBusiness_CoverageCost = 40.0;
+	Routing_ResourceProvider_DistanceCost = 0.01;		Routing_ResourceProvider_GoldCost = 2.0;		Routing_ResourceProvider_CoverageCost = 40.0;
+	Routing_Market_DistanceCost = 0.02;					Routing_Market_GoldCost = 2.0;					Routing_Market_CoverageCost = 40.0;
+	Routing_TradeMarket_DistanceCost = 0.04;			Routing_TradeMarket_GoldCost = 2.0;				Routing_TradeMarket_CoverageCost = 80.0;
+
+	
+	// Weights for tuning the selling algorithm. 
+	Routing_SaleProfit_Weight = 2.0;
+	Routing_SaleDistance_Weight = 0.01;
+	Routing_MaxNumStops = 10;
+	
+	// AI takeover delay when players disconnect in real time seconds.
+	MP_AITakeoverDelaySeconds = 300.0f; // 5 minutes
+	
+	// Services_NeutralEmployeeRatio and Services_NeutralMinCount are not used when:
+	// A) Building has NO services => no worker will do services
+	// B) Building has only services => all workers will do services
+	// If the building HAS services, at least ONE employee will be offering those, regardless of the ratio.
+	// Ratio for workers which do services in neutral buildings (0.0f = 0%, 1.0f = 100%)
+	Services_NeutralEmployeeRatio = 0.9f;
+	
+	TargetScore_MaxDistanceScore = 100.0f; // The max score that is generated by the 'CloseToActor' setting in a target profile. This score will be returned at a distance of 0 (i.e. we are standing on top of the target).
+	TargetScore_NeutralDistance = 5000.0f; // The distance at which the 'CloseToActor' setting in a target profile will return a score of 0. The falloff is linear. For every 'TargetScore_NeutralDistance' units of distance, the score will reduce by 'TargetScore_MaxDistanceScore'. There is no lower limit.
+};

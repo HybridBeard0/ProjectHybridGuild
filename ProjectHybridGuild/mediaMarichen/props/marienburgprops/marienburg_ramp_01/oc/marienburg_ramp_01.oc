@@ -1,0 +1,13 @@
+marienburg_ramp_01 extends G3PropsInstance
+{
+	Walkable = true; // whenever you change the 'walkable' property of a prop, make sure to correctly move it between 'prop_packages.oo' and 'walkable_prop_packages.oo'. This ensures that all walkable props are preloaded correctly before a game starts.
+	CustomFadeAlpha = 1.0;
+
+	static var Description = ActorDesc
+	{
+		Visual = "marienburg_ramp_01";
+	};
+	EditorName = "marienburg_ramp_01";
+	EditorIcon = "media/UserInterface/PropIcons/Kiosque01.png";
+	EditorCategory = 5;
+}

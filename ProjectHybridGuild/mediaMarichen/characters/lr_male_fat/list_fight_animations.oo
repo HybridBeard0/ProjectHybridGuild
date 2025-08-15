@@ -1,0 +1,225 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1504031229;
+			Name = "backstab";
+			AnimationName = "backstab";
+			Looping = true;
+		},
+		AnimationDesc
+		{
+			ID = 1477080189;
+			Name = "backstab_victim";
+			AnimationName = "backstab_victim";
+		},
+		AnimationDesc
+		{
+			ID = 1484169838;
+			Name = "break_bone";
+			AnimationName = "break_bone";
+		},
+		AnimationDesc
+		{
+			ID = 1484169862;
+			Name = "break_bone_victim";
+			AnimationName = "break_bone_victim";
+		},
+		AnimationDesc
+		{
+			ID = 1484850511;
+			Name = "challenge_for_duel";
+			AnimationName = "challenge_for_duel";
+		},
+		AnimationDesc
+		{
+			ID = 1478724719;
+			Name = "double_slap1";
+			AnimationName = "double_slap1";
+			Looping = true;
+		},
+		AnimationDesc
+		{
+			ID = 1429814567;
+			Name = "fight1";
+			AnimationName = "fight1";
+		},
+		AnimationDesc
+		{
+			ID = 1429814577;
+			Name = "fight2";
+			AnimationName = "fight2";
+		},
+		AnimationDesc
+		{
+			ID = 1429814588;
+			Name = "fight3";
+			AnimationName = "fight3";
+		},
+		AnimationDesc
+		{
+			ID = 1429814596;
+			Name = "fight4";
+			AnimationName = "fight4";
+		},
+		AnimationDesc
+		{
+			ID = 1429814610;
+			Name = "fightidle1";
+			AnimationName = "fight_idle1";
+		},
+		AnimationDesc
+		{
+			ID = 1478724743;
+			Name = "get_double_slap1";
+			AnimationName = "get_double_slap1";
+			Looping = true;
+		},
+		AnimationDesc
+		{
+			ID = 1481050619;
+			Name = "get_up1";
+			AnimationName = "get_up1";
+		},
+		AnimationDesc
+		{
+			ID = 1477491318;
+			Name = "is_kidnapped_backpack";
+			AnimationName = "is_kidnapped_backpack";
+		},
+		AnimationDesc
+		{
+			ID = 1477502373;
+			Name = "kidnap_character_backpack";
+			AnimationName = "kidnap_character_backpack";
+		},
+		AnimationDesc
+		{
+			ID = 1485291892;
+			Name = "KillCharacter";
+			AnimationName = "KillCharacter";
+		},
+		AnimationDesc
+		{
+			ID = 1485292547;
+			Name = "KillCharacter_victim";
+			AnimationName = "KillCharacter_victim";
+		},
+		AnimationDesc
+		{
+			ID = 1784183351;
+			Name = "kill_unconscious_character";
+			AnimationName = "kill_unconscious_character";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 0;
+					DespawnFrame = 65;
+					SpawnName = "dagger/dagger";
+				},
+				VoiceTrigger
+				{
+					TriggerFrame = 29;
+					SoundEvent = 286;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;					
+				},
+				
+				VoiceTrigger
+				{
+					TriggerFrame = 93;
+					SoundEvent = 276;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;					
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1484868672;
+			Name = "shoot_crossbow";
+			AnimationName = "shoot_crossbow";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 18;
+					SoundEvent = 1101;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1484868446;
+			Name = "shoot_pistol";
+			AnimationName = "shoot_pistol";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 21;
+					SoundEvent = 1100;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1480965178;
+			Name = "weapon_attack";
+			AnimationName = "weapon_attack";
+		},
+		AnimationDesc
+		{
+			ID = 1480967247;
+			Name = "weapon_block";
+			AnimationName = "weapon_block";
+		},
+		AnimationDesc
+		{
+			ID = 1481042816;
+			Name = "weapon_idle";
+			AnimationName = "weapon_idle";
+		},
+		AnimationDesc
+		{
+			ID = 1481043187;
+			Name = "weapon_lose";
+			AnimationName = "weapon_lose";
+		},
+		AnimationDesc
+		{
+			ID = 1481039307;
+			Name = "weapon_receive_hit";
+			AnimationName = "weapon_receive_hit";
+		},
+	);
+}

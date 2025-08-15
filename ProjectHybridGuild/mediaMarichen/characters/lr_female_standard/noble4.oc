@@ -1,0 +1,4 @@
+noble4 extends G3Character
+{
+	static var Description = #lr_female_standard/noble4_desc;
+};

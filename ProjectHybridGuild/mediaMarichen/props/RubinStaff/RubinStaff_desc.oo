@@ -1,0 +1,14 @@
+G3ActorDesc
+{
+	Visual = "RubinStaff";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#RubinStaff/list_walks_animations,
+		);
+	};
+	AttachType = "AttachToNode";
+	AttachParentNode = "Bip001 R Hand";
+	AttachChildNode = "Snap";
+}

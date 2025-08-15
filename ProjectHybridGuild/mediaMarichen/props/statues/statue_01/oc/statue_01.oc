@@ -1,0 +1,10 @@
+statue_01 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "statue_01";
+	};
+	EditorName = "Statue01";
+	EditorIcon = "media/UserInterface/PropIcons/Statue01.png";
+	EditorCategory = 3;		
+}

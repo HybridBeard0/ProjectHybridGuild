@@ -1,0 +1,9 @@
+alchemistShop_03 extends BuildingVisualUpgrade
+{
+	static var Description = ActorDesc
+	{
+		Visual = "alchemist_03";
+	};
+	BusinessLevel = 3;
+	UpgradeOf = alchemistshop;
+}

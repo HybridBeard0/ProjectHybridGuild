@@ -1,0 +1,10 @@
+interiorprop_deco_simplechestclosed extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "interiorprop_deco_simplechestclosed";
+	};
+	EditorName = "InteriorProp Deco SimpleChestClosed";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}
