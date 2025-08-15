@@ -58,7 +58,7 @@ G3SkillsDefault extends G3SkillsContainer
 						UnlockEffect
 						{
 // *** EggMod --> ***
-							Names = array{"Barley", "Wheat", "BucketOfWater", "Chicken", "EggBasket"};
+							Names = array{"Barley", "Wheat", "BucketOfWater", "Chicken", "EggBasket, "Hemp", "Tomato"};
 // *** <-- EggMod ***
 						}
 					};
@@ -72,7 +72,7 @@ G3SkillsDefault extends G3SkillsContainer
 					{
 						UnlockEffect
 						{
-							Names = array{"Cattle", "Pig"};
+							Names = array{"Cattle", "Pig", "Olive", "BucketOfTomatos"};
 						}
 					};
 				};
@@ -90,7 +90,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array{"Sheep", "Wool", "Marijuana"};
+							Names = array{"Sheep", "Wool", "Marijuana", "Cabbage"};
 						}
 					};
 				};
@@ -108,7 +108,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array{"Horse", "RidingHorse", "DogCompanion"};
+							Names = array{"Horse", "RidingHorse", "DogCompanion", "Onion"};
 						}
 					};
 				};
@@ -139,7 +139,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array { "BarleyFlour", "WheatFlour", "MixedGrains", "FlatBread", "MarijuanaFlour", "MarijuanaFlatBread" };
+							Names = array { "BarleyFlour", "WheatFlour", "MixedGrains", "FlatBread", "MarijuanaFlour", "MarijuanaFlatBread","ImprovedMillerClothes", "ImprovedMillerClothesHat" };
 						}
 					};
 				};
@@ -152,7 +152,7 @@ G3SkillsDefault extends G3SkillsContainer
 					{
 						UnlockEffect
 						{
-							Names = array { "GrainPap", "PlantEssence", "MarijuanaEssence" };
+							Names = array { "GrainPap", "PlantEssence", "MarijuanaEssence", "GrindedBlackPepper", "SackOfFlours" };
 						}
 					};
 				};
@@ -262,7 +262,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array { "Fruit", "Honey", "Juice", "Cider" };
+							Names = array { "Fruit", "Honey", "Juice", "Cider", "BerryJuice", "Berry" };
 						}
 					};
 				};
@@ -275,7 +275,7 @@ G3SkillsDefault extends G3SkillsContainer
 					{
 						UnlockEffect
 						{
-							Names = array { "Blackberry", "BlackberryJam", "Candy" };
+							Names = array { "Blackberry", "BlackberryJam", "Candy", "BucketOfFruits", "FlowerPot" };
 						}
 					};
 				};
@@ -324,7 +324,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array { "StrongBeer", "WheatBeer", "RoastBeef" };
+							Names = array { "StrongBeer", "WheatBeer", "RoastBeef", "RoastedPig" };
 						}
 					};
 				};
@@ -387,7 +387,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array { "Trout", "Perch", "FriedTrout", "SmokedPerch" };
+							Names = array { "Trout", "Perch", "FriedTrout", "SmokedPerch", "Shell", "ShellNecklace" };
 						}
 					};
 				};
@@ -400,7 +400,7 @@ G3SkillsDefault extends G3SkillsContainer
 					{
 						UnlockEffect
 						{
-							Names = array { "Pike", "FishOil", "BoneNeedle", "GoFishing" };
+							Names = array { "Pike", "FishOil", "BoneNeedle", "GoFishing", "FishSoup", "LivingTrout" };
 						}
 					};
 				};
@@ -431,7 +431,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array { "Beef", "Fat", "Leather", "Pork"};
+							Names = array { "Beef", "Fat", "Leather", "Pork", "Duck", "DuckMeat"};
 						}
 					};
 				};
@@ -444,7 +444,7 @@ G3SkillsDefault extends G3SkillsContainer
 					{
 						UnlockEffect
 						{
-							Names = array { "GoHunting", "Deer", "GameMeat", "RoastVenison"};
+							Names = array { "GoHunting", "Deer", "GameMeat", "RoastVenison", "CowLiver"};
 						}
 					};
 				};
@@ -504,7 +504,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array { "Iron", "CrudeWeaponHilt", "Dagger" };
+							Names = array { "Iron", "CrudeWeaponHilt", "Dagger", "Sickle", "Scythe" };
 						}
 					};
 				};
@@ -517,7 +517,7 @@ G3SkillsDefault extends G3SkillsContainer
 					{
 						UnlockEffect
 						{
-							Names = array { "Nails", "Fittings", "ThrowingKnife" };
+							Names = array { "Nails", "Fittings", "ThrowingKnife", "BlacksmithHammer", "Poker" };
 						}
 					};
 				};
@@ -548,7 +548,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array { "Silver", "IronBracelet", "SilverChain" };
+							Names = array { "Silver", "IronBracelet", "SilverChain", "MasonHammer", "Saw" };
 						}
 					};
 				};
@@ -628,7 +628,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array { "ClayVase", "Beaker", "WeightStone", "BucketOfWater" };
+							Names = array { "ClayVase", "Beaker", "WeightStone", "BucketOfWater", "ClayBowl", "ThrowingStones" };
 						}
 					};
 				};
@@ -641,7 +641,7 @@ G3SkillsDefault extends G3SkillsContainer
 					{
 						UnlockEffect
 						{
-							Names = array { "StrongDoorLatch", "OilLamp" };
+							Names = array { "StrongDoorLatch", "OilLamp", "Porcelain", "Sand" };
 						}
 					};
 				};
@@ -672,7 +672,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array { "Grindstone", "SandingBlock", "MuralPainting" };
+							Names = array { "Grindstone", "SandingBlock", "MuralPainting", "LesserQualitySalt" };
 						}
 					};
 				};
@@ -690,7 +690,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array { "Gemstone", "SlateTile", "GemRing" };
+							Names = array { "Gemstone", "SlateTile", "GemRing", "Glas" };
 						}
 					};
 				};
@@ -768,7 +768,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array { "Copper", "Cauldron", "PinewoodPlank" };
+							Names = array { "Copper", "Cauldron", "PinewoodPlank", "Pipe", "Bucket" };
 						}
 					};
 				};
@@ -781,7 +781,7 @@ G3SkillsDefault extends G3SkillsContainer
 					{
 						UnlockEffect
 						{
-							Names = array { "CopperBracelet", "Torch", "WoodenShield" };
+							Names = array { "CopperBracelet", "Torch", "WoodenShield","RomanHelmet", "BronceFlail" };
 						}
 					};
 				};
@@ -1000,7 +1000,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array{ "Blackberry", "Lavender", "BucketOfWater", "HerbTea", "MixedHerbs", "DiseaseService", "MarijuanaTea" };
+							Names = array{ "Blackberry", "Lavender", "BucketOfWater", "HerbTea", "MixedHerbs", "DiseaseService", "MarijuanaTea", "BlackPepperPlant",  "Joint" };
 						}
 					};
 				};
@@ -1062,7 +1062,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array{"Polish", "Perfume", "WeaponPoison", "Antidote", "GhostlyFog"};
+							Names = array{"Polish", "Perfume", "WeaponPoison", "Antidote", "GhostlyFog", "Antibiotics"};
 						}
 					};
 				};
@@ -1080,7 +1080,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array{"FlowerOfDiscord", "PowderOfHygeia", "ParalysisPoison"};
+							Names = array{"FlowerOfDiscord", "PowderOfHygeia", "ParalysisPoison", "SpeedPotion"};
 						}
 					};
 				};
@@ -1122,7 +1122,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array {"GiveSermon", "WinBelievers"}; 
+							Names = array {"GiveSermon", "WinBelievers","PromoteYourBusinessesWithPrayersIron"}; 
 						}
 					};
 				};
@@ -1275,8 +1275,8 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-//							Names = array{ "Jasmin", "BatBlood", "JasmineOil", "MakeUp", "BodyCareService" };
-							Names = array{ "Jasmin", "WildRose", "RoseWater", "Soap", "BodyCareService" };
+//							Names = array{ "Jasmin", "BatBlood", "JasmineOil", "MakeUp", "BodyCareService", "MassageOil"  };
+							Names = array{ "Jasmin", "WildRose", "RoseWater", "Soap", "BodyCareService", "AuDeToilette" };
 						}
 					};
 				};
@@ -1289,7 +1289,7 @@ G3SkillsDefault extends G3SkillsContainer
 					{
 						UnlockEffect
 						{
-//							Names = array { "WildRose", "RoseWater", "Soap" };
+//							Names = array { "WildRose", "RoseWater", "Soap", "Roses" };
 							Names = array { "BatBlood", "JasmineOil", "MakeUp" };
 						}
 					};
@@ -1339,7 +1339,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array { "PainKiller", "MarijuanaExtract" };
+							Names = array { "PainKiller", "MarijuanaExtract", "Eyeglas" };
 						}
 					};
 				};
@@ -1401,7 +1401,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array { "Moonflower", "DarkTalisman", "Bomb" };
+							Names = array { "Moonflower", "DarkTalisman", "Bomb", "Fertilizer" };
 						}
 					};
 				};
@@ -1814,7 +1814,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array { "Bone", "BoneDust", "BoneGlue", "BoneBracelet" };
+							Names = array { "Bone", "BoneDust", "BoneGlue", "BoneBracelet", "Worm", "Ashes" };
 						}
 					};
 				};
@@ -1827,7 +1827,7 @@ G3SkillsDefault extends G3SkillsContainer
 					{
 						UnlockEffect
 						{
-							Names = array { "SkullLamp", "PlunderGraves" };
+							Names = array { "SkullLamp", "PlunderGraves", "Tombstone", "BoneShield" };
 						}
 					};
 				};
@@ -1938,7 +1938,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array {"PlayMusic", "StageConcert" }; 
+							Names = array {"PlayMusic", "StageConcert", "PromoteYourBusinessesIron" }; 
 						},
 						ModifierEffect
 						{
