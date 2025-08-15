@@ -58,7 +58,7 @@ G3SkillsDefault extends G3SkillsContainer
 						UnlockEffect
 						{
 // *** EggMod --> ***
-							Names = array{"Barley", "Wheat", "BucketOfWater", "Chicken", "EggBasket, "Hemp", "Tomato"};
+							Names = array{"Barley", "Wheat", "BucketOfWater", "Chicken", "EggBasket", "Hemp", "Tomato"};
 // *** <-- EggMod ***
 						}
 					};
@@ -1451,7 +1451,7 @@ G3SkillsDefault extends G3SkillsContainer
 						UnlockEffect
 						{
 							Names = array {"BeltOfMetaphysics", "Nightcap", "StinkBomb", "CamouflageCloak", "MakeEvocation"};
-						};
+						}
 					};
 				};
 			};
