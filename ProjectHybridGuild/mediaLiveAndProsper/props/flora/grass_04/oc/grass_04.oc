@@ -1,0 +1,11 @@
+grass_04 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "grass_04";
+	};
+	EditorName = "Grass04";
+	EditorIcon = "media/UserInterface/PropIcons/Grass04.png";
+	EditorCategory = 1;		
+	
+}

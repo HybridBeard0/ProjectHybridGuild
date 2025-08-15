@@ -1,0 +1,10 @@
+flowerbed_02 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "flowerbed_02";
+	};
+	EditorName = "flowerbed_02";
+	EditorIcon = "media/UserInterface/PropIcons/flowerbed_02.png";
+	EditorCategory = 3;		
+}

@@ -1,0 +1,11 @@
+G3ActorDesc
+{
+	Visual = "interior_poorhouse";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#Interior_Poorhouses/interior_poorhouses_01_idles_animations,
+		);
+	};
+}

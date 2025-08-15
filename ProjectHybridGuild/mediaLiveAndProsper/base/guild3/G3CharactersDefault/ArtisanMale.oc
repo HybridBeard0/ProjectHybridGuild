@@ -1,0 +1,40 @@
+ArtisanMale extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = true;
+	MiddleClass = false;
+	Rich = false;
+	
+	Male = true;
+	Player = false;
+	Employee = true;
+	Profession = true;
+	
+	LowResCharacter = "commoner4";
+	HighResCharacter = "commoner4";
+	
+	BodyTexturesDiff= array
+	{
+		"Commoner4_male_DIFF",
+		"Commoner4_male_DIFF",
+		"Commoner4_male_DIFF",
+		"Commoner4_male_DIFF"		
+	};
+	BodyTexturesNorm= array
+	{
+		"Commoner4_male_NORM",
+		"Commoner4_male_NORM",
+		"Commoner4_male_NORM",
+		"Commoner4_male_NORM"
+	};
+	BodyTexturesMask= array
+	{
+		"Commoner4_male_MASK",
+		"Commoner4_male_MASK",
+		"Commoner4_male_MASK",
+		"Commoner4_male_MASK"
+	};
+}

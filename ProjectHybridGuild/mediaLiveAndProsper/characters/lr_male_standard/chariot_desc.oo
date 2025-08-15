@@ -1,0 +1,11 @@
+base/chariotg3characterdesc
+{
+	Visual = "lr_man_chariot";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#lr_male_standard/list_chariot_animations,
+		);
+	};
+}

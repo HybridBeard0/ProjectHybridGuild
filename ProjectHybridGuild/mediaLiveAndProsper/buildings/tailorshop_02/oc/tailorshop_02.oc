@@ -1,0 +1,9 @@
+tailorshop_02 extends BuildingVisualUpgrade
+{
+	static var Description = ActorDesc
+	{
+		Visual = "tailor_02";
+	};
+	BusinessLevel = 2;
+	UpgradeOf = tailorshop;
+}

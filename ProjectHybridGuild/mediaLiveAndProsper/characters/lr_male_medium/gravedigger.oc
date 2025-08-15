@@ -1,0 +1,5 @@
+gravedigger extends G3Character
+{
+	static var Description = #lr_male_medium/gravedigger_desc;
+
+};

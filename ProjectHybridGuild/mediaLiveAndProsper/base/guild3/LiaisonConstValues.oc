@@ -1,0 +1,9 @@
+LiaisonConstValues extends LiaisonConstants
+{
+	AffectionDecayPerYear = 25.0f;
+	DecayUpdateIntervalYears = 0.00926; // Interval in Seconds: DecayUpdateIntervalYears * SecondsPerYear
+	AffectionThresholdLiaison = 0.1;
+	AffectionThresholdEngagement = 0.1;
+	AffectionThresholdEndWarning = 12.5;
+	InitialRomanceScore = 25.0;
+};

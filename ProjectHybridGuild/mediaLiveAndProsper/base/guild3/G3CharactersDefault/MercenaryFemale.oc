@@ -1,0 +1,41 @@
+MercenaryFemale extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = true;
+	MiddleClass = false;
+	Rich = false;
+	
+	Male = false;
+	Player = false;
+	Employee = true;
+	Profession = true;
+	
+	
+	LowResCharacter = "chainmail";
+	HighResCharacter = "chainmail";
+	
+	BodyTexturesDiff= array
+	{
+		"ChainmailFemale_LOD01_diff",
+		"ChainmailFemale_LOD01_diff",
+		"ChainmailFemale_LOD01_diff",		
+		"ChainmailFemale_LOD01_diff"			
+	};
+	BodyTexturesNorm= array
+	{
+		"ChainmailFemale_LOD01_NORM",
+		"ChainmailFemale_LOD01_NORM",
+		"ChainmailFemale_LOD01_NORM",
+		"ChainmailFemale_LOD01_NORM"
+	};
+	BodyTexturesMask= array
+	{
+		"ChainmailFemale_LOD01_MASK",
+		"ChainmailFemale_LOD01_MASK",
+		"ChainmailFemale_LOD01_MASK",
+		"ChainmailFemale_LOD01_MASK"
+	};
+}

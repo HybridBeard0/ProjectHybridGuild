@@ -1,0 +1,12 @@
+G3ActorDesc
+{
+	Visual = "teleport_hole";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#teleport_hole/list_actions_animations,
+		);
+	};
+	CrowdControlRadius = 0.000;
+}

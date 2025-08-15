@@ -1,0 +1,8 @@
+Effect_Dust_and_Leaves extends G3PropsInstance
+{
+	static var Description = #Effect_Dust_and_Leaves/Effect_Dust_and_Leaves_desc;
+	function onSpawn()
+	{
+		this.playAnimationByName("Idle");
+	}
+};

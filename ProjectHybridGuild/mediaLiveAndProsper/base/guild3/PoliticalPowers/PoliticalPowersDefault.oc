@@ -1,0 +1,81 @@
+PoliticalPowersDefault extends PoliticalPowers
+{
+	// These political powers can be referenced in unlock effects in the
+	// office groups. But bc every power is just a system executing proposals
+	// there is no need to have them stored somewhere else. The proposal will
+	// forwards it's data to the related system and makes sure the result is applied.
+	PoliticalPowers = map
+	{
+		"PowerSovereignLawmaker" = PowerSovereignLawmaker
+		{
+			PowerType = "PowerSovereignLawmaker";
+			TranslationString = "$action.PowerSovereignLawmaker";
+			RequiresVote = false;
+			MaxReputationChange = 5.0;
+			Cooldown = 4.0f;
+		},
+		"PowerLawmaker" = PowerLawmaker
+		{
+			MaxReputationChange = 5.0;
+			AllianceWeight = 20.0;
+			FeudWeight = 20.0;
+			DesiredLegalityWeight = 200.0;
+			Cooldown = 4.0f;
+		},
+		"PowerHeretic" = PowerHeretic 
+		{
+			RelationshipPenaltyValue = 10; // Amount to reduce the relationship banished -> council
+			AllianceWeight = 20.0;
+			FeudWeight = 20.0;
+			Cooldown = 1.0f;
+		},
+		"PowerTaxes" = PowerTaxes
+		{
+			Cooldown = 1.0f;		
+		},
+		"PowerCityGuards" = PowerCityGuards
+		{
+			MinChange = 3; // Absolute minimum change
+			PercentMaxChange = 0.7; // Percent maximum change, the result will be rounded to integers
+			RelationshipChangeAdd = 10; // Relationship change with neighborhood when additional cityguards are added!
+			RelationshipChangeRemove = -10; // Relationship change with neighborhood when cityguards are removed!
+			// Weight influencing the voting decision of AI
+			AllianceWeight = 20.0;
+			FeudWeight = 20.0;
+			GuardChangeWeight = 100.0;
+			WeightPerGuardChange = 10.0;
+			Cooldown = 1.0f;
+		},
+		"PowerCityRecord" = PowerCityRecord
+		{
+			MaximumEffect = 50.0; // Maximum reputation change either up or down
+			AllianceWeight = 50.0;
+			FeudWeight = 50.0;
+			MaxReputationLoss = -10.0;
+			MaxReputationGain = 10.0;
+			Cooldown = 1.0f;
+		},
+		"PowerAudit" = PowerAudit
+		{
+			Cooldown = 1.0f;
+		},
+		"PowerPrisons" = PowerPrisons 
+		{
+			MaxChangeUp = 1.5; // OriginalSentence * MaxChangeUp = MaximumSentence
+			MaxChangeDown = 0.5; // OriginalSentence * MaxChangeDown = MinimumSentence
+			AllianceWeight = 50.0;
+			FeudWeight = 50.0;
+			MaxReputationLoss = -10.0;
+			MaxReputationGain = 10.0;
+			Cooldown = 1.0f;
+		},
+		"PowerExpropriate" = PowerExpropriate 
+		{
+			AllianceWeight = 50.0;
+			FeudWeight = 50.0;
+			DirectCompetitorWeight = 50.0; // If AI owns business of same type, this weight is added bc competition
+			RelationshipPenaltyValue = 10; // How much the relationship between council members and target family is decreased
+			Cooldown = 1.0f;
+		},
+	};
+};

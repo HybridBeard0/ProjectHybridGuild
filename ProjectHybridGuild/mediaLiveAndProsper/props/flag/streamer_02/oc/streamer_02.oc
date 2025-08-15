@@ -1,0 +1,10 @@
+streamer_02 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "streamer_02";
+	};
+	EditorName = "streamer_02";
+	EditorIcon = "media/UserInterface/PropIcons/streamer_02.png";
+	EditorCategory = 3;		
+}

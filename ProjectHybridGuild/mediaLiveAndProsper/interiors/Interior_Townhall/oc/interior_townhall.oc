@@ -1,0 +1,8 @@
+interior_townhall extends InteriorScene
+{
+	static var Description = #Interior_Townhall/interior_townhall_anim_desc;
+	
+	EditorName = "Interior Townhall";
+	EditorIcon = "media/UserInterface/BusinessIcons/Other/mansion_01.png";
+	EditorCategory = 0;	
+}

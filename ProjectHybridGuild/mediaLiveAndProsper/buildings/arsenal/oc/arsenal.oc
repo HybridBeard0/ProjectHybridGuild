@@ -1,0 +1,201 @@
+arsenal extends Building
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "arsenal";
+
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc {
+					Name = "streetconnection";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "enter";
+					Position = ( 145.0, 540.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "exit";
+					Position = ( 145.0, 540.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+				},
+
+				SnapPointDesc
+				{
+					Name = "smuggle00";
+					Position = ( 230.0, 255.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 75.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "CrouchFadeIn";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "reap_herbs1";
+							Repeat = 2;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "CrouchFadeOut";
+						},
+						G3SnapPointAnimation {
+							Context = "Idle";
+							Animation = "idle1";
+							Repeat = 3;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "smuggle01";
+					Position = ( -562.0, 548.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "ManipulateMiddle";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation {
+							Context = "Idle";
+							Animation = "idle1";
+							Repeat = 3;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "smuggle02";
+					Position = ( -320.0, 820.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 190.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "ManipulateMiddle";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation {
+							Context = "Idle";
+							Animation = "idle1";
+							Repeat = 3;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "smuggle03";
+					Position = ( -160.0, 720.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 140.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "CrouchFadeIn";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "reap_herbs1";
+							Repeat = 2;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "CrouchFadeOut";
+						},
+						G3SnapPointAnimation {
+							Context = "Idle";
+							Animation = "idle1";
+							Repeat = 3;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "smuggle04";
+					Position = ( -90.0, 610.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "CrouchFadeIn";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "reap_herbs1";
+							Repeat = 2;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "CrouchFadeOut";
+						},
+						G3SnapPointAnimation {
+							Context = "Idle";
+							Animation = "idle1";
+							Repeat = 3;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "smuggle05";
+					Position = ( 270.0, 320.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 100.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "ManipulateMiddle";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation {
+							Context = "Idle";
+							Animation = "idle1";
+							Repeat = 3;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "smuggle06";
+					Position = ( -475.0, 505.0, 0.0 );
+					Rotation = ( 0.0, 0.0, -60.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "ManipulateMiddle";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation {
+							Context = "Idle";
+							Animation = "idle1";
+							Repeat = 3;
+						},
+					};
+				},
+			};
+		};
+	};
+	EditorName = "Arsenal";
+	EditorIcon = "media/UserInterface/Icons/BuildingImages/Other/Arsenal.png";
+	EditorCategory = 2;
+}

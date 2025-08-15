@@ -1,0 +1,10 @@
+sack_02 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "sack_02";
+	};
+	EditorName = "Sack02";
+	EditorIcon = "media/UserInterface/PropIcons/Sack02.png";
+	EditorCategory = 3;		
+}

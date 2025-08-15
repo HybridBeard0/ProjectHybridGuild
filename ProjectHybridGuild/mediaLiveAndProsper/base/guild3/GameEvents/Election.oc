@@ -1,0 +1,6 @@
+Election extends GameEventElection
+{
+	Title = "Office election";
+	Public = true;
+	Political = true;
+}

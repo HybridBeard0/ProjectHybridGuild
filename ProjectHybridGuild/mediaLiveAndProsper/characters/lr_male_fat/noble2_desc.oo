@@ -1,0 +1,12 @@
+lr_male_fat/lr_male_fat_desc
+
+{
+	Visual = "noble2male_fat_game";
+
+	Poor = false;
+	MiddleClass = false;
+	Player = false;
+	TrotSpeed = 0.000;
+	AverageAge = 0.000;
+	CustomCollisionRadius = 0.000;
+}

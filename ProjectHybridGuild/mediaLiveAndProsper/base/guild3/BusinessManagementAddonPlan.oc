@@ -1,0 +1,26 @@
+BusinessManagementAddonPlan extends BusinessManagementAddonPlanContainer
+{
+    Plans = map
+    {
+        "Production" = array
+        {
+            "Productivity",
+            "AttractCrowd",
+            "MaxEmployees"
+        };
+
+        "Protection" = array
+        {
+            "BuildingSecurity",
+            "BucketWater"
+        };
+
+        "StorageFacility" = array
+        {
+            "Productivity",
+            "StorageSpace",
+            "MaxEmployees",
+            "StorageSlots"
+        };
+    };
+};

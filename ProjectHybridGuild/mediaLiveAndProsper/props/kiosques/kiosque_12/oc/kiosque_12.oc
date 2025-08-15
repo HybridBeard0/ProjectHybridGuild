@@ -1,0 +1,10 @@
+kiosque_12 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "kiosque12";
+	};
+	EditorName = "Kiosque12";
+	EditorIcon = "media/UserInterface/PropIcons/Kiosque12.png";
+	EditorCategory = 9;		
+}

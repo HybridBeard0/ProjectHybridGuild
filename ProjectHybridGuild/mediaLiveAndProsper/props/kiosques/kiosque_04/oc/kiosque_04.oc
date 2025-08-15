@@ -1,0 +1,26 @@
+kiosque_04 extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "kiosque_04";
+		
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc
+				{
+					Name = "employee00";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Animation = "talk1";
+						},
+					};
+				},
+			};
+		};
+	};
+	EditorName = "Kiosque04";
+	EditorIcon = "media/UserInterface/PropIcons/Kiosque04.png";
+	EditorCategory = 9;		
+}

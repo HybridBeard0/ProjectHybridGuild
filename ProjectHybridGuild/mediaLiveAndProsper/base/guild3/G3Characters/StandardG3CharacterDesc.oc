@@ -1,0 +1,8 @@
+StandardG3CharacterDesc extends G3CharacterDesc
+{
+	WalkSpeed = 120.000;
+	RunSpeed = 180.000;
+	
+	LipsyncBaseAnim = "LipsyncBaseAnim";
+	LipsyncVisemesAnim = "LipsyncVisemesAnim";
+}

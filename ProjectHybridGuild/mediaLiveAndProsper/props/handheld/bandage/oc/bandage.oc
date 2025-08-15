@@ -1,0 +1,14 @@
+bandage extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "bandage";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+	EditorName = "Bandage";
+	EditorIcon = "media/UserInterface/Icons/Items/Bandage.png ";
+	EditorCategory = 3;		
+}

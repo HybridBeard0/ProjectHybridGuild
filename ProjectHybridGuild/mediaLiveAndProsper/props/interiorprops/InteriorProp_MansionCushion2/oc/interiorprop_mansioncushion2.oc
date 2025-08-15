@@ -1,0 +1,134 @@
+interiorprop_mansioncushion2 extends G3PropsInstance
+{
+	static var Description = G3PropDesc
+	{
+		Visual = "interiorprop_mansioncushion2";
+
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc
+				{
+					Name = "sit00";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Animation = "sit_idle1";
+							Context = "SitOnBench";
+						},
+						G3SnapPointAnimation {
+							Animation = "sit_idle1";
+							Context = "Family-Bored";
+						},
+						G3SnapPointAnimation {
+							Animation = "sit_idle1";
+							Context = "Family-Bored";
+						},
+						G3SnapPointAnimation {
+							Animation = "sit_idle1";
+							Context = "Family-Bored";
+						},
+						G3SnapPointAnimation {
+							Animation = "SitFadeIn";
+							Context = "Family-Studies";
+						},
+						G3SnapPointAnimation {
+							Animation = "SitWritingTable2";
+							Context = "Family-Studies";
+						},
+						G3SnapPointAnimation {
+							Animation = "SitWritingTable2";
+							Context = "Family-Studies";
+						},
+						G3SnapPointAnimation {
+							Animation = "SitWritingTable2";
+							Context = "Family-Studies";
+						},
+						G3SnapPointAnimation {
+							Animation = "SitFadeOut";
+							Context = "Family-Studies";
+						},
+						G3SnapPointAnimation {
+							Animation = "SitFadeIn";
+							Context = "Idle";
+						},
+						G3SnapPointAnimation {
+							Animation = "SitLookAround";
+							Context = "Idle";
+						},
+						G3SnapPointAnimation {
+							Animation = "SitAndStretch";
+							Context = "Idle";
+						},
+						G3SnapPointAnimation {
+							Animation = "SitAndYawn";
+							Context = "Idle";
+						},
+						G3SnapPointAnimation {
+							Animation = "SitFadeOut";
+							Context = "Idle";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "sit01";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Animation = "sit_idle1";
+							Context = "SitOnBench";
+						},
+						G3SnapPointAnimation {
+							Animation = "sit_idle1";
+							Context = "Family-Bored";
+						},
+						G3SnapPointAnimation {
+							Animation = "sit_idle1";
+							Context = "Family-Bored";
+						},
+						G3SnapPointAnimation {
+							Animation = "sit_idle1";
+							Context = "Family-Bored";
+						},
+						G3SnapPointAnimation {
+							Animation = "SitFadeIn";
+							Context = "Idle";
+						},
+						G3SnapPointAnimation {
+							Animation = "SitLookAround";
+							Context = "Idle";
+						},
+						G3SnapPointAnimation {
+							Animation = "SitAndStretch";
+							Context = "Idle";
+						},
+						G3SnapPointAnimation {
+							Animation = "SitAndYawn";
+							Context = "Idle";
+						},
+						G3SnapPointAnimation {
+							Animation = "SitFadeOut";
+							Context = "Idle";
+						},
+					};
+				},
+			};
+		};
+	
+		Interaction = G3ActorInteraction {
+			Name = "$props.name.Bench";
+			TooltipText = "$action.Sit";
+			TooltipIcon = "SitOnBench";
+			ContextAction = "SitOnBench";
+			ActionFailureMessage = "SitInteractionError";
+		};
+	};
+	
+	Interactable = true;
+	
+	EditorName = "InteriorProp MansionCushion2";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

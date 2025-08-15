@@ -1,0 +1,10 @@
+cannon extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "cannon";
+	};
+	EditorName = "Cannon";
+	EditorIcon = "media/UserInterface/PropIcons/cartLD.png";
+	EditorCategory = 3;		
+}

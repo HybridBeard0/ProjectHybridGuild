@@ -1,0 +1,10 @@
+marienburgtowerb extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "marienburgtowerb";
+	};
+	EditorName = "marienburgtowerb";
+	EditorIcon = "media/UserInterface/PropIcons/Kiosque01.png";
+	EditorCategory = 5;		
+}

@@ -1,0 +1,100 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1490282383;
+			Name = "Idle";
+			AnimationName = "Idle";
+			Looping = true;
+			Triggers = array
+			(
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "dummy_candle_001";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "dummy_candle_002";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "dummy_candle_003";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Torch_01";
+					RefNodeOverride = "dummy_torch_001";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Torch_01";
+					RefNodeOverride = "dummy_torch_002";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Torch_01";
+					RefNodeOverride = "dummy_torch_003";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Torch_01";
+					RefNodeOverride = "dummy_torch_004";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Torch_01";
+					RefNodeOverride = "dummy_torch_005";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Pointlight_01";
+					RefNodeOverride = "Dummy001";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Pointlight_01";
+					RefNodeOverride = "Dummy002";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Pointlight_01";
+					RefNodeOverride = "Dummy003";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Pointlight_01";
+					RefNodeOverride = "Dummy004";
+				},
+			);
+		},
+	);
+}

@@ -1,0 +1,33 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1495222952;
+			Name = "Idle";
+			AnimationName = "Idle";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 1076;
+					FadeOut = 1000.0;
+				},
+				EffectTrigger
+				{
+					NoLoop = true;
+					EffectName = "Fountain";
+					RefNodeOverride = "Snap_Particle1";
+				},
+				EffectTrigger
+				{
+					NoLoop = true;
+					EffectName = "Fountain";
+					RefNodeOverride = "Snap_Particle2";
+				},
+			);
+		},
+	);
+}

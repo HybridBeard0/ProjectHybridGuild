@@ -1,0 +1,69 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1495561920;
+			Name = "Idle";
+			AnimationName = "Idle";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 1076;
+					FadeOut = 1000.0;
+				},
+				EffectTrigger
+				{
+					NoLoop = true;
+					EffectName = "Fountain3";
+					RefNodeOverride = "SnapParticle01";
+				},
+				EffectTrigger
+				{
+					NoLoop = true;
+					EffectName = "Fountain3";
+					RefNodeOverride = "SnapParticle02";
+				},
+				EffectTrigger
+				{
+					NoLoop = true;
+					EffectName = "Fountain3";
+					RefNodeOverride = "SnapParticle03";
+				},
+				EffectTrigger
+				{
+					NoLoop = true;
+					EffectName = "Fountain3";
+					RefNodeOverride = "SnapParticle04";
+				},
+				EffectTrigger
+				{
+					NoLoop = true;
+					EffectName = "Fountain3";
+					RefNodeOverride = "SnapParticle05";
+				},
+				EffectTrigger
+				{
+					NoLoop = true;
+					EffectName = "Fountain3";
+					RefNodeOverride = "SnapParticle06";
+				},
+				EffectTrigger
+				{
+					NoLoop = true;
+					EffectName = "Fountain3";
+					RefNodeOverride = "SnapParticle07";
+				},
+				EffectTrigger
+				{
+					NoLoop = true;
+					EffectName = "Fountain3";
+					RefNodeOverride = "SnapParticle08";
+				},
+			);
+		},
+	);
+}

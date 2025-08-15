@@ -1,0 +1,4 @@
+Effect_Compliment extends G3PropsInstance
+{
+	static var Description = #Effect_Compliment/Effect_Compliment_desc;
+};

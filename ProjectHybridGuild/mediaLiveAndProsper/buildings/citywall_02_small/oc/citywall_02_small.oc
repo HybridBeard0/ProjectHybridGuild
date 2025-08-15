@@ -1,0 +1,12 @@
+citywall_02_small extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "citywall_02_small";
+	};
+	EditorName = "citywall_02_small";
+	EditorIcon = "media/UserInterface/BusinessIcons/Other/citywall_02_small.png";
+	EditorCategory = 2;
+	Destructible = false;
+	BlocksBuildings = true;
+}

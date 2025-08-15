@@ -1,0 +1,12 @@
+holstentor extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "holstentor";
+	};
+	EditorName = "Holstentor";
+	EditorIcon = "media/UserInterface/BusinessIcons/Other/Holstentor.png";
+	EditorCategory = 2;	
+	Destructible = false;
+	BlocksBuildings = true;
+}

@@ -1,0 +1,11 @@
+G3ActorDesc
+{
+	Visual = "PotGrenade";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#PotGrenade/list_action_animations,
+		);
+	};
+}

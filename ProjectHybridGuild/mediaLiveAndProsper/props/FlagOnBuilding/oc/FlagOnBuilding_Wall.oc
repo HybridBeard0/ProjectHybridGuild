@@ -1,0 +1,16 @@
+FlagOnBuilding_Wall extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "flagonbuilding_wall";
+		AnimationArray = AnimationListArray
+		{
+			AnimationLists = array
+			(
+				#FlagOnBuilding/animation_wall,
+			);
+		};
+	};
+	
+	EditorCategory = 3; // EDITORCATEGORY_PROP. This ensures the object is not pickable
+}

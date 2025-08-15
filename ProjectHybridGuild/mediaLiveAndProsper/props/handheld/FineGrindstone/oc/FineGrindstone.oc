@@ -1,0 +1,13 @@
+FineGrindstone extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "FineGrindstone";
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+	EditorName = "FineGrindstone";
+	EditorIcon = "media/UserInterface/Icons/FineGrindstone.png";
+	EditorCategory = 3;		
+}

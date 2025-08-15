@@ -1,0 +1,39 @@
+BaseClient extends NewGameData
+{
+    PlayerNetworkName = "Client Player";
+    
+    Character = sysNewGameCharacter
+    {
+        FirstName = "Rainbow";
+        LastName = "Unicorn";
+        IsMale = false;
+        Crest = 7;
+        Model = 1001;
+        ModelTexture = 0;
+        Portrait = 1;
+		Religion = "Catholic"; // Catholic, Protestant or NoReligion see ReligionSettings.oc
+		
+		HeadTextureNameDiff = "FemaleHead01_Lod01_diff";
+		HeadTextureNameNorm = "FemaleHead01_Lod01_nrm";
+		HeadTextureNameMask = "FemaleHead01_Lod01_MASK";
+		BodyTextureNameDiff = "Citizen1Female_DIFF";
+		BodyTextureNameNorm = "Citizen1Female_norm";
+		BodyTextureNameMask = "Citizen1Female_mask";
+		
+	// Remove whole StartupSkill block to get a random skill otherwise use the same structure like in StartupSkills map in GameplayDefault.oc
+	StartupSkill = StartupSkill
+	{ 
+            SkillName = "Handicraft"; 
+	    LocalizationKey = "$Handicraft"; 
+	    Level = 0; 
+	    BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose"};
+        };
+    };
+
+
+    // 5 = EMultiPlayerJoin
+    GameType = 5;
+    
+    // Server name, has to match BaseServer.oc HostServerName
+    HostServerName = "SteKos Server";
+}

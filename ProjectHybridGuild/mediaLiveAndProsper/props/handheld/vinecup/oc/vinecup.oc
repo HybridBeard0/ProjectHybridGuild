@@ -1,0 +1,14 @@
+vinecup extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "vinecup";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+	EditorName = "vinecup";
+	EditorIcon = "media/UserInterface/PropIcons/vinecup.png";
+	EditorCategory = 3;		
+}

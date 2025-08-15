@@ -1,0 +1,4 @@
+DialogueSuccessType
+{
+	Type = "Success";
+}

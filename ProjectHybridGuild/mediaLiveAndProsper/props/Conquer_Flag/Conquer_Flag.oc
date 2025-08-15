@@ -1,0 +1,16 @@
+Conquer_Flag extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "conquer_flag";
+		AnimationArray = AnimationListArray
+		{
+			AnimationLists = array
+			(
+				#Conquer_Flag/list_idles_animations,
+			);
+		};
+	};
+	
+	EditorCategory = 3; // EDITORCATEGORY_PROP. This ensures the object is not pickable (its bounding box for picking is also very broken due to a scale in the 'Flag' skeleton node that is used for the bounding box)
+}

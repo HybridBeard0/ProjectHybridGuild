@@ -1,0 +1,9 @@
+deer extends G3Animal
+{
+	static var Description = #deer/deer_desc;
+	Behaviour = "Horse";
+	EditorName = "Deer";
+	
+	MaxRoamingDistance = 3000;
+	RoamingDivFactor = 2.5;
+};

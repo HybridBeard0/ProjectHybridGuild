@@ -1,0 +1,2810 @@
+AIObjectives extends AIObjectivesContainer
+{
+//Objective Groups:
+//MakeBabyGroup
+//GetOfficeGroup    
+//LiaisonGroup
+
+//MakeMoneyGroup
+//MakePrestigeGroup
+//IncreaseRankGroup
+//IncreaseSecurityGroup
+//IncreaseRelationshipGroup
+//DecreaseRelationshipGroup
+//
+//
+	Objectives = array
+	{
+	//family life actions
+	
+		ExecuteActionObjective //Family
+		{
+			ID = "FamilyLife";
+			Group = "FamilyLifeGroup";
+			Duration = 0.5; // rounds
+			Amount = 30.0;
+			ImportanceWeight = 1;
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0.0, 0.0, 0.0 };
+			};
+			
+			ActionWeights = map
+			{
+				//idle
+						"GoHome" = 0.9,
+						//boost
+						"TrainCharisma" = 0.1,
+						"TrainPerception" = 0.1,
+						"TrainIntelligence" = 0.1,
+						"TrainDexterity" = 0.1,
+						"TrainStrength" = 0.1,
+						//family life
+						"Family-Cooking" = 0.2,
+						"Family-Eating" = 0.2,
+						"Family-CleanHouse" = 0.2,
+						"Family-ChildPlay" = 0.2,
+						"Family-Bored" = 0.2,
+						"Family-Studies" = 0.2,
+						"Family-PokeAround" = 0.2,
+						"Family-Sleep" = 0.2,
+						"Family-TakeBathHome" = 0.1,
+						"Family-Feast" = 0.1,
+				
+			};
+		},
+
+	//Family&Romance
+	
+		ExpandFamilyMultistepObjective
+		{
+			ID = "ExpandFamilyMultistep";
+			
+			Group = "MakeBabyGroup";
+			Duration = 0.25; // rounds
+			ActiveExecutorsLimit = 0.3; // Limits the number of family members working on this objective. It takes values [0.0 - 1.0] that represent percentage [0% - 100%]
+			
+			ImportanceWeight = 10.0;
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0, 0, 0 };
+			};
+			
+			ObjectiveGoal = "ExpandFamilySuccessionGetChild";
+			
+			SubObjectives = array
+			{
+				// This objective does not provide any actions to execute. Its only purpose is to detect completion of the final goal.
+				GetChildOrPregnantObjective
+				{
+					ID = "ExpandFamilySuccessionGetChild";
+					Amount = 1;
+				},
+				
+				ExpandFamilyActionObjective
+				{
+					ID = "ExpandFamilySuccessionBuyOrphan";
+						
+					Amount = 1;
+					ActiveCondition = "ObjectiveActivePlayedYears > 2.0 && !hasTag.AtHome";
+							
+					ActionWeights = map
+					{
+						"DoBuyOrphan" = 1.0,
+					};
+				},
+
+				ExpandFamilyActionObjective
+				{
+					ID = "ExpandFamilySuccessionMakeHoneymoonChild";
+						
+					Amount = 1;
+					ActiveCondition = "CharacterHasASpouse && !hasTag.AtHome";
+							
+					ActionWeights = map
+					{
+						"ProduceOffspring" = 1.0,
+					};
+				},
+				
+				IncreaseAffectionObjective
+				{
+					ID = "ExpandFamilyIncreaseAffection";
+					
+					Amount = 99999999; // This sub-objective should never complete. Instead, the ActiveCondition shall decide when this sub-objective becomes active
+					ActiveCondition = "!CharacterHasASpouse && !CharacterHasWeddableConcubine && (IsInAnyRomance || IsInAnyLiaison) && MaxRomanticRelationshipScore < 80.0 && !hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						//use helpful object
+						"GiveFlowers" = 0.9,
+						"UsePoem" = 0.9,
+						"UseWashCloth" = 0.9,
+						"DrinkRoseWater" = 0.9,
+						"UseDrFaustusElixir" = 0.01,
+						"UsePerfume" = 0.25,
+						"PlayPipe" = 0.25,
+						"TakeBathHome" = 0.25,
+						"GiveCreamPie" = 0.25,
+						//do romantic things
+						"CourtingSomeone" = 0.9,
+						"SweetTalk" = 0.2,
+						"KissSpouse" = 0.2,
+						"DanceWithSpouse" = 0.2,
+						"KissCheek" = 0.1,
+					};
+				},
+				
+				ExecuteActionObjective
+				{
+					ID = "ExpandFamilyPropose";
+					
+					Amount = 99999999; // This sub-objective should never complete. Instead, the ActiveCondition shall decide when this sub-objective becomes active
+					
+					ActiveCondition = "!CharacterHasASpouse && !CharacterHasWeddableConcubine && (IsInAnyRomance || IsInAnyLiaison) && MaxRomanticRelationshipScore >= 80.0 && !hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						"ProposeMarriage" = 1.0,
+					};
+				},
+
+				ExecuteActionObjective
+				{
+					ID = "ExpandFamilyMarry";
+					
+					Amount = 99999999; // This sub-objective should never complete. Instead, the ActiveCondition shall decide when this sub-objective becomes active
+					
+					ActiveCondition = "!CharacterHasASpouse && CharacterHasWeddableConcubine && MaxRomanticRelationshipScore >= 80.0 && !hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						"StartWedding" = 1.0,
+					};
+				},
+
+				ExecuteActionObjective
+				{
+					ID = "ExpandFamilyStartRomance";
+					
+					Amount = 99999999; // This sub-objective should never complete. Instead, the ActiveCondition shall decide when this sub-objective becomes active
+					ActiveCondition = "!CharacterHasASpouse && !CharacterIsEngaged && !hasTag.AtHome";
+					
+					ActiveExecutorsLimit = 0.9; // Limits the number of family members working on this objective. It takes values [0.0 - 1.0] that represent percentage [0% - 100%]
+					
+					ActionWeights = map
+					{
+						"StartRomance" = 1.0;
+					};
+				},
+			};
+		};
+		
+	// Standard Objectives
+		
+		IncreaseMoneyObjective //MakeMoneyLow
+		{
+			ID = "MakeMoneyLow";
+			Group = "MakeMoneyGroup";
+			Duration = 0.5; // rounds
+			Amount = 100.0;
+			Percentage = 10;
+			ImportanceWeight = 0;
+			ActiveExecutorsLimit = 0.3;
+			
+			ActiveCondition = "!hasTag.AtHome";
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { -0.1, -0.1, 0 };
+			};
+			
+			ActionWeights = map
+			{
+				//profession actions 
+				"GoHunting" = 0.9,
+				"GoFishing" = 0.9,
+				"GoToMarketToSellAll" = 1.0,
+				"MakeAndSellProduct" = 0.9,
+				"Begging" = 0.35,
+				"AIBidAction" = 1.0,
+				"PickPocket" = 0.5,
+				"PublicEntertainment" = 0.75,
+				"PublicEntertainmentOnStage" = 0.5,
+				"Palmistry" = 0.5,
+				"PlayMusic" = 0.75,
+				"PlayMusicOnStage" = 0.25,
+				"StageConcert" = 0.75,
+				"WinBelievers" = 0.75,
+				"WinBelieversCity" = 0.75,
+				"GiveSermon" = 0.75,
+				"GiveSermonCity" = 0.75,
+				"ChurchService" = 0.75,
+				"ChurchServiceCity" = 0.75,
+				"MakeCatholic" = 0.75,
+				"MakeProtestant" = 0.75,
+				"MakeSecular" = 0.75,
+				"Palmistry" = 0.5,
+				"Smuggle" = 0.5,
+				"Contraband" = 0.5,
+				"LureIntoRumDen" = 0.5,
+				"SmuggleRum" = 0.5,
+				//family actions
+				"GiveAFamilyFeast" = 0.05,
+				"TakeBathHome" = 0.25,
+				"OverseeWorkers" = 0.25,
+				"WhipTransporters" = 0.15,
+				"PromoteYourBusinesses" = 0.25,
+				//child actions
+				"DistractGuard" = 0.05,
+				"StackBoxes" = 1.0,
+				//NPC actions
+				"WaveHello" = 0.25,
+				"NPCSellAllAtMarketpace" = 0.5,
+				"NPCWaitShort" = 0.25,
+				"NPCDrinkShort" = 0.25,
+				"NPCEatBreadShort" = 0.25,
+				"PrayForLuck" = 0.25,
+				"RepairBuilding" = 0.5,
+				"SitOnBench" = 0.2,
+				"ChatWithMarketVendor" = 0.2,
+				"MournDeceasedRelative" = 0.1,
+				//office actions
+				"AuditBooks" = 0.01,
+				"PromoteBusiness" = 0.05,
+				"RunForOffice" = 0.75,
+				"AmbushAndAttack" = 0.75,
+				"StealHouse" = 0.85,
+				"SurveyCrimes" = 0.85,
+				"StealFromCharacter" = 0.55,
+				"CollectProtectionMoney" = 0.05,
+				"OpenPurse" = 0.1,
+				//artifacts
+				"ApplyMuralPainting" = 0.25,
+			};
+		},
+		
+		IncreaseMoneyObjective //MakeMoneyMid
+		{
+			ID = "MakeMoneyMed";
+			Group = "MakeMoneyGroup";
+			Duration = 0.65; // rounds
+			Amount = 500.0;
+			Percentage = 15;
+			ImportanceWeight = 0;
+			ActiveExecutorsLimit = 0.3;
+			
+			ActiveCondition = "!hasTag.AtHome";
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { -0.1, -0.1, 0 };
+			};
+			ActionWeights = map
+			{
+				//profession actions
+				"GoHunting" = 0.9,
+				"GoFishing" = 0.9,
+				"GoToMarketToSellAll" = 1.0,
+				"AIBidAction" = 1.0,
+				"RepairBuilding" = 0.9,
+				"MakeAndSellProduct" = 0.9,
+				"MakeOfferOnBuilding" = 0.15,
+				"PickPocket" = 0.5,
+				"PublicEntertainment" = 0.5,
+				"PublicEntertainmentOnStage" = 0.5,
+				"Palmistry" = 0.5,
+				"Begging" = 0.15,
+				"WinBelievers" = 0.5,
+				"WinBelieversCity" = 0.5,
+				"GiveSermon" = 0.5,
+				"GiveSermonCity" = 0.5,
+				"PlunderGraves" = 0.3,
+				"OpenPurse" = 0.1,
+				"ChurchService" = 0.5,
+				"ChurchServiceCity" = 0.5,
+				"MakeCatholic" = 0.5,
+				"MakeProtestant" = 0.5,
+				"MakeSecular" = 0.5,
+				"Smuggle" = 0.5,
+				"Contraband" = 0.5,
+				"LureIntoRumDen" = 0.5,
+				"SmuggleRum" = 0.5,
+				"PlayMusic" = 0.5,
+				"PlayMusicOnStage" = 0.25,
+				"StageConcert" = 0.5,
+				//family actions
+				"OverseeWorkers" = 0.9,
+				"WhipTransporters" = 0.9,
+				"PromoteYourBusinesses" = 0.25,
+				"TakeBathHome" = 0.25,
+				"GiveAFamilyFeast" = 0.05,
+				"InnDiceGame" = 0.1,
+				"InnDiceGameRisky" = 0.05,
+				"PlayDiceGame" = 0.025,
+				"GiveAFeast" = 0.05,
+				//child actions
+				"DistractGuard" = 0.05,
+				"StackBoxes" = 0.9,
+				//political actions
+				"PowerSovereignLawmaker" = 0.45,
+				"PowerLawmaker" = 0.45,
+				"AuditBooks" = 0.05,
+				"PromoteBusiness" = 0.05,
+				"RunForOffice" = 0.75,
+				"PlantSibling" = 0.25,
+				//rogue actions
+				"AmbushAndAttack" = 0.5,
+				"StealHouse" = 0.95,
+				"SurveyCrimes" = 0.95,
+				"StealFromCharacter" = 0.75,
+				"MakeEvocation" = 0.5,
+				"CollectProtectionMoney" = 0.25,
+				//artifacts
+				"ApplyMuralPainting" = 0.25, 
+				//idle action
+				"WaveHello" = 0.25,
+				"NPCSellAllAtMarketpace" = 0.5,
+				"NPCWaitShort" = 0.25,
+				"NPCDrinkShort" = 0.25,
+				"NPCEatBreadShort" = 0.25,
+				"PrayForLuck" = 0.25,
+				"SitOnBench" = 0.2,
+				"ChatWithMarketVendor" = 0.2,
+				"MournDeceasedRelative" = 0.1,
+			};
+		},
+		
+		IncreaseMoneyObjective //MakeMoneyHigh
+		{
+			ID = "MakeMoneyHigh";
+			Group = "MakeMoneyGroup";
+			Duration = 1.0; // rounds
+			Amount = 2000.0;
+			Percentage = 25;
+			ImportanceWeight = 0;
+			
+			ActiveCondition = "!hasTag.AtHome";
+			
+			ActiveExecutorsLimit = 0.3;
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { -0.1, -0.1, 0 };
+			};
+			ActionWeights = map
+			{
+				//profession actions
+				"GoHunting" = 0.9,
+				"GoFishing" = 0.9,
+				"PickPocket" = 0.25,
+				"PublicEntertainment" = 0.25,
+				"PublicEntertainmentOnStage" = 0.5,
+				"WinBelievers" = 0.25,
+				"WinBelieversCity" = 0.25,
+				"GiveSermon" = 0.25,
+				"GiveSermonCity" = 0.25,
+				"ChurchService" = 0.25,
+				"ChurchServiceCity" = 0.25,
+				"MakeCatholic" = 0.25,
+				"MakeProtestant" = 0.25,
+				"MakeSecular" = 0.25,
+				"Smuggle" = 0.25,
+				"Contraband" = 0.25,
+				"LureIntoRumDen" = 0.25,
+				"SmuggleRum" = 0.25,
+				"PlayMusic" = 0.25,
+				"PlayMusicOnStage" = 0.25,
+				"StageConcert" = 0.25,
+				"PlunderGraves" = 0.5,
+				"InnDiceGame" = 0.1,
+				"InnDiceGameRisky" = 0.05,
+				"GiveAFeast" = 0.05,
+				"GoToMarketToSellAll" = 1.0,
+				"RepairBuilding" = 0.9,
+				"MakeAndSellProduct" = 0.9,
+				"MakeOfferOnBuilding" = 0.25,
+				"AIBidAction" = 1.0,
+				//family actions
+				"TakeBathHome" = 0.25,
+				"OverseeWorkers" = 0.5,
+				"WhipTransporters" = 0.5,
+				"PromoteYourBusinesses" = 0.5,
+				"MakeEvocation" = 0.75,
+				"OpenPurse" = 0.1,
+				"GiveAFamilyFeast" = 0.2,
+				//child actions
+				"DistractGuard" = 0.05,
+				"StackBoxes" = 1.0,
+				//political actions
+				"PowerSovereignLawmaker" = 0.65,
+				"PowerLawmaker" = 0.65,
+				"AuditBooks" = 0.1,
+				"PromoteBusiness" = 0.05,
+				"RunForOffice" = 0.75,
+				"PlantSibling" = 0.25,
+				//rogue actions
+				"AmbushAndAttack" = 0.25,
+				"StealHouse" = 0.25,
+				"SurveyCrimes" = 0.25,
+				"StealFromCharacter" = 0.25,
+				"CollectProtectionMoney" = 0.25,
+				//artifacts
+				"ApplyMuralPainting" = 0.25,
+				//idle actions
+				"WaveHello" = 0.1,
+				"NPCSellAllAtMarketpace" = 0.5,
+				"NPCWaitShort" = 0.25,
+				"NPCDrinkShort" = 0.25,
+				"NPCEatBreadShort" = 0.25,
+				"PrayForLuck" = 0.25,
+				"SitOnBench" = 0.2,
+				"ChatWithMarketVendor" = 0.2,
+				"MournDeceasedRelative" = 0.1,
+			};
+		},
+		
+		MultiStepObjective //IncreasePrestigeMultistepLOW
+		{
+			ID = "IncreasePrestigeMultistepLOW";
+			
+			Group = "MakePrestigeGroup";
+			
+			Duration = 0.25; // rounds
+			ImportanceWeight = 0;
+			ActiveExecutorsLimit = 0.3;
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0, 0.01, -0.2 };
+			};
+			
+			ObjectiveGoal = "IncreasePrestigeLowActions";
+			
+			SubObjectives = array
+			{
+				ExecuteActionObjective //IncreasePrestigeLowArtifact
+				{
+					ID = "IncreasePrestigeLowArtifact";
+					Amount = 2;
+					
+					ActiveCondition = "!hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						//artifacts
+						"DrinkJuice" = 0.9,
+						"DrinkBrewerBeer" = 0.2,
+						"DrinkMead" = 0.01,
+						"DrinkCider" = 0.01,
+						"DrinkSmallBeer" = 0.01,
+						//"DrinkStrongBeer" = 0.01,
+						"DrinkWheatBeer" = 0.01,
+						"DrinkMead" = 0.01,	
+					};
+				},
+				IncreasePrestigeObjective //IncreasePrestigeLowActions
+				{
+					ID = "IncreasePrestigeLowActions";
+					Amount = 20;
+					
+					ActiveCondition = "!hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						//family actions
+						"BoastAboutYourExploits" = 1.0,
+						"BoastAboutYourExploitsOnStage" = 1.0,
+						"PutOutFire" = 0.15,
+						//diplomacy actions
+						"InitiateIntrigue" = 0.25,
+						"LetterFromInquisition" = 0.25,
+						"TradeMission" = 0.15,
+						"Longshore" = 0.15,
+						"Longshore2" = 0.05,
+						"SendToSchool" = 0.15,
+						//rogue actions
+						"KidnapCharacter" = 0.15,  
+						"UseObligation" = 0.1,
+						//political actions
+						"GreaseTheWheels" = 0.05,
+						"BribeOfficeHolder" = 0.05,
+						"UseStatelyDispatch" = 0.05,
+						"BribeWithWine" = 0.01,
+						"RunForOffice" = 0.75,
+						"PlantSibling" = 0.25,	
+						//romance actions
+						"ManipulateLiaison" = 0.1,
+						"StartRomance" = 0.05,
+						"StartLiaison" = 0.1,
+						"UseConnections" = 0.15,	
+						//idle actions
+						"WaveHello" = 0.25,
+						"NPCSellAllAtMarketpace" = 0.25,
+						"NPCWaitShort" = 0.25,
+						"NPCDrinkShort" = 0.25,
+						"NPCEatBreadShort" = 0.25,
+						"PrayForLuck" = 0.25,	
+						"SitOnBench" = 0.2,
+						"ChatWithMarketVendor" = 0.2,
+						"MournDeceasedRelative" = 0.1,
+					};
+				},
+				
+				ExecuteActionObjective //Idle action objective
+				{
+					ID = "IdleActionObjective_Prestige1";
+					Amount = 20;
+					
+					ActionWeights = map
+					{
+						//idle
+						"GoHome" = 0.9,
+						//boost
+						"TrainCharisma" = 0.1,
+						"TrainPerception" = 0.1,
+						"TrainIntelligence" = 0.1,
+						"TrainDexterity" = 0.1,
+						"TrainStrength" = 0.1,
+						"TakeBathHome" = 0.1,
+						"KissSpouse" = 0.1,
+						"DanceWithSpouse" = 0.1,
+						//family life
+						"Family-Cooking" = 0.2,
+						"Family-Eating" = 0.2,
+						"Family-CleanHouse" = 0.2,
+						"Family-ChildPlay" = 0.2,
+						"Family-Bored" = 0.2,
+						"Family-Studies" = 0.2,
+						"Family-PokeAround" = 0.2,
+						"Family-Sleep" = 0.2,
+						"Family-TakeBathHome" = 0.1,
+						"Family-Feast" = 0.1,
+					};
+				},
+				
+			};
+		},
+		
+		MultiStepObjective //IncreasePrestigeMultistepMID
+		{
+			ID = "IncreasePrestigeMultistepMID";
+			
+			Group = "MakePrestigeGroup";
+			Duration = 0.5; // rounds
+			ImportanceWeight = 0;
+			ActiveExecutorsLimit = 0.3;
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0, 0.01, -0.2 };
+			};
+			
+			ObjectiveGoal = "IncreasePrestigeMidActions";
+			
+			SubObjectives = array
+			{
+				IncreasePrestigeObjective //IncreasePrestigeMidArtifact
+				{
+					ID = "IncreasePrestigeMidArtifact";
+					Amount = 2;
+					
+					ActiveCondition = "!hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						//artifacts
+						"DrinkJuice" = 0.9,
+						"DrinkBrewerBeer" = 0.9,
+						"DrinkMead" = 0.01,
+						"DrinkCider" = 0.01,
+						"DrinkSmallBeer" = 0.01,
+						//"DrinkStrongBeer" = 0.01,
+						"DrinkWheatBeer" = 0.01,
+						"DrinkMead" = 0.01,
+						
+					};
+				},
+				IncreasePrestigeObjective //IncreasePrestigeMidActions
+				{
+					ID = "IncreasePrestigeMidActions";
+					Amount = 100;
+					
+					ActiveCondition = "!hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						//family actions
+						"PrayForLuck" = 0.25,
+						"BoastAboutYourExploits" = 0.25,
+						"BoastAboutYourExploitsOnStage" = 0.25,
+						//religion actions
+						"DonateToChurch" = 0.3,
+						//romance actions
+						"UseConnections" = 0.25,
+						"ManipulateLiaison" = 0.35,
+						"StartRomance" = 0.05,
+						"StartLiaison" = 0.1,
+						"PutOutFire" = 0.15,
+						//diplomatic actions
+						"InitiateIntrigue" = 0.15,
+						"LetterFromInquisition" = 0.15,
+						"TradeMission" = 0.55,
+						"Longshore" = 0.55,
+						"Longshore2" = 0.25,
+						"SendToSchool" = 0.75,
+						"SendCourtierToKing" = 0.35,
+						"UseObligation" = 0.1,
+						//political actions
+						"GreaseTheWheels" = 0.5,
+						"BribeOfficeHolder" = 0.7,
+						"UseStatelyDispatch" = 0.7,
+						"BribeWithWine" = 0.1,
+						//"RunForOffice" = 0.75,
+						//"PlantSibling" = 0.25,
+						//aggressive actions
+						"KidnapCharacter" = 0.25,
+						//idle actions
+						"WaveHello" = 0.2,
+						"NPCSellAllAtMarketpace" = 0.25,
+						"NPCWaitShort" = 0.25,
+						"NPCDrinkShort" = 0.25,
+						"NPCEatBreadShort" = 0.25,	
+						"SitOnBench" = 0.2,
+						"ChatWithMarketVendor" = 0.2,
+						"MournDeceasedRelative" = 0.1,	
+					};
+				},
+								
+				ExecuteActionObjective //Idle action objective
+				{
+					ID = "IdleActionObjectivePrestige_1";
+					Amount = 20;
+					
+					ActionWeights = map
+					{
+						//idle
+						"GoHome" = 0.9,
+						//boost
+						"TrainCharisma" = 0.1,
+						"TrainPerception" = 0.1,
+						"TrainIntelligence" = 0.1,
+						"TrainDexterity" = 0.1,
+						"TrainStrength" = 0.1,
+						"TakeBathHome" = 0.1,
+						"KissSpouse" = 0.1,
+						"DanceWithSpouse" = 0.1,
+						//family life
+						"Family-Cooking" = 0.2,
+						"Family-Eating" = 0.2,
+						"Family-CleanHouse" = 0.2,
+						"Family-ChildPlay" = 0.2,
+						"Family-Bored" = 0.2,
+						"Family-Studies" = 0.2,
+						"Family-PokeAround" = 0.2,
+						"Family-Sleep" = 0.2,
+						"Family-TakeBathHome" = 0.1,
+						"Family-Feast" = 0.1,
+					};
+				},
+				
+			};
+		};
+		
+		MultiStepObjective //IncreasePrestigeMultistepHIGH
+		{
+			ID = "IncreasePrestigeMultistepHIGH";
+			
+			Group = "MakePrestigeGroup";
+			
+			Duration = 0.75; // rounds
+			ImportanceWeight = 0;
+			ActiveExecutorsLimit = 0.5;
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0, 0.01, -0.2 };
+			};
+			
+			ObjectiveGoal = "IncreasePrestigeHighActions";
+			
+			SubObjectives = array
+			{
+				IncreasePrestigeObjective //IncreasePrestigeHighArtifact
+				{
+					ID = "IncreasePrestigeHighArtifact";
+					Amount = 2;
+					
+					ActiveCondition = "!hasTag.AtHome";
+					
+					ActionWeights = map
+					{	
+						//artifacts
+						"DrinkJuice" = 0.9,
+						"DrinkBrewerBeer" = 0.9,
+						"DrinkMead" = 0.01,
+						"DrinkCider" = 0.01,
+						"DrinkSmallBeer" = 0.01,
+						//"DrinkStrongBeer" = 0.01,
+						"DrinkWheatBeer" = 0.01,
+						"DrinkMead" = 0.01,
+					};
+				},
+				IncreasePrestigeObjective //IncreasePrestigeHighActions
+				{
+					ID = "IncreasePrestigeHighActions";
+					Amount = 300;
+					
+					ActiveCondition = "!hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						//family actions
+						"BoastAboutYourExploits" = 0.05,
+						"BoastAboutYourExploitsOnStage" = 0.2,
+						//diplomacy actions
+						"TradeMission" = 0.35,
+						"Longshore" = 0.35,
+						"Longshore2" = 0.75,
+						"SendToSchool" = 0.25,
+						"SendCourtierToKing" = 0.4,
+						//religion actions
+						"DonateToChurch" = 0.1,
+						"UseObligation" = 0.1,
+						"InitiateIntrigue" = 0.15,
+						"LetterFromInquisition" = 0.15,
+						"HoldPublicPrayer" = 0.15,	
+						//political actions
+						"GreaseTheWheels" = 0.75,
+						"BribeOfficeHolder" = 0.5,
+						"UseStatelyDispatch" = 0.5,
+						"BribeWithWine" = 0.1,
+						//"RunForOffice" = 0.75,
+						//"PlantSibling" = 0.25,
+						//romance actions
+						"UseConnections" = 0.25,
+						"StartRomance" = 0.05,
+						"StartLiaison" = 0.1,
+						"ProposeMarriage" = 0.1,
+						"StartWedding" = 0.1,
+						//aggressive actions
+						"BreakBone" = 0.15,
+						"KidnapCharacter" = 0.55,
+						//"StartHenchmenConquerBuilding" = 0.2,
+						//idle actions					
+						"WaveHello" = 0.2,
+						"NPCSellAllAtMarketpace" = 0.1,
+						"NPCWaitShort" = 0.25,
+						"NPCDrinkShort" = 0.25,
+						"NPCEatBreadShort" = 0.25,
+						"PrayForLuck" = 0.25,
+						"SitOnBench" = 0.2,
+						"ChatWithMarketVendor" = 0.2,
+						"MournDeceasedRelative" = 0.1,
+					};
+				},
+								
+				ExecuteActionObjective //Idle action objective
+				{
+					ID = "IdleActionObjective_Prestige1";
+					Amount = 20;
+					
+					ActionWeights = map
+					{
+						//idle
+						"GoHome" = 0.9,
+						//boost
+						"TrainCharisma" = 0.1,
+						"TrainPerception" = 0.1,
+						"TrainIntelligence" = 0.1,
+						"TrainDexterity" = 0.1,
+						"TrainStrength" = 0.1,
+						"TakeBathHome" = 0.1,
+						"KissSpouse" = 0.1,
+						"DanceWithSpouse" = 0.1,
+						//family life
+						"Family-Cooking" = 0.2,
+						"Family-Eating" = 0.2,
+						"Family-CleanHouse" = 0.2,
+						"Family-ChildPlay" = 0.2,
+						"Family-Bored" = 0.2,
+						"Family-Studies" = 0.2,
+						"Family-PokeAround" = 0.2,
+						"Family-Sleep" = 0.2,
+						"Family-TakeBathHome" = 0.1,
+						"Family-Feast" = 0.1,
+					};
+				},
+				
+			};
+		};
+		
+		//TODO: Moral Alignment, general behavior (do not attack allies)
+		IncreaseRankObjective //IncreaseRankDefault
+		{
+			ID = "IncreaseRankDefault";
+			Group = "IncreaseRankGroup";
+			Amount = 0.1; // describes how many ranks we want to ascend
+			Duration = 2.0; // rounds
+			ImportanceWeight = 0; // only execute if unlocked by nobility title
+			ActiveExecutorsLimit = 0.3;
+					
+			ActiveCondition = "!hasTag.AtHome";
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0, 0, 0 };
+			};
+			ActionWeights = map
+			{
+				//item actions
+				"PlayPipe" = 0.05,
+				"GiveFlowers" = 0.15,
+				//family actions
+				"PrayForLuck" = 0.25,
+				"OverseeWorkers" = 0.05,
+				"WhipTransporters" = 0.05,
+				"BoastAboutYourExploits" = 0.05,
+				"BoastAboutYourExploitsOnStage" = 0.25,
+				"DonateToChurch" = 0.15,
+				"GivePublicBanquet" = 0.15,
+				//kid actions
+				"ThrowStones" = 0.05,
+				"DistractGuard" = 0.05,
+				"SpreadFleas" = 0.1,
+				"PlayOutside" = 0.2,
+				"StackBoxes" = 0.2,
+				"CatchRats" = 0.2,
+				"ApologizeToNeighbors" = 0.2,
+				"RaidTheKitchens" = 0.2,
+				"ReadStories" = 0.35,
+				//diplomatic actions
+				"GoCampaigning" = 0.2,
+				"TradeMission" = 0.05,
+				"Longshore" = 0.05,
+				"Longshore2" = 0.1,
+				"MakeAndSellProduct" = 0.25,
+				"SendToSchool" = 0.05,
+				"Denounce" = 0.09,
+				//political actions
+				"RunForOffice" = 0.35,
+				"PlantSibling" = 0.2,
+				"GreaseTheWheels" = 0.2,
+				"BribeOfficeHolder" = 0.2,
+				"UseStatelyDispatch" = 0.2,
+				"BribeWithWine" = 0.04,
+				"PowerCityGuards" = 0.15,
+				"PowerCityRecord" = 0.15,
+				"PowerHeretic" = 0.25,
+				"PowerPrisons" = 0.15,
+				"PowerSovereignLawmaker" = 0.25,
+				"PowerLawmaker" = 0.25,
+				"PublicShaming" = 0.25,
+				"AuditBooks" = 0.1,
+				"PromoteBusiness" = 0.1,
+				"MarkAsOutlaw" = 0.1,
+				"AwardKeyToCity" = 0.1,
+				"SendAwayGuard" = 0.1,
+				//"PowerExpropriate" = 0.25,
+				//"FakeEvidence" = 0.1,
+				//romance actions
+				"SweetTalk" = 0.25,
+				"KissCheek" = 0.25,
+				"AskFavor" = 0.3,
+				"UseConnections" = 0.3,
+				"ManipulateLiaison" = 0.35,
+				"StartWedding" = 0.5,
+				//diplomatic actions
+				"WriteTrashLetter" = 0.08,
+				"TearOffTrashLetter" = 0.15,
+				"MakeEvocation" = 0.05,
+				"SendCourtierToKing" = 0.15,
+				//business actions
+				"MakeOfferOnBuilding" = 0.15,
+				"AIBidAction" = 0.2,
+				"PickPocket" = 0.25,
+				"PublicEntertainment" = 0.5,
+				"Palmistry" = 0.5,
+				"PlayDiceGame" = 0.05,
+				"PlunderGraves" = 0.03,
+				"PlayMusic" = 0.05,
+				"StageConcert" = 0.05,
+				"WinBelievers" = 0.05,
+				"WinBelieversCity" = 0.05,
+				"GiveSermon" = 0.05,
+				"GiveSermonCity" = 0.05,
+				"ChurchService" = 0.05,
+				"ChurchServiceCity" = 0.05,
+				"MakeCatholic" = 0.05,
+				"MakeProtestant" = 0.05,
+				"MakeSecular" = 0.05,
+				"Smuggle" = 0.05,
+				"Contraband" = 0.05,
+				"LureIntoRumDen" = 0.05,
+				"SmuggleRum" = 0.05,
+				//idle actions		
+				"WaveHello" = 0.2,
+				"NPCSellAllAtMarketpace" = 0.1,
+				"NPCWaitShort" = 0.25,
+				"NPCDrinkShort" = 0.25,
+				"NPCEatBreadShort" = 0.25,
+				"SitOnBench" = 0.2,
+				"ChatWithMarketVendor" = 0.2,
+				"MournDeceasedRelative" = 0.1,
+				
+				//"ApplyBlackWidowPoison" = 0.05,
+				//"BuyBusiness" = 0.5,
+				//"PoisonNeighborhood" = 0.05,
+				//"StealthKillCharacter" = 0.15,
+				//"StartHenchmenConquerBuilding" = 0.2,
+				//"DestroyBuildingPolitical" = 0.25, SK: commented out in PoliticalOfficeActions.inc
+				// "PowerAudit" = 0.15, SK: commented out in PoliticalOfficeActions.inc
+				//"KillCharacter" = 0.037,
+				//"KidnapCharacter" = 0.45,
+				//"DoBuyOrphan" = 0.05,
+				//"BuildingLevelUp" = 0.9, // LORDS-9175, AIs no longer autonomously upgrade their buildings
+				//"Sabotage" = 0.1,
+				//"Vandalize" = 0.08,
+			};
+		},
+		
+		MultiStepObjective //IncreaseSecurityObjectiveLOW
+		{
+			ID = "IncreaseSecurityMultistepLOW";
+			
+			Group = "IncreaseSecurityGroup";
+			
+			ImportanceWeight = 0;
+			ActiveExecutorsLimit = 0.3;
+			Duration = 0.25; // rounds
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0, 0.01, 0.02 };
+			};
+			
+			ObjectiveGoal = "IncreaseSecurityLowActions";
+			
+			SubObjectives = array
+			{
+				IncreaseSecurityObjective //IncreaseSecurityLowArtifact
+				{
+					ID = "IncreaseSecurityLowArtifact";
+					Amount = 1;
+					
+					ActiveCondition = "!hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						//item action
+						"UseAntidote" = 0.05,
+						"UseWonderCure" = 0.05,
+						"UsePainKiller" = 0.05,
+						"ApplyBandage" = 0.1,
+						"DrinkHerbTea" = 0.01,
+						"DrinkRoseWater" = 0.01,
+						"DrinkJuice" = 0.2,
+						"ApplyPowderOfHygeia" = 0.25,
+						"UseDrunkardBrewBeer" = 0.05,
+						"UseEndurenceDrink" = 0.05,
+						"UseAlmanac" = 0.02,
+						"UseAboutTalents1" = 0.05,
+						"UseAboutTalents2" = 0.02,
+						"UseWashCloth" = 0.05,
+						"UsePoem" = 0.05,
+						"UsePestAway" = 0.2,
+						"UseStrongDoorLatch" = 0.2,
+						
+						//"ThrowBomb" = 0.05,
+						//"ThrowStinkBomb" = 0.05,
+						"ApplyToadExcrements" = 0.05,
+						"ApplyToadSlime" = 0.01,
+						"ApplyBlackWidowPoison" = 0.01,
+						"ApplyParalysisPoison" = 0.01,
+						"ApplyGhostlyFog" = 0.01,
+						"UseDartagnansFragrance" = 0.05,
+						
+						"ApplySlateTile" = 0.2,
+						"UseStrongDoorLatch" = 0.2,
+					};
+				},
+				IncreaseSecurityObjective //IncreaseSecurityLowActions
+				{
+					ID = "IncreaseSecurityLowActions";
+					Amount = 20;
+					
+					ActiveCondition = "!hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						//child action
+						"DistractGuard" = 0.25,
+						"ApologizeToNeighbors" = 0.25,
+						//general actions
+						"GoCampaigning" = 0.25,
+						"PutOutFire" = 0.35,
+						"Sleep" = 0.05,
+						"RepairBuilding" = 0.2,
+						//aggressive actions
+						"GuardBuilding" = 0.15,
+						"HireHenchmen" = 0.25,
+						//"GoSpyBuilding" = 0.05,
+						"GuardBuildingHenchmen" = 0.4;
+						"EscortCharacter" = 0.4,	
+						"FindEvidence" = 0.25,
+						//political actions
+						"PowerCityGuards" = 0.5,
+						"PowerCityRecord" = 0.35,
+						"PowerPrisons" = 0.8,
+						//"FakeEvidence" = 0.15,
+						"BribePrisonerRelease" = 5.0,
+						"KidnapCharacter" = 0.002,
+						//NPC actions
+						"WaveHello" = 0.2,
+						"NPCSellAllAtMarketpace" = 0.1,
+						"NPCWaitShort" = 0.25,
+						"NPCDrinkShort" = 0.25,
+						"NPCEatBreadShort" = 0.25,
+						"PrayForLuck" = 0.25,
+						"SitOnBench" = 0.2,
+						"ChatWithMarketVendor" = 0.2,
+						"MournDeceasedRelative" = 0.1,					
+					};
+				},
+								
+				ExecuteActionObjective //Idle action objective
+				{
+					ID = "IdleActionObjective_Security1";
+					Amount = 20;
+					
+					ActionWeights = map
+					{
+						//idle
+						"GoHome" = 0.9,
+						//boost
+						"TrainCharisma" = 0.1,
+						"TrainPerception" = 0.1,
+						"TrainIntelligence" = 0.1,
+						"TrainDexterity" = 0.1,
+						"TrainStrength" = 0.1,
+						"TakeBathHome" = 0.1,
+						"KissSpouse" = 0.1,
+						"DanceWithSpouse" = 0.1,
+						//family life
+						"Family-Cooking" = 0.2,
+						"Family-Eating" = 0.2,
+						"Family-CleanHouse" = 0.2,
+						"Family-ChildPlay" = 0.2,
+						"Family-Bored" = 0.2,
+						"Family-Studies" = 0.2,
+						"Family-PokeAround" = 0.2,
+						"Family-Sleep" = 0.2,
+						"Family-TakeBathHome" = 0.1,
+						"Family-Feast" = 0.1,
+					};
+				},
+				
+			};
+		};
+		
+		MultiStepObjective //IncreaseSecurityObjectiveMID
+		{
+			ID = "IncreaseSecurityMultistepMID";
+			
+			Group = "IncreaseSecurityGroup";
+			
+			ImportanceWeight = 0;
+			ActiveExecutorsLimit = 0.5;
+			Duration = 0.5; // rounds
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0, 0.02, 0.04 };
+			};
+
+			ObjectiveGoal = "IncreaseSecurityMidActions";
+			
+			SubObjectives = array
+			{
+				IncreaseSecurityObjective //IncreaseSecurityMidArtifact
+				{
+					ID = "IncreaseSecurityMidArtifact";
+					Amount = 2;
+					
+					ActiveCondition = "!hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						//item action
+						"UseAntidote" = 0.1,
+						"UseWonderCure" = 0.1,
+						"UsePainKiller" = 0.1,
+						"ApplyBandage" = 0.25,
+						"DrinkHerbTea" = 0.05,
+						"DrinkRoseWater" = 0.01,
+						"DrinkJuice" = 0.2,
+						"ApplyPowderOfHygeia" = 0.25,
+						"UseDrunkardBrewBeer" = 0.05,
+						"UseEndurenceDrink" = 0.05,
+						"UseAlmanac" = 0.03,
+						"UseAboutTalents1" = 0.05,
+						"UseAboutTalents2" = 0.05,
+						"UseWashCloth" = 0.05,
+						"UsePoem" = 0.05,
+						"UsePestAway" = 0.35,
+						
+						//"ThrowBomb" = 0.1,
+						//"ThrowStinkBomb" = 0.15,
+						"ApplyToadExcrements" = 0.15,
+						"ApplyToadSlime" = 0.05,
+						"ApplyBlackWidowPoison" = 0.05,
+						"ApplyParalysisPoison" = 0.05,
+						"ApplyGhostlyFog" = 0.05,
+						"UseDartagnansFragrance" = 0.05,
+						"ApplySlateTile" = 0.35,
+						"UseStrongDoorLatch" = 0.35,
+					};
+				},
+				IncreaseSecurityObjective //IncreaseSecurityMidActions
+				{
+					ID = "IncreaseSecurityMidActions";
+					Amount = 200;
+					
+					ActiveCondition = "!hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						//child actions
+						"DistractGuard" = 0.25,
+						"ApologizeToNeighbors" = 0.75,
+						//political actions
+						"GoCampaigning" = 0.75,
+						"PowerCityGuards" = 0.5,
+						"PowerCityRecord" = 0.35,
+						"PowerPrisons" = 0.8,
+						"PowerSovereignLawmaker" = 0.5,
+						"PowerLawmaker" = 0.5,
+						"BribePrisonerRelease" = 5.0,
+						//"FakeEvidence" = 0.2,
+						//general
+						"PutOutFire" = 0.5,
+						"Sleep" = 0.05,
+						"RepairBuilding" = 0.5,
+						"MakeOfferOnBuilding" = 0.3,
+						//aggressive actions
+						"GuardBuilding" = 0.35,
+						"EscortCharacter" = 0.75,
+						"AttackCharacter" = 0.00015,
+						"HireHenchmen" = 0.75,
+						"GuardBuildingHenchmen" = 0.5;
+						"FindEvidence" = 0.75,
+						"KidnapCharacter" = 0.001,	
+						"GoSpyBuilding" = 0.05,
+						//diplomatic actions
+						"SendToSchool" = 0.05,	
+						//NPC actions
+						"WaveHello" = 0.2,
+						"NPCSellAllAtMarketpace" = 0.1,
+						"NPCWaitShort" = 0.25,
+						"NPCDrinkShort" = 0.25,
+						"NPCEatBreadShort" = 0.25,
+						"PrayForLuck" = 0.25,	
+						"SitOnBench" = 0.2,
+						"ChatWithMarketVendor" = 0.2,
+						"MournDeceasedRelative" = 0.1,				
+					};
+				},
+								
+				ExecuteActionObjective //Idle action objective
+				{
+					ID = "IdleActionObjective_Security1";
+					Amount = 20;
+					
+					ActionWeights = map
+					{
+						//idle
+						"GoHome" = 0.9,
+						//boost
+						"TrainCharisma" = 0.1,
+						"TrainPerception" = 0.1,
+						"TrainIntelligence" = 0.1,
+						"TrainDexterity" = 0.1,
+						"TrainStrength" = 0.1,
+						"TakeBathHome" = 0.1,
+						"KissSpouse" = 0.1,
+						"DanceWithSpouse" = 0.1,
+						//family life
+						"Family-Cooking" = 0.2,
+						"Family-Eating" = 0.2,
+						"Family-CleanHouse" = 0.2,
+						"Family-ChildPlay" = 0.2,
+						"Family-Bored" = 0.2,
+						"Family-Studies" = 0.2,
+						"Family-PokeAround" = 0.2,
+						"Family-Sleep" = 0.2,
+						"Family-TakeBathHome" = 0.1,
+						"Family-Feast" = 0.1,
+					};
+				},
+				
+			};
+		};
+		
+		MultiStepObjective //IncreaseSecurityObjectiveHIGH
+		{
+			ID = "IncreaseSecurityMultistepHIGH";
+			
+			Group = "IncreaseSecurityGroup";
+			
+			ImportanceWeight = 0;
+			ActiveExecutorsLimit = 0.8;
+			Duration = 0.75; // rounds
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0, 0.04, 0.08 };
+			};
+
+			ObjectiveGoal = "IncreaseSecurityHighActions";
+			
+			SubObjectives = array
+			{
+				IncreaseSecurityObjective //IncreaseSecurityHighArtifact
+				{
+					ID = "IncreaseSecurityHighArtifact";
+					Amount = 2;
+					
+					ActiveCondition = "!hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						//item action
+						"UseAntidote" = 0.15,
+						"UseWonderCure" = 0.15,
+						"UsePainKiller" = 0.15,
+						"ApplyBandage" = 0.1,
+						"DrinkHerbTea" = 0.01,
+						"DrinkRoseWater" = 0.01,
+						"DrinkJuice" = 0.2,
+						"UseSkullLamp" = 0.01,
+						"ApplyPowderOfHygeia" = 0.2,
+						"UseDrunkardBrewBeer" = 0.05,
+						"UseEndurenceDrink" = 0.05,
+						"UseAlmanac" = 0.08,
+						"UseAboutTalents1" = 0.05,
+						"UseAboutTalents2" = 0.07,
+						"UseWashCloth" = 0.05,
+						"UsePoem" = 0.05,
+						"UsePestAway" = 0.5,
+						"UseStrongDoorLatch" = 0.5,
+						
+						//"ThrowBomb" = 0.15,
+						//"ThrowStinkBomb" = 0.1,
+						"ApplyToadExcrements" = 0.1,
+						"ApplyToadSlime" = 0.01,
+						"ApplyBlackWidowPoison" = 0.01,
+						"ApplyParalysisPoison" = 0.01,
+						"ApplyGhostlyFog" = 0.01,
+						"UseDartagnansFragrance" = 0.05,
+					};
+				},
+				IncreaseSecurityObjective //IncreaseSecurityHighActions
+				{
+					ID = "IncreaseSecurityHighActions";
+					Amount = 800;
+					
+					ActiveCondition = "!hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						//child
+						"DistractGuard" = 0.25,
+						"ApologizeToNeighbors" = 0.5,
+						//office
+						"GoCampaigning" = 0.5,
+						"PowerCityGuards" = 0.5,
+						"PowerCityRecord" = 0.35,
+						"PowerPrisons" = 0.8,
+						"PowerSovereignLawmaker" = 0.75,
+						"PowerLawmaker" = 0.75,
+						//"FakeEvidence" = 0.2,
+						//general
+						"BribePrisonerRelease" = 5.0,
+						"PutOutFire" = 0.65,
+						"Sleep" = 0.1,
+						"RepairBuilding" = 0.5,
+						//aggressive actions
+						"GuardBuilding" = 0.5,
+						"EscortCharacter" = 0.5,
+						"AttackCharacter" = 0.002,
+						"KidnapCharacter" = 0.2,
+						"HireHenchmen" = 0.5,
+						"KidnapCharacter" = 0.01,
+						//"GoSpyBuilding" = 0.05,
+						"GuardBuildingHenchmen" = 0.5;
+						"FindEvidence" = 0.5,
+						//diplomatic actions
+						"SendToSchool" = 0.07,
+						"MakeOfferOnBuilding" = 0.35,
+						"HoldPublicPrayer" = 0.15,	
+						//item actionsDefault
+						"ApplySlateTile" = 0.2,
+						"UseStrongDoorLatch" = 0.4,
+						//NPC actions
+						"WaveHello" = 0.2,
+						"NPCSellAllAtMarketpace" = 0.1,
+						"NPCWaitShort" = 0.25,
+						"NPCDrinkShort" = 0.25,
+						"NPCEatBreadShort" = 0.25,
+						"PrayForLuck" = 0.25,	
+						"SitOnBench" = 0.2,
+						"ChatWithMarketVendor" = 0.2,
+						"MournDeceasedRelative" = 0.1,				
+					};
+				},
+								
+				ExecuteActionObjective //Idle action objective
+				{
+					ID = "IdleActionObjective_Security1";
+					Amount = 20;
+					
+					ActionWeights = map
+					{
+						//idle
+						"GoHome" = 0.9,
+						//boost
+						"TrainCharisma" = 0.1,
+						"TrainPerception" = 0.1,
+						"TrainIntelligence" = 0.1,
+						"TrainDexterity" = 0.1,
+						"TrainStrength" = 0.1,
+						"TakeBathHome" = 0.1,
+						"KissSpouse" = 0.1,
+						"DanceWithSpouse" = 0.1,
+						//family life
+						"Family-Cooking" = 0.2,
+						"Family-Eating" = 0.2,
+						"Family-CleanHouse" = 0.2,
+						"Family-ChildPlay" = 0.2,
+						"Family-Bored" = 0.2,
+						"Family-Studies" = 0.2,
+						"Family-PokeAround" = 0.2,
+						"Family-Sleep" = 0.2,
+						"Family-TakeBathHome" = 0.1,
+						"Family-Feast" = 0.1,
+					};
+				},
+				
+			};
+		};
+		
+		/*
+		ExecuteActionObjective //FamilyActions
+		{
+			ID = "BanquetTest";
+			Group = "IncreaseSecurityGroup";
+			Duration = 0.1; // rounds
+			Amount = 1.0;
+			ImportanceWeight = 1;
+			ActiveCondition = "CharacterMemberSociety";
+			
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0.0, 0.0, 0.0 };
+			};
+			
+			ActionWeights = map
+			{
+				"GivePublicBanquet" = 1.0,
+				"GiveAFamilyFeast" = 1.0,
+				
+			};
+		},
+		*/
+		
+		//Guild actions
+		ExecuteActionObjective //GuildActions
+		{
+			ID = "GuildActions";
+			Group = "GetOfficeGroup";
+			Duration = 0.1; // rounds
+			Amount = 1.0;
+			ImportanceWeight = 0;
+					
+			ActiveCondition = "CharacterMemberSociety && !hasTag.AtHome";
+			
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { -0.1, 0.0, -0.1 };
+			};
+			
+			ActionWeights = map
+			{
+				"PotionOfSalutary" = 1.0,
+				"PotionOfContamination" = 1.0,
+				"PotionOfDecay" = 1.0,
+				"GatherMandrake" = 1.0,
+				"MotivateWorkers" = 1.0,
+				"FarTradeTrip" = 1.0,
+				"DistractEveryone" = 1.0,
+				"FreemasonsGift" = 1.0,
+				
+			};
+		},
+
+		IncreaseRelationshipObjective //IncreaseRelationshipLow
+		{
+			ID = "IncreaseRelationshipLow";
+			Group = "IncreaseRelationshipGroup";
+			Duration = 0.25; // rounds
+			Amount = 20.0;
+			ImportanceWeight = 0;
+			ActiveExecutorsLimit = 0.1;
+					
+			ActiveCondition = "!hasTag.AtHome";
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { -0.01, -0.01, -0.01 };
+			};
+			ActionWeights = map
+			{
+				//artifacts
+				"UseFortuneCake" = 0.75,
+				"ApplyBandage" = 0.05,
+				"ApplyPowderOfHygeia" = 0.05,
+				"UsePoem" = 0.25,
+				"UsePerfume" = 0.25,
+				"EatCreamPie" = 0.25,
+				//child
+				"PlayOutside" = 0.5,
+				"StackBoxes" = 0.25,
+				"CatchRats" = 0.25,
+				"ApologizeToNeighbors" = 0.15,
+				"ReadStories" = 0.15,
+				//family actions
+				"TakeBathHome" = 0.25,
+				"PlayPipe" = 0.05,
+				"GetGastronomyService" = 0.25,
+				"GetBodyCareService" = 0.25,
+				"GetSpeakeasyService" = 0.05,
+				"GivePublicBanquet" = 0.25,
+				//political actions
+				"BribeOfficeHolder" = 0.5,
+				"UseStatelyDispatch" = 0.5,
+				"BribeWithWine" = 0.1,
+				//diplomatic actions
+				"GoCampaigning" = 0.5,
+				"PublicPraise" = 0.5,
+				"AskFavor" = 0.5,
+				"PutOutFire" = 0.75,
+				"Praise" = 0.55,
+				"Commend" = 0.55,
+				//office
+				"PromoteBusiness" = 0.5,
+				"MarkAsOutlaw" = 0.5,
+				"AwardKeyToCity" = 0.5,
+				"SendAwayGuard" = 0.5,
+				"WriteRecommandationLetter" = 0.15,
+				//aggressive actions
+				"TearOffTrashLetter" = 0.15,
+				"GuardBuilding" = 0.3,
+				//idle actions
+				"NPCSellAllAtMarketpace" = 0.1,
+				"NPCWaitShort" = 0.25,
+				"NPCDrinkShort" = 0.25,
+				"NPCEatBreadShort" = 0.25,
+				"PrayForLuck" = 0.25,
+				"WaveHello" = 0.2,
+				"SitOnBench" = 0.2,
+				"ChatWithMarketVendor" = 0.2,
+				"MournDeceasedRelative" = 0.1,
+				
+			};
+		},
+		
+		IncreaseRelationshipObjective //IncreaseRelationshipMid
+		{
+			ID = "IncreaseRelationshipMed";
+			Group = "IncreaseRelationshipGroup";
+			Duration = 0.5; // rounds
+			Amount = 30.0;
+			ImportanceWeight = 0;
+			ActiveExecutorsLimit = 0.1;
+					
+			ActiveCondition = "!hasTag.AtHome";
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { -0.05, -0.05, -0.05 };
+			};
+			ActionWeights = map
+			{
+				//artifacts
+				"UseFortuneCake" = 0.75,
+				"ApplyBandage" = 0.1,
+				"ApplyPowderOfHygeia" = 0.1,
+				"UsePoem" = 0.3,
+				"UsePerfume" = 0.25,
+				"EatCreamPie" = 0.25,
+				//child
+				"PlayOutside" = 0.75,
+				"StackBoxes" = 0.3,
+				"CatchRats" = 0.3,
+				"ApologizeToNeighbors" = 0.2,
+				"ReadStories" = 0.15,
+				//family actions
+				"TakeBathHome" = 0.25,
+				"PlayPipe" = 0.05,
+				"BribeOfficeHolder" = 0.2,
+				"UseStatelyDispatch" = 0.2,
+				"BribeWithWine" = 0.04,
+				"GoCampaigning" = 0.2,
+				"PublicPraise" = 0.75,
+				"AskFavor" = 0.3,
+				"PutOutFire" = 0.9,
+				"GetGastronomyService" = 0.3,
+				"GetBodyCareService" = 0.3,
+				"GetSpeakeasyService" = 0.07,
+				"GivePublicBanquet" = 0.25,
+				//office
+				"PromoteBusiness" = 0.75,
+				"MarkAsOutlaw" = 0.75,
+				"AwardKeyToCity" = 0.75,
+				"SendAwayGuard" = 0.75,
+				"WriteRecommandationLetter" = 0.25,
+				"TearOffTrashLetter" = 0.15,
+				"GuardBuilding" = 0.05,
+				"Praise" = 0.5,
+				"Commend" = 0.5,
+				//idle actions
+				"WaveHello" = 0.2,
+				"NPCSellAllAtMarketpace" = 0.1,
+				"NPCWaitShort" = 0.25,
+				"NPCDrinkShort" = 0.25,
+				"NPCEatBreadShort" = 0.25,
+				"PrayForLuck" = 0.25,
+				"SitOnBench" = 0.2,
+				"ChatWithMarketVendor" = 0.2,
+				"MournDeceasedRelative" = 0.1,
+			};
+		},
+		
+		IncreaseRelationshipObjective  //IncreaseRelationshipHigh
+		{
+			ID = "IncreaseRelationshipHigh";
+			Group = "IncreaseRelationshipGroup";
+			Duration = 0.75; // rounds
+			Amount = 50.0;
+			ImportanceWeight = 0;
+			ActiveExecutorsLimit = 0.1;
+					
+			ActiveCondition = "!hasTag.AtHome";
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { -0.1, -0.1, -0.1 };
+			};
+			ActionWeights = map
+			{
+				//artifacts
+				"UseFortuneCake" = 0.75,
+				"ApplyBandage" = 0.15,
+				"ApplyPowderOfHygeia" = 0.15,
+				"UsePoem" = 0.35,
+				"UsePerfume" = 0.25,
+				"EatCreamPie" = 0.25,
+				//child
+				"PlayOutside" = 1.0,
+				"StackBoxes" = 0.25,
+				"CatchRats" = 0.25,
+				"ApologizeToNeighbors" = 0.25,
+				"ReadStories" = 0.15,
+				//family actions
+				"KissLiaison" = 0.05,
+				"DanceWithLiaison" = 0.05,
+				"PlayPipe" = 0.05,
+				"TakeBathHome" = 0.25,
+				"BribeOfficeHolder" = 0.5,
+				"UseStatelyDispatch" = 0.5,
+				"BribeWithWine" = 0.1,
+				"GoCampaigning" = 0.25,
+				"SendAwayGuard" = 0.75,
+				"AskFavor" = 0.35,
+				"PutOutFire" = 0.5,
+				"GetGastronomyService" = 0.4,
+				"GetBodyCareService" = 0.4,
+				"GetSpeakeasyService" = 0.09,
+				"GivePublicBanquet" = 0.25,
+				//office
+				"PublicPraise" = 0.75,
+				"PromoteBusiness" = 0.75,
+				"MarkAsOutlaw" = 0.75,
+				"AwardKeyToCity" = 0.75,
+				"WriteRecommandationLetter" = 0.2,
+				"TearOffTrashLetter" = 0.15,
+				"GuardBuilding" = 0.01,
+				"Praise" = 0.35,
+				"Commend" = 0.35,
+				//idle actions
+				"WaveHello" = 0.3,
+				"NPCWaitShort" = 0.25,
+				"NPCDrinkShort" = 0.25,
+				"NPCEatBreadShort" = 0.25,
+				"PrayForLuck" = 0.25,
+				"HoldPublicPrayer" = 0.15,
+				"SitOnBench" = 0.2,
+				"ChatWithMarketVendor" = 0.2,
+				"MournDeceasedRelative" = 0.1,
+			};
+		},
+		
+		DecreaseRelationshipObjective //DecreaseRelationshipLow
+		{
+			ID = "DecreaseRelationshipLow";
+			Group = "DecreaseRelationshipGroup";
+			Duration = 0.25; // rounds
+			Amount = 20.0;
+			ImportanceWeight = 0;
+			ActiveExecutorsLimit = 0.3;
+					
+			ActiveCondition = "!hasTag.AtHome";
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0.01, 0.01, -0.01 };
+			};
+			ActionWeights = map
+			{
+				//artifacts
+				"UseFlowerOfDiscord" = 0.2,
+				"UseDrunkardBrewBeer" = 0.01,
+				"UseBoozyBreathBeer" = 0.25,
+				//child
+				"RaidTheKitchens" = 0.05,
+				"ThrowStones" = 0.1,
+				//office
+				"PublicShaming" = 0.5,
+				"AuditBooks" = 0.5,
+				//"FakeEvidence" = 0.5,
+				//aggressive actions
+				"PickPocket" = 0.15,
+				"StealHouse" = 0.05,
+				"WriteTrashLetter" = 0.15,
+				"TearOffTrashLetter" = 0.15,
+				"StealFromCharacter" = 0.5,
+				"BreakBone" = 0.15,
+				"KidnapCharacter" = 0.05,
+				"DuelInsult" = 0.05,
+				"Smear" = 0.15,
+				"HireHenchmen" = 0.1,
+				"FindEvidence" = 0.15,
+				//"StartHenchmenConquerBuilding" = 0.15,
+				"CollectProtectionMoney" = 0.2,
+				"PlayDiceGame" = 0.1,
+				//idle
+				"LaughAtSomeone" = 0.25,
+				"NPCWaitShort" = 0.25,
+				"NPCDrinkShort" = 0.25,
+				"NPCEatBreadShort" = 0.25,
+				"PrayForLuck" = 0.25,
+				"SitOnBench" = 0.2,
+				"ChatWithMarketVendor" = 0.2,
+				"MournDeceasedRelative" = 0.1,
+				//diplomatic actions
+				"LetterFromInquisition" = 0.25,
+				"InitiateIntrigue" = 0.25,
+				//"SpreadFleas" = 0.15,
+				//"ThrowBomb" = 0.05,
+				//"ThrowStinkBomb" = 0.05,
+				//"ApplyToadExcrements" = 0.01,
+				//"ApplyToadSlime" = 0.05,
+				//"ApplyBlackWidowPoison" = 0.05,
+				//"ApplyParalysisPoison" = 0.05,
+				//"ApplyGhostlyFog" = 0.05,
+				//"Denounce" = 0.15,
+				//"Sabotage" = 0.15,
+				//"Vandalize" = 0.15,
+				//"DestroyBuildingPolitical" = 0.1, SK: commented out in PoliticalOfficeActions.inc
+				//"ThrowPotGrenade" = 0.15, SK: commented out in ArtefectActions.inc
+				
+			};
+		},
+		
+		DecreaseRelationshipObjective //DecreaseRelationshipMid
+		{
+			ID = "DecreaseRelationshipMed";
+			Group = "DecreaseRelationshipGroup";
+			Duration = 0.5; // rounds
+			Amount = 30.0;
+			ImportanceWeight = 0;
+			ActiveExecutorsLimit = 0.3;
+					
+			ActiveCondition = "!hasTag.AtHome";
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0.05, 0.05, -0.05 };
+			};
+			ActionWeights = map
+			{
+				//artifacts
+				"UseFlowerOfDiscord" = 0.2,
+				"UseDrunkardBrewBeer" = 0.02,
+				//"ThrowBomb" = 0.2,
+				//"ThrowStinkBomb" = 0.2,
+				"ApplyToadExcrements" = 0.15,
+				"UseBoozyBreathBeer" = 0.3,
+				"ThrowStones" = 0.1,
+				"SpreadFleas" = 0.2,
+				"RaidTheKitchens" = 0.1,
+				"PublicShaming" = 0.75,
+				//political actions
+				"AuditBooks" = 0.75,
+				"LetterFromInquisition" = 0.25,
+				"InitiateIntrigue" = 0.25,
+				//aggressive actions
+				"ChainHostage" = 0.15,
+				"StealHouse" = 0.35,
+				"WriteTrashLetter" = 0.25,
+				"TearOffTrashLetter" = 0.15,
+				"AttackCharacter" = 0.1,
+				"StealFromCharacter" = 0.4,
+				"BreakBone" = 0.5,
+				"KillCharacter" = 0.05,
+				"KidnapCharacter" = 0.45,
+				"DuelInsult" = 0.45,
+				"Denounce" = 0.3,
+				"Smear" = 0.5,
+				"HireHenchmen" = 0.1,
+				"FindEvidence" = 0.2,
+				"PickPocket" = 0.1,
+				"LeaveSecretSociety" = 0.15,
+				"CollectProtectionMoney" = 0.2,
+				//"FakeEvidence" = 0.5,
+				//idle actions
+				"LaughAtSomeone" = 0.25,
+				"NPCWaitShort" = 0.25,
+				"NPCDrinkShort" = 0.25,
+				"NPCEatBreadShort" = 0.25,
+				"PrayForLuck" = 0.25,
+				"SitOnBench" = 0.2,
+				"ChatWithMarketVendor" = 0.2,
+				"MournDeceasedRelative" = 0.1,
+				//"StartHenchmenConquerBuilding" = 0.35,
+				//"Sabotage" = 0.4,
+				//"Vandalize" = 0.25,
+				//"StealthKillCharacter" = 0.15,
+				//"ApplyToadSlime" = 0.2,
+				//"ApplyBlackWidowPoison" = 0.2,
+				//"ApplyParalysisPoison" = 0.2,
+				//"ApplyGhostlyFog" = 0.2,
+			};
+		},
+		
+		DecreaseRelationshipObjective //DecreaseRelationshipHigh
+		{
+			ID = "DecreaseRelationshipHigh";
+			Group = "DecreaseRelationshipGroup";
+			Duration = 0.75; // rounds
+			Amount = 50.0;
+			ImportanceWeight = 0;
+			ActiveExecutorsLimit = 0.3;
+					
+			ActiveCondition = "!hasTag.AtHome";
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0.1, 0.1, -0.1 };
+			};
+			ActionWeights = map
+			{
+				//artifacts
+				"UseFlowerOfDiscord" = 0.2,
+				"UseDrunkardBrewBeer" = 0.03,
+				"UseBoozyBreathBeer" = 0.35,			
+				"ThrowStones" = 0.1,
+				"SpreadFleas" = 0.3,
+				"RaidTheKitchens" = 0.15,
+				//political actions
+				"PublicShaming" = 0.5,
+				"AuditBooks" = 0.5,
+				"LetterFromInquisition" = 0.15,
+				"InitiateIntrigue" = 0.15,
+				//aggressive actions
+				//"FakeEvidence" = 0.5,
+				"AskFeud" = 0.005,
+				"ChainHostage" = 0.35,
+				"StealHouse" = 0.5,
+				"WriteTrashLetter" = 0.2,
+				"TearOffTrashLetter" = 0.3,
+				"AttackCharacter" = 0.15,
+				"StealFromCharacter" = 0.15,
+				"BreakBone" = 0.4,
+				"KillCharacter" = 0.15,
+				"KidnapCharacter" = 0.75,
+				"DuelInsult" = 0.75,
+				"Denounce" = 0.25,
+				"Smear" = 0.35,
+				"HireHenchmen" = 0.1,
+				"FindEvidence" = 0.25,
+				"LeaveSecretSociety" = 0.25,
+				"CollectProtectionMoney" = 0.05,
+				//idle actions
+				"LaughAtSomeone" = 0.25,
+				"NPCWaitShort" = 0.25,
+				"NPCDrinkShort" = 0.25,
+				"NPCEatBreadShort" = 0.25,
+				"PrayForLuck" = 0.25,
+				"SitOnBench" = 0.2,
+				"ChatWithMarketVendor" = 0.2,
+				"MournDeceasedRelative" = 0.1,
+				//"ThrowBomb" = 0.15,
+				//"ThrowStinkBomb" = 0.15,
+				//"ApplyToadExcrements" = 0.35,
+				//"ApplyToadSlime" = 0.15,
+				//"ApplyBlackWidowPoison" = 0.15,
+				//"ApplyParalysisPoison" = 0.15,
+				//"ApplyGhostlyFog" = 0.15,
+				//"Sabotage" = 0.35,
+				//"Vandalize" = 0.2,
+				//"StealthKillCharacter" = 0.25,
+				//"StartHenchmenConquerBuilding" = 0.5,
+			};
+		},
+
+		//-----Liaison Objective
+				
+		MultiStepObjective //GetLiaison
+		{
+			ID = "GetLiaison";
+			
+			Group = "LiaisonGroup";
+			
+			ImportanceWeight = 0;
+			ActiveExecutorsLimit = 0.05;
+			Duration = 0.25; // rounds
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0, 0, 0 };
+			};
+			
+			ObjectiveGoal = "StartLiaison";
+			
+			SubObjectives = array
+			{
+				ExecuteActionObjective
+				{
+					ID = "StartLiaison";
+					
+					Amount = 1;
+					ActiveCondition = "CharacterHasASpouse && IsInAnyRomance && MaxRomanticRelationshipScore >= 50.0 && !hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						"StartLiaison" = 1.0,
+					};
+				},
+				IncreaseAffectionObjective
+				{
+					ID = "LiaisonIncreaseAffection";
+					
+					Amount = 99999999; // This sub-objective should never complete. Instead, the ActiveCondition shall decide when this sub-objective becomes active
+					ActiveCondition = "CharacterHasASpouse && IsInAnyRomance && MaxRomanticRelationshipScore < 50.0 && !hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						"GiveFlowers" = 0.9;
+						"UsePoem" = 0.9;
+						"CourtingSomeone" = 0.9;
+						"SweetTalk" = 0.5;
+						"KissCheek" = 0.25;
+						"UseWashCloth" = 0.9;
+						"KissLiaison" = 0.5,
+						"DanceWithLiaison" = 0.05,
+						"TakeBathHome" = 0.25,
+					};
+				},
+				ExecuteActionObjective
+				{
+					ID = "LiaisonStartRomance";
+					
+					Amount = 99999999; // This sub-objective should never complete. Instead, the ActiveCondition shall decide when this sub-objective becomes active
+					ActiveCondition = "CharacterHasASpouse && !hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						"StartRomance" = 1.0;
+					};
+				},
+			};
+		};
+				
+		//ExploitLiaison
+		MultiStepObjective //ExploitLiaison
+		{
+			ID = "ExploitLiaison";
+			
+			Group = "LiaisonGroup";
+			
+			ImportanceWeight = 0;
+			Duration = 0.25; // rounds
+					
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0, 0, 0 };
+			};
+			
+			ObjectiveGoal = "UseLiaison";
+			
+			SubObjectives = array
+			{
+				IncreaseAffectionObjective
+				{
+					ID = "LiaisonIncreaseAffection";
+					
+					Amount = 20;
+					ActiveCondition = "IsInAnyLiaison && !hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						//use family items
+						"GiveFlowers" = 0.9;
+						"UsePoem" = 0.9;
+						"UseWashCloth" = 0.9;
+						"TakeBathHome" = 0.25,
+						//actions
+						"KissLiaison" = 0.5,
+						"DanceWithLiaison" = 0.05,
+						"CourtingSomeone" = 0.9;
+						"SweetTalk" = 0.5;
+						"KissCheek" = 0.25;
+					};
+				},
+				ExecuteActionObjective
+				{
+					ID = "UseLiaison";
+					
+					Amount = 1;
+					ActiveCondition = "IsInAnyLiaison && !hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						"AskFavor" = 0.3,
+						"UseConnections" = 0.3,
+						"ManipulateLiaison" = 0.35,
+					};
+				},
+			};
+		};
+		
+		//-----Political Objectives
+		//Accquire an office and make use of office powers, if in office
+		
+		ExecuteActionObjective //RunForOffice
+		{
+			ID = "RunForOffice";
+			Group = "GetOfficeGroup";
+			
+			Duration = 0.125; // rounds
+			Amount = 1;
+			ImportanceWeight = 0;
+			//ActiveCondition = "IsLeader";
+					
+			ActiveCondition = "!hasTag.AtHome";
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0, 0, 0 };
+			};
+			ActionWeights = map
+			{
+				"RunForOffice" = 1.0,
+			};
+		};
+		
+        MultiStepObjective //GetOfficeUsePowers
+        {
+			ID = "GetOfficeUsePowers";
+			Group = "GetOfficeGroup";
+			
+			ImportanceWeight = 0;
+			Duration = 0.3; // rounds
+			
+			MoralAlignment = MoralAlignment 
+			{
+				Values = array { 0, -0.1, -0.1 };	//Honest,Philantrophic,Diplomatic
+			};
+			
+			ObjectiveGoal = "UsePower";
+			
+			SubObjectives = array
+			{
+				ExecuteActionObjective
+				{
+					ID = "ApplyForOffice";
+					Amount = 1;
+					ActiveCondition = "!HasPoliticalOffice && !hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						"RunForOffice" = 0.75,
+						"PlantSibling" = 0.25,
+					};
+				},
+				ExecuteActionObjective
+				{
+					ID = "UsePower";
+					Amount = 1;
+					ActiveCondition = "HasPoliticalOffice && !hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						"PowerAudit" = 0.05,
+						"PowerCityGuards" = 0.05,
+						"PowerCityRecord" = 0.05,
+						"PowerHeretic" = 0.05,
+						"PowerPrisons" = 0.05,
+						"PowerSovereignLawmaker" = 0.05,
+						"PowerLawmaker" = 0.05,
+						"PowerExpropriate" = 0.05,
+						"PublicShaming" = 0.05,
+						"PublicPraise" = 0.05,
+						"AuditBooks" = 0.05,
+						//"FakeEvidence" = 0.05,
+						"PromoteBusiness" = 0.05,
+						"MarkAsOutlaw" = 0.05,
+						"AwardKeyToCity" = 0.05,
+						"SendAwayGuard" = 0.05,
+					};
+				},				
+				ExecuteActionObjective //Idle action objective
+				{
+					ID = "IdleActionObjective_Office1";
+					Amount = 20;
+					
+					ActionWeights = map
+					{
+						//idle
+						"GoHome" = 0.9,
+						//boost
+						"TrainCharisma" = 0.1,
+						"TrainPerception" = 0.1,
+						"TrainIntelligence" = 0.1,
+						"TrainDexterity" = 0.1,
+						"TrainStrength" = 0.1,
+						"TakeBathHome" = 0.1,
+						"KissSpouse" = 0.1,
+						"DanceWithSpouse" = 0.1,
+						//family life
+						"Family-Cooking" = 0.2,
+						"Family-Eating" = 0.2,
+						"Family-CleanHouse" = 0.2,
+						"Family-ChildPlay" = 0.2,
+						"Family-Bored" = 0.2,
+						"Family-Studies" = 0.2,
+						"Family-PokeAround" = 0.2,
+						"Family-Sleep" = 0.2,
+						"Family-TakeBathHome" = 0.1,
+						"Family-Feast" = 0.1,
+					};
+				},
+			};
+			
+		};
+		
+
+		//-----Archetype Objectives
+
+		
+		//Archetype Aggressive-Shady
+		ExecuteActionObjective //Archetype-AgressiveShadyDrink
+		{
+			ID = "Archetype-AgressiveShadyDrink";
+			Group = "ArchetypeGroup";
+			Duration = 0.5; // rounds
+			Amount = 1.0;
+			ImportanceWeight = 0;
+					
+			ActiveCondition = "!hasTag.AtHome";
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { -0.3, 0.0, -0.3 };
+			};
+			
+			ActionWeights = map
+			{
+				"DrinkMead" = 1.0,
+				"DrinkCider" = 1.0,
+				"DrinkSmallBeer" = 1.0,
+				//"DrinkStrongBeer" = 1.0,
+				"DrinkWheatBeer" = 1.0,
+				"DrinkMead" = 1.0,
+				
+			};
+		},	
+		
+		MultiStepObjective //Archetype-AgreessiveShadyAttack
+		{
+			ID = "Archetype-AgreessiveShadyAttack";
+			
+			Duration = 0.25; // rounds
+			ImportanceWeight = 0;
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { -0.6, -0.6, -0.9 }; //Aggressive-Shady Type
+			};
+			
+			ObjectiveGoal = "ArtifactAttack";
+			
+			SubObjectives = array
+			{
+				ExecuteActionObjective
+				{
+					ID = "ArtifactPrepAttack";
+					
+					Amount = 1;
+					ActiveCondition = "!hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						//use fragrance to increase attack power
+						"UseDartagnansFragrance" = 1.0,
+						
+					};
+				},
+				ExecuteActionObjective
+				{
+					ID = "ArtifactAttack";
+					
+					Amount = 3;
+					ActiveCondition = "!hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						//attack people
+						"AttackCharacter" = 1.0,
+						"BreakBone" = 0.15,
+						"KidnapCharacter" = 0.05,
+						
+					};
+				},
+								
+				ExecuteActionObjective //Idle action objective
+				{
+					ID = "IdleActionObjective_Aggressive1";
+					Amount = 20;
+					
+					ActionWeights = map
+					{
+						//idle
+						"GoHome" = 0.9,
+						//boost
+						"TrainCharisma" = 0.1,
+						"TrainPerception" = 0.1,
+						"TrainIntelligence" = 0.1,
+						"TrainDexterity" = 0.1,
+						"TrainStrength" = 0.1,
+						"TakeBathHome" = 0.1,
+						"KissSpouse" = 0.1,
+						"DanceWithSpouse" = 0.1,
+						//family life
+						"Family-Cooking" = 0.2,
+						"Family-Eating" = 0.2,
+						"Family-CleanHouse" = 0.2,
+						"Family-ChildPlay" = 0.2,
+						"Family-Bored" = 0.2,
+						"Family-Studies" = 0.2,
+						"Family-PokeAround" = 0.2,
+						"Family-Sleep" = 0.2,
+						"Family-TakeBathHome" = 0.1,
+						"Family-Feast" = 0.1,
+					};
+				},
+			};
+		};
+		
+		//Archetype Honest-Diplomatic
+		ExecuteActionObjective //Archetype-HonestDiplomaticPolitics
+		{
+			ID = "Archetype-HonestDiplomaticPolitics";
+			Group = "ArchetypeGroup";
+			Duration = 0.5; // rounds
+			Amount = 1.0;
+			ImportanceWeight = 0;
+			
+			ActiveCondition = "!hasTag.AtHome";
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0.3, 0.0, 0.3 };
+			};
+			
+			ActionWeights = map
+			{
+				"GoCampaigning" = 1.0,
+				"BoastAboutYourExploits" = 1.0,
+				"KissLiaison" = 1.0,
+				"DanceWithLiaison" = 1.0,
+				"DonateToChurch" = 1.0,
+				"EscortCharacter" = 1.0,
+				"AwardKeyToCity" = 1.0,
+				"PutOutFire" = 1.0,
+				
+			};
+		},	
+		
+		ExecuteActionObjective //Archetype-HonestDiplomaticActions
+		{
+			ID = "Archetype-HonestDiplomaticActions";
+			Group = "ArchetypeGroup";
+			Duration = 0.5; // rounds
+			Amount = 3.0;
+			ImportanceWeight = 0;
+			
+			ActiveCondition = "!hasTag.AtHome";
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0.3, 0.0, 0.3 };
+			};
+			
+			ActionWeights = map
+			{
+				"OverseeWorkers" = 1.0,
+				//romance
+				"CourtingSomeone" = 1.0,
+				"SweetTalk" = 1.0,
+				"KissCheek" = 1.0,
+				"PlayPipe" = 1.0,
+				"KissLiaison" = 1.0,
+				"DanceWithLiaison" = 1.0,
+				"StageConcert" = 1.0,
+				"DonateToChurch" = 1.0,
+				"Palmistry" = 1.0,
+				"EscortCharacter" = 1.0,
+				"GiveFlowers" = 1.0,
+				"UseWashCloth" = 1.0,
+				"UseObligation" = 1.0,
+				"WinBelievers" = 1.0,
+				"WinBelieversCity" = 1.0,
+				"GiveSermon" = 1.0,
+				"GiveSermonCity" = 1.0,
+				"ChurchService" = 1.0,
+				"ChurchServiceCity" = 1.0,
+				"MakeCatholic" = 1.0,
+				"MakeProtestant" = 1.0,
+				"MakeSecular" = 1.0,
+				"SendToSchool" = 1.0,
+				"PutOutFire" = 1.0,
+				"SendCourtierToKing" = 1.0,
+				"PromoteBusiness" = 1.0,
+				"TradeMission" = 1.0,
+				"Longshore" = 1.0,
+				"Longshore2" = 1.0,
+				
+			};
+		},	
+		
+		//Archetype Egoistic
+		MultiStepObjective //KidnapSomeone
+		{
+			ID = "KidnapSomeone";
+			Group = "DecreaseRelationshipGroup";
+			
+			Duration = 0.25; // rounds
+			ImportanceWeight = 0;
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { -0.2, -0.2, -0.6 }; //Aggressive-Shady Type
+			};
+			
+			ObjectiveGoal = "TakeHostage";
+			
+			SubObjectives = array
+			{
+				ExecuteActionObjective
+				{
+					ID = "ArtifactPrepAttack";
+					
+					Amount = 1;
+					ActiveCondition = "!hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						//use fragrance to increase attack power
+						"UseDartagnansFragrance" = 1.0,
+						
+					};
+				},
+				ExecuteActionObjective
+				{
+					ID = "ArtifactAttack";
+					
+					Amount = 1;
+					ActiveCondition = "!hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						//attack people
+						"AttackCharacter" = 1.0,
+						
+					};
+				},
+				ExecuteActionObjective
+				{
+					ID = "Kidnap";
+					
+					Amount = 1;
+					ActiveCondition = "!hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						//kidnap people
+						"KidnapCharacter" = 1.0,
+						
+					};
+				},ExecuteActionObjective
+				{
+					ID = "TakeHostage";
+					
+					Amount = 1;
+					ActiveCondition = "!hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						//chain hostage
+						"ChainHostage" = 1.0,
+						
+					};
+				},
+			};
+		};
+		
+
+		// Attack another family if we have a feud with them. (Primarily by using Henchmen)
+		ExecuteActionObjective //AttackFeudOpponent
+		{
+			ID = "AttackFeudOpponent";
+			Group = "IncreaseSecurityGroup";
+			Duration = 1.0; // rounds
+			ImportanceWeight = 0; // No random selection. The code creates the objective automatically when there is a feud. The feuded family will also be assigned as a target for the objective.
+			Priority = 1;
+			Amount = 99999999; // This objective should never complete on its own. It will be removed when the feud ends.
+			
+			ActiveCondition = "!hasTag.AtHome";
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0, 0, 0 };
+			};
+			
+			ActionWeights = map
+			{
+				"HireHenchmen" = 0.9,
+				"StartHenchmenConquerBuilding" = 0.2,
+				"Sabotage" = 0.35,
+				"Vandalize" = 0.35,
+				"KidnapCharacter" = 0.15,
+				"GoSpyBuilding" = 0.6,
+				"StealthKillCharacter" = 0.1,
+				"FakeEvidence" = 0.25,
+				
+				"LetterFromInquisition" = 0.25,
+				
+				//artifacts
+				"UseDartagnansFragrance" = 0.35,
+				"ThrowBomb" = 0.15,
+				"ThrowStinkBomb" = 0.15,
+				"ApplyToadExcrements" = 0.15,
+				"ApplyToadSlime" = 0.15,
+				"ApplyBlackWidowPoison" = 0.15,
+				"ApplyParalysisPoison" = 0.15,
+				"ApplyGhostlyFog" = 0.15,
+				"UseFlowerOfDiscord" = 0.2,
+				
+			};
+		};
+
+//Repeat objectives
+	//Repair building
+		ExecuteActionObjective //BuildingMaintenance
+		{
+			ID = "BuildingMaintenance";
+			Group = "MakeMoneyGroup";
+			Duration = 0.5; // rounds
+			Amount = 50.0;
+			//Percentage = 100.0;
+			ImportanceWeight = 1;
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0, 0, 0 };
+			};
+			
+			ActionWeights = map
+			{
+				"RepairBuilding" = 1.0,
+				
+			};
+		},
+		
+// Placeholder for unlock build objective
+		ConstructBuildingObjective 
+		{
+			ID = "CriticalConstructBuildingObjective";
+			Group = "ConstructBuildingObjectives";
+			Duration = 0.25; // rounds
+			Amount = 1.0;
+			ImportanceWeight = 0; // This should stay at 0, so it is not picked for normal objectives
+			Priority = 2;
+			ActionWeights = map
+			{
+				"BuyBusiness" = 1.0,
+			};
+		},
+		SaveDynastyHomeObjective
+		{
+			ID = "SaveDynastyHome";
+			Group = "SaveDynastyHome";
+			Amount = 1.0;
+			// Duration of critical objectives is managed in code, therefore we can leave the default value of 'infinite' here.
+			ImportanceWeight = 0; // This should stay at 0, so it is not picked for normal objectives
+			Priority = 2;
+			ActionWeights = map
+			{
+				"BuyBusiness" = 1.0,
+			};
+		},
+		SaveDynastyFinancesObjective
+		{
+			ID = "SaveDynastyFinances";
+			Group = "SaveDynastyFinances";
+			// Duration of critical objectives is managed in code, therefore we can leave the default value of 'infinite' here.
+			ImportanceWeight = 0; // This should stay at 0, so it is not picked for normal objectives
+			Priority = 2;
+			
+			// Beware: this objective does a lot of hackery internally.
+			// Internally it uses the actions from 'MakeMoneyLow', 'MakeMoneyMed' or 'MakeMoneyHigh' 
+			// respectively, depending on the nobility title of the family.
+			// It also determines the target amount for completion internally. 
+		},
+		ExecuteActionObjective
+		{
+			ID = "SaveDynastySuccession";
+			
+			Amount = 1;
+			// Duration of critical objectives is managed in code, therefore we can leave the default value of 'infinite' here.
+			ImportanceWeight = 0; // This should stay at 0, so it is not picked for normal objectives
+			Priority = 2;
+			
+			ActionWeights = map
+			{
+				"AISelectNewHeir" = 1.0,
+			};
+		},
+		MultiStepObjective
+		{
+			ID = "SaveDynastyReproduction";
+			
+			Group = "MakeBabyGroup";
+			
+			// Duration of critical objectives is managed in code, therefore we can leave the default value of 'infinite' here.
+			ImportanceWeight = 0; // This should stay at 0, so it is not picked for normal objectives
+			Priority = 2;
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0, 0, 0 };
+			};
+			
+			// This MultiStepObjective defines no 'ObjectiveGoal' for completion of the objective.
+			// Instead, the code decides when the family no longer needs this objective (just like it decides
+			// when the family needs to start this objective)
+			
+			SubObjectives = array
+			{
+				ExecuteActionObjective
+				{
+					ID = "SaveDynastySuccessionBuyOrphan";
+						
+					Amount = 99999999; // This sub-objective should never complete. Instead, the ActiveCondition shall decide when this sub-objective becomes active
+					ActiveCondition = "ObjectiveActivePlayedYears > 2.0 && !hasTag.AtHome";
+							
+					ActionWeights = map
+					{
+						"DoBuyOrphan" = 1.0,
+					};
+				},
+
+				ExecuteActionObjective
+				{
+					ID = "SaveDynastySuccessionMakeHoneymoonChild";
+						
+					Amount = 99999999; // This sub-objective should never complete. Instead, the ActiveCondition shall decide when this sub-objective becomes active
+					ActiveCondition = "CharacterHasASpouse && !hasTag.AtHome";
+							
+					ActionWeights = map
+					{
+						"ProduceOffspring" = 1.0,
+					};
+				},
+
+				IncreaseAffectionObjective
+				{
+					ID = "SaveDynastySuccessionIncreaseAffection";
+					
+					Amount = 99999999; // This sub-objective should never complete. Instead, the ActiveCondition shall decide when this sub-objective becomes active
+					ActiveCondition = "!CharacterHasASpouse && !CharacterHasWeddableConcubine && (IsInAnyRomance || IsInAnyLiaison) && MaxRomanticRelationshipScore < 80.0 && !hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						//use helpful object
+						"GiveFlowers" = 0.9,
+						"UsePoem" = 0.9,
+						"UseWashCloth" = 0.9,
+						//do romantic things
+						"CourtingSomeone" = 0.9,
+						"SweetTalk" = 0.2,
+						"KissCheek" = 0.1,
+					};
+				},
+				
+				ExecuteActionObjective
+				{
+					ID = "SaveDynastySuccessionPropose";
+					
+					Amount = 99999999; // This sub-objective should never complete. Instead, the ActiveCondition shall decide when this sub-objective becomes active
+					ActiveCondition = "!CharacterHasASpouse && !CharacterHasWeddableConcubine && (IsInAnyRomance || IsInAnyLiaison) && MaxRomanticRelationshipScore >= 80.0 && !hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						"ProposeMarriage" = 1.0,
+					};
+				},
+
+				ExecuteActionObjective
+				{
+					ID = "SaveDynastySuccessionMarry";
+					
+					Amount = 99999999; // This sub-objective should never complete. Instead, the ActiveCondition shall decide when this sub-objective becomes active
+					ActiveCondition = "!CharacterHasASpouse && CharacterHasWeddableConcubine && MaxRomanticRelationshipScore >= 80.0 && !hasTag.AtHome";
+					
+					ActionWeights = map
+					{
+						"StartWedding" = 1.0,
+					};
+				},
+
+				ExecuteActionObjective
+				{
+					ID = "SaveDynastySuccessionStartRomance";
+					
+					Amount = 99999999; // This sub-objective should never complete. Instead, the ActiveCondition shall decide when this sub-objective becomes active
+					ActiveCondition = "!CharacterHasASpouse && !CharacterIsEngaged && !hasTag.AtHome";
+					
+					ActiveExecutorsLimit = 0.9; // Limits the number of family members working on this objective. It takes values [0.0 - 1.0] that represent percentage [0% - 100%]
+					
+					ActionWeights = map
+					{
+						"StartRomance" = 1.0;
+					};
+				},
+			};
+		};
+		
+		/*
+		IncreaseSecurityObjective //IncreaseSecurityLow
+		{
+			ID = "IncreaseSecurityLow";
+			Group = "IncreaseSecurityGroup";
+			Amount = 20;
+			ImportanceWeight = 0;
+			Duration = 0.25;
+			ActiveExecutorsLimit = 0.3;
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0, 0.01, 0.02 };
+			};
+			ActionWeights = map
+			{
+				//NPC actions
+				"WaveHello" = 0.5,
+				"NPCWaitShort" = 0.25,
+				"NPCDrinkShort" = 0.25,
+				"NPCEatBreadShort" = 0.25,
+				"PrayForLuck" = 0.25,
+				//item action
+				"UseAntidote" = 0.05,
+				"UseWonderCure" = 0.05,
+				"UsePainKiller" = 0.05,
+				"ApplyBandage" = 0.1,
+				"DrinkHerbTea" = 0.01,
+				"DrinkRoseWater" = 0.01,
+				"ApplyPowderOfHygeia" = 0.25,
+				"UseDrunkardBrewBeer" = 0.05,
+				"UseEndurenceDrink" = 0.05,
+				"UseAlmanac" = 0.02,
+				"UseAboutTalents1" = 0.05,
+				"UseAboutTalents2" = 0.02,
+				"UseWashCloth" = 0.05,
+				"UsePoem" = 0.05,
+				"UsePestAway" = 0.2,
+				//child action
+				"DistractGuard" = 0.25,
+				"ApologizeToNeighbors" = 0.25,
+				//general actions
+				"GoCampaigning" = 0.25,
+				"PutOutFire" = 0.35,
+				"Sleep" = 0.05,
+				"RepairBuilding" = 0.2,
+				"GuardBuilding" = 0.15,
+				"Praise" = 0.1,
+				"HireHenchmen" = 0.25,
+				"GoSpyBuilding" = 0.05,
+				"GuardBuildingHenchmen" = 0.4;
+				"EscortCharacter" = 0.4,	
+				"FindEvidence" = 0.25,
+				"ApplySlateTile" = 0.2,
+				"UseStrongDoorLatch" = 0.2,
+				//political actions
+				"PowerCityGuards" = 0.5,
+				"PowerCityRecord" = 0.35,
+				"PowerPrisons" = 0.8,
+				"FakeEvidence" = 0.15,
+				};
+		},
+
+		IncreaseSecurityObjective //IncreaseSecurityMid
+		{
+			ID = "IncreaseSecurityMed";
+			Group = "IncreaseSecurityGroup";
+			Amount = 500;
+			ImportanceWeight = 0;
+			Duration = 0.5;
+			ActiveExecutorsLimit = 0.3;
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0, 0.02, 0.04 };
+			};
+			ActionWeights = map
+			{
+				"WaveHello" = 0.5,
+				"NPCWaitShort" = 0.25,
+				"NPCDrinkShort" = 0.25,
+				"NPCEatBreadShort" = 0.25,
+				"PrayForLuck" = 0.25,
+				"UseAntidote" = 0.1,
+				"UseWonderCure" = 0.1,
+				"UsePainKiller" = 0.1,
+				"ApplyBandage" = 0.25,
+				"DrinkHerbTea" = 0.05,
+				"DrinkRoseWater" = 0.01,
+				"UseSkullLamp" = 0.01,
+				"ApplyPowderOfHygeia" = 0.25,
+				"UseDrunkardBrewBeer" = 0.05,
+				"UseEndurenceDrink" = 0.05,
+				"UseAlmanac" = 0.03,
+				"UseAboutTalents1" = 0.05,
+				"UseAboutTalents2" = 0.05,
+				"UseWashCloth" = 0.05,
+				"UsePoem" = 0.05,
+				"UsePestAway" = 0.35,
+				"DistractGuard" = 0.25,
+				"ApologizeToNeighbors" = 0.75,
+				"GoCampaigning" = 0.75,
+				"PowerCityGuards" = 0.5,
+				"PowerCityRecord" = 0.35,
+				"PowerPrisons" = 0.8,
+				"PowerSovereignLawmaker" = 0.5,
+				"PowerLawmaker" = 0.5,
+				"FakeEvidence" = 0.2,
+				"PutOutFire" = 0.5,
+				"Sleep" = 0.05,
+				"RepairBuilding" = 0.5,
+				"GuardBuilding" = 0.35,
+				"EscortCharacter" = 0.75,
+				"AttackCharacter" = 0.00015,
+				"SendToSchool" = 0.05,
+				"Praise" = 0.15,
+				"HireHenchmen" = 0.75,
+				"GoSpyBuilding" = 0.05,
+				"GuardBuildingHenchmen" = 0.5;
+				"FindEvidence" = 0.75,
+				"MakeOfferOnBuilding" = 0.3,
+				"ApplySlateTile" = 0.35,
+				"UseStrongDoorLatch" = 0.35,
+				//"ThrowBomb" = 0.1,
+				//"ThrowStinkBomb" = 0.15,
+				//"ApplyToadExcrements" = 0.15,
+				//"ApplyToadSlime" = 0.05,
+				//"ApplyBlackWidowPoison" = 0.05,
+				//"ApplyParalysisPoison" = 0.05,
+				//"ApplyGhostlyFog" = 0.05,
+				//"UseDartagnansFragrance" = 0.05,
+			};
+		},
+		
+		IncreaseSecurityObjective //IncreaseSecurityHigh
+		{
+			ID = "IncreaseSecurityHigh";
+			Group = "IncreaseSecurityGroup";
+			Amount = 1000;
+			ImportanceWeight = 0;
+			Duration = 0.75;
+			ActiveExecutorsLimit = 0.3;
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array { 0, 0.04, 0.08 };
+			};
+			ActionWeights = map
+			{
+				"WaveHello" = 0.5,
+				"NPCWaitShort" = 0.25,
+				"NPCDrinkShort" = 0.25,
+				"NPCEatBreadShort" = 0.25,
+				"PrayForLuck" = 0.25,
+				"UseAntidote" = 0.15,
+				"UseWonderCure" = 0.15,
+				"UsePainKiller" = 0.15,
+				"ApplyBandage" = 0.1,
+				"DrinkHerbTea" = 0.01,
+				"DrinkRoseWater" = 0.01,
+				"UseSkullLamp" = 0.01,
+				"ApplyPowderOfHygeia" = 0.2,
+				"UseDrunkardBrewBeer" = 0.05,
+				"UseEndurenceDrink" = 0.05,
+				"UseAlmanac" = 0.08,
+				"UseAboutTalents1" = 0.05,
+				"UseAboutTalents2" = 0.07,
+				"UseWashCloth" = 0.05,
+				"UsePoem" = 0.05,
+				"UsePestAway" = 0.5,
+				"DistractGuard" = 0.25,
+				"ApologizeToNeighbors" = 0.5,
+				"GoCampaigning" = 0.5,
+				"PowerCityGuards" = 0.5,
+				"PowerCityRecord" = 0.35,
+				"PowerPrisons" = 0.8,
+				"PowerSovereignLawmaker" = 0.75,
+				"PowerLawmaker" = 0.75,
+				"FakeEvidence" = 0.2,
+				"PutOutFire" = 0.65,
+				"Sleep" = 0.1,
+				"RepairBuilding" = 0.5,
+				"GuardBuilding" = 0.5,
+				"EscortCharacter" = 0.5,
+				"AttackCharacter" = 0.002,
+				"KidnapCharacter" = 0.2,
+				"SendToSchool" = 0.07,
+				"Praise" = 0.2,
+				"HireHenchmen" = 0.5,
+				"GoSpyBuilding" = 0.05,
+				"GuardBuildingHenchmen" = 0.5;
+				"FindEvidence" = 0.5,
+				"MakeOfferOnBuilding" = 0.35,
+				"ApplySlateTile" = 0.2,
+				"UseStrongDoorLatch" = 0.4,
+				"HoldPublicPrayer" = 0.15,
+				//"ThrowBomb" = 0.15,
+				//"ThrowStinkBomb" = 0.1,
+				//"ApplyToadExcrements" = 0.1,
+				//"ApplyToadSlime" = 0.01,
+				//"ApplyBlackWidowPoison" = 0.01,
+				//"ApplyParalysisPoison" = 0.01,
+				//"ApplyGhostlyFog" = 0.01,
+				//"UseDartagnansFragrance" = 0.05,
+			};
+		},	
+		*/
+		
+	};
+};

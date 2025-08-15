@@ -1,0 +1,14 @@
+shovel extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "shovel";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+	EditorName = "Shovel";
+	EditorIcon = "media/UserInterface/PropIcons/Shovel.png";
+	EditorCategory = 3;		
+}

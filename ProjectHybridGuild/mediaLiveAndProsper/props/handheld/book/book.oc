@@ -1,0 +1,35 @@
+book extends G3Actor
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "book";
+		AnimationArray = AnimationListArray
+		{
+			AnimationLists = array
+			{
+				AnimationList
+				{
+					Animations = array
+					(
+						AnimationDesc
+						{
+							ID = 1474978819;
+							Name = "idle_readbook1";
+							AnimationName = "idle_readbook1";
+						},
+						AnimationDesc
+						{
+							ID = 1469018867;
+							Name = "readbook";
+							AnimationName = "readbook";
+						},
+					);
+				};
+			};
+		};
+		CrowdControlRadius = 0.000;
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+};

@@ -1,0 +1,219 @@
+DialogueDatabase extends DialogueDatabase
+{
+	LineBaseTime = 3.0; // Base time that any automatic dialogue line will take, in real time seconds.
+	LineCharTime = 0.09; // Additional time per character added, in real time seconds.
+	
+	UserChoiceTime = 15.0; // Default time for a user choice to remain up, in real time seconds. (The "EnterConversation" notification should have a matching duration)
+	
+	Dialogues = array
+	{
+		@base/POI_Dialogues
+		
+		@base/NPC_Dialogues
+
+		@base/Active_Dialogues
+
+		@base/Quest_Dialogues
+
+		@base/Towncrier_Dialogues
+
+		@base/Reaction_Dialogues
+	
+		Dialogue
+		{
+			Id = "HelloWorld";
+			Topics = array {
+				Topic {
+					Line = "Hello, World!";
+				}
+			};
+		},
+		Dialogue {
+			Id = "ApplyTest";
+			Topics = array {
+				Topic {
+					Line = "I sure could use some money...";
+					TopicResult = ResultObject {
+						Results = array {
+							FunctionGiveMoney {
+								Amount = 50;
+							}
+						};
+					};
+				}
+			};
+		},
+		Dialogue {
+			Id = "ResultTest";
+			Topics = array {
+				Topic {
+					Line = "Hi, I feel stronger already.";
+					TopicResult = ResultObject {
+						Results = array {
+							ModifierEffect {
+								ActorValue = "Strength";
+								Mod = 5.0;
+								Recover = True;
+								Duration = 20.0;
+							};
+							FunctionPlayRandomReaction
+							{
+								ApplyTo = "Source";
+								Animations = array { "aplause_react1", "OH_YES_react1", "OH_YES_react2" };
+								VoiceOvers = array { 277 };
+							};
+						};
+					};
+					ConversationResult = ResultObject {
+						Results = array {
+							FunctionGiveMoney {
+								Amount = 400;
+							}
+						};
+					};
+				},
+				Topic {
+					Line = "Yeah, me too!";
+					Speaker = "Switch";
+					TopicResult = ResultObject {
+						Results = array {
+							ModifierEffect {
+								ActorValue = "Strength";
+								Mod = 5.0;
+								Recover = True;
+								Duration = 20.0;
+							}
+						};
+					};
+					ConversationResult = ResultObject {
+						Results = array {
+							FunctionGiveMoney {
+								Amount = 100;
+							}
+						};
+					};					
+				},
+				Topic {
+					Line = "I think this made us both richer.";
+					Speaker = "Switch";
+				}
+			};
+		},
+		Dialogue {
+			Id = "MeetNGreet";
+			Topics = array {
+				Topic {
+					Line = "Hello there!";
+				},
+				Topic {
+					Speaker = "Switch";
+					Line = "Hello to you, too!";
+				}
+			};
+		},
+		Dialogue {
+			Id = "EndlessSeas";
+			Topics = array {
+				Topic {
+					Id = "start";
+					Speaker = "Source";
+					Line = "Seas!";
+				},
+				Topic {
+					Line = "Seas!!";
+					Speaker = "Target";
+					Next = array {
+						TopicLink {
+							Topic = "start";
+						}
+					};
+				}
+			};
+		},
+		Dialogue {
+			Id = "RandomExit";
+			Topics = array {
+				Topic {
+					Id = "start";
+					Speaker = "Source";
+					Line = "Hi, do you want to chat?";
+					Next = array {
+						Topic {
+							Id = "continue";
+							Speaker = "Target";
+							Line = "Sure!";
+							Probability = "0.5";
+							Next = array {
+								Topic {
+									Speaker = "Source";
+									Line = "Neat, want to chat some more?";
+									Next = array {
+										TopicLink {
+											Topic = "continue";
+										},
+										TopicLink {
+											Topic = "end";
+										}
+									};
+								}
+							};
+						},
+						Topic {
+							Id = "end";
+							Speaker = "Target";
+							Line = "Nah, I'm out.";
+							Probability = "0.5";
+							Next = array {
+								EndDialogue {}
+							};
+						}
+					};
+				}
+			};
+		},
+		Dialogue {
+			Id = "SimpleChoice";
+			Topics = array {
+				Topic {
+					Id = "start";
+					Line = "Hi, do you want to chat?";
+					Next = array {
+						Topic {
+							Id = "choice";
+							Speaker = "Target";
+							BranchType = "UserChoice";
+							Line = "Hm...";
+							Next = array {
+								Topic {
+									Id = "yes";
+									Line = "Sure, why not!";
+									DisplayChance = "0.7";
+								},
+								Topic {
+									Id = "no";
+									Line = "Nah, I'd rather not.";
+									DisplayChance = "0.3";
+								}
+							};
+						}
+					};
+				}
+			};
+		},
+		Dialogue {
+			Id = "DurationTest";
+			Topics = array {
+				Topic {
+					Line = "Short.";
+				},
+				Topic {
+					Line = "This is a very long dialogue line that should take considerably longer than the previous one and hopefully helps showcase the automatic duration calculation.";
+				},
+				Topic {
+					Line = "Explicit duration.";
+					Duration = 20;
+				}
+			};
+		},
+	};
+};

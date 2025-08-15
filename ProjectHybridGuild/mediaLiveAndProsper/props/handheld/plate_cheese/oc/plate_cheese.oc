@@ -1,0 +1,14 @@
+plate_cheese extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "plate_cheese";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 L Foot";
+		AttachChildNode = "Snap";		
+	};
+	EditorName = "PlateCheese";
+	EditorIcon = "media/UserInterface/PropIcons/Shortsword.png";
+	EditorCategory = 3;		
+}

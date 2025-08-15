@@ -1,0 +1,10 @@
+loveletter extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "Loveletter";
+	};
+	EditorName = "Love_Letter";
+	EditorIcon = "media/UserInterface/PropIcons/Loverletter.png";
+	EditorCategory = 3;		
+}

@@ -1,0 +1,4 @@
+Effect_Pests extends G3PropsInstance
+{
+	static var Description = #Effect_Pests/Effect_Pests_desc;
+};

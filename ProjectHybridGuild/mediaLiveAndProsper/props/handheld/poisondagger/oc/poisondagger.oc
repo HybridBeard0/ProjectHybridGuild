@@ -1,0 +1,14 @@
+poisondagger extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "poisondagger";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+	EditorName = "PoisonDagger";
+	EditorIcon = "media/UserInterface/GameItems/Large/PoisonDagger.png";
+	EditorCategory = 3;		
+}

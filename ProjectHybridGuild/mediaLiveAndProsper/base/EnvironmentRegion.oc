@@ -1,0 +1,3 @@
+EnvironmentRegion extends EnvironmentRegion
+{
+};
