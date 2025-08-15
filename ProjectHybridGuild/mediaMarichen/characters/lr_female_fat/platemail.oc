@@ -1,5 +1,0 @@
-platemail extends G3Character
-{
-	static var Description = #lr_female_fat/platemail_desc;
-
-};

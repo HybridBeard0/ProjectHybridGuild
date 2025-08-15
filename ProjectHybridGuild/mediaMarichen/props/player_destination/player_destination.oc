@@ -1,9 +1,0 @@
-player_destination extends G3Actor
-{
-	static var Description = #player_destination/player_destination_desc;
-
-	function onInit()
-	{
-		this.playAnimationByName("walk1");
-	}
-};

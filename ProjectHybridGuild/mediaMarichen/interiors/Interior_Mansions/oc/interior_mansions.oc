@@ -1,8 +1,0 @@
-interior_mansions extends InteriorScene
-{
-	static var Description = #Interior_Mansions/interior_mansions_anim_desc;
-	
-	EditorName = "Interior mansions";
-	EditorIcon = "media/UserInterface/BusinessIcons/Other/mansion_01.png";
-	EditorCategory = 0;	
-}

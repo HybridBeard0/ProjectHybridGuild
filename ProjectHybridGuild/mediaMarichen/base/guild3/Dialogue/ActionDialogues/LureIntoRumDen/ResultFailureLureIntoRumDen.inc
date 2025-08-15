@@ -1,4 +1,0 @@
-DialogueSuccessType
-{
-	Type = "Failure";
-}
