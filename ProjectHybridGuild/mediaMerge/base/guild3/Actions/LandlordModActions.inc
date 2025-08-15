@@ -1,4 +1,4 @@
-// LandlordMod Actions
+﻿// LandlordMod Actions
 "MakePeaceBetweenEnemies" = G3ActionTemplate
 {
 	ActionClassName = "SimpleExecutionAction";
@@ -299,7 +299,7 @@
 	PriceFormula = "(SocialLevel * 10) * ((25 * hasTag.BuffEasy) + (50 * hasTag.BuffNormal) + (75 * hasTag.BuffHard) + (100 * hasTag.BuffImpossible))";
 
 	BudgetPot = "Expansion";
-	BudgetPost = "Family"
+	BudgetPost = "Family";
 	CanFail = false;
 
     MoralAlignmentShift = 0.2;
