@@ -1,0 +1,5 @@
+TrialEventDesc extends GameEventTrial
+{
+	Title = "A trial has been set because of your actions";
+	Public = true;
+}

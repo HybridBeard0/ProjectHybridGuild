@@ -1,0 +1,530 @@
+MusicContainer extends MusicContainer
+{
+	BGMusicContainer = array
+	{
+		// Path = path of the sound file
+		// Rank = Commoner, Citizen Noble, HighestOfficeChamber, Sovereign
+		// Office = NoOffice, LowerOffice, MiddleOffice, HigherOffice, Sovereign
+		// MainResidence = Town, Village, Surroundings
+		// MoralAlignment = Honest, Shady, Philanthropic, Egoistic, Diplomatic, Aggressive
+		// Season = Winter, Spring, Summer, Autumn
+		// Time = Day, Night
+		BGMusic
+		{
+			Path = "media/SFX/Music/At the Gates.ogg";
+			Rank = array{true, true, true};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{true, true, true, true};
+			Time = array{true, false};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Call To Arms.ogg";
+			Rank = array{true, true, true};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{false, true, false, true, false, true};
+			Season = array{false, false, false, false};
+			Time = array{true, false};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/In the Sovereign's Castle.ogg";
+			Rank = array{true, true, true};
+			Office = array{false, false, false, false, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{true, true, true, true};
+			Time = array{true, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Legacy (Ambient).ogg";
+			Rank = array{true, true, true};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{true, false, false, false};
+			Time = array{true, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Medieval Dreams (Ambient).ogg";
+			Rank = array{true, true, true};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{true, true, true, true};
+			Time = array{false, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Oh Fortuna 1.ogg";
+			Rank = array{true, true, true};
+			Office = array{true, false, false, false, false};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, false, true, false, true, false};
+			Season = array{true, true, true, true};
+			Time = array{true, false};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Oh Fortuna 2.ogg";
+			Rank = array{true, true, true};
+			Office = array{false, true, true, false, false};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, false, true, false, true, false};
+			Season = array{true, true, true, true};
+			Time = array{true, false};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Oh Fortuna 3.ogg";
+			Rank = array{true, true, true};
+			Office = array{false, false, false, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, false, true, false, true, false};
+			Season = array{true, true, true, true};
+			Time = array{true, false};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Shadows in the Darkness.ogg";
+			Rank = array{true, true, true};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{true, true, true, true};
+			Time = array{false, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Shadows In The Darkness 1 (Night).ogg";
+			Rank = array{true, false, false};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{true, true, true, true};
+			Time = array{false, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Shadows In The Darkness 2 (Night).ogg";
+			Rank = array{false, true, false};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{true, true, true, true};
+			Time = array{false, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Shadows In The Darkness 3 (Night).ogg";
+			Rank = array{false, false, true};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{true, true, true, true};
+			Time = array{false, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Summer 1.ogg";
+			Rank = array{true, false, false};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{false, false, true, false};
+			Time = array{true, false};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Summer 3.ogg";
+			Rank = array{false, false, true};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{false, false, true, false};
+			Time = array{true, false};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Summer_Var1.ogg";
+			Rank = array{true, true, false};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{false, true, true, false};
+			Time = array{true, false};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Summer_Var2.ogg";
+			Rank = array{false, true, false};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{false, true, true, false};
+			Time = array{true, false};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/The Baker 1.ogg";
+			Rank = array{true, false, false};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{true, true, true, true};
+			Time = array{true, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/The Baker 2.ogg";
+			Rank = array{false, true, false};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{true, true, true, true};
+			Time = array{true, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/The Baker 3.ogg";
+			Rank = array{false, false, true};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{true, true, true, true};
+			Time = array{true, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/The Baker_Var1.ogg";
+			Rank = array{true, true, true};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{true, true, true, true};
+			Time = array{true, false};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/The Craftsman.ogg";
+			Rank = array{true, true, true};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{false, true, true, false};
+			Time = array{true, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/The Landsquenet 1.ogg";
+			Rank = array{true, false, false};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{true, true, true, true};
+			Time = array{true, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/The Landsquenet 2.ogg";
+			Rank = array{false, true, false};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{true, true, true, true};
+			Time = array{true, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/The Landsquenet 3.ogg";
+			Rank = array{false, false, true};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{true, true, true, true};
+			Time = array{true, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/The Scholar 1.ogg";
+			Rank = array{true, false, false};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, false, true, false, true, false};
+			Season = array{true, true, true, true};
+			Time = array{true, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/The Scholar 2.ogg";
+			Rank = array{false, true, false};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, false, true, false, true, false};
+			Season = array{true, true, true, true};
+			Time = array{true, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/The Scholar 3.ogg";
+			Rank = array{false, false, true};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, false, true, false, true, false};
+			Season = array{true, true, true, true};
+			Time = array{true, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/The Sovereign.ogg";
+			Rank = array{true, true, true};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{true, false, false, false};
+			Time = array{true, false};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/The Thief 1.ogg";
+			Rank = array{true, false, false};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{false, true, false, true, false, true};
+			Season = array{true, true, true, true};
+			Time = array{false, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/The Thief 2.ogg";
+			Rank = array{false, true, false};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{false, true, false, true, false, true};
+			Season = array{true, true, true, true};
+			Time = array{false, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/The Thief 3.ogg";
+			Rank = array{false, false, true};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{false, true, false, true, false, true};
+			Season = array{true, true, true, true};
+			Time = array{false, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/The Town.ogg";
+			Rank = array{false, true, true};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, false, false};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{false, true, true, false};
+			Time = array{true, false};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Town 1.ogg";
+			Rank = array{true, false, false};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, false, false};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{false, true, true, true};
+			Time = array{true, false};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Town 2.ogg";
+			Rank = array{false, true, false};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, false, false};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{false, true, true, true};
+			Time = array{true, false};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Town 3.ogg";
+			Rank = array{false, false, true};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, false, false};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{false, true, true, true};
+			Time = array{true, false};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Village 1.ogg";
+			Rank = array{true, false, false};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{false, true, false};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{false, true, true, true};
+			Time = array{true, false};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Village 3.ogg";
+			Rank = array{true, true, true};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{false, true, false};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{false, true, true, true};
+			Time = array{true, false};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Village 4.ogg";
+			Rank = array{false, true, false};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{false, true, false};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{false, true, true, true};
+			Time = array{true, false};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Village 5.ogg";
+			Rank = array{false, false, true};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{false, true, false};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{false, true, true, true};
+			Time = array{true, false};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Wicked Neighbourhood.ogg";
+			Rank = array{true, true, true};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{false, true, false, true, false, true};
+			Season = array{true, true, true, true};
+			Time = array{false, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Winter 1.ogg";
+			Rank = array{true, false, false};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{true, false, false, false};
+			Time = array{true, false};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Winter 2.ogg";
+			Rank = array{false, true, false};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{true, false, false, false};
+			Time = array{true, false};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Winter 3.ogg";
+			Rank = array{false, false, true};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{true, false, false, false};
+			Time = array{true, false};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Winter_Var1.ogg";
+			Rank = array{true, false, false};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{true, false, false, false};
+			Time = array{false, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Winter_Var2.ogg";
+			Rank = array{false, true, false};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{true, false, false, false};
+			Time = array{false, true};
+		};
+		BGMusic
+		{
+			Path = "media/SFX/Music/Winter_Var3.ogg";
+			Rank = array{false, false, true};
+			Office = array{true, true, true, true, true};
+			MainResidence = array{true, true, true};
+			MoralAlignment = array{true, true, true, true, true, true};
+			Season = array{true, false, false, false};
+			Time = array{false, true};
+		};
+	);
+
+	EventMusicContainer = array
+	{
+		// Name = name of the event
+		// Category = name of the event category
+		// Priority = priority of the event (1 = lowest)
+		// Path = path of the sound file
+		EventMusic
+		{
+			Name = "Fire_Lvl_1";
+			Category = "Fire";
+			Priority = 3;
+			Path = "media/SFX/Music/Feurio 1.ogg";
+		};
+		EventMusic
+		{
+			Name = "Fire_Lvl_2";
+			Category = "Fire";
+			Priority = 3;
+			Path = "media/SFX/Music/Feurio 2.ogg";
+		};
+		EventMusic
+		{
+			Name = "Fire_Lvl_3";
+			Category = "Fire";
+			Priority = 3;
+			Path = "media/SFX/Music/Feurio 3.ogg";
+		};
+		EventMusic
+		{
+			Name = "Fight";
+			Category = "";
+			Priority = 2;
+			Path = "media/SFX/Music/Fight for your life.ogg";
+		};
+		EventMusic
+		{
+			Name = "TitleScreen";
+			Category = "";
+			Priority = 4;
+			Path = "media/SFX/Music/TitleScreen.ogg";
+		};
+		EventMusic
+		{
+			Name = "HarshTimes";
+			Category = "";
+			Priority = 4;
+			Path = "media/SFX/Music/Punishment from God.ogg";
+		};
+		EventMusic
+		{
+			Name = "Wedding";
+			Category = "";
+			Priority = 1;
+			Path = "media/SFX/Music/The Wedding.ogg";
+		};
+	);
+};
