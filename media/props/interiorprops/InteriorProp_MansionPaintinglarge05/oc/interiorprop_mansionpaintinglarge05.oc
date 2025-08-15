@@ -1,0 +1,10 @@
+interiorprop_mansionpaintinglarge05 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "interiorprop_mansionpaintinglarge05";
+	};
+	EditorName = "Interiorprop MansionPaintingLarge05";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}
