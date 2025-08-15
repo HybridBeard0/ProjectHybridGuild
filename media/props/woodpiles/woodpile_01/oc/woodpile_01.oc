@@ -1,0 +1,10 @@
+woodpile_01 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "woodpile_01";
+	};
+	EditorName = "Woodpile01";
+	EditorIcon = "media/UserInterface/PropIcons/Woodpile01.png";
+	EditorCategory = 3;		
+}

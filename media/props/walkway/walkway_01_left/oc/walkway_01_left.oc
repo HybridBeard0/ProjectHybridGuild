@@ -1,0 +1,13 @@
+walkway_01_left extends G3PropsInstance
+{
+	CustomFadeAlpha = 1.0;
+	static var Description = ActorDesc
+	{
+		Visual = "walkway_01_left";
+	};
+	EditorName = "walkway_01_left";
+	EditorIcon = "media/UserInterface/PropIcons/walkway_01.png";
+	EditorCategory = 4;	
+	Destructible = false;
+	BlocksBuildings = true;
+}
