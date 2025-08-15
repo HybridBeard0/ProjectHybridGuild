@@ -1,0 +1,155 @@
+interiorprop_church_bench extends G3PropsInstance
+{
+	static var Description = G3PropDesc
+	{
+		Visual = "interiorprop_church_bench";
+
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc
+				{
+					Name = "Snap_Audience_01";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Animation = "Sitting_bench_praying2";
+							Context = "SitOnBench";
+						},
+						G3SnapPointAnimation 
+						{
+							Animation = "Sitting_bench_praying1";
+							Context = "SitOnBench";
+						},
+						G3SnapPointAnimation 
+						{
+							Animation = "Sitting_bench_praying1";
+							Context = "SitOnBench";
+						},
+						G3SnapPointAnimation 
+						{
+							Animation = "Sitting_bench_praying1";
+							Context = "SitOnBench";
+						},
+						G3SnapPointAnimation 
+						{
+							Animation = "Sitting_bench_praying2";
+							Context = "SitOnBench";
+						},
+						G3SnapPointAnimation 
+						{
+							Animation = "sitting_bench1";
+							Context = "WeddingScene";
+						},
+						G3SnapPointAnimation 
+						{
+							Animation = "idle_bench1";
+							Context = "WeddingScene";
+							Repeat = -1;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "Snap_Audience_02";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Animation = "Sitting_bench_praying2";
+							Context = "SitOnBench";
+						},
+						G3SnapPointAnimation 
+						{
+							Animation = "Sitting_bench_praying1";
+							Context = "SitOnBench";
+						},
+						G3SnapPointAnimation 
+						{
+							Animation = "Sitting_bench_praying1";
+							Context = "SitOnBench";
+						},
+						G3SnapPointAnimation 
+						{
+							Animation = "Sitting_bench_praying1";
+							Context = "SitOnBench";
+						},
+						G3SnapPointAnimation 
+						{
+							Animation = "Sitting_bench_praying2";
+							Context = "SitOnBench";
+						},
+						G3SnapPointAnimation 
+						{
+							Animation = "sitting_bench1";
+							Context = "WeddingScene";
+						},
+						G3SnapPointAnimation 
+						{
+							Animation = "idle_bench1";
+							Context = "WeddingScene";
+							Repeat = -1;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "Snap_Audience_03";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Animation = "Sitting_bench_praying2";
+							Context = "SitOnBench";
+						},
+						G3SnapPointAnimation 
+						{
+							Animation = "Sitting_bench_praying1";
+							Context = "SitOnBench";
+						},
+						G3SnapPointAnimation 
+						{
+							Animation = "Sitting_bench_praying1";
+							Context = "SitOnBench";
+						},
+						G3SnapPointAnimation 
+						{
+							Animation = "Sitting_bench_praying1";
+							Context = "SitOnBench";
+						},
+						G3SnapPointAnimation 
+						{
+							Animation = "Sitting_bench_praying2";
+							Context = "SitOnBench";
+						},
+						G3SnapPointAnimation 
+						{
+							Animation = "sitting_bench1";
+							Context = "WeddingScene";
+						},
+						G3SnapPointAnimation 
+						{
+							Animation = "idle_bench1";
+							Context = "WeddingScene";
+							Repeat = -1;
+						},
+					};
+				},
+			};
+		};
+	
+		Interaction = G3ActorInteraction {
+			Name = "$props.name.Bench";
+			TooltipText = "$action.Sit";
+			TooltipIcon = "SitOnBench";
+			ContextAction = "SitOnBench";
+			ActionFailureMessage = "SitInteractionError";
+		};
+	};
+	
+	Interactable = true;
+	
+	EditorName = "InteriorProp Church Bench";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

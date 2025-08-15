@@ -1,0 +1,68 @@
+interiorprop_church_baptismalfont extends G3PropsInstance
+{
+	static var Description = G3PropDesc
+	{
+		Visual = "interiorprop_church_baptismalfont";
+		
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc
+				{
+					Name = "interact_00";
+					Position = ( 0.0, -40.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Animation = "opendoor";
+							Context = "BuyReligion";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "interact_01";
+					Position = ( 40.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 270.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Animation = "opendoor";
+							Context = "BuyReligion";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "interact_02";
+					Position = ( -40.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 90.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Animation = "opendoor";
+							Context = "BuyReligion";
+						},
+					};
+				},
+			};
+		};
+	
+		Interaction = G3ActorInteraction {
+			Name = "$props.name.BaptismalFont";
+			TooltipText = "$action.BuyReligion";
+			TooltipIcon = "BuyReligion";
+			ContextAction = "BuyReligion";
+			ActionFailureMessage = "BuyReligionInteractionError";
+		};
+	};
+	
+	Interactable = true;
+	
+	EditorName = "Interiorprop Church Baptismalfont";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}
