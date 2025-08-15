@@ -1,0 +1,42 @@
+PoorHouseLevel extends G3BuildingTemplateLevel
+{
+    NBAddons = 10;
+
+	Results = array 
+	{
+		TagEffect
+		{
+			Tags = array{"PoorHouse"};
+		},
+		ModifierEffect
+		{
+			ActorValue = "Productivity";
+			Mod = -0.05;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "MaxEmployees";
+			Mod = 200.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "StorageSlots";
+			Mod = 10.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "StorageSpace";
+			Mod = 60.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "BuildingSecurity";
+			Mod = 1.0;
+			Recover = true;
+		};
+	};
+};
