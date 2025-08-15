@@ -1,0 +1,14 @@
+dagger extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "dagger";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+	EditorName = "Dagger";
+	EditorIcon = "media/UserInterface/PropIcons/Dagger.png";
+	EditorCategory = 3;		
+}

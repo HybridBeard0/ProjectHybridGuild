@@ -1,0 +1,10 @@
+grinder extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "grinder";
+	};
+	EditorName = "Grinder";
+	EditorIcon = "media/UserInterface/PropIcons/Grinder.png";
+	EditorCategory = 3;		
+}

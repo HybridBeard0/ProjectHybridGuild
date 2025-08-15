@@ -1,0 +1,15 @@
+G3ActorDesc
+{
+	Visual = "torch";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#torch/list_walks_animations,
+		);
+	};
+	AttachType = "AttachToNode";
+	AttachParentNode = "Bip001 R Hand";
+	AttachChildNode = "Snap";
+	CrowdControlRadius = 0.000;
+}

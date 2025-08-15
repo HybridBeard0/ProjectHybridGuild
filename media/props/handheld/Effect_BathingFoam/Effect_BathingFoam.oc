@@ -1,0 +1,4 @@
+Effect_BathingFoam extends G3PropsInstance
+{
+	static var Description = #Effect_BathingFoam/Effect_BathingFoam_desc;
+};
