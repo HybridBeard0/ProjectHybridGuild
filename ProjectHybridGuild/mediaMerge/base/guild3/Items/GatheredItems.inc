@@ -423,7 +423,6 @@
 	GatheringBuilding = "Well";
 };
 
-//--- IRON OVERHAUL MERGE START ---
 "Berry" = G3Item
 {
 	Type = 1;
@@ -518,5 +517,4 @@
 	};
 	GatheringBuilding = "Grove";
 };
-//--- IRON OVERHAUL MERGE END ---
 

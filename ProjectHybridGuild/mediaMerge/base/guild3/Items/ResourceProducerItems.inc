@@ -201,7 +201,6 @@
 	SeasonAvailability = array{1, 1, 1, 1};
 };
 
-//--- IRON OVERHAUL MERGE START ---
 "LesserQualitySaltStone" = G3Item
 {
 	Type = 1;
@@ -235,4 +234,3 @@
 	};
 	SeasonAvailability = array{1, 1, 1, 1};
 };
-//--- IRON OVERHAUL MERGE END ---
