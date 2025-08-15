@@ -1,0 +1,12 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 8463583257;
+			Name = "Flag_Wind";
+			AnimationName = "flag_wall_wind";
+		},
+	);
+}

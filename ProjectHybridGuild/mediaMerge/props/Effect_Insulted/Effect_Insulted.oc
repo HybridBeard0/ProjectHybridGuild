@@ -1,0 +1,4 @@
+Effect_Insulted extends G3PropsInstance
+{
+	static var Description = #Effect_Insulted/Effect_Insulted_desc;
+};

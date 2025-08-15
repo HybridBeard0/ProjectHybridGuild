@@ -1,0 +1,10 @@
+faggot extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "faggot";
+	};
+	EditorName = "Faggot";
+	EditorIcon = "media/UserInterface/PropIcons/Faggot.png";
+	EditorCategory = 3;		
+}

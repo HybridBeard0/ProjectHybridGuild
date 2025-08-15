@@ -1,0 +1,55 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1487273882;
+			Name = "idle1";
+			AnimationName = "idle1";
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 1207;
+					FadeOut = 1000.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1487273882;
+			Name = "portrait_fixe";
+			AnimationName = "portrait_fixe";
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 1207;
+					FadeOut = 1000.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1487273883;
+			Name = "walk1";
+			AnimationName = "idle1";
+			Triggers = array
+			(
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "BoatFoam_small_01";
+					RefNodeOverride = "foam_left";
+				},
+				SoundTrigger
+				{
+					SoundEvent = 1207;
+					FadeOut = 1000.000;
+				},
+			);
+		},
+	);
+}

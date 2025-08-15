@@ -1,0 +1,17 @@
+lr_male_standard/lr_male_standard_desc
+{
+	Visual = "noble2male_standard_game";
+
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 40;
+
+	Poor = false;
+	MiddleClass = false;
+	Rich = true;
+	
+	Male = true;
+	
+	Player = false;
+	Employee = false;
+}

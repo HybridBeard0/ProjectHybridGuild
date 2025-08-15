@@ -1,0 +1,10 @@
+construction_site_abandoned_02 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "construction_site_abandoned_02";
+	};
+	EditorName = "Construction site abandoned02";
+	EditorIcon = "media/UserInterface/PropIcons/Constructionsiteabandoned02.png";
+	EditorCategory = 4;		
+}

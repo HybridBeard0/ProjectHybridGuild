@@ -1,0 +1,9 @@
+smithy_03 extends BuildingVisualUpgrade
+{
+	static var Description = ActorDesc
+	{
+		Visual = "blacksmith_03";
+	};
+	BusinessLevel = 3;
+	UpgradeOf = smithy;
+}

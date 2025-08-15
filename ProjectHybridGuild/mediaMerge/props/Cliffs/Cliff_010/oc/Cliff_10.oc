@@ -1,0 +1,16 @@
+Cliff_10 extends G3PropsInstance
+{
+	Walkable = true; // whenever you change the 'walkable' property of a prop, make sure to correctly move it between 'prop_packages.oo' and 'walkable_prop_packages.oo'. This ensures that all walkable props are preloaded correctly before a game starts.
+	CustomFadeAlpha = 1.0;
+
+	Destructible = false;
+	BlocksBuildings = true;
+	
+	static var Description = ActorDesc
+	{
+		Visual = "Cliff_10";
+	};
+	EditorName = "Cliff10";
+	EditorIcon = "media/UserInterface/PropIcons/Cliff10.png";
+	EditorCategory = -1; // needs to be pickable so we define it as -1
+}

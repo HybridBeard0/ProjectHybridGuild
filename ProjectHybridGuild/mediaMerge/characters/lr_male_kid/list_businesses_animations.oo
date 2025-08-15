@@ -1,0 +1,252 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1606397246;
+			Name = "praying_listen";
+			AnimationName = "praying_listen";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1606397256;
+			Name = "praying_looksky";
+			AnimationName = "praying_looksky";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1606397266;
+			Name = "praying_knees";
+			AnimationName = "praying_knees";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1606903445;
+			Name = "SitOnChairBarber";
+			AnimationName = "SitOnChairBarber";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1606903943;
+			Name = "patient_standing1";
+			AnimationName = "patient_standing1";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1606903998;
+			Name = "patient_standing2";
+			AnimationName = "patient_standing2";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1606904026;
+			Name = "patient_standing3";
+			AnimationName = "patient_standing3";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1606904036;
+			Name = "patient_laying";
+			AnimationName = "patient_laying";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1700000008;
+			Name = "read_bible";
+			AnimationName = "read_bible";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 2021;
+					FadeStart = 200.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1599475061;
+			Name = "ServiceBathTub";
+			AnimationName = "ServiceBathTub";
+			Looping = true;
+		},
+		AnimationDesc
+		{
+			ID = 1596209142;
+			Name = "StackingBoxes1";
+			AnimationName = "packing_sacks";
+			Looping = true;
+			Triggers = array
+			(
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 19;
+					DespawnFrame = 113;
+					SpawnName = "box/box";
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1598271993;
+			Name = "StackingBoxes2";
+			AnimationName = "packing_lumber";
+			Looping = true;
+			Triggers = array
+			(
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 19;
+					DespawnFrame = 110;
+					SpawnName = "box/box";
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1608130594;
+			Name = "StackingBoxes3";
+			AnimationName = "packing_lumber2";
+			Looping = true;
+			Triggers = array
+			(
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 19;
+					DespawnFrame = 85;
+					SpawnName = "box/box";
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1597736030;
+			Name = "summoning";
+			AnimationName = "summoning";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1599643406;
+			Name = "CleaningFish";
+			AnimationName = "CleaningFish";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1467829795;
+			Name = "tailor1";
+			AnimationName = "tailor1";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+	);
+}

@@ -1,0 +1,31 @@
+GravediggerFemale extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = true;
+	MiddleClass = false;
+	Rich = false;
+	
+	Male = false;
+	Player = true;
+	Employee = true;
+	Profession = true;
+
+	LowResCharacter = "gravedigger";
+	HighResCharacter = "commoner4";
+	
+	BodyTexturesDiff= array
+	{
+		"gravedigger_female_diff"
+	};
+	BodyTexturesNorm= array
+	{
+		"gravedigger_female_NORM"
+	};
+	BodyTexturesMask= array
+	{
+		"gravedigger_female_MASK"
+	};
+}

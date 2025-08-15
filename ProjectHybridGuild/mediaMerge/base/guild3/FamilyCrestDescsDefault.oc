@@ -1,0 +1,199 @@
+FamilyCrestDescsDefault extends FamilyCrestDescs
+{
+	Crests = array
+	{
+		Crests1 extend FamilyCrestDesc
+		{
+			Id = 1;
+			TextureName = "Shield1";
+			CrestColor = array{0.909803921568627, 0.796078431372549, 0.0274509803921569};
+		},
+		Crests2 extend FamilyCrestDesc
+		{
+			Id = 2;
+			TextureName = "Shield2";
+			CrestColor = array{0.0274509803921569, 0.27843137254902, 0.384313725490196};
+		},
+		Crests3 extend FamilyCrestDesc
+		{
+			Id = 3;
+			TextureName = "Shield3";
+			CrestColor = array{0.172549019607843, 0.576470588235294, 0.286274509803922};
+		},
+		Crests4 extend FamilyCrestDesc
+		{
+			Id = 4;
+			TextureName = "Shield4";
+			CrestColor = array{0.631372549019608, 0.258823529411765, 0.0117647058823529};
+		},
+		Crests5 extend FamilyCrestDesc
+		{
+			Id = 5;
+			TextureName = "Shield5";
+			CrestColor = array{0.764705882352941, 0, 0};
+		},
+		Crests6 extend FamilyCrestDesc
+		{
+			Id = 6;
+			TextureName = "Shield6";
+			CrestColor = array{0, 0.352941176470588, 0.784313725490196};
+		},
+		Crests7 extend FamilyCrestDesc
+		{
+			Id = 7;
+			TextureName = "Shield7";
+			CrestColor = array{0.662745098039216, 0.0705882352941177, 0.0705882352941177};
+		},
+		Crests8 extend FamilyCrestDesc
+		{
+			Id = 8;
+			TextureName = "Shield8";
+			CrestColor = array{0.584313725490196, 0.129411764705882, 0.274509803921569};
+		},
+		Crests9 extend FamilyCrestDesc
+		{
+			Id = 9;
+			TextureName = "Shield9";
+			CrestColor = array{0.584313725490196, 0.8, 0.67843137254902};
+		},
+		Crests10 extend FamilyCrestDesc
+		{
+			Id = 10;
+			TextureName = "Shield10";
+			CrestColor = array{0, 0.00784313725490196, 0.549019607843137};
+		},
+		Crests11 extend FamilyCrestDesc
+		{
+			Id = 11;
+			TextureName = "Shield11";
+			CrestColor = array{0, 0, 0};
+		},
+		Crests12 extend FamilyCrestDesc
+		{
+			Id = 12;
+			TextureName = "Shield12";
+			CrestColor = array{0.917647058823529, 0.941176470588235, 0.988235294117647};
+		},
+		Crests13 extend FamilyCrestDesc
+		{
+			Id = 13;
+			TextureName = "Shield13";
+			CrestColor = array{0.509803921568627, 0.164705882352941, 0.164705882352941};
+		},
+		Crests14 extend FamilyCrestDesc
+		{
+			Id = 14;
+			TextureName = "Shield14";
+			CrestColor = array{0.682352941176471, 0.0784313725490196, 0.443137254901961};
+		},
+		Crests15 extend FamilyCrestDesc
+		{
+			Id = 15;
+			TextureName = "Shield15";
+			CrestColor = array{0, 0.470588235294118, 0.117647058823529};
+		},
+		Crests16 extend FamilyCrestDesc
+		{
+			Id = 16;
+			TextureName = "Shield16";
+			CrestColor = array{0.796078431372549, 0.498039215686275, 0.164705882352941};
+		},
+		Crests17 extend FamilyCrestDesc
+		{
+			Id = 17;
+			TextureName = "Shield17";
+			CrestColor = array{0.67843137254902, 0.509803921568627, 0.364705882352941};
+		},
+		Crests18 extend FamilyCrestDesc
+		{
+			Id = 18;
+			TextureName = "Shield18";
+			CrestColor = array{0.92156862745098, 0.0980392156862745, 0};
+		},
+		Crests19 extend FamilyCrestDesc
+		{
+			Id = 19;
+			TextureName = "Shield19";
+			CrestColor = array{0.325490196078431, 0.00392156862745098, 0.505882352941176};
+		},
+		Crests20 extend FamilyCrestDesc
+		{
+			Id = 20;
+			TextureName = "Shield20";
+			CrestColor = array{0.705882352941177, 0.203921568627451, 0.203921568627451};
+		},
+		Crests21 extend FamilyCrestDesc
+		{
+			Id = 21;
+			TextureName = "Shield21";
+			CrestColor = array{0.117647058823529, 0.537254901960784, 0.43921568627451};
+		},
+		Crests22 extend FamilyCrestDesc
+		{
+			Id = 22;
+			TextureName = "Shield22";
+			CrestColor = array{0.290196078431373, 0.12156862745098, 0.47843137254902};
+		},
+		Crests23 extend FamilyCrestDesc
+		{
+			Id = 23;
+			TextureName = "Shield23";
+			CrestColor = array{0.658823529411765, 0.223529411764706, 0.83921568627451};
+		},
+		Crests24 extend FamilyCrestDesc
+		{
+			Id = 24;
+			TextureName = "Shield24";
+			CrestColor = array{0.576470588235294, 0.635294117647059, 0.0509803921568627};
+		},
+		Crests25 extend FamilyCrestDesc
+		{
+			Id = 25;
+			TextureName = "Shield25";
+			CrestColor = array{0.576470588235294, 0.592156862745098, 0.588235294117647};
+		},
+		Crests26 extend FamilyCrestDesc
+		{
+			Id = 26;
+			TextureName = "Shield26";
+			CrestColor = array{0.129411764705882, 0.572549019607843, 0.745098039215686};
+		},
+		Crests27 extend FamilyCrestDesc
+		{
+			Id = 27;
+			TextureName = "Shield27";
+			CrestColor = array{0.345098039215686, 0.0941176470588235, 0.00784313725490196};
+		},
+		Crests28 extend FamilyCrestDesc
+		{
+			Id = 28;
+			TextureName = "Shield28";
+			CrestColor = array{0.843137254901961, 0.431372549019608, 0.635294117647059};
+		},
+		Crests29 extend FamilyCrestDesc
+		{
+			Id = 29;
+			TextureName = "Shield29";
+			CrestColor = array{0.76078431372549, 0.819607843137255, 0.580392156862745};
+		},
+		Crests30 extend FamilyCrestDesc
+		{
+			Id = 30;
+			TextureName = "Shield30";
+			CrestColor = array{0.474509803921569, 0.2, 0.490196078431373};
+		},
+		Crests31 extend FamilyCrestDesc
+		{
+			Id = 31;
+			TextureName = "Shield31";
+			CrestColor = array{0.596078431372549, 0.749019607843137, 0.392156862745098};
+		},
+		Crests32 extend FamilyCrestDesc
+		{
+			Id = 32;
+			TextureName = "Shield32";
+			CrestColor = array{0.917647058823529, 0.803921568627451, 0.545098039215686};
+		},
+	};
+};
+

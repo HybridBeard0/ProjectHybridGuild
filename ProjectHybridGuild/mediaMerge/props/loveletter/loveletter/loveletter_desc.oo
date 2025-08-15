@@ -1,0 +1,14 @@
+G3ActorDesc
+{
+	Visual = "loveletter";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#loveletter/list_animations,
+		);
+	};
+	AttachType = "AttachToNode";
+	AttachParentNode = "Bip001 R Hand";
+	AttachChildNode = "snap";
+}

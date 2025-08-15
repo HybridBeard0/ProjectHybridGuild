@@ -1,0 +1,10 @@
+lr_female_fat/lr_female_fat_desc
+
+{
+	Visual = "citizen2female_fat_game";
+
+	Poor = false;
+	Male = true;
+	TrotSpeed = 127994658762799450000.000;
+	CustomCollisionRadius = 8109777920.000;
+}

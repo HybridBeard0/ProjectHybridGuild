@@ -1,0 +1,10 @@
+interiorprop_deco_bucket extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "interiorprop_deco_bucket";
+	};
+	EditorName = "InteriorProp Deco Bucket";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

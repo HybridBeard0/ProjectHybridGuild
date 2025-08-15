@@ -1,0 +1,41 @@
+ReligionSettings extends ReligionContainer
+{
+	NpcReligionChance = 0.2f; 			// Chance (0% = 0.0f, 100% = 1.0f) so spawned npc gets random religion
+	NoReligionId = "NoReligion"; 		// Id from below list which defines "no religion"
+	DefaultReligion = "NoReligion"; 	// Default religion for the character creation screen
+	// List of all religions in game
+	// Order in this files defines the order how religions are listed like in the character creation screen
+	// Id of ReligionDesc has to be unique
+	// DisplayName is used for displaying in UI
+	// Tooltip for religion buttons in UI (eg character selection)
+	// ApplyResultObject defines the ResultObject which is applied when religion is chosen for none npc (can be empty if nothing should be applied)
+	// ApplyNpcResultObject defines the ResultObject which is applied when religion is chosen for npc (can be empty if nothing should be applied)
+	
+    Religions = array
+    {
+		ReligionDesc
+        {
+			Id = "Catholic";
+			DisplayName = "$gui.Religion.Catholic";
+			Tooltip = "$gui.Religion.CatholicDesc";
+			ApplyResultObject = "CatholicPlayerForward";
+			ApplyNpcResultObject = "ReligionCatholicEffect";
+		},
+		ReligionDesc
+        {
+			Id = "NoReligion";
+			DisplayName = "$gui.Religion.NoReligion";
+			Tooltip = "$gui.Religion.NoReligionDesc";
+			ApplyResultObject = "SecularPlayerForward";
+			ApplyNpcResultObject = "ReligionSecularEffect";
+		},
+		ReligionDesc
+        {
+			Id = "Protestant";
+			DisplayName = "$gui.Religion.Protestant";
+			Tooltip = "$gui.Religion.ProtestantDesc";
+			ApplyResultObject = "ProtestantPlayerForward";
+			ApplyNpcResultObject = "ReligionProtestantEffect";
+		},
+	};
+};

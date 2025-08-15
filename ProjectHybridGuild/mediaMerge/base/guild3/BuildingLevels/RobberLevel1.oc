@@ -1,0 +1,42 @@
+RobberLevel1 extends G3BuildingTemplateLevel
+{
+	NBAddons = 11;
+
+	Results = array 
+	{
+		TagEffect
+		{
+			Tags = array{"IsLowTier", "NoFrontStore", "RobberCamp"};
+		},
+		ModifierEffect
+		{
+			ActorValue = "MaxEmployees";
+			Mod = 2.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "MaxTransporters";
+			Mod = 1.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "StorageSlots";
+			Mod = 6.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "StorageSpace";
+			Mod = 40.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "BuildingSecurity";
+			Mod = 1.0;
+			Recover = true;
+		};
+	};
+};

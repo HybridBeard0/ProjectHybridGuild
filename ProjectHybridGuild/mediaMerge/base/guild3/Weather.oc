@@ -1,0 +1,35 @@
+Weather extends WeatherTypes
+{
+	Weather = map{
+		"Rain" = WeatherDefinition{
+			Package = "vfx";
+			EffectName = "Rain_1024x1024_H";
+			OutsideSounds = array{ 1079 };
+			InsideSounds = array{ 1082 };
+		},
+		"Thunder" = WeatherDefinition{
+			Package = "vfx";
+			EffectName = "Thunder";
+			OutsideSounds = array{ 1079, 1080, 3003 };
+			InsideSounds = array{ 1082, 1083, 3005 };
+		},
+		"Snow" = WeatherDefinition{
+			Package = "vfx";
+			EffectName = "Snow_Flakes_Lg";
+			OutsideSounds = array{ 1068 };
+			InsideSounds = array{ 1078 };
+		},
+		"Snowstorm" = WeatherDefinition{
+			Package = "vfx";
+			EffectName = "Snowstorm";
+			OutsideSounds = array{ 1068, 1067 };
+			InsideSounds = array{ 1078 };
+		},
+		"ContinualRainfall" = WeatherDefinition{
+			Package = "vfx";
+			EffectName = "ContinualRainfall";
+			OutsideSounds = array{ 1079, 1080, 1081 };
+			InsideSounds = array{ 1082, 1083, 1084 };
+		},
+	};
+};

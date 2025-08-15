@@ -1,0 +1,4 @@
+DefaultNewCity extends City
+{
+	LawSystem = "base/LawSystemDefault";
+};

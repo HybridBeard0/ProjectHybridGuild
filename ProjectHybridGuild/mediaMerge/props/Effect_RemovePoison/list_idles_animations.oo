@@ -1,0 +1,22 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1480524687;
+			Name = "idle1";
+			AnimationName = "idle1";
+			Looping = true;
+			Triggers = array
+			(
+				EffectTrigger
+				{
+					IsRequired = true;
+					EffectName = "Effect_RemovePoison";
+					RefNodeOverride = "Snap";
+				},
+			);
+		},
+	);
+}

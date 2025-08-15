@@ -1,0 +1,11 @@
+ActorDesc
+{
+	Visual = "target_guard_selection";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#target_guard_selection/list_idles_animations,
+		);
+	};
+}

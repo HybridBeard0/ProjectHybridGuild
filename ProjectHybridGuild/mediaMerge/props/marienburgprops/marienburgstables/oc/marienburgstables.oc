@@ -1,0 +1,10 @@
+marienburgstables extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "marienburgstables";
+	};
+	EditorName = "marienburgstables";
+	EditorIcon = "media/UserInterface/PropIcons/Kiosque01.png";
+	EditorCategory = 5;		
+}

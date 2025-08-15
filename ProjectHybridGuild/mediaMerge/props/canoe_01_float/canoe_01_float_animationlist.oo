@@ -1,0 +1,12 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1611743126;
+			Name = "Idle";
+			AnimationName = "canoefloat";
+		},
+	);
+}

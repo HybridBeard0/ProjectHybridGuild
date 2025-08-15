@@ -1,0 +1,6 @@
+ApplyForOffice_Open extends GameEventApplyForOfficeOpen
+{
+	Title = "An office is open";
+	Public = true;
+	Political = true;
+};

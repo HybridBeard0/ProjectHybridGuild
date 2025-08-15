@@ -1,0 +1,13 @@
+cart_small extends G3Actor
+{
+	static var Description = #cart_small/cart_small_desc;
+
+	function onInit()
+	{
+		this.playAnimationByName("walk1");
+	}
+	
+	EditorName = "CartSmall";
+	EditorIcon = "media/UserInterface/PropIcons/CartSmall.png";
+	EditorCategory = 3;		
+};

@@ -1,0 +1,87 @@
+ButcherLevel1 extends G3BuildingTemplateLevel
+{
+	NBAddons = 15;
+	
+	Results = array 
+	{
+		TagEffect
+		{
+			Tags = array{"IsLowTier"};
+		},
+		ModifierEffect
+		{
+			ActorValue = "Productivity";
+			Mod = 0.1;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "MaxEmployees";
+			Mod = 2.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "MaxTransporters";
+			Mod = 1.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "StorageSlots";
+			Mod = 10.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "StorageSpace";
+			Mod = 60.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "FrontStoreSlots";
+			Mod = 2.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "FrontStoreSpace";
+			Mod = 60.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "FireProtection";
+			Mod = 1.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "BuildingSecurity";
+			Mod = 1.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "Attractiveness";
+			Mod = 10.0;
+			Recover = true;
+		};
+		// *** INITIAL STOCK ***
+		FunctionTransferItems
+		{
+			Receiver = "Target";
+			SpecificItems = array { "Cattle" };
+			MinAmount = 3;
+			MaxAmount = 3;
+		};
+		FunctionTransferItems
+		{
+			Receiver = "Target";
+			SpecificItems = array { "Pig" };
+			MinAmount = 2;
+			MaxAmount = 2;
+		};
+	};
+};

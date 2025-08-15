@@ -1,0 +1,28 @@
+InteriorProp_SoundRats_Residence extends InteriorProp_Sounds/InteriorProp_SoundBase
+{
+	// SoundSettings = G3SoundSettings {
+	// 	PlayInWinter = true | false;  // These control during which seasons the sound is active.
+	// 	PlayInSpring = true | false;  // These control during which seasons the sound is active.
+	// 	PlayInSummer = true | false;  // These control during which seasons the sound is active.
+	// 	PlayInFall = true | false;    // These control during which seasons the sound is active.
+	// 	PlayInIronSky = true | false; // These control if the sounds play during sun/rain/snow weather.
+	// 	PlayInRain = true | false;    // These control if the sounds play during sun/rain/snow weather.
+	// 	PlayInSnow = true | false;    // These control if the sounds play during sun/rain/snow weather.
+	// 	PlayInDay = true | false;     // These control if the sounds play during daytime/nighttime.
+	// 	PlayInNight = true | false;   // These control if the sounds play during daytime/nighttime.
+	// 	EditorName = "Editor Name";   // The editor name of the sound to play. The sound definition has to have an EditorName as well.
+	// 	Min3DRadius = 5.0;            // Start and end distance for fading out the sound.
+	// 	Max3DRadius = 1000.0;         // Start and end distance for fading out the sound.
+	// 	MinInterval = 1.0;            // Min and max interval in seconds between the sounds being played.
+	// 	MaxInterval = 15.0;           // Min and max interval in seconds between the sounds being played.
+	// };
+
+	SoundSettings = G3SoundSettings {
+		EditorName = "Rats";
+	 	Min3DRadius = 5.0;
+	 	Max3DRadius = 600.0;
+		MinInterval = 8.0;
+		MaxInterval = 20.0;
+	};
+	EditorName = "Interior sound_prop rats residence";
+}

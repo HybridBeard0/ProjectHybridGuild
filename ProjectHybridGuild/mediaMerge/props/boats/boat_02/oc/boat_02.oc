@@ -1,0 +1,11 @@
+boat_02 extends G3Character
+{
+	static var Description = ActorDesc
+	{
+		Visual = "boat_02";
+	};
+	EditorName = "Boat02";
+	EditorIcon = "media/UserInterface/PropIcons/Boat02.png";
+	EditorCategory = 3;		
+	IsBigVehicle = true;
+}

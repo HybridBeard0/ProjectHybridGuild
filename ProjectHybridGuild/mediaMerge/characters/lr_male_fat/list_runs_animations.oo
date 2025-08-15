@@ -1,0 +1,50 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1429814715;
+			Name = "run1";
+			AnimationName = "run1";
+			Motion = 100.000;
+		},
+		AnimationDesc
+		{
+			ID = 1438352905;
+			Name = "run2";
+			AnimationName = "run2";
+			Looping = true;
+		},
+		AnimationDesc
+		{
+			ID = 1438352926;
+			Name = "run3";
+			AnimationName = "run3";
+			Looping = true;
+		},
+		AnimationDesc
+		{
+			ID = 1438352938;
+			Name = "run4";
+			AnimationName = "run4";
+			Looping = true;
+		},
+		AnimationDesc
+		{
+			ID = 1483732738;
+			Name = "run_torch";
+			AnimationName = "run_torch";
+			Looping = true;
+			Motion = 100.000;
+		},
+		AnimationDesc
+		{
+			ID = 1483455561;
+			Name = "run_walkstick";
+			AnimationName = "run_walkstick";
+			Looping = true;
+			Motion = 100.000;
+		},
+	);
+}

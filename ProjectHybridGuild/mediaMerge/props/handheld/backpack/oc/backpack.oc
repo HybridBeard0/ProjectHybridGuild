@@ -1,0 +1,14 @@
+backpack extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "backpack";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 Spine1";
+		AttachChildNode = "Snap";
+	};
+	EditorName = "Backpack";
+	EditorIcon = "media/UserInterface/PropIcons/Backpack.png";
+	EditorCategory = 3;		
+}

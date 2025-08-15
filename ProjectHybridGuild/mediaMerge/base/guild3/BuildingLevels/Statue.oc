@@ -1,0 +1,41 @@
+Statue extends G3BuildingTemplateLevel
+{
+	Results = array 
+	{
+		SpreadEffect // the statue
+		{
+			ApplyTo = "Target";
+			UniqueTag = "StatueAstonish";
+			Tags = array{"StatueAstonish"};
+			SpreadResult = "StatueAstonishResult"; // ResultObjectsDefault.oc
+			Radius = 100.0;
+			Duration = 0.0;
+			SpreadChance = 0; // Chance to spread from affected character to the next character
+			SpreadToEveryone = true; // if true then spread to everyone per tick
+			TickOnce = false;
+			SpreadFrequency = 5;
+			SpreadTargetRules = array
+			{
+				SpreadTargetRule
+				{
+					TargetType = "Character";
+					TargetProperties = array{"Adult", "Outside", "NotMyFamily", "IsConscious", "NotInCombat", "NotFleeing", "hasNotTag.Astonished", "hasNotTag.NPCGuard"};
+					TargetScoreFormula = "Intelligence*0.75";
+				}
+			};
+			
+		},
+		DisplayEffect
+		{
+			Tags = array{"StatueAstonish"};
+			ApplyTo = "Target";
+			DisplayGroup = "buffed";
+			DisplayName = "$effect.StatueAstonish";
+			Duration = 0.0;
+		},
+		TagEffect
+		{
+			Tags = array{ "NoEntry", "NoConquer", "IsStatue", "NoRealBuilding", "NoWorkers", "NoWeatherEffects" };
+		},
+	};
+};

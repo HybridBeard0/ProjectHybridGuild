@@ -1,0 +1,12 @@
+crow extends G3PropsInstance
+{
+	static var Description = #crow/crow_desc;
+	
+	function onSpawn()
+	{
+		this.playAnimationByName("crowfly_circle");
+	}
+	EditorName = "Crow";
+	EditorIcon = "media/UserInterface/PropIcons/Charcoalpike02.png";
+	EditorCategory = 3;	
+};

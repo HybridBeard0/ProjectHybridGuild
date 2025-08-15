@@ -1,0 +1,16 @@
+G3ActorDesc
+{
+	Visual = "effect_diseases";
+	MoveStateListArray = MoveStateListArray
+	{
+	};
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#Effect_Diseases/list_idles_animations,
+		);
+	};
+	AttachType = "AttachToNode";
+	AttachChildNode = "Snap";
+}

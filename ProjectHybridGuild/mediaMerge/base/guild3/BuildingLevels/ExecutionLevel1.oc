@@ -1,0 +1,10 @@
+ExecutionLevel1 extends G3BuildingTemplateLevel
+{
+	Results = array 
+	{
+		TagEffect
+		{
+			Tags = array{ "NoRealBuilding", "NoConquer", "NoWeatherEffects", "NoEntry" };
+		}
+	};
+};

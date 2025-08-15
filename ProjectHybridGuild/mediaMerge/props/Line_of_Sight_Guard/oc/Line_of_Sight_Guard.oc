@@ -1,0 +1,11 @@
+Line_of_Sight_Guard extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "Line_of_Sight_Guard";
+		AttachType = "AttachToNode";
+		AttachParentNode = "Ctrl_All_Biped";
+		AttachChildNode = "Snap";
+	};
+		
+}

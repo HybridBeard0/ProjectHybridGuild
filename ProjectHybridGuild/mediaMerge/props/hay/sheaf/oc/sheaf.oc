@@ -1,0 +1,10 @@
+sheaf extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "sheaf";
+	};
+	EditorName = "Sheaf";
+	EditorIcon = "media/UserInterface/PropIcons/Haystack01.png";
+	EditorCategory = 3;		
+}

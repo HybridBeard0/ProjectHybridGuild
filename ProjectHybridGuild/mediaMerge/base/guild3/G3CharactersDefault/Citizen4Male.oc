@@ -1,0 +1,40 @@
+Citizen4Male extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = true;
+	MiddleClass = true;
+	Rich = true;
+	
+	Male = true;
+	Player = true;
+	Employee = true;
+	Profession = false;
+	
+	LowResCharacter = "citizen4";
+	HighResCharacter = "citizen4";
+	
+	BodyTexturesDiff= array
+	{
+		"Citizen4Male_diff",
+		"Citizen4Male_diff",
+		"Citizen4Male_diff",		
+		"Citizen4Male_diff"					
+	};
+	BodyTexturesNorm= array
+	{
+		"Citizen4Male_NORM",
+		"Citizen4Male_NORM",
+		"Citizen4Male_NORM",
+		"Citizen4Male_NORM"
+	};
+	BodyTexturesMask= array
+	{
+		"Citizen4Male_MASK",
+		"Citizen4Male_MASK",
+		"Citizen4Male_MASK",
+		"Citizen4Male_MASK"
+	};
+}

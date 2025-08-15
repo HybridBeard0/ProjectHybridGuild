@@ -1,0 +1,12 @@
+box extends G3Actor
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "box";
+		
+		CrowdControlRadius = 0.000;
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+};

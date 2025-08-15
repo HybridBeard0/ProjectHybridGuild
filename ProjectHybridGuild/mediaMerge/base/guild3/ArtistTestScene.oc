@@ -1,0 +1,27 @@
+// ArtistTestScene extends ArtistTestScript
+// {
+	// CameraSnapName = "Snap_Camera";
+	// SceneObjectName = "trial/trial";
+	// RequiredPackages = array { "trial", "hr_archetype_farmer", "lr_male_standard" };
+	
+	// RequiredActors = array
+	// {
+		// "Actor" extends BaseScripObjectSnapPair
+		// {
+			// Name = "Judge 01";
+			// ActorModel = "lr_male_standard/lr_campaignchar_man_william";
+			// SnapName = "Snap_J01";
+		// };
+
+	// };
+	
+	// ActorAnimationList = map
+	// {
+
+			
+		// "Judge 01" = TestScriptAnimationList {
+				// AnimNames = array {"reverence1"}; 
+			// };
+			
+	// };
+// }

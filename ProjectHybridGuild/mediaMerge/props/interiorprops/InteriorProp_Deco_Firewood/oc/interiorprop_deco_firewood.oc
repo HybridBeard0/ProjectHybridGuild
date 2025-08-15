@@ -1,0 +1,10 @@
+interiorprop_deco_firewood extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "interiorprop_deco_firewood";
+	};
+	EditorName = "InteriorProp Deco Firewood";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

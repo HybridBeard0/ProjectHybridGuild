@@ -1,0 +1,16 @@
+G3ActorDesc
+{
+	Visual = "effect_compliment";
+	MoveStateListArray = MoveStateListArray
+	{
+	};
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#Effect_Compliment/list_idles_animations,
+		);
+	};
+	AttachType = "AttachToNode";
+	AttachChildNode = "Snap";
+}

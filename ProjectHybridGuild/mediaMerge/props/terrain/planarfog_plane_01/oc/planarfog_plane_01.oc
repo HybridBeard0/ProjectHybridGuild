@@ -1,0 +1,10 @@
+planarfog_plane_01 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "planarfog_plane_01";
+	};
+	EditorName = "planarfog_plane_01";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 2;		
+}

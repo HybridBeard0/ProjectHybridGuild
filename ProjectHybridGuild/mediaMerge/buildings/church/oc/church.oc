@@ -1,0 +1,134 @@
+church extends Building
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "church";
+
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc {
+					Name = "streetconnection";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "enter";
+					Position = ( 0.0, 160.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+				},
+				SnapPointDesc {
+					Name = "exit";
+					Position = ( 0.0, 160.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+			};
+		};
+	};
+	EditorName = "Church";
+	EditorIcon = "media/UserInterface/Icons/BuildingImages/Other/Church.png";
+	EditorCategory = 2;
+
+	static var InteriorSetup = SnapPointSetDesc {
+		Setup = array {
+			SnapPointDesc {
+				Name = "priest-praying01";
+				Animations = array {
+					G3SnapPointAnimation {
+						Animation = "praying_looksky";
+						Context = "Priest-Praying";
+						Repeat = 2;
+					},
+					G3SnapPointAnimation {
+						Animation = "priest_praying_inside_church";
+						Context = "Priest-Praying";
+						Repeat = 3;
+					},
+					G3SnapPointAnimation {
+						Animation = "praying_looksky";
+						Context = "Priest-Praying";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "priest-praying02";
+				Animations = array {
+					G3SnapPointAnimation {
+						Animation = "praying_knees";
+						Context = "Priest-Praying";
+					},
+					G3SnapPointAnimation {
+						Animation = "praying_listen";
+						Context = "Priest-Praying";
+					},
+					G3SnapPointAnimation {
+						Animation = "praying_knees";
+						Context = "Priest-Praying";
+					},
+					G3SnapPointAnimation {
+						Animation = "praying_listen";
+						Context = "Priest-Praying";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "priest-idle01";
+				Animations = array {
+					G3SnapPointAnimation 
+					{
+						Context = "Priest-Idle";
+						Animation = "idle_readbook1";
+						Prop = "book2/book2";
+						Repeat = 6;
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "priest-idle02";
+				Animations = array {
+					G3SnapPointAnimation 
+					{
+						Context = "Priest-Idle";
+						Animation = "idle_readbook1";
+						Prop = "book2/book2";
+						Repeat = 6;
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "priest-idle03";
+				Animations = array {
+					G3SnapPointAnimation 
+					{
+						Animation = "idle1";
+						Context = "Priest-Idle";
+						Repeat = 5;
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "priest-cleaning01";
+				Animations = array {
+					G3SnapPointAnimation {
+						Animation = "Interior_IdleSweep1";
+						Context = "Priest-Cleaning";
+					},
+					G3SnapPointAnimation {
+						Animation = "Interior_IdleSweep2";
+						Context = "Priest-Cleaning";
+					},
+					G3SnapPointAnimation {
+						Animation = "Interior_IdleSweep1";
+						Context = "Priest-Cleaning";
+					},
+					G3SnapPointAnimation 
+					{
+						Animation = "idle1";
+						Context = "Priest-Idle";
+						Repeat = 5;
+					},
+				};
+			},
+
+		};
+	};
+}

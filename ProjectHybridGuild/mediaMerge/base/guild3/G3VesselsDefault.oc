@@ -1,0 +1,30 @@
+G3VesselsDefault extends G3CharactersInfo
+{
+	G3Desc = map
+	{	
+		1 = G3CharacterDesc
+		{
+			WalkSpeed = 150;
+			RunSpeed = 150;
+			Boat = true;
+			
+			LowResPackage = "boat_01";
+			LowResCharacter = "boat_01";
+			
+			UseCustomCollisionRadius = true;
+			CustomCollisionRadius = 80.0;
+		};
+		2 = G3CharacterDesc
+		{
+			WalkSpeed = 300;
+			RunSpeed = 300;
+			Boat = true;
+			
+			LowResPackage = "boat_02";
+			LowResCharacter = "boat_02";
+			
+			UseCustomCollisionRadius = true;
+			CustomCollisionRadius = 300.0;
+		};
+	};
+};

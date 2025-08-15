@@ -1,0 +1,33 @@
+PlagueSuitMale extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = false;
+	MiddleClass = true;
+	Rich = false;
+	
+	Male = true;
+	Player = false;
+	Employee = false;
+	Profession = false;
+	
+	
+	LowResCharacter = "plaguesuit";
+	HighResCharacter = "plaguesuit";
+	
+	
+	BodyTexturesDiff= array
+	{
+		"PlagueSuit_diff",
+	};
+	BodyTexturesNorm= array
+	{
+		"PlagueSuit_NORM",
+	};
+	BodyTexturesMask= array
+	{
+		"PlagueSuit_MASK",
+	};
+}
