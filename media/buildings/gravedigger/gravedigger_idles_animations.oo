@@ -1,0 +1,37 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1480436414;
+			Name = "Idle";
+			AnimationName = "Idle";
+			Looping = true;
+			Triggers = array
+			(
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "CoalFire";
+					RefNodeOverride = "dummy_flame_003";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "TorchIngame";
+					RefNodeOverride = "dummy_flame_001";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "TorchIngame";
+					RefNodeOverride = "dummy_flame_002";
+				},
+			);
+		},
+	);
+}

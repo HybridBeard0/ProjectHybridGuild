@@ -1,0 +1,119 @@
+cityhallrural extends Building
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "cityhallrural";
+
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc {
+					Name = "streetconnection";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "enter";
+					Position = ( 0.0, 80.0, 30.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+				},
+				SnapPointDesc {
+					Name = "exit";
+					Position = ( 0.0, 80.0, 30.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+			};
+		};
+	};
+	
+	EditorName = "City Hall Rural";
+	EditorIcon = "media/UserInterface/Icons/BuildingImages/Other/CityHallRural.png";
+	EditorCategory = 2;
+
+	static var InteriorSetup = SnapPointSetDesc {
+		Setup = array {
+			SnapPointDesc {
+				Name = "spawnreceptionist";
+				Animations = array {
+					G3SnapPointAnimation {
+						Animation = "SitOnStool";
+						Context = "Receptionist-Idle";
+						Repeat = 2;
+					},
+					G3SnapPointAnimation {
+						Animation = "sit_idle1";
+						Context = "Receptionist-Idle";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitOnStool";
+						Context = "Receptionist-Idle";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitLookAround";
+						Context = "Receptionist-Bored";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitAndStretch";
+						Context = "Receptionist-Bored";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitLookAround";
+						Context = "Receptionist-Bored";
+					},
+					G3SnapPointAnimation {
+						Animation = "Wedding_AudienceIdle01";
+						Context = "Receptionist-Sleepy";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitAndYawn";
+						Context = "Receptionist-Sleepy";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitAndStretch";
+						Context = "Receptionist-Sleepy";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitWritingTable2";
+						Context = "Receptionist-Work";
+						Repeat = 5;
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "towncrier01";
+				Animations = array {
+					G3SnapPointAnimation {
+						Animation = "GuardBuilding1";
+						Context = "Towncrier-Idle";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "LookAtPainting01";
+				Animations = array {
+					G3SnapPointAnimation {
+						Animation = "lookatwall";
+						Context = "LookAtWall";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "LookAtPainting02";
+				Animations = array {
+					G3SnapPointAnimation {
+						Animation = "lookatwall";
+						Context = "LookAtWall";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "LookAtOfficeWindow01";
+				Animations = array {
+					G3SnapPointAnimation {
+						Animation = "lookatwall";
+						Context = "LookAtWall";
+					},
+				};
+			},
+		};
+	};
+}
