@@ -1,9 +1,9 @@
-G3ItemsDefault extends G3ItemsContainer
+﻿G3ItemsDefault extends G3ItemsContainer
 {
 	SocialItemsScore = 40.0; // Base score used in production to sort orders
 
 	MarketCategoryWhitelist = array(
-		"All","Important","RawMaterial","Food","WeaponArmor","Clothing","Trinkets","Luxury","Tinctures","Components","Transportation","Livestock,"BlackMarket"
+		"All","Important","RawMaterial","Food","WeaponArmor","Clothing","Trinkets","Luxury","Tinctures","Components","Transportation","Livestock","BlackMarket"
 	);
 	
 	Items = map
