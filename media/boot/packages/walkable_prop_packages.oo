@@ -1,0 +1,25 @@
+ResourcePackageNames
+{
+	Names = array
+	{
+		"bridge_01",
+		"bridge_02",
+//		"bridge_prague",
+		"cliff_05",
+		"cliff_06",
+		"cliff_07",
+		"cliff_08",
+		"cliff_09",
+		"cliff_010",
+		"cliff_011",
+		"marienburg_stairs_01",
+		"marienburg_stairs_02",
+		"marienburg_stairs_03",
+		"marienburg_highwall_01",
+		"rocksstairsset_01",
+		"rocksstairsset_02",
+		"watergateleft",
+		"watergateright",
+		"marienburg_ramp_01"
+	};
+}
