@@ -1,0 +1,10 @@
+canopy_02 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "canopy_02";
+	};
+	EditorName = "Canopy_02";
+	EditorIcon = "media/UserInterface/PropIcons/Cabbagecrate.png";
+	EditorCategory = 3;		
+}

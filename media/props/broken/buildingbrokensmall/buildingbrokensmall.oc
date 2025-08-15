@@ -1,0 +1,12 @@
+buildingbrokensmall extends G3PropsInstance
+{
+	static var Description = #buildingbrokensmall/buildingbrokensmall_desc;
+
+	function onSpawn()
+	{
+		this.playAnimationByName("Idle");
+	}
+	EditorName = "BuildingBrokenSmall";
+	EditorIcon = "media/UserInterface/PropIcons/BuildingBrokenSmall.png";
+	EditorCategory = 4;		
+}

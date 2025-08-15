@@ -1,0 +1,14 @@
+G3ActorDesc
+{
+	Visual = "bomb";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#Bomb/list_walks_animations,
+		);
+	};
+	CrowdControlRadius = 0.000;
+
+	AttachType = "AttachToNode";
+}

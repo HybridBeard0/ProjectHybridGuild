@@ -1,0 +1,23 @@
+canoe_01_float extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "canoe_01_float";
+			AnimationArray = AnimationListArray
+			{
+			AnimationLists = array
+			(
+				#canoe_01_float/canoe_01_float_animationlist,
+			);
+		};
+	};
+	
+	function onSpawn()
+	{
+		this.playAnimationByName("Idle");
+	}
+	
+	EditorName = "Rowing Boat_02";
+	EditorIcon = "media/UserInterface/PropIcons/Canoe_01.png";
+	EditorCategory = 3;		
+}

@@ -1,0 +1,26 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1465409056;
+			Name = "idle1";
+			AnimationName = "idle1";
+		},
+		AnimationDesc
+		{
+			ID = 1465409067;
+			Name = "throwing_bomb";
+			AnimationName = "throwing_bomb";
+			Triggers = array
+			(
+				EffectTrigger
+				{
+					EffectName = "Bomb";
+					RefNodeOverride = "Dummy_Bomb";
+				},
+			);
+		},
+	);
+}

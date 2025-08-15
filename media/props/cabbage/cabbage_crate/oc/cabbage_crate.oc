@@ -1,0 +1,10 @@
+cabbage_crate extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "cabbage_crate";
+	};
+	EditorName = "Cabbagecrate";
+	EditorIcon = "media/UserInterface/PropIcons/Cabbagecrate.png";
+	EditorCategory = 3;		
+}
