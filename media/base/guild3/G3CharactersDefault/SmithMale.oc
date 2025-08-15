@@ -1,0 +1,40 @@
+SmithMale extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = true;
+	MiddleClass = false;
+	Rich = false;
+	
+	Male = true;
+	Player = false;
+	Employee = true;
+	Profession = true;
+	
+	LowResCharacter = "citizen2";
+	HighResCharacter = "citizen2";
+	
+	BodyTexturesDiff= array
+	{
+		"Citizen2Male_diff",
+		"Citizen2Male_diff",
+		"Citizen2Male_diff",		
+		"Citizen2Male_diff"			
+	};
+	BodyTexturesNorm= array
+	{
+		"Citizen2Male_NORM",
+		"Citizen2Male_NORM",
+		"Citizen2Male_NORM",
+		"Citizen2Male_NORM"
+	};
+	BodyTexturesMask= array
+	{
+		"Citizen2Male_MASK",
+		"Citizen2Male_MASK",
+		"Citizen2Male_MASK",
+		"Citizen2Male_MASK"
+	};
+}
