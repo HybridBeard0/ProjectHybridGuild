@@ -1,0 +1,20 @@
+base/standardg3characterdesc
+{
+	Visual = "cat2";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#cat/list_idles_animations,
+			#cat/list_walks_animations,
+		);
+	};
+	Poor = true;
+	MiddleClass = true;
+	Rich = true;
+	Male = true;
+	WalkSpeed = 26.25;//10
+	TrotSpeed = 87.5;//50
+	RunSpeed = 250;
+	AverageAge = 0.000;
+}
