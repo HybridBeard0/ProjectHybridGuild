@@ -1,0 +1,16 @@
+G3EffectsDefaultMap extends G3EffectsDefault{
+	EffectPaths = map {
+		"Poison" = "effect_poison/effect_poison";
+		"Poisoned" = "effect_poisoned/effect_poisoned";
+		"Disease" = "effect_diseases/effect_diseases";
+		"Wound" = "effect_wound/effect_wound";
+		"Inebriate" = "effect_inebriate/effect_inebriate";
+		"Compliment" = "effect_compliment/effect_compliment";
+		"Insulted" = "effect_insulted/effect_insulted";
+		"LongerLife" = "effect_longerlife/effect_longerlife";
+		"RemovePoison" = "effect_removepoison/effect_removepoison";
+		"Pests" = "effect_pests/effect_pests";
+		"Gloriole" = "effect_gloriole/effect_gloriole";
+		"Gloriole_Broken" = "effect_gloriole_broken/effect_gloriole_broken";
+	};
+};

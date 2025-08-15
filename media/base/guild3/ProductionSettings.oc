@@ -1,0 +1,10 @@
+ProductionSettings extends ProductionSettings
+{
+	MaxProductionOrders = 16; // max size of the order list
+	ProductionOrderMaxSize = 99; // Production order's slot size
+	LegalActionModifier = 20.0; // Modifier used in a formula to sort production orders in Rogue buildings
+	
+	AutomaticProduction_NumOrders = 5; // The max number of orders to create
+	AutomaticProduction_ItemOrderSize = 10; // The stack size of item production orders
+	AutomaticProduction_ActionOrderSize = 3; // The stack size of action production orders
+};

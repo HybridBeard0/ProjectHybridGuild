@@ -1,0 +1,41 @@
+PointOfInterestSettings extends PoiSettings
+{
+    Infos = map
+    {
+		"Execution" = PointOfInterestInfo
+        {
+			Animations = array { choc_react1, blaming1, aplause_react1, OH_YES_react1, OH_YES_react2, shame1, smear }; // List of possible animations when no conversation is ongoing
+		};
+		
+		"Fire" = PointOfInterestInfo
+        {
+			Animations = array { choc_react1 };
+		};
+		
+		"PublicEntertainment" = PointOfInterestInfo
+        {
+			Animations = array { choc_react1, aplause_react1, OH_YES_react1, OH_YES_react2 };
+		};
+		
+		"Fight" = PointOfInterestInfo
+        {
+			Animations = array { listen2, revolution1 };
+		};
+		
+		"Begging" = PointOfInterestInfo
+        {
+			Animations = array { choc_react1, blaming1, aplause_react1, OH_YES_react1, OH_YES_react2, shame1, smear };
+		};
+		
+		"Boasting" = PointOfInterestInfo
+        {
+			Animations = array { choc_react1, blaming1, aplause_react1, OH_YES_react1, OH_YES_react2, shame1, smear };
+		};
+		
+		"ConquerBuilding" = PointOfInterestInfo
+        {
+			Animations = array { choc_react1, blaming1, aplause_react1, OH_YES_react1, OH_YES_react2, shame1, smear };
+		};
+
+	};
+};

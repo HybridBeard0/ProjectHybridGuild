@@ -1,0 +1,302 @@
+MapIntros extends MapIntroDesc
+{
+	Intros = array
+	{
+		MapIntroEntry
+		{
+			Name = "SteKo"; // The not translated map name
+			Texts = array // List of voice overs to play during the intro
+			{ 
+				MapIntroTextEntry
+				{
+					CameraLocation = "SteKoIntro"; // predefined camera location called "SteKoIntro" is used
+					VoiceOverId = 232; // voice over id = 232
+				},
+				MapIntroTextEntry { VoiceOverId = 227; },
+				MapIntroTextDifficulty { CameraLocation = "SteKoIntroChurch"; },
+				MapIntroTextMode { CameraLocation = ""; },
+				MapIntroTextScenario { CameraLocation = ""; }
+			}; 
+		},
+		MapIntroEntry
+		{
+			Name = "$sce.name.Magdeburg";
+			Texts = array
+			{ 
+				MapIntroTextEntry
+				{
+					CameraLocation = "Olvenstedt";
+					VoiceOverId = 232;
+				},
+				MapIntroTextEntry
+				{
+					CameraLocation = "Prester";
+					VoiceOverId = 227;
+				},
+				MapIntroTextDifficulty { CameraLocation = "Werder"; },
+				MapIntroTextMode { CameraLocation = "Marketplace"; },
+				MapIntroTextScenario { CameraLocation = "Castle"; }
+			}; 
+		},
+		MapIntroEntry
+		{
+			Name = "$sce.name.Wenighusen";
+			Texts = array
+			{ 
+				MapIntroTextEntry
+				{
+					CameraLocation = "Village";
+					VoiceOverId = 232;
+				},
+				MapIntroTextEntry
+				{
+					CameraLocation = "Gate";
+					VoiceOverId = 227;
+				},
+				MapIntroTextDifficulty { CameraLocation = "Market"; },
+				MapIntroTextMode { CameraLocation = "MonasteryView"; },
+				MapIntroTextScenario { CameraLocation = "Monastery"; }
+			}; 
+		},
+		MapIntroEntry
+		{
+			Name = "$sce.name.Heligoland";
+			Texts = array
+			{ 
+				MapIntroTextEntry
+				{
+					CameraLocation = "Harbour";
+					VoiceOverId = 232;
+				},
+				MapIntroTextEntry
+				{
+					CameraLocation = "Village";
+					VoiceOverId = 227;
+				},
+				MapIntroTextDifficulty { CameraLocation = "Gate"; },
+				MapIntroTextMode { CameraLocation = "North"; },
+				MapIntroTextScenario { CameraLocation = "View"; }
+			}; 
+		},
+		MapIntroEntry
+		{
+			Name = "$sce.name.Hansa";
+			Texts = array
+			{ 
+				MapIntroTextEntry
+				{
+					CameraLocation = "View1";
+					VoiceOverId = 232;
+				},
+				MapIntroTextEntry
+				{
+					CameraLocation = "View2";
+					VoiceOverId = 227;
+				},
+				MapIntroTextDifficulty { CameraLocation = "Kiel"; },
+				MapIntroTextMode { CameraLocation = "Hamburg"; },
+				MapIntroTextScenario { CameraLocation = "Luebeck"; }
+			}; 
+		},
+		MapIntroEntry
+		{
+			Name = "$sce.name.Augsburg";
+			Texts = array
+			{ 
+				MapIntroTextEntry
+				{
+					CameraLocation = "Goeggingen";
+					VoiceOverId = 232;
+				},
+				MapIntroTextEntry
+				{
+					CameraLocation = "Lechhausen";
+					VoiceOverId = 227;
+				},
+				MapIntroTextDifficulty { CameraLocation = "LesserTown"; },
+				MapIntroTextMode { CameraLocation = "Commerce"; },
+				MapIntroTextScenario { CameraLocation = "Castle"; }
+			}; 
+		},
+		MapIntroEntry
+		{
+			Name = "$sce.name.Bohemia";
+			Texts = array
+			{ 
+				MapIntroTextEntry
+				{
+					CameraLocation = "Smichov";
+					VoiceOverId = 232;
+				},
+				MapIntroTextEntry
+				{
+					CameraLocation = "Nusle";
+					VoiceOverId = 227;
+				},
+				MapIntroTextDifficulty { CameraLocation = "HorseMarket"; },
+				MapIntroTextMode { CameraLocation = "OldTown"; },
+				MapIntroTextScenario { CameraLocation = "Castle"; }
+			}; 
+		},
+		MapIntroEntry
+		{
+			Name = "$sce.name.Burgundy";
+			Texts = array
+			{ 
+				MapIntroTextEntry
+				{
+					CameraLocation = "Chalon";
+					VoiceOverId = 232;
+				},
+				MapIntroTextEntry
+				{
+					CameraLocation = "Dole";
+					VoiceOverId = 227;
+				},
+				MapIntroTextDifficulty { CameraLocation = "Harbor"; },
+				MapIntroTextMode { CameraLocation = "OldTown"; },
+				MapIntroTextScenario { CameraLocation = "Castle"; }
+			}; 
+		},
+		MapIntroEntry
+		{
+			Name = "$sce.name.London";
+			Texts = array
+			{ 
+				MapIntroTextEntry
+				{
+					CameraLocation = "Brixton";
+					VoiceOverId = 232;
+				},
+				MapIntroTextEntry
+				{
+					CameraLocation = "Maidstone";
+					VoiceOverId = 227;
+				},
+				MapIntroTextDifficulty { CameraLocation = "Chelmsford"; },
+				MapIntroTextMode { CameraLocation = "TowerOfLondon"; },
+				MapIntroTextScenario { CameraLocation = "Castle"; }
+			}; 
+		},
+		MapIntroEntry
+		{
+			Name = "$sce.name.Mazovia";
+			Texts = array
+			{ 
+				MapIntroTextEntry
+				{
+					CameraLocation = "Bialoleka";
+					VoiceOverId = 232;
+				},
+				MapIntroTextEntry
+				{
+					CameraLocation = "Sluzew";
+					VoiceOverId = 227;
+				},
+				MapIntroTextDifficulty { CameraLocation = "Lomianki"; },
+				MapIntroTextMode { CameraLocation = "TownHall"; },
+				MapIntroTextScenario { CameraLocation = "Castle"; }
+			}; 
+		},
+		MapIntroEntry
+		{
+			Name = "$sce.name.Paris";
+			Texts = array
+			{ 
+				MapIntroTextEntry
+				{
+					CameraLocation = "Reims";
+					VoiceOverId = 232;
+				},
+				MapIntroTextEntry
+				{
+					CameraLocation = "Orleans";
+					VoiceOverId = 227;
+				},
+				MapIntroTextDifficulty { CameraLocation = "Amiens"; },
+				MapIntroTextMode { CameraLocation = "Saint-Antoine"; },
+				MapIntroTextScenario { CameraLocation = "IleDeLaCite"; }
+			}; 
+		},
+		MapIntroEntry
+		{
+			Name = "$sce.name.Salzburg";
+			Texts = array
+			{ 
+				MapIntroTextEntry
+				{
+					CameraLocation = "Nonntal";
+					VoiceOverId = 232;
+				},
+				MapIntroTextEntry
+				{
+					CameraLocation = "OldTownRight";
+					VoiceOverId = 227;
+				},
+				MapIntroTextDifficulty { CameraLocation = "Monastery"; },
+				MapIntroTextMode { CameraLocation = "OldTownLeft"; },
+				MapIntroTextScenario { CameraLocation = "Castle"; }
+			}; 
+		},
+		MapIntroEntry
+		{
+			Name = "$sce.name.Vienna";
+			Texts = array
+			{ 
+				MapIntroTextEntry
+				{
+					CameraLocation = "Etlastal";
+					VoiceOverId = 232;
+				},
+				MapIntroTextEntry
+				{
+					CameraLocation = "Enzersdorf";
+					VoiceOverId = 227;
+				},
+				MapIntroTextDifficulty { CameraLocation = "Presporok"; },
+				MapIntroTextMode { CameraLocation = "Vienna"; },
+				MapIntroTextScenario { CameraLocation = "Castle"; }
+			}; 
+		},
+		MapIntroEntry
+		{
+			Name = "$sce.name.Visby";
+			Texts = array
+			{ 
+				MapIntroTextEntry
+				{
+					CameraLocation = "Pilhagen";
+					VoiceOverId = 232;
+				},
+				MapIntroTextEntry
+				{
+					CameraLocation = "Lomalunda";
+					VoiceOverId = 227;
+				},
+				MapIntroTextDifficulty { CameraLocation = "Oestrabyr"; },
+				MapIntroTextMode { CameraLocation = "CityView"; },
+				MapIntroTextScenario { CameraLocation = "TownHall"; }
+			}; 
+		},
+		MapIntroEntry
+		{
+			Name = "$sce.name.Cologne";
+			Texts = array
+			{ 
+				MapIntroTextEntry
+				{
+					CameraLocation = "Urbach";
+					VoiceOverId = 232;
+				},
+				MapIntroTextEntry
+				{
+					CameraLocation = "Buchheim";
+					VoiceOverId = 227;
+				},
+				MapIntroTextDifficulty { CameraLocation = "Port"; },
+				MapIntroTextMode { CameraLocation = "NorthernSuburb"; },
+				MapIntroTextScenario { CameraLocation = "TheDome"; }
+			}; 
+		}
+	};
+};

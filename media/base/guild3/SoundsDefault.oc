@@ -1,0 +1,2154 @@
+// Category = 2; // ESoundInterface --> Interface
+// Category = 3; // ESoundAmbient --> Ambient
+// Category = 4; // ESoundSounds --> SFX
+// Category = 5; // ESoundVoices --> Dialogue
+// 
+// DON'T FORGET TO SYNCH THE ID IN SOUNDDEFINITIONS.H
+
+SoundsDefault extends G3SoundObjectContainer
+{
+	Sounds = array
+	{
+		G3SoundObject
+		{
+			SoundID = 1;	// EInterfaceSoundsID - test
+			Category = 4; // ESoundSounds
+			EditorName = "test";
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/test.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2;	
+			Category = 4; // ESoundSounds
+			EditorName = "Morning";
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Morning.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 3;	
+			Category = 4; // ESoundSounds
+			EditorName = "Night1";
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Night1.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 4;	
+			Category = 4; // ESoundSounds
+			EditorName = "Night2";
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Night2.ogg";
+				};
+				2 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Night3.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 5;	
+			Category = 4; // ESoundSounds
+			EditorName = "Ship";
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Ship.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 6;	
+			Category = 4; // ESoundSounds
+			EditorName = "AngerF";
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Actions/AngerF.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 7;	
+			Category = 4; // ESoundSounds
+			EditorName = "AngerM";
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Actions/AngerM.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 8;	
+			Category = 4; // ESoundSounds
+			EditorName = "CombatStrike";
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Actions/CombatStrike.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 9;	
+			Category = 4; // ESoundSounds
+			EditorName = "DeathF";
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Actions/DeathF.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 10;	
+			Category = 4; // ESoundSounds
+			EditorName = "DeathM";
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Actions/DeathM.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 11;	
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Actions/DrunkWalk.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 12;	
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Actions/EnterBuilding.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 13;	
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Actions/ExitBuilding.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 14;	
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Actions/PublicEntertainmentF.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 15;	
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Actions/PublicEntertainmentM.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 16;	
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Actions/Riot.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 17;	
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Actions/WalkCart.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 18;	
+			Category = 4; // ESoundSounds
+			PlayOncePerActor = true;
+			Frequency = 0.33;
+			CullingEnabled = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/Cat/cat_00.wav"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/Cat/cat_01.wav"; };
+				3 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/Cat/cat_02.wav"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 19;	
+			Category = 4; // ESoundSounds
+			PlayOncePerActor = true;
+			Frequency = 0.8;
+			CullingEnabled = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/chicken.ogg"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 20;	
+			Category = 4; // ESoundSounds
+			PlayOncePerActor = true;
+			Frequency = 0.66;
+			CullingEnabled = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/Bull/Moo_00.wav"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/Bull/Moo_01.wav"; };
+				3 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/Bull/Moo_02.wav"; };
+				4 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/Bull/Moo_03.wav"; };
+				5 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/Bull/Moo_04.wav"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 21;	
+			Category = 4; // ESoundSounds
+			PlayOncePerActor = true;
+			Frequency = 0.50;
+			CullingEnabled = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Animals/dog.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 22;	
+			Category = 4; // ESoundSounds
+			PlayOncePerActor = true;
+			Frequency = 0.66;
+			CullingEnabled = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/donkey.ogg"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 23;	
+			Category = 4; // ESoundSounds
+			PlayOncePerActor = true; // When the id is triggered it will check if the given actor already plays the given id if so and this flag is set to true it will skip the playback
+			Frequency = 0.66; // Defines the chance for this id to be triggered (in %) the random roll will be excuted after "PlayOncePerActor" is checked
+			CullingEnabled = true;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/horse/snort/snort_00.wav"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/horse/snort/snort_01.wav"; };
+				3 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/horse/snort/snort_02.wav"; };
+				4 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/horse/snort/snort_03.wav"; };
+				5 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/horse/whinny/whinny_00.wav"; };
+				6 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/horse/whinny/whinny_01.wav"; };
+				7 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/horse/whinny/whinny_02.wav"; };
+				8 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/horse/whinny/whinny_03.wav"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 24;	
+			Category = 4; // ESoundSounds
+			PlayOncePerActor = true;
+			Frequency = 0.8;
+			CullingEnabled = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/Pig/Grunt_00.wav"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/Pig/Grunt_01.wav"; };
+				3 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/Pig/Grunt_02.wav"; };
+				4 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/Pig/Grunt_03.wav"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 25;	
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/Artisan.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 26;	
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/Bakery.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 27;	
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/Blacksmith.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 28;	
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/Carpenter.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 29;	
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/Church.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 30;	
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/Muh+0.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 31;	
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/drinking+0.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 32;	
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/Lumberyard.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 33;	
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/School.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 34;
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/stone_chippings+1";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 35;	
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/Tailor.ogg";
+				};
+			};
+		};
+
+		G3SoundObject
+		{
+			SoundID = 36;	
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/churchbell_stroke.wav";
+				};
+			};
+		};
+		
+		G3SoundObject
+		{
+			SoundID = 37;	
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/cockcrow.ogg";
+				};
+			};
+		};		
+
+		G3SoundObject
+		{
+			SoundID = 38;	
+			Category = 4; // ESoundSounds
+			EditorName = "Rats";
+			PlayOncePerActor = true;
+			Frequency = 0.5;
+			CullingEnabled = true;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/Rat/Rat_00.wav"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/Rat/Rat_01.wav"; };
+			};
+		};
+
+		G3SoundObject
+		{
+			SoundID = 39;	// hoofstep
+			Category = 4; // ESoundSounds
+			FalloffStart = 5;
+			FalloffEnd = 2300;
+			Volume = 0.08;
+			ShouldPreload = true;
+			PlayOncePerActor = true;
+			Frequency = 1;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/hoofstep_00.wav"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/hoofstep_01.wav"; };
+			};
+		};
+
+		G3SoundObject
+		{
+			SoundID = 40; // flying crow	
+			Category = 4; // ESoundSounds
+			FalloffStart = 5;
+			FalloffEnd = 2300;
+			Volume = 0.8;
+			Frequency = 0.3;
+			ShouldPreload = true;
+			PlayOncePerActor = true;
+			CullingEnabled = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Props/Atmosphere/Bird/Crow/crow.wav"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Props/Atmosphere/Bird/Crow/Crow2.ogg"; };
+			};
+		};
+
+		G3SoundObject
+		{
+			SoundID = 41;	
+			Category = 4; // ESoundSounds
+			EditorName = "WaterDrops";
+			FalloffStart = 25;
+			FalloffEnd = 500;
+			PlayOncePerActor = true;
+			//Frequency = 0.5;
+			Volume = 0.8;
+			CullingEnabled = true;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Props/Atmosphere/cellar_waterdrop_0.ogg"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Props/Atmosphere/cellar_waterdrop_1.ogg"; };
+				3 extends G3SoundDef { Path = "media/SFX/Sounds/Props/Atmosphere/cellar_waterdrop_0.ogg"; };
+			};
+		};
+
+		G3SoundObject
+		{
+			SoundID = 42; // single fly (interior)
+			Category = 4; // ESoundSounds
+			EditorName = "SingleFly";
+			PlayOncePerActor = true;
+			Frequency = 0.75;
+			Volume = 0.3;
+			CullingEnabled = true;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Props/Atmosphere/Flies/SingleFly01.ogg"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Props/Atmosphere/Flies/SingleFly02.ogg"; };
+				3 extends G3SoundDef { Path = "media/SFX/Sounds/Props/Atmosphere/Flies/SingleFly03.ogg"; };
+				4 extends G3SoundDef { Path = "media/SFX/Sounds/Props/Atmosphere/Flies/SingleFly04.ogg"; };
+				5 extends G3SoundDef { Path = "media/SFX/Sounds/Props/Atmosphere/Flies/SingleFly05.ogg"; };
+			};
+		};
+		
+		// ****************************
+		// * click on building sounds *
+		// ****************************
+		G3SoundObject
+		{
+			SoundID = 50; // church
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/church.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 51; // cathedral
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/cathedral.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 52; // harbor
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/WavesOnCoastLight+0.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 53; // tailor shop
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/roll_of_cloth+0.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 54; // brickery
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/stone_chippings+1.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 55; // Farmhouse
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/Muh+0.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 56; // Croft
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/Muh+0.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 57; // Lumberyard
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/Lumberyard.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 58; // Windmill
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/WindmillCreaking.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 59; // Estate Farm
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/Muh+0.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 60; // Butchery
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/slaughter_cow+0.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 61; // Craftman’s Hut
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/handsaw+1.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 62; // Mine
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/pick_axe_loop+2.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 63; // Printing Office
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/open_book+0.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 64; // Blacksmith
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/forge+2.wav";
+				};
+			};
+		};		
+		G3SoundObject
+		{
+			SoundID = 65; // Stonemason Hut
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/stone_chippings+1.wav";
+				};
+			};	
+		};				
+		G3SoundObject
+		{
+			SoundID = 66; // Market
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/coin_to_moneybag+0.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 67; // School
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/School.ogg";
+				};
+			};
+		};	
+		G3SoundObject
+		{
+			SoundID = 68; // Joinery
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/Carpenter.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 69; // Farm
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/Muh+0.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 70; // Quarry
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/stone_chippings+1.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 71; // Laboratory
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/caldron_loop+0.wav";
+				};
+			};
+		};		
+		G3SoundObject
+		{
+			SoundID = 72; // Magician’s Shop
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/caldron_loop+0.wav";
+				};
+			};
+		};	
+		G3SoundObject
+		{
+			SoundID = 73; // Thieve’s Den
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/burgleahouse_unsuccessful+0.wav";
+				};
+			};
+		};	
+		G3SoundObject
+		{
+			SoundID = 74; // Clothing Shop
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/roll_of_cloth+0.wav";
+				};
+			};
+		};	
+		G3SoundObject
+		{
+			SoundID = 75; // Garrison
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/carving_board+0.wav";
+				};
+			};
+		};	
+		G3SoundObject
+		{
+			SoundID = 76; // Smithy
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/forge+0.wav";
+				};
+			};
+		};		
+		G3SoundObject
+		{
+			SoundID = 77; // Carpenter’s Shop
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/hammer+0.wav";
+				};
+				2 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/hammer+1.wav";
+				};
+				3 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/hammer+2.wav";
+				};
+			};
+		};		
+		G3SoundObject
+		{
+			SoundID = 78; // Cemetery
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Props/Atmosphere/Bird/Crow/crow.wav";
+				};
+				2 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Props/Atmosphere/Bird/Crow/Crow2.ogg";
+				};
+			};
+		};			
+		G3SoundObject
+		{
+			SoundID = 79; // Crude Craftman’s Hut
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/handsaw+1.wav";
+				};
+			};
+		};						
+		G3SoundObject
+		{
+			SoundID = 80; // Magic Workshop
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/caldron_loop+0.wav";
+				};
+			};
+		};	
+		G3SoundObject
+		{
+			SoundID = 81; // Arsenal
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/SwordDraw_s_01.wav";
+				};
+			};
+		};	
+		G3SoundObject
+		{
+			SoundID = 82; // Library
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/open_book+0.wav";
+				};
+			};
+		};			
+		G3SoundObject
+		{
+			SoundID = 83; // Thieve’s Guild
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/burgleahouse_unsuccessful+0.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 84; // "PoorHouse"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/door_open+1.wav";
+				};
+				2 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/door_open+2.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 85; // "CityHouse"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/door_open+1.wav";
+				};
+				2 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/door_open+2.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 86; // "Mansion"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/door_open+1.wav";
+				};
+				2 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/door_open+2.wav";
+				};
+			};
+		};		
+		G3SoundObject
+		{
+			SoundID = 87; // "AlchemistShop"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/meltingpot_loop+0.wav";
+				};
+				2 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/caldron_loop+0.wav";
+				};
+			};
+		};			
+		G3SoundObject
+		{
+			SoundID = 88; // "AssassinHideout"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/carving_board+0.wav";
+				};
+			};
+		};		
+		G3SoundObject
+		{
+			SoundID = 89; // "Bakery"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/oven_door_openclose+0.wav";
+				};
+			};
+		};	
+		G3SoundObject
+		{
+			SoundID = 90; // "Medicus"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/Husten+0.wav";
+				};
+				2 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/Husten+1.wav";
+				};
+				3 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/Husten+2.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 91; // "Scholar"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/open_book+0.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 92; // "GuardPost"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/carving_board+0.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 93; // "Inn"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/drinking+0.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 94; // "SpyHideout"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/wear_clothes+1.wav";
+				};
+			};
+		};		
+		G3SoundObject
+		{
+			SoundID = 95; // "ThiefHideout"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/burgleahouse_unsuccessful+0.wav";
+				};
+			};
+		};		
+		G3SoundObject
+		{
+			SoundID = 96; // "Well"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/cellar_waterdrop+2.wav";
+				};
+			};
+		};				
+		G3SoundObject
+		{
+			SoundID = 97; // "Schloss"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/door_open+1.wav";
+				};
+				2 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/door_open+2.wav";
+				};
+			};
+		};				
+		G3SoundObject
+		{
+			SoundID = 98; // "CityHall"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/Townhall.ogg";
+				};
+			};
+		};		
+		G3SoundObject
+		{
+			SoundID = 99; // "Warehouse"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/foot_squishing+0.wav";
+				};
+				2 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/foot_squishing+1.wav";
+				};
+			};
+		};		
+		G3SoundObject
+		{
+			SoundID = 100; // "Wall"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "";
+				};
+			};
+		};		
+		G3SoundObject
+		{
+			SoundID = 101; // "Park"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "";
+				};
+			};
+		};	
+		G3SoundObject
+		{
+			SoundID = 102; // "Fountain"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "";
+				};
+			};
+		};	
+		G3SoundObject
+		{
+			SoundID = 103; // "CentralSquare"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "";
+				};
+			};
+		};	
+		G3SoundObject
+		{
+			SoundID = 104; // "CityGate"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "";
+				};
+			};
+		};	
+		G3SoundObject
+		{
+			SoundID = 105; // "execution"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/clickexecution_gallow+0.wav";
+				};
+			};
+		};			
+		G3SoundObject
+		{
+			SoundID = 106; // "trademarket"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Buildings/click/coins_to_counter+0.wav";
+				};
+			};
+		};	
+		G3SoundObject
+		{
+			SoundID = 107; // "CountryHouse"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Buildings/click/door_open+1.wav"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Buildings/click/door_open+2.wav"; };
+			};
+		};			
+		G3SoundObject
+		{
+			SoundID = 108; // "Grove"
+			Category = 4; // ESoundSounds
+			PlayOncePerActor = true;
+			Frequency = 0.75;
+			Volume = 0.01;
+
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Props/Atmosphere/Bird/birds_chirp+0.wav"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Props/Atmosphere/Bird/birds_chirp+1.wav"; };
+				3 extends G3SoundDef { Path = "media/SFX/Sounds/Props/Atmosphere/Bird/birds_chirp+2.wav"; };
+				4 extends G3SoundDef { Path = "media/SFX/Sounds/Props/Atmosphere/Bird/birds_chirp+3.wav"; };
+				5 extends G3SoundDef { Path = "media/SFX/Sounds/Props/Atmosphere/Bird/birds_chirp+4.wav"; };
+				6 extends G3SoundDef { Path = "media/SFX/Sounds/Props/Atmosphere/Bird/birds_chirp+5.wav"; };
+				7 extends G3SoundDef { Path = "media/SFX/Sounds/Props/Atmosphere/Bird/birds_chirp+6.wav"; };
+				8 extends G3SoundDef { Path = "media/SFX/Sounds/Props/Atmosphere/Bird/birds_chirp+7.wav"; };
+				9 extends G3SoundDef { Path = "media/SFX/Sounds/Props/Atmosphere/Bird/birds_chirp+8.wav"; };
+			};
+		};			
+		G3SoundObject
+		{
+			SoundID = 109; // "RobberCamp"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Buildings/click/combat_strike_metal+0.wav"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Buildings/click/combat_strike_metal+1.wav"; };
+				3 extends G3SoundDef { Path = "media/SFX/Sounds/Buildings/click/combat_strike_metal+2.wav"; };
+			};
+		};			
+		G3SoundObject
+		{
+			SoundID = 110; // "Apothecary"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Buildings/click/herbs+0.wav"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Buildings/click/herbs+1.wav"; };
+				3 extends G3SoundDef { Path = "media/SFX/Sounds/Buildings/click/herbs+2.wav"; };
+			};
+		};			
+		G3SoundObject
+		{
+			SoundID = 111; // "Brushwood"
+			Category = 4; // ESoundSounds
+			Volume = 0.75;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Props/Atmosphere/Flies/flies_flying_around_loop+0.wav"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Props/Atmosphere/Flies/flies_flying_around_loop+1.wav"; };
+				3 extends G3SoundDef { Path = "media/SFX/Sounds/Props/Atmosphere/Flies/flies_flying_around_loop+2.wav"; };
+			};
+		};		
+        G3SoundObject
+		{
+			SoundID = 112; // "Shaman" / Herbhut
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Buildings/click/caldron_loop+0.wav"; };
+			};
+		};		
+        G3SoundObject
+		{
+			SoundID = 113; // "Gleeman"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Buildings/click/Gleeman.ogg"; };
+			};
+		};		
+		G3SoundObject
+		{
+			SoundID = 114; // "Gravedigger"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Buildings/Gravedigger.ogg"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 115; // "Preacher"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Buildings/Preacher.ogg"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 116; // "Barber"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Buildings/Barber.ogg"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 117; // "FishingSpot"
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Buildings/FishingSpot.ogg"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 118;	
+			Category = 4; // ESoundSounds
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Buildings/Smuggler.ogg"; };
+			};
+		};
+
+
+		// **************************************************************************		
+		// Ambient Sound Effects 1000 - 1099
+		// **************************************************************************		
+		@base/AmbientSoundDefinitions
+		
+		// **************************************************************************		
+		// Combat Sounds 1100 - 1199
+		// **************************************************************************		
+		@base/CombatSoundDefinitions
+		
+		// **************************************************************************		
+		// Character Sounds 1200 - 1300
+		// **************************************************************************
+		@base/CharacterSoundDefinitions
+		
+		// **************************************************************************		
+		// Effect Sounds 3000 - 3999
+		// **************************************************************************		
+		@base/EffectSoundDefinitions
+		
+		// **************************************************************************		
+		// Effect Sounds 4000 - 4999
+		// **************************************************************************		
+		@base/ActionSoundDefinitions
+	
+		// **************************************************************************		
+		// User Interface Sounds
+		// **************************************************************************		
+		@base/UiSoundDefinitions
+		
+		// **************************************************************************		
+		// Voice Over Sounds
+		// **************************************************************************		
+		@base/VoiceOverSoundDefinitions
+	
+		G3SoundObject
+		{
+			SoundID = 1301;	
+			Category = 4; // ESoundSounds
+			Frequency = 0.5;
+			PlayOncePerActor = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/horse/whinny/whinny_00.wav"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/horse/whinny/whinny_01.wav"; };
+				3 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/horse/whinny/whinny_02.wav"; };
+				4 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/horse/whinny/whinny_03.wav"; };
+				5 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/horse/snort/snort_00.wav"; };
+				6 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/horse/snort/snort_01.wav"; };
+				7 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/horse/snort/snort_02.wav"; };
+				8 extends G3SoundDef { Path = "media/SFX/Sounds/Animals/horse/snort/snort_03.wav"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 1302;	
+			Category = 4; // ESoundSounds
+			Frequency = 0.5;
+			PlayOncePerActor = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/character/cough/cough_00.wav"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/character/cough/cough_01.wav"; };
+				3 extends G3SoundDef { Path = "media/SFX/Sounds/character/cough/cough_02.wav"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 1303;	// throat clear male
+			Category = 4; // ESoundSounds
+			Volume = 0.7;
+			PlayOncePerActor = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/character/throat-clear-01_male.wav"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/character/throat-clear-02_male.wav"; };
+				3 extends G3SoundDef { Path = "media/SFX/Sounds/character/throat-clear-03_male.wav"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 1304;	// throat clear female
+			Category = 4; // ESoundSounds
+			Volume = 0.7;
+			PlayOncePerActor = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/character/throat-clear-01_female.wav"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/character/throat-clear-02_female.wav"; };
+				3 extends G3SoundDef { Path = "media/SFX/Sounds/character/throat-clear-03_female.wav"; };
+			};
+		};
+	
+// **************************************************************************		
+// ******************** Working Employees 2000 - 2999	*********************
+// **************************************************************************	
+		
+		G3SoundObject
+		{
+			SoundID = 2000;	// Sweeping with broom outside
+			Category = 4; // ESoundSounds
+			EditorName = "Sweeping_01";
+			FalloffStart = 200;
+			FalloffEnd = 2200;
+			Volume = 0.5;
+			CullingEnabled = true;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Work/SweepOutside01.ogg"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Work/SweepOutside02.ogg"; };
+				3 extends G3SoundDef { Path = "media/SFX/Sounds/Work/SweepOutside03.ogg"; };
+				4 extends G3SoundDef { Path = "media/SFX/Sounds/Work/SweepOutside04.ogg"; };
+				5 extends G3SoundDef { Path = "media/SFX/Sounds/Work/SweepOutside05.ogg"; };
+				6 extends G3SoundDef { Path = "media/SFX/Sounds/Work/SweepOutside06.ogg"; };
+				7 extends G3SoundDef { Path = "media/SFX/Sounds/Work/SweepOutside07.ogg"; };
+				8 extends G3SoundDef { Path = "media/SFX/Sounds/Work/SweepOutside08.ogg"; };
+			};
+		};	
+		G3SoundObject
+		{
+			SoundID = 2003;	// Forge
+			Category = 4; // ESoundSounds
+			EditorName = "Forge";
+			FalloffStart = 5;
+			FalloffEnd = 2500;
+			Volume = 0.5;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Actions/forge+1.wav";
+				};
+			};
+		};	
+		G3SoundObject
+		{
+			SoundID = 2004;	// combat_defence_metal_mace+1.wav
+			Category = 4; // ESoundSounds
+			EditorName = "combat_defence";
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Actions/combat_defence_metal_mace+1.wav";
+				};
+			};
+		};			
+		G3SoundObject
+		{
+			SoundID = 2005;	// guard_SwingSword
+			Category = 4; // ESoundSounds
+			EditorName = "guard_SwingSword";
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Actions/guard_SwingSword.max";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2006; // pickaxe
+			Category = 4; // ESoundSounds
+			FalloffStart = 5;
+			FalloffEnd = 2500;
+			Volume = 0.5;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/pickaxe_loop.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2007; // woodcutteraxe
+			Category = 4; // ESoundSounds
+			FalloffStart = 5;
+			FalloffEnd = 2500;
+			Volume = 0.4;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/woodcutteraxe_loop.wav"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/woodcutteraxe_loop+1.wav"; };
+				3 extends G3SoundDef { Path = "media/SFX/Sounds/woodcutteraxe_loop+2.wav"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2008; // flail
+			Category = 4; // ESoundSounds
+			FalloffStart = 5;
+			FalloffEnd = 2200;
+			Volume = 0.4;
+			CullingEnabled = true;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/flail.wav";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2009; // digging
+			Category = 4; // ESoundSounds
+			FalloffStart = 5;
+			FalloffEnd = 2200;
+			Volume = 0.2;
+			CullingEnabled = true;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/digging.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2010; // shawm
+			Category = 4; // ESoundSounds
+			Volume = 0.7;
+			FalloffStart = 200;
+			FalloffEnd = 2000;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Music/The Gleeman - Shawm.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2011; // fiddle
+			Category = 4; // ESoundSounds
+			Volume = 0.7;
+			FalloffStart = 200;
+			FalloffEnd = 2000;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Music/The Gleeman - Fiddle.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2012; // drum
+			Category = 4; // ESoundSounds
+			Volume = 0.7;
+			FalloffStart = 200;
+			FalloffEnd = 2000;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Music/The Gleeman - Drum.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2013; // pipe
+			Category = 4; // ESoundSounds
+			Volume = 0.8;
+			FalloffStart = 200;
+			FalloffEnd = 2000;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Music/Romance - Pipe.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2014; // The Gleeman
+			Category = 4; // ESoundSounds
+			Volume = 0.7;
+			FalloffStart = 200.000;
+			FalloffEnd = 2500.000;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Music/The Gleeman.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2015; // drum2
+			Category = 4; // ESoundSounds
+			Volume = 0.7;
+			FalloffStart = 200;
+			FalloffEnd = 2000;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Music/The Gleeman 2 - Drum.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2016; // bagpipe
+			Category = 4; // ESoundSounds
+			Volume = 0.7;
+			FalloffStart = 200;
+			FalloffEnd = 2000;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Music/The Gleeman 2 - Bagpipe.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2017; // fiddle2
+			Category = 4; // ESoundSounds
+			Volume = 0.7;
+			FalloffStart = 200;
+			FalloffEnd = 2000;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Music/The Gleeman 2 - Fiddle.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2018; // The Gleeman 2
+			Category = 4; // ESoundSounds
+			Volume = 0.7;
+			FalloffStart = 200.000;
+			FalloffEnd = 2500.000;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Music/The Gleeman 2.ogg";
+				};
+			};
+		};
+
+		G3SoundObject
+		{
+			SoundID = 2019; // ChurchService
+			Category = 4; // ESoundSounds
+			Volume = 0.85;
+			FalloffStart = 200.000;
+			FalloffEnd = 1700.000;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/ChurchService.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2020;
+			Category = 4; // ESoundSounds
+			FalloffStart = 5;
+			FalloffEnd = 2200;
+			Volume = 0.5;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Actions/chop_fish.wav";
+				};
+			};
+		};	
+		G3SoundObject
+		{
+			SoundID = 2021; // sermon male
+			Category = 4; // ESoundSounds
+			Volume = 0.9;
+			FalloffStart = 200.000;
+			FalloffEnd = 1800.000;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/SermonMale.wav";
+				};
+			};
+		};	
+		G3SoundObject
+		{
+			SoundID = 2022; // sermon female
+			Category = 4; // ESoundSounds
+			Volume = 0.9;
+			FalloffStart = 200.000;
+			FalloffEnd = 1800.000;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/SermonFemale.wav";
+				};
+			};
+		};	
+		G3SoundObject
+		{
+			SoundID = 2023; // sawing
+			Category = 4; // ESoundSounds
+			FalloffStart = 5;
+			FalloffEnd = 2200;
+			Volume = 0.3;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/Actions/sawing.wav";
+				};
+			};
+		};
+
+		G3SoundObject
+		{
+			SoundID = 2024; // work animation interior
+			Category = 4; // ESoundSounds
+			FalloffStart = 5;
+			FalloffEnd = 1200;
+//			Volume = 0.3;
+			Volume = 0.5;
+			CullingEnabled = true;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Work/TinkerWithHandsTable01.ogg"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Work/TinkerWithHandsTable02.ogg"; };
+				3 extends G3SoundDef { Path = "media/SFX/Sounds/Work/TinkerWithHandsTable03.ogg"; };
+				4 extends G3SoundDef { Path = "media/SFX/Sounds/Work/TinkerWithHandsTable04.ogg"; };
+				5 extends G3SoundDef { Path = "media/SFX/Sounds/Work/TinkerWithHandsTable05.ogg"; };
+				6 extends G3SoundDef { Path = "media/SFX/Sounds/Work/TinkerWithHandsTable06.ogg"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2025; // work animation interior: hammer nail
+			Category = 4; // ESoundSounds
+			FalloffStart = 5;
+			FalloffEnd = 1200;
+//			Volume = 0.3;
+			Volume = 0.5;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Work/HammerNail01.ogg"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2026; // interior animation: WashingFloor (water drops in bucket)
+			Category = 4; // ESoundSounds
+			FalloffStart = 5;
+			FalloffEnd = 1200;
+//			Volume = 0.3;
+			Volume = 0.5;
+			CullingEnabled = true;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Work/WaterdropsInBucket01.ogg"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2027; // interior animation: WashingFloor
+			Category = 4; // ESoundSounds
+			FalloffStart = 5;
+			FalloffEnd = 1200;
+//			Volume = 0.4;
+			Volume = 0.5;
+			CullingEnabled = true;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Work/WashingFloor01.ogg"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Work/WashingFloor02.ogg"; };
+				3 extends G3SoundDef { Path = "media/SFX/Sounds/Work/WashingFloor03.ogg"; };
+				4 extends G3SoundDef { Path = "media/SFX/Sounds/Work/WashingFloor04.ogg"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2028; // interior animation: CuttingVegetable
+			Category = 4; // ESoundSounds
+			FalloffStart = 5;
+			FalloffEnd = 1200;
+			Volume = 0.7;
+			CullingEnabled = true;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Work/CuttingVegetable01.ogg"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Work/CuttingVegetable02.ogg"; };
+				3 extends G3SoundDef { Path = "media/SFX/Sounds/Work/CuttingVegetable03.ogg"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2029; // work animation interior: sweeping with broom
+			Category = 4; // ESoundSounds
+			FalloffStart = 5;
+			FalloffEnd = 1600;
+//			Volume = 0.3;
+			Volume = 0.5;
+			CullingEnabled = true;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Work/SweepInside01.ogg"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Work/SweepInside02.ogg"; };
+				3 extends G3SoundDef { Path = "media/SFX/Sounds/Work/SweepInside03.ogg"; };
+				4 extends G3SoundDef { Path = "media/SFX/Sounds/Work/SweepInside04.ogg"; };
+				5 extends G3SoundDef { Path = "media/SFX/Sounds/Work/SweepInside05.ogg"; };
+				6 extends G3SoundDef { Path = "media/SFX/Sounds/Work/SweepInside06.ogg"; };
+				7 extends G3SoundDef { Path = "media/SFX/Sounds/Work/SweepInside07.ogg"; };
+				8 extends G3SoundDef { Path = "media/SFX/Sounds/Work/SweepInside08.ogg"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2030; // interior animation: StirringMeal
+			Category = 4; // ESoundSounds
+			FalloffStart = 5;
+			FalloffEnd = 1200;
+			Volume = 0.7;
+			CullingEnabled = true;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Work/StirringMeal01.ogg"; };
+			};
+		};
+
+		G3SoundObject
+		{
+			SoundID = 2031; // interior animation: PutWoodInFire
+			Category = 4; // ESoundSounds
+			FalloffStart = 5;
+			FalloffEnd = 1000;
+//			Volume = 0.5;
+			Volume = 0.6;
+			CullingEnabled = true;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Work/PutWoodInFire01.ogg"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2032; // interior animation: FanTheFlames
+			Category = 4; // ESoundSounds
+			FalloffStart = 5;
+			FalloffEnd = 1000;
+//			Volume = 0.5;
+			Volume = 0.7;
+			CullingEnabled = true;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Work/FanTheFlames01.ogg"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Work/FanTheFlames02.ogg"; };
+				3 extends G3SoundDef { Path = "media/SFX/Sounds/Work/FanTheFlames03.ogg"; };
+				4 extends G3SoundDef { Path = "media/SFX/Sounds/Work/FanTheFlames04.ogg"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2033; // interior animation: BathtubIdle
+			Category = 4; // ESoundSounds
+			FalloffStart = 5;
+			FalloffEnd = 1200;
+//			Volume = 0.15;
+			Volume = 0.35;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Actions/TakeABathHome01.ogg"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Actions/TakeABathHome02.ogg"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2034; // wedding scene - village church bells
+			Category = 4; // ESoundSounds
+			FalloffStart = 1000.000;
+			FalloffEnd = 2500.000;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/effects/church_village_bells.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2035; // wedding scene - city church bells
+			Category = 4; // ESoundSounds
+			FalloffStart = 2000.000;
+			FalloffEnd = 5000.000;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/effects/church_city_bells.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2036; // wedding scene - cathedral bells
+			Category = 4; // ESoundSounds
+			FalloffStart = 4000.000;
+			FalloffEnd = 10000.000;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/effects/cathedral_bells.ogg";
+				};
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2037; // wedding scene - cologne dome bells
+			Category = 4; // ESoundSounds
+			FalloffStart = 4000.000;
+			FalloffEnd = 10000.000;
+			Sounds = array
+			{
+				1 extends G3SoundDef
+				{
+					Path = "media/SFX/Sounds/effects/cologne_dome_bells.ogg";
+				};
+			};
+		};
+
+		G3SoundObject
+		{
+			SoundID = 2038; // writing animations
+			Category = 4; // ESoundSounds
+			FalloffStart = 50;
+			FalloffEnd = 1000;
+			Volume = 1.0;
+			//CullingEnabled = true;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/Work/WritingWithQuill01.ogg"; };
+				2 extends G3SoundDef { Path = "media/SFX/Sounds/Work/WritingWithQuill02.ogg"; };
+				3 extends G3SoundDef { Path = "media/SFX/Sounds/Work/WritingWithQuill03.ogg"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2039; // male yawning
+			Category = 4; // ESoundSounds
+			FalloffStart = 5;
+			FalloffEnd = 1000;
+			Volume = 0.7;
+			//CullingEnabled = true;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/character/male_yawning.ogg"; };
+			};
+		};
+		G3SoundObject
+		{
+			SoundID = 2040; // female yawning
+			Category = 4; // ESoundSounds
+			FalloffStart = 5;
+			FalloffEnd = 1000;
+			Volume = 0.7;
+			//CullingEnabled = true;
+			ShouldPreload = true;
+			Sounds = array
+			{
+				1 extends G3SoundDef { Path = "media/SFX/Sounds/character/female_yawning.ogg"; };
+			};
+		};
+	};
+};
