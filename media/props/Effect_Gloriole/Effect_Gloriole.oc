@@ -1,0 +1,4 @@
+Effect_Gloriole extends G3PropsInstance
+{
+	static var Description = #Effect_Gloriole/Effect_Gloriole_desc;
+};

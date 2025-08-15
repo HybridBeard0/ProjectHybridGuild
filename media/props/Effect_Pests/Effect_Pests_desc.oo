@@ -1,0 +1,13 @@
+G3ActorDesc
+{
+	Visual = "effect_pests";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#Effect_Pests/list_idles_animations,
+		);
+	};
+	AttachType = "AttachToNode";
+	AttachChildNode = "Snap_Particles";
+}

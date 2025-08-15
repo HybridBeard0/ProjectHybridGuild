@@ -1,0 +1,4 @@
+Effect_Poisoned extends G3PropsInstance
+{
+	static var Description = #Effect_Poisoned/Effect_Poisoned_desc;
+};

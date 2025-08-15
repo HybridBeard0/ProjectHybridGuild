@@ -1,0 +1,4 @@
+Effect_Wound extends G3PropsInstance
+{
+	static var Description = #Effect_Wound/Effect_Wound_desc;
+};
