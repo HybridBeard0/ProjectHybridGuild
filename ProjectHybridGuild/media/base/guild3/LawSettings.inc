@@ -361,6 +361,60 @@ LawSettings
 			IsLegalByDefault = false;
 			CanChangeBy = "Office";
 		},
+		Crime
+		{
+			ActionName = "SmokeJoint";
+			ResponsibleOfficeGroup = "CouncilInformerGroup";
+			Severity = 1;
+			EvidenceBaseValue = 50;
+			IsLegalByDefault = false;
+			CanChangeBy = "Office";
+		},
+		Crime
+		{
+			ActionName = "ApplyHempBandage";
+			ResponsibleOfficeGroup = "CouncilInformerGroup";
+			Severity = 1;
+			EvidenceBaseValue = 50;
+			IsLegalByDefault = false;
+			CanChangeBy = "Office";
+		},
+		Crime
+		{
+			ActionName = "DrinkMarijuanaTea";
+			ResponsibleOfficeGroup = "CouncilInformerGroup";
+			Severity = 1;
+			EvidenceBaseValue = 50;
+			IsLegalByDefault = false;
+			CanChangeBy = "Office";
+		},
+		Crime
+		{
+			ActionName = "UseCBDExtract";
+			ResponsibleOfficeGroup = "CouncilInformerGroup";
+			Severity = 1;
+			EvidenceBaseValue = 50;
+			IsLegalByDefault = false;
+			CanChangeBy = "Office";
+		},
+		Crime
+		{
+			ActionName = "EatMarijuanaCake";
+			ResponsibleOfficeGroup = "CouncilInformerGroup";
+			Severity = 1;
+			EvidenceBaseValue = 50;
+			IsLegalByDefault = false;
+			CanChangeBy = "Office";
+		},
+		Crime
+		{
+			ActionName = "EatMarijuanaCreamPie";
+			ResponsibleOfficeGroup = "CouncilInformerGroup";
+			Severity = 1;
+			EvidenceBaseValue = 50;
+			IsLegalByDefault = false;
+			CanChangeBy = "Office";
+		},
 	};
 	
 	Punishments = array 

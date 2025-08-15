@@ -8819,3 +8819,1015 @@
 		}
 	};
 };
+
+//-------- Marijuana -------------
+"SmokeJoint" = G3ActionTemplate //Marijuana
+{
+	ActionClassName = "UseArtefactAction";
+
+	GUIPresent = true;
+	GUIData = array
+	{
+		ActionGUIData
+		{
+			IsCharacter = 1;
+			IsFamilyMember = 1;
+			BelongsToOwnFamily = 1;
+			IsAdult = 1;
+			IsControlledByHuman = 1;
+		},
+		ActionGUIData
+		{
+			IsCharacter = 1;
+			IsFamilyMember = 1;
+			BelongsToOwnFamily = 1;
+			IsAdult = 1;
+			IsControlledByHuman = -1;
+			DoesNotHaveTag = "NoSmoking";
+		}
+	};
+	UsableBy = array{ "$gui.item.UsableByAdultFamilyMembers" };
+
+	ActionActor = "Character";
+	UICategory = "Artifact";
+	Cooldown = 1.0;     //24 hours
+
+	ArtefactName = "Joint";
+	ActionName = "SmokeJoint";
+	DisplayName = "$Joint";
+	Description = "$JointDesc";
+
+	EnterBuilding = "TryEnter";
+	
+	CanFail = false;
+	CriticalFactor = 1;
+
+	MoralAlignmentShift = 0;
+	MoralAlignment = MoralAlignment
+	{
+		Values = array{0, 0, 0};
+	};
+
+	// Animation Character
+	CustomAnimationPool = array
+	{
+		CustomAnimationInfo = array {"drink_poison1", 0, -1, -1};
+	};
+	// Animation Props
+	AnimationProps = array
+	{
+		PropSpawnDesc { PropNames = array { "beaker/beaker" }; };
+	};
+	
+	OnEndResult = array
+	{
+		TagEffect
+		{
+			ApplyTo = "Self";
+			Tags = array{"NoSmoking"};
+			Duration = 450.0;
+		},
+	};
+	
+	SuccessResult = array
+	{
+		VisualEffect
+		{
+			ApplyTo = "Self";
+			VisualName = "Inebriate";
+			Duration = 1.0;
+		},
+		DisplayEffect
+		{
+			Tags = array{"High", "Stoned"};
+			ApplyTo = "Self";
+			DisplayGroup = "drunk";
+			DisplayName = "$Joint";
+			Duration = 400.0;
+		},
+		FunctionRemoveEffect
+		{
+			ApplyTo = "Self";
+			MatchAny = true;
+			Tags = array {"Influenza"};
+		},
+		ModifierEffect
+		{
+			ActorValue = "Productivity";
+			Mod = -.2;
+			Duration = 450.0; //1 year
+			Recover = true;
+		},
+		ModifierEffect
+		{
+			ActorValue = "Charisma";
+			Mod = 1;
+			Duration = 400.0; //1 year
+			Recover = true;
+		},
+		ModifierEffect
+		{
+			Tags = array{"Slow","Sleepy"};
+			ApplyTo = "Self";
+			ActorValue = "MovementSpeedMult";
+			Mod = -0.15;
+			Duration = 400.0;
+			Recover = true;
+		},
+		FunctionAffectNeeds
+		{
+			ApplyTo = "Target";
+			ProductType = 2;
+			Amount = -0.01;
+		},
+	};
+};
+
+"DrinkMarijuanaTea" = G3ActionTemplate //Drink herb tea
+{
+	ActionClassName = "UseArtefactAction";
+	GUIPresent = true;
+	UICategory = "Artifact";
+
+	GUIData = array
+	{
+		@base/AnyoneBelongingToOwnFamily
+	};
+	UsableBy = array{ "$gui.item.UsableByAdultFamilyMembers" };
+	
+	ArtefactName = "MarijuanaTea";
+	ActionActor = "Character";
+
+	CanFail = true;
+	SourceScoreFormula = "0.77";
+	TargetScoreFormula = "0.33";
+	
+	Cooldown = 0.01; //~1sec
+	
+	BaseRewardXP = 10;
+
+	EnterBuilding = "TryEnter";
+	
+	ActionName = "DrinkMarijuanaTea";
+	DisplayName = "$MarijuanaTea";
+	Description = "$MarijuanaTeaDesc";
+
+	MoralAlignmentShift = 0;
+	MoralAlignment = MoralAlignment
+	{
+		Values = array{0, 0, 0};
+	};
+
+	// Animation Character
+	CustomAnimationPool = array
+	{
+		CustomAnimationInfo = array {"drink_poison1", 0, -1, -1}; // SoundCategory, Sound Id, Sound sub id
+	};
+	// Animation Props
+	AnimationProps = array
+	{
+		PropSpawnDesc { PropNames = array { "vinecup/vinecup" }; };
+	};
+	
+	CriticalFactor = 1.0;
+	
+	SuccessResult = array
+	{
+		VisualEffect
+		{
+			ApplyTo = "Self";
+			VisualName = "RemovePoison";
+			Duration = 5.0;
+		},
+		FunctionRemoveEffect
+		{
+			ApplyTo = "Self";
+			MatchAny = true;
+			Tags = array {"Cold", "ScarletFever", "Measles"};
+		},
+		FunctionTrackObjectiveProgress
+		{
+			Amount = 5;
+			ObjectiveTypename = "IncreaseSecurity";
+		},
+		FunctionAffectNeeds
+		{
+			ApplyTo = "Target";
+			ProductType = 2;
+			Amount = -0.01;
+		},
+	};
+	FailureResult = array
+	{
+	};
+};
+
+"EatMarijuanaCake" = G3ActionTemplate //Gingerbread
+{
+	ActionClassName = "UseArtefactAction";
+
+	GUIPresent = true;
+	GUIData = array
+	{
+		ActionGUIData
+		{
+			IsCharacter = 1;
+			IsFamilyMember = 1;
+			BelongsToOwnFamily = 1;
+			MinAge = 5;
+		}
+	};
+	UsableBy = array{ "$characters.Age.Adult" };
+
+	ActionActor = "Character";
+
+	UICategory = "Artifact";
+	Cooldown = 1.0;     //24 hours
+
+	ArtefactName = "MarijuanaCake";
+	ActionName = "EatMarijuanaCake";
+	DisplayName = "$MarijuanaCake";
+	Description = "$MarijuanaCakeDesc";
+	Instruction = "$callToAction.Character";
+
+	EnterBuilding = "TryEnter";
+	
+	BaseRewardXP = 28;
+	
+	CanFail = false;
+	CriticalFactor = 1;
+
+	SourceScoreFormula = "Charisma";
+	TargetScoreFormula = "0";
+	
+	MoralAlignmentShift = 0;
+	MoralAlignment = MoralAlignment
+	{
+		Values = array{0, 0, 0};
+	};
+
+	// Animation Character
+	CustomAnimationPool = array
+	{
+		CustomAnimationInfo = array {"eat", 0, -1, -1};
+	};
+	// Animation Props
+	AnimationProps = array
+	{
+		PropSpawnDesc { PropNames = array { "bread/bread" }; };
+	};
+
+	SuccessResult = array
+	{
+		DisplayEffect
+		{
+			Tags = array{"Cake"};
+			ApplyTo = "Source";
+			DisplayGroup = "buffed";
+			DisplayName = "$MarijuanaCake";
+			Duration = 200.0;
+		},
+		ModifierEffect
+		{
+			Tags = array{"Cake"};
+			ApplyTo = "Source";
+			ActorValue = "Dexterity";
+			Mod = 1;
+			Duration = 200.0;
+			Recover = true;
+		},
+		ModifierEffect
+		{
+			Tags = array{"Cake"};
+			ApplyTo = "Source";
+			ActorValue = "Intimidation";
+			Mod = -1;
+			Duration = 200.0;
+			Recover = true;
+		},
+		FunctionAffectNeeds
+		{
+			ApplyTo = "Source";
+			ProductType = 2;
+			Amount = -0.01;
+		},
+	};
+};
+
+"GiveMarijuanaCake" = G3ActionTemplate //Give a gingerbread
+{
+	UICategory = "Artifact";
+	GUIPresent = true;
+	GUIData = array
+	{
+		ActionGUIData
+		{
+			IsCharacter = 1;
+			IsFamilyMember = 1;
+			BelongsToOwnFamily = 1;
+			MinAge = 5;
+		}
+	};
+	UsableBy = array{ "$characters.Age.Adult", "$characters.Age.Child" };
+	
+	ActionClassName = "UseArtefactAction";
+	
+	ActionName = "GiveMarijuanaCake";
+	ArtefactName = "MarijuanaCake";
+	DisplayName = "$MarijuanaCake";
+	Description = "$MarijuanaCakeDesc";
+	Instruction = "$callToAction.CharacterNotPlayers";
+	
+	ActionActor = "Character";
+	TargetActor = "Character";
+	
+	EnterBuilding = "TryEnter";
+	SuppressBuildingEnterBehavior = true;
+	
+	SourceScoreFormula = "Charisma * 2 + Target.DoesHaveTag.RomPrefPresent * 2";
+	TargetScoreFormula = "Intelligence * 0.2";
+	
+	Cooldown = 0.5;
+	BaseRewardXP = 28;
+		
+	DesiredProfiles = array
+	{
+		TargetProfileCharacter 
+		{
+			CloseToActor = 2;
+			Employee = -3;
+			Boat = -3;
+			NPCGuard = -3;
+			FamilyProfile = TargetProfileFamily
+			{
+				MyFamily = -3;
+			};
+			CurrentBuildingProfiles = array
+			{
+				TargetProfileBuilding // somewhere in the world
+				{
+					Exists = -3;
+				},
+				TargetProfileBuilding // inside my residence
+				{
+					Residence = 3;
+					Burning = -3;
+					FamilyProfile = TargetProfileFamily
+					{
+						MyFamily = 3;
+					};
+				},
+				TargetProfileBuilding // inside the residence of an ally
+				{
+					Residence = 3;
+					Burning = -3;
+					FamilyProfile = TargetProfileFamily
+					{
+						Alliance = 3;
+					};
+				},
+				TargetProfileBuilding // inside a city building
+				{
+					IncludedTypes = array{"Cityhall", "Church", "cathedrale", "Arsenal"};
+				},
+			};
+		}
+	};  
+	
+	CustomAnimationPool = array
+	{
+		CustomAnimationInfo = array {"MakePresent", 5, 54, -1};
+	};
+
+	CustomReceiverAnimationPool = array
+	{
+		CustomAnimationInfo = array {"AcceptPresent", 0, -1, -1};
+	};
+	
+	DistanceFromTarget = 55;
+	DistanceFromTargetMin = 55;
+	
+	MoralAlignmentShift = 0.1;
+	MoralAlignment = MoralAlignment
+	{
+		Values = array{0.1,0.25,0.1};
+	};
+
+	CriticalFactor = 0.9;
+	
+	CriticalSuccessResult = array
+	{
+		VisualEffect
+		{
+			ApplyTo = "Target";
+			VisualName = "Compliment";
+			Duration = 5;
+		},
+		FunctionUpdateRelationship
+		{
+			AffectTarget = "7";
+		},
+		FunctionAffectNeeds
+		{
+			ApplyTo = "Target";
+			ProductType = 3;
+			Amount = -0.02;
+		},
+		FunctionAffectNeeds
+		{
+			ApplyTo = "Target";
+			ProductType = 2;
+			Amount = 0.03;
+		},
+		FunctionAffectNeeds
+		{
+			ApplyTo = "Target";
+			ProductType = 6;
+			Amount = 0.02;
+		},
+		FunctionTriggerAction
+		{
+			Filter = "!IsControlledByHuman";
+			ApplyTo = "Source";
+			Actions = array{"NPCDynRandomFollowUpShort"};
+		},
+		FunctionTriggerAction
+		{
+			Filter = "!IsControlledByHuman";
+			ApplyTo = "Target";
+			Actions = array{"NPCRandomFollowUpShort"};
+		},
+	};
+	
+	SuccessResult = array
+	{
+		VisualEffect
+		{
+			ApplyTo = "Target";
+			VisualName = "Compliment";
+			Duration = 5;
+		},
+		FunctionUpdateRelationship
+		{
+			AffectTarget = "4";
+		},
+		FunctionAffectNeeds
+		{
+			ApplyTo = "Target";
+			ProductType = 3;
+			Amount = -0.02;
+		},
+		FunctionAffectNeeds
+		{
+			ApplyTo = "Target";
+			ProductType = 2;
+			Amount = 0.03;
+		},
+		FunctionAffectNeeds
+		{
+			ApplyTo = "Target";
+			ProductType = 6;
+			Amount = 0.02;
+		},
+		FunctionTriggerAction
+		{
+			Filter = "!IsControlledByHuman";
+			ApplyTo = "Source";
+			Actions = array{"NPCDynRandomFollowUpShort"};
+		},
+		FunctionTriggerAction
+		{
+			Filter = "!IsControlledByHuman";
+			ApplyTo = "Target";
+			Actions = array{"NPCRandomFollowUpShort"};
+		},
+	};
+	
+	FailureResult = array
+	{
+		FunctionTriggerAction
+		{
+			Filter = "!IsControlledByHuman";
+			ApplyTo = "Source";
+			Actions = array{"NPCDynRandomFollowUpShort"};
+		},
+		FunctionTriggerAction
+		{
+			Filter = "!IsControlledByHuman";
+			ApplyTo = "Target";
+			Actions = array{"NPCRandomFollowUpShort"};
+		},
+	};
+	
+	CriticalFailureResult = array
+	{
+		VisualEffect
+		{
+			ApplyTo = "Target";
+			VisualName = "Insulted";
+			Duration = 5;
+		},
+		FunctionUpdateRelationship
+		{
+			AffectTarget = "-4";
+		},
+		FunctionTriggerAction
+		{
+			Filter = "!IsControlledByHuman";
+			ApplyTo = "Source";
+			Actions = array{"NPCDynRandomFollowUpShort"};
+		},
+		FunctionTriggerAction
+		{
+			Filter = "!IsControlledByHuman";
+			ApplyTo = "Target";
+			Actions = array{"NPCRandomFollowUpShort"};
+		},
+	};
+};
+
+"EatMarijuanaCreamPie" = G3ActionTemplate //Cream cake
+{
+	ActionClassName = "UseArtefactAction";
+
+	GUIPresent = true;
+	GUIData = array
+	{
+		@base/OwnFamilyAdults
+	};
+	UsableBy = array{ "$characters.Age.Adult" };
+
+	ActionActor = "Character";
+
+	UICategory = "Artifact";
+	Cooldown = 1.0;     //24 hours
+
+	ArtefactName = "MarijuanaCreamPie";
+	ActionName = "EatMarijuanaCreamPie";
+	DisplayName = "$MarijuanaCreamPie";
+	Description = "$MarijuanaCreamPieDesc";
+	Instruction = "$callToAction.Character";
+
+	EnterBuilding = "TryEnter";
+	
+	BaseRewardXP = 28;
+	
+	CanFail = false;
+	CriticalFactor = 1;
+
+	SourceScoreFormula = "Charisma";
+	TargetScoreFormula = "0";
+	
+	MoralAlignmentShift = 0;
+	MoralAlignment = MoralAlignment
+	{
+		Values = array{0, 0, 0};
+	};
+
+	// Animation Character
+	CustomAnimationPool = array
+	{
+		CustomAnimationInfo = array {"EatCreamPie", 0, -1, -1};
+	};
+	// Animation Props
+	//AnimationProps = array
+	//{
+	//	PropSpawnDesc { PropNames = array { "bread/bread" }; };
+	//};
+
+	SuccessResult = array
+	{
+		DisplayEffect
+		{
+			Tags = array{"CreamPie"};
+			ApplyTo = "Source";
+			DisplayGroup = "buffed";
+			DisplayName = "$MarijuanaCreamPie";
+			Duration = 200.0;
+		},
+		ModifierEffect
+		{
+			Tags = array{"CreamPie"};
+			ApplyTo = "Source";
+			ActorValue = "Health";
+			Mod = 50;
+			Duration = 200.0;
+			Recover = true;
+		},
+		FunctionAffectNeeds
+		{
+			ApplyTo = "Source";
+			ProductType = 2;
+			Amount = -0.01;
+		},
+	};
+};
+
+"GiveMarijuanaCreamPie" = G3ActionTemplate //Give a cream cake
+{
+	UICategory = "Artifact";
+	GUIPresent = true;
+	GUIData = array
+	{
+		@base/OwnFamilyAdults
+	};
+	UsableBy = array{ "$gui.item.UsableByAdultFamilyMembers" };
+	
+	ActionClassName = "UseArtefactAction";
+	
+	ActionName = "GiveMarijuanaCreamPie";
+	ArtefactName = "MarijuanaCreamPie";
+	DisplayName = "$GiveCreamPie";
+	Description = "$MarijuanaCreamPieDesc";
+	Instruction = "$callToAction.CharacterRomanticRelationship";
+	
+	ActionActor = "Character";
+	TargetActor = "Character";
+	
+	EnterBuilding = "TryEnter";
+	SuppressBuildingEnterBehavior = true;
+	
+	SourceScoreFormula = "RelationshipScore / 20 + Charisma * 2 + Target.DoesHaveTag.RomPrefPresent * 2";
+	TargetScoreFormula = "Intelligence * 0.2";
+	
+	Cooldown = 0.04;
+	BaseRewardXP = 28;
+	ShowSelectionPrompt = "LoverCharacters";
+	SelectionPromptNoTargetMessage = "$gui.no.lovers";
+		
+	DesiredProfiles = array
+	{
+		TargetProfileCharacter 
+		{
+			Adult = 3;
+			OppositeGender = 3;
+			Leader = -3; 
+			NPCGuard = -3;  
+			Employee = -3;
+			InLoveWithMe = 3;
+			FamilyProfile = TargetProfileFamily
+			{
+				MyFamily = -3;
+			};
+			CurrentBuildingProfiles = array
+			{
+				TargetProfileBuilding // somewhere in the world
+				{
+					Exists = -3;
+				},
+				TargetProfileBuilding // inside my residence
+				{
+					Residence = 3;
+					Burning = -3;
+					FamilyProfile = TargetProfileFamily
+					{
+						MyFamily = 3;
+					};
+				},
+				TargetProfileBuilding // inside the residence of an ally
+				{
+					Residence = 3;
+					Burning = -3;
+					FamilyProfile = TargetProfileFamily
+					{
+						Alliance = 3;
+					};
+				},
+				TargetProfileBuilding // inside a city building
+				{
+					IncludedTypes = array{"Cityhall", "Church", "cathedrale", "Arsenal"};
+				},
+			};
+		}
+	};  
+	
+	CustomAnimationPool = array
+	{
+		CustomAnimationInfo = array {"GiveCreampie", 5, 54, -1};
+	};
+
+	CustomReceiverAnimationPool = array
+	{
+		CustomAnimationInfo = array {"AcceptPresent", 0, -1, -1};
+	};
+	
+	DistanceFromTarget = 55;
+	DistanceFromTargetMin = 55;
+	
+	MoralAlignmentShift = 0.1;
+	MoralAlignment = MoralAlignment
+	{
+		Values = array{0.1,0.25,0.1};
+	};
+
+	CriticalFactor = 0.80;
+	
+	CriticalSuccessResult = array
+	{
+		VisualEffect
+		{
+			ApplyTo = "Target";
+			VisualName = "Compliment";
+			Duration = 5;
+		},
+		FunctionUpdateRelationship
+		{
+			AffectLiaison = "(37 + (Target.hasTag.RomPrefPresent * 6)) * ((1.25 * hasTag.BuffEasy) + (1 * hasTag.BuffNormal) + (0.75 * hasTag.BuffHard) + (0.5 * hasTag.BuffImpossible))";
+		},
+		FunctionPickRandom
+		{
+			ApplyTo = "Target";
+			ResultObjectIds = array{"RomPref.Nothing", "RomPref.Artist", "RomPref.MoreDistance", "RomPref.CloseApproach", "RomPref.ContraryGoodBehavior"};
+		},
+		FunctionAffectNeeds
+		{
+			ApplyTo = "Target";
+			ProductType = 3;
+			Amount = -0.02;
+		},
+		FunctionAffectNeeds
+		{
+			ApplyTo = "Target";
+			ProductType = 2;
+			Amount = 0.03;
+		},
+		FunctionAffectNeeds
+		{
+			ApplyTo = "Target";
+			ProductType = 6;
+			Amount = 0.02;
+		},
+		FunctionTriggerAction
+		{
+			Filter = "!IsControlledByHuman";
+			ApplyTo = "Source";
+			Actions = array{"NPCDynRandomFollowUpShort"};
+		},
+		FunctionTriggerAction
+		{
+			Filter = "!IsControlledByHuman";
+			ApplyTo = "Target";
+			Actions = array{"NPCRandomFollowUpShort"};
+		},
+	};
+	
+	SuccessResult = array
+	{
+		VisualEffect
+		{
+			ApplyTo = "Target";
+			VisualName = "Compliment";
+			Duration = 5;
+		},
+		FunctionUpdateRelationship
+		{
+			AffectLiaison = "(33 + (Target.hasTag.RomPrefPresent * 3)) * ((1.25 * hasTag.BuffEasy) + (1 * hasTag.BuffNormal) + (0.75 * hasTag.BuffHard) + (0.5 * hasTag.BuffImpossible))";
+		},
+		FunctionAffectNeeds
+		{
+			ApplyTo = "Target";
+			ProductType = 3;
+			Amount = -0.02;
+		},
+		FunctionAffectNeeds
+		{
+			ApplyTo = "Target";
+			ProductType = 2;
+			Amount = 0.03;
+		},
+		FunctionAffectNeeds
+		{
+			ApplyTo = "Target";
+			ProductType = 6;
+			Amount = 0.02;
+		},
+		FunctionTriggerAction
+		{
+			Filter = "!IsControlledByHuman";
+			ApplyTo = "Source";
+			Actions = array{"NPCDynRandomFollowUpShort"};
+		},
+		FunctionTriggerAction
+		{
+			Filter = "!IsControlledByHuman";
+			ApplyTo = "Target";
+			Actions = array{"NPCRandomFollowUpShort"};
+		},
+	};
+	
+	FailureResult = array
+	{
+		VisualEffect
+		{
+			ApplyTo = "Target";
+			VisualName = "Insulted";
+			Duration = 5;
+		},
+		FunctionUpdateRelationship
+		{
+			AffectLiaison = "-8 * ((0.75 * hasTag.BuffEasy) + (1 * hasTag.BuffNormal) + (1.25 * hasTag.BuffHard) + (1.5 * hasTag.BuffImpossible))";
+		},
+		FunctionTriggerAction
+		{
+			Filter = "!IsControlledByHuman";
+			ApplyTo = "Source";
+			Actions = array{"NPCDynRandomFollowUpShort"};
+		},
+		FunctionTriggerAction
+		{
+			Filter = "!IsControlledByHuman";
+			ApplyTo = "Target";
+			Actions = array{"NPCRandomFollowUpShort"};
+		},
+	};
+	
+	CriticalFailureResult = array
+	{
+		VisualEffect
+		{
+			ApplyTo = "Target";
+			VisualName = "Insulted";
+			Duration = 5;
+		},
+		FunctionUpdateRelationship
+		{
+			AffectLiaison = "-12 * ((0.75 * hasTag.BuffEasy) + (1 * hasTag.BuffNormal) + (1.25 * hasTag.BuffHard) + (1.5 * hasTag.BuffImpossible))";
+		},
+		FunctionTriggerAction
+		{
+			Filter = "!IsControlledByHuman";
+			ApplyTo = "Source";
+			Actions = array{"NPCDynRandomFollowUpShort"};
+		},
+		FunctionTriggerAction
+		{
+			Filter = "!IsControlledByHuman";
+			ApplyTo = "Target";
+			Actions = array{"NPCRandomFollowUpShort"};
+		},
+	};
+};
+
+"ApplyHempBandage" = G3ActionTemplate //Use bandage
+{
+	UICategory = "Artifact";
+	ActionClassName = "UseArtefactAction";
+	GUIPresent = true;
+
+	GUIData = array
+	{
+		@base/AnyoneBelongingToOwnFamily
+	};
+	UsableBy = array{ "$loca.key.anyone" };
+
+	ArtefactName = "HempBandage";
+	ActionActor = "Character";
+
+	EnterBuilding = "TryEnter";
+	
+	CanFail = false;
+	
+	Cooldown = 0.01;
+	Duration = 0.0032;
+	
+	BaseRewardXP = 10;
+	
+	ActionName = "ApplyHempBandage";
+	DisplayName = "$action.ApplyBandage";
+	Description = "$action.ApplyBandageDesc";
+   
+	CriticalFactor = 1.0;
+		
+	MoralAlignmentShift = 0;
+	MoralAlignment = MoralAlignment
+	{
+		Values = array{0, 0, 0};
+	};
+
+	// Animation Character
+	CustomAnimationPool = array
+	{
+		CustomAnimationInfo = array {"applybandage", 0, -1, -1}; // SoundCategory, Sound Id, Sound sub id
+	};
+	
+	SuccessResult = array
+	{
+		VisualEffect
+		{
+			ApplyTo = "Self";
+			VisualName = "RemovePoison";
+			Duration = 5.0;
+		},
+		ModifierEffect
+		{
+			ApplyTo = "Self";
+			ActorValue = "Health";
+			Mod = 50;
+			Duration = 0;
+			Recover = false;
+		},
+		FunctionTrackObjectiveProgress
+		{
+			Amount = 10;
+			ObjectiveTypename = "IncreaseSecurity";
+		},
+		FunctionAffectNeeds
+		{
+			ApplyTo = "Self";
+			ProductType = 5;
+			Amount = -0.1;
+		},
+		FunctionTriggerAction
+		{
+			Filter = "Source.hasTag.eventdebuffBleedingWound";
+			ApplyTo = "Self";
+			Actions = array{"ApplyBandageRemoveBleeding"};
+		},
+	};
+};
+
+"UseCBDExtract" = G3ActionTemplate //Use painkiller
+{
+	UICategory = "Artifact";
+	ActionClassName = "UseArtefactAction";
+	GUIPresent = true;
+
+	GUIData = array
+	{
+		@base/AnyoneBelongingToOwnFamily
+	};
+	UsableBy = array{ "$loca.key.anyone" };
+
+	ArtefactName = "MarijuanaExtract";
+	ActionActor = "Character";
+	
+	CanFail = true;
+	SourceScoreFormula = "1.0";
+	TargetScoreFormula = "1.0";
+	
+	Cooldown = 0.01;
+	
+	BaseRewardXP = 11;
+	
+	ActionName = "UseCBDExtract";
+	DisplayName = "$action.UsePainKiller";
+	Description = "$action.UsePainKillerDesc";
+ 
+	EnterBuilding = "TryEnter";
+	
+	CriticalFactor = 1.0;
+	
+	MoralAlignmentShift = 0;
+	MoralAlignment = MoralAlignment
+	{
+		Values = array{0, 0, 0};
+	};
+
+	// Animation Character
+	CustomAnimationPool = array
+	{
+		CustomAnimationInfo = array {"drink_poison1", 0, -1, -1}; // SoundCategory, Sound Id, Sound sub id
+	};
+	// Animation Props
+	AnimationProps = array
+	{
+		PropSpawnDesc { PropNames = array { "antidote/antidote" }; };
+	};
+	
+	SuccessResult = array
+	{
+		VisualEffect
+		{
+			ApplyTo = "Self";
+			VisualName = "RemovePoison";
+			Duration = 5.0;
+		},
+		FunctionRemoveEffect
+		{
+			ApplyTo = "Self";
+			MatchAny = true;
+			Tags = array {"Leprosy"};
+		},
+		FunctionTrackObjectiveProgress
+		{
+			Amount = 12;
+			ObjectiveTypename = "IncreaseSecurity";
+		},
+		FunctionAffectNeeds
+		{
+			ApplyTo = "Target";
+			ProductType = 7;
+			Amount = -0.01;
+		},
+	};
+	
+	FailureResult = array
+	{
+		FunctionTriggerAction
+		{
+			Filter = "IsAdult";
+			ApplyTo = "Source";
+			Actions = array{"UsePainKillerAdultDizzy"};
+		}
+	};
+};

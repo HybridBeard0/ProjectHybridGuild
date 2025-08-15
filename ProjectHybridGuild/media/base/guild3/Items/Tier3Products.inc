@@ -1434,3 +1434,146 @@
 		RequiredBuilding = array { "Medicus", 1 }
 	};
 };
+
+//-------- Marijuana -------------
+"MarijuanaFlour" = G3Item
+{
+	Type = 1;
+	SubType = 2;
+
+	DisplayName = "$MarijuanaFlour";
+	Description = "$MarijuanaFlourDesc";
+	DisplayCategories = array("All", "Food");
+	IsLegalByDefault = false;
+	
+	Tier = 3;
+	SocialClass = 1;
+	BuildTime = 20;
+	Production = 1;
+
+	Requirements = array
+	{
+		comp1 extends G3ItemComponent
+		{
+			Name = "Marijuana";
+			Number = 2;
+		};
+//		comp2 extends G3ItemComponent
+//		{
+//			Name = "LinenSack";
+//			Number = 1;
+//		};
+	};
+	
+	RequiredBuildings = array
+	{
+		RequiredBuilding = array { "Windmill", 1 }
+	};
+};
+
+"MarijuanaFlatBread" = G3Item
+{
+	Type = 1;
+	SubType = 2;
+
+	DisplayName = "$MarijuanaFlatBread";
+	Description = "$MarijuanaFlatBreadDesc";
+	DisplayCategories = array("All", "Food");
+	IsLegalByDefault = false;
+	
+	Tier = 3;
+	SocialClass = 0;
+	BuildTime = 40;
+	Production = 2;
+
+	Requirements = array
+	{
+		comp1 extends G3ItemComponent
+		{
+			Name = "MarijuanaFlour";
+			Number = 1;
+		};
+	};
+	
+	RequiredBuildings = array
+	{
+		RequiredBuilding = array { "Windmill", 1 }
+	};
+};
+
+"HempBandage" = G3Item
+{
+	Type = 1;
+	SubType = 5;
+
+	DisplayName = "$HempBandage";
+	Description = "$BandageDesc";
+	UsableBy = array{ "$loca.key.anyone" };
+	DisplayCategories = array("All", "Trinkets");
+	
+	BuildTime = 75;
+	Production = 2;
+	Tier = 3;
+	SocialClass = 1;
+	
+	Requirements = array
+	{
+		comp1 extends G3ItemComponent
+		{
+			Name = "HempCloth";
+			Number = 1;
+		};
+		comp2 extends G3ItemComponent
+		{
+			Name = "Wool";
+			Number = 2;
+		};
+	};
+	
+	Results = array
+	{
+		UnlockEffect
+		{
+			Names = array {"ApplyHempBandage"};
+		}
+	};
+	
+	RequiredBuildings = array
+	{
+		RequiredBuilding = array { "Medicus", 1 }
+	};
+};
+
+"HempCloth" = G3Item
+{
+	Type = 1;
+	SubType = 8;
+
+	DisplayName = "$HempCloth";
+	Description = "$HempClothDesc";
+	DisplayCategories = array("All", "Components");
+	
+	Tier = 3;
+	SocialClass = 1;
+	BuildTime = 7.5;
+	Production = 1;
+	
+	Requirements = array
+	{
+		comp1 extends G3ItemComponent
+		{
+			Name = "Marijuana";
+			Number = 1;
+		};
+		comp2 extends G3ItemComponent
+		{
+			Name = "BoneNeedle";
+			Number = 1;
+		};
+	};
+	
+	RequiredBuildings = array
+	{
+		RequiredBuilding = array { "TailorShop", 1 }
+	};
+};

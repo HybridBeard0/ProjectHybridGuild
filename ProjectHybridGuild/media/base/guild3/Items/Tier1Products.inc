@@ -832,3 +832,47 @@
 	};
 };
 
+//-------- Marijuana -------------
+"MarijuanaTea" = G3Item
+{
+	Type = 1;
+	SubType = 2;
+
+	DisplayName = "$MarijuanaTea";
+	Description = "$MarijuanaTeaDesc";
+	
+	UsableBy = array{ "$loca.key.anyone" };
+	DisplayCategories = array("All", "Food");
+	
+	Tier = 1;
+	SocialClass = 0;
+	BuildTime = 37.5;
+	Production = 1;
+
+	Requirements = array
+	{
+		comp1 extends G3ItemComponent
+		{
+			Name = "Marijuana";
+			Number = 1;
+		};
+		comp2 extends G3ItemComponent
+		{
+			Name = "BucketOfWater";
+			Number = 1;
+		};
+	};			
+	
+	Results = array
+	{
+		UnlockEffect
+		{
+			Names = array {"DrinkMarijuanaTea"};
+		}
+	};
+	
+	RequiredBuildings = array
+	{
+		RequiredBuilding = array { "Shaman", 1 }
+	};
+};

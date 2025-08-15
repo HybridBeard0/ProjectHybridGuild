@@ -2042,3 +2042,86 @@
 		RequiredBuilding = array { "Apothecary", 2 }
 	};
 };
+
+//-------- Marijuana -------------
+"MarijuanaEssence" = G3Item
+{
+	Type = 1;
+	SubType = 2;
+
+	DisplayName = "$MarijuanaEssence";
+	Description = "$MarijuanaEssenceDesc";
+	DisplayCategories = array("All", "Food");
+	
+	Tier = 4;
+	SocialClass = 2;
+	BuildTime = 135;
+	Production = 2;
+	
+	Requirements = array
+	{
+		comp1 extends G3ItemComponent
+		{
+			Name = "MixedGrains";
+			Number = 1;
+		};
+		comp2 extends G3ItemComponent
+		{
+			Name = "Marijuana";
+			Number = 1;
+		};
+	};
+	
+	RequiredBuildings = array
+	{
+		RequiredBuilding = array { "Windmill", 1 }
+	};
+};
+
+"MarijuanaExtract" = G3Item
+{
+	Type = 1;
+	SubType = 7;
+
+	DisplayName = "$MarijuanaExtract";
+	Description = "$PainKillerDesc";
+	UsableBy = array{ "$loca.key.anyone" };
+	DisplayCategories = array("All", "Tinctures");
+	
+	Tier = 4;
+	SocialClass = 2;
+	BuildTime = 125;
+	Production = 1;
+	
+	Requirements = array
+	{
+		comp1 extends G3ItemComponent
+		{
+			Name = "Ethanol";
+			Number = 1;
+		};
+		comp2 extends G3ItemComponent
+		{
+			Name = "MarijuanaEssence";
+			Number = 2;
+		};
+		comp3 extends G3ItemComponent
+		{
+			Name = "Honey";
+			Number = 1;
+		};
+	};
+	
+	Results = array
+	{
+		UnlockEffect
+		{
+			Names = array {"UseCBDExtract"};
+		}
+	};
+	
+	RequiredBuildings = array
+	{
+		RequiredBuilding = array { "Medicus", 2 }
+	};
+};

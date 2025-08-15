@@ -18285,7 +18285,8 @@ LocDirectData
 		LocDirectEntry
 		{
 			Key = "$SleightOfHandStealthDesc";
-			Text = "Whoever chooses to acquire this skill must be aware that there is no turning back! For once trained in this \"art\", you will be a villain feared and despised by all, and it won't be long before you feel the first sticky, innocent blood on your hands...";
+			Text = "Whoever chooses to acquire this skill must be aware that there is no turning back! For once trained in this \"art\", you will be a villain feared and despised by all, and it won't be long before you feel the first sticky, innocent blood on your hands...
+";
 		},
 		LocDirectEntry
 		{
@@ -24765,7 +24766,8 @@ LocDirectData
 		LocDirectEntry
 		{
 			Key = "$WildRoseDesc";
-			Text = "The wild rose produces a sweet but pungent fragrance.";
+			Text = "The wild rose produces a sweet but pungent fragrance.
+";
 		},
 		LocDirectEntry
 		{
@@ -42170,7 +42172,8 @@ LocDirectData
 		LocDirectEntry
 		{
 			Key = "$towncrier.1404.1";
-			Text = "I bring news from a distant land, known for spices and wealth as well as for its cruelty. In the lands of the Rus, the Mongol leader Tamerlane has inflicted severe damage on his Mongol rivals from the Golden Horde. And to you sorcerers and witches who lurk among us; be warned! Parliament has passed laws that forbid all alchemy that would attempt to make gold or silver.";
+			Text = "I bring news from a distant land, known for spices and wealth as well as for its cruelty. In the lands of the Rus, the Mongol leader Tamerlane has inflicted severe damage on his Mongol rivals from the Golden Horde. And to you sorcerers and witches who lurk among us; be warned! Parliament has passed laws that forbid all alchemy that would attempt to make gold or silver.
+";
 		},
 		LocDirectEntry
 		{
@@ -42190,7 +42193,8 @@ LocDirectData
 		LocDirectEntry
 		{
 			Key = "$towncrier.1406.1";
-			Text = "Pope Innocent VII has excommunicated King Ladislaus of Naples and declares him deprived of his kingdom! Are you wondering how things are going in Rome? The travelling jugglers will be performing the Dance of Rome tonight, so go and see for yourself!";
+			Text = "Pope Innocent VII has excommunicated King Ladislaus of Naples and declares him deprived of his kingdom! Are you wondering how things are going in Rome? The travelling jugglers will be performing the Dance of Rome tonight, so go and see for yourself!
+";
 		},
 		LocDirectEntry
 		{
@@ -42715,7 +42719,8 @@ LocDirectData
 		LocDirectEntry
 		{
 			Key = "$towncrier.1460.0";
-			Text = "Adventurers report that Portuguese sailors have advanced beyond Sierra Leone and even further south around the African coast than ever.";
+			Text = "Adventurers report that Portuguese sailors have advanced beyond Sierra Leone and even further south around the African coast than ever.
+";
 		},
 		LocDirectEntry
 		{
@@ -42795,7 +42800,8 @@ LocDirectData
 		LocDirectEntry
 		{
 			Key = "$towncrier.1468.1";
-			Text = "Johannes Gutenberg has died peacefully in Germany. The printing press he invented represents a major step for Europe on the path to modernity.";
+			Text = "Johannes Gutenberg has died peacefully in Germany. The printing press he invented represents a major step for Europe on the path to modernity.
+";
 		},
 		LocDirectEntry
 		{
@@ -42840,7 +42846,8 @@ LocDirectData
 		LocDirectEntry
 		{
 			Key = "$towncrier.1473.0";
-			Text = "Thomas von Kempen has written a poem he calls 'The Imitation of Christ'. After dinner he will read from this work in the market square.";
+			Text = "Thomas von Kempen has written a poem he calls 'The Imitation of Christ'. After dinner he will read from this work in the market square.
+";
 		},
 		LocDirectEntry
 		{
@@ -43020,7 +43027,8 @@ LocDirectData
 		LocDirectEntry
 		{
 			Key = "$towncrier.1491.0";
-			Text = "King Charles VII of France is forcing the young Anne of Brittany to dissolve her marriage to Maximilian of Austria and to marry him herself to incorporate the lands of Brittany into the Kingdom of France.";
+			Text = "King Charles VII of France is forcing the young Anne of Brittany to dissolve her marriage to Maximilian of Austria and to marry him herself to incorporate the lands of Brittany into the Kingdom of France.
+";
 		},
 		LocDirectEntry
 		{
@@ -43160,7 +43168,8 @@ LocDirectData
 		LocDirectEntry
 		{
 			Key = "$towncrier.1505.0";
-			Text = "The Portuguese have landed on an island called Sri Lanka in the Far East and have sent ambassadors to the local ruler King Kotte in Colombo.";
+			Text = "The Portuguese have landed on an island called Sri Lanka in the Far East and have sent ambassadors to the local ruler King Kotte in Colombo.
+";
 		},
 		LocDirectEntry
 		{
@@ -43850,7 +43859,8 @@ LocDirectData
 		LocDirectEntry
 		{
 			Key = "$towncrier.1574.0";
-			Text = "The fifth holy war breaks out in France against the Huguenots. It seems that no peace will reign between the religions in this country.";
+			Text = "The fifth holy war breaks out in France against the Huguenots. It seems that no peace will reign between the religions in this country.
+";
 		},
 		LocDirectEntry
 		{
@@ -45485,7 +45495,8 @@ LocDirectData
 		LocDirectEntry
 		{
 			Key = "$d.act.bribeOff.sAnswer.v3.intim_rp";
-			Text = "There's only one right answer to this dilemma: I choose the easy way.";
+			Text = "There's only one right answer to this dilemma: I choose the easy way.
+";
 		},
 		LocDirectEntry
 		{
@@ -57362,7 +57373,7 @@ LocDirectData
 			Key = "$gui.Options.hungarian";
 			Text = "Magyar (Közösségi fordítás)";
 		},
-
+		
 // *** EggMod ***
 		LocDirectEntry
 		{
@@ -57438,6 +57449,143 @@ LocDirectData
 		{
 			Key = "$callToAction.CharacterDynastyMember";
 			Text = "Select a family member or one of your employees.";
+		},
+
+// *** MarijuanaMod ***
+		LocDirectEntry
+		{
+			Key = "$Marijuana";
+			Text = "Marijuana";
+		},
+		LocDirectEntry
+		{
+			Key = "$MarijuanaDesc";
+			Text = "These flowering buds, known as marijuana, are smoked for their calming and mind-altering effects. Cultivated for both ritual and recreation.";
+		},
+		LocDirectEntry
+		{
+			Key = "$Joint";
+			Text = "Rolled Marijuana";
+		},
+		LocDirectEntry
+		{
+			Key = "$SmokeJoint";
+			Text = "Smoke Marijuana";
+		},
+		LocDirectEntry
+		{
+			Key = "$JointDesc";
+			Text = "Smoked for it's calming and mind-altering effects.";
+		},
+		LocDirectEntry
+		{
+			Key = "$MarijuanaTea";
+			Text = "Marijuana Tea";
+		},
+		LocDirectEntry
+		{
+			Key = "$DrinkMarijuanaTea";
+			Text = "Drink Marijuana Tea";
+		},
+		LocDirectEntry
+		{
+			Key = "$MarijuanaTeaDesc";
+			Text = "Drank for it's calming and mind-altering effects.";
+		},
+		LocDirectEntry
+		{
+			Key = "$MarijuanaFlour";
+			Text = "Marijuana Flour";
+		},
+		LocDirectEntry
+		{
+			Key = "$MarijuanaFlourDesc";
+			Text = "Marijuana is a versatile and long-used plant. Its dried flowers can be ground into a fine flour and used in baking to create potent edibles. While not a grain, it holds a unique place in herbal traditions and modern indulgences alike.";
+		},
+		LocDirectEntry
+		{
+			Key = "$MarijuanaFlatBread";
+			Text = "Marijuana FlatBread";
+		},
+		LocDirectEntry
+		{
+			Key = "$MarijuanaFlatBreadDesc";
+			Text = "Marijuana flatbread is hardly more than marijuana flour mixed with water, then baked over fire. It carries a distinct herbal aroma and imparts a calming effect. Likely one of the oldest ways the plant was eaten.";
+		},
+		LocDirectEntry
+		{
+			Key = "$MarijuanaEssence";
+			Text = "Marijuana essence";
+		},
+		LocDirectEntry
+		{
+			Key = "$MarijuanaEssenceDesc";
+			Text = "In order to obtain the very valuable marijuana essence, you need the heavy grinder of a windmill.";
+		},
+		LocDirectEntry
+		{
+			Key = "$MarijuanaFruitCake";
+			Text = "Marijuana fruit cake";
+		},
+		LocDirectEntry
+		{
+			Key = "$MarijuanaFruitCakeDesc";
+			Text = "Marijuana fruit cake is a popular dessert.";
+		},
+		LocDirectEntry
+		{
+			Key = "$Marijuanabread";
+			Text = "Marijuana bread";
+		},
+		LocDirectEntry
+		{
+			Key = "$MarijuanabreadDesc";
+			Text = "Marijuana bread is cheap and easy to make. It’s not uncommon to find rough bits of leaf or stem baked into the loaf. Marijuana bread is therefore good enough for the rabble—and perhaps a bit more relaxed, too.";
+		},
+		LocDirectEntry
+		{
+			Key = "$MarijuanaCake";
+			Text = "Marijuana cake";
+		},
+		LocDirectEntry
+		{
+			Key = "$MarijuanaCakeDesc";
+			Text = "Everyone loves to eat this mellow cake! Enjoy a slice yourself, or share it as a relaxing gift with someone else.";
+		},
+		LocDirectEntry
+		{
+			Key = "$MarijuanaCreamPie";
+			Text = "Marijuana cream cake";
+		},
+		LocDirectEntry
+		{
+			Key = "$MarijuanaCreamPieDesc";
+			Text = "A marijuana cream cake is the pinnacle of indulgent baking! Sweet, soothing layers come together in a blissful treat that calms the mind and tempts the senses. Savour it yourself with dreamy delight, or share the mellow joy by gifting it to someone special.";
+		},
+		LocDirectEntry
+		{
+			Key = "$HempCloth";
+			Text = "Hemp Cloth";
+		},
+		LocDirectEntry
+		{
+			Key = "$HempClothDesc";
+			Text = "Hemp cloth is woven from processed hemp fibers. The sturdy fabric is then used to make durable garments and other everyday goods.";
+		},
+		LocDirectEntry
+		{
+			Key = "$HempBandage";
+			Text = "Hemp Bandage";
+		},
+		LocDirectEntry
+		{
+			Key = "$HempBandageDesc";
+			Text = "Injuries can be treated with a bandage.";
+		},
+		LocDirectEntry
+		{
+			Key = "$MarijuanaExtract";
+			Text = "Marijuana Extract";
 		},
 	);
 };

@@ -1741,3 +1741,99 @@
 		RequiredBuilding = array { "Butcher", 1 }
 	};
 };
+//-------- Marijuana -------------
+"MarijuanaCake" = G3Item
+{
+	Type = 1;
+	SubType = 2;
+
+	DisplayName = "$MarijuanaCake";
+	Description = "$MarijuanaCakeDesc";
+	DisplayCategories = array("All", "Food");
+
+	Tier = 6;
+	SocialClass = 2;
+	BuildTime = 125;
+	Production = 1;
+
+	Requirements = array
+	{
+		comp1 extends G3ItemComponent
+		{
+			Name = "MarijuanaFlour";
+			Number = 2;
+		};
+		comp2 extends G3ItemComponent
+		{
+			Name = "Candy";
+			Number = 2;
+		};
+		comp3 extends G3ItemComponent
+		{
+			Name = "Fat";
+			Number = 1;
+		};
+	};
+
+	Results = array
+	{
+		UnlockEffect
+		{
+			Names = array {"EatMarijuanaCake","GiveMarijuanaCake"};
+		}
+	};
+	
+	RequiredBuildings = array
+	{
+		RequiredBuilding = array { "Bakery", 3 }
+	};
+};
+
+"MarijuanaCreamPie" = G3Item
+{
+	Type = 1;
+	SubType = 2;
+
+	DisplayName = "$MarijuanaCreamPie";
+	Description = "$MarijuanaCreamPieDesc";
+	DisplayCategories = array("All", "Food");
+	
+	UsableBy = array{ "$gui.item.UsableByAdultFamilyMembers" };
+	
+	Tier = 6;
+	SocialClass = 2;
+	BuildTime = 105;
+	Production = 1;
+
+	Requirements = array
+	{
+		comp1 extends G3ItemComponent
+		{
+			Name = "MarijuanaFlour";
+			Number = 3;
+		};
+		comp2 extends G3ItemComponent
+		{
+			Name = "Candy";
+			Number = 2;
+		};
+		comp3 extends G3ItemComponent
+		{
+			Name = "BlackberryJam";
+			Number = 2;
+		};
+	};
+	
+	Results = array
+	{
+		UnlockEffect
+		{
+			Names = array {"EatMarijuanaCreamPie","GiveMarijuanaCreamPie"};
+		}
+	};
+	
+	RequiredBuildings = array
+	{
+		RequiredBuilding = array { "Bakery", 3 }
+	};
+};

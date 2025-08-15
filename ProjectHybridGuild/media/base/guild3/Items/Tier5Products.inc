@@ -1513,3 +1513,82 @@
 		RequiredBuilding = array { "Medicus", 3 }
 	};
 };
+
+//-------- Marijuana -------------
+"MarijuanaFruitCake" = G3Item
+{
+	Type = 1;
+	SubType = 2;
+
+	DisplayName = "$MarijuanaFruitCake";
+	Description = "$MarijuanaFruitCakeDesc";
+	DisplayCategories = array("All", "Food");
+	
+	Tier = 5;
+	SocialClass = 2;
+	BuildTime = 50;
+	Production = 1;
+	
+	Requirements = array
+	{
+		comp1 extends G3ItemComponent
+		{
+			Name = "MarijuanaFlour";
+			Number = 1;
+		};
+		comp2 extends G3ItemComponent
+		{
+			Name = "Fruit";
+			Number = 1;
+		};
+		comp1 extends G3ItemComponent
+		{
+			Name = "BlackberryJam";
+			Number = 1;
+		};
+	};
+	
+	RequiredBuildings = array
+	{
+		RequiredBuilding = array { "Bakery", 2 }
+	};
+};
+
+"Marijuanabread" = G3Item
+{
+	Type = 1;
+	SubType = 2;
+
+	DisplayName = "$Marijuanabread";
+	Description = "$MarijuanabreadDesc";
+	DisplayCategories = array("All", "Food");
+	
+	Tier = 5;
+	SocialClass = 2;
+	BuildTime = 187.5;
+	Production = 1;
+
+	Requirements = array
+	{
+		comp1 extends G3ItemComponent
+		{
+			Name = "MarijuanaFlour";
+			Number = 2;
+		};
+		comp2 extends G3ItemComponent
+		{
+			Name = "Fat";
+			Number = 1;
+		};
+		comp3 extends G3ItemComponent
+		{
+			Name = "BucketOfWater";
+			Number = 1;
+		};
+	};
+	
+	RequiredBuildings = array
+	{
+		RequiredBuilding = array { "Bakery", 2 }
+	};
+};

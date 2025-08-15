@@ -146,3 +146,70 @@
 		RequiredBuilding = array { "Bakery", 3 }
 	};
 };
+//-------- Marijuana -------------
+"Marijuana" = G3Item
+{
+	Type = 2;
+	SubType = 7;
+	DisplayName = "$Marijuana";
+	Description = "$MarijuanaDesc";
+	Price = 125;
+	
+	Tier = 6;
+	SocialClass = 2;
+	BuildTime = 75;
+	Production = 1;
+	DisplayCategories = array("All", "Luxury");	
+	
+	Requirements = array
+	{
+		comp1 extends G3ItemComponent
+		{
+			Name = "BucketOfWater";
+			Number = 5;
+		};
+	};
+	
+	RequiredBuildings = array
+	{
+		RequiredBuilding = array { "Farm", 2 }
+	};
+};
+
+"Joint" = G3Item
+{
+	Type = 1;
+	SubType = 2;
+	DisplayName = "$Joint";
+	Description = "$JointDesc";
+	
+	UsableBy = array{ "$gui.item.UsableByAdultFamilyMembers" };
+	
+	Tier = 6;
+	SocialClass = 2;
+	BuildTime = 75;
+	Production = 1;
+	DisplayCategories = array("All", "Food");	
+	
+	Requirements = array
+	{
+		comp1 extends G3ItemComponent
+		{
+			Name = "Marijuana";
+			Number = 2;
+		};
+	};
+	
+	RequiredBuildings = array
+	{
+		RequiredBuilding = array { "Apothecary", 1 }
+	};
+	
+	Results = array
+	{
+		UnlockEffect
+		{
+			Names = array {"SmokeJoint"};
+		}
+	};
+};
