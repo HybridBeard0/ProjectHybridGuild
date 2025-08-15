@@ -13033,9 +13033,6 @@ G3ActionsDefault extends G3ActionsContainer
 		@base/ArsenalLifeActions
 		@base/TownhallLifeActions
 		@base/TrialActions
-// *** EggMod --> ***
-		@base/EggModActions
-// *** <-- EggMod ***
-		@base/LandlordModActions
+		@base/ModdedActions
 	};
 };
