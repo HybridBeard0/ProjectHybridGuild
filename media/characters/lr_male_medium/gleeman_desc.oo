@@ -1,0 +1,13 @@
+lr_male_medium/lr_male_medium_desc
+{
+	Visual = "gleemanmale_med_game";
+	Poor = false;
+	MiddleClass = true;
+	Rich = true;
+	Male = true;
+	Player = true;
+	Employee = true;
+	TrotSpeed = 0.000;
+	AverageAge = 0.000;
+	CustomCollisionRadius = 0.000;
+}
