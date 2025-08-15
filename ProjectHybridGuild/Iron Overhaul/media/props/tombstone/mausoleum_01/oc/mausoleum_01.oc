@@ -1,0 +1,10 @@
+mausoleum_01 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "mausoleum_01";
+	};
+	EditorName = "Mausoleum01";
+	EditorIcon = "media/UserInterface/PropIcons/Mausoleum01.png";
+	EditorCategory = 3;		
+}

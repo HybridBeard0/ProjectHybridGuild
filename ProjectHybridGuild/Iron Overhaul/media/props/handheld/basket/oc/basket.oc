@@ -1,0 +1,14 @@
+basket extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "basket";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 Spine1";
+		AttachChildNode = "Snap";
+	};
+	EditorName = "Basket";
+	EditorIcon = "media/UserInterface/PropIcons/Basket.png";
+	EditorCategory = 3;		
+}

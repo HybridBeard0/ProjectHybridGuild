@@ -1,0 +1,14 @@
+/*tree_14 extends G3PropsInstance
+{
+
+	static var Description = ActorDesc
+	{
+		Visual = "tree_14";
+	};
+	EditorName = "Tree14";
+	EditorIcon = "media/UserInterface/PropIcons/Tree14.png";
+	EditorCategory = 0;		
+	SnapGround = true;
+	
+}
+*/

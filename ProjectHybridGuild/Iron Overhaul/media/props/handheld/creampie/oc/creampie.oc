@@ -1,0 +1,14 @@
+creampie extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "creampie";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+	EditorName = "Creampie";
+	EditorIcon = "media/UserInterface/Icons/Items/CreamPie.png";
+	EditorCategory = 3;		
+}

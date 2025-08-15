@@ -1,0 +1,10 @@
+foodstand extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "foodstand";
+	};
+	EditorName = "foodstand";
+	EditorIcon = "media/UserInterface/PropIcons/foodstand.png";
+	EditorCategory = 3;		
+}

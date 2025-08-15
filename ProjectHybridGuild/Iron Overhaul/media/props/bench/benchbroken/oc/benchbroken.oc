@@ -1,0 +1,10 @@
+benchbroken extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "benchbroken";
+	};
+	EditorName = "benchbroken";
+	EditorIcon = "media/UserInterface/PropIcons/benchbroken.png";
+	EditorCategory = 3;		
+}

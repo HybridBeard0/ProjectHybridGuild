@@ -1,0 +1,21 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1472137694;
+			Name = "idle1";
+			AnimationName = "idle1";
+			Triggers = array
+			(
+				EffectTrigger
+				{
+					IsRequired = true;
+					EffectName = "GroundDust";
+					RefNodeOverride = "DummyDust";
+				},
+			);
+		},
+	);
+}

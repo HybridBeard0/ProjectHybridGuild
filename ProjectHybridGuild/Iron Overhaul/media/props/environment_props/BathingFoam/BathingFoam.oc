@@ -1,0 +1,23 @@
+BathingFoam extends EffectProp
+{
+	static var Description = ActorDesc
+	{
+		Visual = "";
+	};
+	
+	function onSpawn()
+	{
+		this.playAnimationByName("Idle");
+	}
+	
+	EditorName = "BathingFoam";
+	EditorIcon = "Editoreffect_morninglakemist";
+	Destructible = false;
+	EditorCategory = 7;
+	
+	// EffectName defines the particle system to spawn when effect prop should be active
+	EffectName = "Hottub_foam";
+	// Tags are used to define when the effect should be active (seasons, weather)
+	// Valid tags: "Winter", "Spring", "Summer", "Fall", "IronSky", "Rain", "Snow"
+	Tags = array { "Spring", "Summer", "Fall", "IronSky" };
+}

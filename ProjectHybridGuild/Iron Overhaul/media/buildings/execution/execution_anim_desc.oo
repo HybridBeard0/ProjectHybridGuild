@@ -1,0 +1,12 @@
+G3ActorDesc
+{
+	Visual = "execution";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#execution/animations,
+		);
+	};
+	CrowdControlRadius = 0.000;
+}

@@ -1,0 +1,14 @@
+FarmLevel3 extends G3BuildingTemplateLevel
+{
+	NBAddons = 13;
+	
+	Results = array 
+	{
+		ModifierEffect
+		{
+			ActorValue = "StorageSlots";
+			Mod = 5.0;
+			Recover = true;
+		};
+	};
+};

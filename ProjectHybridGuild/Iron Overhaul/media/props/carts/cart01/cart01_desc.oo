@@ -1,0 +1,11 @@
+ActorDesc
+{
+	Visual = "cart01";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#cart01/list_walks_animations,
+		);
+	};
+}

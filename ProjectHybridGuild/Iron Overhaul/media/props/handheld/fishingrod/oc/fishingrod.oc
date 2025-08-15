@@ -1,0 +1,14 @@
+fishingrod extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "fishingrod";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";		
+	};
+	EditorName = "Fishingrod";
+	EditorIcon = "media/UserInterface/Icons/Items/Fishingrod.png";
+	EditorCategory = 3;		
+}

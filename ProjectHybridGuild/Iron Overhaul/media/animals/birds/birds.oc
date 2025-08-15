@@ -1,0 +1,10 @@
+birds extends G3Animal
+{
+	static var Description = #birds/birds_desc;
+
+	function onInit()
+	{
+		this.playAnimationByName("bird1");
+	}
+	EditorName = "Birds";
+};

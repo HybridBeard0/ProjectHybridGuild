@@ -1,0 +1,299 @@
+grove extends Building
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "grove";
+		
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc {
+					Name = "streetconnection";
+					Position = ( 55.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "enter";
+					Position = ( 55.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "exit";
+					Position = ( 55.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+				},
+				SnapPointDesc
+				{
+					Name = "employee00"; // south-east
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "CrouchFadeIn";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "reap_herbs2";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "CrouchFadeOut";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee01"; // north-east
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "CrouchFadeIn";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "reap_herbs2";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "CrouchFadeOut";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee02"; // north-west
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "CrouchFadeIn";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "reap_herbs2";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "CrouchFadeOut";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee03"; // south-west
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "CrouchFadeIn";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "reap_herbs2";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "CrouchFadeOut";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee04"; // south-west
+					Position = ( 10.0, 335.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 230.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "CrouchFadeIn";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "reap_herbs2";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "CrouchFadeOut";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee05"; // south-west
+					Position = ( -150.0, 115.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 320.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "CrouchFadeIn";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "reap_herbs2";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "CrouchFadeOut";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee06"; // south-west
+					Position = ( 175.0, 310.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "CrouchFadeIn";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "reap_herbs2";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "CrouchFadeOut";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "hunting00"; // south-west
+					Position = ( 105.0, 270.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 130.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "GoHunting";
+							Animation = "shoot_crossbow2";
+							Prop = "crossbow/crossbow";
+							Repeat = 4;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "hunting01"; // south-west
+					Position = ( -155.0, 350.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 230.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "GoHunting";
+							Animation = "shoot_crossbow2";
+							Prop = "crossbow/crossbow";
+							Repeat = 4;
+						},
+					};
+				},
+			};
+		};
+	};
+	EditorName = "Grove";
+	EditorIcon = "media/UserInterface/Icons/BuildingImages/Other/Grove.png";
+	EditorCategory = 3;			
+}

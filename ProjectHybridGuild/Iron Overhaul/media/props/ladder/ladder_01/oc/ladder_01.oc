@@ -1,0 +1,10 @@
+ladder_01 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "ladder_01";
+	};
+	EditorName = "Ladder01";
+	EditorIcon = "media/UserInterface/PropIcons/Ladder01.png";
+	EditorCategory = 4;		
+}

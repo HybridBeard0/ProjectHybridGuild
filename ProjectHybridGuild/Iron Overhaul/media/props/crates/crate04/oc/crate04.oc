@@ -1,0 +1,10 @@
+crate04 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "crate04";
+	};
+	EditorName = "Crate04";
+	EditorIcon = "media/UserInterface/PropIcons/Crate04.png";
+	EditorCategory = 3;		
+}

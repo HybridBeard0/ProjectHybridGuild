@@ -1,0 +1,10 @@
+barrel06 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "barrel06";
+	};
+	EditorName = "Barrel06";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel06.png";
+	EditorCategory = 3;		
+}

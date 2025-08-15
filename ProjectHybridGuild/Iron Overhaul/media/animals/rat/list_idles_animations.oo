@@ -1,0 +1,34 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1521723278;
+			Name = "idle1";
+			AnimationName = "idle1";
+			Triggers = array
+			(
+				SoundTrigger 
+				{
+					SoundEvent = 38;
+					FadeOut = 500.0;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1521831361;
+			Name = "idle2";
+			AnimationName = "idle2";
+			Triggers = array
+			(
+				SoundTrigger 
+				{
+					SoundEvent = 38;
+					FadeOut = 500.0;
+				},
+			);
+		}
+	);
+}

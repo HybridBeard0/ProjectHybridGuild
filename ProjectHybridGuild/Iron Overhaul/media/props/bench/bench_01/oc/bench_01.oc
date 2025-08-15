@@ -1,0 +1,51 @@
+bench_01 extends G3PropsInstance
+{
+	static var Description = G3PropDesc
+	{
+		Visual = "bench_01";
+		
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc
+				{
+					Name = "bench00";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Animation = "sit_bench1";
+							Context = "SitOnBench";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "bench01";
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Animation = "sit_bench1";
+							Context = "SitOnBench";
+						},
+					};
+				},
+			};
+		};
+		
+		Interaction = G3ActorInteraction
+		{
+			Name = "$props.name.Bench";
+			TooltipText = "$action.Sit";
+			TooltipIcon = "SitOnBench";
+			ContextAction = "SitOnBench";
+			ActionFailureMessage = "SitInteractionError";
+		};
+	};
+	
+	Interactable = true;
+	
+	EditorName = "Bench01";
+	EditorIcon = "media/UserInterface/PropIcons/Bench01.png";
+	EditorCategory = 3;		
+}

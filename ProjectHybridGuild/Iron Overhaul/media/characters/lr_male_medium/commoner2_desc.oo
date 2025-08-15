@@ -1,0 +1,13 @@
+lr_male_medium/lr_male_medium_desc
+{
+	Visual = "commoner2male_med_game";
+	
+	Poor = true;
+	MiddleClass = true;
+	Rich = false;
+	Male = true;
+	Player = true;
+	Employee = true;
+	TrotSpeed = 0.000;
+	AverageAge = 0.000;	
+}

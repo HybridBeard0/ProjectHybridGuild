@@ -1,0 +1,10 @@
+interiorprop_simplecupboard5 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "interiorprop_simplecupboard5";
+	};
+	EditorName = "InteriorProp SimpleCupboard5";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

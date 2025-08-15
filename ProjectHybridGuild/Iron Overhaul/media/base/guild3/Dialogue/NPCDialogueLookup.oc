@@ -1,0 +1,457 @@
+NPCDialogueLookup extends NPCDialogueLookup
+{
+	//DefaultDialogueId = "d.npcChat.casualLife.toasts";
+	
+	WorldDialogues = array
+	{
+		//Casual
+		DialogueCondition {
+			DialogueId = "d.npcChat.casualLife.toasts";
+			Probability = "0.2";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.casualLife.coin";
+			Probability = "0.2";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.casualLife.bBusiness";
+			Probability = "0.2";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.casualLife.gDay";
+			Probability = "0.3";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.casualLife.gBusiness";
+			Probability = "0.2";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.casualLife.watchingUs";
+			Probability = "0.1";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.muchWork";
+			Probability = "0.2";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.earnLittle";
+			Probability = "0.2";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.highPrices";
+			Probability = "0.2";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.competition";
+			Probability = "0.2";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.niceJob";
+			Probability = "0.2";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.learnEachDay";
+			Probability = "0.2";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.niceSong";
+			Probability = "0.1";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.goodJoke";
+			Probability = "0.2";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.heardRumor";
+			Probability = "0.2";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.goodInvest";
+			Probability = "0.2";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.literacy";
+			Probability = "0.2";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.hygiene";
+			Probability = "0.2";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.gravedigger";
+			Probability = "0.1";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.barber";
+			Probability = "0.1";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.bath";
+			Probability = "0.1";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.floodDream";
+			Probability = "0.1";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.flyDream";
+			Probability = "0.1";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.clockDream";
+			Probability = "0.1";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.feastDream";
+			Probability = "0.1";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.sailDream";
+			Probability = "0.1";
+		},
+		DialogueCondition {
+			DialogueId = "d.npcChat.newEra";
+			Probability = "0.1";
+		},
+		
+		// FireStatistics
+		
+		DialogueCondition {
+			Category = "FireStatistics";
+			Enabled = "RecentLocalFires > 0";
+ 			DialogueId = "d.npcChat.fire";
+			Probability = "1.0";
+		},
+//		DialogueCondition {
+//			Category = "FireStatistics";
+//			Enabled = "RecentGlobalFires > 0";
+// 			DialogueId = "RecentGlobalFires";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition {
+//			Category = "FireStatistics";
+//			Enabled = "NumLocalBuildings > 0";
+// 			DialogueId = "NumLocalBuildings";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition {
+//			Category = "FireStatistics";
+//			Enabled = "NumGlobalBuildings > 0";
+// 			DialogueId = "NumGlobalBuildings";
+//			Probability = "1.0";
+//		},
+		
+		
+		// DeathEvents
+		DialogueCondition {
+			Category = "DeathEvents";
+			Enabled = "IsSovereign";
+ 			DialogueId = "d.npcChat.SovereignDead";
+			Probability = "1.0";
+		},
+		DialogueCondition {
+			Category = "DeathEvents";
+			Enabled = "IsLeader && LocalRelationshipScore > 33";
+			DialogueId = "d.npcChat.LeaderDead.good";
+			Probability = "1.0";
+		},
+		DialogueCondition {
+			Category = "DeathEvents";
+			Enabled = "IsLeader && LocalRelationshipScore < -33";
+			DialogueId = "d.npcChat.LeaderDead.bad";
+			Probability = "1.0";
+		},
+
+		
+//		DialogueCondition {
+//			Category = "DeathEvents";
+//			Enabled = "YearsSince > 0";
+// 			DialogueId = "YearsSince";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition {
+//			Category = "DeathEvents";
+//			Enabled = "IsSovereign";
+// 			DialogueId = "IsSovereign";
+//			Probability = "1.0";
+//		},
+		
+		
+
+		// DeathStatistics
+			
+//		DialogueCondition {
+//			Category = "DeathStatistics";
+//			Enabled = "RecentLocalDeaths > 0";
+// 			DialogueId = "RecentLocalDeaths";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition {
+//			Category = "DeathStatistics";
+//			Enabled = "RecentGlobalDeaths > 0";
+// 			DialogueId = "RecentGlobalDeaths";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition {
+//			Category = "DeathStatistics";
+//			Enabled = "LocalPopulation > 0";
+// 			DialogueId = "LocalPopulation";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition {
+//			Category = "DeathStatistics";
+//			Enabled = "GlobalPopulation > 0";
+// 			DialogueId = "GlobalPopulation";
+//			Probability = "1.0";
+//		},
+		
+		
+		// ExecutionEvents
+		
+//		DialogueCondition {
+//			Category = "ExecutionEvents";
+//			Enabled = "YearsSince > 0";
+//			DialogueId = "YearsSinceExecution";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition {
+//			Category = "ExecutionEvents";
+//			Enabled = "YearsUntil > 0";
+//			DialogueId = "YearsUntilExecution";
+//			Probability = "1.0";
+//		},
+		
+				
+		// CrimeStatistics
+			
+		DialogueCondition {
+			Category = "CrimeStatistics";
+			Enabled = "RecentGlobalTrials > 7";
+			DialogueId = "d.npcChat.crime.around";
+			Probability = "0.7";
+		},
+//		DialogueCondition {
+//			Category = "CrimeStatistics";
+//			Enabled = "RecentGlobalHarshVerdicts > 0";
+//			DialogueId = "RecentGlobalHarshVerdicts";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition {
+//			Category = "CrimeStatistics";
+//			Enabled = "RecentGlobalLenientVerdicts > 0";
+// 			DialogueId = "RecentGlobalLenientVerdicts";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition {
+//			Category = "CrimeStatistics";
+//			Enabled = "RecentLocalTrials > 0";
+//			DialogueId = "RecentLocalTrials";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition {
+//			Category = "CrimeStatistics";
+//			Enabled = "RecentLocalHarshVerdicts > 0";
+// 			DialogueId = "RecentLocalHarshVerdicts";
+//			Probability = "1.0";
+//		},
+		DialogueCondition {
+			Category = "CrimeStatistics";
+			Enabled = "RecentGlobalLenientVerdicts > 4";
+ 			DialogueId = "d.npcChat.crime.belowPublic";
+			Probability = "0.7";
+		},
+		
+		
+		// SicknessStatistics
+			
+//		DialogueCondition {
+//			Category = "SicknessStatistics";
+//			Enabled = "LocalPopulation > 0";
+// 			DialogueId = "LocalPopulation";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition {
+//			Category = "SicknessStatistics";
+//			Enabled = "LocalSickPopulation > 0";
+// 			DialogueId = "LocalSickPopulation";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition {
+//			Category = "SicknessStatistics";
+//			Enabled = "GlobalPopulation > 0";
+// 			DialogueId = "GlobalPopulation";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition {
+//			Category = "SicknessStatistics";
+//			Enabled = "GlobalSickPopulation > 0";
+// 			DialogueId = "GlobalSickPopulation";
+//			Probability = "1.0";
+//		},
+		DialogueCondition {
+			Category = "SicknessStatistics";
+			Enabled = "GlobalSickPopulation / GlobalPopulation > 0.01";
+ 			DialogueId = "d.npcChat.plagueMap";
+			Probability = "0.8";
+		},
+		
+		// SeasonalStatistics
+
+		DialogueCondition {
+			Category = "SeasonalStatistics";
+			Enabled = "IsWinter"; // IsSnowing?
+ 			DialogueId = "d.npcChat.firewood";
+			Probability = "0.2";
+		},
+		DialogueCondition {
+			Category = "SeasonalStatistics";
+			Enabled = "IsNight";
+ 			DialogueId = "d.npcChat.shadows";
+			Probability = "0.2";
+		},
+		DialogueCondition {
+			Category = "SeasonalStatistics";
+			Enabled = "IsNight";
+ 			DialogueId = "d.npcChat.ghosts";
+			Probability = "0.2";
+		},
+			
+//		DialogueCondition {
+//			Category = "SeasonalStatistics";
+//			Enabled = "IsRaining";
+// 			DialogueId = "IsRaining";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition {
+//			Category = "SeasonalStatistics";
+//			Enabled = "IsSunny";
+// 			DialogueId = "IsSunny";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition  {
+//			Category = "SeasonalStatistics";
+//			Enabled = "IsNight";
+// 			DialogueId = "IsNight";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition {
+//			Category = "SeasonalStatistics";
+//			Enabled = "IsWinter";
+// 			DialogueId = "IsWinter";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition {
+//			Category = "SeasonalStatistics";
+//			Enabled = "IsSpring";
+// 			DialogueId = "IsSpring";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition {
+//			Category = "SeasonalStatistics";
+//			Enabled = "IsSummer";
+// 			DialogueId = "IsSummer";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition {
+//			Category = "SeasonalStatistics";
+//			Enabled = "IsAutumn";
+// 			DialogueId = "IsAutumn";
+//			Probability = "1.0";
+//		},
+
+		DialogueCondition {
+			Category = "SeasonalStatistics";
+			Enabled = "NormalizedSeasonProgress < 0.4";
+			DialogueId = "d.npcChat.newSeas";
+			Probability = "0.2";
+		},
+		DialogueCondition {
+			Category = "SeasonalStatistics";
+			Enabled = "NormalizedSeasonProgress > 0.7";
+ 			DialogueId = "d.npcChat.endSeas";
+			Probability = "0.2";
+		},
+		
+		// Dynasty
+			
+		DialogueCondition {
+			Category = "Dynasty";
+			Enabled = "LocalRelationshipScore < -50";
+ 			DialogueId = "d.npcChat.dontLike.dynX";
+			Probability = "0.8";
+		},
+		DialogueCondition {
+			Category = "Dynasty";
+			Enabled = "LocalRelationshipScore > 50";
+ 			DialogueId = "d.npcChat.like.dynX";
+			Probability = "0.7";
+		},
+//		DialogueCondition {
+//			Category = "Dynasty";
+//			Enabled = "HasHeir";
+// 			DialogueId = "HasHeir";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition {
+//			Category = "Dynasty";
+//			Enabled = "NumChildren > 0";
+// 			DialogueId = "NumChildren";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition {
+//			Category = "Dynasty";
+//			Enabled = "NumChildrenInAllDynasties > 0";
+// 			DialogueId = "NumChildrenInAllDynasties";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition {
+//			Category = "Dynasty";
+//			Enabled = "HadRecentMarriage";
+// 			DialogueId = "HadRecentMarriage";
+//			Probability = "1.0";
+//		},
+//		DialogueCondition {
+//			Category = "Dynasty";
+//			Enabled = "MaxBachelorAge > 0";
+// 			DialogueId = "MaxBachelorAge";
+//			Probability = "1.0";
+//		},
+		
+		//Office Change 
+		
+		DialogueCondition {
+			Category = "OfficeChangeEvents";
+			Enabled = "AppointedOffice && IsInLocalCity && LocalRelationshipScore > 10";
+			DialogueId = "d.npcChat.goodOff";
+			Probability = "0.8";
+		},
+		DialogueCondition {
+			Category = "OfficeChangeEvents";
+			Enabled = "AppointedOffice && IsInLocalCity && LocalRelationshipScore < -10";
+			DialogueId = "d.npcChat.badOff";
+			Probability = "0.8";
+		},
+		
+		//Law Change
+		DialogueCondition {
+			Category = "LawChangeEvents";
+			Enabled = "IsLegal && IsInLocalCity";
+			DialogueId = "d.npcChat.genLegal";
+			Probability = "0.9";
+		},
+		DialogueCondition {
+			Category = "LawChangeEvents";
+			Enabled = "IsIllegal && IsInLocalCity";
+			DialogueId = "d.npcChat.genIllegal";
+			Probability = "0.9";
+		
+		},
+		
+		// Sovereign
+		//DialogueCondition {
+		//	Category = "Sovereign";
+		//	DialogueId = "d.npcChat.genIllegal";
+		//},
+		
+	};
+};

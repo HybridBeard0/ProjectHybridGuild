@@ -1,0 +1,68 @@
+ShopLevel1 extends G3BuildingTemplateLevel
+{
+    NBAddons = 12;
+
+	Results = array 
+	{
+		ModifierEffect
+		{
+			ActorValue = "Productivity";
+			Mod = 0.1;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "MaxEmployees";
+			Mod = 2.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "MaxTransporters";
+			Mod = 1.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "StorageSlots";
+			Mod = 10.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "StorageSpace";
+			Mod = 60.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "FrontStoreSlots";
+			Mod = 3.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "FrontStoreSpace";
+			Mod = 60.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "FireProtection";
+			Mod = 1.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "BuildingSecurity";
+			Mod = 1.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "Attractiveness";
+			Mod = 10.0;
+			Recover = true;
+		};
+	};
+};

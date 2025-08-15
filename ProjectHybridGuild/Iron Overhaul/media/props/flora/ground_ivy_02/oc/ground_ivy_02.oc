@@ -1,0 +1,10 @@
+ground_ivy_02 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "ground_ivy_02";
+	};
+	EditorName = "Ground_Ivy_02";
+	EditorIcon = "media/UserInterface/PropIcons/ground_ivy_02.png";
+	EditorCategory = 1;		
+}

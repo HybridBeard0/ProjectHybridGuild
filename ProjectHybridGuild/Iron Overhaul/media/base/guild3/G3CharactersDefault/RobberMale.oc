@@ -1,0 +1,40 @@
+RobberMale extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = true;
+	MiddleClass = false;
+	Rich = false;
+	
+	Male = true;
+	Player = false;
+	Employee = true;
+	Profession = true;
+	
+	LowResCharacter = "commoner1";
+	HighResCharacter = "commoner1";
+	
+	BodyTexturesDiff= array
+	{
+		"Commoner1Male_diff",
+		"Commoner1Male_diff",
+		"Commoner1Male_diff",		
+		"Commoner1Male_diff"			
+	};
+	BodyTexturesNorm= array
+	{
+		"Commoner1Male_NORM",
+		"Commoner1Male_NORM",
+		"Commoner1Male_NORM",
+		"Commoner1Male_NORM"
+	};
+	BodyTexturesMask= array
+	{
+		"Commoner1Male_MASK",
+		"Commoner1Male_MASK",
+		"Commoner1Male_MASK",
+		"Commoner1Male_MASK"
+	};
+}

@@ -1,0 +1,9 @@
+chicken extends G3Animal
+{
+	static var Description = #chicken/chicken_desc;
+	Behaviour = "Chicken";
+	EditorName = "Chicken";
+	
+	MaxRoamingDistance = 220;
+    RoamingDivFactor = 3;
+};

@@ -1,0 +1,22 @@
+InnLevel2 extends G3BuildingTemplateLevel
+{
+	NBAddons = 13;
+	
+    Results = array 
+	{
+		DisplayEffect
+		{
+			Tags = array{"DiceTable"};
+			ApplyTo = "Self";
+			DisplayGroup = "RoomFixture";
+			DisplayName = "$DiceTable";
+			Duration = 0.0;
+		};
+		ModifierEffect
+		{
+			ActorValue = "StorageSlots";
+			Mod = 5.0;
+			Recover = true;
+		};
+	};
+};

@@ -1,0 +1,176 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1452628120;
+			Name = "blaming1";
+			AnimationName = "blaming1";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 38;
+					SoundEvent = 1201;
+					FadeStart = 100; // Faster silent
+					FadeOut = 500.0; // Not too loud
+					EventLoops = false;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 92;
+					SoundEvent = 1201;
+					FadeStart = 100; // Faster silent
+					FadeOut = 500.0; // Not too loud
+					EventLoops = false;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1475261478;
+			Name = "GuardBuilding1";
+			AnimationName = "GuardBuilding1";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1475263915;
+			Name = "GuardBuilding2";
+			AnimationName = "GuardBuilding2";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1427903221;
+			Name = "lr_city_guard_idle1";
+			AnimationName = "lr_city_guard_idle1";
+		},
+		AnimationDesc
+		{
+			ID = 1427903229;
+			Name = "lr_city_guard_run1";
+			AnimationName = "lr_city_guard_run1";
+			Motion = 100.000;
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 6;
+					SoundEvent = 1202;
+					FadeStart = 100; // Faster silent
+					FadeOut = 500.0; // Not too loud
+					EventLoops = false;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 17;
+					SoundEvent = 1202;
+					FadeStart = 100; // Faster silent
+					FadeOut = 500.0; // Not too loud
+					EventLoops = false;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1427903237;
+			Name = "lr_city_guard_run2";
+			AnimationName = "lr_city_guard_run2";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 3;
+					SoundEvent = 1202;
+					FadeStart = 100; // Faster silent
+					FadeOut = 500.0; // Not too loud
+					EventLoops = false;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 11;
+					SoundEvent = 1202;
+					FadeStart = 100; // Faster silent
+					FadeOut = 500.0; // Not too loud
+					EventLoops = false;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1442418386;
+			Name = "lr_city_guard_swordfight_attack1";
+			AnimationName = "swordfight_attack1";
+			Looping = true;
+		},
+		AnimationDesc
+		{
+			ID = 1441725640;
+			Name = "lr_city_guard_swordfight_guard1";
+			AnimationName = "swordfight_guard1";
+			Looping = true;
+		},
+		AnimationDesc
+		{
+			ID = 1427903250;
+			Name = "lr_city_guard_walk1";
+			AnimationName = "lr_city_guard_walk1";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 8;
+					SoundEvent = 1202;
+					FadeStart = 100; // Faster silent
+					FadeOut = 500.0; // Not too loud
+					EventLoops = false;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 25;
+					SoundEvent = 1202;
+					FadeStart = 100; // Faster silent
+					FadeOut = 500.0; // Not too loud
+					EventLoops = false;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1452628144;
+			Name = "spotted1";
+			AnimationName = "spotted1";
+			Looping = true;
+		},
+	);
+}

@@ -1,0 +1,16 @@
+heligocliff_06 extends G3PropsInstance
+{
+	CustomFadeAlpha = 1.0;
+	Walkable = true; // whenever you change the 'walkable' property of a prop, make sure to correctly move it between 'prop_packages.oo' and 'walkable_prop_packages.oo'. This ensures that all walkable props are preloaded correctly before a game starts.
+
+	Destructible = false;
+	BlocksBuildings = true;
+	
+	static var Description = ActorDesc
+	{
+		Visual = "heligocliff_06";
+	};
+	EditorName = "HeligoCliff06";
+	EditorIcon = "media/UserInterface/PropIcons/Cliff08.png";
+	EditorCategory = 2;
+}

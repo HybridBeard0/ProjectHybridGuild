@@ -1,0 +1,11 @@
+G3ActorDesc
+{
+	Visual = "interior_countryhouses_01";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#Interior_Countryhouses/interior_countryhouses_01_idles_animations,
+		);
+	};
+}

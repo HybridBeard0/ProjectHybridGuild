@@ -1,0 +1,317 @@
+Cemetary extends Building
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "cemetary";
+		AnimationArray = AnimationListArray
+		{
+			AnimationLists = array
+			(
+				#cemetary/cemetary_idles_animations,
+			);
+		};
+		Visuals = VisualList
+		{
+			Visuals = array
+			{
+				VisualDesc
+				{
+					Name = "cemetary";
+					VisualName = "cemetary";
+				},
+				VisualDesc
+				{
+					Name = "cemetary_easteregg";
+					VisualName = "cemetary_easteregg";
+				},
+			};
+		};
+		
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc {
+					Name = "streetconnection";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "enter";
+					Position = ( 0.0, 35.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "exit";
+					Position = ( 0.0, 35.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+				},
+				SnapPointDesc
+				{
+					Name = "prayer00";
+					Position = ( 120.0, 135.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "MournDeceasedRelative";
+							Animation = "CrouchFadeIn";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "MournDeceasedRelative";
+							Animation = "praying_knees";
+							Repeat = 2;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "MournDeceasedRelative";
+							Animation = "CrouchFadeOut";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "prayer01";
+					Position = ( -140.0, 115.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 15.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "MournDeceasedRelative";
+							Animation = "CrouchFadeIn";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "MournDeceasedRelative";
+							Animation = "praying_knees";
+							Repeat = 2;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "MournDeceasedRelative";
+							Animation = "CrouchFadeOut";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee0";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "digging1";
+							Prop = "shovel/shovel";
+							Repeat = 3;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee1";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "PlunderGraves";
+							Animation = "digging1";
+							Prop = "shovel/shovel";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "MakeEvocation";
+							Animation = "summoning";
+							Repeat = 2;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee2";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "PlunderGraves";
+							Animation = "digging1";
+							Prop = "shovel/shovel";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "MakeEvocation";
+							Animation = "summoning";
+							Repeat = 2;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee3";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "digging1";
+							Prop = "shovel/shovel";
+							Repeat = 2;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee4";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "digging1";
+							Prop = "shovel/shovel";
+							Repeat = 3;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee5";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "digging1";
+							Prop = "shovel/shovel";
+							Repeat = 2;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee6";
+					Position = ( -100.0, 310.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "digging1";
+							Prop = "shovel/shovel";
+							Repeat = 3;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee7";
+					Position = ( 280.0, 240.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "digging1";
+							Prop = "shovel/shovel";
+							Repeat = 2;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee8";
+					Position = ( -210.0, 310.0, 0.0 );
+					Rotation = ( 0.0, 0.0, -90.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "digging1";
+							Prop = "shovel/shovel";
+							Repeat = 2;
+						},
+					};
+				},
+			};
+		};
+	};
+	EditorName = "Cemetery";
+	EditorIcon = "media/UserInterface/Icons/BuildingImages/Other/Cemetary.png";
+	EditorCategory = 3;	
+}

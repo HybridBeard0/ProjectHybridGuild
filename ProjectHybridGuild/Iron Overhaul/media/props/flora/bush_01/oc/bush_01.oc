@@ -1,0 +1,12 @@
+bush_01 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "bush_01";
+	};
+	EditorName = "Bush01";
+	EditorIcon = "media/UserInterface/PropIcons/Bush01.png";
+	EditorCategory = 1;		
+	
+//	CullDistance = 4000;
+}

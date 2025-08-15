@@ -1,0 +1,65 @@
+BaseServer extends NewGameData
+{
+    PlayerNetworkName = "Server Player";
+
+    Character = sysNewGameCharacter
+    {
+        FirstName = "David";
+        LastName = "Goliath";
+        IsMale = true;
+        Crest = 13;
+        Model = 110;
+        ModelTexture = 6;
+        Portrait = 1;
+		Religion = "Protestant"; // Catholic, Protestant or NoReligion see ReligionSettings.oc
+		
+        ActorValues = map 
+        {
+            "Strength" = 1;
+            "Dexterity" = 2;
+            "Intelligence" = 3;
+            "Perception" = 5;
+            "Charisma" = 10;
+        };
+		
+	// Remove whole StartupSkill block to get a random skill otherwise use the same structure like in StartupSkills map in GameplayDefault.oc
+	StartupSkill = StartupSkill
+	{ 
+            SkillName = "Handicraft"; 
+	    LocalizationKey = "$Handicraft"; 
+	    Level = 0; 
+	    BonusItemNames = array {"Cloth", "StoneLily", "Jasmin", "WildRose"};
+        };
+
+    HeadTextureNameDiff = "MaleHead07_DIFF";
+	HeadTextureNameNorm = "MaleHead07_norm";
+	HeadTextureNameMask = "MaleHead07_MASK";
+    BodyTextureNameDiff = "Commoner4_male_DIFF";
+	BodyTextureNameNorm = "Commoner4_male_NORM";
+	BodyTextureNameMask = "Commoner4_male_MASK";
+    };
+
+    LocalMapID = 0;
+    LocalMaps = array
+    {
+        map1 extends SLocalMap
+        {
+            ID = 0;
+            Filename = "./Maps/aaSteKo.Map";
+        };
+    };    
+
+    // 6 = EMultiPlayerStart
+    GameType = 6;
+    // 3 = PoorFellow, 5 = Career
+    GameMode = 3;
+    
+    HostServerName = "SteKos Server";
+    
+    MaxHumanFamilies = 2;
+    // EEasy = 1, ENormal = 2, EHard = 3, EImpossible = 4
+    Difficulty = 1;
+    NBAIFamilies = 0;
+    YearsPerRound = 4;
+    // EDoNothing = 1, EMinimalControl = 2, ETotalControl = 3
+}

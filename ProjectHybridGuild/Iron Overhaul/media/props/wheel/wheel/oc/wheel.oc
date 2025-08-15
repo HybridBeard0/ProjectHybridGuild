@@ -1,0 +1,10 @@
+wheel extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "wheel";
+	};
+	EditorName = "Wheel";
+	EditorIcon = "media/UserInterface/PropIcons/Wheel.png";
+	EditorCategory = 3;		
+}

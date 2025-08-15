@@ -1,0 +1,14 @@
+stirringbowl extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "stirringbowl";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 L Hand";
+		AttachChildNode = "Snap";		
+	};
+	EditorName = "Stirring Bowl";
+	EditorIcon = "media/UserInterface/PropIcons/Longsword.png";
+	EditorCategory = 3;
+}

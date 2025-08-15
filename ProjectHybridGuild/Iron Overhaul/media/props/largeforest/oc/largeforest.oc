@@ -1,0 +1,10 @@
+largeforest extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "largeforest";
+	};
+	EditorName = "largeforest";
+	EditorIcon = "media/UserInterface/PropIcons/largeforest.png";
+	EditorCategory = 6;		
+}

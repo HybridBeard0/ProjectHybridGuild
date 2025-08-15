@@ -1,0 +1,256 @@
+//IsMaleOnly = true;
+//IsFemaleOnly = true;
+			
+BirthTraits extends BirthTraitContainer
+{
+	Objects = array 
+	{
+		BirthTrait
+		{
+			Id = "Clever";
+			DisplayName = "$pregnancy.birthtrait.Clever";
+			WeightFormula = "14 + (Mother.Intelligence + Father.Intelligence) * 3/6 + (Mother.Perception + Father.Perception) * 3/6";
+			ResultObjectIds = array { "BirthTrait_Clever" };
+		},
+		BirthTrait
+		{
+			Id = "Mean";
+			DisplayName = "$pregnancy.birthtrait.Mean";
+			WeightFormula = "15 - (Mother.Intelligence + Father.Intelligence) * 2/5 + (Mother.Strength + Father.Strength) * 3/5";
+			ResultObjectIds = array { "BirthTrait_Mean" };
+		},
+		BirthTrait
+		{
+			Id = "SonOfZeus";
+			IsMaleOnly = true;
+			DisplayName = "$pregnancy.birthtrait.SonOfZeus";
+			WeightFormula = "5 + Father.Strength + Mother.Strength";
+			ResultObjectIds = array { "BirthTrait_SonOfZeus" };
+		},
+		BirthTrait
+		{
+			Id = "SixthSense";
+			DisplayName = "$pregnancy.birthtrait.SixthSense";
+			WeightFormula = "5 + Mother.Perception + Father.Perception";
+			ResultObjectIds = array { "BirthTrait_SixthSense" };
+		},
+		BirthTrait
+		{
+			Id = "Backstabber";
+			DisplayName = "$pregnancy.birthtrait.Backstabber";
+			WeightFormula = "max(0.5, 19 - Mother.Charisma - Father.Charisma)";
+			ResultObjectIds = array { "BirthTrait_Backstabber" };
+		},
+		BirthTrait
+		{
+			Id = "Afraid";
+			DisplayName = "$pregnancy.birthtrait.Afraid";
+			WeightFormula = "max(0.5, 19 - Mother.AttackPower - Father.AttackPower)";
+			ResultObjectIds = array { "BirthTrait_Afraid" };
+		},
+		BirthTrait
+		{
+			Id = "Weak";
+			DisplayName = "$pregnancy.birthtrait.Weak";
+			WeightFormula = "max(0.5, 19 - Mother.Strength - Father.Strength)";
+			ResultObjectIds = array { "BirthTrait_Weak" };
+		},
+		BirthTrait
+		{
+			Id = "Swordsman";
+			DisplayName = "$pregnancy.birthtrait.Swordsman";
+			WeightFormula = "18 + (Mother.AttackPower + Father.AttackPower) * 1/2 + (Mother.DefensePower + Mother.DefensePower) * 1/2";
+			ResultObjectIds = array { "BirthTrait_Swordsman" };
+		},
+		BirthTrait
+		{
+			Id = "Charismatic";
+			DisplayName = "$pregnancy.birthtrait.Charismatic";
+			WeightFormula = "18 + Mother.Charisma + Father.Charisma";
+			ResultObjectIds = array { "BirthTrait_Charismatic" };
+		},
+		BirthTrait
+		{
+			Id = "Dreamer";
+			DisplayName = "$pregnancy.birthtrait.Dreamer";
+			WeightFormula = "max(0.5, 18 - Mother.Perception - Father.Perception)";
+			ResultObjectIds = array { "BirthTrait_Dreamer" };
+		},
+		BirthTrait
+		{
+			Id = "Steadfast";
+			DisplayName = "$pregnancy.birthtrait.Steadfast";
+			WeightFormula = "16.5 + (Mother.Health + Father.Health) / 100 * 2.5 / 3.5 + (Mother.Resistance + Father.Resistance) * 1 / 3.5";
+			ResultObjectIds = array { "BirthTrait_Steadfast" };
+		},
+		BirthTrait
+		{
+			Id = "NaturalResistance";
+			DisplayName = "$pregnancy.birthtrait.NaturalResistance";
+			WeightFormula = "15 + Mother.Resistance + Father.Resistance";
+			ResultObjectIds = array { "BirthTrait_NaturalResistance" };
+		},
+		BirthTrait
+		{
+			Id = "RatEyes";
+			DisplayName = "$pregnancy.birthtrait.RatEyes";
+			WeightFormula = "max(0.5, 14 - (Mother.Charisma + Father.Charisma) * 3/6 + (Mother.Dexterity + Father.Dexterity) * 2/6 - (Mother.Perception + Father.Perception) * 1/6)";
+			ResultObjectIds = array { "BirthTrait_RatEyes" };
+		},
+		BirthTrait
+		{
+			Id = "Nervous";
+			DisplayName = "$pregnancy.birthtrait.Nervous";
+			WeightFormula = "max(0.5, 14 - ( Mother.ReputationBonus * Father.ReputationBonus ) * 100 * 5/6 + (Mother.Perception + Father.Perception) * 1/6)";
+			ResultObjectIds = array { "BirthTrait_Nervous" };
+		},
+		BirthTrait
+		{
+			Id = "CatBurglar";
+			DisplayName = "$pregnancy.birthtrait.CatBurglar";
+			WeightFormula = "max(0.5, 13 - (Mother.Strength + Father.Strength) * 2/7 + (Mother.Dexterity + Father.Dexterity) * 2/7 + (Mother.Stealth + Father.Stealth) * 3/7)";
+			ResultObjectIds = array { "BirthTrait_CatBurglar" };
+		},
+		BirthTrait
+		{
+			Id = "PurpleLantern";
+			DisplayName = "$pregnancy.birthtrait.PurpleLantern";
+			WeightFormula = "13 + (Mother.Strength + Father.Strength) * 1/7 + (Mother.Perception + Father.Perception) * 3/7 + (Mother.MovementSpeedMult * Father.MovementSpeedMult) * 10 * 3/7";
+			ResultObjectIds = array { "BirthTrait_PurpleLantern" };
+		},
+		BirthTrait
+		{
+			Id = "Ugly";
+			DisplayName = "$pregnancy.birthtrait.Ugly";
+			WeightFormula = "max(0.5, 12 - (Mother.Charisma + Father.Charisma) * 3/8 + (Mother.ReputationBonus * Father.ReputationBonus) * 100 * 5/8)";
+			ResultObjectIds = array { "BirthTrait_Ugly" };
+		},
+		BirthTrait
+		{
+			Id = "Sickly";
+			DisplayName = "$pregnancy.birthtrait.Sickly";
+			WeightFormula = "max(0.5, 10 + (Mother.Intelligence + Father.Intelligence) * 2/10 - (Mother.Health + Father.Health) / 100 * 2/10 - (Mother.Resistance + Father.Resistance) * 3/10 - (Mother.Dexterity + Father.Dexterity) * 3/10)";
+			ResultObjectIds = array { "BirthTrait_Sickly" };
+		},
+		BirthTrait
+		{
+			Id = "StVitusDance";
+			DisplayName = "$pregnancy.birthtrait.StVitusDance";
+			WeightFormula = "max(0.5, 10 - (Mother.Strength + Father.Strength) * 2/10 - (Mother.Intelligence + Father.Intelligence) * 2/10 - (Mother.MovementSpeedMult * Father.MovementSpeedMult) * 10 * 5/10 - (Mother.LifeExpectancy + Father.LifeExpectancy) / 100 * 1/10)";
+			ResultObjectIds = array { "BirthTrait_StVitusDance" };
+		},
+		BirthTrait
+		{
+			Id = "Methuselah";
+			DisplayName = "$pregnancy.birthtrait.Methuselah";
+			WeightFormula = "10 + (Mother.Health + Father.Health) / 100 * 7/10 + (Mother.LifeExpectancy + Father.LifeExpectancy) / 100 * 3/10";
+			ResultObjectIds = array { "BirthTrait_Methuselah" };
+		},
+		BirthTrait
+		{
+			Id = "Expeditious";
+			DisplayName = "$pregnancy.birthtrait.Expeditious";
+			WeightFormula = "10 + (Mother.MovementSpeedMult * Father.MovementSpeedMult) * 10";
+			ResultObjectIds = array { "BirthTrait_Expeditious" };
+		},
+		BirthTrait
+		{
+			Id = "Crippled";
+			DisplayName = "$pregnancy.birthtrait.Crippled";
+			WeightFormula = "max(0.5, 10 - (Mother.MovementSpeedMult * Father.MovementSpeedMult) * 10)";
+			ResultObjectIds = array { "BirthTrait_Crippled" };
+		},
+		BirthTrait
+		{
+			Id = "SpeechImpediment";
+			DisplayName = "$pregnancy.birthtrait.SpeechImpediment";
+			WeightFormula = "max(0.5, 10 - (Mother.ReputationBonus + Father.ReputationBonus) - ((Mother.BargainingBonus + Father.BargainingBonus) * 4))";
+			ResultObjectIds = array { "BirthTrait_SpeechImpediment" };
+		},
+		BirthTrait
+		{
+			Id = "Untalented";
+			DisplayName = "$pregnancy.birthtrait.Untalented";
+			WeightFormula = "max(0.5, 10 - (Mother.Productivity * Father.Productivity) * 10)";
+			ResultObjectIds = array { "BirthTrait_Untalented" };
+		},
+		BirthTrait
+		{
+			Id = "NaturalBornFighter";
+			DisplayName = "$pregnancy.birthtrait.NaturalBornFighter";
+			WeightFormula = "8 - (Mother.Intelligence + Father.Intelligence) * 1/12 + (Mother.Damage + Father.Damage) * 0.5 * 6/12 + (Mother.AttackPower + Father.AttackPower) * 3/12 + (Mother.DefensePower + Father.DefensePower) * 2/12";
+			ResultObjectIds = array { "BirthTrait_NaturalBornFighter" };
+		},
+		BirthTrait
+		{
+			Id = "ChildOfSiegfried";
+			DisplayName = "$pregnancy.birthtrait.ChildOfSiegfried";
+			WeightFormula = "8 + (Mother.Strength + Father.Strength) * 2/12 - (Mother.Perception + Father.Perception) * 1/12 + (Mother.Health + Father.Health) / 100 * 5/12 + (Mother.Resistance + Father.Resistance) * 4/12";
+			ResultObjectIds = array { "BirthTrait_ChildOfSiegfried" };
+		},
+		BirthTrait
+		{
+			Id = "Talented";
+			DisplayName = "$pregnancy.birthtrait.Talented";
+			WeightFormula = "8 - (Mother.Perception + Father.Perception) * 1/12 + (Mother.BargainingBonus * Father.BargainingBonus) * 5/12 + (Mother.Productivity * Father.Productivity) * 6/12";
+			ResultObjectIds = array { "BirthTrait_Talented" };
+		},
+		BirthTrait
+		{
+			Id = "Literary";
+			DisplayName = "$pregnancy.birthtrait.Literary";
+			WeightFormula = "8 - (Mother.Strength + Father.Strength) * 1/12 + (Mother.BargainingBonus * Father.BargainingBonus) * 6/12 + (Mother.Intelligence + Father.Intelligence) * 5/12";
+			ResultObjectIds = array { "BirthTrait_Literary" };
+		},
+		BirthTrait
+		{
+			Id = "DarkKnight";
+			DisplayName = "$pregnancy.birthtrait.DarkKnight";
+			WeightFormula = "5 + (Mother.Perception + Father.Perception) * 2/13 - (Mother.Charisma + Father.Charisma) * 3/13 + (Mother.Damage + Father.Damage) * 0.5 * 4/13 + (Mother.Stealth + Father.Stealth) * 4/13";
+			ResultObjectIds = array { "BirthTrait_DarkKnight" };
+		},
+		BirthTrait
+		{
+			Id = "Temperamental";
+			DisplayName = "$pregnancy.birthtrait.Temperamental";
+			WeightFormula = "(Mother.Damage + Father.Damage) * 0.5 - (Mother.ReputationBonus + Father.ReputationBonus) * 1.5";
+			ResultObjectIds = array { "BirthTrait_Temperamental" };
+		},
+		BirthTrait
+		{
+			Id = "Dealmaker";
+			DisplayName = "$pregnancy.birthtrait.Dealmaker";
+			WeightFormula = "1 - (Mother.Dexterity + Father.Dexterity) * 2/16 + (Mother.Charisma + Father.Charisma) * 3/16 + (Mother.BargainingBonus + Father.BargainingBonus) * 5 * 8/16 + (Mother.Stealth + Father.Stealth) * 3/16";
+			ResultObjectIds = array { "BirthTrait_Dealmaker" };
+		},
+		BirthTrait
+		{
+			Id = "TuFelixAustriaNube";
+			DisplayName = "$pregnancy.birthtrait.TuFelixAustriaNube";
+			WeightFormula = "3 + (Mother.Intelligence + Father.Intelligence) * 5/20 + (Mother.Charisma + Father.Charisma) * 5/20 - (Mother.AttackPower + Father.AttackPower) * 2/20 - (Mother.DefensePower + Father.DefensePower) * 2/20 + (Mother.ReputationBonus + Father.ReputationBonus) * 10 * 6/20";
+			ResultObjectIds = array { "BirthTrait_TuFelixAustriaNube" };
+		},
+		BirthTrait
+		{
+			Id = "DaVincisBrains";
+			DisplayName = "$pregnancy.birthtrait.DaVincisBrains";
+			WeightFormula = "3 - (Mother.Strength + Father.Strength) * 2/20 - (Mother.Dexterity + Father.Dexterity) * 1/20 + (Mother.Intelligence + Father.Intelligence) * 5/20 - (Mother.Damage + Father.Damage) * 0.5 * 2/20 + (Mother.Productivity + Father.Productivity) * 10/20";
+			ResultObjectIds = array { "BirthTrait_DaVincisBrains" };
+		},
+		BirthTrait
+		{
+			Id = "MarkOfTheSpider";
+			DisplayName = "$pregnancy.birthtrait.MarkOfTheSpider";
+			WeightFormula = "0 + (Mother.Dexterity + Father.Dexterity) * 4/20 + (Mother.Perception + Father.Perception) * 3/20 - (Mother.ReputationBonus + Father.ReputationBonus) * 5/20 + (Mother.Resistance + Father.Resistance) * 8/20";
+			ResultObjectIds = array { "BirthTrait_MarkOfTheSpider" };
+		},
+		BirthTrait
+		{
+			Id = "MaidOfOrleans";
+			IsFemaleOnly = true;
+			DisplayName = "$pregnancy.birthtrait.MaidOfOrleans";
+			WeightFormula = "2 + (Mother.Damage + Father.Damage) *  6/18 + (Mother.AttackPower + Father.AttackPower) * 6/18 + (Mother.DefensePower + Father.DefensePower) * 6/18";
+			ResultObjectIds = array { "BirthTrait_MaidOfOrleans" };
+		}
+	};
+};

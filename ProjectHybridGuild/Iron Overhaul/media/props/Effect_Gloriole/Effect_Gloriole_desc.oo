@@ -1,0 +1,13 @@
+G3ActorDesc
+{
+	Visual = "effect_gloriole";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#Effect_Gloriole/list_idles_animations,
+		);
+	};
+	AttachType = "AttachToNode";
+	AttachChildNode = "Snap_Particles";
+}

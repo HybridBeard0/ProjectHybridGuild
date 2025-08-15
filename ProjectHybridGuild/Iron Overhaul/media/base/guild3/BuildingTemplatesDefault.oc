@@ -1,0 +1,3639 @@
+BuildingTemplatesDefault extends G3BuildingTemplateContainer
+{
+	PredefinedTemplateCategories = array { "All", "Known", "City", "Village", "HuntingFarming", "Handicraft", "Herbalism", "Rogue", "Other" };
+
+	Items = map
+	{
+		//<-----------------RESIDENCES----------------->
+		"CountryHouse" = G3BuildingTemplate //Cottage
+		{
+			EnumType = 42;
+			Tier = 0;
+			
+			EnableCity = false;
+			EnableHouse = true;
+			EnableBusiness = false;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 107; // path vers le son inconnu, a ajouter dans SoundsDefault.oc			
+			ConstructionSite = "construction_site_10/CS10";
+			Visuals = array { "countryhouse_01/countryhouse_01", "countryhouse_02/countryhouse_02", "countryhouse_03/countryhouse_03", "countryhouse_04/countryhouse_04" };
+			NPCHomePriority = 4;
+
+			InteriorName = "Int_CountryHouse";
+
+			ConstructionTime = 0.021; // 0.021 ~ 30 min , 0.03125 = 45 min , 0.042 ~ 60 min , 0.0625 = 90 min , 0.083 ~ 120 min , 0.125 = 180 min
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/CountryHouse
+				{
+					Cost = 1250;
+					RepairCost = 750;
+					MaximumHealth = 300;
+					EnableExterior = true;
+					EnableInterior = false;
+				};
+			};
+
+			AvailableAddons = array
+			{
+				"FireProtection_1_1",
+				"FireProtection_2_1",
+				"BurglaryProtection_1_1",
+				"BurglaryProtection_2_1",
+				"StorageSlots_1_1",
+				"StorageSpace_1_1",
+				"Productivity_1a",
+				"Productivity_1b",
+				"Health_1"
+			};
+			
+			AIResidentMinIdleSecond = 5.0; // The minimum duration (in seconds) that an AI controlled resident has to remain idle before he starts one of the idle actions below.
+			HumanResidentMinIdleSecond = 45.0; // The minimum duration (in seconds) that a human controlled resident has to remain idle before he starts one of the idle actions below.
+			ResidentIdleActions = map // A pool of actionNames + weights that resident can play while they idle in the building.
+			{
+				"Family-Cooking" = 0.66,
+				"Family-Eating" = 0.66,
+				"Family-CleanHouse" = 0.75,
+				"Family-ChildPlay" = 1.0,
+				"Family-Bored" = 1.0,
+				"Family-PokeAround" = 1.0,
+				"Family-Sleep" = 0.055,
+			};
+		};
+
+		"PoorHouse" = G3BuildingTemplate //House
+		{
+			EnumType = 11;
+			Tier = 1;
+
+			EnableCity = false;
+			EnableHouse = true;
+			EnableBusiness = false;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 84; // path vers le son inconnu, a ajouter dans SoundsDefault.oc
+			Visuals = array { "poorhouse_01/poorhouse_01", "poorhouse_02/poorhouse_02", "poorhouse_03/poorhouse_03", "poorhouse_04/poorhouse_04" };
+			NPCHomePriority = 4;
+
+			InteriorName = "Int_PoorHouse";
+
+			ConstructionTime = 0.03125;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/PoorHouseLevel
+				{
+					Cost = 3000;
+					RepairCost = 1500;
+					MaximumHealth = 500;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+			};
+
+			AvailableAddons = array
+			{
+				"FireProtection_1_1",
+				"FireProtection_2_1",
+				"FireProtection_3_1",
+				"BurglaryProtection_1_1",
+				"BurglaryProtection_2_1",
+				"BurglaryProtection_3_1",
+				"StorageSlots_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"Productivity_1a",
+				"Productivity_1b",
+				"Health_1",
+				"Health_1b"
+			};
+			
+			AIResidentMinIdleSecond = 5.0; // The minimum duration (in seconds) that an AI controlled resident has to remain idle before he starts one of the idle actions below.
+			HumanResidentMinIdleSecond = 45.0; // The minimum duration (in seconds) that a human controlled resident has to remain idle before he starts one of the idle actions below.
+			ResidentIdleActions = map // A pool of actionNames + weights that resident can play while they idle in the building.
+			{
+				"Family-Cooking" = 0.66,
+				"Family-Eating" = 0.66,
+				"Family-CleanHouse" = 0.75,
+				"Family-ChildPlay" = 1.0,
+				"Family-Bored" = 1.0,
+				"Family-PokeAround" = 1.0,
+				"Family-Sleep" = 0.055,
+			};
+		};
+		
+		"CityHouse" = G3BuildingTemplate //Patrician House
+		{
+			EnumType = 12;
+			Tier = 2;
+			
+			EnableCity = false;
+			EnableHouse = true;
+			EnableBusiness = false;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 85; // path vers le son inconnu, a ajouter dans SoundsDefault.oc
+			ConstructionSite = "construction_site_02/CS2";
+			Visuals = array { "cityhouse_01/cityhouse_01", "cityhouse_02/cityhouse_02", "cityhouse_03/cityhouse_03", "cityhouse_04/cityhouse_04", "cityhouse_05/cityhouse_05", "cityhouse_06/cityhouse_06", "cityhouse_07/cityhouse_07", "cityhouse_08/cityhouse_08" };
+			NPCHomePriority = 4;
+
+			InteriorName = "Int_CityHouse";
+
+			ConstructionTime = 0.0625;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/CityHouseLevel
+				{
+					Cost = 12000;
+					RepairCost = 4200;
+					MaximumHealth = 750;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+			};
+
+			AvailableAddons = array
+			{
+				"FireProtection_1_1",
+				"FireProtection_2_1",
+				"FireProtection_3_1",
+				"BurglaryProtection_1_1",
+				"BurglaryProtection_2_1",
+				"BurglaryProtection_3_1",
+				"StorageSlots_1_1",
+				"StorageSlots_2_1",
+				"StorageSlots_3_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"Health_1",
+				"Health_1b",
+				"Health_1c"
+			};
+
+			AIResidentMinIdleSecond = 5.0; // The minimum duration (in seconds) that an AI controlled resident has to remain idle before he starts one of the idle actions below.
+			HumanResidentMinIdleSecond = 45.0; // The minimum duration (in seconds) that a human controlled resident has to remain idle before he starts one of the idle actions below.
+			ResidentIdleActions = map // A pool of actionNames + weights that resident can play while they idle in the building.
+			{
+				"Family-Cooking" = 0.66,
+				"Family-Eating" = 0.75,
+				"Family-CleanHouse" = 0.5,
+				"Family-ChildPlay" = 1.0,
+				"Family-Bored" = 0.8,
+				"Family-Studies" = 0.2,
+				"Family-PokeAround" = 1.0,
+				"Family-Sleep" = 0.055,
+				"Family-TakeBathHome" = 0.055,
+			};
+		};
+		
+		"Mansion" = G3BuildingTemplate
+		{
+			EnumType = 13;
+			Tier = 3;
+			
+			EnableCity = false;
+			EnableHouse = true;
+			EnableBusiness = false;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 86; // path vers le son inconnu, a ajouter dans SoundsDefault.oc
+			ConstructionSite = "construction_site_04/cs4";
+			Visuals = array { "mansion_01/mansion_01", "mansion_02/mansion_02", "mansion_03/mansion_03", "mansion_04/mansion_04", "mansion_05/mansion_05" };
+			NPCHomePriority = 4;
+
+			InteriorName = "Int_Mansion";
+
+			ConstructionTime = 0.125;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/MansionLevel
+				{
+					Cost = 36000;
+					RepairCost = 9900;
+					MaximumHealth = 1000;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_1_1",
+				"FireProtection_2_1",
+				"FireProtection_3_1",
+				"FireProtection_other_small_3",
+				"BurglaryProtection_1_1",
+				"BurglaryProtection_2_1",
+				"BurglaryProtection_3_1",
+				"StorageSlots_1_1",
+				"StorageSlots_2_1",
+				"StorageSlots_3_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"StorageSpace_3_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"Productivity_1a",
+				"Productivity_1b",
+				"Health_1",
+				"Health_1b",
+				"Health_1c",
+				"Health_1d"
+			};
+
+			AIResidentMinIdleSecond = 5.0; // The minimum duration (in seconds) that an AI controlled resident has to remain idle before he starts one of the idle actions below.
+			HumanResidentMinIdleSecond = 45.0; // The minimum duration (in seconds) that a human controlled resident has to remain idle before he starts one of the idle actions below.
+			ResidentIdleActions = map // A pool of actionNames + weights that resident can play while they idle in the building.
+			{
+				"Family-Cooking" = 0.66,
+				"Family-Eating" = 0.75,
+				"Family-CleanHouse" = 0.1,
+				"Family-ChildPlay" = 1.0,
+				"Family-Bored" = 0.7,
+				"Family-Studies" = 0.4,
+				"Family-PokeAround" = 1.0,
+				"Family-Sleep" = 0.055,
+				"Family-TakeBathHome" = 0.055,
+				"Family-Feast" = 1.0,
+			};
+		};
+		
+		//<-----------------BUSINESSES----------------->
+		
+		//<-----------------HANDICRAFT----------------->
+		"Artisan" = G3BuildingTemplate
+		{
+			EnumType = 17;
+			DisplayCategories = array("All", "Handicraft", "Village");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = true;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 61; // Craftman’s Hut
+			//SelectSound = 79; // Crude Craftman’s Hut
+			ConstructionSite = "construction_site_06/cs6";
+			Visuals = array { "artisan/artisan" };
+			NPCHomePriority = 2;
+			
+			ConstructionTime = 0.03125;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/ArtisanLevel1
+				{
+					Cost = 1250;
+					RepairCost = 750;
+					MaximumHealth = 450;
+					EnableExterior = true;
+					EnableInterior = false;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_1_1",
+				"FireProtection_2_1",
+				"BurglaryProtection_1_1",
+				"BurglaryProtection_2_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"AttractCrowd_1a",
+				"AttractCrowd_1b",
+				"MoreEmployees1_1",
+				"MoreEmployees2_1",
+				"StorageSlots_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"FrontStoreSlots_1_1",
+				"FrontStoreSlots_2_1",
+				"FrontStoreSpace_1_1",
+				"FrontStoreSpace_2_1",
+				"Health_1",
+				"MoreEmployeesTransport_1_1"
+			};
+		};
+
+		"Tinker" = G3BuildingTemplate
+		{
+			EnumType = 60;
+			DisplayCategories = array("All", "Handicraft", "Village");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = true;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 61;
+			ConstructionSite = "construction_site_07/cs7";
+			Visuals = array { "tinker/tinker" };
+			NPCHomePriority = 2;
+
+			ConstructionTime = 0.03125;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/TinkerLevel1
+				{
+					Cost = 1250;
+					RepairCost = 750;
+					MaximumHealth = 450;
+					EnableExterior = true;
+					EnableInterior = false;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_1_1",
+				"FireProtection_2_1",
+				"BurglaryProtection_1_1",
+				"BurglaryProtection_2_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"AttractCrowd_1a",
+				"AttractCrowd_1b",
+				"MoreEmployees1_1",
+				"MoreEmployees2_1",
+				"StorageSlots_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"FrontStoreSlots_1_1",
+				"FrontStoreSlots_2_1",
+				"FrontStoreSpace_1_1",
+				"FrontStoreSpace_2_1",
+				"Health_1",
+				"MoreEmployeesTransport_1_1"
+			};
+		};
+
+		"Masonery" = G3BuildingTemplate
+		{
+			EnumType = 58;
+			DisplayCategories = array("All", "Handicraft", "Village");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = true;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 61;
+			ConstructionSite = "construction_site_06/cs6";
+			Visuals = array { "masonery/masonery" };
+			NPCHomePriority = 2;
+
+			ConstructionTime = 0.03125;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/MasoneryLevel1
+				{
+					Cost = 1250;
+					RepairCost = 750;
+					MaximumHealth = 450;
+					EnableExterior = true;
+					EnableInterior = false;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_1_1",
+				"FireProtection_2_1",
+				"BurglaryProtection_1_1",
+				"BurglaryProtection_2_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"AttractCrowd_1a",
+				"AttractCrowd_1b",
+				"MoreEmployees1_1",
+				"MoreEmployees2_1",
+				"MoreEmployeesTransport_1_1",
+				"StorageSlots_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"FrontStoreSlots_1_1",
+				"FrontStoreSlots_2_1",
+				"FrontStoreSpace_1_1",
+				"FrontStoreSpace_2_1",
+				"Health_1"
+			};
+		};
+		
+		"Smithy" = G3BuildingTemplate
+		{
+			EnumType = 18;
+			DisplayCategories = array("All", "Handicraft", "City");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = true;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 76; // Smithy
+			ConstructionSite = "construction_site_10/CS10";
+			Visuals = array { "smithy/smithy" };
+			NPCHomePriority = 2;
+
+			ConstructionTime = 0.0625;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/SmithyLevel1
+				{
+					Cost = 2000;
+					RepairCost = 1100;
+					MaximumHealth = 750;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				2 = base/ShopLevel2
+				{
+					Cost = 5000;
+					RepairCost = 2975;
+					MaximumHealth = 900;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				3 = base/ShopLevel3
+				{
+					Cost = 10000;
+					RepairCost = 5100;
+					MaximumHealth = 1050;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_2_1",
+				"FireProtection_3_1",
+				"BurglaryProtection_2_1",
+				"BurglaryProtection_3_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"AttractCrowd_Level1_1",
+				"AttractCrowd_Level1_2",
+				"AttractCrowd_Level1_3",
+				"MoreEmployees1_1",
+				"MoreEmployeesTransport_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"FrontStoreSlots_1_1",
+				"FrontStoreSpace_1_1",
+				"FrontStoreSpace_2_1",
+				"Health_1",
+				"FireProtection_2_2",
+				"FireProtection_3_2",
+				"BurglaryProtection_2_2",
+				"BurglaryProtection_3_2",
+				"StorageSlots_2_2",
+				"StorageSlots_3_2",
+				"StorageSpace_1_2",
+				"StorageSpace_2_2",
+				"FrontStoreSlots_1_2",
+				"FrontStoreSlots_2_2",
+				"FrontStoreSpace_1_2",
+				"FrontStoreSpace_2_2",
+				"MoreEmployees1_2",
+				"MoreEmployeesTransport_1_2",
+				"Productivity_1_2",
+				"Health_2",
+				"FireProtection_2_3",
+				"FireProtection_3_3",
+				"BurglaryProtection_2_3",
+				"BurglaryProtection_3_3",
+				"StorageSlots_2_3",
+				"StorageSlots_3_3",
+				"StorageSpace_1_3",
+				"StorageSpace_2_3",
+				"FrontStoreSlots_1_3",
+				"FrontStoreSlots_2_3",
+				"FrontStoreSpace_1_3",
+				"FrontStoreSpace_2_3",
+				"MoreEmployees1_3",
+				"AttractCrowd_3a",
+				"Productivity_1_3",
+				"Health_3",
+			};
+		};
+		
+		"CarpenterShop" = G3BuildingTemplate
+		{
+			EnumType = 19;
+			DisplayCategories = array("All", "Handicraft", "City");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = true;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 68; // Joinery
+			//SelectSound = 77; // Carpenter’s Shop
+			ConstructionSite = "construction_site_04/CS4";
+			Visuals = array { "carpentershop/carpenter" };
+			NPCHomePriority = 2;
+			
+			ConstructionTime = 0.0625;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/CarpenterShopLevel1
+				{
+					Cost = 2000;
+					RepairCost = 1100;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				2 = base/ShopLevel2
+				{
+					Cost = 5000;
+					RepairCost = 2975;
+					MaximumHealth = 900;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				3 = base/ShopLevel3
+				{
+					Cost = 10000;
+					RepairCost = 5100;
+					MaximumHealth = 1050;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_2_1",
+				"FireProtection_3_1",
+				"BurglaryProtection_2_1",
+				"BurglaryProtection_3_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"AttractCrowd_Level1_1",
+				"AttractCrowd_Level1_2",
+				"AttractCrowd_Level1_3",
+				"MoreEmployees1_1",
+				"MoreEmployeesTransport_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"FrontStoreSlots_1_1",
+				"FrontStoreSpace_1_1",
+				"FrontStoreSpace_2_1",
+				"Health_1",
+				"FireProtection_2_2",
+				"FireProtection_3_2",
+				"BurglaryProtection_2_2",
+				"BurglaryProtection_3_2",
+				"StorageSlots_2_2",
+				"StorageSlots_3_2",
+				"StorageSpace_1_2",
+				"StorageSpace_2_2",
+				"FrontStoreSlots_1_2",
+				"FrontStoreSlots_2_2",
+				"FrontStoreSpace_1_2",
+				"FrontStoreSpace_2_2",
+				"MoreEmployees1_2",
+				"MoreEmployeesTransport_1_2",
+				"Productivity_1_2",
+				"Health_2",
+				"FireProtection_2_3",
+				"FireProtection_3_3",
+				"BurglaryProtection_2_3",
+				"BurglaryProtection_3_3",
+				"StorageSlots_2_3",
+				"StorageSlots_3_3",
+				"StorageSpace_1_3",
+				"StorageSpace_2_3",
+				"FrontStoreSlots_1_3",
+				"FrontStoreSlots_2_3",
+				"FrontStoreSpace_1_3",
+				"FrontStoreSpace_2_3",
+				"MoreEmployees1_3",
+				"AttractCrowd_3a",
+				"Productivity_1_3",
+				"Health_3",
+			};
+		};
+		
+		"StoneMasonShop" = G3BuildingTemplate
+		{
+			EnumType = 26;
+			DisplayCategories = array("All", "Handicraft", "City");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = true;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 65; // Brickery
+			ConstructionSite = "construction_site_02/CS2";
+			Visuals = array { "stonemasonshop/stonemasonshop" };
+			NPCHomePriority = 2;
+
+			ConstructionTime = 0.0625;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/StoneMasonShopLevel1
+				{
+					Cost = 2000;
+					RepairCost = 1100;
+					MaximumHealth = 750;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				2 = base/ShopLevel2
+				{
+					Cost = 3000;
+					RepairCost = 2250;
+					MaximumHealth = 900;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				3 = base/ShopLevel3
+				{
+					Cost = 5000;
+					RepairCost = 3750;
+					MaximumHealth = 1050;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_2_1",
+				"FireProtection_3_1",
+				"BurglaryProtection_2_1",
+				"BurglaryProtection_3_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"AttractCrowd_Level1_1",
+				"AttractCrowd_Level1_2",
+				"AttractCrowd_Level1_3",
+				"MoreEmployees1_1",
+				"MoreEmployeesTransport_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"FrontStoreSlots_1_1",
+				"FrontStoreSpace_1_1",
+				"FrontStoreSpace_2_1",
+				"Health_1",
+				"FireProtection_2_2",
+				"FireProtection_3_2",
+				"BurglaryProtection_2_2",
+				"BurglaryProtection_3_2",
+				"StorageSlots_2_2",
+				"StorageSlots_3_2",
+				"StorageSpace_1_2",
+				"StorageSpace_2_2",
+				"FrontStoreSlots_1_2",
+				"FrontStoreSlots_2_2",
+				"FrontStoreSpace_1_2",
+				"FrontStoreSpace_2_2",
+				"MoreEmployees1_2",
+				"MoreEmployeesTransport_1_2",
+				"Productivity_1_2",
+				"Health_2",
+				"FireProtection_2_3",
+				"FireProtection_3_3",
+				"BurglaryProtection_2_3",
+				"BurglaryProtection_3_3",
+				"StorageSlots_2_3",
+				"StorageSlots_3_3",
+				"StorageSpace_1_3",
+				"StorageSpace_2_3",
+				"FrontStoreSlots_1_3",
+				"FrontStoreSlots_2_3",
+				"FrontStoreSpace_1_3",
+				"FrontStoreSpace_2_3",
+				"MoreEmployees1_3",
+				"AttractCrowd_3a",
+				"Productivity_1_3",
+				"Health_3",
+			};
+		};
+		
+		"TailorShop" = G3BuildingTemplate
+		{
+			EnumType = 27;
+			DisplayCategories = array("All", "Handicraft", "City");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = true;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 53;// tailor shop
+			ConstructionSite = "construction_site_09/CS9";
+			Visuals = array { "tailorshop/tailorshop" };
+			NPCHomePriority = 2;
+
+			ConstructionTime = 0.0625;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/TailorShopLevel1
+				{
+					Cost = 2000;
+					RepairCost = 1100;
+					MaximumHealth = 750;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				2 = base/ShopLevel2
+				{
+					Cost = 3000;
+					RepairCost = 2250;
+					MaximumHealth = 900;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				3 = base/ShopLevel3
+				{
+					Cost = 5000;
+					RepairCost = 3750;
+					MaximumHealth = 1050;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_2_1",
+				"FireProtection_3_1",
+				"BurglaryProtection_2_1",
+				"BurglaryProtection_3_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"AttractCrowd_Level1_1",
+				"AttractCrowd_Level1_2",
+				"AttractCrowd_Level1_3",
+				"MoreEmployees1_1",
+				"MoreEmployeesTransport_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"FrontStoreSlots_1_1",
+				"FrontStoreSpace_1_1",
+				"FrontStoreSpace_2_1",
+				"Health_1",
+				"FireProtection_2_2",
+				"FireProtection_3_2",
+				"BurglaryProtection_2_2",
+				"BurglaryProtection_3_2",
+				"StorageSlots_2_2",
+				"StorageSlots_3_2",
+				"StorageSpace_1_2",
+				"StorageSpace_2_2",
+				"FrontStoreSlots_1_2",
+				"FrontStoreSlots_2_2",
+				"FrontStoreSpace_1_2",
+				"FrontStoreSpace_2_2",
+				"MoreEmployees1_2",
+				"MoreEmployeesTransport_1_2",
+				"Productivity_1_2",
+				"Health_2",
+				"FireProtection_2_3",
+				"FireProtection_3_3",
+				"BurglaryProtection_2_3",
+				"BurglaryProtection_3_3",
+				"StorageSlots_2_3",
+				"StorageSlots_3_3",
+				"StorageSpace_1_3",
+				"StorageSpace_2_3",
+				"FrontStoreSlots_1_3",
+				"FrontStoreSlots_2_3",
+				"FrontStoreSpace_1_3",
+				"FrontStoreSpace_2_3",
+				"MoreEmployees1_3",
+				"AttractCrowd_3a",
+				"Productivity_1_3",
+				"Health_3",
+			};
+		};
+		
+		//<-----------------HERBALISM----------------->
+		"Shaman" = G3BuildingTemplate
+		{
+			EnumType = 51;
+			DisplayCategories = array("All", "Herbalism", "Village");
+            EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = true;
+			EnableServiceProvider = true;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 112; //Shaman
+			ConstructionSite = "construction_site_08/cs8";
+			Visuals = array { "shaman/shaman" };
+			NPCHomePriority = 2;
+			
+			PlacementRules = array 
+			{
+				("Grove", false, 2.0), 
+				("Market", false, 2.0), 
+				("*", true, 1.0), 
+				("Warehouse*", true, 2.0)
+			};
+
+			ConstructionTime = 0.03125;
+			
+            MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/HerbHutLevel1
+				{
+					Cost = 1250;
+					RepairCost = 750;
+					MaximumHealth = 450;
+					EnableExterior = true;
+					EnableInterior = false;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_1_1",
+				"FireProtection_2_1",
+				"BurglaryProtection_1_1",
+				"BurglaryProtection_2_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"AttractCrowd_1a",
+				"AttractCrowd_1b",
+				"MoreEmployees1_1",
+				"MoreEmployees2_1",
+				"MoreEmployeesTransport_1_1",
+				"StorageSlots_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"FrontStoreSlots_1_1",
+				"FrontStoreSlots_2_1",
+				"FrontStoreSpace_1_1",
+				"FrontStoreSpace_2_1",
+				"Health_1"
+			};
+		};
+
+		"Preacher" = G3BuildingTemplate
+		{
+			EnumType = 59;
+			DisplayCategories = array("All", "Herbalism", "Village");
+            EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 115; //preacher
+			ConstructionSite = "constructionsite/cs_main_01";
+			Visuals = array { "preacher/preacher" };
+			NPCHomePriority = 2;
+			
+			PlacementRules = array 
+			{
+				("Market", false, 1.0),
+				("Preacher", true, -1.0), 
+			};
+
+			ConstructionTime = 0.03125;
+			
+            MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/PreacherLevel1
+				{
+					Cost = 1500;
+					RepairCost = 900;
+					MaximumHealth = 450;
+					EnableExterior = true;
+					EnableInterior = false;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_1_1b",
+				"FireProtection_2_1b",
+				"FireProtection_3_1b",
+				"BurglaryProtection_1_1b",
+				"BurglaryProtection_2_1b",
+				"BurglaryProtection_3_1b",
+				"MoreEmployees1_1",
+				"MoreEmployees2_1",
+				"StorageSlots_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"Health_1"
+			};
+		};
+
+		"CityPreacher" = G3BuildingTemplate
+		{
+			EnumType = 62;
+			DisplayCategories = array("All", "Herbalism", "City");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 115; //preacher
+			ConstructionSite = "constructionsite/cs_main_01";
+			Visuals = array { "citypreacher/citypreacher" };
+			NPCHomePriority = 2;
+
+			ConstructionTime = 0.042;
+			
+			MoralAlignment = MoralAlignment
+			{
+				Values = array{0.000, 0.000, 0.000};
+			};
+
+			BuildingLevels = map
+			{
+				1 = base/CityPreacherLevel1
+				{
+					Cost = 2000;
+					RepairCost = 1100;
+					MaximumHealth = 550;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+			};
+
+			AvailableAddons = array
+			{
+				"FireProtection_1_1b",
+				"FireProtection_2_1b",
+				"FireProtection_3_1b",
+				"BurglaryProtection_1_1b",
+				"BurglaryProtection_2_1b",
+				"BurglaryProtection_3_1b",
+				"MoreEmployees1_1",
+				"MoreEmployees2_1",
+				"StorageSlots_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"Health_1",
+				"Health_1b"
+			};
+		};
+
+		"Barber" = G3BuildingTemplate
+		{
+			EnumType = 55;
+			DisplayCategories = array("All", "Herbalism", "Village");
+            EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = true;
+			EnableServiceProvider = true;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 116; //Barber
+			ConstructionSite = "construction_site_08/cs8";
+			Visuals = array { "barber/barber" };
+			NPCHomePriority = 2;
+			
+			PlacementRules = array 
+			{
+				("Market", false, 1.0),
+			};
+
+			ConstructionTime = 0.03125;
+			
+            MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/BarberLevel1
+				{
+					Cost = 1250;
+					RepairCost = 750;
+					MaximumHealth = 450;
+					EnableExterior = true;
+					EnableInterior = false;
+				};
+			};
+
+			AvailableAddons = array
+			{
+				"FireProtection_1_1",
+				"FireProtection_2_1",
+				"BurglaryProtection_1_1",
+				"BurglaryProtection_2_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"AttractCrowd_1a",
+				"AttractCrowd_1b",
+				"MoreEmployees1_1",
+				"MoreEmployees2_1",
+				"StorageSlots_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"FrontStoreSlots_1_1",
+				"FrontStoreSlots_2_1",
+				"FrontStoreSpace_1_1",
+				"FrontStoreSpace_2_1",
+				"Health_1",
+				"MoreEmployeesTransport_1_1"
+			};
+		};
+		
+		"Apothecary" = G3BuildingTemplate
+		{
+			EnumType = 49;
+			DisplayCategories = array("All", "Herbalism", "City");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = true;
+			EnableServiceProvider = true;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 110; // path vers le son inconnu, a ajouter dans SoundsDefault.oc		
+			ConstructionSite = "construction_site_09/cs9";
+			Visuals = array { "apothecary/apothecary" };
+			NPCHomePriority = 2;
+
+			ConstructionTime = 0.0625;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/ApothecaryLevel1
+				{
+					Cost = 2000;
+					RepairCost = 1100;
+					MaximumHealth = 750;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				2 = base/ShopLevel2
+				{
+					Cost = 3000;
+					RepairCost = 2250;
+					MaximumHealth = 900;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				3 = base/ShopLevel3
+				{
+					Cost = 5000;
+					RepairCost = 3750;
+					MaximumHealth = 1050;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_2_1",
+				"FireProtection_3_1",
+				"BurglaryProtection_2_1",
+				"BurglaryProtection_3_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"AttractCrowd_Level1_1",
+				"AttractCrowd_Level1_2",
+				"AttractCrowd_Level1_3",
+				"MoreEmployees1_1",
+				"MoreEmployeesTransport_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"FrontStoreSlots_1_1",
+				"FrontStoreSpace_1_1",
+				"FrontStoreSpace_2_1",
+				"Health_1",
+				"FireProtection_2_2",
+				"FireProtection_3_2",
+				"BurglaryProtection_2_2",
+				"BurglaryProtection_3_2",
+				"StorageSlots_2_2",
+				"StorageSlots_3_2",
+				"StorageSpace_1_2",
+				"StorageSpace_2_2",
+				"FrontStoreSlots_1_2",
+				"FrontStoreSlots_2_2",
+				"FrontStoreSpace_1_2",
+				"FrontStoreSpace_2_2",
+				"MoreEmployees1_2",
+				"MoreEmployeesTransport_1_2",
+				"Productivity_1_2",
+				"Health_2",
+				"FireProtection_2_3",
+				"FireProtection_3_3",
+				"BurglaryProtection_2_3",
+				"BurglaryProtection_3_3",
+				"StorageSlots_2_3",
+				"StorageSlots_3_3",
+				"StorageSpace_1_3",
+				"StorageSpace_2_3",
+				"FrontStoreSlots_1_3",
+				"FrontStoreSlots_2_3",
+				"FrontStoreSpace_1_3",
+				"FrontStoreSpace_2_3",
+				"MoreEmployees1_3",
+				"AttractCrowd_3a",
+				"Productivity_1_3",
+				"Health_3",
+			};
+		};
+		
+		"Medicus" = G3BuildingTemplate
+		{
+			EnumType = 20;
+			DisplayCategories = array("All", "Herbalism", "City");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = true;
+			EnableServiceProvider = true;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 90; // path vers le son inconnu, a ajouter dans SoundsDefault.oc	
+			ConstructionSite = "construction_site_04/cs4";
+			Visuals = array { "medicus/devinertower" };
+			NPCHomePriority = 2;
+
+			ConstructionTime = 0.0625;
+			
+		    MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/MedicusLevel1
+				{
+					Cost = 2000;
+					RepairCost = 1100;
+					MaximumHealth = 750;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				2 = base/ShopLevel2
+				{
+					Cost = 5000;
+					RepairCost = 2975;
+					MaximumHealth = 900;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				3 = base/ShopLevel3
+				{
+					Cost = 8000;
+					RepairCost = 4875;
+					MaximumHealth = 1050;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_2_1",
+				"FireProtection_3_1",
+				"BurglaryProtection_2_1",
+				"BurglaryProtection_3_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"AttractCrowd_Level1_1",
+				"AttractCrowd_Level1_2",
+				"AttractCrowd_Level1_3",
+				"MoreEmployees1_1",
+				"MoreEmployeesTransport_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"FrontStoreSlots_1_1",
+				"FrontStoreSpace_1_1",
+				"FrontStoreSpace_2_1",
+				"Health_1",
+				"FireProtection_2_2",
+				"FireProtection_3_2",
+				"BurglaryProtection_2_2",
+				"BurglaryProtection_3_2",
+				"StorageSlots_2_2",
+				"StorageSlots_3_2",
+				"StorageSpace_1_2",
+				"StorageSpace_2_2",
+				"FrontStoreSlots_1_2",
+				"FrontStoreSlots_2_2",
+				"FrontStoreSpace_1_2",
+				"FrontStoreSpace_2_2",
+				"MoreEmployees1_2",
+				"MoreEmployeesTransport_1_2",
+				"Productivity_1_2",
+				"Health_2",
+				"FireProtection_2_3",
+				"FireProtection_3_3",
+				"BurglaryProtection_2_3",
+				"BurglaryProtection_3_3",
+				"StorageSlots_2_3",
+				"StorageSlots_3_3",
+				"StorageSpace_1_3",
+				"StorageSpace_2_3",
+				"FrontStoreSlots_1_3",
+				"FrontStoreSlots_2_3",
+				"FrontStoreSpace_1_3",
+				"FrontStoreSpace_2_3",
+				"MoreEmployees1_3",
+				"AttractCrowd_3a",
+				"Productivity_1_3",
+				"Health_3",
+			};
+		};
+		
+		"Scholar" = G3BuildingTemplate
+		{
+			EnumType = 21;
+			DisplayCategories = array("All", "Herbalism", "City");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = true;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 91; // path vers le son inconnu, a ajouter dans SoundsDefault.oc
+			ConstructionSite = "construction_site_04/cs4";
+			Visuals = array { "scholar/druidcove" };
+			NPCHomePriority = 2;
+
+			ConstructionTime = 0.0625;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/ScholarLevel1
+				{
+					Cost = 2000;
+					RepairCost = 1100;
+					MaximumHealth = 750;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				2 = base/ShopLevel2
+				{
+					Cost = 3000;
+					RepairCost = 2250;
+					MaximumHealth = 900;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				3 = base/ShopLevel3
+				{
+					Cost = 5000;
+					RepairCost = 3750;
+					MaximumHealth = 1050;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_2_1",
+				"FireProtection_3_1",
+				"BurglaryProtection_2_1",
+				"BurglaryProtection_3_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"AttractCrowd_Level1_1",
+				"AttractCrowd_Level1_2",
+				"AttractCrowd_Level1_3",
+				"MoreEmployees1_1",
+				"MoreEmployeesTransport_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"FrontStoreSlots_1_1",
+				"FrontStoreSpace_1_1",
+				"FrontStoreSpace_2_1",
+				"Health_1",
+				"FireProtection_2_2",
+				"FireProtection_3_2",
+				"BurglaryProtection_2_2",
+				"BurglaryProtection_3_2",
+				"StorageSlots_2_2",
+				"StorageSlots_3_2",
+				"StorageSpace_1_2",
+				"StorageSpace_2_2",
+				"FrontStoreSlots_1_2",
+				"FrontStoreSlots_2_2",
+				"FrontStoreSpace_1_2",
+				"FrontStoreSpace_2_2",
+				"MoreEmployees1_2",
+				"MoreEmployeesTransport_1_2",
+				"Productivity_1_2",
+				"Health_2",
+				"FireProtection_2_3",
+				"FireProtection_3_3",
+				"BurglaryProtection_2_3",
+				"BurglaryProtection_3_3",
+				"StorageSlots_2_3",
+				"StorageSlots_3_3",
+				"StorageSpace_1_3",
+				"StorageSpace_2_3",
+				"FrontStoreSlots_1_3",
+				"FrontStoreSlots_2_3",
+				"FrontStoreSpace_1_3",
+				"FrontStoreSpace_2_3",
+				"MoreEmployees1_3",
+				"AttractCrowd_3a",
+				"Productivity_1_3",
+				"Health_3",
+			};
+		};
+		
+		"AlchemistShop" = G3BuildingTemplate
+		{
+			EnumType = 14;
+			DisplayCategories = array("All", "Herbalism", "City");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = true;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 87; // path vers le son inconnu, a ajouter dans SoundsDefault.oc
+			ConstructionSite = "construction_site_09/cs9";
+			Visuals = array { "alchemistshop/alchemistshop" };
+			NPCHomePriority = 2;
+
+			ConstructionTime = 0.0625;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/AlchemistShopLevel1
+				{
+					Cost = 2000;
+					RepairCost = 1100;
+					MaximumHealth = 750;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				2 = base/ShopLevel2
+				{
+					Cost = 3000;
+					RepairCost = 2250;
+					MaximumHealth = 900;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				3 = base/ShopLevel3
+				{
+					Cost = 5000;
+					RepairCost = 3750;
+					MaximumHealth = 1050;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_2_1",
+				"FireProtection_3_1",
+				"BurglaryProtection_2_1",
+				"BurglaryProtection_3_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"AttractCrowd_Level1_1",
+				"AttractCrowd_Level1_2",
+				"AttractCrowd_Level1_3",
+				"MoreEmployees1_1",
+				"MoreEmployeesTransport_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"FrontStoreSlots_1_1",
+				"FrontStoreSpace_1_1",
+				"FrontStoreSpace_2_1",
+				"Health_1",
+				"FireProtection_2_2",
+				"FireProtection_3_2",
+				"BurglaryProtection_2_2",
+				"BurglaryProtection_3_2",
+				"StorageSlots_2_2",
+				"StorageSlots_3_2",
+				"StorageSpace_1_2",
+				"StorageSpace_2_2",
+				"FrontStoreSlots_1_2",
+				"FrontStoreSlots_2_2",
+				"FrontStoreSpace_1_2",
+				"FrontStoreSpace_2_2",
+				"MoreEmployees1_2",
+				"MoreEmployeesTransport_1_2",
+				"Productivity_1_2",
+				"Health_2",
+				"FireProtection_2_3",
+				"FireProtection_3_3",
+				"BurglaryProtection_2_3",
+				"BurglaryProtection_3_3",
+				"StorageSlots_2_3",
+				"StorageSlots_3_3",
+				"StorageSpace_1_3",
+				"StorageSpace_2_3",
+				"FrontStoreSlots_1_3",
+				"FrontStoreSlots_2_3",
+				"FrontStoreSpace_1_3",
+				"FrontStoreSpace_2_3",
+				"MoreEmployees1_3",
+				"AttractCrowd_3a",
+				"Productivity_1_3",
+				"Health_3",
+			};
+		};
+				
+		//<-----------------FOOD PREPARATION----------------->
+		"Windmill" = G3BuildingTemplate
+		{
+			EnumType = 43;
+			DisplayCategories = array("All", "HuntingFarming", "Village");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = true;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 58; // Windmill
+			ConstructionSite = "construction_site_07/cs7";
+			Visuals = array { "windmill/windmill" };
+			NPCHomePriority = 2;
+
+			ConstructionTime = 0.03125;
+
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/WindmillLevel1
+				{
+					Cost = 1500;
+					RepairCost = 900;
+					MaximumHealth = 550;
+					EnableExterior = true;
+					EnableInterior = false;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_1_1",
+				"FireProtection_2_1",
+				"BurglaryProtection_1_1",
+				"BurglaryProtection_2_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"AttractCrowd_1a",
+				"AttractCrowd_1b",
+				"MoreEmployees1_1",
+				"MoreEmployees2_1",
+				"MoreEmployeesTransport_1_1",
+				"StorageSlots_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"FrontStoreSlots_1_1",
+				"FrontStoreSlots_2_1",
+				"FrontStoreSpace_1_1",
+				"FrontStoreSpace_2_1",
+				"Health_1"
+			};
+		};
+		
+		"Butcher" = G3BuildingTemplate
+		{
+			EnumType = 44;
+			DisplayCategories = array("All", "HuntingFarming", "Village");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = true;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 60; // Butchery
+			ConstructionSite = "construction_site_07/cs7";
+			Visuals = array { "butcher/butcher" };
+			NPCHomePriority = 2;
+
+			ConstructionTime = 0.03125;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/ButcherLevel1
+				{
+					Cost = 1500;
+					RepairCost = 900;
+					MaximumHealth = 550;
+					EnableExterior = true;
+					EnableInterior = false;
+				};
+			};
+
+			AvailableAddons = array
+			{
+				"FireProtection_1_1",
+				"FireProtection_2_1",
+				"BurglaryProtection_1_1",
+				"BurglaryProtection_2_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"AttractCrowd_1a",
+				"AttractCrowd_1b",
+				"MoreEmployees1_1",
+				"MoreEmployees2_1",
+				"StorageSlots_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"FrontStoreSlots_1_1",
+				"FrontStoreSlots_2_1",
+				"FrontStoreSpace_1_1",
+				"FrontStoreSpace_2_1",
+				"Health_1",
+				"MoreEmployeesTransport_1_1",
+				"MoreEmployeesTransport_2_1"
+			};
+		};
+		
+		"Bakery" = G3BuildingTemplate
+		{
+			EnumType = 16;
+			DisplayCategories = array("All", "HuntingFarming", "City");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = true;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 89; // path vers le son inconnu, a ajouter dans SoundsDefault.oc
+			ConstructionSite = "construction_site_10/cs10";
+			Visuals = array { "bakery/bakery" };
+			NPCHomePriority = 2;
+			
+			PlacementRules = array 
+			{
+				("Inn", true, 1.0),
+				("Warehouse*", true, 1.0),
+			};
+
+			ConstructionTime = 0.0625;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/BakeryLevel1
+				{
+					Cost = 2000;
+					RepairCost = 1100;
+					MaximumHealth = 750;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				2 = base/ShopLevel2
+				{
+					Cost = 3000;
+					RepairCost = 2250;
+					MaximumHealth = 900;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				3 = base/ShopLevel3
+				{
+					Cost = 5000;
+					RepairCost = 3750;
+					MaximumHealth = 1050;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+			};
+
+			AvailableAddons = array
+			{
+				"FireProtection_2_1",
+				"FireProtection_3_1",
+				"BurglaryProtection_2_1",
+				"BurglaryProtection_3_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"AttractCrowd_Level1_1",
+				"AttractCrowd_Level1_2",
+				"AttractCrowd_Level1_3",
+				"MoreEmployees1_1",
+				"MoreEmployeesTransport_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"FrontStoreSlots_1_1",
+				"FrontStoreSpace_1_1",
+				"FrontStoreSpace_2_1",
+				"Health_1",
+				"FireProtection_2_2",
+				"FireProtection_3_2",
+				"BurglaryProtection_2_2",
+				"BurglaryProtection_3_2",
+				"StorageSlots_2_2",
+				"StorageSlots_3_2",
+				"StorageSpace_1_2",
+				"StorageSpace_2_2",
+				"FrontStoreSlots_1_2",
+				"FrontStoreSlots_2_2",
+				"FrontStoreSpace_1_2",
+				"FrontStoreSpace_2_2",
+				"MoreEmployees1_2",
+				"MoreEmployeesTransport_1_2",
+				"Productivity_1_2",
+				"Health_2",
+				"FireProtection_2_3",
+				"FireProtection_3_3",
+				"BurglaryProtection_2_3",
+				"BurglaryProtection_3_3",
+				"StorageSlots_2_3",
+				"StorageSlots_3_3",
+				"StorageSpace_1_3",
+				"StorageSpace_2_3",
+				"FrontStoreSlots_1_3",
+				"FrontStoreSlots_2_3",
+				"FrontStoreSpace_1_3",
+				"FrontStoreSpace_2_3",
+				"MoreEmployees1_3",
+				"AttractCrowd_3a",
+				"Productivity_1_3",
+				"Health_3",
+			};
+		};
+		
+		"Farm" = G3BuildingTemplate
+		{
+			EnumType = 22;
+			DisplayCategories = array("All", "HuntingFarming", "Village");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = true;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 55; // Farmhouse 
+			//SelectSound = 56; // Croft 			
+			//SelectSound = 59; // Estate Farm 			
+			//SelectSound = 69; // Farm 		
+			ConstructionSite = "construction_site_02/cs2";
+			Visuals = array { "farm/farm" };
+			NPCHomePriority = 2;
+			
+			PlacementRules = array 
+			{
+				("Well", false, 3.0), 
+				("*", true, 1.0),
+				("Windmill", true, 2.0),
+				("Butcher", true, 2.0),				
+				("Warehouse*", true, 2.0)
+			};
+
+			ConstructionTime = 0.042;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/FarmLevel1
+				{
+					Cost = 1500;
+					RepairCost = 900;
+					MaximumHealth = 750;
+					EnableExterior = true;
+					EnableInterior = false;
+				};
+				2 = base/FarmLevel2
+				{
+					Cost = 3000;
+					RepairCost = 2138;
+					MaximumHealth = 900;
+					EnableExterior = true;
+					EnableInterior = false;
+				};
+				3 = base/FarmLevel3
+				{
+					Cost = 5500;
+					RepairCost = 3600;
+					MaximumHealth = 1050;
+					EnableExterior = true;
+					EnableInterior = false;
+				};
+			};
+
+			AvailableAddons = array
+			{
+				"FireProtection_2_1",
+				"FireProtection_3_1",
+				"BurglaryProtection_2_1",
+				"BurglaryProtection_3_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"AttractCrowd_Level1_1",
+				"AttractCrowd_Level1_2",
+				"AttractCrowd_Level1_3",
+				"MoreEmployees1_1",
+				"MoreEmployeesTransport_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"FrontStoreSlots_1_1",
+				"FrontStoreSpace_1_1",
+				"FrontStoreSpace_2_1",
+				"Health_1",
+				"FireProtection_2_2",
+				"FireProtection_3_2",
+				"BurglaryProtection_2_2",
+				"BurglaryProtection_3_2",
+				"StorageSlots_2_2",
+				"StorageSlots_3_2",
+				"StorageSpace_1_2",
+				"StorageSpace_2_2",
+				"FrontStoreSlots_1_2",
+				"FrontStoreSlots_2_2",
+				"FrontStoreSpace_1_2",
+				"FrontStoreSpace_2_2",
+				"MoreEmployees1_2",
+				"MoreEmployees2_2",
+				"MoreEmployeesTransport_1_2",
+				"Productivity_1_2",
+				"Health_2",
+				"FireProtection_2_3",
+				"FireProtection_3_3",
+				"BurglaryProtection_2_3",
+				"BurglaryProtection_3_3",
+				"StorageSlots_2_3",
+				"StorageSlots_3_3",
+				"StorageSpace_1_3",
+				"StorageSpace_2_3",
+				"FrontStoreSlots_1_3",
+				"FrontStoreSlots_2_3",
+				"FrontStoreSpace_1_3",
+				"FrontStoreSpace_2_3",
+				"MoreEmployees2_3",
+				"AttractCrowd_3a",
+				"Productivity_1_3",
+			};
+		};
+		
+		"Inn" = G3BuildingTemplate
+		{
+			EnumType = 24;
+			DisplayCategories = array("All", "HuntingFarming", "City");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = true;
+			EnableServiceProvider = true;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 93; // path vers le son inconnu, a ajouter dans SoundsDefault.oc			
+			ConstructionSite = "construction_site_02/cs2";
+			Visuals = array { "inn/inn" };
+			NPCHomePriority = 2;
+			
+			PlacementRules = array 
+			{
+				("Bakery", true, 1.0),
+				("Warehouse*", true, 1.0),
+			};
+
+			ConstructionTime = 0.0625;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/InnLevel1
+				{
+					Cost = 2000;
+					RepairCost = 1100;
+					MaximumHealth = 750;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				2 = base/InnLevel2
+				{
+					Cost = 5000;
+					RepairCost = 2975;
+					MaximumHealth = 900;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				3 = base/InnLevel3
+				{
+					Cost = 8000;
+					RepairCost = 4875;
+					MaximumHealth = 1050;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_2_1",
+				"FireProtection_3_1",
+				"BurglaryProtection_2_1",
+				"BurglaryProtection_3_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"AttractCrowd_Level1_1",
+				"AttractCrowd_Level1_2",
+				"AttractCrowd_Level1_3",
+				"MoreEmployees1_1",
+				"MoreEmployeesTransport_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"FrontStoreSlots_1_1",
+				"FrontStoreSpace_1_1",
+				"FrontStoreSpace_2_1",
+				"Health_1",
+				"FireProtection_2_2",
+				"FireProtection_3_2",
+				"BurglaryProtection_2_2",
+				"BurglaryProtection_3_2",
+				"StorageSlots_2_2",
+				"StorageSlots_3_2",
+				"StorageSpace_1_2",
+				"StorageSpace_2_2",
+				"FrontStoreSlots_1_2",
+				"FrontStoreSlots_2_2",
+				"FrontStoreSpace_1_2",
+				"FrontStoreSpace_2_2",
+				"MoreEmployees1_2",
+				"MoreEmployeesTransport_1_2",
+				"Productivity_1_2",
+				"Health_2",
+				"FireProtection_2_3",
+				"FireProtection_3_3",
+				"BurglaryProtection_2_3",
+				"BurglaryProtection_3_3",
+				"StorageSlots_2_3",
+				"StorageSlots_3_3",
+				"StorageSpace_1_3",
+				"StorageSpace_2_3",
+				"FrontStoreSlots_1_3",
+				"FrontStoreSlots_2_3",
+				"FrontStoreSpace_1_3",
+				"FrontStoreSpace_2_3",
+				"MoreEmployees1_3",
+				"AttractCrowd_3a",
+				"Productivity_1_3",
+				"Health_3",
+			};
+		};
+		
+		//<-----------------ROGUE----------------->
+		"RobberCamp" = G3BuildingTemplate
+		{
+			EnumType = 48;
+			DisplayCategories = array("All", "Rogue", "Village");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableAllowSellingExternalItems = true;
+			EnableDecay = true;
+			SelectSound = 109; // path vers le son inconnu, a ajouter dans SoundsDefault.oc			
+			ConstructionSite = "construction_site_08/cs8";
+			Visuals = array { "robbercamp/robbercamp" };
+			NPCHomePriority = 2;
+			
+			PlacementRules = array 
+			{
+				("Market", false, 1.0), 
+				("RobberCamp", true, -1.0),  
+			};
+
+			ConstructionTime = 0.021;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/RobberLevel1
+				{
+					Cost = 1000;
+					RepairCost = 600;
+					MaximumHealth = 350;
+					EnableExterior = true;
+					EnableInterior = false;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_1_1",
+				"FireProtection_2_1",
+				"FireProtection_3_1",
+				"BurglaryProtection_1_1",
+				"BurglaryProtection_2_1",
+				"BurglaryProtection_3_1",
+				"MoreEmployees1_1",
+				"MoreEmployees2_1",
+				"StorageSlots_1_1",
+				"StorageSlots_2_1",
+				"StorageSlots_3_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"StorageSpace_3_1",
+				"Health_1"
+			};
+		};
+
+		"Gravedigger" = G3BuildingTemplate
+		{
+			EnumType = 57;
+			DisplayCategories = array("All", "Rogue", "Village");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = true;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableAllowSellingExternalItems = true;
+			EnableDecay = true;
+			SelectSound = 114;
+			ConstructionSite = "construction_site_08/cs8";
+			Visuals = array { "gravedigger/gravedigger" };
+			NPCHomePriority = 2;
+			
+			PlacementRules = array 
+			{
+				("Cemetary", false, 2.0), 
+				("Market", false, 1.0), 
+				("*", true, 1.0), 
+				("Warehouse*", true, 2.0)
+			};
+
+			ConstructionTime = 0.03125;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/GravediggerLevel1
+				{
+					Cost = 1250;
+					RepairCost = 750;
+					MaximumHealth = 450;
+					EnableExterior = true;
+					EnableInterior = false;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_1_1",
+				"FireProtection_2_1",
+				"BurglaryProtection_1_1",
+				"BurglaryProtection_2_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"AttractCrowd_1a",
+				"AttractCrowd_1b",
+				"MoreEmployees1_1",
+				"MoreEmployees2_1",
+				"StorageSlots_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"FrontStoreSlots_1_1",
+				"FrontStoreSlots_2_1",
+				"FrontStoreSpace_1_1",
+				"FrontStoreSpace_2_1",
+				"Health_1"
+			};
+		};
+
+		"Gleeman" = G3BuildingTemplate
+		{
+			EnumType = 56;
+			DisplayCategories = array("All", "Rogue", "Village");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableAllowSellingExternalItems = false;
+			EnableDecay = true;
+			SelectSound = 113;
+			ConstructionSite = "construction_site_07/cs7";
+			Visuals = array { "gleeman/gleeman" };
+			NPCHomePriority = 2;
+			
+			PlacementRules = array 
+			{
+				("Market", false, 1.0),
+			};
+
+			ConstructionTime = 0.021;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/GleemanLevel1
+				{
+					Cost = 1500;
+					RepairCost = 900;
+					MaximumHealth = 350;
+					EnableExterior = true;
+					EnableInterior = false;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_1_1b",
+				"FireProtection_2_1b",
+				"FireProtection_3_1b",
+				"BurglaryProtection_1_1b",
+				"BurglaryProtection_2_1b",
+				"BurglaryProtection_3_1b",
+				"MoreEmployees1_1",
+				"MoreEmployees2_1",
+				"StorageSlots_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"Health_1"
+			};
+		};
+
+		"Orchardist" = G3BuildingTemplate
+		{
+			EnumType = 61;
+			DisplayCategories = array("All", "HuntingFarming", "Village");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = true;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableAllowSellingExternalItems = true;
+			EnableDecay = true;
+			SelectSound = 1015;
+			ConstructionSite = "construction_site_06/cs6";
+			Visuals = array { "orchardist/orchardist" };
+			NPCHomePriority = 2;
+			
+			PlacementRules = array 
+			{
+				("Grove", false, 2.0),			
+				("Market", false, 2.0), 
+				("*", true, 1.0), 
+				("Warehouse*", true, 2.0)
+			};
+
+			ConstructionTime = 0.03125;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/OrchardistLevel1
+				{
+					Cost = 1250;
+					RepairCost = 750;
+					MaximumHealth = 450;
+					EnableExterior = true;
+					EnableInterior = false;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_1_1",
+				"FireProtection_2_1",
+				"BurglaryProtection_1_1",
+				"BurglaryProtection_2_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"AttractCrowd_1a",
+				"AttractCrowd_1b",
+				"MoreEmployees1_1",
+				"MoreEmployees2_1",
+				"MoreEmployeesTransport_1_1",
+				"StorageSlots_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"FrontStoreSlots_1_1",
+				"FrontStoreSlots_2_1",
+				"FrontStoreSpace_1_1",
+				"FrontStoreSpace_2_1",
+				"Health_1"
+			};
+		};
+
+		"FishingHut" = G3BuildingTemplate
+		{
+			EnumType = 53;
+			DisplayCategories = array("All", "HuntingFarming", "Village");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = true;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableAllowSellingExternalItems = true;
+			EnableDecay = true;
+			SelectSound = 1005;
+			ConstructionSite = "construction_site_08/cs8";
+			Visuals = array { "fishinghut/fishinghut" };
+			NPCHomePriority = 2;
+			
+			PlacementRules = array 
+			{
+				("FishingSpot", false, 2.0), 
+				("Market", false, 1.0), 
+				("*", true, 1.0), 
+				("Warehouse*", true, 2.0)
+			};
+
+			ConstructionTime = 0.03125;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/FishingHutLevel1
+				{
+					Cost = 1250;
+					RepairCost = 750;
+					MaximumHealth = 450;
+					EnableExterior = true;
+					EnableInterior = false;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_1_1",
+				"FireProtection_2_1",
+				"BurglaryProtection_1_1",
+				"BurglaryProtection_2_1",
+				"Productivity_Level1_1",
+				"Productivity_Level1_2",
+				"Productivity_Level1_3",
+				"AttractCrowd_1a",
+				"AttractCrowd_1b",
+				"MoreEmployees1_1",
+				"MoreEmployees2_1",
+				"MoreEmployeesTransport_1_1",
+				"StorageSlots_1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"FrontStoreSlots_1_1",
+				"FrontStoreSlots_2_1",
+				"FrontStoreSpace_1_1",
+				"FrontStoreSpace_2_1",
+				"Health_1"
+			};
+		};
+		
+		"GuardPost" = G3BuildingTemplate
+		{
+			EnumType = 23;
+			DisplayCategories = array("All", "Rogue", "City");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = true;
+			SelectSound = 92; // garrison
+			ConstructionSite = "construction_site_04/cs4";
+			Visuals = array { "guardpost/guardpost" };
+			NPCHomePriority = 2;
+
+			ConstructionTime = 0.0625;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/GuardPost1
+				{
+					Cost = 2000;
+					RepairCost = 1100;
+					MaximumHealth = 750;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				2 = base/GuardPost2
+				{
+					Cost = 3000;
+					RepairCost = 2250;
+					MaximumHealth = 900;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				3 = base/GuardPost3
+				{
+					Cost = 5000;
+					RepairCost = 3750;
+					MaximumHealth = 1050;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_1_1",
+				"FireProtection_2_1",
+				"FireProtection_3_1",
+				"FireProtection_3_1b",
+				"BurglaryProtection_1_1",
+				"BurglaryProtection_2_1",
+				"BurglaryProtection_3_1",
+				"BurglaryProtection_3_1b",
+				"MoreEmployees1_1",
+				"StorageSlots_1_1",
+				"StorageSlots_2_1",
+				"StorageSlots_3_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"StorageSpace_3_1",
+				"Health_1",
+				"FireProtection_3_2",
+				"FireProtection_3_2a",
+				"BurglaryProtection_3_2",
+				"BurglaryProtection_3_2a",
+				"BurglaryProtection_3_2b",
+				"StorageSlots_3_2",
+				"StorageSpace_2_2",
+				"StorageSpace_3_2",
+				"MoreEmployees1_2",
+				"Health_2",
+				"FireProtection_3_3",
+				"FireProtection_3_3a",
+				"FireProtection_3_3b",
+				"BurglaryProtection_3_3a",
+				"BurglaryProtection_3_3b",
+				"StorageSlots_2_3",
+				"StorageSpace_2_3",
+				"StorageSpace_3_3",
+				"MoreEmployees1_3",
+				"Health_3"
+			};
+		};
+		
+		"ThiefHideout" = G3BuildingTemplate
+		{
+			EnumType = 28;
+			DisplayCategories = array("All", "Rogue", "City");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableAllowSellingExternalItems = true;
+			EnableDecay = true;
+			SelectSound = 95; // path vers le son inconnu, a ajouter dans SoundsDefault.oc			
+			ConstructionSite = "construction_site_08/cs8";
+			Visuals = array { "thiefhideout/thiefhideout" };
+			NPCHomePriority = 2;
+			
+			PlacementRules = array 
+			{
+				("Market", false, 1.0), 
+				("ThiefHideout", true, -1.0),  
+			};
+			
+			ConstructionTime = 0.0625;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/ThiefHideout1
+				{
+					Cost = 2000;
+					RepairCost = 1100;
+					MaximumHealth = 750;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				2 = base/ThiefHideout2
+				{
+					Cost = 3000;
+					RepairCost = 2250;
+					MaximumHealth = 900;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				3 = base/ThiefHideout3
+				{
+					Cost = 5000;
+					RepairCost = 3750;
+					MaximumHealth = 1050;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_1_1",
+				"FireProtection_2_1",
+				"FireProtection_3_1",
+				"FireProtection_3_1b",
+				"BurglaryProtection_1_1",
+				"BurglaryProtection_2_1",
+				"BurglaryProtection_3_1",
+				"BurglaryProtection_3_1b",
+				"MoreEmployees1_1",
+				"StorageSlots_1_1",
+				"StorageSlots_2_1",
+				"StorageSlots_3_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"StorageSpace_3_1",
+				"Health_1",
+				"FireProtection_3_2",
+				"FireProtection_3_2a",
+				"BurglaryProtection_3_2",
+				"BurglaryProtection_3_2a",
+				"BurglaryProtection_3_2b",
+				"StorageSlots_3_2",
+				"StorageSpace_2_2",
+				"StorageSpace_3_2",
+				"MoreEmployees1_2",
+				"Health_2",
+				"FireProtection_3_3",
+				"FireProtection_3_3a",
+				"FireProtection_3_3b",
+				"BurglaryProtection_3_3a",
+				"BurglaryProtection_3_3b",
+				"StorageSlots_2_3",
+				"StorageSpace_2_3",
+				"StorageSpace_3_3",
+				"MoreEmployees1_3",
+				"Health_3",
+			};
+		};
+
+		"Smuggler" = G3BuildingTemplate
+		{
+			EnumType = 63;
+			DisplayCategories = array("All", "Rogue", "City");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = true;
+			EnableServiceProvider = true;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableAllowSellingExternalItems = true;
+			EnableDecay = true;
+			SelectSound = 118;
+			ConstructionSite = "construction_site_08/cs8";
+			Visuals = array { "smuggler/smuggler" };
+			NPCHomePriority = 2;
+			
+			PlacementRules = array 
+			{
+				("arsenal, port", false, 1.0), 
+				("Smuggler", true, -1.0),  
+			};
+			
+			ConstructionTime = 0.0625;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/Smuggler1
+				{
+					Cost = 2000;
+					RepairCost = 1100;
+					MaximumHealth = 750;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				2 = base/Smuggler2
+				{
+					Cost = 3000;
+					RepairCost = 2250;
+					MaximumHealth = 900;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+				3 = base/Smuggler3
+				{
+					Cost = 5000;
+					RepairCost = 3750;
+					MaximumHealth = 1050;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_2_1",
+				"FireProtection_3_1",
+				"BurglaryProtection_1_1",
+				"BurglaryProtection_2_1",
+				"BurglaryProtection_3_1",
+				"AttractCrowd_Level1_1",
+				"AttractCrowd_Level1_2",
+				"AttractCrowd_Level1_3",
+				"MoreEmployees1_1",
+				"StorageSlots_2_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"FrontStoreSlots_1_1",
+				"FrontStoreSpace_1_1",
+				"FrontStoreSpace_2_1",
+				"Health_1",
+				"FireProtection_3_2",
+				"FireProtection_3_2a",
+				"BurglaryProtection_3_2",
+				"BurglaryProtection_3_2a",
+				"BurglaryProtection_3_2b",
+				"StorageSlots_2_2",
+				"StorageSlots_3_2",
+				"StorageSpace_2_2",
+				"StorageSpace_3_2",
+				"FrontStoreSlots_1_2",
+				"FrontStoreSlots_2_2",
+				"FrontStoreSpace_1_2",
+				"FrontStoreSpace_2_2",
+				"MoreEmployees1_2",
+				"Health_2",
+				"FireProtection_2_3",
+				"FireProtection_3_3",
+				"BurglaryProtection_2_3",
+				"BurglaryProtection_3_3",
+				"StorageSlots_2_3",
+				"StorageSlots_3_3",
+				"StorageSpace_1_3",
+				"StorageSpace_2_3",
+				"FrontStoreSlots_1_3",
+				"FrontStoreSlots_2_3",
+				"FrontStoreSpace_1_3",
+				"FrontStoreSpace_2_3",
+				"MoreEmployees1_3",
+				"AttractCrowd_3a",
+				"Health_3",
+			};
+		};
+		
+		//<-----------------WAREHOUSE----------------->
+		"Warehouse" = G3BuildingTemplate
+		{
+			EnumType = 31;
+			DisplayCategories = array("All", "Other", "City");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableAllowSellingExternalItems = true;
+			EnableDecay = true;
+			SelectSound = 99; // path vers le son inconnu, a ajouter dans SoundsDefault.oc			
+			ConstructionSite = "constructionsite/cs_main_02";
+			Visuals = array { "warehouse/warehouse" };
+			NPCHomePriority = 2;
+
+			ConstructionTime = 0.0625;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/WarehouseLevel
+				{
+					Cost = 6000;
+					RepairCost = 2700;
+					MaximumHealth = 750;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_1_1",
+				"FireProtection_2_1",
+				"FireProtection_3_1",
+				"FireProtection_other_small_3",
+				"BurglaryProtection_1_1",
+				"BurglaryProtection_2_1",
+				"BurglaryProtection_3_1",
+				"BurglaryProtection_3_1b",
+				"MoreEmployeesTransport_1_1",
+				"MoreEmployeesTransport_2_1",
+				"StorageSlots_1_1",
+				"StorageSlots_2_1",
+				"StorageSlots_3_1",
+				"StorageSlots_4_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"StorageSpace_3_1",
+				"StorageSpace_4_1",
+				"Health_1",
+				"Health_1b",
+				"Health_1c"
+			};
+		};
+
+		"Warehouse_Country" = G3BuildingTemplate
+		{
+			EnumType = 52;
+			DisplayCategories = array("All", "Other", "Village");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = true;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableAllowSellingExternalItems = true;
+			EnableDecay = true;
+			SelectSound = 99;
+			ConstructionSite = "construction_site_08/cs8";
+			Visuals = array { "warehouse_country/warehouse_country" };
+			NPCHomePriority = 2;
+
+			ConstructionTime = 0.03125;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/Warehouse_CountryLevel
+				{
+					Cost = 2500;
+					RepairCost = 1375;
+					MaximumHealth = 550;
+					EnableExterior = true;
+					EnableInterior = false;
+				};
+			};
+			
+			AvailableAddons = array
+			{
+				"FireProtection_1_1",
+				"FireProtection_2_1",
+				"FireProtection_3_1",
+				"FireProtection_other_small_3",
+				"BurglaryProtection_1_1",
+				"BurglaryProtection_2_1",
+				"BurglaryProtection_3_1",
+				"MoreEmployeesTransport_1_1",
+				"MoreEmployeesTransport_2_1",
+				"StorageSlots_1_1",
+				"StorageSlots_2_1",
+				"StorageSlots_3_1",
+				"StorageSpace_1_1",
+				"StorageSpace_2_1",
+				"StorageSpace_3_1",
+				"Health_1",
+				"Health_1b"
+			};
+		};
+		
+		//<-----------------RESOURCEPRODUCER----------------->
+		"Mine" = G3BuildingTemplate
+		{
+			EnumType = 2;
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = false;
+			EnableFrontStore = true;
+			EnableServiceProvider = false;
+			EnableSeller = true;
+			EnableResourceProducer = true;
+			EnableDecay = false;
+			SelectSound = 62; // Mine
+			Visuals = array { "mine/mine" };
+			NPCHomePriority = 1;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/ResourceProducer1
+				{
+					Cost = 5000;
+					RepairCost = 2250;
+					MaximumHealth = 3000;
+					NBAddons = 0;
+				};
+			};
+		};
+				
+		"Quarry" = G3BuildingTemplate
+		{
+			EnumType = 3;
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = false;
+			EnableFrontStore = true;
+			EnableServiceProvider = false;
+			EnableSeller = true;
+			EnableResourceProducer = true;
+			EnableDecay = false;
+			SelectSound = 70; // Quarry
+			Visuals = array { "quarry/quarry" };
+			NPCHomePriority = 1;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/ResourceProducer1
+				{
+					Cost = 5000;
+					RepairCost = 2250;
+					MaximumHealth = 3000;
+					NBAddons = 0;
+				};
+			};
+		};
+		
+				
+		"LumberYard" = G3BuildingTemplate
+		{
+			EnumType = 4;
+			
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = false;
+			EnableFrontStore = true;
+			EnableServiceProvider = false;
+			EnableSeller = true;
+			EnableResourceProducer = true;
+			EnableDecay = false;
+			SelectSound = 57; // Lumberyard
+			Visuals = array { "lumberyard/lumberyard" };
+			NPCHomePriority = 1;
+
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/ResourceProducer1
+				{
+					Cost = 5000;
+					RepairCost = 2250;
+					MaximumHealth = 3000;
+					NBAddons = 0;
+				};
+			};
+		};
+		
+		"Cemetary" = G3BuildingTemplate
+		{
+			EnumType = 5;
+			
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = false;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = true;
+			EnablePickYourOwn = true;
+			EnableDecay = false;
+			SelectSound = 78; // Cemetery
+			Visuals = array { "cemetary/cemetary" };
+			ShouldEnterOnExterior = true;
+			NPCHomePriority = 1;
+
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/ReapHerbsBuilding
+				{
+					Cost = 0;
+					MaximumHealth = 3000;
+					NBAddons = 0;
+				};
+			};
+		};
+		
+		"Well" = G3BuildingTemplate
+		{
+			EnumType = 6;
+			
+			DisplayCategories = array("All", "Other", "Village", "City");
+			EnableCity = true;
+			EnableHouse = false;
+			EnableBusiness = false;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = true;
+			EnablePickYourOwn = true;			
+			EnableDecay = false;
+			AllowSleeping = false;
+			SelectSound = 96; // path vers le son inconnu, a ajouter dans SoundsDefault.oc			
+			ConstructionSite = "construction_site_05/CS5";
+			Visuals = array { "well/well" };
+			ShouldEnterOnExterior = true;
+			NPCHomePriority = 1;
+
+			ConstructionTime = 0.021;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/ReapHerbsBuilding
+				{
+					Cost = 500;
+					MaximumHealth = 3000;
+					EnableExterior = true;
+					EnableInterior = true;
+				};
+			};
+		};
+
+		"Statue" = G3BuildingTemplate
+		{
+			EnumType = 33;
+			DisplayCategories = array("All", "Other", "Village", "City");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = false;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableAllowSellingExternalItems = false;
+			EnableDecay = true;
+			AllowSleeping = false;
+			CustomDecayFormula = "Health.max / 60"; // decay is reducing building health every month; / 60 = means without repair a building last for 5 years
+			ConstructionSite = "construction_site_05/CS5";
+			EnableDecoration = true;
+			ShouldSilentlyBlockEntry = true; // Right-clicking on the Statue should not display a popup telling the player that he cannot enter. Instead, the character should run to the statue and stop there.
+			Visuals = array { "statue/statue" };
+
+			ConstructionTime = 0.021;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			PlacementRules = array 
+			{
+				("Market", false, 1.0), 
+			};
+
+			BuildingLevels = map
+			{
+				1 = base/Statue
+				{
+					Cost = 10000;
+					RepairCost = 5000;
+					MaximumHealth = 5;
+					EnableExterior = true;
+					EnableInterior = true;
+				};
+			};
+		};
+
+		"Stage" = G3BuildingTemplate
+		{
+			EnumType = 64;
+			DisplayCategories = array("All", "Other", "City");
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = false;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableAllowSellingExternalItems = false;
+			EnableDecay = true;
+			AllowSleeping = false;
+			ConstructionSite = "construction_site_05/CS5";
+			EnableDecoration = true;
+			ShouldSilentlyBlockEntry = true;
+			Visuals = array { "stage/stage" };
+			ShouldEnterOnExterior = true;
+			
+			PlacementRules = array 
+			{
+				("Market", false, 1.0), 
+				("Stage", false, -2.0),
+			};
+
+			ConstructionTime = 0.021;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/Stage
+				{
+					Cost = 5000;
+					RepairCost = 2000;
+					MaximumHealth = 100;
+					EnableExterior = false;
+					EnableInterior = true;
+				};
+			};
+		};
+		
+		"Grove" = G3BuildingTemplate
+		{
+			EnumType = 47;
+			
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = false;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = true;
+			EnablePickYourOwn = true;
+			EnableDecay = false;
+			SelectSound = 108; // path vers le son inconnu, a ajouter dans SoundsDefault.oc			
+			Visuals = array { "grove/grove" };
+			ShouldEnterOnExterior = true;
+
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/ReapHerbsBuilding
+				{
+					Cost = 0;
+					MaximumHealth = 3000;
+					NBAddons = 0;
+				};
+			};
+		};
+		
+		"Brushwood" = G3BuildingTemplate
+		{
+			EnumType = 50;
+			
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = false;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = true;
+			EnablePickYourOwn = true;
+			EnableDecay = false;
+			SelectSound = 111; // path vers le son inconnu, a ajouter dans SoundsDefault.oc			
+			Visuals = array { "brushwood/brushwood" };
+			ShouldEnterOnExterior = true;
+
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/ReapHerbsBuilding
+				{
+					Cost = 0;
+					MaximumHealth = 3000;
+					NBAddons = 0;
+				};
+			};
+		};
+
+		"FishingSpot" = G3BuildingTemplate
+		{
+			EnumType = 54;
+			
+			EnableCity = false;
+			EnableHouse = false;
+			EnableBusiness = false;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = true;
+			EnablePickYourOwn = true;
+			EnableDecay = false;
+			SelectSound = 117;
+			Visuals = array { "fishingspot/fishingspot" };
+			ShouldEnterOnExterior = true;
+
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/ReapHerbsBuilding
+				{
+					Cost = 0;
+					MaximumHealth = 3000;
+					NBAddons = 0;
+				};
+			};
+		};
+		
+		//<-----------------CITY BUILDINGS----------------->
+		"Schloss" = G3BuildingTemplate
+		{
+			EnumType = 7;
+			EnableCity = true;
+			EnableHouse = false;
+			EnableBusiness = false;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = false;
+			AllowSleeping = false;
+			SelectSound = 97; // path vers le son inconnu, a ajouter dans SoundsDefault.oc			
+			Visuals = array { "schloss/schloss", "schloss_02/schloss_02", "schloss_03/schloss_03" };
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/NoWeatherEffects
+				{
+					Cost = 0;
+					MaximumHealth = 10000;
+					NBAddons = 0;
+				};
+			};
+		};
+		
+		"Market" = G3BuildingTemplate
+		{
+			EnumType = 8;
+			EnableCity = true;
+			EnableHouse = false;
+			EnableBusiness = false;
+			EnableFrontStore = true;
+			EnableServiceProvider = false;
+			EnableSeller = true;
+			EnableResourceProducer = false;
+			EnableDecay = false;
+			AllowSleeping = false;
+			SelectSound = 66; // Market
+			Visuals = array { "market/market" };
+			ShouldEnterOnExterior = true; // Characters should remain visible on the building exterior after entering
+			CanEnterExteriorAnywhere = true; // Allow entering the exterior on any position near the building. Do not require pathing through the 'streetconnection' point for entering the exterior
+			AllowTargetedMovementOnExterior = false; // When a player right-clicks the building with a selected character, we should automatically pick a target position on the building exterior for the character (instead of trying to move the character exactly to where the player clicked)
+			ShouldRotateTowardsCenterAfterEnteringExterior = true; // Have characters automatically rotate towards the market after entering from the side.
+			NPCHomePriority = 1;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/MarketLevel
+				{
+					Cost = 0;
+					MaximumHealth = 3000;
+					NBAddons = 0;
+				};
+			};
+		};
+		
+		"Church" = G3BuildingTemplate
+		{
+			EnumType = 10;
+			EnableCity = true;
+			EnableHouse = false;
+			EnableBusiness = false;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = false;
+			AllowSleeping = false;
+			SelectSound = 50;
+			Visuals = array { "church/church", "churchcity/churchcity" };
+			NPCHomePriority = 0;
+			
+			InteriorName = "Int_Church_Village"; // Gets overridden for the city church in buildings/churchcity/oc/churchcity.oc
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			SpawnCharacters = array { ("lr_male_fat/priest", "spawnpriest", 406) };
+
+			AIResidentMinIdleSecond = 5.0; // The minimum duration (in seconds) that an AI controlled resident has to remain idle before he starts one of the idle actions below.
+			HumanResidentMinIdleSecond = 45.0; // The minimum duration (in seconds) that a human controlled resident has to remain idle before he starts one of the idle actions below.
+			ResidentIdleActions = map // A pool of actionNames + weights that resident can play while they idle in the building.
+			{
+				"Priest-Idle" = 1.0,
+				"Priest-Cleaning" = 0.05,
+				"Priest-Praying" = 0.4,
+			};
+
+			BuildingLevels = map
+			{
+				1 = base/PublicBuilding
+				{
+					Cost = 5000;
+					MaximumHealth = 8000;
+					NBAddons = 0;
+				};
+			};
+		};
+		
+		"School" = G3BuildingTemplate
+		{
+			EnumType = 29;
+			EnableCity = true;
+			EnableHouse = false;
+			EnableBusiness = false;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = false;
+			AllowSleeping = false;
+			SelectSound = 67; // School
+			Visuals = array { "school/school" };
+			NPCHomePriority = 3;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/NoWeatherEffects
+				{
+					Cost = 1000;
+					MaximumHealth = 3000;
+					NBAddons = 0;
+				};
+			};
+		};
+		
+		"CityHall" = G3BuildingTemplate
+		{
+			EnumType = 30;
+			EnableCity = true;
+			EnableHouse = false;
+			EnableBusiness = false;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = false;
+			AllowSleeping = false;
+			SelectSound = 98;
+			Visuals = array { "cityhall/cityhall" };
+			NPCHomePriority = 3;
+			
+			InteriorName = "Int_Townhall";
+			SpawnCharacters = array { ("lr_male_standard/receptionist", "spawnreceptionist", 415) };
+
+			AIResidentMinIdleSecond = 5.0; // The minimum duration (in seconds) that an AI controlled resident has to remain idle before he starts one of the idle actions below.
+			HumanResidentMinIdleSecond = 45.0; // The minimum duration (in seconds) that a human controlled resident has to remain idle before he starts one of the idle actions below.
+			ResidentIdleActions = map // A pool of actionNames + weights that resident can play while they idle in the building.
+			{
+				"Receptionist-Idle" = 1.0,
+				"Receptionist-Bored" = 1.0,
+				"Receptionist-Sleepy" = 0.5,
+				"Receptionist-Work" = 5.0,
+				"Towncrier-Idle" = 6.0,
+				"Towncrier-Roaming" = 0.5,
+			};
+
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/PublicBuilding
+				{
+					Cost = 0;
+					MaximumHealth = 7000;
+					NBAddons = 0;
+				};
+			};
+		};
+		
+		"port" = G3BuildingTemplate
+		{
+			EnumType = 37;
+			EnableCity = true;
+			EnableHouse = false;
+			EnableBusiness = false;
+			EnableFrontStore = true;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = false;
+			AllowSleeping = false;
+			SelectSound = 52;
+			Visuals = array { "port/port" };
+			NPCHomePriority = 3;
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/NoWeatherEffects
+				{
+					Cost = 0;
+					MaximumHealth = 3000;
+					NBAddons = 0;
+				};
+			};
+		};	
+		"execution" = G3BuildingTemplate
+		{
+			EnumType = 38;
+			EnableCity = true;
+			EnableHouse = false;
+			EnableBusiness = false;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = false;
+			AllowSleeping = false;
+			SelectSound = 105; // path vers le son inconnu, a ajouter dans SoundsDefault.oc			
+			ShouldSilentlyBlockEntry = true;
+			Visuals = array { "execution/execution" };
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/ExecutionLevel1
+				{
+					Cost = 0;
+					MaximumHealth = 3000;
+					NBAddons = 0;
+				};
+			};
+		};	
+		"cathedrale" = G3BuildingTemplate
+		{
+			EnumType = 39;
+			EnableCity = true;
+			EnableHouse = false;
+			EnableBusiness = false;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = false;
+			AllowSleeping = false;
+			SelectSound = 51;
+			Visuals = array { "cathedrale/cathedrale" };
+			NPCHomePriority = 3;
+			
+			InteriorName = "Int_Church";
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			SpawnCharacters = array { ("lr_male_fat/priest", "spawnpriest", 406) };
+
+			AIResidentMinIdleSecond = 5.0; // The minimum duration (in seconds) that an AI controlled resident has to remain idle before he starts one of the idle actions below.
+			HumanResidentMinIdleSecond = 45.0; // The minimum duration (in seconds) that a human controlled resident has to remain idle before he starts one of the idle actions below.
+			ResidentIdleActions = map // A pool of actionNames + weights that resident can play while they idle in the building.
+			{
+				"Priest-Idle" = 1.0,
+				"Priest-Cleaning" = 0.05,
+				"Priest-Praying" = 0.4,
+			};
+
+			BuildingLevels = map
+			{
+				1 = base/PublicBuilding
+				{
+					Cost = 0;
+					MaximumHealth = 8000;
+					NBAddons = 0;
+				};
+			};
+		};	
+		
+		"trademarket" = G3BuildingTemplate
+		{
+			EnumType = 40;
+			EnableCity = true;
+			EnableHouse = false;
+			EnableBusiness = false;
+			EnableFrontStore = true;
+			EnableServiceProvider = false;
+			EnableSeller = true;
+			EnableResourceProducer = false;
+			EnableDecay = false;
+			AllowSleeping = false;
+			SelectSound = 106; // path vers le son inconnu, a ajouter dans SoundsDefault.oc
+			Visuals = array { "trademarket/trademarket" };
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/MarketLevel
+				{
+					Cost = 0;
+					MaximumHealth = 3000;
+					NBAddons = 0;
+				};
+			};
+		};
+		
+		"arsenal" = G3BuildingTemplate
+		{
+			EnumType = 41;
+			EnableCity = true;
+			EnableHouse = false;
+			EnableBusiness = false;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = false;
+			AllowSleeping = false;
+			SelectSound = 81; // Arsenal
+			//SelectSound = 75; // Garrison
+			Visuals = array { "arsenal/arsenal" };
+			NPCHomePriority = 3;
+			
+			InteriorName = "Int_Arsenal";
+			
+			SpawnCharacters = array { ("lr_male_standard/moa", "spawnmoa", 1411), ("lr_male_standard/jailor", "spawnjailor", 412) };
+			
+			AIResidentMinIdleSecond = 0.0;
+			HumanResidentMinIdleSecond = 0.0;
+			ResidentIdleActions = map
+			{
+				// Be careful with resident idle actions in the arsenal!
+				// Prisoners are also allowed to partake in resident idle actions in here.
+				// The distinction between which actions they get to execute and which actions the 'true' resident(s) (like the MoA) get to do happens in the GUI data of the resident idle actions.
+				// Actions for prisoners must explicitly allow them, and actions for everyone else explicitly forbid them.
+				// If you add resident idle actions below that don't care about the prisoner state, then both residents and prisoners will execute them.
+				
+				"MoA-Idle" = 5.0,
+				"MoA-Scanning" = 1.0,
+				"MoA-WeaponCare" = 1.0,
+				"Jailor-ReactToPrisoner" = 100.0,
+				"Jailor-Bored" = 5.0,
+				"Jailor-WeaponCare" = 1.0,
+				"Prisoner-Overflow" = 1.0,
+				"Prisoner-Bored" = 1.0,
+				"Prisoner-Sit" = 1.0,
+				"Prisoner-Complain" = 0.5,
+			};
+
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			BuildingLevels = map
+			{
+				1 = base/NoWeatherEffects
+				{
+					Cost = 0;
+					MaximumHealth = 9000;
+					NBAddons = 0;
+				};
+			};
+		};
+		
+		"cologne_cathedrale" = G3BuildingTemplate
+		{
+			EnumType = 39;
+			EnableCity = true;
+			EnableHouse = false;
+			EnableBusiness = false;
+			EnableFrontStore = false;
+			EnableServiceProvider = false;
+			EnableSeller = false;
+			EnableResourceProducer = false;
+			EnableDecay = false;
+			AllowSleeping = false;
+			SelectSound = 51;
+			Visuals = array { "cologne_cathedrale/cologne_cathedrale" };
+			
+			InteriorName = "Int_Church";
+			
+			MoralAlignment = MoralAlignment
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
+
+			SpawnCharacters = array { ("lr_male_fat/priest", "spawnpriest", 406) };
+
+			AIResidentMinIdleSecond = 5.0; // The minimum duration (in seconds) that an AI controlled resident has to remain idle before he starts one of the idle actions below.
+			HumanResidentMinIdleSecond = 45.0; // The minimum duration (in seconds) that a human controlled resident has to remain idle before he starts one of the idle actions below.
+			ResidentIdleActions = map // A pool of actionNames + weights that resident can play while they idle in the building.
+			{
+				"Priest-Idle" = 1.0,
+				"Priest-Cleaning" = 0.05,
+				"Priest-Praying" = 0.4,
+			};
+			BuildingLevels = map
+			{
+				1 = base/PublicBuilding
+				{
+					Cost = 0;
+					MaximumHealth = 8000;
+					NBAddons = 0;
+				};
+			};
+		};
+	};
+};

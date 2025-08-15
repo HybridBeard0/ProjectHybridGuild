@@ -1,0 +1,20 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1484325173;
+			Name = "throwing_Pot";
+			AnimationName = "throwing_Pot";
+			Triggers = array
+			(
+				EffectTrigger
+				{
+					EffectName = "Bomb";
+					RefNodeOverride = "Dummy_Bomb";
+				},
+			);
+		},
+	);
+}

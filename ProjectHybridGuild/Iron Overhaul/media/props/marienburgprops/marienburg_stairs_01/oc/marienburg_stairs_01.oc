@@ -1,0 +1,12 @@
+marienburg_stairs_01 extends G3PropsInstance
+{
+	Walkable = true; // whenever you change the 'walkable' property of a prop, make sure to correctly move it between 'prop_packages.oo' and 'walkable_prop_packages.oo'. This ensures that all walkable props are preloaded correctly before a game starts.
+
+	static var Description = ActorDesc
+	{
+		Visual = "marienburg_stairs_01";
+	};
+	EditorName = "marienburg_stairs_01";
+	EditorIcon = "media/UserInterface/PropIcons/Kiosque01.png";
+	EditorCategory = 5;		
+}

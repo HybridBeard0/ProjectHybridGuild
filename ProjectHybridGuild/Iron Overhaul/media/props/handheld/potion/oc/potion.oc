@@ -1,0 +1,14 @@
+potion extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "potion";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+	EditorName = "Potion";
+	EditorIcon = "media/UserInterface/PropIcons/antidote.png";
+	EditorCategory = 3;		
+}

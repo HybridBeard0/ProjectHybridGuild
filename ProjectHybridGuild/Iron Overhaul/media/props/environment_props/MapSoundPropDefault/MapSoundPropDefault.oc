@@ -1,0 +1,71 @@
+MapSoundPropDefault extends MapSoundProp
+{
+	static var Description = ActorDesc
+	{
+		Visual = "";
+	};
+	
+	EditorName = "MapSoundPropDefault";
+	Destructible = false;
+	EditorCategory = 7;
+	
+	// Tags are used to define when the sound effect should be played (seasons, weather)
+	// Valid tags: "Winter", "Spring", "Summer", "Fall", "IronSky", "Rain", "Snow"
+	Tags = array { "Winter", "Spring", "Summer", "Fall", "IronSky", "Rain", "Snow"};
+	
+	// SoundEvent
+	// id      ... sound id to play (defined in sound definitions)
+	// Daytime ... 24h format, 12.5 = 12:30h, 0.5 = 00:30h
+	// OutsideVolume ... volume this should play back when camera is in outside world (default is 1.0)
+	// InsideVolume ... volume this should play back when camera is inside an interior (default is 0.2)
+	
+	// VoiceEvent
+	// id     			sound id to play (defined in sound definitions)
+	// Daytime 			24h format, 12.5 = 12:30h, 0.5 = 00:30h
+	// OutsideVolume ... volume this should play back when camera is in outside world (default is 1.0)
+	// InsideVolume ... volume this should play back when camera is inside an interior (default is 0.2)
+	// VoiceCategory	Defines in which category the voice is (-1 = none, 0 = female, 1 = male, 2 = child, 3 = guard, 4 = narrator)
+	// VoiceType		Defines the type of voice to use, only feasible for male or female (right now 0, 1, 2 are valid or -1 for random type)
+
+	Sounds = array
+	{
+		SoundEvent
+		{
+			Id = 2; // Morning cock
+			Daytime = 4.0f;
+		},
+		SoundEvent
+		{
+			Id = 36; // church bell
+			Daytime = 22.0f;
+		},
+		VoiceEvent
+		{
+			Id = 73; // nightwatch at 0 o'clock
+			Daytime = 0.0f;
+			VoiceCategory = 1;
+			VoiceType = -1;
+		},
+		VoiceEvent
+		{
+			Id = 74; // nightwatch at 1 o'clock
+			Daytime = 1.0f;
+			VoiceCategory = 1;
+			VoiceType = -1;
+		},
+		VoiceEvent
+		{
+			Id = 75; // nightwatch at 2 o'clock
+			Daytime = 2.0f;
+			VoiceCategory = 1;
+			VoiceType = -1;
+		},
+		VoiceEvent
+		{
+			Id = 76; // nightwatch at 3 o'clock
+			Daytime = 3.0f;
+			VoiceCategory = 1;
+			VoiceType = -1;
+		},
+	};
+}

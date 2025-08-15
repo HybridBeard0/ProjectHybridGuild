@@ -1,0 +1,41 @@
+GambesonMale extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = false;
+	MiddleClass = true;
+	Rich = false;
+	
+	Male = true;
+	Player = false;
+	Employee = false;
+	Profession = false;
+	
+	
+	LowResCharacter = "gambeson";
+	HighResCharacter = "gambeson";
+	
+	BodyTexturesDiff= array
+	{
+		"GambesonMale_Colors_DIFF",
+		"GambesonMale_Colors_DIFF",
+		"GambesonMale_Colors_DIFF",		
+		"GambesonMale_Colors_DIFF"			
+	};
+	BodyTexturesNorm= array
+	{
+		"GambesonMale_Colors_NORM",
+		"GambesonMale_Colors_NORM",
+		"GambesonMale_Colors_NORM",
+		"GambesonMale_Colors_NORM"
+	};
+	BodyTexturesMask= array
+	{
+		"GambesonMale_Colors_MASK",
+		"GambesonMale_Colors_MASK",
+		"GambesonMale_Colors_MASK",
+		"GambesonMale_Colors_MASK"
+	};
+}

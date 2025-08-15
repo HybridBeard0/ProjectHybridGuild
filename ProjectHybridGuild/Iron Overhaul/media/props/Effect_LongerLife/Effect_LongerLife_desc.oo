@@ -1,0 +1,14 @@
+G3ActorDesc
+{
+	Visual = "effect_longerlife";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#Effect_LongerLife/list_idles_animations,
+		);
+	};
+	AttachType = "AttachToNode";
+	AttachParentNode = "Star001";
+	CrowdControlRadius = 0.000;
+}

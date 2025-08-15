@@ -1,0 +1,10 @@
+cartLD extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "cartLD";
+	};
+	EditorName = "cartLD";
+	EditorIcon = "media/UserInterface/PropIcons/cartLD.png";
+	EditorCategory = 3;		
+}

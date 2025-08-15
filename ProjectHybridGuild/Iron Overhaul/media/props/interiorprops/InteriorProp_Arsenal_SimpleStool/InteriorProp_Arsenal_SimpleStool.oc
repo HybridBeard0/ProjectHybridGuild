@@ -1,0 +1,32 @@
+interiorprop_arsenal_simplestool extends G3PropsInstance
+{
+	static var Description = G3PropDesc
+	{
+		Visual = "interiorprop_simplestool";
+
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc
+				{
+					Name = "sit00";
+					Position = ( 0.0, -25.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Animation = "sit_bench1";
+							Context = "SitOnBench";
+						},
+					};
+				},
+			};
+		};
+	};
+	
+	Interactable = true;
+	
+	EditorName = "InteriorProp SimpleStool";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}
