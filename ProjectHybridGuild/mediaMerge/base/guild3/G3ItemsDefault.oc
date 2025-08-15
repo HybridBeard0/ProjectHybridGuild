@@ -2094,7 +2094,6 @@ G3ItemsDefault extends G3ItemsContainer
 		@base/Tier6Products
 		@base/Tier7Products
 		@base/EventItems
-		@base/Vault
 // *** EggMod --> ***
 		@base/EggModItems
 // *** <-- EggMod ***
