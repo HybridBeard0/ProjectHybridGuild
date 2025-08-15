@@ -1,0 +1,10 @@
+balbulus_statue extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "lordbalbulus";
+	};
+	EditorName = "Statue_Balbulus";
+	EditorIcon = "media/UserInterface/PropIcons/balbulus.png";
+	EditorCategory = 3;		
+}
