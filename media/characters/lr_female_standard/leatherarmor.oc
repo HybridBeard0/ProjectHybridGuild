@@ -1,5 +1,0 @@
-leatherarmor extends G3Character
-{
-	static var Description = #lr_female_standard/leatherarmor_desc;
-
-};
