@@ -1,5 +1,0 @@
-boat_02 extends G3Character
-{
-	static var Description = #boat_02/boat_02_desc;
-
-};

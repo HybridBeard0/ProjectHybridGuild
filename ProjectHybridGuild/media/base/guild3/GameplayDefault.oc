@@ -1061,6 +1061,9 @@ GameplayDefault extends GameplayElements
 						"TrainPerception",
 						"TrainCharisma",
 						//"MakePeaceBetweenEnemies",
+						"UseMatchmaker",
+						"ActivateForRent",
+						"DeactivateForRent",
 					//AI only
 						"AISellItem",
 						"BuyBusiness",
@@ -1184,6 +1187,7 @@ GameplayDefault extends GameplayElements
 						"FriedChicken",
 						"Egg"
 // *** <-- EggMod ***
+						"FlowerBouqet"
 					};
 				},
 				

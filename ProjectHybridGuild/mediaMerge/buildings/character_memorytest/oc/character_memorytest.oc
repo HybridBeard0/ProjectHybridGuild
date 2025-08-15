@@ -1,7 +1,0 @@
-character_memorytest extends Building
-{
-	static var Description = ActorDesc
-	{
-		Visual = "character_memorytest";
-	};
-}

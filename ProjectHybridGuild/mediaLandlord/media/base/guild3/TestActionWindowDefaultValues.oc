@@ -1,6 +1,0 @@
-TestActionWindowDefaultValues extends TestActionWindowDefaultValue
-{
-    AnimName = "throwing_bomb";
-    PropName = "bomb/bomb";
-    PropAnimName = "throwing_bomb";
-};

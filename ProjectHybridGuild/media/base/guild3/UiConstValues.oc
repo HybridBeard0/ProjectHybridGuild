@@ -240,9 +240,15 @@ UiConstValues extends UiConstants
 			Id = "CookedBooks";
 			Hidden = true;
 		},
+		ActorValueDefinition
+		{
+			Id = "Guests";
+			Classes = array{ "Building" };
+			Hidden = true;
+		},
 	};
 
-	PositiveDisplayEffects = array{"perfume", "buffed", "pregnant", "protected", "catholic", "protestant", "guild-alchimists", "guild-craftsmenguild", "guild-merchantguild", "guild-freemasons", "guild-thieves"};
+	PositiveDisplayEffects = array{"perfume", "buffed", "pregnant", "protected", "catholic", "protestant", "guild-alchimists", "guild-craftsmenguild", "guild-merchantguild", "guild-freemasons", "guild-thieves", "forrent"};
 	
 	PlaqueFarClippingDistanceSquared = 10000000.0; // distance (squared) at which plaques stop to be visible
 	
@@ -327,7 +333,10 @@ UiConstValues extends UiConstants
 			Politics,
 			Production,
 			//Rumors,
-			Trade
+			Trade,
+
+// ForRent CHANGE
+			Hospitality
 		};
 		
 		// The background color for neutral message icons

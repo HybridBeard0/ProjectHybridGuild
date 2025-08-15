@@ -750,12 +750,17 @@ G3ActionsDefault extends G3ActionsContainer
 			ShowSelectionPrompt = "UseTargetProfile";
 			SelectionPromptCallToAction = "$selectionPrompt.SelectResidence";
 			SelectionPromptNoTargetMessage = "$selectionPrompt.NoResidence";
-			
+
+// ForRent CHANGE			
+			TargetTags = array{"ForRent"};
 			DesiredProfiles = array
 			{
 				// Family members or employee
 				TargetProfileBuilding
-				{					
+				{
+// ForRent CHANGE
+					MatchTargetTags = -3;
+
 					ExcludedTypes = array{"Statue", "Stage"};
 					CloseToActor = 2;
 					Burning = -3;
@@ -775,6 +780,9 @@ G3ActionsDefault extends G3ActionsContainer
 				// Family members or employee
 				TargetProfileBuilding
 				{					
+// ForRent CHANGE
+					MatchTargetTags = -3;
+
 					ExcludedTypes = array{"Statue", "Stage"};
 					CloseToActor = 2;
 					Burning = -3;
@@ -792,6 +800,9 @@ G3ActionsDefault extends G3ActionsContainer
 				// Employee
 				TargetProfileBuilding 
 				{					
+// ForRent CHANGE
+					MatchTargetTags = -3;
+
 					ExcludedTypes = array{"Statue", "Stage"};
 					CloseToActor = 2;
 					Burning = -3;
@@ -808,6 +819,9 @@ G3ActionsDefault extends G3ActionsContainer
 				// Resource producer Employee
 				TargetProfileBuilding 
 				{					
+// ForRent CHANGE
+					MatchTargetTags = -3;
+
 					ExcludedTypes = array{"Statue", "Stage"};
 					CloseToActor = 2;
 					Burning = -3;
@@ -933,12 +947,18 @@ G3ActionsDefault extends G3ActionsContainer
 			ShowSelectionPrompt = "UseTargetProfile";
 			SelectionPromptCallToAction = "$selectionPrompt.SelectResidence";
 			SelectionPromptNoTargetMessage = "$selectionPrompt.NoResidence";
+
+// ForRent CHANGE
+			TargetTags = array{"ForRent"};
 			
 			DesiredProfiles = array
 			{
 				// Family members or employee
 				TargetProfileBuilding
 				{					
+// ForRent CHANGE
+					MatchTargetTags = -3;
+
 					CloseToActor = 2;
 					Burning = -3;
 					Business = -3;
@@ -954,6 +974,9 @@ G3ActionsDefault extends G3ActionsContainer
 				// Employee
 				TargetProfileBuilding 
 				{					
+// ForRent CHANGE
+					MatchTargetTags = -3;
+
 					CloseToActor = 2;
 					Burning = -3;
 					Business = 3;
@@ -1275,6 +1298,16 @@ G3ActionsDefault extends G3ActionsContainer
 			CanBeCancelled = false;
 			EnterBuilding = "TryEnter";
 
+// ForRent CHANGE
+			SuccessResult = array
+			{
+				FunctionRemoveEffect
+				{
+					ApplyTo = "Source";
+					MatchAny = true;
+					Tags = array { "ForRent" };
+				},
+			};
 		};
 		
 		"RepairBuilding" = G3ActionTemplate //RepairBuilding
@@ -9019,6 +9052,7 @@ G3ActionsDefault extends G3ActionsContainer
 			InteractionPriority = 0;
 			ShowCombatText = false;
 			CanFail = false;
+
 			EnterBuilding = "TryEnter";
 
 			CriticalFactor = 1.0;
@@ -9040,7 +9074,7 @@ G3ActionsDefault extends G3ActionsContainer
 			ActionClassName = "SleepAction";
 			GUIPresent = false;
 			CanFail = false;
-			
+				
 			DesiredProfiles = array
 			{
 				TargetProfileBuilding
@@ -12999,8 +13033,6 @@ G3ActionsDefault extends G3ActionsContainer
 		@base/ArsenalLifeActions
 		@base/TownhallLifeActions
 		@base/TrialActions
-// *** EggMod --> ***
-		@base/EggModActions
-// *** <-- EggMod ***
+		@base/ModdedActions
 	};
 };

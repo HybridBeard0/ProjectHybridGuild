@@ -57439,5 +57439,211 @@ LocDirectData
 			Key = "$callToAction.CharacterDynastyMember";
 			Text = "Select a family member or one of your employees.";
 		},
+// *** Landlord_Mod ***
+
+		LocDirectEntry
+		{
+			Key = "$MakePeaceBetweenEnemies";
+			Text = "Make peace between enemies";
+		},
+		LocDirectEntry
+		{
+			Key = "$MakePeaceBetweenEnemiesDesc";
+			Text = "When the great dynasties of your fiefdom feud, it endangers the economy. As ruler of the land, it is your duty to ensure peace between the great dynasties. So talk to a member of one of the warring dynasties and make it clear to the person how important you think it is that the dispute with another dynasty is settled...";
+		},
+		LocDirectEntry
+		{
+			Key = "$notification.MakePeaceBetweenEnemiesSource.Head";
+			Text = "You restored peace!";
+		},
+		LocDirectEntry
+		{
+			Key = "$notification.MakePeaceBetweenEnemiesSource.Body";
+			Text = "%CharacterTarget% has met with a member of the %ThirdPartySocialGroup% dynasty at your urgent request to resolve the dispute.";
+		},
+		LocDirectEntry
+		{
+			Key = "$notification.MakePeaceBetweenEnemiesTarget1.Head";
+			Text = "Peace with another dynasty";
+		},
+		LocDirectEntry
+		{
+			Key = "$notification.MakePeaceBetweenEnemiesTarget1.Body";
+			Text = "Sovereign %CharacterSource% has had an intense conversation with %CharacterTarget%. %CharacterTarget% then met with a member of the %ThirdPartySocialGroup% dynasty and settled the dispute between your families.";
+		},
+		LocDirectEntry
+		{
+			Key = "$notification.MakePeaceBetweenEnemiesTarget1.Body.femaleSovereign";
+			Text = "Sovereign %CharacterSource% has had an intense conversation with %CharacterTarget%. %CharacterTarget% then met with a member of the %ThirdPartySocialGroup% dynasty and settled the dispute between your families.";
+		},
+		LocDirectEntry
+		{
+			Key = "$notification.MakePeaceBetweenEnemiesTarget2.Head";
+			Text = "Peace with another dynasty";
+		},
+		LocDirectEntry
+		{
+			Key = "$notification.MakePeaceBetweenEnemiesTarget2.Body";
+			Text = "At the request of Sovereign %CharacterSource%, %CharacterTarget% met with a member of your dynasty and settled the dispute between your families.";
+		},
+		LocDirectEntry
+		{
+			Key = "$notification.MakePeaceBetweenEnemiesTarget2.Body.femaleSovereign";
+			Text = "At the request of Sovereign %CharacterSource%, %CharacterTarget% met with a member of your dynasty and settled the dispute between your families.";
+		},
+
+		LocDirectEntry
+		{
+			Key = "$SparkAFeud";
+			Text = "Spark a feud";
+		},
+		LocDirectEntry
+		{
+			Key = "$SparkAFeudDesc";
+			Text = "You rule the land and the people who live in it. But sometimes you need to remind the great dynasties who's in charge here! When a dynasty has gotten too bold, then you should to plot against them. Simply whisper something to a member of a third dynasty and pit both dynasties against each other.";
+		},
+		LocDirectEntry
+		{
+			Key = "$notification.SparkAFeudSource.Head";
+			Text = "You have set two dynasties against each other!";
+		},
+		LocDirectEntry
+		{
+			Key = "$notification.SparkAFeudSource.Body";
+			Text = "%CharacterTarget% has thrown down the gauntlet to the %ThirdPartySocialGroup% dynasty. You can now sit back and enjoy the fruits of your intrigue.";
+		},
+		LocDirectEntry
+		{
+			Key = "$notification.SparkAFeudTarget1.Head";
+			Text = "You have thrown down the gauntlet!";
+		},
+		LocDirectEntry
+		{
+			Key = "$notification.SparkAFeudTarget1.Body";
+			Text = "Sovereign %CharacterSource% has leaked information about underhanded machinations of the %ThirdPartySocialGroup% dynasty against you. %CharacterTarget% then threw down the gauntlet to the %ThirdPartySocialGroup% dynasty.";
+		},
+		LocDirectEntry
+		{
+			Key = "$notification.SparkAFeudTarget1.Body.femaleSovereign";
+			Text = "Sovereign %CharacterSource% has leaked information about underhanded machinations of the %ThirdPartySocialGroup% dynasty against you. %CharacterTarget% then threw down the gauntlet to the %ThirdPartySocialGroup% dynasty.";
+		},
+		LocDirectEntry
+		{
+			Key = "$notification.SparkAFeudTarget2.Head";
+			Text = "You have been the victim of slander!";
+		},
+		LocDirectEntry
+		{
+			Key = "$notification.SparkAFeudTarget2.Body";
+			Text = "%CharacterTarget% has thrown down the gauntlet in front of you for no reason. You are sure that Sovereign %CharacterSource% had a hand in this...";
+		},
+		LocDirectEntry
+		{
+			Key = "$notification.SparkAFeudTarget2.Body.femaleSovereign";
+			Text = "%CharacterTarget% has thrown down the gauntlet in front of you for no reason. You are sure that Sovereign %CharacterSource% had a hand in this...";
+		},
+
+		LocDirectEntry
+		{
+			Key = "$action.UseMatchmaker";
+			Text = "Hire a matchmaker";
+		},
+		LocDirectEntry
+		{
+			Key = "$action.UseMatchmakerDesc";
+			Text = "Romance is a luxury that you can't or don't want to afford, at least at the moment? Well, if you have the wherewithal, you can hire a matchmaker to negotiate with the future bride or groom on your behalf. All you have to do then is speak to the person you have chosen. Then the matchmaker takes over. Bear in mind that depending on the status of your future spouse, you will still have to use some of your influence.";
+		},
+		LocDirectEntry
+		{
+			Key = "$notification.UseMatchmaker.Head";
+			Text = "Message from the matchmaker";
+		},
+		LocDirectEntry
+		{
+			Key = "$notification.UseMatchmaker.Body";
+			Text = "Your wooing through the matchmaker was successful. May %CharacterSource% and %CharacterTarget% live long and have many children!";
+		},
+
+// ForRent CHANGE
+		LocDirectEntry
+		{
+			Key = "$action.ActivateForRent";
+			Text = "Rent out a house";
+		},
+		LocDirectEntry
+		{
+			Key = "$action.ActivateForRentDesc";
+			Text = "You place a 'For Rent!' sign on one of your houses that you don't live in yourself. The higher the value of the house, the more coins you will receive as rent. And of course, richer tenants pay more than poorer ones. Also keep in mind that a small Cottage has fewer sleeping berths than a large Mansion.";
+		},
+		LocDirectEntry
+		{
+			Key = "$selectionPrompt.ActivateForRent";
+			Text = "Select one of your unused residences.";
+		},
+		LocDirectEntry
+		{
+			Key = "$action.DeactivateForRent";
+			Text = "No more renting";
+		},
+		LocDirectEntry
+		{
+			Key = "$action.DeactivateForRentDesc";
+			Text = "You remove the 'For Rent!' sign from one of your houses.";
+		},
+		LocDirectEntry
+		{
+			Key = "$selectionPrompt.DeactivateForRent";
+			Text = "Select one of your residential buildings that you are currently renting out.";
+		},
+		LocDirectEntry
+		{
+			Key = "$statusEffect.forrent";
+			Text = "For Rent!";
+		},
+		LocDirectEntry
+		{
+			Key = "$ForRentActivated3";
+			Text = "This living house can accommodate 3 tenants.";
+		},
+		LocDirectEntry
+		{
+			Key = "$ForRentActivated5";
+			Text = "This living house can accommodate 5 tenants.";
+		},
+		LocDirectEntry
+		{
+			Key = "$ForRentActivated8";
+			Text = "This living house can accommodate 8 tenants.";
+		},
+		LocDirectEntry
+		{
+			Key = "$ForRentActivated12";
+			Text = "This living house can accommodate 12 tenants.";
+		},
+		LocDirectEntry
+		{
+			Key = "$feedback.EffectAppliedforrent";
+			Text = "For Rent!";
+		},
+		LocDirectEntry
+		{
+			Key = "$feedback.EffectHealedforrent";
+			Text = "Is no longer rented";
+		},
+		LocDirectEntry
+		{
+			Key = "$ui.messageCategory.Hospitality";
+			Text = "Rentals";
+		},
+		LocDirectEntry
+		{
+			Key = "$notification.ForRent-NPCStayedTheNight.Head";
+			Text = "Someone pays the rent";
+		},
+		LocDirectEntry
+		{
+			Key = "$notification.ForRent-NPCStayedTheNight.Body";
+			Text = "%Character Source% paid the rent for the sleeping berth in the %Building Target%.";
+		},
 	);
 };
