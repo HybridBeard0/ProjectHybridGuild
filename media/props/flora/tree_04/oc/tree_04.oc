@@ -1,0 +1,11 @@
+tree_04 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "tree_04";
+	};
+	EditorName = "Tree04";
+	EditorIcon = "media/UserInterface/PropIcons/Tree04.png";
+	EditorCategory = 0;
+	SnapGround = true;	
+}
