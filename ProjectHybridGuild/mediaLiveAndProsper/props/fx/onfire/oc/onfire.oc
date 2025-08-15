@@ -1,7 +1,0 @@
-onfire extends G3PropsInstance
-{
-	static var Description = ActorDesc
-	{
-		Visual = "onfire";
-	};
-}
