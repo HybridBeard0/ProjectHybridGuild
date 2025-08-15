@@ -1,0 +1,16 @@
+base/standardg3characterdesc
+{
+	Visual = "chicken";
+	WalkSpeed = 20;
+	TrotSpeed = 87.5;//50
+	RunSpeed = 250;
+	
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#chicken/list_idles_animations,
+			#chicken/list_walks_animations,
+		);
+	};
+}
