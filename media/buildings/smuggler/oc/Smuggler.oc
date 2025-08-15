@@ -1,0 +1,646 @@
+smuggler extends Building
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "smuggler";
+		AnimationArray = AnimationListArray
+		{
+			AnimationLists = array
+			(
+				#smuggler/smuggler_idles_animations,
+			);
+		};
+		
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc {
+					Name = "streetconnection";
+					Position = ( -103.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "enter";
+					Position = ( -103.0, 80.0, 30.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+				},
+				SnapPointDesc {
+					Name = "exit";
+					Position = ( -103.0, 80.0, 30.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+
+				SnapPointDesc {
+					Name = "master01";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Master"; // actions: OverseeWorkers, WhipTransporters, MotivateWorkers, Smear, Commend
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "master02";
+					Position = ( 160.0, 120.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 195.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Master"; // actions: OverseeWorkers, WhipTransporters, MotivateWorkers, Smear, Commend
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "master03";
+					Position = ( 200.0, 250.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 270.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Master"; // actions: OverseeWorkers, WhipTransporters, MotivateWorkers, Smear, Commend
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "artefact01";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Artefact"; // actions: ApplyPowderOfHygeia, UsePestAway, UseStrongDoorLatch, ApplyMuralPainting, ApplySlateTile, FreemasonsGift
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "artefact02";
+					Position = ( -265.0, 420.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 50.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Artefact"; // actions: ApplyPowderOfHygeia, UsePestAway, UseStrongDoorLatch, ApplyMuralPainting, ApplySlateTile, FreemasonsGift
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "artefact03";
+					Position = ( 55.0, 580.0, 0.0 );
+					Rotation = ( 0.0, 0.0, -30.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Artefact"; // actions: ApplyPowderOfHygeia, UsePestAway, UseStrongDoorLatch, ApplyMuralPainting, ApplySlateTile, FreemasonsGift
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "intruder01";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Intruder"; // actions: AuditBooks, Vandalize, CatchRats, RaidTheKitchens, Sabotage
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "intruder02";
+					Position = ( -265.0, 235.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 140.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Intruder"; // actions: AuditBooks, Vandalize, CatchRats, RaidTheKitchens, Sabotage
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "raid01";
+					Position = ( 230.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Intruder"; // actions: AuditBooks, Vandalize, CatchRats, RaidTheKitchens, Sabotage
+						},
+					};
+				},
+
+				SnapPointDesc
+				{
+					Name = "CollectProtectionMoney";
+					Position = ( 230.0, 20.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 240.0 );
+				},
+				
+				SnapPointDesc
+				{
+					Name = "frontstore00";
+					Position = ( 110.0, 150.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 270.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "shopping";
+							Animation = "LookAtObject";
+							Prop = "jug/jug";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "shopping";
+							Animation = "talk1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "frontstore01";
+					Position = ( 110.0, 190.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 270.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "shopping";
+							Animation = "LookAtObject";
+							Prop = "jug/jug";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "shopping";
+							Animation = "talk1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "frontstore02";
+					Position = ( 110.0, 230.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 220.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "shopping";
+							Animation = "LookAtObject";
+							Prop = "jug/jug";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "shopping";
+							Animation = "talk1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee00";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee01";
+					Position = ( -250.0, 50.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 57.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee02";
+					Position = ( -260.0, 167.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 30.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee03";
+					Position = ( 180.0, 440.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee04";
+					Position = ( 100.0, 570.0, 0.0 );
+					Rotation = ( 0.0, 0.0, -30.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee05";
+					Position = ( -250.0, 550.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 17.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+					};
+				},
+
+	// -------- service employees
+				SnapPointDesc
+				{
+					Name = "service01";
+					Position = ( 50.0, 30.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "SpeakeasyService";
+							Animation = "talk1";
+							Prop = "jug/jug";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "service02";
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "SpeakeasyService";
+							Animation = "talk1";
+							Prop = "jug/jug";
+						},
+					};
+				},
+
+	// -------- customers
+				SnapPointDesc
+				{
+					Name = "customer01";
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "GetSpeakeasyService";
+							Animation = "inn_beerdrinking_01";
+							Prop = "rumbeaker/rumbeaker";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "GetSpeakeasyService";
+							Animation = "inn_beerdrinking_01";
+							Prop = "rumbeaker/rumbeaker";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "customer02";
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "GetSpeakeasyService";
+							Animation = "inn_beerdrinking_01";
+							Prop = "rumbeaker/rumbeaker";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "GetSpeakeasyService";
+							Animation = "inn_beerdrinking_01";
+							Prop = "rumbeaker/rumbeaker";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "customer03";
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "GetSpeakeasyService";
+							Animation = "inn_beerdrinking_01";
+							Prop = "rumbeaker/rumbeaker";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "GetSpeakeasyService";
+							Animation = "inn_beerdrinking_01";
+							Prop = "rumbeaker/rumbeaker";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "customer04";
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "GetSpeakeasyService";
+							Animation = "inn_beerdrinking_01";
+							Prop = "rumbeaker/rumbeaker";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "GetSpeakeasyService";
+							Animation = "inn_beerdrinking_01";
+							Prop = "rumbeaker/rumbeaker";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "customer05";
+					Level = 3;
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "GetSpeakeasyService";
+							Animation = "inn_beerdrinking_01";
+							Prop = "rumbeaker/rumbeaker";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "GetSpeakeasyService";
+							Animation = "inn_beerdrinking_01";
+							Prop = "rumbeaker/rumbeaker";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "customer06";
+					Level = 3;
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "GetSpeakeasyService";
+							Animation = "inn_beerdrinking_01";
+							Prop = "rumbeaker/rumbeaker";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "GetSpeakeasyService";
+							Animation = "inn_beerdrinking_01";
+							Prop = "rumbeaker/rumbeaker";
+						},
+					};
+				},
+	// -------- customers waiting to be serviced
+				SnapPointDesc
+				{
+					Name = "waiting01";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "customerWait";
+							Animation = "waiting_in_line1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "customerWait";
+							Animation = "waiting_in_line3";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "waiting02";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "customerWait";
+							Animation = "waiting_in_line2";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "customerWait";
+							Animation = "listen1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "waiting03";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "customerWait";
+							Animation = "waiting_in_line1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "customerWait";
+							Animation = "GuardBuilding1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "waiting04";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "customerWait";
+							Animation = "waiting_in_line1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "customerWait";
+							Animation = "scholar1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "waiting05";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "customerWait";
+							Animation = "waiting_in_line1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "customerWait";
+							Animation = "waiting_in_line3";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "waiting06";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "customerWait";
+							Animation = "waiting_in_line2";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "customerWait";
+							Animation = "listen1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "waiting07";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "customerWait";
+							Animation = "waiting_in_line1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "customerWait";
+							Animation = "GuardBuilding1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "waiting08";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "customerWait";
+							Animation = "waiting_in_line1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "customerWait";
+							Animation = "scholar1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "waiting09";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "customerWait";
+							Animation = "waiting_in_line1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "customerWait";
+							Animation = "waiting_in_line3";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "waiting10";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "customerWait";
+							Animation = "waiting_in_line2";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "customerWait";
+							Animation = "listen1";
+						},
+					};
+				},
+			};
+		};
+	};
+	
+	EditorName = "Smuggler";
+	EditorIcon = "media/UserInterface/Icons/BuildingImages/Businesses/Smuggler1.png";
+	EditorCategory = 1;
+}
