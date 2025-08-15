@@ -1,0 +1,18 @@
+ResourcePackageNames
+{
+	Names = array
+	{
+		"birds",
+		"bulls",
+		"cat",
+		"chicken",
+		"deer",
+		"donkey",
+		"horses",
+		"rat",
+		"dog1",
+		"dog2",
+		"dog3",
+		"pig1"
+	};
+}

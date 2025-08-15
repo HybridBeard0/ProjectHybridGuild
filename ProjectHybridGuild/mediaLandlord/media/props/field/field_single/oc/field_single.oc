@@ -1,0 +1,10 @@
+field_single extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "field_single";
+	};
+	EditorName = "Field Single";
+	EditorIcon = "media/UserInterface/PropIcons/field_single.png";
+	EditorCategory = 3;		
+}

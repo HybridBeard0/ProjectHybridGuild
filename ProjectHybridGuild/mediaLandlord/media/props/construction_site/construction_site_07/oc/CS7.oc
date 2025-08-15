@@ -1,0 +1,10 @@
+CS7 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "CS7";
+	};
+	EditorName = "CS7";
+	EditorIcon = "media/UserInterface/PropIcons/CS7.png";
+	EditorCategory = 4;		
+}

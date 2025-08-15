@@ -1,0 +1,483 @@
+Mine extends Building
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "mine";
+		
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc {
+					Name = "streetconnection";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "enter";
+					Position = ( -510.0, 520.0, 15.0 );
+					Rotation = ( 0.0, 0.0, 245.0 );
+				},
+				SnapPointDesc {
+					Name = "exit";
+					Position = ( -510.0, 520.0, 15.0 );
+					Rotation = ( 0.0, 0.0, 65.0 );
+				},
+				SnapPointDesc
+				{
+					Name = "employee00";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "artisan1";
+							Repeat = 2;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee01";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "pickaxe";
+							Prop = "pickaxe/pickaxe";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "WipeForehead";
+							Prop = "pickaxe/pickaxe";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "pickaxe";
+							Prop = "pickaxe/pickaxe";
+							Repeat = 2;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee02";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation {
+							Context = "work";
+							Animation = "ManipulateMiddle";
+						},
+						G3SnapPointAnimation {
+							Context = "work";
+							Animation = "ManipulateMiddle2";
+							Repeat = 2;
+						},
+						G3SnapPointAnimation {
+							Context = "work";
+							Animation = "ManipulateMiddle";
+							Repeat = 2;
+						},
+						G3SnapPointAnimation {
+							Context = "work";
+							Animation = "WipeForehead";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee03";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee04";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation {
+							Context = "work";
+							Animation = "ManipulateMiddle";
+						},
+						G3SnapPointAnimation {
+							Context = "work";
+							Animation = "ManipulateMiddle2";
+							Repeat = 2;
+						},
+						G3SnapPointAnimation {
+							Context = "work";
+							Animation = "ManipulateMiddle";
+							Repeat = 2;
+						},
+						G3SnapPointAnimation {
+							Context = "work";
+							Animation = "WipeForehead";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee05";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "pickaxe";
+							Prop = "pickaxe/pickaxe";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "WipeForehead";
+							Prop = "pickaxe/pickaxe";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "pickaxe";
+							Prop = "pickaxe/pickaxe";
+							Repeat = 2;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee06";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "CrouchFadeIn";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "reap_herbs1";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "CrouchFadeOut";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee07";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee08";
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "digging1";
+							Prop = "shovel/shovel";
+							Repeat = 3;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee09";
+					Position = ( 70.0, 520.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 90.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "pickaxe";
+							Prop = "pickaxe/pickaxe";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "WipeForehead";
+							Prop = "pickaxe/pickaxe";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "pickaxe";
+							Prop = "pickaxe/pickaxe";
+							Repeat = 2;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee10";
+					Position = ( -438.0, 360.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 290.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "pickaxe";
+							Prop = "pickaxe/pickaxe";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "WipeForehead";
+							Prop = "pickaxe/pickaxe";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "pickaxe";
+							Prop = "pickaxe/pickaxe";
+							Repeat = 2;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee11";
+					Position = ( -380.0, 445.0, -10.0 );
+					Rotation = ( 0.0, 0.0, 63.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation {
+							Context = "work";
+							Animation = "SitFadeIn";
+						},
+						G3SnapPointAnimation {
+							Context = "work";
+							Animation = "SitBinding";
+							Repeat = 4;
+						},
+						G3SnapPointAnimation {
+							Context = "work";
+							Animation = "SitFadeOut";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee12";
+					Position = ( -438.0, 320.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 290.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "packing_stone";
+							Repeat = 2;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "WipeForehead";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "packing_stone";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee13";
+					Position = ( -10.0, 440.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 250.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "packing_stone";
+							Repeat = 2;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "WipeForehead";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "packing_stone";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee14";
+					Position = ( -270.0, 880.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "pickaxe";
+							Prop = "pickaxe/pickaxe";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "WipeForehead";
+							Prop = "pickaxe/pickaxe";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "pickaxe";
+							Prop = "pickaxe/pickaxe";
+							Repeat = 2;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee15";
+					Position = ( -280.0, 233.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 178.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+							Repeat = 2;
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+					};
+				},
+			};
+		};
+	};
+	
+	EditorName = "Mine";
+	EditorIcon = "media/UserInterface/Icons/BuildingImages/Other/Mine.png";
+	EditorCategory = 3;		
+}

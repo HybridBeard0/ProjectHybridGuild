@@ -1,0 +1,114 @@
+MedicusLevel1 extends G3BuildingTemplateLevel
+{
+    NBAddons = 14;
+
+	Results = array 
+	{
+		TagEffect
+		{
+			Tags = array{"IsHighTier", "Medicus"};
+		},
+		ForwardEffect
+		{
+			ApplyTo = "Source";
+			Relation = "Self";
+			ResultObjectId = "DiseaseImmunityWorker";
+		},
+		ModifierEffect
+		{
+			ActorValue = "Productivity";
+			Mod = 0.1;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "MaxEmployees";
+			Mod = 2.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "MaxTransporters";
+			Mod = 1.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "StorageSlots";
+			Mod = 12.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "StorageSpace";
+			Mod = 60.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "FrontStoreSlots";
+			Mod = 4.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "FrontStoreSpace";
+			Mod = 60.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "FireProtection";
+			Mod = 1.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "BuildingSecurity";
+			Mod = 1.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "Attractiveness";
+			Mod = 10.0;
+			Recover = true;
+		};
+		// *** INITIAL STOCK ***
+		FunctionTransferItems
+		{
+			Receiver = "Target";
+			SpecificItems = array { "Cloth" };
+			MinAmount = 2;
+			MaxAmount = 2;
+		};
+		FunctionTransferItems
+		{
+			Receiver = "Target";
+			SpecificItems = array { "Wool" };
+			MinAmount = 4;
+			MaxAmount = 4;
+		};
+		FunctionTransferItems
+		{
+			Receiver = "Target";
+			SpecificItems = array { "PlantEssence" };
+			MinAmount = 2;
+			MaxAmount = 2;
+		};
+		FunctionTransferItems
+		{
+			Receiver = "Target";
+			SpecificItems = array { "SwampRoot" };
+			MinAmount = 2;
+			MaxAmount = 2;
+		};
+		FunctionTransferItems
+		{
+			Receiver = "Target";
+			SpecificItems = array { "Honey" };
+			MinAmount = 2;
+			MaxAmount = 2;
+		};
+	};
+};

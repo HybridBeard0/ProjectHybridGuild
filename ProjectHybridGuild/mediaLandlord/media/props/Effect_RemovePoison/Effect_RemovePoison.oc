@@ -1,0 +1,4 @@
+Effect_RemovePoison extends G3PropsInstance
+{
+	static var Description = #Effect_RemovePoison/Effect_RemovePoison_desc;
+};

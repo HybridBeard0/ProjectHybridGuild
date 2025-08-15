@@ -1,0 +1,10 @@
+cemetary_abandoned extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "cemetary_abandoned";
+	};
+	EditorName = "Cemetaryabandoned";
+	EditorIcon = "media/UserInterface/PropIcons/Cemetaryabandoned.png";
+	EditorCategory = 3;		
+}

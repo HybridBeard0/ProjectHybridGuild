@@ -1,0 +1,10 @@
+CS9 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "CS9";
+	};
+	EditorName = "CS9";
+	EditorIcon = "media/UserInterface/PropIcons/CS9.png";
+	EditorCategory = 4;		
+}

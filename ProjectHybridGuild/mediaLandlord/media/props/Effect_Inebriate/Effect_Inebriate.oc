@@ -1,0 +1,4 @@
+Effect_Inebriate extends G3PropsInstance
+{
+	static var Description = #Effect_Inebriate/Effect_Inebriate_desc;
+};

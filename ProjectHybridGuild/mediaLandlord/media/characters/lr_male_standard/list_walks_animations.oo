@@ -1,0 +1,387 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1427913890;
+			Name = "backwalk1";
+			AnimationName = "backwalk1";
+		},
+		AnimationDesc
+		{
+			ID = 1435934213;
+			Name = "cart_walk1";
+			AnimationName = "cart_walk1";
+			Looping = true;
+			Speed = 2.000;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 23;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 43;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1479827504;
+			Name = "drunk_walk1";
+			AnimationName = "drunk_walk1";
+			Motion = 80.000;
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 41;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 81;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 120;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 163;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1475257424;
+			Name = "EscortCharacter";
+			AnimationName = "walk1";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 7;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 21;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1472152852;
+			Name = "sadwalk1";
+			AnimationName = "sadwalk1";
+			Motion = 40.000;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 22;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 41;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1474482317;
+			Name = "suspicious_walk";
+			AnimationName = "suspicious_walk";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 29;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 59;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 87;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 123;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 147;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 180;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 208;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 240;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1427902937;
+			Name = "walk1";
+			AnimationName = "walk1";
+			Motion = 60.000;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 7;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 21;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1427902938;
+			Name = "walk_armor";
+			AnimationName = "walk1";
+			Motion = 60.000;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 7;
+					SoundEvent = 1202;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 21;
+					SoundEvent = 1202;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1480521433;
+			Name = "walk1_torch";
+			AnimationName = "walk1_torch";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 4;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 18;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1427902944;
+			Name = "walk2";
+			AnimationName = "walk2";
+			Motion = 65.000;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 2;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 32;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1427902951;
+			Name = "walk3";
+			AnimationName = "walk3";
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 2;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 32;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1427902956;
+			Name = "walk4";
+			AnimationName = "walk4";
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 2;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 32;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1483479382;
+			Name = "walk_torch";
+			AnimationName = "walk_torch";
+			Looping = true;
+			Motion = 60.000;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 4;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 18;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1482337648;
+			Name = "walk_walkstick";
+			AnimationName = "walk_walkstick";
+			Motion = 65.000;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 2;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 19;
+					SoundEvent = 1201;
+					FadeStart = 50.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+	);
+}

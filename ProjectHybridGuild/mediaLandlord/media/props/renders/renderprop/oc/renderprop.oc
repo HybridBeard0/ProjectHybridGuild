@@ -1,0 +1,9 @@
+renderprop extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "renderprop";
+	};
+	EditorName = "renderprop";
+	EditorIcon = "media/UserInterface/PropIcons/renderprop.png";
+}

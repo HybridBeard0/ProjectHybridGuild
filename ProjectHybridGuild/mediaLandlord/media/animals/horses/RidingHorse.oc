@@ -1,0 +1,5 @@
+RidingHorse extends G3Actor
+{
+	static var Description = #horses/RidingHorse_desc;
+	EditorName = "RidingHorse";
+};

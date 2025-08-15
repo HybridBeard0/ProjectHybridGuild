@@ -1,0 +1,14 @@
+shadowdagger extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "shadowdagger";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+	EditorName = "ShadowDagger";
+	EditorIcon = "media/UserInterface/GameItems/Large/ShadowDagger.png";
+	EditorCategory = 3;		
+}

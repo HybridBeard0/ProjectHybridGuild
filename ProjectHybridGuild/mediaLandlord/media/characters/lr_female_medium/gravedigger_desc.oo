@@ -1,0 +1,13 @@
+lr_female_medium/lr_female_medium_desc
+{
+	Visual = "gravedigger_female_game";
+
+	Poor = true;
+	MiddleClass = false;
+	Rich = false;
+	Male = true;
+	Player = false;
+	Employee = true;
+	TrotSpeed = 0.000;
+	AverageAge = 0.000;
+}

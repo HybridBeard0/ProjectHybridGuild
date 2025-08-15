@@ -1,0 +1,9 @@
+horse_03 extends G3Animal
+{
+	static var Description = #horses/horse_03_desc;
+	Behaviour = "Horse";
+	EditorName = "Horse 3";
+	
+	MaxRoamingDistance = 3000;
+	RoamingDivFactor = 2.5;
+};

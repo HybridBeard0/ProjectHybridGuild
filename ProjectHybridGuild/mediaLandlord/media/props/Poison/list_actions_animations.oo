@@ -1,0 +1,22 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1490021479;
+			Name = "idle1";
+			AnimationName = "idle1";
+			Triggers = array
+			(
+				EffectTrigger
+				{
+					TriggerFrame = 42;
+					NoLoop = true;
+					EffectName = "BlackWidowPoison";
+					RefNodeOverride = "DummyParticles";
+				},
+			);
+		},
+	);
+}

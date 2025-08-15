@@ -1,0 +1,10 @@
+CS3 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "CS3";
+	};
+	EditorName = "CS3";
+	EditorIcon = "media/UserInterface/PropIcons/CS3.png";
+	EditorCategory = 4;		
+}

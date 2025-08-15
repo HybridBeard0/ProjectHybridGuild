@@ -1,0 +1,2074 @@
+G3ItemsDefault extends G3ItemsContainer
+{
+	SocialItemsScore = 40.0; // Base score used in production to sort orders
+
+	MarketCategoryWhitelist = array(
+		"All","Important","RawMaterial","Food","WeaponArmor","Clothing","Trinkets","Luxury","Tinctures","Components","Transportation","Livestock"
+	);
+	
+	Items = map
+	{		
+		//"PotGrenade" = G3Item
+		//{
+		//	Type = 1;
+		//	SubType = 9;
+        //
+		//	DisplayName = "$PotGrenade";
+		//	Description = "$PotGrenadeDesc";
+		//	DisplayCategories = array("All", "BlackMarket");
+        //
+		//	Tier = 1;
+		//	SocialClass = 1;
+		//	BuildTime = 25;
+		//	PriceModifier = 1.1;
+		//	Production = 1;
+        //
+		//	Requirements = array
+		//	{
+		//		comp1 extends G3ItemComponent
+		//		{
+		//			Name = "Polish";
+		//			Number = 2;
+		//		};
+		//		comp2 extends G3ItemComponent
+		//		{
+		//			Name = "Ethanol";
+		//			Number = 1;
+		//		};
+		//		comp3 extends G3ItemComponent
+		//		{
+		//			Name = "ClayVase";
+		//			Number = 1;
+		//		};
+		//	};
+		//	Results = array
+		//	{
+		//		UnlockEffect
+		//		{
+		//			Names = array {"ThrowPotGrenade"};
+		//		}
+		//	};
+		//	
+		//	RequiredBuildings = array
+		//	{
+		//		RequiredBuilding = array { "AlchemistShop", 3 }
+		//	};
+		//};
+		
+		//--------------LONG DISNTANCE JOURNEY ITEMS----------------
+		"Silk" = G3Item
+		{
+			Type = 2;
+			SubType = 6;
+			DisplayName = "$Silk";
+			Description = "$SilkDesc";
+			Price = 900;
+			SoldAtMarket = false;
+		};
+		"Tobacco" = G3Item
+		{
+			Type = 2;
+			SubType = 7;
+			DisplayName = "$Tobacco";
+			Description = "$TobaccoDesc";
+			Price = 600;
+			SoldAtMarket = false;
+		};
+		"Wine" = G3Item
+		{
+			Type = 2;
+			SubType = 2;
+			DisplayName = "$Wine";
+			Description = "$WineDesc";
+			Price = 500;
+			SoldAtMarket = false;
+
+			Results = array
+			{
+				UnlockEffect
+				{
+					Names = array {"BribeWithWine"}; // GiveAFeast
+				}
+			};			
+		};
+		"Salt" = G3Item
+		{
+			Type = 2;
+			SubType = 8;
+			DisplayName = "$Salt";
+			Description = "$SaltDesc";
+			Price = 400;
+			SoldAtMarket = false;
+		};
+		"Pepper" = G3Item
+		{
+			Type = 2;
+			SubType = 7;
+			DisplayName = "$Pepper";
+			Description = "$PepperDesc";
+			Price = 650;
+			SoldAtMarket = false;
+		};
+		"Pearl" = G3Item
+		{
+			Type = 2;
+			SubType = 7;
+			DisplayName = "$Pearl";
+			Description = "$PearlDesc";
+			Price = 1000;
+			SoldAtMarket = false;
+		};
+		"Amber" = G3Item
+		{
+			Type = 2;
+			SubType = 7;
+			DisplayName = "$Amber";
+			Description = "$AmberDesc";
+			Price = 500;
+			SoldAtMarket = false;
+		};
+		"Ivory" = G3Item
+		{
+			Type = 2;
+			SubType = 7;
+			DisplayName = "$Ivory";
+			Description = "$IvoryDesc";
+			Price = 1000;
+			SoldAtMarket = false;
+		};
+		"Brocade" = G3Item
+		{
+			Type = 2;
+			SubType = 6;
+			DisplayName = "$Brocade";
+			Description = "$BrocadeDesc";
+			Price = 1200;
+			SoldAtMarket = false;
+		};
+		"Purple" = G3Item
+		{
+			Type = 2;
+			SubType = 7;
+			DisplayName = "$Purple";
+			Description = "$PurpleDesc";
+			Price = 1400;
+			SoldAtMarket = false;
+		};
+		"Porcelain" = G3Item
+		{
+			Type = 2;
+			SubType = 11;
+			DisplayName = "$Porcelain";
+			Description = "$PorcelainDesc";
+			Price = 750;
+			SoldAtMarket = false;
+		};
+		
+		//--------------SOCIAL Items-----------------------
+		"WashCloth" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$WashCloth";
+			Description = "$WashClothDesc";
+			DisplayCategories = array("All");
+			UsableBy = array{ "$qs.charactertype.0" };
+			
+			Production = 1;
+			BuildTime = 12;
+			Tier = 2;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Requirements = array
+			{
+				comp1 extends G3ItemComponent
+				{
+					Name = "BucketOfWater";
+					Number = 1;
+				};
+				comp2 extends G3ItemComponent
+				{
+					Name = "Cloth";
+					Number = 1;
+				};
+			};
+			
+			Results = array
+			{
+				UnlockEffect
+				{
+					Names = array {"UseWashCloth"};
+				}
+			};
+			
+			RequiredBuildings = array
+			{
+				RequiredBuilding = array { "CountryHouse", 1 },
+				RequiredBuilding = array { "PoorHouse", 1 },
+				RequiredBuilding = array { "CityHouse", 1 },
+				RequiredBuilding = array { "Mansion", 1 },
+			};
+		};
+		
+		"FlowerBouqet" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$FlowerBouqet";
+			Description = "$FlowerBouqetDesc";
+			DisplayCategories = array("All");
+			UsableBy = array{ "$qs.charactertype.0" };
+			
+			Production = 1;
+			BuildTime = 10;
+			Tier = 2;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Requirements = array
+			{
+				comp1 extends G3ItemComponent
+				{
+					Name = "Jasmin";
+					Number = 1;
+				},
+				comp2 extends G3ItemComponent
+				{
+					Name = "StoneLily";
+					Number = 1;
+				},
+				comp3 extends G3ItemComponent
+				{
+					Name = "WildRose";
+					Number = 2;
+				}
+			};
+			
+			Results = array
+			{
+				UnlockEffect
+				{
+					Names = array {"GiveFlowers"};
+				}
+			};
+			
+			RequiredBuildings = array
+			{
+				RequiredBuilding = array { "CountryHouse", 1 },
+				RequiredBuilding = array { "PoorHouse", 1 },
+				RequiredBuilding = array { "CityHouse", 1 },
+				RequiredBuilding = array { "Mansion", 1 },
+			};
+		};
+
+		"SlideRule" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$SlideRule";
+			Description = "$SlideRuleDesc";
+			DisplayCategories = array("All");
+
+			BuildTime = 500;
+			Production = 1;
+			Tier = 3;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			EquipmentType = 3; //special
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Intelligence";
+					Mod = 1;
+					Recover = true;
+				},
+				ModifierEffect
+				{
+					ActorValue = "BargainingBonus";
+					Mod = 2;
+					Recover = true;
+				}
+			};
+			
+			Requirements = array
+			{
+				comp1 extends G3ItemComponent
+				{
+					Name = "SlateBoard";
+					Number = 1;
+				};
+				comp2 extends G3ItemComponent
+				{
+					Name = "Silver";
+					Number = 4;
+				};
+				comp3 extends G3ItemComponent
+				{
+					Name = "Gemstone";
+					Number = 1;
+				};
+			};
+			
+			RequiredBuildings = array
+			{
+				RequiredBuilding = array { "PoorHouse", 1 },
+				RequiredBuilding = array { "CityHouse", 1 },
+				RequiredBuilding = array { "Mansion", 1 },
+			};
+		};
+		
+		"SignetRing" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$SignetRing";
+			Description = "$SignetRingDesc";
+			DisplayCategories = array("All");
+
+			BuildTime = 500;
+			Production = 1;
+			Tier = 3;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			EquipmentType = 3; //special
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "PrestigeGainMult";
+					Mod = 0.05;
+					Recover = true;
+				}
+			};
+			
+			Requirements = array
+			{
+				comp1 extends G3ItemComponent
+				{
+					Name = "SilverRing";
+					Number = 1;
+				};
+				comp3 extends G3ItemComponent
+				{
+					Name = "Gold";
+					Number = 4;
+				};
+				comp3 extends G3ItemComponent
+				{
+					Name = "Paint";
+					Number = 2;
+				};
+			};
+			
+			RequiredBuildings = array
+			{
+				RequiredBuilding = array { "PoorHouse", 1 },
+				RequiredBuilding = array { "CityHouse", 1 },
+				RequiredBuilding = array { "Mansion", 1 },
+			};
+		};
+		
+		"FamilySword" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$FamilySword";
+			Description = "$FamilySwordDesc";
+			DisplayCategories = array("All");
+
+			BuildTime = 1000;
+			Production = 1;
+			Tier = 4;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			VisualActorName = "longsword/longsword";
+			
+			EquipmentType = 2;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "AttackPower";
+					Mod = 6;
+					Recover = true;
+				},
+				ModifierEffect
+				{
+					ActorValue = "DefensePower";
+					Mod = 3;
+					Recover = true;
+				},
+				ModifierEffect
+				{
+					ActorValue = "Damage";
+					Mod = 68;
+					Recover = true;
+				}
+			};
+			
+			Requirements = array
+			{
+				comp1 extends G3ItemComponent
+				{
+					Name = "Brocade";
+					Number = 1;
+				};
+				comp2 extends G3ItemComponent
+				{
+					Name = "Amber";
+					Number = 1;
+				};
+				comp3 extends G3ItemComponent
+				{
+					Name = "Longsword";
+					Number = 1;
+				};
+				comp4 extends G3ItemComponent
+				{
+					Name = "BoneGlue";
+					Number = 4;
+				};
+			};
+			
+			RequiredBuildings = array
+			{
+				RequiredBuilding = array { "CityHouse", 1 },
+				RequiredBuilding = array { "Mansion", 1 },
+			};
+		};
+
+		"CouncilorsChain" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$CouncilorsChain";
+			Description = "$CouncilorsChainDesc";
+			DisplayCategories = array("All");
+
+			BuildTime = 1000;
+			Production = 1;
+			Tier = 4;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			EquipmentType = 4;//jewellry
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "ReputationBonus";
+					Mod = 0.06;
+					Recover = true;
+				},
+				ModifierEffect
+				{
+					ActorValue = "Intimidation";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+			
+			Requirements = array
+			{
+				comp1 extends G3ItemComponent
+				{
+					Name = "Pearl";
+					Number = 1;
+				};
+				comp2 extends G3ItemComponent
+				{
+					Name = "Purple";
+					Number = 1;
+				};
+				comp3 extends G3ItemComponent
+				{
+					Name = "GoldChain";
+					Number = 2;
+				};
+				comp4 extends G3ItemComponent
+				{
+					Name = "Fittings";
+					Number = 2;
+				};
+			};
+			
+			RequiredBuildings = array
+			{
+				RequiredBuilding = array { "CityHouse", 1 },
+				RequiredBuilding = array { "Mansion", 1 },
+			};
+		};
+
+		"Banquet" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$Banquet";
+			Description = "$BanquetDesc";
+			DisplayCategories = array("All");
+			UsableBy = array{ "$gui.item.UsableByAdultFamilyMembers" };
+
+			BuildTime = 1000;
+			Production = 1;
+			Tier = 5;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+						
+			Requirements = array
+			{
+				comp1 extends G3ItemComponent
+				{
+					Name = "Porcelain";
+					Number = 1;
+				};
+				comp2 extends G3ItemComponent
+				{
+					Name = "Wine";
+					Number = 2;
+				};
+				comp3 extends G3ItemComponent
+				{
+					Name = "Salt";
+					Number = 1;
+				};
+				comp4 extends G3ItemComponent
+				{
+					Name = "Pepper";
+					Number = 1;
+				};
+				comp5 extends G3ItemComponent
+				{
+					Name = "RoastBeef";
+					Number = 1;
+				};
+				comp6 extends G3ItemComponent
+				{
+					Name = "RoastVenison";
+					Number = 1;
+				};
+				comp7 extends G3ItemComponent
+				{
+					Name = "WheatBread";
+					Number = 1;
+				};
+			};
+
+			Results = array
+			{
+				UnlockEffect
+				{
+					Names = array {"GiveAFamilyFeast", "GivePublicBanquet"}; // GiveAFeast
+				}
+			};
+			
+			RequiredBuildings = array
+			{
+				RequiredBuilding = array { "Mansion", 1 },
+			};
+		};
+
+		//----------ALCHIMIST GUILD ITEM--------
+		"Mandrake" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$Mandrake";
+			Description = "$MandrakeDesc";
+			DisplayCategories = array("All");
+
+			Production = 1;
+			BuildTime = 25;
+			Tier = 1;
+			SocialClass = 2;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+		};
+
+		"PotionOfFateWomen" = G3Item
+		{
+			DisplayCategories = array("All");
+
+			DisplayName = "$PotionOfFateWomen";
+			Description = "$PotionOfFateWomenDesc";
+			
+			UsableBy = array{ "$gui.item.UsableByAdultFamilyMembers", "$gui.item.UsableByHenchmen", "$statusEffect.guild-alchimists" };
+			
+			Tier = 7;
+			BuildTime = 350;
+			Production = 1;
+			
+			Requirements = array
+			{
+				comp1 extends G3ItemComponent
+				{
+					Name = "Mandrake";
+					Number = 1;
+				};
+				comp2 extends G3ItemComponent
+				{
+					Name = "Ectoplasm";
+					Number = 2;
+				};
+				comp3 extends G3ItemComponent
+				{
+					Name = "Ethanol";
+					Number = 2;
+				};
+			};
+			
+			Results = array
+			{
+				UnlockEffect
+				{
+					Names = array {"PotionOfSalutary", "PotionOfContamination", "PotionOfDecay"};
+				}
+			};
+			
+			RequiredBuildings = array
+			{
+				RequiredBuilding = array { "CountryHouse", 1 },
+				RequiredBuilding = array { "PoorHouse", 1 },
+				RequiredBuilding = array { "CityHouse", 1 },
+				RequiredBuilding = array { "Mansion", 1 },
+			};
+		};
+		
+		//-------------- CLOTHING -----------------------
+		"CityGuardArmor" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$CityGuardArmor";
+			Description = "$CityGuardArmorDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "guard2";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			IsArmor = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Armor";
+					Mod = 210;
+					Recover = true;
+				},
+				ModifierEffect
+				{
+					ActorValue = "DefensePower";
+					Mod = 4;
+					Recover = true;
+				},
+			};
+		};
+		
+		"TransporterClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$TransporterClothes";
+			Description = "$TransporterClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "commoner1";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "MovementSpeedMult";
+					Mod = 0.01;
+					Recover = true;
+				}
+			};
+		};
+		
+		"HenchmenArmor" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$HenchmenArmor";
+			Description = "$HenchmenArmorDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "leatherarmor";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Armor";
+					Mod = 15;
+					Recover = true;
+				}
+			};
+		};
+		
+		"MillerClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$MillerClothes";
+			Description = "$MillerClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "commoner2";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Dexterity";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+		};
+		
+		"ButcherClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$ButcherClothes";
+			Description = "$ButcherClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "commoner2";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Perception";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+		};
+		
+		"BakerClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$BakerClothes";
+			Description = "$BakerClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "citizen4";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Productivity";
+					Mod = 0.01;
+					Recover = true;
+				}
+			};
+		};
+		
+		"FarmerClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$FarmerClothes";
+			Description = "$FarmerClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "commoner2";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Resistance";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+		};
+
+		"OrchardistClothes" = G3Item // icon done
+		{
+			Type = 3;
+			
+			DisplayName = "$OrchardistClothes";
+			Description = "$OrchardistClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "commoner2";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Dexterity";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+		};
+
+		"FisherClothes" = G3Item // icon done
+		{
+			Type = 3;
+			
+			DisplayName = "$FisherClothes";
+			Description = "$FisherClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "commoner2";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Resistance";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+		};
+		
+		"InnkeeperClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$InnkeeperClothes";
+			Description = "$InnkeeperClothesDesc";
+			DisplayCategories = array("All");
+
+//			EquippedCharacterDesc = "citizen4";
+			EquippedCharacterDesc = "gleeman";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "ReputationBonus";
+					Mod = 0.01;
+					Recover = true;
+				}
+			};
+		};
+		
+		"ArtisanClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$ArtisanClothes";
+			Description = "$ArtisanClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "commoner4";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Dexterity";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+		};
+
+		"TinkerClothes" = G3Item // icon done
+		{
+			Type = 3;
+			
+			DisplayName = "$TinkerClothes";
+			Description = "$TinkerClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "commoner4";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Dexterity";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+		};
+
+		"MasoneryClothes" = G3Item // icon done
+		{
+			Type = 3;
+			
+			DisplayName = "$MasoneryClothes";
+			Description = "$MasoneryClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "commoner4";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Dexterity";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+		};
+
+		"PreacherClothes" = G3Item // icon done
+		{
+			Type = 3;
+			
+			DisplayName = "$PreacherClothes";
+			Description = "$PreacherClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "citizen4";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Dexterity";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+		};
+
+		"PriestClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$PriestClothes";
+			Description = "$PriestClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "priest";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Dexterity";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+		};
+
+		"MoAClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$MoAClothes";
+			Description = "$MoAClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "leatherarmor";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Armor";
+					Mod = 35;
+					Recover = true;
+				}
+			};
+		};
+
+		"JailorClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$JailorClothes";
+			Description = "$JailorClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "executioner";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Armor";
+					Mod = 15;
+					Recover = true;
+				},
+				ModifierEffect
+				{
+					ActorValue = "Intimidation";
+					Mod = 5;
+					Recover = true;
+				}
+			};
+		};
+		
+		"ReceptionistClothes" = G3Item
+		{
+			Type = 4;
+			
+			DisplayName = "$ReceptionistClothes";
+			Description = "$ReceptionistClothesDesc";
+
+			EquippedCharacterDesc = "noble2";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			EquippedIdleAnimation = "sit_idle1"; // This is the magic sauce that makes sure the receptionist is sitting by default.
+			
+			Results = array
+			{
+				ModifierEffect {
+					ActorValue = "Intelligence";
+					Mod = 1;
+					Recover = true;
+				},
+				ModifierEffect {
+					ActorValue = "Perception";
+					Mod = 1;
+					Recover = true;
+				},
+				ModifierEffect {
+					ActorValue = "Charisma";
+					Mod = 1;
+					Recover = true;
+				},
+			};
+		};
+
+		"BarberClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$BarberClothes";
+			Description = "$BarberClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "commoner4";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Dexterity";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+		};
+
+		"GravediggerClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$GravediggerClothes";
+			Description = "$GravediggerClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "gravedigger";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "MovementSpeedMult";
+					Mod = -0.33;
+					Recover = true;
+				},
+				ModifierEffect
+				{
+					ActorValue = "Resistance";
+					Mod = 2;
+					Recover = true;
+				},
+				ModifierEffect
+				{
+					ActorValue = "Intimidation";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+		};
+
+		"GleemanClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$GleemanClothes";
+			Description = "$GleemanClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "gleeman";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Charisma";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+		};
+		
+		"TailorClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$TailorClothes";
+			Description = "$TailorClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "citizen3";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Productivity";
+					Mod = 0.01;
+					Recover = true;
+				}
+			};
+		};
+		
+		"CarpenterClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$CarpenterClothes";
+			Description = "$CarpenterClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "citizen2";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Dexterity";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+		};
+		
+		"StonemasonClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$StonemasonClothes";
+			Description = "$StonemasonClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "citizen2";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Strength";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+		};
+		
+		"SmithClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$SmithClothes";
+			Description = "$SmithClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "citizen2";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Productivity";
+					Mod = 0.01;
+					Recover = true;
+				}
+			};
+		};
+		
+		"HerbalistClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$HerbalistClothes";
+			Description = "$HerbalistClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "commoner3";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "MovementSpeedMult";
+					Mod = 0.01;
+					Recover = true;
+				}
+			};
+		};
+		
+		"ApothecaryClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$ApothecaryClothes";
+			Description = "$ApothecaryClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "citizen4";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "ExperienceGainMult";
+					Mod = 0.01;
+					Recover = true;
+				}
+			};
+		};
+		
+		"AlchemistClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$AlchemistClothes";
+			Description = "$AlchemistClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "citizen4";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Productivity";
+					Mod = 0.01;
+					Recover = true;
+				}
+			};
+		};
+
+		"MedicusClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$MedicusClothes";
+			Description = "$MedicusClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "plaguesuit";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "MedicineMastery";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+		};
+		
+		"ScholarClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$ScholarClothes";
+			Description = "$ScholarClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "citizen4";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Intelligence";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+		};
+		
+		"RobberClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$RobberClothes";
+			Description = "$RobberClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "commoner1";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "AttackPower";
+					Mod = 3;
+					Recover = true;
+				},
+				ModifierEffect
+				{
+					ActorValue = "Damage";
+					Mod = 10;
+					Recover = true;
+				}
+			};
+		};
+		
+		"MercenaryArmor" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$MercenaryArmor";
+			Description = "$MercenaryArmorDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "chainmail";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			IsArmor = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Perception";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+		};
+		
+		"ThiefClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$ThiefClothes";
+			Description = "$ThiefClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "camouflagecloak";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Stealth";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+		};
+
+		"SmugglerClothes" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$SmugglerClothes";
+			Description = "$SmugglerClothesDesc";
+			DisplayCategories = array("All");
+
+			EquippedCharacterDesc = "camouflagecloak";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Stealth";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+		};
+		
+		//----------------STARTING OUTFITS------------------
+		"StartingCitizenClothes1" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$StartingOutfit";
+			Description = "$StartingOutfitDesc";
+			DisplayCategories = array("All");
+
+			Tier = 0;
+			SocialClass = 0;
+			BuildTime = 8;
+			Production = 1;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			EquippedCharacterDesc = "citizen1";
+			EquipmentType = 1; //Body
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+		};
+		
+		"StartingCitizenClothes2" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$StartingOutfit";
+			Description = "$StartingOutfitDesc";
+			DisplayCategories = array("All");
+
+			Tier = 0;
+			SocialClass = 0;
+			BuildTime = 7;
+			Production = 1;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+
+			EquippedCharacterDesc = "citizen2";
+			EquipmentType = 1; //Body
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+		};
+		
+		"StartingCitizenClothes3" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$StartingOutfit";
+			Description = "$StartingOutfitDesc";
+			DisplayCategories = array("All");
+
+			Tier = 0;
+			SocialClass = 0;
+			BuildTime = 8;
+			Production = 1;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+
+			EquippedCharacterDesc = "citizen3";
+			EquipmentType = 1; //Body
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+		};
+		
+		"StartingCitizenClothes4" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$StartingOutfit";
+			Description = "$StartingOutfitDesc";
+			DisplayCategories = array("All");
+
+			Tier = 0;
+			SocialClass = 0;
+			BuildTime = 7;
+			Production = 1;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+
+			EquippedCharacterDesc = "citizen4";
+			EquipmentType = 1; //Body
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+		};
+		
+		"StartingCommonerClothes1" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$StartingOutfit";
+			Description = "$StartingOutfitDesc";
+			DisplayCategories = array("All");
+
+			Tier = 0;
+			SocialClass = 0;
+			BuildTime = 6;
+			Production = 1;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			EquippedCharacterDesc = "commoner1";
+			EquipmentType = 1; //Body
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+		};
+		
+		"StartingCommonerClothes2" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$StartingOutfit";
+			Description = "$StartingOutfitDesc";
+			DisplayCategories = array("All");
+
+			Tier = 0;
+			SocialClass = 0;
+			BuildTime = 3;
+			Production = 1;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			EquippedCharacterDesc = "commoner2";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+		};
+		
+		"StartingCommonerClothes3" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$StartingOutfit";
+			Description = "$StartingOutfitDesc";
+			DisplayCategories = array("All");
+
+			Tier = 0;
+			SocialClass = 0;
+			BuildTime = 4;
+			Production = 1;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			EquippedCharacterDesc = "commoner3";
+			EquipmentType = 1; //Body
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+		};
+		
+		"StartingCommonerClothes4" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$StartingOutfit";
+			Description = "$StartingOutfitDesc";
+			DisplayCategories = array("All");
+
+			Tier = 0;
+			SocialClass = 0;
+			BuildTime = 4;
+			Production = 1;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			EquippedCharacterDesc = "commoner4";
+			EquipmentType = 1; //Body
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+		};
+				
+		"StartingNobleClothes1" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$StartingOutfit";
+			Description = "$StartingOutfitDesc";
+			DisplayCategories = array("All");
+
+			Tier = 0;
+			SocialClass = 0;
+			BuildTime = 6;
+			Production = 1;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			EquippedCharacterDesc = "noble1";
+			EquipmentType = 1; //Body
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+		};
+		
+		"StartingNobleClothes2" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$StartingOutfit";
+			Description = "$StartingOutfitDesc";
+			DisplayCategories = array("All");
+
+			Tier = 0;
+			SocialClass = 0;
+			BuildTime = 3;
+			Production = 1;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			EquippedCharacterDesc = "noble2";
+			EquipmentType = 1;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+		};
+		
+		"StartingNobleClothes3" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$StartingOutfit";
+			Description = "$StartingOutfitDesc";
+			DisplayCategories = array("All");
+
+			Tier = 0;
+			SocialClass = 0;
+			BuildTime = 4;
+			Production = 1;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			EquippedCharacterDesc = "noble3";
+			EquipmentType = 1; //Body
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+		};
+		
+		"StartingNobleClothes4" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$StartingOutfit";
+			Description = "$StartingOutfitDesc";
+			DisplayCategories = array("All");
+
+			Tier = 0;
+			SocialClass = 0;
+			BuildTime = 4;
+			Production = 1;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			EquippedCharacterDesc = "noble4";
+			EquipmentType = 1; //Body
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+		};
+		
+		"Remains" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$Remains";
+			Description = "$RemainsDesc";
+			DisplayCategories = array("All");
+
+			Production = 1;
+			BuildTime = 0;
+			Tier = 0;
+			SocialClass = 0;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;			
+		};
+
+		"OldBoot" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$OldBoot";
+			Description = "$OldBootDesc";
+			DisplayCategories = array("All");
+
+			Production = 1;
+			BuildTime = 0;
+			Tier = 0;
+			SocialClass = 0;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+		};
+		
+		"HaresPaw" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$HaresPaw";
+			Description = "$HaresPawDesc";
+			DisplayCategories = array("All");
+
+			Production = 1;
+			BuildTime = 0;
+			Tier = 0;
+			SocialClass = 0;
+
+			Price = 5;
+			FixedPrice = true;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+
+			EquipmentType = 3; //Special
+			UsableBy = array{ "$loca.key.anyone" };
+
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Luck";
+					Mod = 0.07;
+					Recover = true;
+				}
+			};
+		};
+
+		//-------------- SPECIAL ARTEFACTS -----------------------
+		"Obligation" = G3Item // PlunderGraves
+		{
+			Type = 3;
+
+			DisplayName = "$Obligation";
+			Description = "$ObligationDesc";						
+			UsableBy = array{ "$gui.item.UsableByAdultFamilyMembers" };
+			DisplayCategories = array("All");
+			
+			CanMaterialize = false;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				UnlockEffect
+				{
+					Names = array {"UseObligation"};
+				}
+			};
+		};
+
+		"Purse" = G3Item // PlunderGraves
+		{
+			Type = 3;
+
+			DisplayName = "$Purse";
+			Description = "$PurseDesc";						
+			UsableBy = array{ "$gui.item.UsableByAdultFamilyMembers" };
+			DisplayCategories = array("All");
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				UnlockEffect
+				{
+					Names = array {"OpenPurse"};
+				}
+			};
+		};
+
+		"Rat" = G3Item // CatchRats
+		{
+			Type = 3;
+
+			DisplayName = "$Rat";
+			Description = "$RatDesc";
+			UsableBy = array{ "$characters.Age.Child" };
+			DisplayCategories = array("All");
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				UnlockEffect
+				{
+					Names = array {"TrainRat"};
+				}
+			};
+		};
+
+		"RatCompanion" = G3Item
+		{
+			Type = 3;
+		
+			DisplayName = "$RatCompanion";
+			Description = "$RatCompanionDesc";
+			DisplayCategories = array("All");
+			
+			CompanionModel = "Rat";
+			EquipmentType = 3; //Special
+			EquipmentChildrenOnly = true;
+			UsableBy = array{ "$characters.Age.Child" };
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "Charisma";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+		};
+
+		"Rum" = G3Item
+		{
+			Type = 3;
+
+			DisplayName = "$Rum";
+			Description = "$RumDesc";
+			DisplayCategories = array("All", "Food");
+
+			Price = 40;
+
+			SoldAtMarket = false;
+			BoughtByMarket = true;
+		};
+		
+		//-------------- END -----------------------
+		@base/ResourceProducerItems
+		@base/GatheredItems
+		@base/Tier1Products
+		@base/Tier2Products
+		@base/Tier3Products
+		@base/Tier4Products
+		@base/Tier5Products
+		@base/Tier6Products
+		@base/Tier7Products
+		@base/EventItems
+	};
+};

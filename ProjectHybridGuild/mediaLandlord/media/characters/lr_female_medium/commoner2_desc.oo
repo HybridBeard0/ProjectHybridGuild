@@ -1,0 +1,15 @@
+lr_female_medium/lr_female_medium_desc
+
+{
+	Visual = "commoner2female_med_game";
+
+	Poor = true;
+	MiddleClass = true;
+	Rich = false;
+	Male = false;
+	Player = true;
+	Employee = true;
+	TrotSpeed = 0.000;
+	AverageAge = 0.000;
+	CustomCollisionRadius = 0.000;		
+}

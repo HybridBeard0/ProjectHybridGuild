@@ -1,0 +1,11 @@
+tallgrass_01 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "tallgrass_01";
+	};
+	EditorName = "Tallgrass01";
+	EditorIcon = "media/UserInterface/PropIcons/Tallgrass01.png";
+	EditorCategory = 1;		
+}
+

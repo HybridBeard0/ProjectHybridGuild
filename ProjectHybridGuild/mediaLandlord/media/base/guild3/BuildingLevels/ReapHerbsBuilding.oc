@@ -1,0 +1,18 @@
+ReapHerbsBuilding extends G3BuildingTemplateLevel
+{
+	NBAddons = 0;
+	
+	Results = array 
+	{
+		TagEffect
+		{
+			Tags = array{"BuildingNoActions", "NoRealBuilding", "NoWorkers", "NoWeatherEffects"};
+		},
+		ModifierEffect
+		{
+			ActorValue = "MaxEmployees";
+			Mod = 200;
+			Recover = true;
+		};
+	};
+};

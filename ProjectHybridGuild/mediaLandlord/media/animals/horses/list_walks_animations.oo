@@ -1,0 +1,43 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1432562384;
+			Name = "walk1";
+			AnimationName = "walk1";
+			Looping = true;
+			Speed = 2.000;
+			Motion = 25.000;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 1206;
+					EventLoops = true;
+					FadeStart = 200.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1630502611;
+			Name = "trot1";
+			AnimationName = "trot1";
+			Looping = true;
+			Speed = 2.000;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 1206;
+					EventLoops = true;
+					FadeStart = 200.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+	);
+}

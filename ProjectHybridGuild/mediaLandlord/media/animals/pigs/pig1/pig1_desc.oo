@@ -1,0 +1,17 @@
+base/standardg3characterdesc
+{
+	Visual = "pig1";
+	
+	WalkSpeed = 37.5;
+	TrotSpeed = 68.75;
+	RunSpeed = 250;
+	
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#pig1/list_idles_animations,
+			#pig1/list_walks_animations,
+		);
+	};
+}

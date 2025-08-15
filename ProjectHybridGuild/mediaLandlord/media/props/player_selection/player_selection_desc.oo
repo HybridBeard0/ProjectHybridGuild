@@ -1,0 +1,11 @@
+ActorDesc
+{
+	Visual = "player_selection";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#player_selection/list_idles_animations,
+		);
+	};
+}

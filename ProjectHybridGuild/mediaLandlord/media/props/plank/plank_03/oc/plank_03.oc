@@ -1,0 +1,10 @@
+plank_03 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "plank_03";
+	};
+	EditorName = "Plank_03";
+	EditorIcon = "media/UserInterface/PropIcons/Cabbagecrate.png";
+	EditorCategory = 3;		
+}

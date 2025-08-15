@@ -1,0 +1,10 @@
+wheat_field_mature extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "wheat_mature_field";
+	};
+	EditorName = "Wheat_Field";
+	EditorIcon = "media/UserInterface/PropIcons/Wheat_Field.png";
+	EditorCategory = 1;		
+}

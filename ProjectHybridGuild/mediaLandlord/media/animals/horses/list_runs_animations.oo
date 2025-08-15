@@ -1,0 +1,31 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1480536610;
+			Name = "run1";
+			AnimationName = "run1";
+			Speed = 1.600;
+			Motion = 110.000;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 1206;
+					EventLoops = true;
+					FadeStart = 200.000;
+					FadeOut = 1700.000;
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Cart_dust_01";
+					RefNodeOverride = "RidingHorse";
+				},
+			);
+		},
+	);
+}

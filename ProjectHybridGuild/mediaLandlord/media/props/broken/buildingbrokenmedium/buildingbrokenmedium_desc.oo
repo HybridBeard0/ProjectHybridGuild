@@ -1,0 +1,11 @@
+ActorDesc
+{
+	Visual = "building_broken_medium";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#buildingbrokenmedium/list_walks_animations,
+		);
+	};
+}

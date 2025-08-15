@@ -1,0 +1,18 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1479229059;
+			Name = "teleport1";
+			AnimationName = "teleport1";
+		},
+		AnimationDesc
+		{
+			ID = 1479229089;
+			Name = "teleport2";
+			AnimationName = "teleport2";
+		},
+	);
+}

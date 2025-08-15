@@ -1,0 +1,14 @@
+broom extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "broom";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+	EditorName = "Broom";
+	EditorIcon = "media/UserInterface/PropIcons/Broom.png";
+	EditorCategory = 3;		
+}

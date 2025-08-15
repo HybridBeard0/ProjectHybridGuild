@@ -1,0 +1,11 @@
+G3ActorDesc
+{
+	Visual = "interior_arsenal";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#Interior_arsenal/interior_arsenal_idles_animations,
+		);
+	};
+}

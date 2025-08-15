@@ -1,0 +1,9 @@
+cat extends G3Animal
+{
+	static var Description = #cat/cat_desc;
+	Behaviour = "Cat";
+	EditorName = "Cat";
+	
+	MaxRoamingDistance = 3400;
+    RoamingDivFactor = 7;
+};

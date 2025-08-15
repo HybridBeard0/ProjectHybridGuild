@@ -1,0 +1,15 @@
+heligocliff_04 extends G3PropsInstance
+{
+	CustomFadeAlpha = 1.0;
+
+	Destructible = false;
+	BlocksBuildings = true;
+
+	static var Description = ActorDesc
+	{
+		Visual = "heligocliff_04";
+	};
+	EditorName = "HeligoCliff04";
+	EditorIcon = "media/UserInterface/PropIcons/Cliff04.png";
+	EditorCategory = 2;		
+}

@@ -1,0 +1,10 @@
+statue extends Building
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "statue";
+	};
+	EditorName = "Statue";
+	EditorIcon = "media/UserInterface/Icons/BuildingImages/Other/Statue.png";
+	EditorCategory = 2;
+}

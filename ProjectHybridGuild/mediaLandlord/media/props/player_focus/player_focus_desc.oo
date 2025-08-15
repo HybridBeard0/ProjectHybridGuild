@@ -1,0 +1,11 @@
+ActorDesc
+{
+	Visual = "player_focus";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#player_focus/list_idles_animations,
+		);
+	};
+}

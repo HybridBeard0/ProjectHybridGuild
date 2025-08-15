@@ -1,0 +1,40 @@
+HerbalistFemale extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = true;
+	MiddleClass = false;
+	Rich = false;
+	
+	Male = false;
+	Player = false;
+	Employee = true;
+	Profession = true;
+
+	LowResCharacter = "commoner3";
+	HighResCharacter = "commoner3";
+	
+	BodyTexturesDiff= array
+	{
+		"Commoner3Female_diff",
+		"Commoner3Female_diff",
+		"Commoner3Female_diff",		
+		"Commoner3Female_diff"			
+	};
+	BodyTexturesNorm= array
+	{
+		"Commoner3Female_NORM",
+		"Commoner3Female_NORM",
+		"Commoner3Female_NORM",
+		"Commoner3Female_NORM"
+	};
+	BodyTexturesMask= array
+	{
+		"Commoner3Female_MASK",
+		"Commoner3Female_MASK",
+		"Commoner3Female_MASK",
+		"Commoner3Female_MASK"
+	};
+}

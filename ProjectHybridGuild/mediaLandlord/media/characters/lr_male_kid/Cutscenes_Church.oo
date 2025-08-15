@@ -1,0 +1,12 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1485182851;
+			Name = "BuyOrphan_KidWalkIn";
+			AnimationName = "BuyOrphan_KidWalkIn";
+		},
+	);
+}

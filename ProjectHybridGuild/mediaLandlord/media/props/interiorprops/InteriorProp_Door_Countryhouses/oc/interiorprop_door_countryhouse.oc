@@ -1,0 +1,38 @@
+interiorprop_door_countryhouse extends G3PropsInstance
+{
+	static var Description = G3PropDesc
+	{
+		Visual = "interiorprop_door_countryhouse";
+		
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc
+				{
+					Name = "door";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Animation = "opendoor";
+							Context = "Exit";
+						},
+					};
+				},
+			};		
+		};		
+	
+		Interaction = G3ActorInteraction {
+			Name = "$props.name.Door";
+			TooltipText = "$action.Exit";
+			TooltipIcon = "Exit";
+			ContextAction = "Exit";
+			ActionFailureMessage = "ExitInteractionError";
+		};
+	};
+	
+	Interactable = true;
+
+	EditorName = "InteriorProp Door Countryhouse";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

@@ -1,0 +1,14 @@
+longsword extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "longsword";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";		
+	};
+	EditorName = "Longsword";
+	EditorIcon = "media/UserInterface/PropIcons/Longsword.png";
+	EditorCategory = 3;		
+}

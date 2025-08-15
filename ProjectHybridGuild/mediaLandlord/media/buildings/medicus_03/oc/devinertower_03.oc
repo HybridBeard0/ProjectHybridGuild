@@ -1,0 +1,9 @@
+devinertower_03 extends BuildingVisualUpgrade
+{
+	static var Description = ActorDesc
+	{
+		Visual = "medicus_03";
+	};
+	BusinessLevel = 3;
+	UpgradeOf = devinertower;
+}
