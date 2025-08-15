@@ -1,0 +1,314 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1430147895;
+			Name = "accept1";
+			AnimationName = "accept1";
+		},
+		AnimationDesc
+		{
+			ID = 1436982629;
+			Name = "cool_listen1";
+			AnimationName = "cool_listen1";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1436982644;
+			Name = "cool_talk1";
+			AnimationName = "cool_talk1";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1430147911;
+			Name = "listen1";
+			AnimationName = "listen1";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1430147917;
+			Name = "listen2";
+			AnimationName = "listen2";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1430147923;
+			Name = "listen3";
+			AnimationName = "listen3";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1430147934;
+			Name = "refuse1";
+			AnimationName = "refuse1";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1430147944;
+			Name = "rire1";
+			AnimationName = "rire1";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1441719668;
+			Name = "sit_talk1";
+			AnimationName = "sit_talk1";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1430147977;
+			Name = "talk1";
+			AnimationName = "talk1";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1430147984;
+			Name = "talk2";
+			AnimationName = "talk2";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1432147896;
+			Name = "AcceptPresent";
+			AnimationName = "AcceptPresent";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1432156896;
+			Name = "blaming1";
+			AnimationName = "blaming1";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1432156676;
+			Name = "choc_react1";
+			AnimationName = "choc_react1";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1412147895;
+			Name = "dialog_bribe";
+			AnimationName = "dialog_bribe";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1412158895;
+			Name = "make_compliment";
+			AnimationName = "make_compliment";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1414858895;
+			Name = "MakePresent";
+			AnimationName = "MakePresent";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1414858896;
+			Name = "GiveFlowers";
+			AnimationName = "MakePresent";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+				VoiceTrigger
+				{
+					TriggerFrame = 50;
+					SoundEvent = 54;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;
+				},
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 62;
+					DespawnFrame = 120;
+					SpawnName = "flowerbouqet/flowerbouqet";
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1598858555;
+			Name = "WaveHello";
+			AnimationName = "WaveHello";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1598877491;
+			Name = "Curtsy";
+			AnimationName = "Curtsy";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+	);
+}

@@ -1,0 +1,611 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1470940889;
+			Name = "alchemist1";
+			AnimationName = "alchemist1";
+		},
+		AnimationDesc
+		{
+			ID = 1470940901;
+			Name = "artisan1";
+			AnimationName = "artisan1";
+		},
+		AnimationDesc
+		{
+			ID = 1470940912;
+			Name = "baker1";
+			AnimationName = "baker1";
+		},
+		AnimationDesc
+		{
+			ID = 1470940935;
+			Name = "blacksmith1";
+			AnimationName = "blacksmith1";
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 2003;
+					FadeOut = 1000.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1470940947;
+			Name = "carpenter1";
+			AnimationName = "carpenter1";
+		},
+		AnimationDesc
+		{
+			ID = 1470940959;
+			Name = "farmer1";
+			AnimationName = "farmer1";
+		},
+		AnimationDesc
+		{
+			ID = 1470940972;
+			Name = "guard1";
+			AnimationName = "guard1";
+		},
+		AnimationDesc
+		{
+			ID = 1474396519;
+			Name = "guard_BoxingPunch";
+			AnimationName = "guard_BoxingPunch";
+			Looping = true;
+		},
+		AnimationDesc
+		{
+			ID = 1474396538;
+			Name = "guard_SwingSword";
+			AnimationName = "guard_SwingSword";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 1108;
+					FadeStart = 200.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1472135423;
+			Name = "Inn1";
+			AnimationName = "inn1";
+			Looping = true;
+		},
+		AnimationDesc
+		{
+			ID = 1470940981;
+			Name = "port1";
+			AnimationName = "port1";
+		},
+		AnimationDesc
+		{
+			ID = 1470941013;
+			Name = "scholar1";
+			AnimationName = "scholar1";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1470941026;
+			Name = "stonemason1";
+			AnimationName = "stonemason1";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1470941038;
+			Name = "tailor1";
+			AnimationName = "tailor1";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1474995374;
+			Name = "thief1";
+			AnimationName = "thief1";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1474995375;
+			Name = "packing_sacks";
+			AnimationName = "packing_sacks";
+			Looping = true;
+			Triggers = array
+			(
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 19;
+					DespawnFrame = 113;
+					SpawnName = "handsack/handsack";
+				},
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1474995376;
+			Name = "flail";
+			AnimationName = "flail";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 2008;
+					FadeStart = 200.000;
+					FadeOut = 1700.000;
+				},
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1589546099;
+			Name = "pickaxe";
+			AnimationName = "flail";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 2006;
+					TriggerFrame = 20;
+					FadeStart = 200.000;
+					FadeOut = 1700.000;
+				},
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1589807102;
+			Name = "woodcutteraxe";
+			AnimationName = "flail";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 2007;
+					FadeStart = 200.000;
+					FadeOut = 1700.000;
+				},
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1589975707;
+			Name = "digging1";
+			AnimationName = "digging1";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 2009;
+					FadeStart = 200.000;
+					FadeOut = 1700.000;
+				},
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1591783131;
+			Name = "gleeman_pipe";
+			AnimationName = "gleeman_pipe";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 2013;
+					FadeStart = 200.000;
+					FadeOut = 1700.000;
+				},
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 0;
+					SpawnName = "pipe/pipe";
+				},
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1591783157;
+			Name = "gleeman_drum";
+			AnimationName = "gleeman_drum";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 2012;
+					FadeStart = 200.000;
+					FadeOut = 1700.000;
+				},
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 0;
+					SpawnName = "drum/drum";
+				},
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 0;
+					SpawnName = "drumstick/drumstick";
+				},
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1591783175;
+			Name = "gleeman_shawm";
+			AnimationName = "gleeman_shawm";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 2010;
+					FadeStart = 200.000;
+					FadeOut = 1700.000;
+				},
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 0;
+					SpawnName = "shawm/shawm";
+				},
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1591783188;
+			Name = "gleeman_fiddle";
+			AnimationName = "gleeman_fiddle";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 2011;
+					FadeStart = 200.000;
+					FadeOut = 1700.000;
+				},
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 0;
+					SpawnName = "fiddle/fiddle";
+				},
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 0;
+					SpawnName = "fiddlebow/fiddlebow";
+				},
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1591783157;
+			Name = "gleeman_drum2";
+			AnimationName = "gleeman_drum";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 2015;
+					FadeStart = 200.000;
+					FadeOut = 1700.000;
+				},
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 0;
+					SpawnName = "drum/drum";
+				},
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 0;
+					SpawnName = "drumstick/drumstick";
+				},
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1591783175;
+			Name = "gleeman_bagpipe";
+			AnimationName = "gleeman_bagpipe";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 2016;
+					FadeStart = 200.000;
+					FadeOut = 1700.000;
+				},
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 0;
+					SpawnName = "bagpipe/bagpipe";
+				},
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1591783188;
+			Name = "gleeman_fiddle2";
+			AnimationName = "gleeman_fiddle";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 2017;
+					FadeStart = 200.000;
+					FadeOut = 1700.000;
+				},
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 0;
+					SpawnName = "fiddle/fiddle";
+				},
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 0;
+					SpawnName = "fiddlebow/fiddlebow";
+				},
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1991429047;
+			Name = "gleeman_bagpipe_nosound";
+			AnimationName = "gleeman_bagpipe";
+			Looping = true;
+			Triggers = array
+			(
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 0;
+					SpawnName = "bagpipe/bagpipe";
+				},
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1991429044;
+			Name = "gleeman_drum_nosound";
+			AnimationName = "gleeman_drum";
+			Looping = true;
+			Triggers = array
+			(
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 0;
+					SpawnName = "drum/drum";
+				},
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 0;
+					SpawnName = "drumstick/drumstick";
+				},
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1396242167;
+			Name = "gleeman_shawm_nosound";
+			AnimationName = "gleeman_shawm";
+			Looping = true;
+			Triggers = array
+			(
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 0;
+					SpawnName = "shawm/shawm";
+				},
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 6866888182;
+			Name = "gleeman_fiddle_nosound";
+			AnimationName = "gleeman_fiddle";
+			Looping = true;
+			Triggers = array
+			(
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 0;
+					SpawnName = "fiddle/fiddle";
+				},
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 0;
+					SpawnName = "fiddlebow/fiddlebow";
+				},
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1700000002;
+			Name = "chop_fish";
+			AnimationName = "blacksmith1";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 2020;
+					FadeStart = 200.000;
+					FadeOut = 1700.000;
+				},
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1700000007;
+			Name = "read_bible";
+			AnimationName = "read_love_letter1";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 2021;
+					FadeStart = 200.000;
+					FadeOut = 1700.000;
+				},
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+	);
+}
