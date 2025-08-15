@@ -1,0 +1,43 @@
+lamppost_01 extends G3PropsInstance
+{
+	SnapGround = true;
+	
+	static var Description = G3ActorDesc
+	{
+		Visual = "lamppost_01";
+		
+		AnimationArray = AnimationListArray
+		{
+			AnimationLists = array
+			(
+				AnimationList {
+					Animations = array {
+						AnimationDesc {
+							ID = 1490282383;
+							Name = "Idle";
+							AnimationName = "Idle";
+							Looping = true;
+							Triggers = array {
+								DaytimeEffectTrigger {
+									PlaybackSpeedVariation = 0.1;
+									IsRequired = true;
+									NoLoop = true;
+									Effects = array {
+										("Lamppost_Light", 0.999),
+										("Purple_lamp", 0.001),
+									};
+									RefNodeOverride = "Dummy01";
+									RandomOffset = 0.5;
+								},
+							};
+						},
+					};
+				},
+			);
+		};
+	};
+	
+	EditorName = "Lamppost01";
+	EditorIcon = "media/UserInterface/PropIcons/Lamppost01.png";
+	EditorCategory = 3;		
+}
