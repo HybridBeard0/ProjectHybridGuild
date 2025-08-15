@@ -1,0 +1,9 @@
+lr_male_standard/lr_male_standard_desc
+{
+	Visual = "executioner";
+	MiddleClass = true;
+	Rich = true;
+	Male = true;
+	Player = true;
+	Employee = true;
+}

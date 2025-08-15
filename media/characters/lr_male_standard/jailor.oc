@@ -1,0 +1,7 @@
+jailor extends G3Character
+{
+	static var Description = #lr_male_standard/executioner_desc;
+	
+	ProfessionId = "Jailor";
+	DateOfBirth = 1370.0;
+};
