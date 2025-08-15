@@ -1,0 +1,12 @@
+G3ActorDesc
+{
+	Visual = "crow";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#crow/list_fly_animations,
+		);
+	};
+	CrowdControlRadius = -60288328124521364000000.000;
+}
