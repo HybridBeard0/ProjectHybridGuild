@@ -8098,10 +8098,16 @@
 
 	SourceScoreFormula = "1";
 
+// ForRent CHANGE
+	TargetTags = array{"ForRent"};
+
 	DesiredProfiles = array
 	{
 		TargetProfileBuilding
 		{					
+// ForRent CHANGE
+			MatchTargetTags = -3;
+
 			IncludedTypes = array{"Mansion"};
 			Burning = -3;
 			FamilyProfile = TargetProfileFamily
@@ -8113,6 +8119,9 @@
 		};
 		TargetProfileBuilding
 		{
+// ForRent CHANGE
+			MatchTargetTags = -3;
+
 			IncludedTypes = array{"Mansion"};
 			Burning = -3;
 			FamilyProfile = TargetProfileFamily

@@ -13,7 +13,7 @@ LawSystemDefault extends LawSystem
 			{
 				UnlockEffect
 				{
-					Names = array{"PowerSovereignLawmaker"};
+					Names = array{"PowerSovereignLawmaker", "MakePeaceBetweenEnemies", "SparkAFeud"};
 				},
 				ModifierEffect
 				{

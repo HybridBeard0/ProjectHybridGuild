@@ -7130,5 +7130,190 @@ MessagesContainer extends MessageRegistrar
 			//SFX = 34;
 			//VO = 116;
 		};
+
+// *** LandlordMod ***
+
+		// FunctionSendMessage
+		"MakePeaceBetweenEnemiesSource" = MessageDescription //Triggered when the player uses MakePeaceBetweenEnemies
+		{
+			Title = "$notification.MakePeaceBetweenEnemiesSource.Head";
+			Body = "$notification.MakePeaceBetweenEnemiesSource.Body";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			//VO = 199;
+		};
+
+		// FunctionSendMessage
+		"MakePeaceBetweenEnemiesTarget1" = MessageDescription //Triggered when the player was the target of a successful MakePeaceBetweenEnemies
+		{
+			Title = "$notification.MakePeaceBetweenEnemiesTarget1.Head";
+			Body = "$notification.MakePeaceBetweenEnemiesTarget1.Body";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			//VO = 199;
+		};
+
+		// FunctionSendMessage
+		"MakePeaceBetweenEnemiesTarget1femaleSovereign" = MessageDescription //Triggered when the player was the target of a successful MakePeaceBetweenEnemies
+		{
+			Title = "$notification.MakePeaceBetweenEnemiesTarget1.Head";
+			Body = "$notification.MakePeaceBetweenEnemiesTarget1.Body.femaleSovereign";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			//VO = 199;
+		};
+
+		// FunctionSendMessage
+		"MakePeaceBetweenEnemiesTarget2" = MessageDescription //Triggered when the player was the target of a successful MakePeaceBetweenEnemies
+		{
+			Title = "$notification.MakePeaceBetweenEnemiesTarget2.Head";
+			Body = "$notification.MakePeaceBetweenEnemiesTarget2.Body";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			//VO = 201;
+		};
+
+		// FunctionSendMessage
+		"MakePeaceBetweenEnemiesTarget2femaleSovereign" = MessageDescription //Triggered when the player was the target of a successful MakePeaceBetweenEnemies
+		{
+			Title = "$notification.MakePeaceBetweenEnemiesTarget2.Head";
+			Body = "$notification.MakePeaceBetweenEnemiesTarget2.Body.femaleSovereign";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			//VO = 201;
+		};
+
+		// FunctionSendMessage
+		"SparkAFeudSource" = MessageDescription //Triggered when the player uses SparkAFeud
+		{
+			Title = "$notification.SparkAFeudSource.Head";
+			Body = "$notification.SparkAFeudSource.Body";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			//VO = 199;
+		};
+
+		// FunctionSendMessage
+		"SparkAFeudTarget1" = MessageDescription //Triggered when the player was the target of a successful SparkAFeud
+		{
+			Title = "$notification.SparkAFeudTarget1.Head";
+			Body = "$notification.SparkAFeudTarget1.Body";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			//VO = 199;
+		};
+
+		// FunctionSendMessage
+		"SparkAFeudTarget1femaleSovereign" = MessageDescription //Triggered when the player was the target of a successful SparkAFeud
+		{
+			Title = "$notification.SparkAFeudTarget1.Head";
+			Body = "$notification.SparkAFeudTarget1.Body.femaleSovereign";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			//VO = 199;
+		};
+
+		// FunctionSendMessage
+		"SparkAFeudTarget2" = MessageDescription //Triggered when the player was the target of a successful SparkAFeud
+		{
+			Title = "$notification.SparkAFeudTarget2.Head";
+			Body = "$notification.SparkAFeudTarget2.Body";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			//VO = 201;
+		};
+
+		// FunctionSendMessage
+		"SparkAFeudTarget2femaleSovereign" = MessageDescription //Triggered when the player was the target of a successful SparkAFeud
+		{
+			Title = "$notification.SparkAFeudTarget2.Head";
+			Body = "$notification.SparkAFeudTarget2.Body.femaleSovereign";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			//VO = 201;
+		};
+
+		// FunctionSendMessage
+		"UseMatchmaker" = MessageDescription
+		{
+			Title = "$notification.UseMatchmaker.Head";
+			Body = "$notification.UseMatchmaker.Body";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 426;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+					ApplyTo = "Target";
+				};
+			};
+		};
+
+// ForRent CHANGE
+		// FunctionSendMessage
+		"ForRent-NPCStayedTheNight" = MessageDescription
+		{
+			Title = "$notification.ForRent-NPCStayedTheNight.Head";
+			Body = "$notification.ForRent-NPCStayedTheNight.Body";
+			Effect = "";
+			Icon = "Hospitality";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			//SFX = 32;
+			//VO = 426;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
 	};
 };

@@ -1233,7 +1233,9 @@
 	SelectionPromptCallToAction = "$callToAction.ResidencePlayersBathroom";
 	SelectionPromptNoTargetMessage = "$selectionPrompt.NoFreeBathTub";
 
-	TargetTags = array{"BathroomBlocked"};
+// ForRent CHANGE
+	TargetTags = array{"BathroomBlocked", "ForRent"};
+	
 	DesiredProfiles = array
 	{
 		TargetProfileBuilding
@@ -3942,11 +3944,17 @@
 	ShowSelectionPrompt = "UseTargetProfile";
 	SelectionPromptCallToAction = "$selectionPrompt.SelectResidence";
 	SelectionPromptNoTargetMessage = "$selectionPrompt.NoFreeTrainingSpot";
+
+// ForRent CHANGE
+	TargetTags = array{"ForRent"};
 	
 	DesiredProfiles = array
 	{
 		TargetProfileBuilding
 		{
+// ForRent CHANGE
+			MatchTargetTags = -3;
+
 			IncludedTypes = array{"CountryHouse", "PoorHouse", "CityHouse", "Mansion"};
 			CloseToActor = 2;
 			Burning = -3;
@@ -3963,6 +3971,9 @@
 		// Family members or employee
 		TargetProfileBuilding
 		{					
+// ForRent CHANGE
+			MatchTargetTags = -3;
+
 			IncludedTypes = array{"CountryHouse", "PoorHouse", "CityHouse", "Mansion"};
 			CloseToActor = 2;
 			Burning = -3;
@@ -4107,10 +4118,16 @@
 	SelectionPromptCallToAction = "$selectionPrompt.SelectResidence";
 	SelectionPromptNoTargetMessage = "$selectionPrompt.NoFreeTrainingSpot";
 	
+// ForRent CHANGE
+	TargetTags = array{"ForRent"};
+	
 	DesiredProfiles = array
 	{
 		TargetProfileBuilding
 		{
+// ForRent CHANGE
+			MatchTargetTags = -3;
+
 			IncludedTypes = array{"CountryHouse", "PoorHouse", "CityHouse", "Mansion"};
 			CloseToActor = 2;
 			Burning = -3;
@@ -4127,6 +4144,9 @@
 		// Family members or employee
 		TargetProfileBuilding
 		{					
+// ForRent CHANGE
+			MatchTargetTags = -3;
+
 			IncludedTypes = array{"CountryHouse", "PoorHouse", "CityHouse", "Mansion"};
 			CloseToActor = 2;
 			Burning = -3;
@@ -4271,10 +4291,16 @@
 	SelectionPromptCallToAction = "$selectionPrompt.SelectResidence";
 	SelectionPromptNoTargetMessage = "$selectionPrompt.NoFreeTrainingSpot";
 	
+// ForRent CHANGE
+	TargetTags = array{"ForRent"};
+	
 	DesiredProfiles = array
 	{
 		TargetProfileBuilding
 		{
+// ForRent CHANGE
+			MatchTargetTags = -3;
+
 			IncludedTypes = array{"CountryHouse", "PoorHouse", "CityHouse", "Mansion"};
 			CloseToActor = 2;
 			Burning = -3;
@@ -4291,6 +4317,9 @@
 		// Family members or employee
 		TargetProfileBuilding
 		{					
+// ForRent CHANGE
+			MatchTargetTags = -3;
+
 			IncludedTypes = array{"CountryHouse", "PoorHouse", "CityHouse", "Mansion"};
 			CloseToActor = 2;
 			Burning = -3;
@@ -4435,10 +4464,16 @@
 	SelectionPromptCallToAction = "$selectionPrompt.SelectResidence";
 	SelectionPromptNoTargetMessage = "$selectionPrompt.NoFreeTrainingSpot";
 	
+// ForRent CHANGE
+	TargetTags = array{"ForRent"};
+	
 	DesiredProfiles = array
 	{
 		TargetProfileBuilding
 		{
+// ForRent CHANGE
+			MatchTargetTags = -3;
+
 			IncludedTypes = array{"CountryHouse", "PoorHouse", "CityHouse", "Mansion"};
 			CloseToActor = 2;
 			Burning = -3;
@@ -4455,6 +4490,9 @@
 		// Family members or employee
 		TargetProfileBuilding
 		{					
+// ForRent CHANGE
+			MatchTargetTags = -3;
+
 			IncludedTypes = array{"CountryHouse", "PoorHouse", "CityHouse", "Mansion"};
 			CloseToActor = 2;
 			Burning = -3;
@@ -4599,10 +4637,16 @@
 	SelectionPromptCallToAction = "$selectionPrompt.SelectResidence";
 	SelectionPromptNoTargetMessage = "$selectionPrompt.NoFreeTrainingSpot";
 	
+// ForRent CHANGE
+	TargetTags = array{"ForRent"};
+	
 	DesiredProfiles = array
 	{
 		TargetProfileBuilding
 		{
+// ForRent CHANGE
+			MatchTargetTags = -3;
+
 			IncludedTypes = array{"CountryHouse", "PoorHouse", "CityHouse", "Mansion"};
 			CloseToActor = 2;
 			Burning = -3;
@@ -4619,6 +4663,9 @@
 		// Family members or employee
 		TargetProfileBuilding
 		{					
+// ForRent CHANGE
+			MatchTargetTags = -3;
+
 			IncludedTypes = array{"CountryHouse", "PoorHouse", "CityHouse", "Mansion"};
 			CloseToActor = 2;
 			Burning = -3;

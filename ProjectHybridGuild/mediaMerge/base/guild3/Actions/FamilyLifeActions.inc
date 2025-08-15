@@ -26,7 +26,8 @@
 	ResumeAfterInterruption = false;
 
 	EnterBuilding = "TryEnter";
-	TargetTags = array{"Feast"};
+// ForRent CHANGE
+	TargetTags = array{"Feast", "ForRent"};
 	DesiredProfiles = array
 	{
 		TargetProfileBuilding
@@ -110,7 +111,8 @@
 	ResumeAfterInterruption = false;
 
 	EnterBuilding = "TryEnter";
-	TargetTags = array{"Feast"};
+// ForRent CHANGE
+	TargetTags = array{"Feast", "ForRent"};
 	DesiredProfiles = array
 	{
 		TargetProfileBuilding
@@ -199,7 +201,8 @@
 	ResumeAfterInterruption = false;
 
 	EnterBuilding = "TryEnter";
-	TargetTags = array{"Feast"};
+// ForRent CHANGE
+	TargetTags = array{"Feast", "ForRent"};
 	DesiredProfiles = array
 	{
 		TargetProfileBuilding
@@ -282,7 +285,8 @@
 	ResumeAfterInterruption = false;
 
 	EnterBuilding = "TryEnter";
-	TargetTags = array{"Feast"};
+// ForRent CHANGE
+	TargetTags = array{"Feast", "ForRent"};
 	DesiredProfiles = array
 	{
 		TargetProfileBuilding
@@ -365,7 +369,8 @@
 	ResumeAfterInterruption = false;
 
 	EnterBuilding = "TryEnter";
-	TargetTags = array{"Feast"};
+// ForRent CHANGE
+	TargetTags = array{"Feast", "ForRent"};
 	DesiredProfiles = array
 	{
 		TargetProfileBuilding
@@ -448,7 +453,8 @@
 	ResumeAfterInterruption = false;
 
 	EnterBuilding = "TryEnter";
-	TargetTags = array{"Feast"};
+// ForRent CHANGE
+	TargetTags = array{"Feast", "ForRent"};
 	DesiredProfiles = array
 	{
 		TargetProfileBuilding
@@ -531,7 +537,8 @@
 	ResumeAfterInterruption = false;
 
 	EnterBuilding = "TryEnter";
-	TargetTags = array{"Feast"};
+// ForRent CHANGE
+	TargetTags = array{"Feast", "ForRent"};
 	DesiredProfiles = array
 	{
 		TargetProfileBuilding
@@ -615,7 +622,8 @@
 	ResumeAfterInterruption = false;
 
 	EnterBuilding = "TryEnter";
-	TargetTags = array{"Feast"};
+// ForRent CHANGE
+	TargetTags = array{"Feast", "ForRent"};
 	DesiredProfiles = array
 	{
 		TargetProfileBuilding
@@ -699,7 +707,9 @@
 
 	EnterBuilding = "TryEnter";
 
-	TargetTags = array{"BathroomBlocked","Feast"};
+// ForRent CHANGE
+	TargetTags = array{"BathroomBlocked", "Feast", "ForRent"};
+
 	DesiredProfiles = array
 	{
 		TargetProfileBuilding
