@@ -1,0 +1,10 @@
+citywall_04_medium extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "citywall_04_medium";
+	};
+	EditorName = "citywall_medium_04";
+	EditorIcon = "media/UserInterface/BusinessIcons/Other/CityWall.png";
+	EditorCategory = 2;		
+}

@@ -1,0 +1,9 @@
+guardpost_02 extends BuildingVisualUpgrade
+{
+	static var Description = ActorDesc
+	{
+		Visual = "guardpost_02";
+	};
+	BusinessLevel = 2;
+	UpgradeOf = guardpost;
+}

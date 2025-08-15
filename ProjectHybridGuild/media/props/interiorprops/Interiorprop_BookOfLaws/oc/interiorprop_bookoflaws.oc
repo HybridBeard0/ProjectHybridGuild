@@ -1,0 +1,21 @@
+interiorprop_bookoflaws extends G3PropsInstance
+{
+	static var Description = G3PropDesc
+	{
+		Visual = "interiorprop_bookoflaws";
+		
+		Interaction = G3ActorInteraction 
+		{
+			Name = "$props.name.BookOfLaws";
+			TooltipText = "$action.OpenBookOfLaws";
+			TooltipIcon = "MoreInfos";
+			UiEvent = "ToggleOfficesWindowLaws";
+		};
+	};
+	
+	Interactable = true;
+	
+	EditorName = "Interiorprop BookofLaws";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

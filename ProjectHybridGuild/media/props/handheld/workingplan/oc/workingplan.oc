@@ -1,0 +1,14 @@
+workingplan extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "workingplan";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+	EditorName = "Workingplan";
+	EditorIcon = "media/UserInterface/PropIcons/Book.png";
+	EditorCategory = 3;		
+}

@@ -1,0 +1,22 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1481301816;
+			Name = "idle1";
+			AnimationName = "idle1";
+			Triggers = array
+			(
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Effect_LongerLife";
+					RefNodeOverride = "Snap";
+				},
+			);
+		},
+	);
+}

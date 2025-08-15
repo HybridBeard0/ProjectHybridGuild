@@ -1,0 +1,10 @@
+rock_03 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "rock_03";
+	};
+	EditorName = "Rock03";
+	EditorIcon = "media/UserInterface/PropIcons/Rock03.png";
+	EditorCategory = 2;		
+}

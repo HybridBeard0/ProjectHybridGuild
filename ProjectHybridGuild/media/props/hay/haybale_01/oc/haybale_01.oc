@@ -1,0 +1,10 @@
+haybale_01 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "haybale_01";
+	};
+	EditorName = "Haybale01";
+	EditorIcon = "media/UserInterface/PropIcons/Haybale01.png";
+	EditorCategory = 3;		
+}

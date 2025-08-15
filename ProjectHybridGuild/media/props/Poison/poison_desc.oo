@@ -1,0 +1,17 @@
+G3ActorDesc
+{
+	Visual = "poison";
+	MoveStateListArray = MoveStateListArray
+	{
+	};
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#poison/list_actions_animations,
+		);
+	};
+	AttachType = "AttachToNode";
+	AttachParentNode = "Bip001 R Hand";
+	AttachChildNode = "Bone_Main";
+}

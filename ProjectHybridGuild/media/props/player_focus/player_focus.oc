@@ -1,0 +1,9 @@
+player_focus extends G3Actor
+{
+	static var Description = #player_focus/player_focus_desc;
+
+	function onInit()
+	{
+		this.playAnimationByName("walk1");
+	}
+};

@@ -1,0 +1,15 @@
+G3ActorDesc
+{
+	Visual = "effect_inebriate";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#Effect_Inebriate/list_idles_animations,
+		);
+	};
+	AttachType = "AttachToNode";
+	AttachParentNode = "Bip001 Head";
+	AttachChildNode = "Snap_Particles";
+
+}

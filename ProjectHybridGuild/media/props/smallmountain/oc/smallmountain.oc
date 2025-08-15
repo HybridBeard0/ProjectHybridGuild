@@ -1,0 +1,10 @@
+smallmountain extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "smallmountain";
+	};
+	EditorName = "smallmountain";
+	EditorIcon = "media/UserInterface/PropIcons/smallmountain.png";
+	EditorCategory = 6;		
+}

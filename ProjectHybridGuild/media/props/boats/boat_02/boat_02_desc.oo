@@ -1,0 +1,11 @@
+G3CharacterDesc
+{
+	Visual = "boat_02";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#boat_02/list_idles_animations,
+		);
+	};
+}

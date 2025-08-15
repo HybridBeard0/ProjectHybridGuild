@@ -1,0 +1,40 @@
+interiorprop_churchvillage_donationbox extends G3PropsInstance
+{
+	static var Description = G3PropDesc
+	{
+		Visual = "interiorprop_churchvillage_donationbox";
+		
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc
+				{
+					Name = "interact_00";
+					Position = ( -35.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 90.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Animation = "opendoor";
+							Context = "DonateToChurch";
+						},
+					};
+				},
+			};
+		};
+	
+		Interaction = G3ActorInteraction {
+			Name = "$props.name.DonationBox";
+			TooltipText = "$action.DonateToChurch";
+			TooltipIcon = "DonateToChurch";
+			ContextAction = "DonateToChurch";
+			ActionFailureMessage = "DonateToChurchInteractionError";
+		};
+	};
+	
+	Interactable = true;
+	
+	EditorName = "Interiorprop Churchvillage Donationbox";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

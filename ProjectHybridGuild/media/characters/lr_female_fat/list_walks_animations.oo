@@ -1,0 +1,106 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1438179962;
+			Name = "cart_walk1";
+			AnimationName = "cart_walk1";
+			Looping = true;
+			Speed = 2.000;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1479913867;
+			Name = "drunk_walk1";
+			AnimationName = "drunk_walk1";
+			Motion = 80.000;
+			Looping = true;
+		},
+		AnimationDesc
+		{
+			ID = 1475258110;
+			Name = "EscortCharacter";
+			AnimationName = "walk1";
+			Looping = true;
+		},
+		AnimationDesc
+		{
+			ID = 1437671151;
+			Name = "prostitutewalk1";
+			AnimationName = "prostitutewalk1";
+			Looping = true;
+		},
+		AnimationDesc
+		{
+			ID = 1472153685;
+			Name = "sadwalk1";
+			AnimationName = "sadwalk1";
+			Motion = 40.000;
+		},
+		AnimationDesc
+		{
+			ID = 1474490724;
+			Name = "suspicious_walk";
+			AnimationName = "suspicious_walk";
+			Looping = true;
+		},
+		AnimationDesc
+		{
+			ID = 1429885239;
+			Name = "walk1";
+			AnimationName = "walk1";
+			Motion = 60.000;
+		},
+		AnimationDesc
+		{
+			ID = 1427902938;
+			Name = "walk_armor";
+			AnimationName = "walk1";
+			Motion = 60.000;
+		},
+		AnimationDesc
+		{
+			ID = 1429885246;
+			Name = "walk2";
+			AnimationName = "walk2";
+		},
+		AnimationDesc
+		{
+			ID = 1429885253;
+			Name = "walk3";
+			AnimationName = "walk3";
+		},
+		AnimationDesc
+		{
+			ID = 1429885261;
+			Name = "walk4";
+			AnimationName = "walk4";
+		},
+		AnimationDesc
+		{
+			ID = 1483543861;
+			Name = "walk_torch";
+			AnimationName = "walk_torch";
+			Looping = true;
+			Motion = 60.000;
+		},
+		AnimationDesc
+		{
+			ID = 1482419187;
+			Name = "walk_walkstick";
+			AnimationName = "walk_walkstick";
+			Motion = 65.000;
+		},
+	);
+}

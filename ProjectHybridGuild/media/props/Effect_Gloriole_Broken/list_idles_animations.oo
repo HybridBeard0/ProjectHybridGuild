@@ -1,0 +1,23 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1480357931;
+			Name = "idle1";
+			AnimationName = "idle1";
+			Looping = true;
+			Triggers = array
+			(
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Gloriole_broken";
+					RefNodeOverride = "Snap_Particles";
+				},
+			);
+		},
+	);
+}

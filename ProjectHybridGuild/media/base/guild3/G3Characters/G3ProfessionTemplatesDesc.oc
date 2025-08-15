@@ -1,0 +1,595 @@
+G3ProfessionTemplatesDesc extends G3ProfessionTemplates{
+
+// G3CharacterProfession entries have the following structur:
+// "Key" = G3CharacterProfession
+//{
+//		DisplayName = Localization key 
+//		Description = Localization key
+//		CharacterType = Must be part of EEmployeeType
+//		Icon = Name of the icon to use, icon needs to be located at data\media\UserInterface\Icons\Professions
+//		BusinessEnumType = int, EnumType of the corresponding building
+// 		BodyArmor = Name of the body item they should be equipped with
+//		Equipment = List of items to equip. They will be equipped in the order specified. If anything is unequipped, it's destroyed. Will coexist with BodyArmor and possibly override it.
+//		ResultObjects = List of results to apply to the character. All effects in those result objects should be tagged with the "Profession" tag so they can be correctly removed when switching professions.
+//		MinimumLevel = Minimum level for the profession. If the character is below this level when the profession is assigned, he gets leveled up to that level.
+//}
+
+// EEmployeeType: Production=0, Transport=2, Henchmen=3
+
+//Example:
+// "Miller" = G3CharacterProfession  
+//		{
+//			DisplayName = "$profession.Miller"
+//			Description = "$profession.MillerDesc"
+//			CharacterType = 0
+//			Icon = "Windmill"
+//			BusinessEnumType = 43 //has to be the same number as EnumType of the corresponding building
+//			BodyArmor = "Commoner2"
+//		};
+
+
+	Professions = array
+	{
+		G3CharacterProfession
+		{
+			Name = "Transporter";
+			DisplayName = "$profession.Transporter";
+			Description = "$profession.TransporterDesc";
+			CharacterType = 2;
+			Icon = "Transporter";
+			SkillGroup = "Transporter";
+			BodyArmor = "TransporterClothes";
+			AttributeWeights = array { 0.0f, 0.5f, 0.1f, 0.0f, 1.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+		
+		G3CharacterProfession
+		{
+			Name = "Henchmen";
+			DisplayName = "$profession.Henchman";
+			Description = "$profession.HenchmanDesc";
+			CharacterType = 3;
+			Icon = "Henchmen"; // needs proper henchmen icon;
+			SkillGroup = "Henchmen";
+			BodyArmor = "HenchmenArmor";
+			AttributeWeights = array { 1.0f, 1.0f, 0.0f, 0.5f, 0.1f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+		
+		G3CharacterProfession
+		{
+			Name = "Miller";
+			DisplayName = "$profession.Miller";
+			Description = "$profession.MillerDesc";
+			CharacterType = 0;
+			Icon = "Miller";
+			BusinessEnumType = 43;
+			SkillGroup = "HuntingFarming";
+			BodyArmor = "MillerClothes";
+			AttributeWeights = array { 0.0f, 1.0f, 1.0f, 0.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+		
+		G3CharacterProfession
+		{
+			Name = "Butcher";
+			DisplayName = "$profession.Butcher";
+			Description = "$profession.ButcherDesc";
+			CharacterType = 0;
+			Icon = "Butcher";
+			BusinessEnumType = 44; 
+			SkillGroup = "HuntingFarming";
+			BodyArmor = "ButcherClothes";
+			AttributeWeights = array { 0.0f, 1.0f, 1.0f, 0.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+		
+		G3CharacterProfession
+		{
+			Name = "Fisher";
+			DisplayName = "$profession.Fisher";
+			Description = "$profession.FisherDesc";
+			CharacterType = 0;
+			Icon = "Fisher";
+			BusinessEnumType = 53; 
+			SkillGroup = "HuntingFarming";
+			BodyArmor = "FisherClothes";
+			AttributeWeights = array { 0.0f, 1.0f, 1.0f, 0.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+
+		G3CharacterProfession
+		{
+			Name = "Orchardist";
+			DisplayName = "$profession.Orchardist";
+			Description = "$profession.OrchardistDesc";
+			CharacterType = 0;
+			Icon = "Orchardist";
+			BusinessEnumType = 61; 
+			SkillGroup = "HuntingFarming";
+			BodyArmor = "OrchardistClothes";
+			AttributeWeights = array { 0.0f, 1.0f, 1.0f, 0.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+		
+		G3CharacterProfession
+		{
+			Name = "Baker";
+			DisplayName = "$profession.Baker";
+			Description = "$profession.BakerDesc";
+			CharacterType = 0;
+			Icon = "Baker";
+			BusinessEnumType = 16;
+			SkillGroup = "HuntingFarming";
+			BodyArmor = "BakerClothes";
+			AttributeWeights = array { 0.0f, 1.0f, 1.0f, 0.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+		
+		G3CharacterProfession
+		{
+			Name = "Farmer";
+			DisplayName = "$profession.Farmer";
+			Description = "$profession.FarmerDesc";
+			CharacterType = 0;
+			Icon = "Farmer";
+			BusinessEnumType = 22; 
+			SkillGroup = "HuntingFarming";
+			BodyArmor = "FarmerClothes";
+			AttributeWeights = array { 0.0f, 1.0f, 1.0f, 0.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+		
+		G3CharacterProfession
+		{
+			Name = "Innkeeper";
+			DisplayName = "$profession.Innkeeper";
+			Description = "$profession.InnkeeperDesc";
+			CharacterType = 0;
+			Icon = "Innkeeper";
+			BusinessEnumType = 24; 
+			SkillGroup = "HuntingFarming";
+			BodyArmor = "InnkeeperClothes";
+			AttributeWeights = array { 0.0f, 1.0f, 1.0f, 0.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+		
+		G3CharacterProfession
+		{
+			Name = "CityGuard";
+			DisplayName = "$name.Cityguard";
+			Description = "$name.Cityguard";
+			CharacterType = 0;
+			Icon = "Cityguard";
+			SkillGroup = "Fighting";
+			Equipment = array{ "ShortSword", "IronBracelet", "CityGuardArmor" };
+			AttributeWeights = array { 2.0f, 2.0f, 1.0f, 4.0f, 1.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+			ResultObjects = array{ "CityGuardBuff" };
+		},
+
+		G3CharacterProfession
+		{
+			Name = "VIPGuard";
+			DisplayName = "$name.Cityguard";
+			Description = "$name.Cityguard";
+			CharacterType = 0;
+			Icon = "Cityguard";
+			SkillGroup = "Fighting";
+			Equipment = array{ "ShortSword", "IronBracelet", "CityGuardArmor" };
+			AttributeWeights = array { 2.0f, 2.0f, 1.0f, 4.0f, 1.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+			ResultObjects = array{ "VIPGuardBuff" };
+		},
+		
+		G3CharacterProfession
+		{
+			Name = "Artisan";
+			DisplayName = "$profession.Artisan";
+			Description = "$profession.ArtisanDesc";
+			CharacterType = 0;
+			Icon = "Artisan";
+			BusinessEnumType = 17;
+			SkillGroup = "Handicraft";
+			BodyArmor = "ArtisanClothes";
+			AttributeWeights = array { 0.0f, 1.0f, 1.0f, 0.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+
+		G3CharacterProfession
+		{
+			Name = "Tinker";
+			DisplayName = "$profession.Tinker";
+			Description = "$profession.TinkerDesc";
+			CharacterType = 0;
+			Icon = "Tinker";
+			BusinessEnumType = 60;
+			SkillGroup = "Handicraft";
+			BodyArmor = "TinkerClothes";
+			AttributeWeights = array { 0.0f, 1.0f, 1.0f, 0.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+
+		G3CharacterProfession
+		{
+			Name = "Masonery";
+			DisplayName = "$profession.Masonery";
+			Description = "$profession.MasoneryDesc";
+			CharacterType = 0;
+			Icon = "Masonery";
+			BusinessEnumType = 58;
+			SkillGroup = "Handicraft";
+			BodyArmor = "MasoneryClothes";
+			AttributeWeights = array { 0.0f, 1.0f, 1.0f, 0.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+		
+		G3CharacterProfession
+		{
+			Name = "Tailor";
+			DisplayName = "$profession.Tailor";
+			Description = "$profession.TailorDesc";
+			CharacterType = 0;
+			Icon = "Tailor";
+			BusinessEnumType = 27;
+			SkillGroup = "Handicraft";
+			BodyArmor = "TailorClothes";
+			AttributeWeights = array { 0.0f, 1.0f, 1.0f, 0.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+		
+		G3CharacterProfession
+		{
+			Name = "Carpenter";
+			DisplayName = "$profession.Carpenter";
+			Description = "$profession.CarpenterDesc";
+			CharacterType = 0;
+			Icon = "Carpenter";
+			BusinessEnumType = 19;
+			SkillGroup = "Handicraft";
+			BodyArmor = "CarpenterClothes";
+			AttributeWeights = array { 0.0f, 1.0f, 1.0f, 0.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+		
+		G3CharacterProfession
+		{
+			Name = "Stonemason";
+			DisplayName = "$profession.Stonemason";
+			Description = "$profession.StonemasonDesc";
+			CharacterType = 0;
+			Icon = "Stonemason";
+			BusinessEnumType = 26;
+			SkillGroup = "Handicraft";
+			BodyArmor = "StonemasonClothes";
+			AttributeWeights = array { 0.0f, 1.0f, 1.0f, 0.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+		
+		G3CharacterProfession
+		{
+			Name = "Smith";
+			DisplayName = "$profession.Blacksmith";
+			Description = "$profession.BlacksmithDesc";
+			CharacterType = 0;
+			Icon = "Smith";
+			BusinessEnumType = 18;
+			SkillGroup = "Handicraft";
+			BodyArmor = "SmithClothes";
+			AttributeWeights = array { 0.0f, 1.0f, 1.0f, 0.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+		
+		G3CharacterProfession
+		{
+			Name = "Herbalist";
+			DisplayName = "$profession.Herbalist";
+			Description = "$profession.HerbalistDesc";
+			CharacterType = 0;
+			Icon = "Herbalist";
+			BusinessEnumType = 51;
+			SkillGroup = "Herbalism";
+			BodyArmor = "HerbalistClothes";
+			AttributeWeights = array { 0.0f, 1.0f, 1.0f, 0.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+
+		G3CharacterProfession
+		{
+			Name = "Preacher";
+			DisplayName = "$profession.Preacher";
+			Description = "$profession.PreacherDesc";
+			CharacterType = 0;
+			Icon = "Preacher";
+			BusinessEnumType = 59;
+			SkillGroup = "Herbalism";
+			BodyArmor = "PreacherClothes";
+			AttributeWeights = array { 0.0f, 0.0f, 1.0f, 0.0f, 1.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+			ResultObjects = array { "PreacherBuff" };
+		},
+		G3CharacterProfession
+		{
+			Name = "CityPreacher";
+			DisplayName = "$profession.CityPreacher";
+			Description = "$profession.CityPreacherDesc";
+			CharacterType = 0;
+			Icon = "Preacher";
+			BusinessEnumType = 62;
+			SkillGroup = "Herbalism";
+			BodyArmor = "PreacherClothes";
+			AttributeWeights = array { 0.0f, 0.0f, 1.0f, 0.0f, 1.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+			ResultObjects = array { "PreacherBuff" };
+		},
+
+		G3CharacterProfession
+		{
+			Name = "Barber";
+			DisplayName = "$profession.Barber";
+			Description = "$profession.BarberDesc";
+			CharacterType = 0;
+			Icon = "Barber";
+			BusinessEnumType = 55;
+			SkillGroup = "Herbalism";
+			BodyArmor = "BarberClothes";
+			AttributeWeights = array { 0.0f, 1.0f, 1.0f, 0.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+		
+		G3CharacterProfession
+		{
+			Name = "Apothecary";
+			DisplayName = "$profession.Apothecary";
+			Description = "$profession.ApothecaryDesc";
+			CharacterType = 0;
+			Icon = "Apothecary";
+			BusinessEnumType = 49;
+			SkillGroup = "Herbalism";
+			BodyArmor = "ApothecaryClothes";
+			AttributeWeights = array { 0.0f, 1.0f, 1.0f, 0.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+		
+		G3CharacterProfession
+		{
+			Name = "Alchemist";
+			DisplayName = "$profession.Alchemist";
+			Description = "$profession.AlchemistDesc";
+			CharacterType = 0;
+			Icon = "Alchemist";
+			BusinessEnumType = 14;
+			SkillGroup = "Herbalism";
+			BodyArmor = "AlchemistClothes";
+			AttributeWeights = array { 0.0f, 1.0f, 1.0f, 0.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+		
+		G3CharacterProfession
+		{
+			Name = "Medicus";
+			DisplayName = "$profession.Medicus";
+			Description = "$profession.MedicusDesc";
+			CharacterType = 0;
+			Icon = "Medicus";
+			BusinessEnumType = 20;
+			SkillGroup = "Herbalism";
+			BodyArmor = "MedicusClothes";
+			AttributeWeights = array { 0.0f, 1.0f, 1.0f, 0.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+		
+		G3CharacterProfession
+		{
+			Name = "Scholar";
+			DisplayName = "$profession.Scholar";
+			Description = "$profession.ScholarDesc";
+			CharacterType = 0;
+			Icon = "Scholar";
+			BusinessEnumType = 21;
+			SkillGroup = "Herbalism";
+			BodyArmor = "ScholarClothes";
+			AttributeWeights = array { 0.0f, 1.0f, 1.0f, 0.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+		
+		G3CharacterProfession
+		{
+			Name = "Robber";
+			DisplayName = "$profession.Robber";
+			Description = "$profession.RobberDesc";
+			CharacterType = 0;
+			Icon = "Robber";
+			BusinessEnumType = 48;
+			SkillGroup = "Rogue";
+			BodyArmor = "RobberClothes";
+			AttributeWeights = array { 0.5f, 1.0f, 0.0f, 0.2f, 0.5f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+			ResultObjects = array { "IgnoringWorktimeBuff" };
+		},
+
+		G3CharacterProfession
+		{
+			Name = "Gravedigger";
+			DisplayName = "$profession.Gravedigger";
+			Description = "$profession.GravediggerDesc";
+			CharacterType = 0;
+			Icon = "Gravedigger";
+			BusinessEnumType = 57;
+			SkillGroup = "Rogue";
+			BodyArmor = "GravediggerClothes";
+			AttributeWeights = array { 2.0f, 0.0f, 0.0f, 0.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+
+		G3CharacterProfession
+		{
+			Name = "Gleeman";
+			DisplayName = "$profession.Gleeman";
+			Description = "$profession.GleemanDesc";
+			CharacterType = 0;
+			Icon = "Gleeman";
+			BusinessEnumType = 56;
+			SkillGroup = "Rogue";
+			BodyArmor = "GleemanClothes";
+			AttributeWeights = array { 0.0f, 1.0f, 0.0f, 1.0f, 1.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+		
+		G3CharacterProfession
+		{
+			Name = "Mercenary";
+			DisplayName = "$profession.Lansquenet";
+			Description = "$profession.LansquenetDesc";
+			CharacterType = 0;
+			Icon = "Mercenary";
+			BusinessEnumType = 23;
+			SkillGroup = "Rogue";
+			BodyArmor = "MercenaryArmor";
+			AttributeWeights = array { 1.0f, 1.0f, 0.0f, 0.5f, 0.1f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+			ResultObjects = array { "LansquenetBuff" };
+		},
+		
+		G3CharacterProfession
+		{
+			Name = "Thief";
+			DisplayName = "$profession.Thief";
+			Description = "$profession.ThiefDesc";
+			CharacterType = 0;
+			Icon = "Thief";
+			BusinessEnumType = 28;
+			SkillGroup = "Rogue";
+			BodyArmor = "ThiefClothes";
+			AttributeWeights = array { 0.0f, 1.0f, 0.0f, 1.0f, 0.5f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+			ResultObjects = array { "IgnoringWorktimeBuff" };
+		},
+
+		G3CharacterProfession
+		{
+			Name = "Smuggler";
+			DisplayName = "$profession.Smuggler";
+			Description = "$profession.SmugglerDesc";
+			CharacterType = 0;
+			Icon = "Smuggler";
+			BusinessEnumType = 63; 
+			SkillGroup = "Rogue";
+			BodyArmor = "SmugglerClothes";
+			AttributeWeights = array { 0.0f, 0.5f, 1.0f, 0.5f, 1.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+		
+		// Special transporter used for resupplying market economies.
+		G3CharacterProfession
+		{
+			Name = "ResupplyTransporter";
+			DisplayName = "$profession.Transporter";
+			Description = "$profession.TransporterDesc";
+			CharacterType = 2;
+			Icon = "Transporter";
+			SkillGroup = "Transporter";
+			BodyArmor = "TransporterClothes";
+			Equipment = array { "CartBig", "WalkingStick", "OakwoodRing", "LeatherGloves" };
+			AttributeWeights = array { 0.5f, 1.5f, 0.5f, 1.0f, 0.5f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+			ResultObjects = array { "ResupplyTransporterBuff" };
+			MinimumLevel = 5;
+		},
+		
+		// Special guardsman used for protecting resupply transporters.
+		G3CharacterProfession
+		{
+			Name = "ResupplyGuard";
+			DisplayName = "$profession.Lansquenet";
+			Description = "$profession.LansquenetDesc";
+			CharacterType = 0;
+			Icon = "Mercenary";
+			BusinessEnumType = 23;
+			SkillGroup = "Henchmen";
+			Equipment = array { "Platemail", "Mace", "Shield", "RidingHorse" };
+			AttributeWeights = array { 1.5f, 0.5f, 0.0f, 0.5f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+			ResultObjects = array { "ResupplyGuardBuff" };
+			MinimumLevel = 5;
+		},
+
+		// miners
+		G3CharacterProfession
+		{
+			Name = "Miner";
+			DisplayName = "$profession.Miner";
+			Description = "$profession.MinerDesc";
+			CharacterType = 0;
+			Icon = "Miner";
+			BusinessEnumType = 2;
+			SkillGroup = "";
+			BodyArmor = "SmithClothes";
+			AttributeWeights = array { 1.0f, 1.0f, 0.0f, 0.5f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+
+		// quarrier
+		G3CharacterProfession
+		{
+			Name = "Quarrier";
+			DisplayName = "$profession.Quarrier";
+			Description = "$profession.QuarrierDesc";
+			CharacterType = 0;
+			Icon = "Quarrier";
+			BusinessEnumType = 3;
+			SkillGroup = "";
+			BodyArmor = "StonemasonClothes";
+			AttributeWeights = array { 1.0f, 1.0f, 0.0f, 0.5f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+
+		// woodcutters
+		G3CharacterProfession
+		{
+			Name = "Woodcutter";
+			DisplayName = "$profession.Woodcutter";
+			Description = "$profession.WoodcutterDesc";
+			CharacterType = 0;
+			Icon = "Woodcutter";
+			BusinessEnumType = 4;
+			SkillGroup = "";
+			BodyArmor = "CarpenterClothes";
+			AttributeWeights = array { 1.0f, 1.0f, 0.0f, 0.5f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+		},
+
+		// Towncrier
+		G3CharacterProfession
+		{
+			Name = "Towncrier";
+			DisplayName = "$profession.Towncrier";
+			Description = "$profession.TowncrierDesc";
+			ResultObjects = array { "TowncrierBuff" };
+			AttributeWeights = array { 1.0f, 1.0f, 1.0f, 1.0f, 1.0f };
+		},
+
+		// Priest
+		G3CharacterProfession
+		{
+			Name = "Priest";
+			DisplayName = "$profession.Priest";
+			Description = "$profession.PriestDesc";
+			Icon = "Priest";
+			BusinessEnumType = 10; // 10 is only the church - we also have 39 (cathedral).
+			SkillGroup = "";
+			BodyArmor = "PriestClothes";
+			ResultObjects = array { "PriestBuff" };
+			AttributeWeights = array { 0.0f, 0.5f, 1.0f, 1.5f, 1.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+			MinimumLevel = 3;
+		},
+
+		// Master of the Arsenal (commonly called MoA)
+		G3CharacterProfession
+		{
+			Name = "MoA";
+			DisplayName = "$profession.MoA";
+			Description = "$profession.MoADesc";
+			Icon = "MoA";
+			BusinessEnumType = 41;
+			SkillGroup = "";
+			Equipment = array { "MoAClothes", "Longsword", "Shield" };
+			ResultObjects = array { "MoABuff" };
+			AttributeWeights = array { 1.0f, 1.0f, 0.5f, 1.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+			MinimumLevel = 5;
+		},
+
+		// Jailor
+		G3CharacterProfession
+		{
+			Name = "Jailor";
+			DisplayName = "$profession.Jailor";
+			Description = "$profession.JailorDesc";
+			Icon = "Jailor";
+			BusinessEnumType = 41;
+			SkillGroup = "";
+			Equipment = array { "JailorClothes", "Axe" };
+			ResultObjects = array { "JailorBuff" };
+			AttributeWeights = array { 1.0f, 1.0f, 0.5f, 1.0f, 0.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+			MinimumLevel = 5;
+		},
+		
+		// Town hall receptionist
+		G3CharacterProfession
+		{
+			Name = "Receptionist";
+			DisplayName = "$profession.Receptionist";
+			Description = "$profession.ReceptionistDesc";
+			Icon = "Receptionist";
+			BusinessEnumType = 30; // CityHall
+			SkillGroup = "";
+			Equipment = array{ "ReceptionistClothes" };
+			ResultObjects = array{ "ReceptionistBuff" };
+			AttributeWeights = array{ 0.0, 0.0, 1.0, 1.0, 2.0 };
+			MinimumLevel = 1;
+		},
+	};
+};

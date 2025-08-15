@@ -1,0 +1,17 @@
+G3ActorDesc
+{
+	Visual = "crossbow";
+	MoveStateListArray = MoveStateListArray
+	{
+	};
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#Crossbow/list_fight_animations,
+		);
+	};
+	AttachType = "AttachToNode";
+	AttachParentNode = "Bip001 R Hand";
+	AttachChildNode = "Bone_Main";	
+}

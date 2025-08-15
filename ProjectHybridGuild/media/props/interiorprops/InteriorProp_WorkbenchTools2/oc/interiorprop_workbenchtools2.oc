@@ -1,0 +1,10 @@
+interiorprop_workbenchtools2 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "interiorprop_workbenchtools2";
+	};
+	EditorName = "InteriorProp WorkbenchTools2";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

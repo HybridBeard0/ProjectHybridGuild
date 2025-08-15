@@ -1,0 +1,161 @@
+GeneralCharacterLevelSettings extends CharacterLevelSettings
+{
+	ItemProductionFactor = 0.15f; // The item base price is multiplied with this factor to give the character xp when production is finished
+	ItemTransactionFactor = 0.16f; //Transaction Price is multiplied with this factor to give the character xp when selling/buying
+	
+	GeneralFactor = 1.0f; // When a character gets xp this factor is applied (scale xp earning in general)
+	
+	// XP for Family = CharacterXP * EmployeeToFamilyScale * BusinessCountScaling
+	EmployeeToFamilyFactor = 0.05f; // When employee gets xp this factor is applied to give xp to its owning family
+	MemberToFamilyFactor = 1.0f; // When a family member gets xp this factor is applied to give the xp to its family
+
+	LevelThresholdFactor = 1.0f; // This is used to scale all level thresholds (NeededXp) in one go without changing them
+	
+	// The auto leveling settings will automatically level up all employees of given type, does not matter if npc, ai or player dynasty employee
+	AutoTransporterLevelling = false;
+	AutoProducerLevelling = false;
+	AutoHenchmenLevelling = false;
+	
+	NotifyOnEmployeeLevelup = true; // sends a notification when an employee levels up
+	NotifyOnFamilyMemberLevelup = true; // sends a notification when an family levels up
+	
+	// The following settings are always clamped between min = 1 and max = maximum level defined by Employees array
+	NpcPoorMinLevel = 1;   // Defines the minimum level for poor npc characters 
+	NpcPoorMaxLevel = 5;   // Defines the maximum level for poor npc characters
+	NpcMiddleMinLevel = 4; // Defines the minimum level for middle npc character
+	NpcMiddleMaxLevel = 8; // Defines the maximum level for middle npc character
+	NpcRichMinLevel = 7;   // Defines the minimum level for rich npc characters
+	NpcRichMaxLevel = 10;   // Defines the maximum level for rich npc characters
+	
+	// Level settings for employees, level cap is defined by the last entry
+	// The following entries have to be sorted from 1 to n
+	Employees = array
+	{
+		LevelSettingsEntry // level 1
+		{
+			NeededXp = 0;
+			AttributePoints = 0;
+			ProductivityBase = 0.70f;
+		},
+		LevelSettingsEntry // level 2
+		{
+			NeededXp = 250;
+			AttributePoints = 1;
+			ProductivityBase = 0.75f;
+		},
+		LevelSettingsEntry // level 3
+		{
+			NeededXp = 800;
+			AttributePoints = 1;
+			ProductivityBase = 0.805f;
+		},
+		LevelSettingsEntry // level 4
+		{
+			NeededXp = 2100;
+			AttributePoints = 1;
+			ProductivityBase = 0.865f;
+		},
+		LevelSettingsEntry // level 5
+		{
+			NeededXp = 4500;
+			AttributePoints = 1;
+			ProductivityBase = 0.93f;
+		},
+		LevelSettingsEntry // level 6
+		{
+			NeededXp = 7500;
+			AttributePoints = 1;
+			ProductivityBase = 1.0f;
+		},
+		LevelSettingsEntry // level 7
+		{
+			NeededXp = 12000;
+			AttributePoints = 1;
+			ProductivityBase = 1.075f;
+		},
+		LevelSettingsEntry // level 8
+		{
+			NeededXp = 19500;
+			AttributePoints = 1;
+			ProductivityBase = 1.15f;
+		},
+		LevelSettingsEntry // level 9
+		{
+			NeededXp = 35000;
+			AttributePoints = 1;
+			ProductivityBase = 1.225f;
+		},
+		LevelSettingsEntry // level 10
+		{
+			NeededXp = 75000;
+			AttributePoints = 1;
+			ProductivityBase = 1.3f;
+		}
+	};
+	
+	// Level settings for family members, level cap is defined by the last entry
+	// The following entries have to be sorted from 1 to n
+	FamilyMember = array
+	{
+		LevelSettingsEntry // level 1
+		{
+			NeededXp = 0;
+			AttributePoints = 0;
+			ProductivityBase = 0.7f;
+		},
+		LevelSettingsEntry // level 2
+		{
+			NeededXp = 250;
+			AttributePoints = 1;
+			ProductivityBase = 0.76f;
+		},
+		LevelSettingsEntry // level 3
+		{
+			NeededXp = 800;
+			AttributePoints = 1;
+			ProductivityBase = 0.825f;
+		},
+		LevelSettingsEntry // level 4
+		{
+			NeededXp = 2100;
+			AttributePoints = 1;
+			ProductivityBase = 0.895f;
+		},
+		LevelSettingsEntry // level 5
+		{
+			NeededXp = 4500;
+			AttributePoints = 1;
+			ProductivityBase = 0.97f;
+		},
+		LevelSettingsEntry // level 6
+		{
+			NeededXp = 7500;
+			AttributePoints = 2;
+			ProductivityBase = 1.05f;
+		},
+		LevelSettingsEntry // level 7
+		{
+			NeededXp = 12000;
+			AttributePoints = 2;
+			ProductivityBase = 1.135f;
+		},
+		LevelSettingsEntry // level 8
+		{
+			NeededXp = 19500;
+			AttributePoints = 2;
+			ProductivityBase = 1.22f;
+		},
+		LevelSettingsEntry // level 9
+		{
+			NeededXp = 35000;
+			AttributePoints = 2;
+			ProductivityBase = 1.31f;
+		},
+		LevelSettingsEntry // level 10
+		{
+			NeededXp = 75000;
+			AttributePoints = 3;
+			ProductivityBase = 1.4f;
+		}
+	};	
+};

@@ -1,0 +1,285 @@
+guardpost extends Building
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "guardpost";
+		
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc {
+					Name = "streetconnection";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "enter";
+					Position = ( -140.0, 590.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+				},
+				SnapPointDesc {
+					Name = "exit";
+					Position = ( -140.0, 590.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+
+				SnapPointDesc {
+					Name = "master01";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Master"; // actions: OverseeWorkers, WhipTransporters, MotivateWorkers, Smear, Commend
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "master02";
+					Position = ( -80.0, 460.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 60.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Master"; // actions: OverseeWorkers, WhipTransporters, MotivateWorkers, Smear, Commend
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "master03";
+					Position = ( -220.0, 390.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 90.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Master"; // actions: OverseeWorkers, WhipTransporters, MotivateWorkers, Smear, Commend
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "artefact01";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Artefact"; // actions: ApplyPowderOfHygeia, UsePestAway, UseStrongDoorLatch, ApplyMuralPainting, ApplySlateTile, FreemasonsGift
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "artefact02";
+					Position = ( -240.0, 570.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 230.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Artefact"; // actions: ApplyPowderOfHygeia, UsePestAway, UseStrongDoorLatch, ApplyMuralPainting, ApplySlateTile, FreemasonsGift
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "artefact03";
+					Position = ( 140.0, 580.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 140.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Artefact"; // actions: ApplyPowderOfHygeia, UsePestAway, UseStrongDoorLatch, ApplyMuralPainting, ApplySlateTile, FreemasonsGift
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "intruder01";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Intruder"; // actions: AuditBooks, Vandalize, CatchRats, RaidTheKitchens, Sabotage
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "intruder02";
+					Position = ( -300.0, 170.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 100.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Intruder"; // actions: AuditBooks, Vandalize, CatchRats, RaidTheKitchens, Sabotage
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "raid01";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Intruder"; // actions: AuditBooks, Vandalize, CatchRats, RaidTheKitchens, Sabotage
+						},
+					};
+				},
+
+				SnapPointDesc
+				{
+					Name = "CollectProtectionMoney";
+					Position = ( -580.0, 80.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 110.0 );
+				},
+				
+				SnapPointDesc
+				{
+					Name = "employee00";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle_walkstick1";
+							Prop = "longsword/longsword";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "idle";
+							Animation = "guard_SwingSword";
+							Prop = "longsword/longsword";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle_walkstick1";
+							Prop = "longsword/longsword";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee01";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle_walkstick1";
+							Prop = "longsword/longsword";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "idle";
+							Animation = "guard_SwingSword";
+							Prop = "longsword/longsword";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle_walkstick1";
+							Prop = "longsword/longsword";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee02";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle_walkstick1";
+							Prop = "longsword/longsword";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "idle";
+							Animation = "guard_SwingSword";
+							Prop = "longsword/longsword";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle_walkstick1";
+							Prop = "longsword/longsword";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee03"; // shooting
+					Level = 2;
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "idle";
+							Animation = "shoot_crossbow2";
+							Prop = "crossbow/crossbow";
+							Repeat = 4;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee04"; // watching out
+					Level = 3;
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle_walkstick1";
+							Prop = "longsword/longsword";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "idle";
+							Animation = "guard_SwingSword";
+							Prop = "longsword/longsword";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle_walkstick1";
+							Prop = "longsword/longsword";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee05"; // shooting
+					Position = ( 20.0, 130.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 100.0 );
+					Level = 2;
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "idle";
+							Animation = "shoot_crossbow2";
+							Prop = "crossbow/crossbow";
+							Repeat = 4;
+						},
+					};
+				},
+			};
+		};
+	};
+	
+	EditorName = "Guard Post";
+	EditorIcon = "media/UserInterface/Icons/BuildingImages/Businesses/Guardpost1.png";
+	EditorCategory = 1;
+}

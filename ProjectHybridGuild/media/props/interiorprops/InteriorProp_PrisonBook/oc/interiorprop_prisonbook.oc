@@ -1,0 +1,21 @@
+interiorprop_prisonbook extends G3PropsInstance
+{
+	static var Description = G3PropDesc
+	{
+		Visual = "interiorprop_prisonbook";
+		
+		Interaction = G3ActorInteraction 
+		{
+			Name = "$props.name.BookOfPrisoners";
+			TooltipText = "$action.OpenBookOfPrisoners";
+			TooltipIcon = "MoreInfos";
+			UiEvent = "ToggleBookOfPrisonersWindow";
+		};
+	};
+	
+	Interactable = true;
+	
+	EditorName = "Interiorprop Prisonbook";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

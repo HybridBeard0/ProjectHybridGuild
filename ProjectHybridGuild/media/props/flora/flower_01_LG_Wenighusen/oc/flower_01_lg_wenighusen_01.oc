@@ -1,0 +1,10 @@
+flower_01_lg_wenighusen_01 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "flower_01_lg_wenighusen_01";
+	};
+	EditorName = "Flower01_LG_Wenighusen_01";
+	EditorIcon = "media/UserInterface/PropIcons/Flower01_LG.png";
+	EditorCategory = 1;		
+}

@@ -1,0 +1,635 @@
+TutorialObjectives extends TutorialObjectiveContainer
+{
+	Objectives = array
+	{
+		//Quest 1
+		ConstructBuildingObjective
+		{
+			ID = "TutorialQuestBuildBuilding";
+			//LinkedObjectiveID = "TutorialQuestPlayerParty";
+			LinkedObjectiveID = "TutorialQuestProduceItems";
+			
+			ObjectiveDescription= "$ui.TutorialQuest.BuildBuilding1";
+			
+			StartNotification = "StartQuest";
+			
+			BuildingType = "Business";
+						
+			Amount = 1;					
+						
+			UnlockTutorials = array 
+			{
+				"HelpTutorialBuildBuilding",
+			};
+		};
+
+//Quest 2	
+		ExecuteActionObjective
+		{
+			ID = "TutorialQuestProduceItems";
+			LinkedObjectiveID = "TutorialQuestBoastAboutExploits";
+			
+			ObjectiveDescription= "$ui.TutorialQuest.ProduceItems1";
+			
+			StartNotification = "StartQuest";
+			
+			ActionWeights = map { "MakeProduct" = 1.0, };
+			
+			ParameterFilters = array
+			{
+				ActionFilters
+				{
+					ItemParameter = "Iron";
+				};
+			};
+			
+			Amount = 3;					
+						
+			UnlockTutorials = array 
+			{
+				"HelpTutorialProductionWindow",
+			};
+		};
+		
+//Quest 3	
+		ExecuteActionObjective
+		{
+			ID = "TutorialQuestBoastAboutExploits";
+			LinkedObjectiveID = "TutorialQuestGoHome";
+			
+			ObjectiveDescription= "$ui.TutorialQuest.BoastAboutExploits1";
+			
+			StartNotification = "StartQuest";
+			
+			ActionWeights = map { "BoastAboutYourExploits" = 1.0, };
+			Amount = 3;
+			
+			UnlockTutorials = array 
+			{
+				"GameplayConceptTutorialResources",
+			};	
+		};
+		
+//Quest 4
+		MultiStepObjective
+		{
+			ID = "TutorialQuestGoHome";
+			LinkedObjectiveID = "TutorialQuestProduceSocialItems";
+			
+			ObjectiveName ="$ui.TutorialQuest.ResidenceInterior.GoHome.Title";
+			ObjectiveDescription= "$ui.TutorialQuest.ResidenceInterior.GoHome";
+			
+			StartNotification = "StartQuest";
+			
+			SubObjectives = array
+			{
+				ExecuteActionObjective
+				{
+					ActionWeights = map { "GoHome" = 1.0, };
+					Amount = 1;
+				},
+				ExecuteActionObjective
+				{
+					ActionWeights = map { "LookOutside" = 1.0, };
+					Amount = 1;
+				}			
+				
+			}; 
+			UnlockTutorials = array 
+			{
+				"GameplayConceptTutorialCharacterControls",
+				"HelpTutorialResidence",
+				"HelpTutorialHUD",
+				"HelpTutorialInteriorOverview",
+				"HelpTutorialPublicBuildings",
+			};
+		};
+		
+		MultiStepObjective
+		{
+			ID = "TutorialQuestProduceSocialItems";
+			LinkedObjectiveID = "TutorialQuestStartRomance";
+			
+			ObjectiveName ="$ui.TutorialQuest.ProduceSocialItems.Title";
+			ObjectiveDescription= "$ui.TutorialQuest.ProduceSocialItems1";
+			
+			StartNotification = "StartQuest";
+			
+			SubObjectives = array
+			{
+				ExecuteActionObjective
+				{
+					ActionWeights = map { "MakeProduct" = 1.0, };
+					Amount = 1;
+					ParameterFilters = array
+					{
+						ActionFilters
+						{
+							ItemParameter = "WashCloth";
+						};
+					};
+				},
+				
+				ExecuteActionObjective
+				{
+					ActionWeights = map { "MakeProduct" = 1.0, };
+					Amount = 2;
+					ParameterFilters = array
+					{
+						ActionFilters
+						{
+							ItemParameter = "FlowerBouqet";
+						};
+					};
+				},
+
+				ExecuteActionObjective
+				{
+					ActionWeights = map { "UseWashCloth" = 1.0, };
+					Amount = 1;
+				}				
+				
+			}; 
+			UnlockTutorials = array 
+			{
+			};
+		};
+		
+//Quest 5
+		ExecuteActionObjective
+		{
+			ID = "TutorialQuestStartRomance";
+			LinkedObjectiveID = "TutorialQuestCourtRomance";
+			
+			ObjectiveDescription= "$ui.TutorialQuest.StartRomance1";
+			
+			StartNotification = "StartQuest";
+			
+			ActionWeights = map { "StartRomance" = 1.0, };
+			Amount = 1;					
+								
+			UnlockTutorials = array 
+			{
+				"GameplayConceptTutorialRomancing",
+				"HelpTutorialDialogues",
+			};
+		};
+//Quest 6	
+		MultiStepObjective
+		{
+			ID = "TutorialQuestCourtRomance";
+			LinkedObjectiveID = "TutorialQuestCourtEngagement";
+			
+			ObjectiveName = "$ui.TutorialQuest.CourtRomance.Title";
+			ObjectiveDescription= "$ui.TutorialQuest.CourtRomance1";
+			
+			StartNotification = "StartQuest";
+
+			SubObjectives = array
+			{
+				ExecuteActionObjective
+				{
+					ActionWeights = map { "CourtingSomeone" = 1.0, };
+					Amount = 2;	
+				},
+				
+				ExecuteActionObjective
+				{
+					ActionWeights = map { "GiveFlowers" = 1.0, };
+					Amount = 2;	
+				},
+			}; 
+		};
+
+		ObtainStateObjective
+		{
+			ID = "TutorialQuestCourtEngagement";
+			LinkedObjectiveID = "TutorialQuestMarriage";
+			
+			ObjectiveName = "$ui.TutorialQuest.CourtEngagement.Title";
+			ObjectiveDescription= "$ui.TutorialQuest.CourtEngagement";
+			
+			StartNotification = "StartQuest";
+
+			TargetProfileCharacter = TargetProfileCharacter
+			{
+				Adult = 3;
+				IsEngaged = 3;
+			};
+			
+			SpecificCharacterTarget = "Any";
+			Amount = 1;
+		};
+
+//Quest 7		
+		ObtainStateObjective
+		{
+			ID = "TutorialQuestMarriage";
+			LinkedObjectiveID = "TutorialQuestProduceOffspring";
+
+			ObjectiveName = "$ui.TutorialQuest.Marriage1.Title";
+			ObjectiveDescription= "$ui.TutorialQuest.Marriage1";
+			
+			StartNotification = "StartQuest";
+
+			TargetProfileCharacter = TargetProfileCharacter
+			{
+				Adult = 3;
+				Married = 3;
+			};
+			
+			SpecificCharacterTarget = "Any";
+			Amount = 1;
+		};
+		
+//Quest 8		
+
+		ObtainStateObjective
+		{
+			ID = "TutorialQuestProduceOffspring";
+			LinkedObjectiveID = "TutorialQuestPlayerParty";
+
+			ObjectiveName = "$ui.TutorialQuest.ProduceOffspring1.Title";
+			ObjectiveDescription= "$ui.TutorialQuest.ProduceOffspring1";
+			
+			StartNotification = "StartQuest";
+			
+			TargetProfileCharacter = TargetProfileCharacter
+			{
+				Adult = 3;
+				Pregnant = 3;
+			};
+			
+			SpecificCharacterTarget = "Any";
+			Amount = 1;
+
+			UnlockTutorials = array 
+			{
+				"GameplayConceptTutorialOffspring",
+			};
+			
+			
+			FinishedResult = "TutorialGiveMoneyToBuySkills";
+			
+		};
+/*
+		ExecuteActionObjective
+		{
+			ID = "TutorialQuestPlayerParty";
+			LinkedObjectiveID = "TutorialQuestClaimTitle";
+			
+			ObjectiveDescription= "$ui.TutorialQuest.ResidenceInterior.PlayerParty";
+			
+			StartNotification = "StartQuest";
+			
+			ActionWeights = map { "MakeRightHand" = 1.0, "MakeLeftHand" = 1.0,};
+			Amount = 1;			
+
+			TrackAssignmentOnly = true;			
+		};
+*/		
+		ObtainStateObjective
+		{
+			ID = "TutorialQuestPlayerParty";
+			LinkedObjectiveID = "TutorialQuestClaimTitle";
+			
+			ObjectiveName = "$ui.TutorialQuest.PlayerParty.Title";
+			ObjectiveDescription= "$ui.TutorialQuest.ResidenceInterior.PlayerParty";
+			
+			StartNotification = "StartQuest";
+
+			TargetProfileCharacter = TargetProfileCharacter
+			{
+				Adult = 3;
+				PartyMember = 3;
+			};
+			
+			SpecificCharacterTarget = "LeaderSpouse";
+			Amount = 1;
+
+			UnlockTutorials = array 
+			{
+				"HelpTutorialDynastyTree",
+			};
+		};
+		
+//Quest 9		
+		G3ObjectiveNobility
+		{
+			ID = "TutorialQuestClaimTitle";
+			LinkedObjectiveID = "TutorialQuestDriveWorkers";
+
+			ObjectiveName = "$ui.TutorialQuest.TutorialQuestClaimTitle.Title";
+			ObjectiveDescription= "$ui.TutorialQuest.ClaimTitle1";
+			
+			StartNotification = "StartQuest";
+						
+			Amount = 3;	
+
+			UnlockTutorials = array 
+			{
+				"HelpTutorialTitlesAndSkillTree",
+			};
+		};
+//Quest 10		
+		ExecuteActionObjective
+		{
+			ID = "TutorialQuestDriveWorkers";
+			LinkedObjectiveID = "TutorialQuestBuyFirstSkill";
+			
+			ObjectiveDescription= "$ui.TutorialQuest.DriveWorkers1";
+			
+			StartNotification = "StartQuest";
+			
+			ActionWeights = map { "OverseeWorkers" = 1.0, };
+			Amount = 2;
+			FinishedResult = "TutorialGiveMoneyToBuySkills";
+		};
+//Quest 11
+		MultiStepObjective
+		{
+			ID = "TutorialQuestBuyFirstSkill";
+			LinkedObjectiveID = "TutorialQuestBuildAnotherBuilding";
+			
+			ObjectiveName = "$ui.TutorialQuest.BuySkill.Title";
+			ObjectiveDescription= "$ui.TutorialQuest.BuySkill1";
+
+			StartNotification = "StartQuest";
+			
+			UnlockTutorials = array 
+			{
+				"HelpTutorialGuilds",
+			};
+			
+			SubObjectives = array
+			{
+				
+				AcquireSkillObjective
+				{
+					SkillName = "Ambitious";
+
+					Amount = 1;
+				},
+				AcquireSkillObjective
+				{
+					SkillName = "Artisan";
+					
+					Amount = 2; //Start level is 1
+				},
+				AcquireSkillObjective
+				{
+					SkillName = "HandicraftMetal";
+
+					Amount = 1; //Start level is 1
+				},
+			};
+			
+			FinishedResult = "TutorialGiveMoneyToBuySkills";
+		};
+//Quest 12
+		ConstructBuildingObjective
+		{
+			ID = "TutorialQuestBuildAnotherBuilding";
+			LinkedObjectiveID = "TutorialQuestProduceMoreItems";
+			
+			ObjectiveDescription= "$ui.TutorialQuest.BuildAnotherBuilding1";
+			
+			StartNotification = "StartQuest";
+			
+			
+			BuildingType = "Business";
+						
+			Amount = 1;					
+						
+			UnlockTutorials = array 
+			{
+				"GameplayConceptTutorialTime",
+			};
+		};
+//Quest 13
+		MultiStepObjective
+		{
+			ID = "TutorialQuestProduceMoreItems";
+			LinkedObjectiveID = "TutorialQuestHireHenchmen";
+			
+			ObjectiveName = "$ui.TutorialQuest.ProduceMoreItems.Title";
+			ObjectiveDescription= "$ui.TutorialQuest.ProduceMoreItems1";
+			
+			StartNotification = "StartQuest";
+			
+			
+			SubObjectives = array
+			{
+				ExecuteActionObjective
+				{
+					ActionWeights = map { "MakeProduct" = 1.0, };
+					Amount = 5;
+					ParameterFilters = array
+					{
+						ActionFilters
+						{
+							ItemParameter = "Fittings";
+						};
+					};
+				},
+				
+				ExecuteActionObjective
+				{
+					ActionWeights = map { "MakeProduct" = 1.0, };
+					Amount = 5;
+					ParameterFilters = array
+					{
+						ActionFilters
+						{
+							ItemParameter = "Dagger";
+						};
+					};
+				}			
+			};
+			UnlockTutorials = array 
+			{
+				"HelpTutorialProductionWindow",
+				"HelpTutorialFrontStore",
+				"HelpTutorialTradeRoutes",
+				//"HelpTutorialTradeRoutesDetail",
+			};
+						
+			FinishedResult = "TutorialGiveMoneyToBuySkills";
+		};
+//Quest 14
+		ExecuteActionObjective
+		{
+			ID = "TutorialQuestHireHenchmen";
+			LinkedObjectiveID = "TutorialQuestExecuteGuardAction";
+			
+			ObjectiveDescription= "$ui.TutorialQuest.HireHenchmen1";
+			
+			StartNotification = "StartQuest";
+			
+			ActionWeights = map { "HireHenchmen" = 1.0, };
+			Amount = 1;		
+
+			UnlockTutorials = array 
+			{
+				"GameplayConceptTutorialCombat",
+			};
+		};
+//Quest 15		
+		ExecuteActionObjective
+		{
+			ID = "TutorialQuestExecuteGuardAction";
+			LinkedObjectiveID = "TutorialQuestAttack";
+			
+			ObjectiveDescription= "$ui.TutorialQuest.ExecuteGuardAction1";
+			
+			StartNotification = "StartQuest";
+			
+			ActionWeights = map { "EscortCharacter" = 1.0, };
+			Amount = 1;
+			FinishedResult = "TutorialGiveStrength";
+			
+			TrackAssignmentOnly = true;
+			
+			UnlockTutorials = array 
+			{
+				"GameplayConceptTutorialCombat",
+			};
+			
+			FinishedResult = "TutorialGiveMoneyToBuySkills";
+
+		};
+//Quest 16		
+		ExecuteActionObjective
+		{
+			ID = "TutorialQuestAttack";
+			LinkedObjectiveID = "TutorialQuestApplyForOffice";
+			
+			ObjectiveDescription= "$ui.TutorialQuest.Attack1";
+			
+			StartNotification = "StartQuest";
+			
+			Amount = 1;
+			// AttackCharacter action is triggering a combat so we have the action is not finishing the normal way
+			// So we can either track its assignment so it was started or we have to add another objective to start a combat
+			// Right now the assignment should be enough
+			TrackAssignmentOnly = true;
+			ActionWeights = map { "AttackCharacter" = 1.0, };
+		};
+//Quest 17
+		AcquireOfficeObjective 
+		{
+			ID = "TutorialQuestApplyForOffice";
+			LinkedObjectiveID = "TutorialQuestLawProposal";
+			
+			ObjectiveDescription= "$ui.TutorialQuest.ApplyForOffice1";
+			
+			StartNotification = "StartQuest";
+			
+			
+			Amount = 1;
+			//RequiredOfficeID = "CouncilAssistant";
+			AcquireOnly = true; 
+			
+			UnlockTutorials = array 
+			{
+				"HelpTutorialPoliticsDetails"
+			};
+
+		};
+//Quest 18	 Removed , repetitive with next objective and removing allows the player to get any office.			
+//		UsePoliticalPowerObjective
+//		{
+//			ID = "TutorialQuestExecuteOfficeAction";
+//			LinkedObjectiveID = "TutorialQuestLawProposal";
+//			
+//			ObjectiveName = "$ui.TutorialQuest.CityRecordProposal.Title";
+//			ObjectiveDescription= "$ui.TutorialQuest.ExecuteOfficeAction1";
+//			
+//			StartNotification = "StartQuest";			
+//			
+//			Amount = 1;					
+//			
+//			PoliticalPower = "PowerCityRecord";
+//
+//			UnlockTutorials = array 
+//			{
+//				"HelpTutorialPolitics",
+//			};
+//		};
+//Quest 19		
+		UsePoliticalPowerObjective
+		{
+			ID = "TutorialQuestLawProposal";
+			LinkedObjectiveID = "TutorialQuestClaimEndTitle";
+
+			ObjectiveName = "$ui.TutorialQuest.LawProposal.Title";
+			ObjectiveDescription= "$ui.TutorialQuest.LawProposal";
+			
+			StartNotification = "StartQuest";
+			
+			UnlockTutorials = array 
+			{
+				"HelpTutorialPoliticsDetails",
+			};
+
+			Amount = 1;
+
+			PoliticalPower = "PowerLawmaker";
+			FinishedResult = "TutorialGiveMoneyToBuySkills";
+		};
+//Quest 20
+		G3ObjectiveNobility
+		{
+			ID = "TutorialQuestClaimEndTitle";
+			LinkedObjectiveID = "TutorialQuestDeclareFeud";			
+			
+			ObjectiveName = "$ui.TutorialQuest.ClaimEndTitle.Title";
+			ObjectiveDescription= "$ui.TutorialQuest.ClaimEndTitle";
+			
+			StartNotification = "StartQuest";
+			
+			
+			Amount = 6;					
+		
+		};
+//Quest 21	
+		EstablishDiplomaticRelationshipsObjective
+		{
+			ID = "TutorialQuestDeclareFeud";
+			LinkedObjectiveID = "TutorialQuestMakeAnAlliance";
+			
+			ObjectiveDescription= "$ui.TutorialQuest.DeclareFeud1";
+			
+			StartNotification = "StartQuest";
+			
+			Amount = 1;
+
+			DiplomaticStatus = "Feud";
+
+			UnlockTutorials = array 
+			{
+				"HelpTutorialDynastyTrade",
+			};
+		};
+//Quest 22		
+		EstablishDiplomaticRelationshipsObjective
+		{
+			ID = "TutorialQuestMakeAnAlliance";
+			
+			ObjectiveDescription= "$ui.TutorialQuest.MakeAnAlliance1";
+			
+			StartNotification = "StartQuest";
+			
+			Amount = 1;
+
+			DiplomaticStatus = "Alliance";
+			
+			UnlockTutorials = array 
+			{
+				"HelpTutorialDynastyOverview",
+			};
+			
+			IsWinCondition = true;	
+		};
+	};
+};

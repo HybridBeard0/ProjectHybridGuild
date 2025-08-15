@@ -1,0 +1,10 @@
+/*tallgrass_smallpatch_01 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "tallgrass_smallpatch_01";
+	};
+	EditorName = "Tallgrass smallpatch01";
+	EditorIcon = "media/UserInterface/PropIcons/Tallgrasssmallpatch01.png";
+	EditorCategory = 1;		
+}*/

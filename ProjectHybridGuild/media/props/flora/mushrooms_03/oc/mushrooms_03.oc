@@ -1,0 +1,10 @@
+mushrooms_03 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "mushrooms_03";
+	};
+	EditorName = "Mushrooms03";
+	EditorIcon = "media/UserInterface/PropIcons/Mushrooms03.png";
+	EditorCategory = 1;		
+}

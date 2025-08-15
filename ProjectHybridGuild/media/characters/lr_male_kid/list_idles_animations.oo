@@ -1,0 +1,296 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1495740363;
+			Name = "kid_idle_sit1";
+			AnimationName = "sit_idle1";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1436982601;
+			Name = "cool_idle1";
+			AnimationName = "cool_idle1";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1436982614;
+			Name = "cool_idle2";
+			AnimationName = "cool_idle2";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1430148074;
+			Name = "idle1";
+			AnimationName = "idle1";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1430148082;
+			Name = "idle2";
+			AnimationName = "idle2";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1999999005;
+			Name = "waiting_in_line1";
+			AnimationName = "idle1";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1999999015;
+			Name = "waiting_in_line2";
+			AnimationName = "idle2";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = All;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1430148089;
+			Name = "idle3";
+			AnimationName = "idle3";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1441720431;
+			Name = "sit_idle1";
+			AnimationName = "sit_idle1";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1463639537;
+			Name = "sit_bench1";
+			AnimationName = "sit_bench1";
+			UseCustomEase = true;
+			EaseIn = 0.025;
+			EaseOut = 0.0; // EaseOut is disabled for this animation because while it plays, it rotates the actor (during the sit down motion). Motion blending would look very strange if this animation needs to be interrupted.
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1464618769;
+			Name = "sitting_bench1";
+			AnimationName = "sitting_bench1";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1441725631;
+			Name = "Execution_Bailiff";
+			AnimationName = "Execution_Bailiff";
+			Looping = true;
+		},
+		AnimationDesc
+		{
+			ID = 1445625631;
+			Name = "idle_bench1";
+			AnimationName = "idle_bench1";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1488625631;
+			Name = "idle_pick_pocket";
+			AnimationName = "idle_pick_pocket";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1488633631;
+			Name = "idle_Read_Book";
+			AnimationName = "idle_Read_Book";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1488633451;
+			Name = "idle_torch";
+			AnimationName = "idle_torch";
+			Looping = true;
+		},
+		AnimationDesc
+		{
+			ID = 1488444451;
+			Name = "stand_up_bench1";
+			AnimationName = "stand_up_bench1";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1474919468;
+			Name = "idle_readbook1";
+			AnimationName = "idle_readbook1";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1482259434;
+			Name = "idle_walkstick1";
+			AnimationName = "idle_walkstick1";
+		},
+		AnimationDesc
+		{
+			ID = 1462203210;
+			Name = "fishing_idle1";
+			AnimationName = "fishing_idle1";
+			Looping = true;
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+			);
+		},
+	);
+}

@@ -1,0 +1,36 @@
+G3CharactersBirthValsDesc extends G3CharacterBirthVals{
+	//Lifespan Values----------------------------------------------------
+	BaseLifeSpanFamily = 45;
+	RangeLifeSpanFamily = 20;
+		
+	BaseLifeSpanOthers = 30;
+	RangeLifeSpanOthers = 35;
+		
+	StrengthMultiplier = 2;
+	
+	// Natural attribute minimum and maximum (default: 1..11)
+	BaseAttributeMin = 1;
+	BaseAttributeMax = 11;
+
+	// Min and max points to distribute for a dynasty char (default: 11..16).
+	DynastyCharPointsMin = 11;
+	DynastyCharPointsMax = 16;
+
+	// Min and max points to distribute for non-dynasty chars (default: 9..14).
+	NonDynastyCharPointsMin = 9;
+	NonDynastyCharPointsMax = 14;
+	
+	// Initial attribute values for the player character.
+	PlayerInitialStrength = 3;
+	PlayerInitialDexterity = 3;
+	PlayerInitialIntelligence = 3;
+	PlayerInitialPerception = 3;
+	PlayerInitialCharisma = 3;
+	
+	//Birthtrait success variables
+	BaseBirthTraitChance = 1;
+	BirthTraitSuccessVal = 0.9;
+	
+	// Caps the maximum life expectancy  that can be gained from permanent buffs. If you don't want a cap set the value to < 0
+	LifeExpectancyCap = 65;
+};

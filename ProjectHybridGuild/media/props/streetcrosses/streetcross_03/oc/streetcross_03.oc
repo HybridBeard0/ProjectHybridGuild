@@ -1,0 +1,10 @@
+streetcross_03 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "streetcross_03";
+	};
+	EditorName = "Streetcross03";
+	EditorIcon = "media/UserInterface/PropIcons/Streetcross03.png";
+	EditorCategory = 3;		
+}

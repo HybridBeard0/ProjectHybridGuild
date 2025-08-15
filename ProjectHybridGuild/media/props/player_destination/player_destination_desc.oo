@@ -1,0 +1,11 @@
+ActorDesc
+{
+	Visual = "player_destination";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#player_destination/list_walks_animations,
+		);
+	};
+}

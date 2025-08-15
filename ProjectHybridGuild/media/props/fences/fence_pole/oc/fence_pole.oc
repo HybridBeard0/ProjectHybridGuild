@@ -1,0 +1,10 @@
+fence_pole extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "fence_pole";
+	};
+	EditorName = "Fencepole";
+	EditorIcon = "media/UserInterface/PropIcons/Fencepole.png";
+	EditorCategory = 3;		
+}

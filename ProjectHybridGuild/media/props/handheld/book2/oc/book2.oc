@@ -1,0 +1,14 @@
+book2 extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "book2";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+	EditorName = "Book2";
+	EditorIcon = "media/UserInterface/PropIcons/Book.png";
+	EditorCategory = 3;		
+}

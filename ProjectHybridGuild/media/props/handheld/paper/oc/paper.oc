@@ -1,0 +1,14 @@
+paper extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "paper";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 L Hand";
+		AttachChildNode = "Snap";
+	};
+	EditorName = "Hammer";
+	EditorIcon = "media/UserInterface/PropIcons/Loverletter.png";
+	EditorCategory = 3;		
+}

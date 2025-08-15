@@ -1,0 +1,12 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1463583258;
+			Name = "Idle";
+			AnimationName = "idle1";
+		},
+	);
+}

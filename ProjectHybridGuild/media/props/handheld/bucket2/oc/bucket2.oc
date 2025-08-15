@@ -1,0 +1,14 @@
+bucket2 extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "bucket2";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+	EditorName = "Bucket2";
+	EditorIcon = "media/UserInterface/PropIcons/Bucket.png";
+	EditorCategory = 3;		
+}

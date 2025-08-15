@@ -1,0 +1,1440 @@
+ExtendedGlyphSheet extends TextSymbolSheet
+{
+	PackageName = "Fonts";
+	TextureName = "ExtendedGlyphs";
+	TextHeight = 21.0;
+	Ascent = 16.0;
+	
+	Symbols = array	
+	{
+		TextSymbol 
+		{
+			Name = "#1";
+			Origin = array { 42, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#2";
+			Origin = array { 63, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#3"; // a.k.a Money
+			Origin = array { 4, 0 };
+			Dimensions = array { 14, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "Money"; // a.k.a #3
+			Origin = array { 4, 0 };
+			Dimensions = array { 14, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#4";
+			Origin = array { 0, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#5";
+			Origin = array { 21, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#6";
+			Origin = array { 42, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#7";
+			Origin = array { 63, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#8"; // a.k.a. KEY_PLUS
+			Origin = array { 178, 174 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "KEY_PLUS"; // a.k.a. #8
+			Origin = array { 178, 174 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#9"; // a.k.a. KEY_MINUS
+			Origin = array { 199, 174 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "KEY_MINUS"; // a.k.a. #9
+			Origin = array { 199, 174 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#13";
+			Origin = array { 21, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#14";
+			Origin = array { 42, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#15";
+			Origin = array { 63, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#16";
+			Origin = array { 84, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#17"; // a.k.a KEY_ESC
+			Origin = array { 0, 84 };
+			Dimensions = array { 33, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "KEY_ESC"; // a.k.a. #17
+			Origin = array { 0, 84 };
+			Dimensions = array { 33, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#18"; // a.k.a. KEY_F1
+			Origin = array { 33, 84 };
+			Dimensions = array { 33, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "KEY_F1"; // a.k.a. #18
+			Origin = array { 33, 84 };
+			Dimensions = array { 33, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#19";
+			Origin = array { 105, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#20";
+			Origin = array { 126, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#21"; // a.k.a. KEY_SPACE
+			Origin = array { 66, 84 };
+			Dimensions = array { 33, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "KEY_SPACE"; // a.k.a. #21
+			Origin = array { 66, 84 };
+			Dimensions = array { 33, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#22"; // a.k.a. KEY_TAB
+			Origin = array { 99, 84 };
+			Dimensions = array { 33, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "KEY_TAB"; // a.k.a. #22
+			Origin = array { 99, 84 };
+			Dimensions = array { 33, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#23";
+			Origin = array { 147, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#24";
+			Origin = array { 168, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#25";
+			Origin = array { 189, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#26"; // AKA Infinity
+			Origin = array { 84, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "Infinity"; // AKA #26
+			Origin = array { 84, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#27"; // a.k.a KEY_CTRL
+			Origin = array { 79, 174 };
+			Dimensions = array { 33, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "KEY_CTRL"; // a.k.a #27
+			Origin = array { 79, 174 };
+			Dimensions = array { 33, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#28"; // a.k.a KEY_SHIFT
+			Origin = array { 112, 174 };
+			Dimensions = array { 33, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "KEY_SHIFT"; // a.k.a #28
+			Origin = array { 112, 174 };
+			Dimensions = array { 33, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#29"; // a.k.a. KEY_PAUSE
+			Origin = array { 145, 174 };
+			Dimensions = array { 33, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "KEY_PAUSE"; // a.k.a. #29
+			Origin = array { 145, 174 };
+			Dimensions = array { 33, 21 };
+		},
+		TextSymbol
+		{
+			Name = "#30"; // a.k.a. Notice
+			Origin = array { 252, 84 };
+			Dimensions = array { 14, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Notice"; // a.k.a. #30
+			Origin = array { 252, 84 };
+			Dimensions = array { 14, 21 };
+		},
+		TextSymbol
+		{
+			Name = "#31"; // a.k.a. Notice2
+			Origin = array { 266, 84 };
+			Dimensions = array { 18, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Notice2"; // a.k.a. #31
+			Origin = array { 266, 84 };
+			Dimensions = array { 18, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#32"; // a.k.a. KEY_ALT
+			Origin = array { 102, 195 };
+			Dimensions = array { 33, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "KEY_ALT"; // a.k.a. #32
+			Origin = array { 102, 195 };
+			Dimensions = array { 33, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#33";
+			Origin = array { 0, 231 };
+			Dimensions = array { 33, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#34";
+			Origin = array { 24, 0 };
+			Dimensions = array { 15, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#35";
+			Origin = array { 33, 231 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#36";
+			Origin = array { 210, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#37";
+			Origin = array { 231, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#38";
+			Origin = array { 0, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#39";
+			Origin = array { 21, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#40";
+			Origin = array { 42, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#41";
+			Origin = array { 63, 41 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#42";
+			Origin = array { 84, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#43";
+			Origin = array { 105, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#44";
+			Origin = array { 0, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#45";
+			Origin = array { 105, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#46";
+			Origin = array { 126, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#47";
+			Origin = array { 147, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#48";
+			Origin = array { 168, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#49";
+			Origin = array { 84, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#50";
+			Origin = array { 105, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#51";
+			Origin = array { 126, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#52";
+			Origin = array { 147, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#53";
+			Origin = array { 168, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#54";
+			Origin = array { 189, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#55";
+			Origin = array { 210, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#56";
+			Origin = array { 231, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#57"; // a.k.a Commoner
+			Origin = array { 126, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "Commoner"; // a.k.a #57
+			Origin = array { 126, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#58"; // a.k.a. Citizen
+			Origin = array { 147, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "Citizen"; // a.k.a. #58
+			Origin = array { 147, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#59"; // a.k.a. Noble
+			Origin = array { 168, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "Noble"; // a.k.a. #59
+			Origin = array { 168, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#60";
+			Origin = array { 189, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#61";
+			Origin = array { 210, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#62";
+			Origin = array { 231, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "OutsideCity";
+			Origin = array { 0, 174 };
+			Dimensions = array { 22, 21 };
+		},
+		TextSymbol
+		{
+			Name = "InsideCity";
+			Origin = array { 22, 174 };
+			Dimensions = array { 20, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Heart";
+			Origin = array { 42, 174 };
+			Dimensions = array { 23, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Prestige";
+			Origin = array { 65, 174 };
+			Dimensions = array { 14, 21 };
+		},
+		TextSymbol
+		{
+			Name = "KEY_P";
+			Origin = array { 220, 174 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Hint";
+			Origin = array { 0, 195 };
+			Dimensions = array { 18, 21 };
+		},
+		TextSymbol
+		{
+			Name = "AlchemistShop";
+			Origin = array { 252, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Apothecary";
+			Origin = array { 273, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Arsenal";
+			Origin = array { 294, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Artisan";
+			Origin = array { 315, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Bakery";
+			Origin = array { 336, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Brushwood";
+			Origin = array { 357, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Butcher";
+			Origin = array { 378, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "CarpenterShop";
+			Origin = array { 399, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Cathedrale"; // a.k.a cathedrale, multiple definitions because of case sensitive object names
+			Origin = array { 420, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "cathedrale"; // a.k.a Cathedrale, multiple definitions because of case sensitive object names
+			Origin = array { 420, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Cemetery";
+			Origin = array { 441, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Church";
+			Origin = array { 462, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Cityhall";
+			Origin = array { 483, 0 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "CityHouse";
+			Origin = array { 252, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "CountryHouse";
+			Origin = array { 273, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Execution"; // a.k.a execution, multiple definitions because of case sensitive object names
+			Origin = array { 294, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "execution"; // a.k.a Execution, multiple definitions because of case sensitive object names
+			Origin = array { 294, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Farm";
+			Origin = array { 315, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Fountain";
+			Origin = array { 336, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Gate";
+			Origin = array { 357, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Grove";
+			Origin = array { 378, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "GuardPost";
+			Origin = array { 399, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Inn";
+			Origin = array { 420, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "LumberYard";
+			Origin = array { 441, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Mansion";
+			Origin = array { 462, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Market";
+			Origin = array { 483, 21 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Medicus";
+			Origin = array { 252, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Mine";
+			Origin = array { 273, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "PoorHouse";
+			Origin = array { 294, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Port";
+			Origin = array { 315, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Quarry";
+			Origin = array { 336, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "RobberCamp";
+			Origin = array { 357, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Schloss";
+			Origin = array { 378, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Scholar";
+			Origin = array { 399, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "School";
+			Origin = array { 420, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shaman";
+			Origin = array { 441, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Smithy";
+			Origin = array { 462, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "SpyHideout";
+			Origin = array { 483, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "StoneMasonShop";
+			Origin = array { 252, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "TailorShop";
+			Origin = array { 273, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "ThiefHideout";
+			Origin = array { 294, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Trademarket"; // a.k.a trademarket, multiple definitions because of case sensitive object names
+			Origin = array { 315, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "trademarket"; // a.k.a Trademarket, multiple definitions because of case sensitive object names
+			Origin = array { 315, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Warehouse";
+			Origin = array { 336, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Warehouse_Country";
+			Origin = array { 336, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Well";
+			Origin = array { 357, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Windmill";
+			Origin = array { 378, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Halt";
+			Origin = array { 399, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Working";
+			Origin = array { 420, 63 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Buy";
+			Origin = array { 441, 63 };
+			Dimensions = array { 13, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Sell";
+			Origin = array { 454, 63 };
+			Dimensions = array { 13, 21 };
+		},
+		TextSymbol
+		{
+			Name = "MinStorage";
+			Origin = array { 284, 84 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "MaxStorage";
+			Origin = array { 305, 84 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "KeepInStore";
+			Origin = array { 326, 84 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "SalesPrice";
+			Origin = array { 347, 84 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Barber";
+			Origin = array { 319, 105 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "FishingHut";
+			Origin = array { 298, 105 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "CityPreacher";
+			Origin = array { 277, 105 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "FishingSpot";
+			Origin = array { 256, 105 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Gleeman";
+			Origin = array { 473, 84 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Masonery";
+			Origin = array { 452, 84 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Gravedigger";
+			Origin = array { 431, 84 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Orchardist";
+			Origin = array { 410, 84 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Preacher";
+			Origin = array { 389, 84 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Tinker";
+			Origin = array { 368, 84 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Statue";
+			Origin = array { 468, 63 };
+			Dimensions = array { 21, 21 };
+		},
+
+// Status icons
+		TextSymbol 
+		{
+			Name = "#10"; //a.k.a. wound
+			Origin = array { 189, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "wound"; //a.k.a. #10
+			Origin = array { 189, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#11"; //a.k.a. sick
+			Origin = array { 210, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "sick"; //a.k.a. #11
+			Origin = array { 210, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "#12"; //a.k.a. poison
+			Origin = array { 231, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol 
+		{
+			Name = "poison"; //a.k.a. #12
+			Origin = array { 231, 42 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "fire";
+			Origin = array { 132, 84 };
+			Dimensions = array { 20, 21 };
+		},
+		TextSymbol
+		{
+			Name = "closed";
+			Origin = array { 152, 84 };
+			Dimensions = array { 20, 21 };
+		},
+		TextSymbol
+		{
+			Name = "unconscious";
+			Origin = array { 172, 84 };
+			Dimensions = array { 20, 21 };
+		},
+		TextSymbol
+		{
+			Name = "sleep";
+			Origin = array { 192, 84 };
+			Dimensions = array { 20, 21 };
+		},
+		TextSymbol
+		{
+			Name = "prison";
+			Origin = array { 212, 84 };
+			Dimensions = array { 20, 21 };
+		},
+		TextSymbol
+		{
+			Name = "drunk";
+			Origin = array { 232, 84 };
+			Dimensions = array { 20, 21 };
+		},
+		TextSymbol
+		{
+			Name = "diseaseimmunity";
+			Origin = array { 135, 195 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "pregnant";
+			Origin = array { 340, 105 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "protestant";
+			Origin = array { 361, 105 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "perfume";
+			Origin = array { 382, 105 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "debuffed";
+			Origin = array { 403, 105 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "buffed";
+			Origin = array { 424, 105 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "";
+			Origin = array { 135, 195 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "catholic";
+			Origin = array { 445, 105 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "astonished";
+			Origin = array { 466, 105 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "RoomFixture";
+			Origin = array { 487, 105 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "protected";
+			Origin = array { 256, 126 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "drenched";
+			Origin = array { 277, 126 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "alarm";
+			Origin = array { 298, 126 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "secular";
+			Origin = array { 319, 126 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Smuggler";
+			Origin = array { 340, 126 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Stage";
+			Origin = array { 361, 126 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Level1";
+			Origin = array { 18, 195 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Level2";
+			Origin = array { 39, 195 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Level3";
+			Origin = array { 60, 195 };
+			Dimensions = array { 21, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Level4";
+			Origin = array { 81, 195 };
+			Dimensions = array { 21, 21 };
+		},
+// SHIELDS, FIRST ROW
+		TextSymbol
+		{
+			Name = "Shield1";
+			Origin = array { 1, 106 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield2";
+			Origin = array { 20, 106 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield3";
+			Origin = array { 39, 106 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield4";
+			Origin = array { 58, 106 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield5";
+			Origin = array { 77, 106 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield6";
+			Origin = array { 96, 106 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield7";
+			Origin = array { 115, 106 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield8";
+			Origin = array { 134, 106 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield9";
+			Origin = array { 153, 106 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield10";
+			Origin = array { 172, 106 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield11";
+			Origin = array { 191, 106 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield12";
+			Origin = array { 210, 106 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield13";
+			Origin = array { 229, 106 };
+			Dimensions = array { 17, 21 };
+		},
+// SHIELDS, SECOND ROW
+		TextSymbol
+		{
+			Name = "Shield14";
+			Origin = array { 1, 129 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield15";
+			Origin = array { 20, 129 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield16";
+			Origin = array { 39, 129 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield17";
+			Origin = array { 58, 129 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield18";
+			Origin = array { 77, 129 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield19";
+			Origin = array { 96, 129 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield20";
+			Origin = array { 115, 129 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield21";
+			Origin = array { 134, 129 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield22";
+			Origin = array { 153, 129 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield23";
+			Origin = array { 172, 129 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield24";
+			Origin = array { 191, 129 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield25";
+			Origin = array { 210, 129 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield26";
+			Origin = array { 229, 129 };
+			Dimensions = array { 17, 21 };
+		},
+// SHIELDS, THIRD ROW
+		TextSymbol
+		{
+			Name = "Shield27";
+			Origin = array { 1, 152 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield28";
+			Origin = array { 20, 152 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield29";
+			Origin = array { 39, 152 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield30";
+			Origin = array { 58, 152 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield31";
+			Origin = array { 77, 152 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield32";
+			Origin = array { 96, 152 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "Shield0"; // a.k.a. ShieldNone
+			Origin = array { 115, 152 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "ShieldNone"; // a.k.a. Shield0
+			Origin = array { 115, 152 };
+			Dimensions = array { 17, 21 };
+		},
+// NEIGHBORHOODS
+		TextSymbol
+		{
+			Name = "NeighborhoodSurroundings";
+			Origin = array { 1, 253 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "NeighborhoodVillage";
+			Origin = array { 20, 253 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "NeighborhoodCity";
+			Origin = array { 39, 253 };
+			Dimensions = array { 17, 21 };
+		},
+// OFFICES
+		TextSymbol
+		{
+			Name = "OfficeSovereign";
+			Origin = array { 1, 276 };
+			Dimensions = array { 17, 21 };
+		},
+		// MayorGroup
+		TextSymbol
+		{
+			Name = "OfficeMayor";
+			Origin = array { 20, 276 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "OfficeCityLegate";
+			Origin = array { 39, 276 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "OfficeTreasurer";
+			Origin = array { 58, 276 };
+			Dimensions = array { 17, 21 };
+		},
+		// JudgeGroup
+		TextSymbol
+		{
+			Name = "OfficeChiefJudge";
+			Origin = array { 77, 276 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "OfficeJudge1";
+			Origin = array { 96, 276 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "OfficeJudge2";
+			Origin = array { 115, 276 };
+			Dimensions = array { 17, 21 };
+		},
+		// CaptainGroup
+		TextSymbol
+		{
+			Name = "OfficeCaptain";
+			Origin = array { 134, 276 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "OfficeArsenalMaster";
+			Origin = array { 153, 276 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "OfficeDungeonMaster";
+			Origin = array { 172, 276 };
+			Dimensions = array { 17, 21 };
+		},
+		// CouncilAssistantGroup
+		TextSymbol
+		{
+			Name = "OfficeCouncilAssistant";
+			Origin = array { 191, 276 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "OfficeTownClerk";
+			Origin = array { 210, 276 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "OfficeTownClerk2";
+			Origin = array { 229, 276 };
+			Dimensions = array { 17, 21 };
+		},
+		// CouncilInformerGroup
+		TextSymbol
+		{
+			Name = "OfficeCouncilInformer";
+			Origin = array { 248, 276 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "OfficeInformer";
+			Origin = array { 267, 276 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "OfficeInformer2";
+			Origin = array { 286, 276 };
+			Dimensions = array { 17, 21 };
+		},
+		// CouncilGuardianGroup
+		TextSymbol
+		{
+			Name = "OfficeCouncilGuardian";
+			Origin = array { 305, 276 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "OfficeGateGuardian";
+			Origin = array { 324, 276 };
+			Dimensions = array { 17, 21 };
+		},
+		TextSymbol
+		{
+			Name = "OfficeGateGuardian2";
+			Origin = array { 343, 276 };
+			Dimensions = array { 17, 21 };
+		},
+	};
+};

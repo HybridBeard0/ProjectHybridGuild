@@ -1,0 +1,14 @@
+nail extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "nail";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 L Hand";
+		AttachChildNode = "Snap";		
+	};
+	EditorName = "Nail";
+	EditorIcon = "media/UserInterface/PropIcons/Longsword.png";
+	EditorCategory = 3;
+}

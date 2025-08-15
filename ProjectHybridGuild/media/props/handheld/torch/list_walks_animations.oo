@@ -1,0 +1,45 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1439496140;
+			Name = "fire1";
+			AnimationName = "fire1";
+			Looping = true;
+			Triggers = array
+			(
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "TorchLoop";
+					RefNodeOverride = "DummyFire";
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1439496110;
+			Name = "idle1";
+			AnimationName = "idle1";
+			Looping = true;
+		},
+		AnimationDesc
+		{
+			ID = 1439496147;
+			Name = "sabotage1";
+			AnimationName = "sabotage1";
+			Triggers = array
+			(
+				EffectTrigger
+				{
+					NoLoop = true;
+					EffectName = "TorchLoop";
+					RefNodeOverride = "DummyFire";
+				},
+			);
+		},
+	);
+}

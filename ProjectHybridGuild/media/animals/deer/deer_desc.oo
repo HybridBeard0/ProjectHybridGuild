@@ -1,0 +1,18 @@
+base/standardg3characterdesc
+{
+	Visual = "deer";
+	WalkSpeed = 60;
+	TrotSpeed = 120;
+	RunSpeed = 300;
+	MoveStateListArray = MoveStateListArray
+	{
+	};
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#deer/list_idles_animations,
+			#deer/list_walks_animations,
+		);
+	};
+}

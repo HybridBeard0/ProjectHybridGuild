@@ -1,0 +1,67 @@
+interiorprop_ladder_countryhouse extends G3PropsInstance
+{
+	static var Description = G3PropDesc
+	{
+		Visual = "interiorprop_ladder_countryhouse";
+		
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc
+				{
+					Name = "climb";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Animation = "climbladder";
+							Context = "Sleep"; // This will start the sleep action if the ladder is right-clicked.
+						},
+						G3SnapPointAnimation 
+						{
+							Animation = "sleeping";
+							Context = "Sleep";
+							Repeat = -1;
+						},
+						G3SnapPointAnimation {
+							Animation = "climbladder";
+							Context = "GoToBed";
+						},
+						G3SnapPointAnimation {
+							Animation = "sleeping";
+							Context = "GoToBed";
+							Repeat = -1;
+						},
+						G3SnapPointAnimation {
+							Animation = "climbladder";
+							Context = "ProduceOffspringEnter";
+						},
+						G3SnapPointAnimation {
+							Animation = "climbdownladder";
+							Context = "WakeUp";
+							EaseIn = 0.0;
+						},
+						G3SnapPointAnimation {
+							Animation = "climbdownladder";
+							Context = "ProduceOffspringExit";
+							EaseIn = 0.0;
+						},
+					};
+				},
+			};		
+		};		
+	
+		Interaction = G3ActorInteraction {
+			Name = "$props.name.Bedroom";
+			TooltipText = "$action.Sleep";
+			TooltipIcon = "Sleep";
+			ContextAction = "Sleep";
+			ActionFailureMessage = "GoToSleepInteractionError";
+		};
+	};
+	
+	Interactable = true;
+	
+	EditorName = "InteriorProp Ladder Countryhouse";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

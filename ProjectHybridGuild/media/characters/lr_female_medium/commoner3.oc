@@ -1,0 +1,5 @@
+commoner3 extends G3Character
+{
+	static var Description = #lr_female_medium/commoner3_desc;
+
+};

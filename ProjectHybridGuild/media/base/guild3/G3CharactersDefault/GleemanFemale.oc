@@ -1,0 +1,31 @@
+GleemanFemale extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = true;
+	MiddleClass = false;
+	Rich = false;
+	
+	Male = true;
+	Player = true;
+	Employee = true;
+	Profession = true;
+
+	LowResCharacter = "gleeman";
+	HighResCharacter = "commoner2";
+	
+	BodyTexturesDiff= array
+	{
+		"gleeman_female_diff"
+	};
+	BodyTexturesNorm= array
+	{
+		"gleeman_female_NORM"
+	};
+	BodyTexturesMask= array
+	{
+		"gleeman_female_MASK"
+	};
+}

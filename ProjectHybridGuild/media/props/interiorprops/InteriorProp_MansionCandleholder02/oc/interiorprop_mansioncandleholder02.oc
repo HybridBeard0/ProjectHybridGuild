@@ -1,0 +1,18 @@
+interiorprop_mansioncandleholder02 extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "interiorprop_mansioncandleholder02";
+		AnimationArray = AnimationListArray
+		{
+			AnimationLists = array
+			(
+				#interiorprop_mansioncandleholder02/mansioncandleholder02_animations,
+			);
+		};
+
+	};
+	EditorName = "InteriorProp Mansioncandleholder02";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

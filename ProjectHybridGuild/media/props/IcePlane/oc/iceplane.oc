@@ -1,0 +1,10 @@
+iceplane extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "iceplane";
+	};
+	EditorName = "IcePlane";
+	EditorIcon = "media/UserInterface/PropIcons/IcePlane.png";
+	EditorCategory = 4;		
+}

@@ -1,0 +1,10 @@
+marienburginn extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "marienburginn";
+	};
+	EditorName = "marienburginn";
+	EditorIcon = "media/UserInterface/PropIcons/Kiosque01.png";
+	EditorCategory = 5;		
+}

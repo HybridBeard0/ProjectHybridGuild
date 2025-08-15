@@ -1,0 +1,20 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1463583257;
+			Name = "Idle";
+			AnimationName = "idle";
+			Triggers = array
+			(
+				SoundTrigger 
+				{
+					SoundEvent = 1064;
+					FadeOut = 2000.0;
+				},
+			);
+		},
+	);
+}
