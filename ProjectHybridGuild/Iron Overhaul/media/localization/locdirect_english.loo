@@ -58389,7 +58389,6 @@ LocDirectData
 			Key = "$gui.Options.hungarian";
 			Text = "Magyar (Közösségi fordítás)";
 		},
-
 // *** EggMod ***
 		LocDirectEntry
 		{
