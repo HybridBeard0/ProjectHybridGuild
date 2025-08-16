@@ -1,0 +1,10 @@
+hanging_cage_01 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "hanging_cage_01";
+	};
+	EditorName = "Hanging cage01";
+	EditorIcon = "media/UserInterface/PropIcons/Hangingcage01.png";
+	EditorCategory = 3;		
+}

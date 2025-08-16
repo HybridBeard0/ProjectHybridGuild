@@ -1,0 +1,8 @@
+poison extends G3Actor
+{
+	static var Description = #poison/poison_desc;
+
+	EditorName = "poison";
+	EditorIcon = "media/UserInterface/PropIcons/poison.png";
+	EditorCategory = 3;		
+}

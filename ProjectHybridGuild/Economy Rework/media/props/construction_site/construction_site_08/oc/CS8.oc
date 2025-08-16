@@ -1,0 +1,10 @@
+CS8 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "CS8";
+	};
+	EditorName = "CS8";
+	EditorIcon = "media/UserInterface/PropIcons/CS8.png";
+	EditorCategory = 4;		
+}

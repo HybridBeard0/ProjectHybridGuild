@@ -1,0 +1,10 @@
+interiorprop_simplecheststuff extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "interiorprop_simplecheststuff";
+	};
+	EditorName = "InteriorProp SimpleChestStuff";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

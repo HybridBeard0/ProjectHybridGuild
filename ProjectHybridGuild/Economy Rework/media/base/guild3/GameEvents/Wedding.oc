@@ -1,0 +1,5 @@
+Wedding extends GameEvent
+{
+	Title = "Wedding between two family";
+	Public = true;	
+}

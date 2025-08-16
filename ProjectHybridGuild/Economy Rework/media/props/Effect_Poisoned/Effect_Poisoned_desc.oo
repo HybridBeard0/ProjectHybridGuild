@@ -1,0 +1,16 @@
+G3ActorDesc
+{
+	Visual = "effect_poisoned";
+	MoveStateListArray = MoveStateListArray
+	{
+	};
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#Effect_Poisoned/list_idles_animations,
+		);
+	};
+	AttachType = "AttachToNode";
+	AttachChildNode = "Snap";
+}

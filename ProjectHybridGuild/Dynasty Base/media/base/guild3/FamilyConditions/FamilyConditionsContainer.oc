@@ -1,0 +1,41 @@
+FamilyConditionsContainer extends FamilyConditionRegistrar
+{
+	Entries = array
+	{		
+		FamilyCondition
+		{
+			Id = "NO_HEIR";
+			MessageId = "NoHeir"; // entry from MessagesContainer
+			DurationInRounds = 0.0; // 0.0f by default, it will not trigger game over, used for warnings
+		},
+		
+		FamilyCondition
+		{
+			Id = "NO_MONEY";
+			MessageId = "NoMoney";
+			DurationInRounds = 1.0;
+		},
+		
+		FamilyCondition
+		{
+			Id = "NO_RESIDENCE";
+			MessageId = "NoResidence";
+			DurationInRounds = 1.0;
+		},
+		
+		FamilyCondition
+		{
+			Id = "CHANGE_HEIR";
+			MessageId = "ChangeHeir";
+			DurationInRounds = 0.0;
+		},
+		
+		FamilyCondition
+		{
+			// This shows a warning that the player will lose, because an enemy has grabbed the sovereign office.
+			Id = "ENEMY_SOVEREIGN";
+			MessageId = "EnemySovereign";
+			DurationInRounds = 0.0;
+		}
+	};
+}

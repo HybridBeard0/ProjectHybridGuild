@@ -1,0 +1,14 @@
+bread extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "bread";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+	EditorName = "Bread";
+	EditorIcon = "media/UserInterface/PropIcons/Bread.png";
+	EditorCategory = 3;		
+}

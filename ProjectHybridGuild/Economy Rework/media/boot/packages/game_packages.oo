@@ -1,0 +1,20 @@
+ResourcePackageNames
+{
+	Names = array
+	{
+		"base",
+		"ui_core",
+		"fonts",
+		"userinterface",
+		"vfx",
+		"g3terrain",
+		"skybox",
+		"skybox_background",
+		"skybox_clear",
+		"skybox_fow",
+		"skybox_night",
+		"skybox_sunrise",
+		"skybox_sunset",
+		"resources"
+	};
+}

@@ -1,0 +1,11 @@
+G3ActorDesc
+{
+	Visual = "fountain_01";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#fountain_01/list_water_animation,
+		);
+	};
+}

@@ -1,0 +1,3299 @@
+G3SkillsDefault extends G3SkillsContainer
+{
+	Skills = map
+	{
+
+// *** Culinary
+
+		"HuntingFarming" = G3Skill
+		{
+			RequiredSkillName = "";
+			RequiredSkillLevel = 0;
+			
+			LayoutOrder = 1;
+			
+			DisplayName = "$Skilltree.Name.FoodPreparation";
+			Description = "$Skilltree.Name.FoodPreparationDesc";
+			
+			CategoryName = "$Skilltree.Name.FoodPreparation";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 1;
+					CurrencyType = "Prestige";
+					NeededCurrency = 500;
+					
+					Results = array
+					{
+					};
+				};
+			};
+		};
+
+		"Farming" = G3Skill
+		{
+			RequiredSkillName = "HuntingFarming";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$HuntingFarming";
+			Description = "$HuntingFarmingDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 1;
+					CurrencyType = "Money"; // Money by default - can be set to Prestige
+					NeededCurrency = 1000;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Farm" };
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array{"Barley", "Wheat", "BucketOfWater"};
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 3;
+					NeededCurrency = 2500;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array{"Cattle", "Pig"};
+						}
+					};
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 5;
+					NeededCurrency = 6500;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Farm" };
+							Level = 2;
+						},
+						UnlockEffect
+						{
+							Names = array{"Sheep", "Wool"};
+						}
+					};
+				};
+				3 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 15000;
+                    
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Farm" };
+							Level = 3;
+						},
+						UnlockEffect
+						{
+							Names = array{"Horse", "RidingHorse", "DogCompanion"};
+						}
+					};
+				};
+			};
+		};		
+		
+		"Culinary" = G3Skill
+		{
+			RequiredSkillName = "HuntingFarming";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Culinary";
+			Description = "$CulinaryDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 1;
+					NeededCurrency = 1000;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Windmill" };
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array { "BarleyFlour", "WheatFlour", "MixedGrains", "FlatBread" };
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 3;
+					NeededCurrency = 750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "GrainPap", "PlantEssence" };
+						}
+					};
+				};
+			};
+		};
+
+		"Baker" = G3Skill
+		{
+			RequiredSkillName = "Culinary";
+			RequiredSkillLevel = 1;
+			
+			DisplayName = "$Baker";
+			Description = "$BakerDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 5;
+					NeededCurrency = 1750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Bakery" };
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array { "Gingerbread", "Cookie", "BreadRoll" };
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 3500;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Bakery" };
+							Level = 2;
+						},
+						UnlockEffect
+						{
+							Names = array { "Barleybread", "WheatBread", "FruitCake" };
+						}
+					};
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 7000;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Bakery" };
+							Level = 3;
+						},
+						UnlockEffect
+						{
+							Names = array { "Cake", "CreamPie" };
+						}
+					};
+				};
+				3 = G3SkillLevel
+				{
+					NeededSocialLevel = 11;
+					NeededCurrency = 15000;
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "FortuneCake" };
+						}
+					};
+				};
+			};
+		};
+
+		"Orchardist" = G3Skill
+		{
+			RequiredSkillName = "HuntingFarming";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Orchardist";
+			Description = "$OrchardistDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 1;
+					NeededCurrency = 1000;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Orchardist" };
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array { "Fruit", "Honey", "Juice", "Cider" };
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 3;
+					NeededCurrency = 750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Blackberry", "BlackberryJam", "Candy" };
+						}
+					};
+				};
+			};
+		};
+
+		"CrowdManagement" = G3Skill
+		{
+			RequiredSkillName = "Orchardist";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$CrowdManagement";
+			Description = "$CrowdManagementDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 5;
+					NeededCurrency = 2500;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Inn" };
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array { "Alcohol", "SmallBeer", "Sausage", "GastronomyService" };
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 6500;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Inn" };
+							Level = 2;
+						},
+						UnlockEffect
+						{
+							Names = array { "StrongBeer", "WheatBeer", "RoastBeef" };
+						}
+					};
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 15000;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Inn" };
+							Level = 3;
+						},
+						UnlockEffect
+						{
+							Names = array { "BoozyBreathBeer", "DrunkardBrewBeer" };
+						}
+					};
+				};
+				3 = G3SkillLevel
+				{
+					NeededSocialLevel = 11;
+					NeededCurrency = 35000;
+					
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Commend", "Smear", "BarrelBrewerBeer", "Mead" };
+						}
+					};
+				};
+			};
+		};		
+
+		"Fishing" = G3Skill
+		{
+			RequiredSkillName = "HuntingFarming";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Fishing";
+			Description = "$FishingDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 1;
+					NeededCurrency = 1000;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "FishingHut" };
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array { "Trout", "Perch", "FriedTrout", "SmokedPerch" };
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 3;
+					NeededCurrency = 750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Pike", "FishOil", "BoneNeedle", "GoFishing" };
+						}
+					};
+				};
+			};
+		};
+
+		"Butcher" = G3Skill
+		{
+			RequiredSkillName = "Fishing";
+			RequiredSkillLevel = 1;
+			
+			DisplayName = "$Butcher";
+			Description = "$ButcherDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 3;
+					NeededCurrency = 1750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Butcher" };
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array { "Beef", "Fat", "Leather", "Pork"};
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 5;
+					NeededCurrency = 3500;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "GoHunting", "Deer", "GameMeat", "RoastVenison"};
+						}
+					};
+				};
+			};
+		};
+
+// *** Handicraft
+
+		"Handicraft" = G3Skill
+		{
+			RequiredSkillName = "";
+			RequiredSkillLevel = 0;
+			
+			LayoutOrder = 2;
+			
+			DisplayName = "$Handicraft";
+			Description = "$HandicraftDesc";
+			
+			CategoryName = "$Skilltree.Name.Craftsmanship";
+
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 1;
+					CurrencyType = "Prestige";
+					NeededCurrency = 500;
+					
+					Results = array
+					{
+					};
+				};
+			};
+		};
+
+		"Artisan" = G3Skill
+		{
+			RequiredSkillName = "Handicraft";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Artisan";
+			Description = "$ArtisanDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 1;
+					NeededCurrency = 1000;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Artisan" };
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array { "Iron", "CrudeWeaponHilt", "Dagger" };
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 3;
+					NeededCurrency = 750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Nails", "Fittings", "ThrowingKnife" };
+						}
+					};
+				};
+			};
+		};
+		
+		"HandicraftMetal" = G3Skill
+		{
+			RequiredSkillName = "Artisan";
+			RequiredSkillLevel = 1;
+			
+			DisplayName = "$HandicraftMetal";
+			Description = "$HandicraftMetalDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 5;
+					NeededCurrency = 1750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Smithy" };
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array { "Silver", "IronBracelet", "SilverChain" };
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 3500;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Smithy" };
+							Level = 2;
+						},
+						UnlockEffect
+						{
+							Names = array { "SilverRing", "Gambeson", "Chainmail", "Shield" };
+						}
+					};
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 7000;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Smithy" };
+							Level = 3;
+						},
+						UnlockEffect
+						{
+							Names = array { "Gold", "GoldChain", "Rapier", "ShortSword" };
+						}
+					};
+				};
+				3 = G3SkillLevel 
+				{
+					NeededSocialLevel = 11;
+					NeededCurrency = 15000;
+
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array {"Pistol", "Longsword", "Mace", "Platemail"};
+						}
+					};
+				};
+			};
+		};
+
+		"Masonery" = G3Skill
+		{
+			RequiredSkillName = "Handicraft";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Masonery";
+			Description = "$MasoneryDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 1;
+					NeededCurrency = 1000;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Masonery" };
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array { "ClayVase", "Beaker", "WeightStone", "BucketOfWater" };
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 3;
+					NeededCurrency = 750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "StrongDoorLatch", "OilLamp" };
+						}
+					};
+				};
+			};
+		};
+		
+		"HandicraftStone" = G3Skill
+		{
+			RequiredSkillName = "Masonery";
+			RequiredSkillLevel = 1;
+			
+			DisplayName = "$HandicraftStone";
+			Description = "$HandicraftStoneDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 5;
+					NeededCurrency = 1750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "StoneMasonShop" };
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array { "Grindstone", "SandingBlock", "MuralPainting" };
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 3500;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "StoneMasonShop" };
+							Level = 2;
+						},
+						UnlockEffect
+						{
+							Names = array { "Gemstone", "SlateTile", "GemRing" };
+						}
+					};
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 7000;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "StoneMasonShop" };
+							Level = 3;
+						},
+						UnlockEffect
+						{
+							Names = array { "SlateBoard", "SpinningTop", "StoneSoldier" };
+						}
+					};
+				};
+				3 = G3SkillLevel
+				{
+					NeededSocialLevel = 11;
+					NeededCurrency = 15000;
+					
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Diamond", "LuckyStone" };
+						},
+						ModifierEffect
+						{
+							ApplyTo = "Target";
+							Filter = "InfoAndHasNoGameplayEffect";
+							ActorValue = "NaturalDecayMult";
+							Mod = -0.2; // Values has to be synced with actual ModifierEffect in ResultObject (id: ForwardHandicraftStoneThree)
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardHandicraftStoneThree";
+						},
+					};
+				};
+			};
+		};		
+
+		"Tinker" = G3Skill
+		{
+			RequiredSkillName = "Handicraft";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Tinker";
+			Description = "$TinkerDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 1;
+					NeededCurrency = 1000;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Tinker" };
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array { "Copper", "Cauldron", "PinewoodPlank" };
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 3;
+					NeededCurrency = 750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "CopperBracelet", "Torch", "WoodenShield" };
+						}
+					};
+				};
+			};
+		};
+		
+		"HandicraftWood" = G3Skill
+		{
+			RequiredSkillName = "Tinker";
+			RequiredSkillLevel = 1;
+			
+			DisplayName = "$HandicraftWood";
+			Description = "$HandicraftWoodDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 5;
+					NeededCurrency = 1750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "CarpenterShop" };
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array { "OakwoodPlank", "WoodFrame", "Comb", "OakwoodBarrel", "WalkingStick" };
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 3500;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "CarpenterShop"};
+							Level = 2;
+						},
+						UnlockEffect
+						{
+							Names = array { "LeatheredWeaponHilt", "Axe", "OakwoodRing", "Cart"};
+						}
+					};
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 6500;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "CarpenterShop" };
+							Level = 3;
+						},
+						UnlockEffect
+						{
+							Names = array { "RubinStaff", "Cupboard" };
+						}
+					};
+				};
+				3 = G3SkillLevel
+				{
+					NeededSocialLevel = 11;
+					NeededCurrency = 15000;
+
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array {"Crossbow", "CartBig"};
+						}
+					};
+				};
+			};
+		};		
+
+		"Tailor" = G3Skill
+		{
+			RequiredSkillName = "Handicraft";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Tailor";
+			Description = "$TailorDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 5;
+					NeededCurrency = 3500;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "TailorShop" };
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array { "Cloth", "Blanket", "Backpack", "LeatherGloves" };
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 6500;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "TailorShop" };
+							Level = 2;
+						},
+						UnlockEffect
+						{
+							Names = array { "CommonerClothes1", "CommonerClothes2", "CommonerClothes3", "CommonerClothes4", "LeatherArmor"};
+						}
+					};
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 15000;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "TailorShop" };
+							Level = 3;
+						},
+						UnlockEffect
+						{
+							Names = array { "CitizenClothes1", "CitizenClothes2", "CitizenClothes3", "CitizenClothes4", "MoneyBag" };
+						}
+					};
+				};
+				3 = G3SkillLevel
+				{
+					NeededSocialLevel = 11;
+					NeededCurrency = 35000;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array{"NobleClothes1", "NobleClothes2", "NobleClothes3", "NobleClothes4" };
+						}
+					};
+				};
+			};
+		};		
+
+// *** Herbalism
+
+		"Herbalism" = G3Skill
+		{
+			RequiredSkillName = "";
+			RequiredSkillLevel = 0;
+			
+			LayoutOrder = 3;
+			
+			DisplayName = "$Scholar";
+			Description = "$ScholarDesc";
+			
+			CategoryName = "$Skilltree.Name.Scholarship";
+
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 1;
+					CurrencyType = "Prestige";
+					NeededCurrency = 500;
+					
+					Results = array
+					{
+					};
+				};
+			};
+		};
+
+		"Herbalist" = G3Skill
+		{
+			RequiredSkillName = "Herbalism";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Herbalism";
+			Description = "$HerbalismDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 1;
+					NeededCurrency = 1000;
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Shaman"};
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array{ "Blackberry", "Lavender", "BucketOfWater", "HerbTea", "MixedHerbs", "DiseaseService" };
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 3;
+					NeededCurrency = 750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array {"StoneLily", "SwampRoot", "Linen", "ShadowDagger", "HerbBandage", "HealService" };
+						}
+					};
+				};
+			};
+		};
+
+		"Apothecary" = G3Skill
+		{
+			RequiredSkillName = "Herbalist";
+			RequiredSkillLevel = 1;
+			
+			DisplayName = "$Apothecary";
+			Description = "$ApothecaryDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 5;
+					NeededCurrency = 1750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Apothecary" };
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array{"Jasmin", "WildRose", "BatBlood", "Ethanol", "EndurenceDrink", "PoisonService" };
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 3500;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Apothecary" };
+							Level = 2;
+						},
+						UnlockEffect
+						{
+							Names = array{"Polish", "Perfume", "WeaponPoison", "Antidote", "GhostlyFog"};
+						}
+					};
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 6500;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Apothecary" };
+							Level = 3;
+						},
+						UnlockEffect
+						{
+							Names = array{"FlowerOfDiscord", "PowderOfHygeia", "ParalysisPoison"};
+						}
+					};
+				};
+				3 = G3SkillLevel
+				{
+					NeededSocialLevel = 11;
+					NeededCurrency = 15000;
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array{"DartagnansFragrance", "DrFaustusElixir", "BlackWidowPoison"};
+						}
+					};
+				};
+			};
+		};		
+
+		"Preacher" = G3Skill
+		{
+			RequiredSkillName = "Herbalism";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Preacher";
+			Description = "$PreacherDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 1;
+					NeededCurrency = 1000;
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array {"Preacher"};
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array {"GiveSermon", "WinBelievers"}; 
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 3;
+					NeededCurrency = 750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array {"ChurchService", "MakeCatholic", "MakeSecular", "MakeProtestant"}; 
+						}
+					};
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 5;
+					NeededCurrency = 1750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array {"CityPreacher"};
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array {"GiveSermonCity", "WinBelieversCity", "ChurchServiceCity"};
+						}
+					};
+				};
+				3 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 3500;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array {"HoldPublicPrayer", "WinBelieversCityOnStage"};
+						}
+					};
+				};
+			};
+		};
+
+		"Scholarly" = G3Skill
+		{
+			RequiredSkillName = "Preacher";
+			RequiredSkillLevel = 1;
+			
+			DisplayName = "$Scholarly";
+			Description = "$ScholarlyDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 5;
+					NeededCurrency = 1750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Scholar" };
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array { "Parchment", "Paint", "AboutTalents1", "Poem" };
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 3500;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Scholar" };
+							Level = 2;
+						},
+						UnlockEffect
+						{
+							Names = array { "Stylograph", "Painting", "StatelyDispatch" };
+						}
+					};
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 6500;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Scholar" };
+							Level = 3;
+						},
+						UnlockEffect
+						{
+							Names = array { "AboutTalents2" };
+						}
+					};
+				};
+				3 = G3SkillLevel
+				{
+					NeededSocialLevel = 11;
+					NeededCurrency = 15000;
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Almanac" };
+						}
+					};
+				};
+			};
+		};		
+
+		"Barber" = G3Skill
+		{
+			RequiredSkillName = "Herbalism";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Barber";
+			Description = "$BarberDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 1;
+					NeededCurrency = 1000;
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Barber" };
+							Level = 1;
+						},
+						UnlockEffect
+						{
+//							Names = array{ "Jasmin", "BatBlood", "JasmineOil", "MakeUp", "BodyCareService" };
+							Names = array{ "Jasmin", "WildRose", "RoseWater", "Soap", "BodyCareService" };
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 3;
+					NeededCurrency = 750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+//							Names = array { "WildRose", "RoseWater", "Soap" };
+							Names = array { "BatBlood", "JasmineOil", "MakeUp" };
+						}
+					};
+				};
+			};
+		};
+
+		"Medecine" = G3Skill
+		{
+			RequiredSkillName = "Barber";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Medecine";
+			Description = "$MedecineDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 5;
+					NeededCurrency = 2500;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Medicus" };
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array { "Bandage", "FeverSyrup", "PestAway", "HealService", "DiseaseService" };
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 7000;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Medicus" };
+							Level = 2;
+						},
+						UnlockEffect
+						{
+							Names = array { "PainKiller" };
+						}
+					};
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 15000;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Medicus" };
+							Level = 3;
+						},
+						UnlockEffect
+						{
+							Names = array { "WonderCure" };
+						}
+					};
+				};
+				3 = G3SkillLevel
+				{
+					NeededSocialLevel = 11;
+					NeededCurrency = 35000;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array {"PoisonNeighborhood", "PlagueSuit"};
+						}
+					};
+				};
+			};
+		};		
+
+		"Occultism" = G3Skill
+		{
+			RequiredSkillName = "Herbalism";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Occultism";
+			Description = "$OccultismDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 5;
+					NeededCurrency = 3500;
+
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "AlchemistShop"};
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array { "Moonflower", "DarkTalisman", "Bomb" };
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 7000;
+
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "AlchemistShop" };
+							Level = 2;
+						},
+						UnlockEffect
+						{
+							Names = array{"Frogeye", "Ectoplasm", "ToadExcrements", "ArgusEyeglasses"};
+						}
+					};					
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 15000;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "AlchemistShop" };
+							Level = 3;
+						},
+						UnlockEffect
+						{	
+							Names = array{"SpiderLeg", "ToadSlime", "PoisonDagger", "BoneTalisman"};
+						}
+					};	
+				};
+				3 = G3SkillLevel
+				{
+					NeededSocialLevel = 11;
+					NeededCurrency = 35000;
+
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array {"BeltOfMetaphysics", "Nightcap", "StinkBomb", "CamouflageCloak", "MakeEvocation"};
+						};
+					};
+				};
+			};
+		};
+		
+// *** Rogue
+		"Rogue" = G3Skill
+		{
+			RequiredSkillName = "";
+			RequiredSkillLevel = 0;
+			
+			LayoutOrder = 4;
+			
+			DisplayName = "$Skilltree.Name.Delinquency";
+			Description = "$Skilltree.Name.DelinquencyDesc";
+			
+			CategoryName = "$Skilltree.Name.Delinquency";
+	
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 1;
+					NeededCurrency = 500;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+					};
+				};
+			};
+		};
+
+		"Robber" = G3Skill
+		{
+			RequiredSkillName = "Rogue";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Robber";
+			Description = "$RobberDesc";
+	
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 1;
+					NeededCurrency = 1000;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "RobberCamp" };
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array {"PublicEntertainment", "PalmistryCoordinate", "Palmistry"}; 
+						},
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Strength";
+							Mod = 1;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardRogueZeroToBuildings";
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 3;
+					NeededCurrency = 750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array {"AmbushAndAttack"}; 
+						},
+						//buff family members (we could also use the forward to apply this, but then we wouldn't see it in the tooltips)
+						ModifierEffect
+						{
+							ApplyTo = "Target";
+							Filter = "IsFamilyMember";
+							ActorValue = "Dexterity";
+							Mod = 1;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardRogueOneToBuildings";
+						},
+					};
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 6;
+					NeededCurrency = 1750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array {"PublicEntertainmentOnStage"}; 
+						},
+					};
+				};
+			};
+		};
+
+		"SleightOfHand" = G3Skill
+		{
+			RequiredSkillName = "Robber";
+			RequiredSkillLevel = 1;
+			
+			DisplayName = "$SleightOfHand";
+			Description = "$SleightOfHandDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 5;
+					NeededCurrency = 1750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "ThiefHideout", "PickPocketCoordinate", "PickPocket", "PlayDiceGameCoordinate", "PlayDiceGame" };
+							Level = 1;
+						},
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Stealth";
+							Mod = 1;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardSleightOfHandZero";
+						},
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 6500;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "ThiefHideout" };
+							Level = 2;
+						},
+						UnlockEffect
+						{
+							Names = array { "StealHouse" };
+						},
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Dexterity";
+							Mod = 1;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardSleightOfHandOne";
+						},
+					};
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 15000;
+
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "ThiefHideout" };
+							Level = 3;
+						},
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Stealth";
+							Mod = 1;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardSleightOfHandTwo";
+						},
+					};
+				};
+				3 = G3SkillLevel
+				{
+					NeededSocialLevel = 11;
+					NeededCurrency = 35000;
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Perception";
+							Mod = 1;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardSleightOfHandThree";
+						},
+					};
+				};
+			};
+		};		
+
+		"Smuggling" = G3Skill
+		{
+			RequiredSkillName = "Rogue";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Smuggling";
+			Description = "$SmugglingDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 5;
+					NeededCurrency = 3500;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Smuggler" };
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array { "LureIntoRumDen", "SpeakeasyService", "SmuggleRum" };
+						},
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 6500;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Smuggler" };
+							Level = 2;
+						},
+						UnlockEffect
+						{
+							Names = array { "Smuggle" };
+						},
+					};
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 15000;
+
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Smuggler" };
+							Level = 3;
+						},
+						UnlockEffect
+						{
+							Names = array { "Contraband" };
+						},
+					};
+				};
+			};
+		};
+		
+		"Gravediggery" = G3Skill
+		{
+			RequiredSkillName = "Rogue";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Gravediggery";
+			Description = "$GravediggeryDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 1;
+					NeededCurrency = 1000;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Gravedigger" };
+							Level = 1;
+						},
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Intimidation";
+							Mod = 1;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardGravediggeryZero";
+						},
+						UnlockEffect
+						{
+							Names = array { "Bone", "BoneDust", "BoneGlue", "BoneBracelet" };
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 3;
+					NeededCurrency = 750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "SkullLamp", "PlunderGraves" };
+						}
+					};
+				};
+			};
+		};
+
+		"SleightOfHandStealth" = G3Skill
+		{
+			RequiredSkillName = "Gravediggery";
+			RequiredSkillLevel = 1;
+			
+			DisplayName = "$SleightOfHandStealth";
+			Description = "$SleightOfHandStealthDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 15000;
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Stealth";
+							Mod = 1;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardSleightOfHandStealthZero";
+						},
+						UnlockEffect
+						{
+							Names = array {"StealthKillCharacter"};
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 11;
+					NeededCurrency = 35000;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array {"KidnapCharacter"};
+						},
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Stealth";
+							Mod = 1;
+							Duration = 0;
+							Recover = true;
+						},
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Perception";
+							Mod = 1;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardSleightOfHandStealthOne";
+						},
+					};
+				};
+			};
+		};
+
+		"Gleeman" = G3Skill
+		{
+			RequiredSkillName = "Rogue";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Gleeman";
+			Description = "$GleemanDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 1;
+					NeededCurrency = 1000;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "Gleeman" };
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array {"PlayMusic", "StageConcert" }; 
+						},
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "ReputationBonus";
+							Mod = 0.01;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardMinstrel1ToEmployees";
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 3;
+					NeededCurrency = 750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "PlayPipe" };
+						},
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Entertainment";
+							Mod = 2;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardMinstrel2ToEmployees";
+						}
+					};
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 6;
+					NeededCurrency = 1750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "PlayMusicOnStage" };
+						}
+					};
+				};
+			};
+		};
+
+		"Fighting" = G3Skill
+		{
+			RequiredSkillName = "Gleeman";
+			RequiredSkillLevel = 1;
+			
+			DisplayName = "$Fighting";
+			Description = "$FightingDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 5;
+					NeededCurrency = 1750;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "GuardPost"};
+							Level = 1;
+						},
+						UnlockEffect
+						{
+							Names = array { "CollectProtectionMoney" };
+						},
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Perception";
+							Mod = 1;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardFightingZero";
+						},
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 2900;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "GuardPost" };
+							Level = 2;
+						},
+						UnlockEffect
+						{
+							Names = array {"Intervene"};
+						}
+					};
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 6500;
+					
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array { "GuardPost" };
+							Level = 3;
+						},
+						UnlockEffect
+						{
+							Names = array { "GuardBuilding", "SurveyCrimes" };
+						}
+					};
+				};
+				3 = G3SkillLevel
+				{
+					NeededSocialLevel = 11;
+					NeededCurrency = 15000;
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "AttackPower";
+							Mod = 5;
+							Duration = 0;
+							Recover = true;
+						},
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "DefensePower";
+							Mod = 3;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardFightingThree";
+						},
+					};
+				};
+			};
+		};
+
+		"FightingCombat" = G3Skill
+		{
+			RequiredSkillName = "Fighting";
+			RequiredSkillLevel = 1;
+			
+			DisplayName = "$FightingSabotage";
+			Description = "$FightingSabotageDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 15000;
+
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array {"Vandalize"};
+						}
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 11;
+					NeededCurrency = 35000;
+
+					Results = array
+					{
+						UnlockEffect
+						{
+							Names = array {"Sabotage"};
+						},
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "ReputationBonus";
+							Mod = 0.2;
+							Duration = 0;
+							Recover = true;
+						},
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "AttackPower";
+							Mod = 3;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardFightingCombatOne";
+						},
+					};
+				};
+			};
+		};
+ 
+// *** Ambitious
+
+		"Ambitious" = G3Skill
+		{
+			RequiredSkillName = "";
+			RequiredSkillLevel = 0;
+			
+			LayoutOrder = 5;
+			
+			DisplayName = "$Ambitious";
+			Description = "$AmbitiousDesc";
+			
+			CategoryName = "$Skilltree.Name.Social";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 3;
+					NeededCurrency = 50;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "ReputationBonus";
+							Mod = 0.1;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardAmbitiousZero";
+						},
+					};
+				};
+			};
+		};
+		"HardWorker" = G3Skill
+		{
+			RequiredSkillName = "Ambitious";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$HardWorker";
+			Description = "$HardWorkerDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 5;
+					NeededCurrency = 150;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Productivity";
+							Mod = 0.05;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardHardWorkerZero";
+						},
+					};
+				};
+			};
+		};
+		"CheeseToastFancier" = G3Skill
+		{
+			RequiredSkillName = "Ambitious";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$CheeseToastFancier";
+			Description = "$CheeseToastFancierDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 5;
+					NeededCurrency = 150;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						//Replaced "EatingHealModifier", TODO: decide if another AV is needed
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Health";
+							Mod = 10;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardCheeseToastFancierZero";
+						},
+					};
+				};
+			};
+		};
+		"AsToughAsLeather" = G3Skill
+		{
+			RequiredSkillName = "CheeseToastFancier";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$AsToughAsLeather";
+			Description = "$AsToughAsLeatherDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 500;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						//Replaced "Armor", TODO: decide if another AV is needed
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Armor";
+							Mod = 15;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardAsToughAsLeatherZero";
+						},
+					};
+				};
+			};
+		};
+		"DrunkenComrade" = G3Skill
+		{
+			RequiredSkillName = "CheeseToastFancier";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$DrunkenComrade";
+			Description = "$DrunkenComradeDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 500;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						//Replaced "SocialInteractionsDrunk", TODO: decide if another AV is needed
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Resistance";
+							Mod = 2;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardDrunkenComradeZero";
+						},
+					};
+				};
+			};
+		};
+		"Taskmaster" = G3Skill
+		{
+			RequiredSkillName = "HardWorker";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Taskmaster";
+			Description = "$TaskmasterDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 500;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						//Replaced "EmployeeLearningModifier", TODO: decide if another AV is needed
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "FamilyEmployees";
+							ActorValue = "Productivity";
+							Mod = 0.05;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardTaskmasterZero";
+						},
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 1000;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "FamilyEmployees";
+							ActorValue = "Productivity";
+							Mod = 0.1;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardTaskmasterOne";
+						},
+					};
+				};
+			};
+		};
+		"SevenMilesBoots" = G3Skill
+		{
+			RequiredSkillName = "HardWorker";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$SevenMilesBoots";
+			Description = "$SevenMilesBootsDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 500;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "MovementSpeedMult";
+							Mod = 0.05;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardSevenMilesBootsZero";
+						},
+					};
+				};
+			};
+		};
+		
+		"Nervous" = G3Skill
+		{
+			RequiredSkillName = "Ambitious";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Nervous";
+			Description = "$NervousDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 5;
+					NeededCurrency = 150;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Perception";
+							Mod = 1;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardNervousZero";
+						},
+					};
+				};
+			};
+		};
+		"Spellbound" = G3Skill
+		{
+			RequiredSkillName = "Nervous";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Spellbound";
+			Description = "$SpellboundDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 500;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						//Replaced "DiseaseImmunity" and "SocialInteractionsAll" TODO: Decide if additional AVs are needed
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Resistance";
+							Mod = 10;
+							Duration = 0;
+							Recover = true;
+						},
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "ReputationBonus";
+							Mod = -0.05;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardSpellboundZero";
+						},
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 1000;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Health";
+							Mod = 50;
+							Duration = 0;
+							Recover = true;
+						},
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "ReputationBonus";
+							Mod = -0.02;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardSpellboundOne";
+						},
+					};
+				};
+			};
+		};
+		"StreetSmart" = G3Skill
+		{
+			RequiredSkillName = "Nervous";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$StreetSmart";
+			Description = "$StreetSmartDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 500;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Perception";
+							Mod = 1;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardStreetSmartZero";
+						},
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 1000;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Intimidation";
+							Mod = 1;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardStreetSmartOne";
+						},
+					};
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 11;
+					NeededCurrency = 2500;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Stealth";
+							Mod = 2;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardStreetSmartTwo";
+						},
+					};
+				};
+			};
+		};
+		"Command" = G3Skill
+		{
+			RequiredSkillName = "StreetSmart";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Command";
+			Description = "$CommandDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 1000;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "ReputationBonus";
+							Mod = 0.1;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardCommandZero";
+						},
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 11;
+					NeededCurrency = 2500;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						//Replaced "EmployeeFidelity" TODO: Decide if additional AVs are needed
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Productivity";
+							Mod = 0.1;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardCommandOne";
+						},
+					};
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 13;
+					NeededCurrency = 5000;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						//Replaced "SmallCrimesImmunity" TODO: Decide if additional AVs are needed
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Intimidation";
+							Mod = 2;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardCommandTwo";
+						},
+					};
+				};
+			};
+		};
+		
+		"MasterOfTheSlideRule" = G3Skill
+		{
+			RequiredSkillName = "Ambitious";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$MasterOfTheSlideRule";
+			Description = "$MasterOfTheSlideRuleDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 5;
+					NeededCurrency = 150;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Productivity";
+							Mod = 0.05;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardMasterOfTheSlideRuleZero";
+						},
+					};					
+				};
+			};
+		};		
+		"Math" = G3Skill
+		{
+			RequiredSkillName = "MasterOfTheSlideRule";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Math";
+			Description = "$MathDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 500;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Intelligence";
+							Mod = 2;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardMathZero";
+						},
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 1000;
+					CurrencyType = "Prestige";					
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "BargainingBonus";
+							Mod = 5;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardMathOne";
+						},
+					};
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 11;
+					NeededCurrency = 2500;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						//replaced "LowerExpenses" TODO: decide if additional AVs are needed
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "BargainingBonus";
+							Mod = 5;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardMathTwo";
+						},
+					};
+				};
+			};
+		};
+		"Negotiating" = G3Skill
+		{
+			RequiredSkillName = "MasterOfTheSlideRule";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Negotiating";
+			Description = "$NegotiatingDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 500;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "BargainingBonus";
+							Mod = 2;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardNegotiatingZero";
+						},
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 1000;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						//Replaced "Trade" TODO: decide if additional AVs are needed
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "BargainingBonus";
+							Mod = 5;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardNegotiatingOne";
+						},
+					};
+				};
+			};
+		};		
+		"Flirtous" = G3Skill
+		{
+			RequiredSkillName = "Ambitious";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Flirtous";
+			Description = "$FlirtousDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 5;
+					NeededCurrency = 150;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						//Replaced "SocialInteractionsOppositeSex" TODO: decide if additional AVs are needed
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Charisma";
+							Mod = 1;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardFlirtousZero";
+						},
+					};
+				};
+			};
+		};	
+		"Rhetoric" = G3Skill
+		{
+			RequiredSkillName = "Flirtous";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$Rhetoric";
+			Description = "$RhetoricDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 7;
+					NeededCurrency = 500;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "ReputationBonus";
+							Mod = 0.05;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardRhetoricZero";
+						},
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 1000;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Charisma";
+							Mod = 5;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardRhetoricOne";
+						},
+					};
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 11;
+					NeededCurrency = 2500;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Intelligence";
+							Mod = 5;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardRhetoricTwo";
+						},
+					};
+				};
+			};
+		};
+		"RhetoricPrivate" = G3Skill
+		{
+			RequiredSkillName = "Rhetoric";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$RhetoricPrivate";
+			Description = "$RhetoricPrivateDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 1000;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						//Replaced "MotivateEmployees" TODO: decide if additional AVs are needed
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Productivity";
+							Mod = 0.05;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardRhetoricPrivateZero";
+						},
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 11;
+					NeededCurrency = 2500;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "ReputationBonus";
+							Mod = 0.05;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardRhetoricPrivateOne";
+						},
+					};
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 13;
+					NeededCurrency = 5000;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "ReputationBonus";
+							Mod = 0.05;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardRhetoricPrivateTwo";
+						},
+					};
+				};
+			};
+		};
+		"RhetoricPublic" = G3Skill
+		{
+			RequiredSkillName = "Rhetoric";
+			RequiredSkillLevel = 0;
+			
+			DisplayName = "$RhetoricPublic";
+			Description = "$RhetoricPublicDesc";
+			
+			SkillLevels = map
+			{
+				0 = G3SkillLevel
+				{
+					NeededSocialLevel = 9;
+					NeededCurrency = 1000;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "Charisma";
+							Mod = 1;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardRhetoricPublicZero";
+						},
+					};
+				};
+				1 = G3SkillLevel
+				{
+					NeededSocialLevel = 11;
+					NeededCurrency = 2500;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						//Replaced "ArtOfPolitics" TODO: decide if additional AVs are needed
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "ReputationBonus";
+							Mod = 0.1;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardRhetoricPublicOne";
+						},
+					};
+				};
+				2 = G3SkillLevel
+				{
+					NeededSocialLevel = 13;
+					NeededCurrency = 5000;
+					CurrencyType = "Prestige";
+					
+					Results = array
+					{
+						//Replaced "PublicMemory" TODO: decide if additional AVs are needed
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "ReputationBonus";
+							Mod = 0.1;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardRhetoricPublicTwo";
+						},
+					};
+				};
+			};
+		};
+	};
+};

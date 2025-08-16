@@ -1,0 +1,5 @@
+walkingstick extends G3Actor
+{
+	static var Description = #walkingstick/walkingstick_desc;
+
+};

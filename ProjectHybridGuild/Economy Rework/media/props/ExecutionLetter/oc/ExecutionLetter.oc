@@ -1,0 +1,13 @@
+ExecutionLetter extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "ExecutionLetter";
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 L Hand";
+		AttachChildNode = "Snap";		
+	};
+	EditorName = "ExecutionLetter";
+	EditorIcon = "media/UserInterface/PropIcons/ExecutionLetter.png";
+	EditorCategory = 3;		
+}

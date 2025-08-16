@@ -1,0 +1,10 @@
+interiorprop_tabletools3 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "interiorprop_tabletools3";
+	};
+	EditorName = "InteriorProp TableTools3";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

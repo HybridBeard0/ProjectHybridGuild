@@ -1,0 +1,13 @@
+cartbig extends G3Actor
+{
+	static var Description = #cartbig/cartbig_desc;
+
+	function onInit()
+	{
+		this.playAnimationByName("walk1");
+	}	
+	
+	EditorName = "Cartbig";
+	EditorIcon = "media/UserInterface/PropIcons/Cartbig.png";
+	EditorCategory = 3;		
+}

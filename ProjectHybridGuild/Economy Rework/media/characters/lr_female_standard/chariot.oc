@@ -1,0 +1,5 @@
+chariot extends G3Character
+{
+	static var Description = #lr_female_standard/chariot_desc;
+
+};

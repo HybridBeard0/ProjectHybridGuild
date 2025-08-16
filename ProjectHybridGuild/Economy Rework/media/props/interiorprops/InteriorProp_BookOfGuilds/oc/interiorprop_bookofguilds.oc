@@ -1,0 +1,21 @@
+interiorprop_bookofguilds extends G3PropsInstance
+{
+	static var Description = G3PropDesc
+	{
+		Visual = "interiorprop_bookofguilds";
+		
+		Interaction = G3ActorInteraction 
+		{
+			Name = "$props.name.BookOfGuilds";
+			TooltipText = "$action.OpenBookOfGuilds";
+			TooltipIcon = "MoreInfos";
+			UiEvent = "ToggleSocietiesWindow";
+		};
+	};
+	
+	Interactable = true;
+	
+	EditorName = "Interiorprop Bookofguilds";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

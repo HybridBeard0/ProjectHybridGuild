@@ -1,0 +1,14 @@
+G3ActorDesc
+{
+	Visual = "cart_small";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#cart_small/list_walks_animations,
+		);
+	};
+	AttachType = "AttachTrailer";
+	AttachOffset = 60.000;
+	CrowdControlRadius = 30.000;
+}

@@ -1,0 +1,7134 @@
+MessagesContainer extends MessageRegistrar
+//Available Functions - put them in a member called OnClickReactions = array { FunctionSomething {}; };
+//FunctionOpenUI{ UIName = "SomeUI"; ShowOnTop = true or false; PlaySound = true or false; };
+//FunctionFocusActor {};
+//FunctionSelectActor { PlaySound = true or false; };
+//FunctionShowDeathUI { Title = "$some.loca.title"; Body = "$some.loca.body"; };
+
+{
+	MessageDescriptions = map
+	{
+// START POP-UPS SECTION ************************ //
+		"AskFeudConfirmation" = MessageDescription
+		{
+			Title = ""; // action name injected in code
+			Body = "$action.AskFeud.Confirmation.Body";
+		};
+		
+		"WarningCheatsEnabled" = MessageDescription
+		{
+			Title = "$warning.CheatsEnabled.title";
+			Body = "$warning.CheatsEnabled.body";
+		};
+		
+		"SkillNotUnlocked" = MessageDescription
+		{
+			Title = ""; // action name injected in code
+			Body = "$Warning.SkillNotUnlocked.Body";
+		};
+
+		"DecommissionBuildingConfirmationMessage" = MessageDescription
+		{
+			Title = ""; // action name injected in code
+			Body = "$Confirmation.DecommissionBuilding.Body";
+		};
+		
+		"FireHenchmanConfirmationMessage" = MessageDescription
+		{
+			Title = ""; // action name will be injected through code
+			Body = "$Action.Confirmation.FireHenchman.Body";
+		};
+		
+		"NoFreeEmployeeSlots" = MessageDescription
+		{
+			Title = ""; // action name will be injected through code
+			Body = "$gui.Alert.NoFreeEmployeeSlots.Body";
+		};
+		
+		"FireEmployeeConfirmationMessage" = MessageDescription
+		{
+			Title = ""; // action name will be injected through code
+			Body = "$Action.Confirmation.FireEmployee.Body";
+		};
+		
+		"BuildingWrongNeighborhood" = MessageDescription
+		{
+			Title = ""; // action name will be injected through code
+			Body = "$gui.Alert.BuildingWrongNeighborhood.Body";
+		};
+		
+		"BuildingInConstruction" = MessageDescription
+		{
+			Title = ""; // action name will be injected through code
+			Body = "$gui.Alert.BuildingInConstruction.Body";
+		};
+		
+		"OrderListFull" = MessageDescription
+		{
+			Title = "$ui.TransferPrompt.PlaceOrder";
+			Body = "$gui.Alert.OrderListFull.Body";
+		};
+		
+		"RemovingArmorError" = MessageDescription
+		{
+			Title = "$ui.HelpTutorial.CharacterInspection3"; // if needed we can change the title
+			Body = "$character.equipment.removing.armor";
+		};
+		
+		"ProduceOffspringAlert" = MessageDescription
+		{
+			Title = "$action.ProduceOffspring";
+			Body = "$action.ProduceOffspringInstuction";
+		};
+		
+		"CharacterAccusedAlert" = MessageDescription
+		{
+			Title = ""; // action name will be injected through code
+			Body = "$gui.Alert.CharacterAccused.Body";
+		};
+		
+		"CharacterImprisonedAlert" = MessageDescription
+		{
+			Title = ""; // action name will be injected through code
+			Body = "$gui.Alert.CharacterImprisoned.Body";
+		};
+		
+		"InvalidTradeRequestAlert" = MessageDescription
+		{
+			Title = "$trade.InvalidTradeRequest";
+			Body = "$trade.InvalidTradeRequestDescription";
+		};
+		
+		"RemovedFromOffice" = MessageDescription // showed when during proposal/voting, one of your characters is removed from office
+		{
+			Title = ""; // I don't think we really need a Title for this alert
+			Body = "$politicalPower.removedFromOffice.body";
+		};
+		
+		"ActionInvalidRequirements" = MessageDescription
+		{
+			Title = ""; // action display name hardcoded
+			Body = "$action.INVALID_REQUIREMENTS";
+		};
+		
+		"ActionInventoryFull" = MessageDescription
+		{
+			Title = ""; // action display name hardcoded
+			Body = "$action.INVENTORY_FULL";
+		};
+		
+		"ConnectionWarning" = MessageDescription
+		{
+			Title = "$gui.network.disconnected.title";
+			Body = "$connection.ConnectionWarning";
+		};
+		
+		"MissingServerPings" = MessageDescription
+		{
+			Title = "$gui.network.disconnected.title";
+			Body = "$connection.MissingServerPings";
+		};
+		
+		"ResumedServerPings" = MessageDescription
+		{
+			Title = "";
+			Body = "$connection.ResumedServerPings";
+		};
+		
+		"PlayerDisconnected" = MessageDescription
+		{
+			Title = "";
+			Body = "$connection.PlayerDisconnected";
+		};
+		
+		"WrongGameVersion" = MessageDescription
+		{
+			Title = "";
+			Body = "$gui.WrongGameVersion"; 
+		};
+		
+		"ActionShopStorageFull" = MessageDescription
+		{
+			Title = ""; // action display name hardcoded
+			Body = "$action.SHOP_STORAGE_FULL";
+		};
+		
+		"ActionNotEnoughMoney" = MessageDescription
+		{
+			Title = ""; // action display name hardcoded
+			Body = "$action.NOT_ENOUGH_MONEY";
+		};
+		
+		"ActionNotEnoughPrestige" = MessageDescription
+		{
+			Title = ""; // action display name hardcoded
+			Body = "$action.NOT_ENOUGH_PRESTIGE";
+		};
+		
+		"ActionAlliance" = MessageDescription
+		{
+			Title = ""; // action display name hardcoded
+			Body = "$action.ALLIANCE";
+		};
+		
+		"PoliticalPowerOnceAYear" = MessageDescription
+		{
+			Title = ""; // political power display name hardcoded
+			Body = "$ui.message.OnceAYear";
+		};
+		
+		"InitiateTrialSuccess" = MessageDescription
+		{
+			Title = "";
+			Body = "$action.Initiate.Trial.Success";
+		};
+
+		"MaxTrialsReached" = MessageDescription
+		{
+			Title = "$action.Initiate.Trial.Failed";
+			Body = "$action.Initiate.Trial.TooMany";
+		};
+		
+		"MaxBusinessesReached" = MessageDescription
+		{
+			Title = ""; // this will be filled in code with the action name
+			Body = "$action.BuyBusiness.MaxReached";
+		};
+		
+		"MaxBusinessesReachedTarget" = MessageDescription
+		{
+			Title = ""; // this will be filled in code with the action name
+			Body = "$action.BuyBusiness.MaxReachedTarget";
+		};
+		
+		"MaxHostagesReached" = MessageDescription
+		{
+			Title = ""; // this will be filled in code with the action name
+			Body = "$action.tradeHostage.MaxHostagesReached";
+		};
+		
+		"MaxHostagesReachedTarget" = MessageDescription
+		{
+			Title = ""; // this will be filled in code with the action name
+			Body = "$action.tradeHostage.MaxHostagesReachedTarget";
+		};
+		
+		"UnequipNotPossibleWarning" = MessageDescription
+		{
+			Title = "$character.equipment.item_lost_warning.title";
+			Body = "$character.equipment.item_lost_warning.body";
+		};
+		
+		"NoPoliticianAvailable" = MessageDescription
+		{
+			Title = "$politicalPower.noPoliticianAvailable.title";
+			Body = "$politicalPower.noPoliticianAvailable.body";
+		};
+		
+		"CannotSleepInForeignResidence" = MessageDescription
+		{
+			Title = "$props.interaction.CannotSleepInForeignResidence.title";
+			Body = "$props.interaction.CannotSleepInForeignResidence.body";
+		};
+
+		"ExitInteractionError" = MessageDescription
+		{
+			Title = "$action.InteractionError.Head";
+			Body = "$action.InteractionError.Exit";
+			IsUrgent = false;
+		};
+
+		"GoToSleepInteractionError" = MessageDescription
+		{
+			Title = "$action.InteractionError.Head";
+			Body = "$action.InteractionError.GoToSleep";
+			IsUrgent = false;
+		};
+
+		"TakeBathHomeInteractionError" = MessageDescription
+		{
+			Title = "$action.InteractionError.Head";
+			Body = "$action.InteractionError.TakeBathHome";
+			IsUrgent = false;
+		};
+
+		"SitInteractionError" = MessageDescription
+		{
+			Title = "$action.InteractionError.Head";
+			Body = "$action.InteractionError.Sit";
+			IsUrgent = false;
+		};
+		
+		"DonateToChurchInteractionError" = MessageDescription
+		{
+			Title = "$action.InteractionError.Head";
+			Body = "$action.InteractionError.DonateToChurch";
+			IsUrgent = false;
+		};
+
+		"BuyReligionInteractionError" = MessageDescription
+		{
+			Title = "$action.InteractionError.Head";
+			Body = "$action.InteractionError.BuyReligion";
+			IsUrgent = false;
+		};
+		
+		"NPCTalkInteractionError" = MessageDescription
+		{
+			Title = "$action.InteractionError.Head";
+			Body = "$action.InteractionError.NPCTalk";
+			IsUrgent = false;
+		};
+		
+// END POP-UPS SECTION ************************ //
+		
+		"EnemyUnlockedNobilityTitle" = MessageDescription
+		{
+			Title = "$notification.EnemyUnlockedNobilityTitle.title";
+			Body = "$notification.EnemyUnlockedNobilityTitle.body";
+			Effect = "";
+			Icon = "Diplomacy";
+			Type = "Neutral";
+			IsUrgent = true;
+			Duration = 60;
+			SFX = 33;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};	
+		};
+
+		"StartQuest" = MessageDescription
+		{
+			Title = "$quests.started.title";
+			Body = "$quests.started.body";
+			Effect = "";
+			Icon = "Event";
+			Type = "Quest";
+			IsUrgent = true;
+			Duration = 300;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newQuestsWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+
+		"FinishQuest" = MessageDescription
+		{
+			Title = "$quests.finished.title";
+			Body = "$quests.finished.body";
+			Effect = "";
+			Icon = "Event";
+			Type = "Quest";
+			IsUrgent = true;
+			Duration = 45;
+		};
+		
+		"NoHeir" = MessageDescription
+		{
+			Title = "$UI.LosingCondition.NoHeir.Title";
+			Body = "$UI.LosingCondition.NoHeir.Body";
+			Icon = "NoHeir"; // media/UserInterface/Icons/LosingConditions
+			Type = "Negative";
+			SFX = 34;
+		};
+		
+		"NoMoney" = MessageDescription
+		{
+			Title = "$UI.LosingCondition.NoMoney.Title";
+			Body = "$UI.LosingCondition.NoMoney.Body";
+			Icon = "NoMoney";
+			Type = "Negative";
+			SFX = 34;
+		};
+		
+		"NoResidence" = MessageDescription
+		{
+			Title = "$UI.LosingCondition.NoResidence.Title";
+			Body = "$UI.LosingCondition.NoResidence.Body";
+			Icon = "NoResidence";
+			Type = "Negative";
+			SFX = 34;
+		};
+		
+		"ChangeHeir" = MessageDescription
+		{
+			Title = "$UI.LosingCondition.ChangeHeir.Title";
+			Body = "$UI.LosingCondition.ChangeHeir.Body";
+			Icon = "ChangeHeir";
+			Type = "Neutral";
+			SFX = 33;
+		};
+		
+		"EnemySovereign" = MessageDescription
+		{
+			Title = "$UI.LosingCondition.EnemySovereign.Title";
+			Body = "$UI.LosingCondition.EnemySovereign.Body";
+			Icon = "EnemySovereign";
+			Type = "Negative";
+			SFX = 34;			
+		};
+		
+		// hardcoded - specific for enemy2player feud
+		"FeudDeclared" = MessageDescription //A dynasty declared a feud on the player
+		{
+			Title = "$action.AskFeud.Victim.Headline";
+			Body = "$action.AskFeud.Victim";
+			Effect = "";
+			Icon = "Combat";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 101;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - specific for enemy2enemy feud
+		"EnemyDeclaredFeudOnEnemy" = MessageDescription //An opponent dynasty declared a feud on another opponent dynasty.
+		{
+			Title = "$message.FamilyStartedAFeud.Headline";
+			Body = "$message.FamilyStartedAFeud";
+			Effect = "";
+			Icon = "Diplomacy";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - we need to inform the allies
+		"GuildPeaceDeclared" = MessageDescription //A feud between 2 guilds has been ended
+		{
+			Title = "$notification.GuildsFeudEnds";
+			Body = "$action.BreakFeudAction.SecretSociety.Success";
+			Effect = "";
+			Icon = "Guild";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 105;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		"GuildKickWarning" = MessageDescription
+		{
+			Title = "$notification.GuildKickWarning.title";
+			Body = "$notification.GuildKickWarning.body";
+			Effect = "";
+			Icon = "Guild";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+		};
+		
+		"GuildKickedAnnouncement" = MessageDescription
+		{
+			Title = "$notification.GuildKickedAnnouncement.title";
+			Body = "$notification.GuildKickedAnnouncement.body";
+			Effect = "";
+			Icon = "Guild";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+		};
+
+		// hardcoded - we need to inform the allies
+		"FeudEnded" = MessageDescription //A feud between 2 dynasties has been ended. 
+		{
+			Title = "$notification.FamiliesFeudEnds";
+			Body = "$message.BreakFeudAction.Success";
+			Effect = "";
+			Icon = "Diplomacy";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - PoliticalInfluenceAction is using mBuildingInn for finding the neighborhood
+		"PlayerCommended" = MessageDescription //The player's dynasty was commended by somebody publicy. This is a result of the commend action. 
+		{
+			Title = "$notification.Commended";
+			Body = "$action.Commended";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 106;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};	
+		};
+		
+		// FunctionSendMessage
+		"PlayerComplimentedFailed" = MessageDescription //A player's character got a compliment but the compliment failed. Result of the compliment action. 
+		{
+			Title = "$notification.FailedCompliment";
+			Body = "$action.ComplimentSomeone.FailureTarget";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 107;
+		};
+		
+		// FunctionSendMessage
+		"PlayerComplimentedSuccess" = MessageDescription //A player's character got a compliment. Result of the compliment action. 
+		{
+			Title = "$action.ComplimentSomeone.SuccessTarget.narrator";
+			Body = "$action.ComplimentSomeone.SuccessTarget";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 108;
+		};
+		
+		// FunctionSendMessage
+		"PlayerPraiseSuccess" = MessageDescription //A player's character got a compliment. Result of the compliment action. 
+		{
+			Title = "$action.Praised.Narrator";
+			Body = "$action.Praised";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 300;
+		};
+		
+		"PlayerDenouncedSuccess" = MessageDescription //The player's family was smeared in public. Smear action against the player was a success. 
+		{
+			Title = "$notification.Denounced";
+			Body = "$action.Denounced";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 125;
+		};
+		
+		// hardcoded - Triggered on start
+		"EnemyConquerBuildingAttempt" = MessageDescription //Enemies are trying to conquer a building of the player. Conquer action has been triggered on a player's building. 
+		{
+			Title = "$notification.BuildingUnderAttack";
+			Body = "$action.ConquerBuilding.StartTarget";
+			Effect = "";
+			Icon = "Combat";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 109;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};	
+		};
+		
+		// hardcoded - we need to inform the allies
+		"EnemyConquerAlliedBuildingAttempt" = MessageDescription //Enemies are trying to conquer a building of the player's ALLIED. Conquer action has been triggered on an allied dynasty's building.
+		{
+			Title = "$notification.BuildingUnderAttack";
+			Body = "$action.ConquerBuilding.StartTargetAllies";
+			Effect = "";
+			Icon = "Combat";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 110;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				},
+				FunctionSelectActor
+				{
+				}
+			};
+		};
+		
+		// FunctionSendMessage
+		"PlayerConqueredBuilding" = MessageDescription //Player conquered a building. Conquer action has been successful and building's ownership has been transferred. 
+		{
+			Title = "$action.ConquerBuilding.SuccessSource.narrator";
+			Body = "$action.ConquerBuilding.SuccessSource";
+			Effect = "";
+			Icon = "Combat";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 111;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// FunctionSendMessage
+		"EnemyConqueredBuilding" = MessageDescription //Enemy conquered a building of the player. Conquer action has been successful and building's ownership has been transferred to the enemy. 
+		{
+			Title = "$notification.BuildingLost";
+			Body = "$action.ConquerBuilding.SuccessTarget";
+			Effect = "";
+			Icon = "Combat";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 112;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - all other PoliticalInfluenceActions need to be hardcoded
+		"PlayerDenounced" = MessageDescription //The player has been denounced at the city council. The denounce actions has been successfully used against the player. 
+		{
+			Title = "$notification.Denounced";
+			Body = "$action.Denounced";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 113;
+		};
+		
+		// hardcoded - I cannot replace a generic tag like %character% without knowing if source or target
+		"BuildingDestroyed" = MessageDescription //A building of the player has been destroyed as a result of the political action - destroy broken building. 
+		{
+			Title = "$notification.BuildingLost";
+			Body = "$action.DestroyBuildingPoliticalSucces";
+			Effect = "";
+			Icon = "Building";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 114;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - I cannot replace a generic tag like %character% without knowing if source or target
+		"WarningBuildingDestroyed" = MessageDescription //The city council will vote on whether the player's building is going to be destroyed or not. 
+		{
+			Title = "$notification.DemolishWarning";
+			Body = "$action.DestroyBuildingPoliticalWarning";
+			Effect = "";
+			Icon = "Building";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 115;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// $action.DestroyBuildingPoliticalWarning.InitiatorFeedback --> not needed I think
+		
+		// FunctionSendMessage - TODO: right now commented out because the loca text is wrong, we need to have a loca with a fixed amount of money
+		"PlayerBribed" = MessageDescription //The player was bribed with money. Positive result of the bribe action. 
+		{
+			Title = "$notification.Bribed";
+			Body = "$notification.bribed.success";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 538;
+		};
+		"PlayerBribedFailed" = MessageDescription //The player was bribed with money. Negative result of the bribe action. 
+		{
+			Title = "$notification.Bribed";
+			Body = "$notification.bribed.failure";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 538;
+		};
+		
+		// hardcoded - specific for employees
+		"EmployeeKidnapped" = MessageDescription //An employee of the player has been kidnapped. Positive result of the kidnapping action.
+		{
+			Title = "$notification.EmployeeMissing";
+			Body = "$action.Hostage.Victim.Employee";
+			Effect = "";
+			Icon = "Employee";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 117;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - specific for family members
+		"FamilyMemberKidnapped" = MessageDescription //A family member has been kidnapped. Positive result of the kidnapping action.
+		{
+			Title = "$notification.KinMissing";
+			Body = "$action.Hostage.Victim.Kin";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 118;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - specific for leaders
+		"LeaderKidnapped" = MessageDescription //The player's leader has been kidnapped. Positive result of the kidnapping action.
+		{
+			Title = "$action.Hostage.Victim.Leader.narrator";
+			Body = "$action.Hostage.Victim.Leader";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 119;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - specific for employees
+		"EmployeeKidnapReleased" = MessageDescription // An employee of the player has been released from abduction.
+		{
+			Title = "$notification.title.EmployeeKidnapReleased";
+			Body = "$notification.body.EmployeeKidnapReleased";
+			Effect = "";
+			Icon = "Employee";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			// No voice over right now
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - specific for family members
+		"FamilyMemberKidnapReleased" = MessageDescription // A family member other than the leader has been released from abduction.
+		{
+			Title = "$notification.title.FamilyMemberKidnapReleased";
+			Body = "$notification.body.FamilyMemberKidnapReleased";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			// No voice over right now
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - specific for leaders
+		"LeaderKidnapReleased" = MessageDescription // The player's leader has been released from abduction.
+		{
+			Title = "$notification.title.LeaderKidnapReleased";
+			Body = "$notification.body.LeaderKidnapReleased";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			// No voice over right now
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - specific for employees
+		"EmployeeKidnapEscaped" = MessageDescription // An employee of the player has managed to escape abduction.
+		{
+			Title = "$notification.title.EmployeeKidnapEscaped";
+			Body = "$notification.body.EmployeeKidnapEscaped";
+			Effect = "";
+			Icon = "Employee";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			// No voice over right now
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - specific for family members
+		"FamilyMemberKidnapEscaped" = MessageDescription // A family member other than the leader has managed to escape abduction.
+		{
+			Title = "$notification.title.FamilyMemberKidnapEscaped";
+			Body = "$notification.body.FamilyMemberKidnapEscaped";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			// No voice over right now
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - specific for leaders
+		"LeaderKidnapEscaped" = MessageDescription // The player's leader has managed to escape abduction.
+		{
+			Title = "$notification.title.LeaderKidnapEscaped";
+			Body = "$notification.body.LeaderKidnapEscaped";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			// No voice over right now
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		"TradeMissionSuccess" = MessageDescription // Trade mission was successful
+		{
+			Title = "$notification.TradeMissionSuccess";
+			Body = "$action.TradeMission.Success";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 121;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+
+		"TradeMissionFailure" = MessageDescription // Trade mission was a failure
+		{
+			Title = "$notification.TradeMissionFailure";
+			Body = "$action.TradeMission.Failure";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 121;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+
+		// hardcoded - the body is gender-dependent
+		"LongDistanceTravelCriticalFailure" = MessageDescription //A family member didn't return from a far distance travel. Far distance travel action failed. Longshore.
+		{
+			Title = "$notification.LongshoreFailed";
+			Body = "$action.Longshore.CriticalFail";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 120;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - the body is gender-dependent
+		"LongDistanceTravelFailure" = MessageDescription //A family member didn't return from a far distance travel. Far distance travel action failed. Longshore.
+		{
+			Title = "$notification.LongshoreFailed";
+			Body = "$action.Longshore.Fail";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 121;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - the body is gender-dependent
+		"LongDistanceTravelSuccess" = MessageDescription //A family member returned from a far distance travel. Far distance travel action SUCCESSFUL. Longshore.
+		{
+			Title = "$notification.LongshoreSuccess";
+			Body = "$action.Longshore.Success";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 121;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - the body is gender-dependent
+		"OverseaTravelCriticalFailure" = MessageDescription //A family member didn't return from an oversea travel. Oversea travel action failed. Longshore.
+		{
+			Title = "$notification.LongshoreFailed";
+			Body = "$action.Longshore2.CriticalFail";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 122;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - the body is gender-dependent
+		"OverseaTravelFailure" = MessageDescription //A family member didn't return from an oversea travel. Oversea travel action failed. Longshore.
+		{
+			Title = "$notification.LongshoreFailed";
+			Body = "$action.Longshore.Fail";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 123;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - the body is gender-dependent
+		"OverseaTravelSuccess" = MessageDescription //A family member returned from a oversea travel. Oversea travel action SUCCESSFUL. Longshore.
+		{
+			Title = "$notification.LongshoreSuccess";
+			Body = "$action.Longshore2.Success";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 123;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - it needs to be triggered when detected
+		"LeaderPickpocketingCaptured" = MessageDescription //The family leader has been captured while pickpocketing/stealing. Pickpocketing or stealing action detected by guard. 
+		{
+			Title = "$notification.PlayerCaught";
+			Body = "$action.PickPocketFailure";
+			Effect = "";
+			Icon = "Justice";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 124;
+		};
+		
+		// hardcoded - it's using mBuildingInn to get the neighborhood
+		"PlayerSmeared" = MessageDescription //The player's family was smeared in public. Smear action against the player was a success. 
+		{
+			Title = "$notification.Smeared";
+			Body = "$action.Smeared";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 125;
+		};
+		
+		"PlayerGossiped" = MessageDescription //Someone has been gossiping about the player's family
+		{
+			Title = "$notification.Smeared";
+			Body = "$action.notification.gossip";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 125;
+		};
+		
+		"PlayerAdmired" = MessageDescription //A player's character got a compliment. Result of the compliment action. 
+		{
+			Title = "$action.Praised.Narrator";
+			Body = "$action.notification.admire";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 300;
+		};
+		
+		// hardcoded - we need to send the notification to all members
+		"GuildNewMember" = MessageDescription //A new dynasty was accepted into the guild of the player. Triggered on update of the guild's members. 
+		{
+			Title = "$action.SocietyInviteMemberAction.Members.narrator";
+			Body = "$action.SocietyInviteMemberAction.Members";
+			Effect = "";
+			Icon = "Guild";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 126;
+		};
+		
+		// hardcoded - the SecretSociety of the target is already removed when the action finishes
+		"PlayerKickedFromGuild" = MessageDescription //The player has been kicked from a guild. 
+		{
+			Title = "$action.SocietyKickMember.Player.narrator";
+			Body = "$action.SocietyKickMember.Player";
+			Effect = "";
+			Icon = "Guild";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 127;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// FunctionSendMessage
+		"StartLiaisonActionFailed" = MessageDescription //The player tried to start a liaison but the attempt failed. STart liaison action failed. 
+		{
+			Title = "$action.StartLiaisonActionFail.narrator";
+			Body = "$action.StartLiaisonActionFail";
+			Effect = "";
+			Icon = "Love";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			//SFX = 34;
+			VO = 128;
+		};
+		
+		// FunctionSendMessage
+		"StartLiaisonActionSuccess" = MessageDescription //The player successfully started a liaison. Start liaison action successful. 
+		{
+			Title = "$action.StartLiaisonActionSuccess.narrator";
+			Body = "$action.StartLiaisonActionSuccess";
+			Effect = "";
+			Icon = "Love";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 129;
+		};
+
+		// FunctionSendMessage
+		"ProposeMarriageActionFailed" = MessageDescription // The player tried to propose marriage, but the target declined.
+		{
+			Title = "$action.ProposeMarriageActionFail.narrator";
+			Body = "$action.ProposeMarriageActionFail";
+			Effect = "";
+			Icon = "Love";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			//SFX = 34;
+			VO = 128;
+		};
+		
+		// FunctionSendMessage
+		"ProposeMarriageActionSuccess" = MessageDescription // The player successfully proposed marriage.
+		{
+			Title = "$action.ProposeMarriageActionSuccess.narrator";
+			Body = "$action.ProposeMarriageActionSuccess";
+			Effect = "";
+			Icon = "Love";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 129;
+		};
+		
+		// FunctionSendMessage
+		"PlayerBuildingRobbed" = MessageDescription //An opponent broke into the player's building. The break into building action was successfully executed against the player's building. 
+		{
+			Title = "$action.StealHouse.SuccessTargetHeadline";
+			Body = "$action.StealHouse.SuccessTarget";
+			Effect = "";
+			Icon = "Building";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 130;
+		};
+		
+		// FunctionSendMessage
+		"LoveLetterSuccess" = MessageDescription //The UseArtifact Action LoveLetter was a success.
+		{
+			Title = "$action.WriteLoveLetter.AcceptHead";
+			Body = "$action.WriteLoveLetter.Accept";
+			Effect = "";
+			Icon = "Love";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 131;
+		};
+		
+		// FunctionSendMessage
+		"LoveLetterFailed" = MessageDescription //The UseArtifact Action LoveLetter failed. 
+		{
+			Title = "$action.WriteLoveLetter.RefuseHead";
+			Body = "$action.WriteLoveLetter.Refuse";
+			Effect = "";
+			Icon = "Love";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 132;
+		};
+		
+		// hardcoded - not action dependent
+		"FightStart" = MessageDescription //A fight started. 
+		{
+			Title = "$combat.startTitle.member";
+			Body = "$quickmessage.FamilyAttacked";
+			Effect = "";
+			Icon = "Combat";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"FightDefeat" = MessageDescription //The player lost a fight. 
+		{
+			Enabled = false;
+			Title = "$combat.end.loser";
+			Body = "$combat.end.loser";
+			Effect = "";
+			Icon = "Combat";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 135;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"FightVictory" = MessageDescription //The player won a fight. 
+		{
+			Title = "$combat.end.winner";
+			Body = "$combat.end.winner";
+			Effect = "";
+			Icon = "Combat";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 136;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"EventBigFire" = MessageDescription // More than X buildings are burning. 
+		{
+			Title = "$notification.GreatFire";
+			Body = "$Event.GreatFire";
+			Effect = "";
+			Icon = "Event";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 139;
+		};
+		
+		// hardcoded - not action dependent
+		"EventBadHarvest" = MessageDescription // Bad harvest event has been triggered. 
+		{
+			Title = "$notification.BadHarvest";
+			Body = "$Event.Harvest.Bad";
+			Effect = "";
+			Icon = "Event";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 140;
+		};
+		
+		// hardcoded - not action dependent
+		"EventGoodHarvest" = MessageDescription // Good harvest event triggered. 
+		{
+			Title = "$notification.GoodHarvest";
+			Body = "$Event.Harvest.Good";
+			Effect = "";
+			Icon = "Event";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 141;
+		};
+		
+		// hardcoded - not action dependent
+		"FamilyMemberSickPlague" = MessageDescription // A character in the player's family got infected by the plague
+		{
+			Title = "$Event.Plague.Infected.narrator";
+			Body = "$Event.Plague.Infected";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 142;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"EventPlague" = MessageDescription // Triggered as soon as the first character was infected with the pestilence sickness status effect. 
+		{
+			Title = "$notification.Plague";
+			Body = "$Event.Plague.Started";
+			Effect = "";
+			Icon = "Event";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 143;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"EventWarStarted" = MessageDescription // Triggered when the war event is started. 
+		{
+			Title = "$notification.War";
+			Body = "$Event.WarStarted";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			VO = 144;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// FunctionSendMessage
+		"PlayerInsulted" = MessageDescription // Triggered when the player had been successfully insulted. 
+		{
+			Title = "$fb.Compliment.Failure.Target.narrator";
+			Body = "$fb.Insult.Humilated";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 145;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+				FunctionSelectActor
+				{
+				};
+			};
+		};
+		
+		// FunctionSendMessage
+		"PlayerInsultSuccessful" = MessageDescription // Triggered when the player successfully insulted an opponent character.
+		{
+			Title = "$notification.InsultSatisfaction";
+			Body = "$fb.Insult.Duel.Actor";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 147;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"PlayerReputationIncreasedWithDynasty" = MessageDescription // Triggered when the player's reputation went up over certain thresholds.
+		{
+			Title = "$fb.Reputation.Gain.Headline";
+			Body = "$fb.Reputation.Change.Dynasty";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 148;
+		};
+				
+		// hardcoded - not action dependent
+		"PlayerReputationIncreasedWithNeighborhood" = MessageDescription // Triggered when the player's reputation went up over certain thresholds.
+		{
+			Title = "$fb.Reputation.Gain.Headline";
+			Body = "$fb.Reputation.Change.Neighborhood";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 148;
+		};
+		
+		// hardcoded - not action dependent
+		"PlayerReputationDecreasedWithDynasty" = MessageDescription // Triggered when the player's reputation went under certain thresholds. We probably need to set those up Nicola.
+		{
+			Title = "$fb.Reputation.Loss.Headline";
+			Body = "$fb.Reputation.Change.Dynasty";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 149;
+		};
+		
+		// hardcoded - not action dependent
+		"PlayerReputationDecreasedWithNeighborhood" = MessageDescription // Triggered when the player's reputation went under certain thresholds. We probably need to set those up Nicola.
+		{
+			Title = "$fb.Reputation.Loss.Headline";
+			Body = "$fb.Reputation.Change.Neighborhood";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 149;
+		};
+		
+		// FunctionSendMessage - TODO: set it up where needed using the FunctionSendMessage
+		"PlayerGenericPositive" = MessageDescription // Triggered when the player received flowers successfully. Can be used for other actions as well. 
+		{
+			Title = "$fb.Reputation.Positive.Headline";
+			Body = "$fb.GenericPositive";
+			Effect = "";
+			Icon = "Love";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 151;
+		};
+
+		// hardcoded - not action dependent
+		"FemaleFianceDied" = MessageDescription // Triggered when a female fiance of the player died. 
+		{
+			Title = "$notification.FianceDead.female";
+			Body = "$gui.fianceDead.female";
+			Effect = "";
+			Icon = "Love";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 152;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"MaleFianceDied" = MessageDescription // Triggered when a male fiance of the player died. 
+		{
+			Title = "$notification.FianceDead";
+			Body = "$gui.fianceDead";
+			Effect = "";
+			Icon = "Love";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 153;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"FemaleLiaisonDied" = MessageDescription // Triggered when a female liaison of the player died. 
+		{
+			Title = "$notification.LiaisonDead.female";
+			Body = "$gui.concubineDead.female";
+			Effect = "";
+			Icon = "Love";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 152;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"MaleLiaisonDied" = MessageDescription // Triggered when a male liaison of the player died. 
+		{
+			Title = "$notification.LiaisonDead";
+			Body = "$gui.concubineDead";
+			Effect = "";
+			Icon = "Love";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 153;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"FemaleRomanceDied" = MessageDescription // Triggered when a female romance of the player died. 
+		{
+			Title = "$notification.RomanceDied.female";
+			Body = "$gui.liaisonDead.female";
+			Effect = "";
+			Icon = "Love";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			//VO = 152;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"MaleRomanceDied" = MessageDescription // Triggered when a male romance of the player died. 
+		{
+			Title = "$notification.RomanceDied";
+			Body = "$gui.liaisonDead";
+			Effect = "";
+			Icon = "Love";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			//VO = 153;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"FemaleLiaisonRelationshipEnd" = MessageDescription // Triggered when a female liaison of the player ends the relationship. 
+		{
+			Title = "$notification.LiaisonEnd.female";
+			Body = "$gui.concubineLostInterest.female";
+			Effect = "";
+			Icon = "Love";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 154;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"MaleLiaisonRelationshipEnd" = MessageDescription // Triggered when a male liaison of the player ends the relationship. 
+		{
+			Title = "$notification.LiaisonEnd";
+			Body = "$gui.concubineLostInterest";
+			Effect = "";
+			Icon = "Love";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 155;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"FemaleRomanceRelationshipEnd" = MessageDescription // Triggered when a female romance of the player ends the relationship. 
+		{
+			Title = "$notification.RomanceEnd.female";
+			Body = "$fb.RomanceEnds.female";
+			Effect = "";
+			Icon = "Love";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			//VO = 154;
+		};
+		
+		// hardcoded - not action dependent
+		"MaleRoomanceRelationshipEnd" = MessageDescription // Triggered when a male romance of the player ends the relationship. 
+		{
+			Title = "$notification.RomanceEnd";
+			Body = "$fb.RomanceEnds";
+			Effect = "";
+			Icon = "Love";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			//VO = 155;
+		};
+		
+		// hardcoded - because it's storing the trade inside the message
+		"DynastyTradeRequestReceived" = MessageDescription // Triggered when the player receives a dynasty trade request. 
+		{
+			Title = "$notification.DynastyTrade";
+			Body = "$fb.DynastyTradeRequest";
+			Effect = "";
+			Icon = "Diplomacy";
+			Type = "Neutral";
+			Duration = 120;
+			IsUrgent = true;
+			SFX = 33;
+			VO = 158;
+			
+			OnClickReactions = array
+			{
+				FunctionShowDynastyTradeRequest {};
+			};
+			
+			OnTimeoutReactions = array
+			{
+				FunctionDenyTradeProposal {};
+			};
+		};
+		
+		"PoliticalPowerAuditBooks" = MessageDescription // Triggered when the audit books action finished successfully.
+		{
+			Title = "$notification.AuditBooks";
+			Body = "$notification.AuditBooks.details";
+			Effect = "";
+			Icon = "Politics";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 159;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// TODO: refactor when political powers work
+		// hardcoded - notification sent on Execute()
+		"PoliticalPowerTownCrierBad" = MessageDescription //Triggered when the council decided that the town crier will spread only BAD things about the player's family. 
+		{
+			Title = "";
+			Body = "$gui.PoliticalPower.TargetCityRecordBad";
+			Effect = "";
+			Icon = "Politics";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 160;
+		};
+		
+		// TODO: refactor when political powers work
+		// hardcoded - notification sent on Execute()
+		"PoliticalPowerTownCrierGood" = MessageDescription //Triggered when the council decided that the town crier will spread only GOOD things about the player's family. 
+		{
+			Title = "";
+			Body = "$gui.PoliticalPower.TargetCityRecordGood";
+			Effect = "";
+			Icon = "Politics";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 161;
+		};
+		
+		"PoliticalPowerBanished" = MessageDescription // Sent when a family member gets banished through PowerHeretic
+		{
+			Title = "$notification.PoliticalPower.Banished.Title";
+			Body = "$notification.PoliticalPower.Banished.Body";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 60;
+			IsUrgent = true;
+			SFX = 34;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		"PoliticalPowerPrisonSentenceIncreased" = MessageDescription // Sent when the prison sentence is increased
+		{
+			Title = "$notification.PoliticalPower.JailTermIncreased.Title";
+			Body = "$notification.PoliticalPower.JailTermIncreased.Body";
+			Effect = "";
+			Icon = "Justice";
+			Type = "Negative";
+			Duration = 60;
+			IsUrgent = true;
+			SFX = 34;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		"PoliticalPowerPrisonSentenceReduced" = MessageDescription // Sent when the prison sentence is reduced
+		{
+			Title = "$notification.PoliticalPower.JailTermReduced.Title";
+			Body = "$notification.PoliticalPower.JailTermReduced.Body";
+			Effect = "";
+			Icon = "Justice";
+			Type = "Positive";
+			Duration = 60;
+			IsUrgent = true;
+			SFX = 32;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - because of the SpreadEffect, a building can go on fire for multiple reasons
+		"PlayerBuildingBurning" = MessageDescription //Triggered when a building of the player receives the burning status effect. Could probably be triggered in the success results of actions that add the burning status effect?
+		{
+			Title = "$notification.BuildingBurning";
+			Body = "$message.building.burning.text";
+			Effect = "";
+			Icon = "Building";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 167;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"EmployeeDead" = MessageDescription //Triggered when an employee died. 
+		{
+			Title = "$message.EmployeeDead.Header";
+			Body = "$message.EmployeeDead";
+			Effect = "";
+			Icon = "Employee";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 169;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"HenchmanDead" = MessageDescription //Triggered when a henchman died. 
+		{
+			Title = "$message.HenchmanDead.Header";
+			Body = "$message.HenchmanDead";
+			Effect = "";
+			Icon = "Employee";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 169;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - notification specific for employees
+		"HenchmanDrunk" = MessageDescription //Triggered when a henchman gets the drunk status effect.
+		{
+			Title = "$message.HenchmanDrunk.Title";
+			Body = "$message.HenchmanDrunk.Body";
+			Effect = "";
+			Icon = "Employee";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 170;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+				};
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - notification specific for employees
+		"HenchmanPoisoned" = MessageDescription //Triggered when a henchman got the poison status effect.
+		{
+			Title = "$message.HenchmanPoisoned.Title";
+			Body = "$message.HenchmanPoisoned.Body";
+			Effect = "";
+			Icon = "Employee";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 172;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+				};
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - notification specific for employees
+		"HenchmanSick" = MessageDescription //Triggered when a henchman gets sick.
+		{
+			Title = "$message.HenchmanSick.Title";
+			Body = "$message.HenchmanSick.Body";
+			Effect = "";
+			Icon = "Employee";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 176;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+				};
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - specific for employees
+		"HenchmanKidnapped" = MessageDescription //A henchman of the player has been kidnapped. Positive result of the kidnapping action.
+		{
+			Title = "$message.HenchmanKidnapped.Title";
+			Body = "$message.HenchmanKidnapped.Body";
+			Effect = "";
+			Icon = "Employee";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 117;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+				};
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - specific for employees
+		"HenchmanKidnapReleased" = MessageDescription // A henchman of the player has been released from abduction.
+		{
+			Title = "$message.HenchmanKidnapReleased.Title";
+			Body = "$message.HenchmanKidnapReleased.Body";
+			Effect = "";
+			Icon = "Employee";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			// No voice over right now
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+				};
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		
+		// hardcoded - not action dependent
+		"HenchmanReleased" = MessageDescription //Triggered when an employee is released from prison.
+		{
+			Title = "$message.HenchmanReleased.Title";
+			Body = "$message.HenchmanReleased.Body";
+			Effect = "";
+			Icon = "Employee";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+				};
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - notification specific for employees
+		"EmployeeDrunk" = MessageDescription //Triggered when an employee gets the drunk status effect. Could probably triggered in the success results. 
+		{
+			Title = "$message.EmployeeInebriated.Header";
+			Body = "$message.EmployeeInebriated";
+			Effect = "";
+			Icon = "Employee";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 170;
+		};
+		
+		// hardcoded - not action dependent
+		"EmployeeLevelUp" = MessageDescription //Triggered when an employee leveled up. 
+		{
+			Title = "$message.EmployeeLevel.Header";
+			Body = "$message.EmployeeLevel";
+			Effect = "";
+			Icon = "Employee";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 171;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+				};
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - notification specific for employees
+		"EmployeePoisoned" = MessageDescription //Triggered when an employee got the poison status effect. Could probably be again Triggered by the success result of the according actions. 
+		{
+			Title = "$message.EmployeePoisoned.Header";
+			Body = "$message.EmployeePoisoned";
+			Effect = "";
+			Icon = "Employee";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 172;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+				};
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"ProductionStoppedResources" = MessageDescription //Triggered when production is stopped due to missing resources. 
+		{
+			Title = "$message.EmployeesCantWork.Header";
+			Body = "$message.EmployeesCantWork";
+			Effect = "";
+			Icon = "Production";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 12;
+			VO = 173;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+				};
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"ProductionStoppedOutOfSpace" = MessageDescription //Triggered when production is stopped due to being out of space. 
+		{
+			Title = "$message.EmployeesCantWork.NoStorageSpace.Header";
+			Body = "$message.EmployeesCantWork.NoStorageSpace";
+			Effect = "";
+			Icon = "Production";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 12;
+			VO = 174;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+				};
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - notification specific for employees
+		"EmployeeSick" = MessageDescription //Triggered when an employee got a SICK status effect. Could probably be again Triggered by the success result of the according actions. 
+		{
+			Title = "$message.EmployeeSick.Header";
+			Body = "$message.EmployeeSick";
+			Effect = "";
+			Icon = "Employee";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 175;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+				};
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - notification specific for employees
+		"EmployeeWounded" = MessageDescription //Triggered when an employee got a WOUND status effect. Could probably be again Triggered by the success result of the according actions. 
+		{
+			Enabled = false;
+			Title = "$message.EmployeeWounded.Header";
+			Body = "$message.EmployeeWounded";
+			Effect = "$callToAction.CharacterAdult";
+			Icon = "Employee";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 176;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - notification specific for family members
+		"FamilyMemberDied" = MessageDescription //Triggered when a family member died. 
+		{
+			Title = "$message.FamilyMemberDied.Header";
+			Body = "$message.FamilyMemberDied";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 177;
+			
+			OnClickReactions = array
+			{
+				FunctionShowDeathUI { Title = "$message.FamilyMemberDied.Header"; Body = "$message.FamilyMemberDied"; };
+			};
+		};
+		
+		// hardcoded - notification specific for family members
+		"FamilyMemberDrunk" = MessageDescription //Triggered when a family member gets the drunk status effect.
+		{
+			Title = "$message.FamilyMemberInebriated.Header";
+			Body = "$message.FamilyMemberInebriated";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 178;
+		};
+		
+		// hardcoded - notification specific for family members
+		"FamilyMemberPoisoned" = MessageDescription //Triggered when a family member gets a poisoned status effect. 
+		{
+			Title = "$message.FamilyMemberPoisoned.Header";
+			Body = "$message.FamilyMemberPoisoned";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 179;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+				};
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - notification specific for family members
+		"FamilyMemberSick" = MessageDescription //Triggered when a family member gets a sick status effect. 
+		{
+			Title = "$message.FamilyMemberSick.Header";
+			Body = "$message.FamilyMemberSick";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 180;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+				};
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"FamilyMemberWounded" = MessageDescription //Triggered when a family member gets a wounded status effect.
+		{
+			Enabled = false;
+			Title = "$message.FamilyMemberWounded.Header";
+			Body = "$message.FamilyMemberWounded";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 181;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+				};
+			};
+		};
+
+		// hardcoded - not action dependent
+		"PlayerLeaderDead" = MessageDescription //Triggered when the leader of the player's dynasty died. 
+		{
+			Title = "$notification.AvatarDead";
+			Body = "$message.FamilyMemberDied";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 177;
+			OnClickReactions = array
+			{
+				FunctionShowDeathUI { Title = "$notification.AvatarDead"; Body = "$message.FamilyMemberDied"; };
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"EnemyLeaderDead" = MessageDescription //Triggered when the leader of another dynasty died. 
+		{
+			Title = "$message.OtherLeader.Dead.Narration";
+			Body = "$message.OtherLeader.Dead";
+			Effect = "";
+			Icon = "Diplomacy";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 31;
+			VO = 183;
+			
+			OnClickReactions = array
+			{
+				FunctionShowDeathUI { Title = "$message.OtherLeader.Dead.Narration"; Body = "$message.OtherLeader.Dead"; };
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"EnemyFamilyExtinct" = MessageDescription //Triggered when another dynasty go extinct
+		{
+			Title = "$notification.EnemyDynastyLost";
+			Body = "$fb.EnemyDynastyLost";
+			Effect = "";
+			Icon = "Diplomacy";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 31;
+			//VO = 177;
+			
+			OnClickReactions = array
+			{
+				FunctionShowDeathUI { Title = "$notification.EnemyDynastyLost"; Body = "$fb.EnemyDynastyLost"; };
+			};
+		};
+		
+		// hardcoded - sent on ExecutionGameplay::startScene()
+		"EnemyLeaderExecution" = MessageDescription //Triggered when the leader of another is going to be executed. Should be shown when the execution scene is started. 
+		{
+			Title = "$notification.Execution";
+			Body = "$message.OtherLeader.Execution";
+			Effect = "";
+			Icon = "Diplomacy";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			VO = 184;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"MainResidenceDestroyed" = MessageDescription //Triggered when the main residence of the player is destroyed. 
+		{
+			Title = "$message.prevention.NoHouse.narration";
+			Body = "$message.prevention.NoHouse";
+			Effect = "";
+			Icon = "Combat";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 185;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - sent on AttackCharacterAction::onStart()
+		"LeaderAttacked" = MessageDescription //Triggered when the leader of the player's dynasty is attacked.
+		{
+			Title = "$quickmessage.AvatarAttacked";
+			Body = "$quickmessage.FamilyAttacked";
+			Effect = "";
+			Icon = "Combat";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 28;
+			VO = 186;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+		
+		// hardcoded - sent on AttackCharacterAction::onStart()
+		"FamilyMemberAttacked" = MessageDescription //Triggered when a family member of the player is under attack. 
+		{
+			Title = "$quickmessage.FamilyAttacked.Narration";
+			Body = "$quickmessage.FamilyAttacked";
+			Effect = "";
+			Icon = "Combat";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 29;
+			VO = 187;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+		
+		// hardcoded - specific for main residence
+		"MainResidenceUnderAttack" = MessageDescription //Triggered when an opponent tries to conquer, bomb or sabotage the main residence of the player. 
+		{
+			Title = "$quickmessage.ResidenceAttacked";
+			Body = "$quickmessage.BuildingAttacked";
+			Effect = "";
+			Icon = "Combat";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 188;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - specific for all buildings that are not the main residence
+		"PlayerBuildingUnderAttack" = MessageDescription //Triggered when an opponent tries to conquer, bomb or sabotage a building of the player. 
+		{
+			Title = "$quickmessage.BuildingAttacked.Narration";
+			Body = "$quickmessage.BuildingAttacked";
+			Effect = "";
+			Icon = "Combat";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 189;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"ConstructionFinished" = MessageDescription //Triggered when the player finishes the construction of a building. 
+		{
+			Title = "$quickmessage.buildingfinished.narration";
+			Body = "$quickmessage.buildingfinished";
+			Effect = "";
+			Icon = "Building";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 23;
+			VO = 190;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+				};
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - we need to send this on construction finished
+		"BuildingLevelUp" = MessageDescription //Triggered when a building was upgraded to a higher level. 
+		{
+			Title = "$quickmessage.buildinglevelup.narration";
+			Body = "$quickmessage.buildinglevelup";
+			Effect = "";
+			Icon = "Building";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 191;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+				};
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// HM: ok for now, but we need to update the body text once the feature is fully implemented
+		// hardcoded - not action dependent
+		"EventDrought" = MessageDescription //Triggered when the drought event is active. 
+		{
+			Title = "$quickmessage.drought";
+			Body = "$quickmessage.drought";
+			Effect = "";
+			Icon = "Event";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 192;
+		};
+		
+		// HM: ok for now, but we need to update the body text once the feature is fully implemented
+		// hardcoded - not action dependent
+		"EventIciness" = MessageDescription //Triggered when the iciness event is active. 
+		{
+			Title = "$quickmessage.iciness";
+			Body = "$quickmessage.iciness";
+			Effect = "";
+			Icon = "Event";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 193;
+		};
+		
+		// HM: ok for now, but we need to update the body text once the feature is fully implemented
+		// hardcoded - not action dependent
+		"EventRainfall" = MessageDescription //Triggered when the iciness event is active. 
+		{
+			Title = "$quickmessage.rainfall";
+			Body = "$notification.rainfall";
+			Effect = "$effect.rainfall";
+			Icon = "Event";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 194;
+			
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// HM: ok for now, but we need to update the body text once the feature is fully implemented
+		// hardcoded - not action dependent
+		"EventSnowstorm" = MessageDescription //Triggered when the snowstorm event is active. 
+		{
+			Title = "$quickmessage.snowstorm";
+			Body = "$notification.snowstorm";
+			Effect = "$effect.snowstorm";
+			Icon = "Event";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 195;
+			
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// HM: ok for now, but we need to update the body text once the feature is fully implemented
+		// hardcoded - not action dependent
+		"EventThunder" = MessageDescription //Triggered when the thunder event is active. 
+		{
+			Title = "$quickmessage.thunder";
+			Body = "$notification.thunder";
+			Effect = "$effect.thunder";
+			Icon = "Event";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 196;
+			
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNegative1" = MessageDescription //Triggered when the random event number 1 is triggered. 
+		{
+			Title = "$randomEvents.negative.narration.3";
+			Body = "$randomEvents.negative.1";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 199;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNegative2" = MessageDescription //Triggered when the random event number 2 is triggered. 
+		{
+			Title = "$randomEvents.negative.narration.3";
+			Body = "$randomEvents.negative.2";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 199;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNegative3" = MessageDescription //Triggered when the random event number 3 is triggered. 
+		{
+			Title = "$randomEvents.negative.narration.3";
+			Body = "$randomEvents.negative.3";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 199;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNegative4" = MessageDescription //Triggered when the random event number 4 is triggered. 
+		{
+			Title = "$randomEvents.negative.narration.3";
+			Body = "$randomEvents.negative.4";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 199;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNegative5" = MessageDescription //Triggered when the random event number 5 is triggered. 
+		{
+			Title = "$randomEvents.negative.narration.3";
+			Body = "$randomEvents.negative.5";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 199;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNegative6" = MessageDescription //Triggered when the random event number 6 is triggered. 
+		{
+			Title = "$randomEvents.negative.narration.4";
+			Body = "$randomEvents.negative.6";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 200;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNegative7" = MessageDescription //Triggered when the random event number 7 is triggered. 
+		{
+			Title = "$randomEvents.negative.narration.4";
+			Body = "$randomEvents.negative.7";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 200;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNegative8" = MessageDescription //Triggered when the random event number 8 is triggered. 
+		{
+			Title = "$randomEvents.negative.narration.4";
+			Body = "$randomEvents.negative.8";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 200;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNegative9" = MessageDescription //Triggered when the random event number 9 is triggered. 
+		{
+			Title = "$randomEvents.negative.narration.4";
+			Body = "$randomEvents.negative.9";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 200;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNegative10" = MessageDescription //Triggered when the random event number 10 is triggered. 
+		{
+			Title = "$randomEvents.negative.narration.1";
+			Body = "$randomEvents.negative.10";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 197;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNegative11" = MessageDescription //Triggered when the random event number 11 is triggered. 
+		{
+			Title = "$randomEvents.negative.narration.3";
+			Body = "$randomEvents.negative.11";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 199;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNegative12" = MessageDescription //Triggered when the random event number 12 is triggered. 
+		{
+			Title = "$randomEvents.negative.narration.1";
+			Body = "$randomEvents.negative.12";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 197;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNegative13" = MessageDescription //Triggered when the random event number 13 is triggered. 
+		{
+			Title = "$randomEvents.negative.narration.1";
+			Body = "$randomEvents.negative.13";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 197;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNegative14" = MessageDescription //Triggered when the random event number 14 is triggered. 
+		{
+			Title = "$randomEvents.negative.narration.1";
+			Body = "$randomEvents.negative.14";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 197;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNegative15" = MessageDescription //Triggered when the random event number 15 is triggered. 
+		{
+			Title = "$randomEvents.negative.narration.1";
+			Body = "$randomEvents.negative.15";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 197;
+		};
+
+		// hardcoded - not action dependent
+		"RandomEventNeutral1" = MessageDescription //Triggered when the neutral random event number 1 is triggered. 
+		{
+			Title = "$randomEvents.neutral.narration.1";
+			Body = "$randomEvents.neutral.1";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 202;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNeutral2" = MessageDescription //Triggered when the neutral random event number 2 is triggered. 
+		{
+			Title = "$randomEvents.neutral.narration.1";
+			Body = "$randomEvents.neutral.2";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 202;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNeutral3" = MessageDescription //Triggered when the neutral random event number 3 is triggered. 
+		{
+			Title = "$randomEvents.neutral.narration.2";
+			Body = "$randomEvents.neutral.3";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 203;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNeutral4" = MessageDescription //Triggered when the neutral random event number 4 is triggered. 
+		{
+			Title = "$randomEvents.neutral.narration.5";
+			Body = "$randomEvents.neutral.4";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 206;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNeutral5" = MessageDescription //Triggered when the neutral random event number 5 is triggered. 
+		{
+			Title = "$randomEvents.neutral.narration.3";
+			Body = "$randomEvents.neutral.5";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 204;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNeutral6" = MessageDescription //Triggered when the neutral random event number 6 is triggered. 
+		{
+			Title = "$randomEvents.neutral.narration.2";
+			Body = "$randomEvents.neutral.6";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 203;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNeutral7" = MessageDescription //Triggered when the neutral random event number 7 is triggered. 
+		{
+			Title = "$randomEvents.neutral.narration.1";
+			Body = "$randomEvents.neutral.7";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 202;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNeutral8" = MessageDescription //Triggered when the neutral random event number 8 is triggered. 
+		{
+			Title = "$randomEvents.neutral.narration.4";
+			Body = "$randomEvents.neutral.8";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 205;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNeutral9" = MessageDescription //Triggered when the neutral random event number 9 is triggered. 
+		{
+			Title = "$randomEvents.neutral.narration.1";
+			Body = "$randomEvents.neutral.9";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 202;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNeutral10" = MessageDescription //Triggered when the neutral random event number 10 is triggered. 
+		{
+			Title = "$randomEvents.neutral.narration.2";
+			Body = "$randomEvents.neutral.10";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 203;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNeutral11" = MessageDescription //Triggered when the neutral random event number 11 is triggered. 
+		{
+			Title = "$randomEvents.neutral.narration.3";
+			Body = "$randomEvents.neutral.11";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 204;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNeutral12" = MessageDescription //Triggered when the neutral random event number 12 is triggered. 
+		{
+			Title = "$randomEvents.neutral.narration.1";
+			Body = "$randomEvents.neutral.12";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 202;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNeutral13" = MessageDescription //Triggered when the neutral random event number 13 is triggered. 
+		{
+			Title = "$randomEvents.neutral.narration.1";
+			Body = "$randomEvents.neutral.13";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 202;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNeutral14" = MessageDescription //Triggered when the neutral random event number 14 is triggered. 
+		{
+			Title = "$randomEvents.neutral.narration.5";
+			Body = "$randomEvents.neutral.14";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 206;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNeutral15" = MessageDescription //Triggered when the neutral random event number 15 is triggered. 
+		{
+			Title = "$randomEvents.neutral.narration.1";
+			Body = "$randomEvents.neutral.15";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 202;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNeutral16" = MessageDescription //Triggered when the neutral random event number 16 is triggered. 
+		{
+			Title = "$randomEvents.neutral.narration.1";
+			Body = "$randomEvents.neutral.16";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 202;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNeutral17" = MessageDescription //Triggered when the neutral random event number 17 is triggered. 
+		{
+			Title = "$randomEvents.neutral.narration.3";
+			Body = "$randomEvents.neutral.17";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 204;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNeutral18" = MessageDescription //Triggered when the neutral random event number 18 is triggered. 
+		{
+			Title = "$randomEvents.neutral.narration.5";
+			Body = "$randomEvents.neutral.18";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 206;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNeutral19" = MessageDescription //Triggered when the neutral random event number 19 is triggered. 
+		{
+			Title = "$randomEvents.neutral.narration.2";
+			Body = "$randomEvents.neutral.19";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 203;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNeutral20" = MessageDescription //Triggered when the neutral random event number 20 is triggered. 
+		{
+			Title = "$randomEvents.neutral.narration.4";
+			Body = "$randomEvents.neutral.20";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 205;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventNeutral21" = MessageDescription //Triggered when the neutral random event number 21 is triggered. 
+		{
+			Title = "$randomEvents.neutral.narration.4";
+			Body = "$randomEvents.neutral.21";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 205;
+		};
+
+		// hardcoded - not action dependent
+		"RandomEventNeutral22" = MessageDescription //Triggered when the neutral random event number 22 is triggered. 
+		{
+			Title = "$randomEvents.neutral.narration.2";
+			Body = "$randomEvents.neutral.22";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 203;
+		};
+
+		// hardcoded - not action dependent
+		"RandomEventPositive1" = MessageDescription //Triggered when the positive random event number 1 is triggered. 
+		{
+			Title = "$randomEvents.positive.narration.2";
+			Body = "$randomEvents.positive.1";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 208;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventPositive2" = MessageDescription //Triggered when the positive random event number 2 is triggered. 
+		{
+			Title = "$randomEvents.positive.narration.2";
+			Body = "$randomEvents.positive.2";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 208;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventPositive3" = MessageDescription //Triggered when the positive random event number 3 is triggered. 
+		{
+			Title = "$randomEvents.positive.narration.2";
+			Body = "$randomEvents.positive.3";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 208;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventPositive4" = MessageDescription //Triggered when the positive random event number 4 is triggered. 
+		{
+			Title = "$randomEvents.positive.narration.2";
+			Body = "$randomEvents.positive.4";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 208;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventPositive5" = MessageDescription //Triggered when the positive random event number 5 is triggered. 
+		{
+			Title = "$randomEvents.positive.narration.2";
+			Body = "$randomEvents.positive.5";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 208;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventPositive6" = MessageDescription //Triggered when the positive random event number 6 is triggered. 
+		{
+			Title = "$randomEvents.positive.narration.1";
+			Body = "$randomEvents.positive.6";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 207;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventPositive7" = MessageDescription //Triggered when the positive random event number 7 is triggered. 
+		{
+			Title = "$randomEvents.positive.narration.5";
+			Body = "$randomEvents.positive.7";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 211;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventPositive8" = MessageDescription //Triggered when the positive random event number 8 is triggered. 
+		{
+			Title = "$randomEvents.positive.narration.1";
+			Body = "$randomEvents.positive.8";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 207;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventPositive9" = MessageDescription //Triggered when the positive random event number 9 is triggered. 
+		{
+			Title = "$randomEvents.positive.narration.5";
+			Body = "$randomEvents.positive.9";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 211;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventPositive10" = MessageDescription //Triggered when the positive random event number 10 is triggered. 
+		{
+			Title = "$randomEvents.positive.narration.1";
+			Body = "$randomEvents.positive.10";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 207;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventPositive11" = MessageDescription //Triggered when the positive random event number 11 is triggered. 
+		{
+			Title = "$randomEvents.positive.narration.4";
+			Body = "$randomEvents.positive.11";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 210;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventPositive12" = MessageDescription //Triggered when the positive random event number 12 is triggered. 
+		{
+			Title = "$randomEvents.positive.narration.4";
+			Body = "$randomEvents.positive.12";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 210;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventPositive13" = MessageDescription //Triggered when the positive random event number 13 is triggered. 
+		{
+			Title = "$randomEvents.positive.narration.4";
+			Body = "$randomEvents.positive.13";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 210;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventPositive14" = MessageDescription //Triggered when the positive random event number 14 is triggered. 
+		{
+			Title = "$randomEvents.positive.narration.4";
+			Body = "$randomEvents.positive.14";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 210;
+		};
+		
+		// hardcoded - not action dependent
+		"RandomEventPositive15" = MessageDescription //Triggered when the positive random event number 15 is triggered. 
+		{
+			Title = "$randomEvents.positive.narration.4";
+			Body = "$randomEvents.positive.15";
+			Effect = "";
+			Icon = "RandomEvent";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 210;
+		};
+
+		// FunctionSendMessage
+		"BuildingSabotageSuccess" = MessageDescription //Triggered when a building of the player has been successfully sabotaged. 
+		{
+			Title = "$fb.SabotageBuilding.Success";
+			Body = "$fb.SabotageBuilding.Success";
+			Effect = "";
+			Icon = "Building";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 213;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+					ApplyTo = "Target";
+				};
+			};	
+		};
+		
+		// FunctionSendMessage
+		"BuildingSabotageFailure" = MessageDescription //Triggered when an attempt has been made on sabotaging a building of the player but the action failed. 
+		{
+			Title = "$notification.SabotageBuilding.Failed";
+			Body = "$fb.SabotageBuilding.Failed";
+			Effect = "";
+			Icon = "Building";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 214;
+		};
+		
+		// HM: done, please add the wildcard %item% (well... currently I cannot do that, I'll think of something when we actually start using this notification)
+		// FunctionSendMessage - to setup in G3ActionsDefault.oc 
+		"GiftReceived" = MessageDescription //Triggered when the player received a gift. 
+		{
+			Title = "$action.GiveGift.Target.Success.narrator";
+			Body = "$action.GiveGift.Target.Success";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 215;
+		};
+
+		// FunctionSendMessage - to setup in G3ActionsDefault.oc 
+		"ReceivedWine" = MessageDescription //Triggered when the player received wine. 
+		{
+			Title = "$action.GiveGift.Target.Success.narrator";
+			Body = "$n.BribeWithWine.body";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 215;
+		};
+		
+		// FunctionSendMessage - right now setup for every character not only for the leader because I think it's important to know if a family member is a victim
+		"GhostlyFogSuccess" = MessageDescription //Triggered when the ghostly fog action has been applied successfully on the leader.
+		{
+			Title = "$action.ApplyGhostlyFog.SuccessTarget.Headline";
+			Body = "$action.ApplyGhostlyFog.SuccessTarget.Message";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 216;
+		};
+		
+		// FunctionSendMessage - right now setup for every character not only for the leader because I think it's important to know if a family member has been paralysed
+		"ParalysisSuccess" = MessageDescription //Triggered when the Paralysis Poison action has been applied successfully on the leader.
+		{
+			Title = "$action.ApplyParalysisPoison.SuccessTarget.Headline";
+			Body = "$action.ApplyParalysisPoison.SuccessTarget.Message";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 219;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+				};
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - leader specific notification
+		"LeaderPoisonedSuccess" = MessageDescription //Triggered when the LEADER has been poisoned.
+		{
+			Title = "$notification.PoisonCharacter";
+			Body = "$message.FamilyMemberPoisoned";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 217;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+					ApplyTo = "Target";
+				};
+			};
+		};
+		
+		// TODO: this is very problematic to setup because it's specific for the leader and it should happen only when they don't get the modifier effect(?)
+		//"LeaderPoisonedFailure" = MessageDescription //Triggered when an attempt on poisoning the leader failed. 
+		//{
+		//	Title = "";
+		//	Body = "";
+		//	Effect = "";
+		//	Icon = "Dynasty";
+		//	Type = "Neutral";
+		//	Duration = 45;
+		//	IsUrgent = false;
+		//	SFX = 33;
+		//	VO = 218;
+		//};
+				
+		// FunctionSendMessage
+		"UnholyMarriageProposalAccepted" = MessageDescription //Triggered when an opponent dynasty successfully marries a family member of the player without using the dynasty trade. 
+		{
+			Title = "$action.MarryConcubine.TargetNotificationHeadline";
+			Body = "$action.MarryConcubine.TargetNotification";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hard-coded: Sent to both families of the couple when the church wedding scene starts.
+		"NotificationChurchWedding" = MessageDescription
+		{
+			Title = "$notification.ChurchWedding.title";
+			Body = "$notification.ChurchWedding.body";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Positive";
+			Duration = 120;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 426;
+			OnClickReactions = array
+			{
+				FunctionFocusActor {};
+			};
+		};
+		
+		// hard-coded: Sent to all participating families when a trial scene starts
+		"NotificationTrialStarted" = MessageDescription
+		{
+			Title = "$notification.TrialStarted.title";
+			Body = "$notification.TrialStarted.body";
+			Effect = "";
+			Icon = "Justice";
+			Type = "Neutral";
+			Duration = 120;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 539;
+			OnClickReactions = array
+			{
+				FunctionFocusActor {};
+			};
+		};
+		
+		// hard-coded: Sent to all participating families when a trial scene gets canceled (e.g. when a participant dies during the scene)
+		"NotificationTrialCanceled" = MessageDescription
+		{
+			Title = "$notification.TrialCanceled.title";
+			Body = "$notification.TrialCanceled.body";
+			Effect = "";
+			Icon = "Justice";
+			Type = "Neutral";
+			Duration = 120;
+			IsUrgent = true;
+			SFX = 33;
+			VO = 533;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"OfficeLost" = MessageDescription //Triggered when the player lost an office
+		{
+			Title = "$notification.OfficeLost";
+			Body = "$fb.OfficeLost";
+			Effect = "";
+			Icon = "Politics";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 27;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "OfficesWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// FunctionSendMessage
+		"FamilyMemberStartedLiaision" = MessageDescription //Triggered when a family member started a liaision initiated by an opponent. <- We already have that one in the game but still needs to be moved over.
+		{
+			Title = "$action.StartRomance.TargetNotificationHeadline";
+			Body = "$action.StartRomance.TargetNotification";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			//VO = 3;
+		};
+		
+		"CandidateAppliedForOffice" = MessageDescription
+		{
+			Title = "$notification.CandidateAppliedForOffice.Title";
+			Body = "$notification.CandidateAppliedForOffice.Body";
+			Icon = "Politics";
+			Type = "Neutral";
+			IsUrgent = false;
+		};
+		
+		"OfficeElectionResult" = MessageDescription
+		{
+			Title = "$notification.OfficeElectionResult.Title";
+			Body = "$notification.OfficeElectionResult.Body";
+			Icon = "Politics";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+		};
+		
+		"OfficeElectionDraw" = MessageDescription
+		{
+			Title = "$notification.OfficeElectionResult.Title";
+			Body = "$notification.OfficeElectionResult.Draw.body";
+			Icon = "Politics";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+		};
+		
+		"OfficeElectionMissingVote" = MessageDescription
+		{
+			Title = "$notification.OfficeElectionMissingVote.Title";
+			Body = "$notification.OfficeElectionMissingVote.Body";
+			Icon = "Politics";
+			Type = "Neutral";
+			Duration = 60;
+			IsUrgent = true;
+			SFX = 33;
+			
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "OfficeWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// HM: we don't need this message
+		// TODO: if I don't know the loca text I don't know how to set it up in code
+		//"OpponentAppliesForOffice" = MessageDescription //Triggered when an opponent applied for an office. Context should be available. 
+		//{
+		//	Title = "";
+		//	Body = ""; // TODO: what's the loca?
+		//	Effect = "";
+		//	Icon = "Politics";
+		//	Type = "Neutral";
+		//	Duration = 45;
+		//	IsUrgent = false;
+		//	SFX = 33;
+		//	VO = 3;
+		//};
+		
+		// hardcoded - I need to replace %city% wildcard
+		"OpponentGotOfficePosition" = MessageDescription //Triggered when an opponent got an office. 
+		{
+			Title = "$notification.OpponentGotOffice";
+			Body = "$fb.OpponentGotOffice";
+			Effect = "";
+			Icon = "Politics";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// HM: need more information - NP: don't have them
+		// TODO: if I don't know the loca text I don't know how to set it up in code
+		"OpponentTrialResult" = MessageDescription //Triggered when the result of a trial hearing is in and the trial was initiated by the player.
+		{
+			Title = "";
+			Body = ""; // TODO: what's the loca?
+			Effect = "";
+			Icon = "Justice";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 3;
+		};
+		
+		// HM: need more information - NP: don't have them
+		// TODO: if I don't know the loca text I don't know how to set it up in code
+		"PlayerTrialResult" = MessageDescription //Triggered when the result of a trial affecting a character of the player is in. 
+		{
+			Title = "";
+			Body = ""; // TODO: what's the loca?
+			Effect = "";
+			Icon = "Justice";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"FamilyMemberLevelUp" = MessageDescription //Triggered when a family member levels up. 
+		{
+			Title = "$notification.FamilyMemberLevelUp";
+			Body = "$message.familymember.levelup";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 427;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+				};
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"FamilyMemberReleased" = MessageDescription //Triggered when a family member is released from prison.
+		{
+			Title = "$notification.FamilyMemberReleased";
+			Body = "$fb.FamilyMemberReleased";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 428;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+				};
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"EmployeeReleased" = MessageDescription //Triggered when an employee is released from prison.
+		{
+			Title = "$notification.EmployeeReleased";
+			Body = "$fb.EmployeeReleased";
+			Effect = "";
+			Icon = "Employee";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+				};
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"TrialStartsSoon" = MessageDescription //Triggered as soon as someone request a trial against you
+		{
+			Title = "$notification.Reprimand.quick.toTrial";
+			Body = "$notification.trial.request.body";
+			Effect = "";
+			Icon = "Justice";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 531;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// TODO: no clue where/when this happens REPLY: We should trigger that before a vote on seomthing happens. Vote for an office position, etc. Talk to Milo if you have further questions. 
+		"VotingStartsSoon" = MessageDescription //Triggered X in-game time before an office votes on either accepting a new member, changing the law, or on a privilege. Only shown to the player if he is either an applicant or an office holder in that office.  
+		{
+			Title = "$notification.VotingStartsSoon";
+			Body = "$fb.VotingStartsSoon";
+			Effect = "";
+			Icon = "Politics";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"EnemyNewHeir" = MessageDescription //Triggered when a new heir is appointed for an opponent dynasty. 
+		{
+			Title = "$notification.EnemyNewHeir";
+			Body = "$fb.EnemyNewHeir";
+			Effect = "";
+			Icon = "Diplomacy";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			//VO = 3;
+		};
+		
+		// hardcoded - we need to inform all players except the 2 involved
+		"EnemyUnholyMarriage" = MessageDescription //Triggered when an opponent dynasty marries a member of another dynasty without using the dynasty trade.  
+		{
+			Title = "$notification.EnemyUnholyMarriage";
+			Body = "$fb.EnemyUnholyMarriage";
+			Effect = "";
+			Icon = "Diplomacy";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			//VO = 3;
+		};
+		
+		// hardcoded - not action dependent
+		"EnemyRelationshipDrop" = MessageDescription //Triggered when the relationship between 2 opponent dynasties drop below a certain threshold. 
+		{
+			Title = "$notification.EnemyRelationshipDrop";
+			Body = "$fb.EnemyRelationshipDrop";
+			Effect = "";
+			Enabled = false;
+			Icon = "Diplomacy";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			//VO = 3;
+		};
+		
+		// hardcoded - not action dependent
+		"EnemySwitchedResidence" = MessageDescription //Triggered when an opponent dynasty moves to another main residence. 
+		{
+			Enabled = false;
+			Title = "$notification.EnemySwitchedResidence";
+			Body = "$fb.EnemySwitchedResidence";
+			Effect = "";
+			Icon = "Diplomacy";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			//VO = 3;
+		};
+		
+		// hardcoded - not action dependent (TODO: I've set it up in code but without knowing the loca text I don't know how to localize it)
+		"PlayerBuildingAlmostDestroyed" = MessageDescription //Triggered when the remaining amount of hit points of a building fall below a certain threshold. 
+		{
+			Title = "$notification.BuildingAlmostDestroyed";
+			Body = "$fb.BuildingAlmostDestroyed";
+			Effect = "";
+			Icon = "Building";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+					ApplyTo = "Source";
+				};
+			};	
+		};
+
+		// hardcoded - sending the message to all players
+		"AskAllianceActionDynasties" = MessageDescription //Triggered when two opponent dynasties signed for an alliance 
+		{
+			Title = "$notification.AskAllianceActionDynasties";
+			Body = "$message.AskAllianceAction.Success";
+			Effect = "";
+			Icon = "Diplomacy";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		}; 
+
+		// hardcoded - every player should get the notification except the 2 involved
+		"FamilyBreakAlliance" = MessageDescription //Triggered when 2 families are no longer allied
+		{
+			Title = "$notification.FamilyBreakAlliance";
+			Body = "$message.FamilyBreakAlliance";
+			Effect = "";
+			Icon = "Diplomacy";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+
+		// hardcoded - we need to inform every guild's member
+		"SocietyInviteMemberAction" = MessageDescription //Triggered when the player's guild has a new member
+		{
+			Title = "$notification.SocietyInviteMemberAction";
+			Body = "$message.SocietyInviteMemberAction.Success";
+			Effect = "";
+			Icon = "Guild";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 126;
+		};
+
+		// hardcoded - sent onCancel()
+		"SocietyInviteMemberActionDenied" = MessageDescription //Triggered when the player is the leader of a guild and someone denied to join the guild
+		{
+			Title = "$notification.SocietyInviteMemberActionDenied";
+			Body = "$message.SocietyInviteMemberAction.Denied";
+			Effect = "";
+			Icon = "Guild";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+
+		// hardcoded - we are informing every member of the guild
+		"SocietyKickMember" = MessageDescription //Triggered when the player is member in a guild and someone was kicked
+		{
+			Title = "$notification.SocietyKickMember";
+			Body = "$ui.Secret.KickMember";
+			Effect = "";
+			Icon = "Guild";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			//VO = 3;
+		};
+
+		// hardcoded - not action dependent
+		"SocietyLeave" = MessageDescription //Triggered when the player is member in a guild and someone left the guild
+		{
+			Title = "$notification.SocietyLeave";
+			Body = "$ui.Secret.Leave";
+			Effect = "";
+			Icon = "Guild";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			//VO = 3;
+		};
+
+		// hardcoded - not action dependent
+		"SocietyLeaderPositionApplication" = MessageDescription //Triggered when the player is member in a guild and the application for the new leader is announced
+		{
+			Title = "$notification.SocietyLeaderPositionApplication";
+			Body = "$ui.Secret.LeaderPositionApplication";
+			Effect = "";
+			Icon = "Guild";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newSocietiesWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+
+		// hardcoded - not action dependent
+		"SocietyElectionResultWinner" = MessageDescription //Triggered when the player is member in a guild and he becomes the new leader
+		{
+			Title = "$notification.SocietyElectionResultWinner";
+			Body = "$ui.Secret.ElectionResultWinner";
+			Effect = "";
+			Icon = "Guild";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newSocietiesWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+
+		// hardcoded - not action dependent
+		"SocietyElectionResultLoser" = MessageDescription //Triggered when the player is member in a guild and he joined the application for the new leader but lost
+		{
+			Title = "$notification.SocietyElectionResultLoser";
+			Body = "$ui.Secret.ElectionResultLoser";
+			Effect = "";
+			Icon = "Guild";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newSocietiesWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+	
+		// hardcoded - not action dependent
+		"SocietyElectionResultForNoParticipant" = MessageDescription //Triggered when the player is member in a guild and there is a new leader
+		{
+			Title = "$notification.SocietyElectionResultForNoParticipant";
+			Body = "$ui.Secret.ElectionResultForNoParticipant";
+			Effect = "";
+			Icon = "Guild";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			//VO = 3;
+		};
+
+		// hardcoded - not action dependent
+		"DynastyTradeAccepted" = MessageDescription //Triggered when the player offered a dynasty trade and it was accepted
+		{
+			Title = "$notification.DynastyTradeAccepted";
+			Body = "$message.trade.accepted";
+			Effect = "";
+			Icon = "Diplomacy";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 432;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+
+		// hardcoded - not action dependent
+		"DynastyTradeDenied" = MessageDescription //Triggered when the player offered a dynasty trade and it was denied
+		{
+			Title = "$notification.DynastyTradeDenied";
+			Body = "$message.trade.denied";
+			Effect = "";
+			Icon = "Diplomacy";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 433;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+ 
+		// hardcoded - we need to inform the allies
+		"ConquerBuildingSuccessTargetAllies" = MessageDescription //Triggered when the player's ally lost a building to another dynasty
+		{
+			Title = "$notification.ConquerBuildingSuccessTargetAllies";
+			Body = "$action.ConquerBuilding.SuccessTargetAllies";
+			Effect = "";
+			Icon = "Combat";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			//VO = 3;
+		};
+
+		// hardcoded - same as all the other PoliticalInfluenceSceneActions
+		"ActionPraised" = MessageDescription //Triggered when the player's ally lost a building to another dynasty
+		{
+			Title = "$action.Praised.Narrator";
+			Body = "$action.Praised";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 300;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+
+		// hardcoded - because this happens in very specific cases
+		"ChildLost" = MessageDescription //unborn child lost dynasty
+		{
+			Title = "$pregnancy.LostChild.Headline";
+			Body = "$pregnancy.LostChild.Message";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			//VO = 300;
+		};
+		
+		// hardcoded - message sent to the kidnapper family if an abductee gave birth and the child was lost
+		"VictimChildLost" = MessageDescription // child of a victim was lost
+		{
+			Title = "$notification.title.VictimLostChild";
+			Body = "$notification.body.VictimLostChild";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			//VO = 300;
+		};
+
+		// hardcoded - because it happens on execute() of GameEventApplyForOfficeClose
+		"OfficeClose" = MessageDescription //
+		{
+			Title = "$notification.OfficeClose";
+			Body = "$message.politics.OfficeClose";
+			Effect = "";
+			Icon = "Politics";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 300;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "OfficesWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+
+		// hardcoded - because it happens on execute() of GameEventApplyForOfficeOpen
+		"OfficeAvailable" = MessageDescription //  An office gets available
+		{
+			Title = "$notification.OfficeAvailable";
+			Body = "$message.politics.OfficeAvailable";
+			Effect = "";
+			Icon = "Politics";
+			Type = "Neutral";
+			Duration = 60;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 300;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "OfficesWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+
+		// hardcoded - sent when the election has ended
+		"PlayerOfficeObtained" = MessageDescription // The player got an office
+		{
+			Title = "$message.politics.OfficeWin.Title";
+			Body = "$message.politics.OfficeWin";
+			Effect = "";
+			Icon = "Politics";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 430;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "OfficesWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		"FarTradeOpportunityOfferFood" = MessageDescription //Triggered when random far trade event is active.
+		{
+			Title = "$notification.FarTradeOpportunity";
+			Body = "$randomEvents.TradeMarket.Offer.Food";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newQuestsWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+			
+		"FarTradeOpportunityOfferTrinkets" = MessageDescription //Triggered when random far trade event is active.
+		{
+			Title = "$notification.FarTradeOpportunity";
+			Body = "$randomEvents.TradeMarket.Offer.Trinkets";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newQuestsWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		"FarTradeOpportunityOfferWeapon" = MessageDescription //Triggered when random far trade event is active.
+		{
+			Title = "$notification.FarTradeOpportunity";
+			Body = "$randomEvents.TradeMarket.Offer.Weapon";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newQuestsWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		"FarTradeOpportunityOfferClothing" = MessageDescription //Triggered when random far trade event is active.
+		{
+			Title = "$notification.FarTradeOpportunity";
+			Body = "$randomEvents.TradeMarket.Offer.Clothing";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newQuestsWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		"FarTradeOpportunityOfferLuxury" = MessageDescription //Triggered when random far trade event is active.
+		{
+			Title = "$notification.FarTradeOpportunity";
+			Body = "$randomEvents.TradeMarket.Offer.Luxury";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newQuestsWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		"FarTradeOpportunityOfferRawMaterial" = MessageDescription //Triggered when random far trade event is active.
+		{
+			Title = "$notification.FarTradeOpportunity";
+//			Body = "$randomEvents.TradeMarket.Offer.Essentials";
+			Body = "$randomEvents.TradeMarket.Offer.RawMaterials";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newQuestsWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		"FarTradeOpportunityOfferTinctury" = MessageDescription //Triggered when random far trade event is active.
+		{
+			Title = "$notification.FarTradeOpportunity";
+			Body = "$randomEvents.TradeMarket.Offer.Tinctury";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newQuestsWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		"FarTradeOpportunityOfferLivestock" = MessageDescription //Triggered when random far trade event is active.
+		{
+			Title = "$notification.FarTradeOpportunity";
+			Body = "$randomEvents.TradeMarket.Offer.Livestock";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newQuestsWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		"FarTradeOpportunityOfferComponents" = MessageDescription //Triggered when random far trade event is active.
+		{
+			Title = "$notification.FarTradeOpportunity";
+			Body = "$randomEvents.TradeMarket.Offer.Components";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newQuestsWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		
+		"FarTradeOpportunityOfferTransportation" = MessageDescription //Triggered when random far trade event is active.
+		{
+			Title = "$notification.FarTradeOpportunity";
+			Body = "$randomEvents.TradeMarket.Offer.Transportation";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newQuestsWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		"FarTradeOpportunityDemandFood" = MessageDescription //Triggered when random far trade event is active.
+		{
+			Title = "$notification.FarTradeOpportunity";
+			Body = "$randomEvents.TradeMarket.Demand.Food";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newQuestsWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		"FarTradeOpportunityDemandRawMaterials" = MessageDescription //Triggered when random far trade event is active.
+		{
+			Title = "$notification.FarTradeOpportunity";
+			Body = "$randomEvents.TradeMarket.Demand.RawMaterials";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newQuestsWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		"FarTradeOpportunityDemandWeapon" = MessageDescription //Triggered when random far trade event is active.
+		{
+			Title = "$notification.FarTradeOpportunity";
+			Body = "$randomEvents.TradeMarket.Demand.Weapon";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newQuestsWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		"FarTradeOpportunityDemandClothing" = MessageDescription //Triggered when random far trade event is active.
+		{
+			Title = "$notification.FarTradeOpportunity";
+			Body = "$randomEvents.TradeMarket.Demand.Clothing";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newQuestsWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		"FarTradeOpportunityDemandLuxury" = MessageDescription //Triggered when random far trade event is active.
+		{
+			Title = "$notification.FarTradeOpportunity";
+			Body = "$randomEvents.TradeMarket.Demand.Luxury";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newQuestsWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		"FarTradeOpportunityDemandTrinkets" = MessageDescription //Triggered when random far trade event is active.
+		{
+			Title = "$notification.FarTradeOpportunity";
+			Body = "$randomEvents.TradeMarket.Demand.Trinkets";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newQuestsWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		"FarTradeOpportunityDemandTinctures" = MessageDescription //Triggered when random far trade event is active.
+		{
+			Title = "$notification.FarTradeOpportunity";
+			Body = "$randomEvents.TradeMarket.Demand.Tinctury";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newQuestsWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		"FarTradeOpportunityDemandComponents" = MessageDescription //Triggered when random far trade event is active.
+		{
+			Title = "$notification.FarTradeOpportunity";
+			Body = "$randomEvents.TradeMarket.Demand.Components";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newQuestsWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		"FarTradeOpportunityDemandTransportation" = MessageDescription //Triggered when random far trade event is active.
+		{
+			Title = "$notification.FarTradeOpportunity";
+			Body = "$randomEvents.TradeMarket.Demand.Transportation";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newQuestsWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		"FarTradeOpportunityDemandLivestock" = MessageDescription //Triggered when random far trade event is active.
+		{
+			Title = "$notification.FarTradeOpportunity";
+			Body = "$randomEvents.TradeMarket.Demand.Livestock";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 3;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newQuestsWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		// FunctionSendMessage - right now setup for every character not only for the leader because I think it's important to know if a family member is a victim
+		"CharacterOutlawed" = MessageDescription //Triggered when the ghostly fog action has been applied successfully on the leader.
+		{
+			Title = "$outlawed.NotificationSuccess.Headline";
+			Body = "$outlawed.NotificationSuccess.Message";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			OnClickReactions = array
+			{
+				FunctionSelectActor
+				{
+				};
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"PoliticalPowerVoteResult" = MessageDescription // sent when a political power proposal's time has expired and it's either executed or refused
+		{
+			Title = "$notification.PoliticalPowerResultTitle";
+			Body = "$notification.PoliticalPowerResultDescription";
+			Effect = "";
+			Icon = "Politics";
+			Type = "Neutral";
+			Duration = 60;
+			IsUrgent = true;
+			SFX = 33;
+			//VO = 105;
+			OnClickReactions = array
+			{
+				FunctionShowVoteResults {};
+			};
+		};
+
+		"PoliticalPowerExpropriated" = MessageDescription // sent to a player when they lose a building because someone used the expropriate power on them
+		{
+			Title = "$notification.PoliticalPower.Expropriated.Title";
+			Body = "$notification.PoliticalPower.Expropriated.Body";
+			Effect = "";
+			Icon = "Building";
+			Type = "Negative";
+			Duration = 60;
+			IsUrgent = true;
+			SFX = 34;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				};
+			};
+		};
+
+		// hardcoded - not action dependent
+		"ActiveProposalRemoved" = MessageDescription // sent when one of the active proposals was removed because not valid anymore (e.g. proposed character to banish died)
+		{
+			Title = "$notification.proposal.removed.title";
+			Body = "$notification.proposal.removed.body";
+			Effect = "";
+			Icon = "Politics";
+			Type = "Negative";
+			Duration = 60;
+			IsUrgent = true;
+			SFX = 34;
+			//VO = 105;
+			
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"TrialCancelledNoJudge" = MessageDescription
+		{
+			Title = "$notification.trial.cancelled.title";
+			Body = "$notification.trial.cancelled.body";
+			Effect = "";
+			Icon = "Justice";
+			Type = "Positive";
+			Duration = 60;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 533;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"TrialCancelledJudgesMissing" = MessageDescription
+		{
+			Title = "$notification.trial.cancelled.title";
+			Body = "$notification.trial.cancelled.judgesMissing.body";
+			Effect = "";
+			Icon = "Justice";
+			Type = "Positive";
+			Duration = 60;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 533;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		"TrialCancelledAccusedGone" = MessageDescription
+		{
+			Title = "$notification.trial.cancelled.accusedGone.title";
+			Body = "$notification.trial.cancelled.accusedGone.body";
+			Effect = "";
+			Icon = "Justice";
+			Type = "Neutral";
+			Duration = 60;
+			IsUrgent = true;
+			SFX = 33;
+			VO = 533;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};		
+		
+		// hardcoded - not action dependent
+		"TrialCancelledImmuneAccused" = MessageDescription
+		{
+			Title = "$notification.trial.cancelled.title";
+			Body = "$notification.trial.cancelled.immuneAccused.body";
+			Effect = "";
+			Icon = "Justice";
+			Type = "Positive";
+			Duration = 60;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 533;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"TrialCancelledInvalidAccuser" = MessageDescription
+		{
+			Title = "$notification.trial.cancelled.title";
+			Body = "$notification.trial.cancelled.invalidAccuser.body";
+			Effect = "";
+			Icon = "Justice";
+			Type = "Positive";
+			Duration = 60;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 533;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - not action dependent
+		"EvidenceRemovedInvalidAccuser" = MessageDescription
+		{
+			Title = "$notification.trial.evidenceRemoved.title";
+			Body = "$notification.trial.evidenceRemoved.invalidAccuser.body";
+			Effect = "";
+			Icon = "Justice";
+			Type = "Positive";
+			Duration = 60;
+			IsUrgent = true;
+			SFX = 32;
+			
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - sent when a TrialGamplay ends
+		"TrialResults" = MessageDescription
+		{
+			Title = "$notification.trial.results.title";
+			Body = "$notification.trial.results.body";
+			Icon = "Justice";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - sent when a background trial ends with a guilty verdict
+		"TrialResultsBackgroundGuilty" = MessageDescription
+		{
+			Title = "$notification.trial.background.results.title";
+			Body = "$notification.trial.background.results.body";
+			Icon = "Justice";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			//VO = 536;			
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - sent when a background trial ends with a not guilty verdict
+		"TrialResultsBackgroundNotGuilty" = MessageDescription
+		{
+			Title = "$notification.trial.background.results.title";
+			Body = "$notification.trial.background.results.body";
+			Icon = "Justice";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			//VO = 537;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - sent when a trial ends automatically with a 'not guilty' verdict because the accuser failed to appear before the trial
+		"TrialResultsNoAccuser" = MessageDescription
+		{
+			Title = "$notification.trial.no.accuser.results.title";
+			Body = "$notification.trial.no.accuser.results.body";
+			Icon = "Justice";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			//VO = 537;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - sent when a trial ends automatically with a 'guilty' verdict because the accused failed to appear before the trial
+		"TrialResultsNoAccused" = MessageDescription
+		{
+			Title = "$notification.trial.no.accused.results.title";
+			Body = "$notification.trial.no.accused.results.body";
+			Icon = "Justice";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			//VO = 536;			
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		// hardcoded - sent when a player's character is appointed as sovereign
+		"SovereignAppointed" = MessageDescription
+		{
+			Title = "$notification.sovereign.appointed.title";
+			Body = "$notification.sovereign.appointed.body";
+			Icon = "Politics";
+			Type = "Positive";
+			Duration = 60;
+			IsUrgent = true;
+			SFX = 32;
+			
+			OnClickReactions = array
+			{
+				FunctionShowSovereignResult {};
+			};
+		};
+		
+		// hardcoded - sent when a the sovereign died and the office is vacant
+		"SovereignOfficeVacant" = MessageDescription
+		{
+			Title = "$notification.sovereign.vacant.title";
+			Body = "$notification.sovereign.vacant.body";
+			Icon = "Politics";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 25;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "OfficesWindow";
+					ShowOnTop = true;
+					PlaySound = true;
+				};
+			};
+		};		
+		
+		// hardcoded - sent when an election has taken place with no voters
+		"PoliticianAppointedNoVoters" = MessageDescription
+		{
+			Title = "$notification.politician.appointed";
+			Body = "$notification.politician.appointed.noVoters";
+			Icon = "Politics";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+		};
+		
+		// hardcoded - sent when an election has taken place with no applicants
+		"PoliticianAppointedNoApplicants" = MessageDescription
+		{
+			Title = "$notification.politician.appointed";
+			Body = "$notification.politician.appointed.noApplicants";
+			Icon = "Politics";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+		};
+		
+		// hardcoded - sent when receiver of trade accepted and was happy with the deal
+		"TradeAcceptedReceiverHappy" = MessageDescription
+		{
+			Title = "$notification.TradeAcceptedReceiverHappy.title";
+			Body = "$notification.TradeAcceptedReceiverHappy.body";
+			Icon = "Diplomacy";
+			Type = "Positive";
+			IsUrgent = false;
+			SFX = 54;
+		};
+		
+		// hardcoded - sent when receiver accepted and was not happy with the deal
+		"TradeAcceptedReceiverUnhappy" = MessageDescription
+		{
+			Title = "$notification.TradeAcceptedReceiverUnhappy.title";
+			Body = "$notification.TradeAcceptedReceiverUnhappy.body";
+			Icon = "Diplomacy";
+			Type = "Negative";
+			IsUrgent = false;
+			SFX = 34;
+		};
+		
+		// hardcoded - sent when proposer of trade was happy with the deal
+		"TradeAcceptedProposerHappy" = MessageDescription
+		{
+			Title = "$notification.TradeAcceptedProposerHappy.title";
+			Body = "$notification.TradeAcceptedProposerHappy.body";
+			Icon = "Diplomacy";
+			Type = "Positive";
+			IsUrgent = false;
+			SFX = 54;
+		};
+		
+		// hardcoded - sent when proposer of trade was insulted that you declined the trade
+		"TradeDeclinedProposerInsulted" = MessageDescription
+		{
+			Title = "$notification.TradeDeclinedProposerInsulted.title";
+			Body = "$notification.TradeDeclinedProposerInsulted.body";
+			Icon = "Diplomacy";
+			Type = "Negative";
+			IsUrgent = false;
+			SFX = 34;
+		};
+		
+		// hardcoded - sent when receiver of trade was insulted by the conditions of the trade
+		"TradeDeclinedReceiverInsulted" = MessageDescription
+		{
+			Title = "$notification.TradeDeclinedReceiverInsulted.title";
+			Body = "$notification.TradeDeclinedReceiverInsulted.body";
+			Icon = "Diplomacy";
+			Type = "Negative";
+			IsUrgent = false;
+			SFX = 34;
+		};
+				
+		// hardcoded - not action dependent
+		"EvidenceAddedOngoingTrial" = MessageDescription //Triggered when a new evidence is added to an ongoing trial
+		{
+			Title = "$notification.trial.newEvidence.title";
+			Body = "$notification.trial.newEvidence.body";
+			Effect = "";
+			Icon = "Justice";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			OnClickReactions = array
+			{
+				FunctionTriggerInteractionEvent
+				{
+					ApplyTo = "Source";
+					Event = "ToggleIndictmentWindow";
+				};
+			};
+		};
+
+		"PleaChangedOngoingTrial" = MessageDescription // Triggered when the accused changes their plea in a trial.
+		{
+			Title = "$notification.trial.pleaChanged.title";
+			Body = "$notification.trial.pleaChanged.body";
+			Effect = "";
+			Icon = "Justice";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			OnClickReactions = array
+			{
+				FunctionTriggerInteractionEvent
+				{
+					ApplyTo = "Source";
+					Event = "ToggleIndictmentWindow";
+				};
+			};
+		};
+
+		"ExpectationChangedOngoingTrial" = MessageDescription // Triggered when the primary accuser changes their expectation in a trial.
+		{
+			Title = "$notification.trial.expectationChanged.title";
+			Body = "$notification.trial.expectationChanged.body";
+			Effect = "";
+			Icon = "Justice";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			OnClickReactions = array
+			{
+				FunctionTriggerInteractionEvent
+				{
+					ApplyTo = "Source";
+					Event = "ToggleIndictmentWindow";
+				};
+			};
+		};
+
+		"ManipulateLiaisonSuccess" = MessageDescription 
+		{
+			Title = "$action.MainpulateLiaison.SuccessTargetHeadline";
+			Body = "$action.MainpulateLiaison.SuccessTargetMessage";
+			Effect = "";
+			Icon = "Love";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+				},
+				FunctionSelectActor
+				{
+				}
+			};
+		};
+		
+		"StealHouseFailure" = MessageDescription 
+		{
+			Title = "$action.StealHouse.FailureTargetHeadline";
+			Body = "$action.StealHouse.FailureTarget";
+			Effect = "";
+			Icon = "Building";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+		};
+		
+		"PregnancySuccess" = MessageDescription 
+		{
+			Title = "$pregnancy.NotificationSuccess.Headline";
+			Body = "$pregnancy.NotificationSuccess.Message";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 429;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		"NavigateRouteIssue" = MessageDescription 
+		{
+			Title = "$action.NavigateRoute.RouteIssueHeadline";
+			Body = "$action.NavigateRoute.RouteIssueMessage";
+			Effect = "";
+			Icon = "Production";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			OnClickReactions = array
+			{
+				FunctionFocusActor{},
+				FunctionSelectActor{}
+			};
+		};
+		
+		"SecretSocietyInvite" = MessageDescription 
+		{
+			Title = "$ui.Diary.Filter.55";
+			Body = "$ui.Secret.Invite";
+			Effect = "";
+			Icon = "Guild";
+			Type = "Positive";
+			Duration = 60;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 221;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "newSocietiesWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+		
+		"LongDistanceTravelBastard" = MessageDescription //A family member returned from a far distance travel. Got a child during the trip
+		{
+			Title = "$notification.Longshore.Bastard.Title";
+			Body = "$notification.Longshore.Bastard.Body";
+			Icon = "Dynasty";
+			Type = "Neutral";
+			SFX = 33;
+			VO = 178;
+		};
+
+		"EnterConversation" = MessageDescription 
+		{
+			Title = "$notification.conversation.enter.title";
+			Body = "$notification.conversation.enter.body";
+			Effect = "";
+			Icon = "Dialogue";
+			Type = "Neutral";
+			Duration = 15; // Should match the 'UserChoiceTime' in DialogueDataBase.oc
+			IsUrgent = true;
+			SFX = 33;
+			OnClickReactions = array
+			{
+				FunctionFocusConversation{},
+				FunctionFocusActor{ ApplyTo = "Source"; }
+			};
+		};
+		
+		"LeasingOutbid" = MessageDescription
+		{
+			Title = "$notification.leasing.outbid.title";
+			Body = "$notification.leasing.outbid.body";
+			Icon = "Building";
+			Type = "Negative";
+			Duration = 30;
+			IsUrgent = true;
+			SFX = 34;
+			OnClickReactions = array
+			{
+				FunctionSelectActor{},
+				FunctionFocusActor{},
+				FunctionOpenUI
+				{
+					UIName = "BusinessWindow";
+					ShowOnTop = true;
+					PlaySound = true;
+					Parameter = "Tab = BuildingLeasePanel";
+				};
+			};
+		};
+		
+		"LeasingWon" = MessageDescription
+		{
+			Title = "$notification.leasing.won.title";
+			Body = "$notification.leasing.won.body";
+			Icon = "Building";
+			Type = "Positive";
+			Duration = 30;
+			IsUrgent = true;
+			SFX = 32;
+			OnClickReactions = array
+			{
+				FunctionSelectActor{},
+				FunctionFocusActor{},
+				FunctionOpenUI
+				{
+					UIName = "BusinessWindow";
+					ShowOnTop = true;
+					PlaySound = true;
+					Parameter = "Tab = BuildingLeasePanel";
+				};
+			};
+		};
+		
+		"LeasingLost" = MessageDescription
+		{
+			Title = "$notification.leasing.lost.title";
+			Body = "$notification.leasing.lost.body";
+			Icon = "Building";
+			Type = "Negative";
+			Duration = 30;
+			IsUrgent = true;
+			SFX = 34;
+			OnClickReactions = array
+			{
+				FunctionSelectActor{},
+				FunctionFocusActor{},
+				FunctionOpenUI
+				{
+					UIName = "BusinessWindow";
+					ShowOnTop = true;
+					PlaySound = true;
+					Parameter = "Tab = BuildingLeasePanel";
+				};
+			};
+		};
+		
+		"LeasingOverSoon" = MessageDescription
+		{
+			Title = "$notification.leasing.oversoon.title";
+			Body = "$notification.leasing.oversoon.body";
+			Icon = "Building";
+			Type = "Neutral";
+			Duration = 30;
+			IsUrgent = true;
+			SFX = 33;
+			OnClickReactions = array
+			{
+				FunctionSelectActor{},
+				FunctionFocusActor{},
+				FunctionOpenUI
+				{
+					UIName = "BusinessWindow";
+					ShowOnTop = true;
+					PlaySound = true;
+					Parameter = "Tab = BuildingLeasePanel";
+				};
+			};
+		};
+		
+		// FunctionSendMessage
+		"CatchedARat" = MessageDescription //Triggered when the child catched a rat
+		{
+			Title = "$notification.CatchedARat.Head";
+			Body = "$notification.CatchedARat.Body";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 206;
+// don't work, need to check
+//			OnClickReactions = array
+//			{
+//				FunctionSelectActor{},
+//				FunctionFocusActor{},
+//			};
+		};
+
+		// FunctionSendMessage
+		"PlayerWonDiceGameNormal" = MessageDescription //Triggered when the player wins a normal dice game in the Inn
+		{
+			Title = "$notification.PlayerWonDiceGameNormal.Head";
+			Body = "$notification.PlayerWonDiceGameNormal.Body";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 207;
+		};
+
+		// FunctionSendMessage
+		"PlayerLostDiceGameNormal" = MessageDescription //Triggered when the player lost a normal dice game in the Inn
+		{
+			Title = "$notification.PlayerLostDiceGameNormal.Head";
+			Body = "$notification.PlayerLostDiceGameNormal.Body";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 200;
+		};
+
+		// FunctionSendMessage
+		"PlayerWonDiceGameRisky" = MessageDescription //Triggered when the player wins a risky dice game in the Inn
+		{
+			Title = "$notification.PlayerWonDiceGameRisky.Head";
+			Body = "$notification.PlayerWonDiceGameRisky.Body";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 32;
+			VO = 207;
+		};
+
+		// FunctionSendMessage
+		"PlayerLostDiceGameRisky" = MessageDescription //Triggered when the player lost a risky dice game in the Inn
+		{
+			Title = "$notification.PlayerLostDiceGameRisky.Head";
+			Body = "$notification.PlayerLostDiceGameRisky.Body";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 200;
+		};
+
+		// FunctionSendMessage
+		"TargetOfIntrigueSuccess" = MessageDescription //Triggered when the player was the target of a successful intrigue
+		{
+			Title = "$notification.InitiateIntrigue.Head";
+			Body = "$notification.InitiateIntrigue.Success.Body";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 198;
+		};
+
+		// FunctionSendMessage
+		"TargetOfIntrigueFailure" = MessageDescription //Triggered when the player was the target of a failed intrigue
+		{
+			Title = "$notification.InitiateIntrigue.Head";
+			Body = "$notification.InitiateIntrigue.Failure.Body";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 33;
+			VO = 203;
+		};
+
+		// FunctionSendMessage
+		"TargetOfLetterOfInquisitionSuccess" = MessageDescription //Triggered when the player was the target of a successful letter from the inquisition
+		{
+			Title = "$notification.LetterFromInquisition.Success.Head";
+			Body = "$notification.LetterFromInquisition.Success.Body";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 198;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+
+		// FunctionSendMessage
+		"TargetOfLetterOfInquisitionFailure" = MessageDescription //Triggered when the player was the target of a failed letter from the inquisition
+		{
+			Title = "$notification.LetterFromInquisition.Failure.Head";
+			Body = "$notification.LetterFromInquisition.Failure.Body";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			VO = 203;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+
+		// FunctionSendMessage
+		"TargetOfSkullLamp" = MessageDescription //Triggered when a building of the player was the target of a SkullLamp
+		{
+			Title = "$notification.SkullLamp.Head";
+			Body = "$notification.SkullLamp.Body";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 213;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+					ApplyTo = "Target";
+				};
+			};
+		};
+
+		// FunctionSendMessage
+		"UseFlowerOfDiscordVictim1" = MessageDescription //Triggered when the player was the target of a successful FlowerOfDiscord
+		{
+			Title = "$randomEvents.negative.narration.3";
+			Body = "$notification.UseFlowerOfDiscord.Victim1.Body";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 199;
+		};
+
+		// FunctionSendMessage
+		"UseFlowerOfDiscordVictim2" = MessageDescription //Triggered when the player was the target of a successful FlowerOfDiscord
+		{
+			Title = "$notification.UseFlowerOfDiscord.Victim2.Head";
+			Body = "$notification.UseFlowerOfDiscord.Victim2.Body";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 201;
+		};
+		
+		// Hardcoded
+		"LegalCrime" = MessageDescription //Triggered when a crime becomes legal
+		{
+			Title = "$notification.LegalityChanged.Title";
+			Body = "$notification.LegalCrime.Body";
+			Effect = "";
+			Icon = "Politics";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			//SFX = 33;
+			//VO = 201;
+		};
+		
+		// Hardcoded
+		"IllegalCrime" = MessageDescription //Triggered when a crime becomes illegal
+		{
+			Title = "$notification.LegalityChanged.Title";
+			Body = "$notification.IllegalCrime.Body";
+			Effect = "";
+			Icon = "Politics";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			//SFX = 33;
+			//VO = 201;
+		};
+
+		// FunctionSendMessage
+		"WifeGetsDeeplyDisappointed" = MessageDescription //Triggered when the player kisses his liaison and his wife found out....
+		{
+			Title = "$KissLiaison";
+			Body = "$notification.KissLiaisonReactionSpouse.Body";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 201;
+		};
+		// FunctionSendMessage
+		"HusbandGetsDeeplyDisappointed" = MessageDescription //Triggered when the player kisses her liaison and her husband found out....
+		{
+			Title = "$KissLiaison";
+			Body = "$notification.KissLiaisonReactionSpouse.Body.female";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 201;
+		};
+
+		// FunctionSendMessage
+		"WifeGetsDeeplyDisappointedDance" = MessageDescription //Triggered when the player dance with his liaison and his wife found out....
+		{
+			Title = "$DanceWithLiaison";
+			Body = "$notification.DanceWithLiaisonReactionSpouse.Body";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 201;
+		};
+		// FunctionSendMessage
+		"HusbandGetsDeeplyDisappointedDance" = MessageDescription //Triggered when the player dance with her liaison and her husband found out....
+		{
+			Title = "$DanceWithLiaison";
+			Body = "$notification.DanceWithLiaisonReactionSpouse.Body.female";
+			Effect = "";
+			Icon = "Dynasty";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 201;
+		};
+		
+		// Religion change - to neutral
+		"ChangeReligionNeutral" = MessageDescription // Triggered when a dynasty apostatizes
+		{
+			Title = "$notification.ChangeReligion.Head";
+			Body = "$notification.ChangeReligion.Secular.Body";
+			Effect = "";
+			Icon = "Diplomacy";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+		};
+
+		// Religion change - to catholizism
+		"ChangeReligionCatholic" = MessageDescription // Triggered when a dynasty becomes catholic
+		{
+			Title = "$notification.ChangeReligion.Head";
+			Body = "$notification.ChangeReligion.Catholic.Body";
+			Effect = "";
+			Icon = "Diplomacy";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+		};
+
+		// Religion change - to protestantism
+		"ChangeReligionProtestant" = MessageDescription // Triggered when a dynasty becomes protestant
+		{
+			Title = "$notification.ChangeReligion.Head";
+			Body = "$notification.ChangeReligion.Protestant.Body";
+			Effect = "";
+			Icon = "Diplomacy";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+		};
+
+		// FarTradeTrip - the body is gender-dependent
+		"FarTradeTripSuccess" = MessageDescription //A family member returned from a FarTradeTrip
+		{
+			Title = "$notification.FarTradeTrip.Head";
+			Body = "$notification.FarTradeTrip.Success.Body";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 121;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};	
+		};
+		// FarTradeTrip - the body is gender-dependent
+		"FarTradeTripFailure" = MessageDescription //A family member returned from a FarTradeTrip
+		{
+			Title = "$notification.FarTradeTrip.Head";
+			Body = "$notification.FarTradeTrip.Failure.Body";
+			Effect = "";
+			Icon = "Trade";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 121;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+
+		// FunctionSendMessage
+		"FakeEvidenceSuccess" = MessageDescription //Triggered when the player is target of FakeEvidence - Success
+		{
+			Title = "$notification.FakeEvidence.Success.Head";
+			Body = "$notification.FakeEvidence.Success.Body";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 198;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+
+		// TrashLetter - triggered when someone pinned a pamphlet at a building
+		"TrashLetter" = MessageDescription
+		{
+			Title = "$notification.TrashLetter.Head";
+			Body = "$notification.TrashLetter.Body";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			//VO = 117;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+					ApplyTo = "Target";
+				};
+			};
+		};
+
+		// SmuggleCritFail - triggered when the employee dies during smuggling
+		"SmuggleCritFail" = MessageDescription
+		{
+			Title = "$notification.Smuggle.CritFail.Head";
+			Body = "$notification.Smuggle.CritFail.Body";
+			Effect = "";
+			Icon = "Employee";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 213;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+
+		// LaughAtSomeoneSuccessTarget
+		"LaughAtSomeoneSuccessTarget" = MessageDescription
+		{
+			Title = "$LaughAtSomeone.Head";
+			Body = "$LaughAtSomeoneSuccessTarget.Head";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};	
+		};
+		
+		// LaughAtSomeoneFailureTarget
+		"LaughAtSomeoneFailureTarget" = MessageDescription
+		{
+			Title = "$LaughAtSomeone.Head";
+			Body = "$LaughAtSomeoneFailureTarget.Head";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};	
+		};
+
+		// WAR EVENTS
+		"WarEvent1Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.war.title";
+			Body = "$n.arsenal.event.war.body.1";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 42;
+			VO = 372;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "War1*";
+				},
+			};
+		};
+		"WarEvent2Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.war.title";
+			Body = "$n.arsenal.event.war.body.2";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 42;
+			VO = 372;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "War2*";
+				},
+			};
+		};
+		"WarEvent3Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.war.title";
+			Body = "$n.arsenal.event.war.body.3";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 42;
+			VO = 372;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "War3*";
+				},
+			};
+		};
+		"WarEvent4Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.war.title";
+			Body = "$n.arsenal.event.war.body.4";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 42;
+			VO = 372;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "War4*";
+				},
+			};
+		};
+		"WarEventWon" = MessageDescription
+		{
+			Title = "$n.arsenal.event.war.won.title";
+			Body = "$n.arsenal.event.war.won.body";
+			Effect = "";
+			Icon = "Event";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 373;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+			};
+		};
+		"WarEventTruce" = MessageDescription
+		{
+			Title = "$n.arsenal.event.war.truce.title";
+			Body = "$n.arsenal.event.war.truce.body";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			VO = 375;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+			};
+		};
+		"WarEventLost" = MessageDescription
+		{
+			Title = "$n.arsenal.event.war.defeat.title";
+			Body = "$n.arsenal.event.war.defeat.body";
+			Effect = "";
+			Icon = "Event";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 34;
+			VO = 374;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+			};
+		};
+		"WarEventCharacterSurvived" = MessageDescription
+		{
+			Title = "$n.arsenal.event.war.character.survived.title";
+			Body = "$n.arsenal.event.war.character.survived.body";
+			Effect = "";
+			Icon = "Event";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 370;
+			OnClickReactions = array
+			{
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+		"WarEventWorkerSurvived" = MessageDescription
+		{
+			Title = "$n.arsenal.event.war.character.survived.title";
+			Body = "$n.arsenal.event.war.character.survived.body";
+			Effect = "";
+			Icon = "Event";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 371;
+			OnClickReactions = array
+			{
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+		"WarEventCharacterRansomMale" = MessageDescription
+		{
+			Title = "$n.arsenal.event.war.character.survived.title";
+			Body = "$n.arsenal.event.war.character.ransom.body";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			VO = 370;
+			OnClickReactions = array
+			{
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+		"WarEventWorkerRansomMale" = MessageDescription
+		{
+			Title = "$n.arsenal.event.war.character.survived.title";
+			Body = "$n.arsenal.event.war.character.ransom.body";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			VO = 371;
+			OnClickReactions = array
+			{
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+		"WarEventCharacterRansomFemale" = MessageDescription
+		{
+			Title = "$n.arsenal.event.war.character.survived.title";
+			Body = "$n.arsenal.event.war.character.ransom.body.female";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			VO = 370;
+			OnClickReactions = array
+			{
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+		"WarEventWorkerRansomFemale" = MessageDescription
+		{
+			Title = "$n.arsenal.event.war.character.survived.title";
+			Body = "$n.arsenal.event.war.character.ransom.body.female";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			VO = 371;
+			OnClickReactions = array
+			{
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+
+		// MerchantsGuild EVENTS
+		"MerchantsGuildEvent1Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.MerchantsGuild.title";
+			Body = "$n.arsenal.event.MerchantsGuild.body.1";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 43;
+			VO = 376;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "MerchantsGuildEvent1";
+				},
+			};
+		};
+		"MerchantsGuildEvent2Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.MerchantsGuild.title";
+			Body = "$n.arsenal.event.MerchantsGuild.body.2";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 43;
+			VO = 376;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "MerchantsGuildEvent2";
+				},
+			};
+		};
+		"MerchantsGuildEvent3Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.MerchantsGuild.title";
+			Body = "$n.arsenal.event.MerchantsGuild.body.3";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 43;
+			VO = 376;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "MerchantsGuildEvent3";
+				},
+			};
+		};
+		"MerchantsGuildEvent4Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.MerchantsGuild.title";
+			Body = "$n.arsenal.event.MerchantsGuild.body.4";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 43;
+			VO = 376;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "MerchantsGuildEvent4";
+				},
+			};
+		};
+		"MerchantsGuildEventEnd" = MessageDescription
+		{
+			Title = "$n.arsenal.event.MerchantsGuild.title";
+			Body = "$n.arsenal.event.MerchantsGuild.end.body";
+			Effect = "";
+			Icon = "Event";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			//VO = 376;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+			};
+		};
+		"MerchantsGuildEventCharacterSurvivedMale" = MessageDescription
+		{
+			Title = "$n.arsenal.event.allguilds.character.returns.title";
+			Body = "$n.arsenal.event.MerchantsGuild.character.returns.body";
+			Effect = "";
+			Icon = "Event";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 370;
+			OnClickReactions = array
+			{
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},				
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+		"MerchantsGuildEventCharacterSurvivedFemale" = MessageDescription
+		{
+			Title = "$n.arsenal.event.allguilds.character.returns.title";
+			Body = "$n.arsenal.event.MerchantsGuild.character.returns.body.female";
+			Effect = "";
+			Icon = "Event";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 370;
+			OnClickReactions = array
+			{
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+
+		// Freemasons EVENTS
+		"FreemasonsEvent1Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.Freemasons.title";
+			Body = "$n.arsenal.event.Freemasons.body.1";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 43;
+			VO = 377;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "FreemasonsEvent1";
+				},
+			};
+		};
+		"FreemasonsEvent2Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.Freemasons.title";
+			Body = "$n.arsenal.event.Freemasons.body.2";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 43;
+			VO = 377;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "FreemasonsEvent2";
+				},
+			};
+		};
+		"FreemasonsEvent3Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.Freemasons.title";
+			Body = "$n.arsenal.event.Freemasons.body.3";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 43;
+			VO = 377;
+					OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "FreemasonsEvent3";
+				},
+			};
+		};
+		"FreemasonsEvent4Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.Freemasons.title";
+			Body = "$n.arsenal.event.Freemasons.body.4";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 43;
+			VO = 377;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "FreemasonsEvent4";
+				},
+			};
+		};
+		"FreemasonsEventEnd" = MessageDescription
+		{
+			Title = "$n.arsenal.event.Freemasons.title";
+			Body = "$n.arsenal.event.Freemasons.end.body";
+			Effect = "";
+			Icon = "Event";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			//VO = 377;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+			};
+		};
+		"FreemasonsEventCharacterSurvivedMale" = MessageDescription
+		{
+			Title = "$n.arsenal.event.allguilds.character.returns.title";
+			Body = "$n.arsenal.event.Freemasons.character.returns.body";
+			Effect = "";
+			Icon = "Event";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 370;
+			OnClickReactions = array
+			{
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+		"FreemasonsEventCharacterSurvivedFemale" = MessageDescription
+		{
+			Title = "$n.arsenal.event.allguilds.character.returns.title";
+			Body = "$n.arsenal.event.Freemasons.character.returns.body.female";
+			Effect = "";
+			Icon = "Event";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 370;
+			OnClickReactions = array
+			{
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+
+		// Alchimists EVENTS
+		"AlchimistsEvent1Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.Alchimists.title";
+			Body = "$n.arsenal.event.Alchimists.body.1";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 43;
+			VO = 378;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "AlchimistsEvent1";
+				},
+			};
+		};
+		"AlchimistsEvent2Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.Alchimists.title";
+			Body = "$n.arsenal.event.Alchimists.body.2";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 43;
+			VO = 378;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "AlchimistsEvent2";
+				},
+			};
+		};
+		"AlchimistsEvent3Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.Alchimists.title";
+			Body = "$n.arsenal.event.Alchimists.body.3";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 43;
+			VO = 378;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "AlchimistsEvent3";
+				},
+			};
+		};
+		"AlchimistsEvent4Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.Alchimists.title";
+			Body = "$n.arsenal.event.Alchimists.body.4";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 43;
+			VO = 378;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "AlchimistsEvent4";
+				},
+			};
+		};
+		"AlchimistsEventEnd" = MessageDescription
+		{
+			Title = "$n.arsenal.event.Alchimists.title";
+			Body = "$n.arsenal.event.Alchimists.end.body";
+			Effect = "";
+			Icon = "Event";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			//VO = 378;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+			};
+		};
+		"AlchimistsEventCharacterSurvivedMale" = MessageDescription
+		{
+			Title = "$n.arsenal.event.allguilds.character.returns.title";
+			Body = "$n.arsenal.event.Alchimists.character.returns.body";
+			Effect = "";
+			Icon = "Event";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 370;
+			OnClickReactions = array
+			{
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+		"AlchimistsEventCharacterSurvivedFemale" = MessageDescription
+		{
+			Title = "$n.arsenal.event.allguilds.character.returns.title";
+			Body = "$n.arsenal.event.Alchimists.character.returns.body.female";
+			Effect = "";
+			Icon = "Event";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 370;
+			OnClickReactions = array
+			{
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+
+		// CraftmensGuild EVENTS
+		"CraftmensGuildEvent1Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.CraftmensGuild.title";
+			Body = "$n.arsenal.event.CraftmensGuild.body.1";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 43;
+			VO = 379;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "CraftmensGuildEvent1";
+				},
+			};
+		};
+		"CraftmensGuildEvent2Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.CraftmensGuild.title";
+			Body = "$n.arsenal.event.CraftmensGuild.body.2";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 43;
+			VO = 379;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "CraftmensGuildEvent2";
+				},
+			};
+		};
+		"CraftmensGuildEvent3Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.CraftmensGuild.title";
+			Body = "$n.arsenal.event.CraftmensGuild.body.3";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 43;
+			VO = 379;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "CraftmensGuildEvent3";
+				},
+			};
+		};
+		"CraftmensGuildEvent4Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.CraftmensGuild.title";
+			Body = "$n.arsenal.event.CraftmensGuild.body.4";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 43;
+			VO = 379;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "CraftmensGuildEvent4";
+				},
+			};
+		};
+		"CraftmensGuildEventEnd" = MessageDescription
+		{
+			Title = "$n.arsenal.event.CraftmensGuild.title";
+			Body = "$n.arsenal.event.CraftmensGuild.end.body";
+			Effect = "";
+			Icon = "Event";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			//VO = 379;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+			};
+		};
+		"CraftmensGuildEventCharacterSurvivedMale" = MessageDescription
+		{
+			Title = "$n.arsenal.event.allguilds.character.returns.title";
+			Body = "$n.arsenal.event.CraftmensGuild.character.returns.body";
+			Effect = "";
+			Icon = "Event";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 370;
+			OnClickReactions = array
+			{
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+		"CraftmensGuildEventCharacterSurvivedFemale" = MessageDescription
+		{
+			Title = "$n.arsenal.event.allguilds.character.returns.title";
+			Body = "$n.arsenal.event.CraftmensGuild.character.returns.body.female";
+			Effect = "";
+			Icon = "Event";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 370;
+			OnClickReactions = array
+			{
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+
+		// ThievesGuild EVENTS
+		"ThievesGuildEvent1Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.ThievesGuild.title";
+			Body = "$n.arsenal.event.ThievesGuild.body.1";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 43;
+			VO = 380;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "ThievesGuildEvent1";
+				},
+			};
+		};
+		"ThievesGuildEvent2Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.ThievesGuild.title";
+			Body = "$n.arsenal.event.ThievesGuild.body.2";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 43;
+			VO = 380;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "ThievesGuildEvent2";
+				},
+			};
+		};
+		"ThievesGuildEvent3Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.ThievesGuild.title";
+			Body = "$n.arsenal.event.ThievesGuild.body.3";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 43;
+			VO = 380;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "ThievesGuildEvent3";
+				},
+			};
+		};
+		"ThievesGuildEvent4Start" = MessageDescription
+		{
+			Title = "$n.arsenal.event.ThievesGuild.title";
+			Body = "$n.arsenal.event.ThievesGuild.body.4";
+			Effect = "";
+			Icon = "Event";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 43;
+			VO = 380;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "newQuestsWindow";
+					Parameter = "ThievesGuildEvent4";
+				},
+			};
+		};
+		"ThievesGuildEventEnd" = MessageDescription
+		{
+			Title = "$n.arsenal.event.ThievesGuild.title";
+			Body = "$n.arsenal.event.ThievesGuild.end.body";
+			Effect = "";
+			Icon = "Event";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			//VO = 380;
+			OnClickReactions = array {
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+			};
+		};
+		"ThievesGuildEventCharacterSurvivedMale" = MessageDescription
+		{
+			Title = "$n.arsenal.event.allguilds.character.returns.title";
+			Body = "$n.arsenal.event.ThievesGuild.character.returns.body";
+			Effect = "";
+			Icon = "Event";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 370;
+			OnClickReactions = array
+			{
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+		"ThievesGuildEventCharacterSurvivedFemale" = MessageDescription
+		{
+			Title = "$n.arsenal.event.allguilds.character.returns.title";
+			Body = "$n.arsenal.event.ThievesGuild.character.returns.body.female";
+			Effect = "";
+			Icon = "Event";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			VO = 370;
+			OnClickReactions = array
+			{
+				FunctionOpenUI {
+					UIName = "MessageLog";
+				},
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+		
+		"BribeReleasedPrisoner" = MessageDescription
+		{
+			Title = "$n.arsenal.bribe.prisoner.released.title";
+			Body = "$n.arsenal.bribe.prisoner.released.body";
+			Effect = "";
+			Icon = "Politics";
+			Type = "Positive";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 32;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+
+		"CharacterGoToCourt" = MessageDescription // A character has started running to court; notify the player.
+		{
+			Title = "$n.trial.GoToCourt.title";
+			Body = "$n.trial.GoToCourt.body";
+			Effect = "";
+			Icon = "Justice";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			VO = 539;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+
+		// hardcoded - When a judges misses a trial and has to pay a fine
+		"MissedTrialFine" = MessageDescription
+		{
+			Title = "$notification.MissedTrial.Fine.Title";
+			Body = "$notification.MissedTrial.Fine.Body";
+			Effect = "";
+			Icon = "Politics";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 27;
+			VO = 532;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				},
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+
+		// hardcoded - When a judges misses a trial and is removed from office because he can't pay the associated fine
+		"MissedTrialOfficeRemoval" = MessageDescription
+		{
+			Title = "$notification.MissedMeeting.OfficeLost.Title";
+			Body = "$notification.MissedTrial.OfficeLost.Body";
+			Effect = "";
+			Icon = "Politics";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 27;
+			VO = 532;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "OfficesWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+
+		// hardcoded - When a non-judge politician misses a meeting and has to pay a fine
+		"MissedMeetingFine" = MessageDescription
+		{
+			Title = "$notification.MissedMeeting.Fine.Title";
+			Body = "$notification.MissedMeeting.Fine.Body";
+			Effect = "";
+			Icon = "Politics";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 27;
+			VO = 532;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				},
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+
+		// hardcoded - When a non-judge politician misses a meeting and is removed from office because he can't pay the associated fine
+		"MissedMeetingOfficeRemoval" = MessageDescription
+		{
+			Title = "$notification.MissedMeeting.OfficeLost.Title";
+			Body = "$notification.MissedMeeting.OfficeLost.Body";
+			Effect = "";
+			Icon = "Politics";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 27;
+			VO = 532;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "OfficesWindow";
+					ShowOnTop = true;
+					PlaySound = true;	
+				};
+			};
+		};
+
+		"CharacterGoToOfficeMeeting" = MessageDescription // A character has started running to their office meeting; notify the player.
+		{
+			Title = "$n.trial.GoToOfficeMeeting.title";
+			Body = "$n.trial.GoToOfficeMeeting.body";
+			Effect = "";
+			Icon = "Politics";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = true;
+			SFX = 33;
+			OnClickReactions = array
+			{
+				FunctionFocusActor
+				{
+					ApplyTo = "Source";
+				};
+			};
+		};
+		
+		// hard-coded: Sent to all participating families when an office meeting scene starts
+		"NotificationOfficeMeetingStarted" = MessageDescription
+		{
+			Title = "$notification.OfficeMeetingStarted.title";
+			Body = "$notification.OfficeMeetingStarted.body";
+			Effect = "";
+			Icon = "Politics";
+			Type = "Neutral";
+			Duration = 120;
+			IsUrgent = true;
+			SFX = 33;
+			OnClickReactions = array
+			{
+				FunctionFocusActor {};
+			};
+		};
+
+		// hard-coded: Sent to all participating families when an office meeting scene gets canceled (e.g. when a participant dies during the scene)
+		"NotificationOfficeMeetingCanceled" = MessageDescription
+		{
+			Title = "$notification.OfficeMeetingCanceled.title";
+			Body = "$notification.OfficeMeetingCanceled.body";
+			Effect = "";
+			Icon = "Politics";
+			Type = "Neutral";
+			Duration = 120;
+			IsUrgent = true;
+			SFX = 33;
+			OnClickReactions = array
+			{
+				FunctionOpenUI
+				{
+					UIName = "MessageLog";
+					ShowOnTop = true;
+					PlaySound = true;
+				};
+			};
+		};
+
+		// FunctionSendMessage
+		"StatelyDispatchSuccessTarget" = MessageDescription
+		{
+			Title = "$StatelyDispatch";
+			Body = "$StatelyDispatchSuccess.Body";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Neutral";
+			Duration = 45;
+			IsUrgent = false;
+			//SFX = 32;
+			//VO = 116;
+		};
+		"StatelyDispatchFailureTarget" = MessageDescription
+		{
+			Title = "$StatelyDispatch";
+			Body = "$StatelyDispatchFailure.Body";
+			Effect = "";
+			Icon = "Reputation";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			//SFX = 34;
+			//VO = 116;
+		};
+	};
+};

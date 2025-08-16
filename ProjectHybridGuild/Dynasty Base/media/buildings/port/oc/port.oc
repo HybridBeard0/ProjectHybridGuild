@@ -1,0 +1,224 @@
+port extends Building
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "port";
+		
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc {
+					Name = "streetconnection";
+					Position = ( 15.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "enter";
+					Position = ( -230.0, 250.0, 8.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+				},
+				SnapPointDesc {
+					Name = "exit";
+					Position = ( -230.0, 250.0, 8.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc
+				{
+					Name = "employee00";
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "sit_idle1";
+						},
+					};
+				},
+
+				SnapPointDesc
+				{
+					Name = "smuggle00";
+					Position = ( -100.0, 295.0, 8.0 );
+					Rotation = ( 0.0, 0.0, -140.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "CrouchFadeIn";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "reap_herbs1";
+							Repeat = 2;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "CrouchFadeOut";
+						},
+						G3SnapPointAnimation {
+							Context = "Idle";
+							Animation = "idle1";
+							Repeat = 3;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "smuggle01";
+					Position = ( -50.0, 495.0, 8.0 );
+					Rotation = ( 0.0, 0.0, 190.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "CrouchFadeIn";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "reap_herbs1";
+							Repeat = 2;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "CrouchFadeOut";
+						},
+						G3SnapPointAnimation {
+							Context = "Idle";
+							Animation = "idle1";
+							Repeat = 3;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "smuggle02";
+					Position = ( 88.0, 505.0, 8.0 );
+					Rotation = ( 0.0, 0.0, 170.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "CrouchFadeIn";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "reap_herbs1";
+							Repeat = 2;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "CrouchFadeOut";
+						},
+						G3SnapPointAnimation {
+							Context = "Idle";
+							Animation = "idle1";
+							Repeat = 3;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "smuggle03";
+					Position = ( 310.0, 420.0, 8.0 );
+					Rotation = ( 0.0, 0.0, 30.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "ManipulateMiddle";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation {
+							Context = "Idle";
+							Animation = "idle1";
+							Repeat = 3;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "smuggle04";
+					Position = ( 140.0, 390.0, 8.0 );
+					Rotation = ( 0.0, 0.0, 150.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "ManipulateMiddle";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation {
+							Context = "Idle";
+							Animation = "idle1";
+							Repeat = 3;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "smuggle05";
+					Position = ( -340.0, 262.0, 8.0 );
+					Rotation = ( 0.0, 0.0, -90.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation {
+							Context = "Smuggle";
+							Animation = "idle_readbook1";
+							Prop = "book2/book2";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation {
+							Context = "Idle";
+							Animation = "idle1";
+							Repeat = 3;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "smuggle06";
+					Position = ( 35.0, 348.0, 8.0 );
+					Rotation = ( 0.0, 0.0, 25.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "CrouchFadeIn";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "reap_herbs1";
+							Repeat = 2;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "Smuggle";
+							Animation = "CrouchFadeOut";
+						},
+						G3SnapPointAnimation {
+							Context = "Idle";
+							Animation = "idle1";
+							Repeat = 3;
+						},
+					};
+				},
+			};
+		};
+	};
+	
+	EditorName = "Port";
+	EditorIcon = "media/UserInterface/BusinessIcons/Other/Port.png";
+	EditorCategory = 2;	
+}

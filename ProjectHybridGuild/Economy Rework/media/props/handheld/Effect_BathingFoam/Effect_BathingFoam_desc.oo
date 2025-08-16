@@ -1,0 +1,15 @@
+G3ActorDesc
+{
+	Visual = "effect_dust";
+	
+	AttachType = "AttachToNode";
+	AttachParentNode = "Bip001";
+	//AttachChildNode = "Snap";		
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#Effect_BathingFoam/list_idles_animations,
+		);
+	};
+}

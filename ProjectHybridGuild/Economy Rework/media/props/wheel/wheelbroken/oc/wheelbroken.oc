@@ -1,0 +1,10 @@
+wheelbroken extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "wheelbroken";
+	};
+	EditorName = "wheelbroken";
+	EditorIcon = "media/UserInterface/PropIcons/wheelbroken.png";
+	EditorCategory = 3;		
+}

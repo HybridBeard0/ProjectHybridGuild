@@ -1,0 +1,14 @@
+blowpipe extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "blowpipe";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+	EditorName = "Blowpipe";
+	EditorIcon = "media/UserInterface/PropIcons/Bread.png";
+	EditorCategory = 3;		
+}

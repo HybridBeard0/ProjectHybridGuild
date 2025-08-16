@@ -1,0 +1,12 @@
+watergateleft extends G3PropsInstance
+{
+	Walkable = true; // whenever you change the 'walkable' property of a prop, make sure to correctly move it between 'prop_packages.oo' and 'walkable_prop_packages.oo'. This ensures that all walkable props are preloaded correctly before a game starts.
+
+	static var Description = ActorDesc
+	{
+		Visual = "watergateleft";
+	};
+	EditorName = "watergateleft";
+	EditorIcon = "media/UserInterface/PropIcons/Kiosque01.png";
+	EditorCategory = -1; // needs to be pickable so we define it as -1
+}

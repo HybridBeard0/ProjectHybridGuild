@@ -1,0 +1,10 @@
+CS6 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "CS6";
+	};
+	EditorName = "CS6";
+	EditorIcon = "media/UserInterface/PropIcons/CS6.png";
+	EditorCategory = 4;		
+}

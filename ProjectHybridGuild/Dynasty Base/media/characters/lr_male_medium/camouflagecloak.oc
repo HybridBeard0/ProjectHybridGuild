@@ -1,0 +1,5 @@
+camouflagecloak extends G3Character
+{
+	static var Description = #lr_male_medium/camouflagecloak_desc;
+	
+};

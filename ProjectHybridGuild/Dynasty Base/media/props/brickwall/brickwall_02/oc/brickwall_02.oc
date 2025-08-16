@@ -1,0 +1,10 @@
+brickwall_02 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "brickwall_02";
+	};
+	EditorName = "Brickwall02";
+	EditorIcon = "media/UserInterface/PropIcons/Brickwall02.png";
+	EditorCategory = 4;		
+}

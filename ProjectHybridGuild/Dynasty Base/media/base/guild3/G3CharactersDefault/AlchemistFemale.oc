@@ -1,0 +1,40 @@
+AlchemistFemale extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = true;
+	MiddleClass = false;
+	Rich = false;
+	
+	Male = false;
+	Player = false;
+	Employee = true;
+	Profession = true;
+	
+	LowResCharacter = "citizen4";
+	HighResCharacter = "citizen4";
+	
+	BodyTexturesDiff= array
+	{
+		"Citizen4Female_LOD01_diff",
+		"Citizen4Female_LOD01_diff",
+		"Citizen4Female_LOD01_diff",	
+		"Citizen4Female_LOD01_diff"					
+	};
+	BodyTexturesNorm= array
+	{
+		"Citizen4Female_LOD01_Norm",
+		"Citizen4Female_LOD01_Norm",
+		"Citizen4Female_LOD01_Norm",
+		"Citizen4Female_LOD01_Norm"
+	};
+	BodyTexturesMask= array
+	{
+		"Citizen4Female_LOD01_Mask",
+		"Citizen4Female_LOD01_Mask",
+		"Citizen4Female_LOD01_Mask",
+		"Citizen4Female_LOD01_Mask"
+	};
+}

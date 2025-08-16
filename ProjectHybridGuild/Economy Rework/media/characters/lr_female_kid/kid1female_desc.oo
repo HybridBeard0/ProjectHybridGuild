@@ -1,0 +1,28 @@
+base/standardg3characterdesc
+{
+	Visual = "kid1female_game";
+	ActorScale = 1.100;
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#lr_male_kid/list_actions_animations,
+			#lr_male_kid/list_businesses_animations,
+			#lr_male_kid/list_dialog_animations,
+			#lr_male_kid/list_fight_animations,
+			#lr_male_kid/list_idles_animations,
+			#lr_male_kid/list_runs_animations,
+			#lr_male_kid/list_walks_animations,
+			#lr_male_kid/Cutscenes_Church,
+		);
+	};
+	Poor = false;
+	MiddleClass = false;
+	Rich = false;
+	Male = false;
+	Player = false;
+	Employee = false;
+	TrotSpeed = 0.000;
+	AverageAge = 0.000;
+	CustomCollisionRadius = 0.000;
+}

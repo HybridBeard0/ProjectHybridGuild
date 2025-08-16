@@ -1,0 +1,13 @@
+ResourcePackageNames
+{
+	Names = array
+	{
+		"base",
+		"data",
+		"ui_core",
+		"player",
+		"itemactors",
+		"raysources",
+		"tools",
+	};
+}

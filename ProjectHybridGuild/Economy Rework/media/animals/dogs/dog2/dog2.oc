@@ -1,0 +1,9 @@
+dog2 extends G3Animal
+{
+	static var Description = #dog2/dog2_desc;
+	Behaviour = "Dog";
+	EditorName = "Dog 2";
+	
+	MaxRoamingDistance = 2500;
+    RoamingDivFactor = 3;
+};

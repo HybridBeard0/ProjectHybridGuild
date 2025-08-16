@@ -1,0 +1,33 @@
+ScholarFemale extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = true;
+	MiddleClass = false;
+	Rich = false;
+	
+	Male = false;
+	Player = false;
+	Employee = true;
+	Profession = true;
+	
+	
+	LowResCharacter = "plaguesuit";
+	HighResCharacter = "plaguesuit";
+	
+	
+	BodyTexturesDiff= array
+	{
+		"PlagueSuit_Female_DIFF",
+	};
+	BodyTexturesNorm= array
+	{
+		"PlagueSuit_Female_NORM",
+	};
+	BodyTexturesMask= array
+	{
+		"PlagueSuit_Female_MASK",
+	};
+}

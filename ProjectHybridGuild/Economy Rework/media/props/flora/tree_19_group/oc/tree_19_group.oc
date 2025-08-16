@@ -1,0 +1,12 @@
+/* tree_19_group extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "tree_19_group";
+	};
+	EditorName = "Tree19_group";
+	EditorIcon = "media/UserInterface/PropIcons/Tree19_group.png";
+	EditorCategory = 0;		
+	SnapGround = false;
+}
+*/

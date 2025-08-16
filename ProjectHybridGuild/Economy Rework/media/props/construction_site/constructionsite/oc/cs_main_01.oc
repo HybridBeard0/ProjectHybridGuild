@@ -1,0 +1,10 @@
+cs_main_01 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "cs_main_01";
+	};
+	EditorName = "Construction site 01";
+	EditorIcon = "media/UserInterface/PropIcons/Construction site 01.png";
+	EditorCategory = 4;		
+}

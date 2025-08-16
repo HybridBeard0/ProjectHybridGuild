@@ -1,0 +1,12 @@
+fountain_01 extends G3PropsInstance
+{
+	static var Description = #fountain_01/fountain_01_desc;
+	function onSpawn()
+	{
+		this.playAnimationByName("Idle");
+	}
+	
+	EditorName = "Fountain01";
+	EditorIcon = "media/UserInterface/PropIcons/Fountain01.png";
+	EditorCategory = 3;		
+}

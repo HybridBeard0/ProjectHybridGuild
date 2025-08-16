@@ -1,0 +1,11 @@
+sheafpack extends G3Actor
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "sheafpack";
+		CrowdControlRadius = 0.000;
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+};

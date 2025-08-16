@@ -1,0 +1,40 @@
+CamouflageCloakMale extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = false;
+	MiddleClass = true;
+	Rich = false;
+	
+	Male = true;
+	Player = false;
+	Employee = false;
+	Profession = false;
+	
+	LowResCharacter = "camouflagecloak";
+	HighResCharacter = "camouflagecloak";
+	
+	BodyTexturesDiff= array
+	{
+		"CamouflageCloakMale_LOD01_diff",
+		"CamouflageCloakMale_LOD01_diff",
+		"CamouflageCloakMale_LOD01_diff",		
+		"CamouflageCloakMale_LOD01_diff"			
+	};
+	BodyTexturesNorm= array
+	{
+		"CamouflageCloakMale_LOD01_nrm",
+		"CamouflageCloakMale_LOD01_nrm",
+		"CamouflageCloakMale_LOD01_nrm",
+		"CamouflageCloakMale_LOD01_nrm"
+	};
+	BodyTexturesMask= array
+	{
+		"CamouflageCloakMale_LOD01_MASK",
+		"CamouflageCloakMale_LOD01_MASK",
+		"CamouflageCloakMale_LOD01_MASK",
+		"CamouflageCloakMale_LOD01_MASK"
+	};
+}

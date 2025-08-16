@@ -1,0 +1,34 @@
+NPCDialogueQuestLookup extends NPCDialogueQuestLookup
+{
+	//DefaultDialogueId = "d.q.inMyMind";
+	
+	QuestDialogues = array
+	{	
+		DialogueCondition {
+			DialogueId = "d.q.inMyMind";
+			Probability = "0.6";
+		},
+		DialogueCondition {
+			DialogueId = "d.q.riddOnion";
+			Probability = "0.1";
+		},
+		DialogueCondition {
+			DialogueId = "d.q.youRich";
+			Probability = "0.4";
+		},
+		DialogueCondition {
+			DialogueId = "d.q.helio";
+			Probability = "0.4";
+		},
+		DialogueCondition {
+			DialogueId = "d.q.greatDyn";
+			Probability = "0.5";
+		},
+
+		//DialogueCondition {
+			// Currently using the DefaultDialogueId. Add a new dialogue in NPC_Dialogues.inc with the following DialogueId and uncomment the following line 
+			//DialogueId = "SomeNPCTalkQuestDialogueId";
+			//Probability = "1.0";
+		//},		
+	};
+};

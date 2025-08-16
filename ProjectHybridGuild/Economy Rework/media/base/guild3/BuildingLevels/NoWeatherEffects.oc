@@ -1,0 +1,10 @@
+NoWeatherEffects extends G3BuildingTemplateLevel
+{
+	Results = array 
+	{
+		TagEffect
+		{
+			Tags = array{ "NoWeatherEffects" };
+		}
+	};
+};

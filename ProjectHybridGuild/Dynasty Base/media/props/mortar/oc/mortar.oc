@@ -1,0 +1,10 @@
+mortar extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "mortar";
+	};
+	EditorName = "Mortar";
+	EditorIcon = "media/UserInterface/PropIcons/cartLD.png";
+	EditorCategory = 3;		
+}

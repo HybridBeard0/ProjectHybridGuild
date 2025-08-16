@@ -1,0 +1,12 @@
+citywall extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "citywall";
+	};
+	EditorName = "City wall";
+	EditorIcon = "media/UserInterface/BusinessIcons/Other/CityWall.png";
+	EditorCategory = 2;
+	Destructible = false;
+	BlocksBuildings = true;
+}

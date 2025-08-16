@@ -1,0 +1,15 @@
+G3ActorDesc
+{
+	Visual = "walkingstick";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#walkingstick/list_walks_animations,
+		);
+	};
+	
+	AttachType = "AttachToNode";
+	AttachParentNode = "Bip001 R Hand";
+	AttachChildNode = "Snap";
+}

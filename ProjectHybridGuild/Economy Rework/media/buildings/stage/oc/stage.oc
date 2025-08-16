@@ -1,0 +1,163 @@
+stage extends Building
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "stage";
+		
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc {
+					Name = "streetconnection";
+					Position = ( 62.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "enter";
+					Position = ( 62.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "exit";
+					Position = ( 62.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+				},
+				SnapPointDesc
+				{
+					Name = "minstrel01";
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "BoastAboutYourExploitsOnStage";
+							Animation = "town_crier1";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "WinBelieversCityOnStage";
+							Animation = "read_bible";
+							Prop = "book2/book2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "PlayMusicOnStage";
+							Animation = "gleeman_shawm";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "PlayMusicOnStage";
+							Animation = "gleeman_fiddle";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "PlayMusicOnStage";
+							Animation = "gleeman_drum";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "PlayMusicOnStage";
+							Animation = "gleeman_bagpipe";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "PlayMusicOnStage";
+							Animation = "gleeman_fiddle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "PlayMusicOnStage";
+							Animation = "gleeman_drum2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "PlayMusicOnStageOver";
+							Animation = "Curtsy";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "GivePublicBanquet";
+							Animation = "Banquet";
+							Prop = "banquet/banquet";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "PublicEntertainmentOnStage";
+							Animation = "dance_solo";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "minstrel02";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "idle_sweep1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "minstrel03";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "ManipulateMiddle";
+							Prop = "bread/bread";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "minstrel04";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "idle_walkstick1";
+							Prop = "bakershovel/bakershovel";
+						},
+					};
+				},
+			};
+		};
+	};
+	
+	EditorName = "Stage";
+	EditorIcon = "media/UserInterface/Icons/BuildingImages/Other/Stage.png";
+	EditorCategory = 2;
+}

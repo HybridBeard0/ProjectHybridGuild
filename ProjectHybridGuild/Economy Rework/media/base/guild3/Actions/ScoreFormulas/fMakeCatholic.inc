@@ -1,0 +1,2 @@
+SourceScoreFormula = "2 + Intelligence + Intimidation * 0.5";
+TargetScoreFormula = "(Intelligence * ((3 * Target.DoesHaveTag.Protestant) + Target.DoesNotHaveTag.Religious)) + (Strength * 0.5) + ReligionStolidity";

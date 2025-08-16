@@ -1,0 +1,12 @@
+citygate_04 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "citywall_04_gate";
+	};
+	EditorName = "City Gate 04";
+	EditorIcon = "media/UserInterface/BusinessIcons/Other/CityGate.png";
+	EditorCategory = 2;	
+	Destructible = false;
+	BlocksBuildings = true;
+}

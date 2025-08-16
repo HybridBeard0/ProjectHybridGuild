@@ -1,0 +1,388 @@
+UIObjectives extends GUIObjectiveContainer
+{
+	Objectives = array
+	{		
+		GUIObjective
+		{
+			ID = "GOAL_BecomeSovereign";
+			Name = "$ui.Objective.Name1";
+			Description = "$ui.Objective.Desc1";
+			Narration = "$ui.StoryQuest.Narration7";
+			GameModes = array{1,2,3,4,5,6,7,8,9}; // see EGameType in NewGameData.h // SP and MP
+			
+			ObjectiveBase = array
+			{			
+				0 = AcquireOfficeObjective 
+				{
+					ID = "RunForOffice";
+					IsWinCondition = true;
+					ObjectiveDescription = "$ui.Objective.Desc1";
+					RequiredOfficeID = "Sovereign";
+					RequiredPlayedYearsInOffice = 1;
+				};
+			};
+		};
+	
+		GUIObjective
+		{
+			ID = "GOAL_FreeGame";
+			Name = "$ui.StoryQuest.Name0";
+			Description = "$ui.StoryQuest.Desc0";
+			Narration = "$ui.StoryQuest.Narration0";
+			
+			GameModes = array{1,2,3,4,5,6,7,8,9}; // see EGameType in NewGameData.h // SP and MP
+		};
+	
+		GUIObjective
+		{
+			ID = "GOAL_FoundAPowerfulDynasty";
+			Name = "$ui.StoryQuest.Name1";
+			Description = "$ui.StoryQuest.Desc1";
+			Narration = "$ui.StoryQuest.Narration1";
+			GameModes = array{1,2,3,4,5,6,7,8,9}; // see EGameType in NewGameData.h // SP and MP
+			Type = "";
+			SubData = "";
+			Amount = 1;
+			ObjectiveBase = array
+			{
+				0 = MultiStepObjective // gain the title lord
+				{
+					ID = "FoundAPowerfulDynasty_NobilityQuest";
+					ObjectiveName= "$ui.Subquest.Name8";			
+					ObjectiveDescription= "$ui.Subquest.Desc8";
+					IsWinCondition = true;
+					
+					SubObjectives = array
+					{
+						G3ObjectiveNobility // gain the title citizen
+						{
+							Amount = 5; // citizen 
+							ObjectiveDescription= "$ui.Subquest.Desc30";
+						},
+						
+						G3ObjectiveNobility // gain the title patrician
+						{
+							Amount = 7; // patrician 				
+							ObjectiveDescription= "$ui.Subquest.Desc13";
+						},
+						
+						G3ObjectiveNobility // gain the title lord
+						{
+							Amount = 10; // lord 				
+							ObjectiveDescription= "$ui.Subquest.Desc13";	
+						}
+					};
+				};
+				
+				1 = MultiStepObjective
+				{
+					ObjectiveName= "$ui.Subquest.Name33";					
+					ObjectiveDescription= "$ui.Subquest.Name33";
+					IsWinCondition = true;
+					ID = "RunForOffice";
+					OnlyCompleteOneSubquest = true;
+					
+					SubObjectives = array
+					{
+						AcquireOfficeObjective 
+						{ 
+							RequiredOfficeID = "Mayor";
+							AcquireOnly = true;
+						},
+						AcquireOfficeObjective 
+						{ 
+							RequiredOfficeID = "CityLegate";
+							AcquireOnly = true;
+						},
+						AcquireOfficeObjective 
+						{ 
+							RequiredOfficeID = "Treasurer";
+							AcquireOnly = true;
+						}
+					};
+				};
+				
+				2 = IncreaseMoneyObjective // earn 20000 coins
+				{
+					ObjectiveName= "$ui.Subquest.Name1";
+					ObjectiveDescription= "$ui.Subquest.Desc1";
+					IsWinCondition = true;
+					Amount = 20000;							
+				};
+				
+				3 = MultiStepObjective // take over the role of your heir
+				{
+					ObjectiveName= "$ui.Subquest.Name35";
+					ObjectiveDescription= "$ui.Subquest.Desc35";
+					IsWinCondition = true;
+					OnlyCompleteOneSubquest = true;
+					
+					ID = "QuestGetChild";
+					
+					SubObjectives = array
+					{
+						ExecuteActionObjective 
+						{
+							Amount = 1;
+							ActionWeights = map { "ProduceOffspring" = 1.0, };
+							
+							SourceFilters = array
+							{
+								ActionFilters
+								{
+									BelongsToOwnFamily = 1;
+								}
+							};
+						},
+						
+						ExecuteActionObjective 
+						{
+							Amount = 1;
+							ActionWeights = map { "BuyOrphan" = 1.0, };
+							
+							SourceFilters = array
+							{
+								ActionFilters
+								{
+									BelongsToOwnFamily = 1;
+								}
+							};
+						}
+					};
+				};
+			};
+		};
+		
+		GUIObjective
+		{
+			ID = "GOAL_CityAirMakesYouFree";
+			Name = "$ui.StoryQuest.Name2";
+			Description = "$ui.StoryQuest.Desc2";
+			Narration = "$ui.StoryQuest.Narration2";
+			GameModes = array{1,2,3,4,5,6,7,8,9}; // see EGameType in NewGameData.h // SP and MP
+			Type = "";
+			SubData = "";
+			Amount = 1;
+			
+			ObjectiveBase = array
+			{
+				0 = ConstructBuildingObjective // own 10 businesses
+				{							
+					IsWinCondition = true;
+					Amount = 10;	
+					ObjectiveDescription= "$ui.Subquest.Desc2";
+					BuildingType = "Business";
+				},
+				
+				1 = SellToMarketObjective // earn 18000 coins with businesses
+				{
+					IsWinCondition = true;
+					ObjectiveDescription= "$ui.Subquest.Desc4";
+					Amount = 18000;	
+				},
+				
+				2 = ConstructBuildingObjective // own 1 mansion as a residence
+				{
+					IsWinCondition = true;
+					Amount = 1;	
+					ObjectiveDescription= "$ui.Objective.Desc2";
+					BuildingType = "Residence";
+					BuildingTemplateId = "Mansion";
+				};
+			};
+		};
+		
+		GUIObjective
+		{
+			ID = "GOAL_BecomeTheRulerOfTheCity";
+			Name = "$ui.StoryQuest.Name4";
+			Description = "$ui.StoryQuest.Desc4";
+			Narration = "$ui.StoryQuest.Narration4";
+			GameModes = array{1,2,3,4,5,6,7,8,9}; // see EGameType in NewGameData.h // SP and MP			
+			Type = "";
+			SubData = "";
+			Amount = 1;
+			
+			ObjectiveBase = array
+			{
+				// Main quests of the story quest
+				
+				0 = G3ObjectiveNobility // gain the title squire
+				{				
+					IsWinCondition = true;				
+					ObjectiveDescription = "$ui.Subquest.Desc13";
+					Amount = 9; // squire
+				};
+				
+				1 = MultiStepObjective // hold all offices of the highest level in one city at once
+				{
+					ObjectiveName = "$scenarios.cityRuler.offices.name";
+					ObjectiveDescription = "$scenarios.cityRuler.offices.name";
+					IsWinCondition = true;
+					ID = "RunForOffice";
+					
+					SubObjectives = array
+					{
+						AcquireOfficeObjective 
+						{ 						
+							ID = "RunForOffice";
+							RequiredOfficeID = "Mayor";
+							RequiredPlayedYearsInOffice = 2;
+						},
+						AcquireOfficeObjective 
+						{ 
+							ID = "RunForOffice";
+							RequiredOfficeID = "CityLegate";
+							RequiredPlayedYearsInOffice = 2;
+						},
+						AcquireOfficeObjective 
+						{ 
+							ID = "RunForOffice";
+							RequiredOfficeID = "Treasurer";
+							RequiredPlayedYearsInOffice = 2;
+						}
+					};
+				};
+			};
+		};
+		
+		GUIObjective
+		{
+			ID = "GOAL_LongDistanceMerchant";
+			Name = "$ui.StoryQuest.Name5";
+			Description = "$ui.StoryQuest.Desc5";
+			Narration = "$ui.StoryQuest.Narration5";
+			GameModes = array{1,2,3,4,5,6,7,8,9}; // see EGameType in NewGameData.h // SP and MP			
+			Type = "";
+			SubData = "";
+			Amount = 1;
+			
+			ObjectiveBase = array
+			{
+				// Main quests of the story quest
+				
+				0 = SellToMarketObjective // earn 12000 coins through far trade markets
+				{
+					ObjectiveDescription= "$ui.Subquest.Desc15";
+					IsWinCondition = true;
+					Amount = 12000;
+					TargetFarTradeMarkets = true;
+				};
+				
+				1 = ConstructBuildingObjective // own 5 warehouses
+				{				
+					ObjectiveDescription= "$ui.Subquest.Desc38";
+					IsWinCondition = true;
+					Amount = 5;
+					BuildingTemplateId = "Warehouse";					
+				};
+				
+				2 = ExecuteActionObjective // execute long distant journeys 3 times
+				{				
+					Amount = 3;
+					ActionWeights = map { "Longshore" = 1.0, };
+					IsWinCondition = true;
+					ObjectiveDescription= "$ui.Subquest.Desc16";
+					SourceFilters = array
+					{
+						ActionFilters
+						{
+							BelongsToOwnFamily = 1;
+						}
+					};			
+				};
+			};
+		};
+		
+		GUIObjective
+		{
+			ID = "GOAL_Warmonger";
+			Name = "$ui.StoryQuest.Name6";
+			Description = "$ui.StoryQuest.Desc6";
+			Narration = "$ui.StoryQuest.Narration6";
+			GameModes = array{1,2,3,4,5,6,7,8,9}; // see EGameType in NewGameData.h // SP and MP			
+			Type = "";
+			SubData = "";
+			Amount = 1;
+			ObjectiveBase = array
+			{
+				// Main quests of the story quest
+
+				0 = EstablishDiplomaticRelationshipsObjective // be in feud with 3 dynasties at the same time
+				{			
+					ObjectiveDescription= "$ui.Subquest.Desc18";
+					IsWinCondition = true;
+					ID = "EnterFeud";
+					Amount = 3;
+					DiplomaticStatus = "Feud";
+				};
+				
+				2 = ExecuteActionObjective  // Kill 10 character
+				{
+					Amount = 10;
+					ActionWeights = map { "StealthKillCharacter" = 1.0, };
+					IsWinCondition = true;
+					ObjectiveDescription= "$ui.Subquest.Desc23";
+					ID = "StealthKillCharacter";
+					SourceFilters = array
+					{
+						ActionFilters
+						{
+							BelongsToOwnFamily = 1;
+						}
+					};
+				},
+				
+				3 = DestroyDynastyObjective // destroy 2 dynasties
+				{	
+					ID = "IncreaseRankDefault";
+					ObjectiveName = "$objectives.destroyDynasty.name";
+					ObjectiveDescription= "$objectives.destroyDynasty.description";
+					IsWinCondition = true;
+					
+					Amount = 2;					
+				};	
+				
+				4 = ExecuteActionObjective // sabotage 10 buildings
+				{					
+					ObjectiveDescription= "$ui.Subquest.Desc29";
+					IsWinCondition = true;
+					
+					Amount = 10;
+					ActionWeights = map { "Sabotage" = 1.0, };
+					ID = "Sabotage";
+					TargetFilters = array
+					{
+						ActionFilters
+						{
+							IsBuilding = 1;
+							BelongsToOwnFamily = -1;
+						}
+					};
+				};
+				
+				5 = MultiStepObjective // Use different poisons several times
+				{
+					ObjectiveName = "$scenarios.warmonger.poison.name";
+					IsWinCondition = true;
+					ObjectiveDescription= "$ui.Subquest.Desc27";
+					ID = "WarmongerPoisonEnemies";
+					SubObjectives = array
+					{
+						ExecuteActionObjective // use black widow poison 5 times
+						{	
+							Amount = 5;
+							ActionWeights = map { "ApplyBlackWidowPoison" = 1.0, };
+						},
+
+						ExecuteActionObjective // use paralysis poison 5 times
+						{											
+							Amount = 5;
+							ActionWeights = map { "ApplyParalysisPoison" = 1.0, };
+						}
+					};
+				}
+			};
+		};
+	};
+};

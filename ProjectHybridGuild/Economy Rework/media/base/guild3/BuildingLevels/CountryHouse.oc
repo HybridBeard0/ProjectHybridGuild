@@ -1,0 +1,42 @@
+CountryHouse extends G3BuildingTemplateLevel
+{
+    NBAddons = 7;
+
+	Results = array 
+	{
+		TagEffect
+		{
+			Tags = array{"CountryHouse"};
+		},
+		ModifierEffect
+		{
+			ActorValue = "Productivity";
+			Mod = -0.1;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "MaxEmployees";
+			Mod = 200.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "StorageSlots";
+			Mod = 8.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "StorageSpace";
+			Mod = 60.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "BuildingSecurity";
+			Mod = 1.0;
+			Recover = true;
+		};
+	};
+};

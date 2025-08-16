@@ -1,0 +1,13 @@
+bridge_02 extends G3PropsInstance
+{
+	Walkable = true;// whenever you change the 'walkable' property of a prop, make sure to correctly move it between 'prop_packages.oo' and 'walkable_prop_packages.oo'. This ensures that all walkable props are preloaded correctly before a game starts.
+	CustomFadeAlpha = 1.0;
+
+	static var Description = ActorDesc
+	{
+		Visual = "bridge_02";
+	};
+	EditorName = "Bridge02";
+	EditorIcon = "media/UserInterface/PropIcons/Bridge02.png";
+	EditorCategory = -1; // needs to be pickable so we define it as -1
+}

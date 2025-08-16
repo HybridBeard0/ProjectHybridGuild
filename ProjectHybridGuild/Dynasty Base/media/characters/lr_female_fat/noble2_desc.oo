@@ -1,0 +1,11 @@
+lr_female_fat/lr_female_fat_desc
+
+{
+	Visual = "noble2female_fat_game";
+
+	Poor = false;
+	Player = false;
+	TrotSpeed = 0.000;
+	AverageAge = 0.000;
+	CustomCollisionRadius = 0.000;
+}

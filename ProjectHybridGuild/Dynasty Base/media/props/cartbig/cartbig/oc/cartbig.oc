@@ -1,0 +1,17 @@
+cartbig extends G3Actor
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "cartbig";
+		
+		AttachType = "AttachVehicle";
+		AttachChildNode = "SVP_Remplacer_Par_Le_Nom_Du_Snap_Sur_Le_Cart";
+		CrowdControlRadius = 50.0;
+		//animation played by the character
+		ParentIdleAnimation = "farmer1";
+		ParentMoveAnimation = "carpenter1";
+	};
+	EditorName = "Cartbig";
+	EditorIcon = "media/UserInterface/PropIcons/Cartbig.png";
+	EditorCategory = 3;		
+}

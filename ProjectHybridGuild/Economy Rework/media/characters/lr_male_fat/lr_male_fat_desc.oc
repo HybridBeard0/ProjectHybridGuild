@@ -1,0 +1,18 @@
+lr_male_fat_desc extends base/StandardG3CharacterDesc
+{
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#lr_male_standard/list_actions_animations,
+			#lr_male_standard/list_dialog_animations,
+			#lr_male_standard/list_fight_animations,
+			#lr_male_standard/list_guard_animations,
+			#lr_male_standard/list_idles_animations,
+			#lr_male_standard/list_runs_animations,
+			#lr_male_standard/list_walks_animations,
+			#lr_male_standard/list_divers_animations,
+			#lr_male_standard/list_businesses_animations,
+		);
+	};
+}

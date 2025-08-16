@@ -1,0 +1,4 @@
+Effect_LongerLife extends G3PropsInstance
+{
+	static var Description = #Effect_LongerLife/Effect_LongerLife_desc;
+};

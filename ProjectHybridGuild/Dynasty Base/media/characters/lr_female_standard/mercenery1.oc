@@ -1,0 +1,5 @@
+mercenery1 extends G3Character
+{
+	static var Description = #lr_female_standard/mercenery1_desc;
+
+};

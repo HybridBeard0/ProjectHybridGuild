@@ -1,0 +1,38 @@
+interiorprop_mansionchair3 extends G3PropsInstance
+{
+	static var Description = G3PropDesc
+	{
+		Visual = "interiorprop_mansionchair3";
+
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc
+				{
+					Name = "sit00";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Animation = "sit_idle1";
+							Context = "SitOnBench";
+						},
+					};
+				},
+			};
+		};
+	
+		Interaction = G3ActorInteraction {
+			Name = "$props.name.Chair";
+			TooltipText = "$action.Sit";
+			TooltipIcon = "SitOnBench";
+			ContextAction = "SitOnBench";
+			ActionFailureMessage = "SitInteractionError";
+		};
+	};
+	
+	Interactable = true;
+	
+	EditorName = "InteriorProp MansionChair3";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

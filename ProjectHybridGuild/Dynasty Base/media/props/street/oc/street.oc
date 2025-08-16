@@ -1,0 +1,7 @@
+street extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "street";
+	};
+}

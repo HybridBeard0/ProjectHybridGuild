@@ -1,0 +1,68 @@
+Smuggler1 extends G3BuildingTemplateLevel
+{
+    NBAddons = 13;
+	
+	Results = array 
+	{
+		TagEffect
+		{
+			Tags = array{"IsLowTier", "Smuggler"};
+		},
+		ModifierEffect
+		{
+			ActorValue = "MaxEmployees";
+			Mod = 2.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "MaxTransporters";
+			Mod = 1.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "StorageSlots";
+			Mod = 8.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "StorageSpace";
+			Mod = 10.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "FrontStoreSlots";
+			Mod = 6.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "FrontStoreSpace";
+			Mod = 10.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "Attractiveness";
+			Mod = 1.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "BuildingSecurity";
+			Mod = 1.0;
+			Recover = true;
+		};
+		// *** INITIAL STOCK ***
+		FunctionTransferItems
+		{
+			Receiver = "Target";
+			SpecificItems = array { "Rum" };
+			MinAmount = 5;
+			MaxAmount = 5;
+		};
+	};
+};

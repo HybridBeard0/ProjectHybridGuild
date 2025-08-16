@@ -1,0 +1,13 @@
+lr_female_standard/lr_female_standard_desc
+{
+	Visual = "citizen1female_game";
+	Poor = true;
+	MiddleClass = true;
+	Rich = true;
+	Male = true;
+	Player = true;
+	Employee = true;
+	TrotSpeed = 0.000;
+	AverageAge = 0.000;
+	CustomCollisionRadius = -145212684031928650000000000000000000.000;
+}

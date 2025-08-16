@@ -1,0 +1,12 @@
+lr_male_standard/lr_male_standard_desc
+{
+	Visual = "guard2";
+	
+	Poor = false;
+	MiddleClass = false;
+	Rich = false;
+	Male = false;
+	Player = false;
+	TrotSpeed = 0.000;
+	AverageAge = 0.000;
+}

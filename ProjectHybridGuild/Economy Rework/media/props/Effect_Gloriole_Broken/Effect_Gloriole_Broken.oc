@@ -1,0 +1,4 @@
+Effect_Gloriole_broken extends G3PropsInstance
+{
+	static var Description = #Effect_Gloriole_Broken/Effect_Gloriole_Broken_desc;
+};

@@ -1,0 +1,13 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1510693481;
+			Name = "idle1";
+			AnimationName = "idle1";
+			Looping = true;
+		},
+	);
+}

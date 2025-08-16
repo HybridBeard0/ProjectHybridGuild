@@ -1,0 +1,5 @@
+loveletter extends G3Actor
+{
+	static var Description = #loveletter/loveletter_desc;
+
+};

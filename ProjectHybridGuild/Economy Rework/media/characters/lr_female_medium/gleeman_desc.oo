@@ -1,0 +1,9 @@
+lr_female_medium/lr_female_medium_desc
+{
+	Visual = "gleeman_female_med_game";
+	Poor = true;
+	MiddleClass = true;
+	Player = true;
+	Employee = true;
+	CustomCollisionRadius = 0.000;
+}

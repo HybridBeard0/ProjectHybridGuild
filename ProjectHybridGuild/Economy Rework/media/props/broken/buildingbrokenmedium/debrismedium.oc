@@ -1,0 +1,12 @@
+debrismedium extends Debris
+{
+	static var Description = #buildingbrokenmedium/buildingbrokenmedium_desc;
+
+	function onInit()
+	{
+		this.playAnimationByName("idle1");
+	}
+	EditorName = "Building broken medium (with automatic removal)";
+	EditorIcon = "media/UserInterface/PropIcons/Buildingbrokenmedium.png";
+	EditorCategory = 4;		
+};

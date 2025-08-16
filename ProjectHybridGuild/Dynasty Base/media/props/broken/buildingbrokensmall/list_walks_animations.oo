@@ -1,0 +1,23 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1440087693;
+			Name = "Idle";
+			AnimationName = "Idle";
+			Looping = true;
+			Triggers = array
+			(
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Smoke_Debris";
+					RefNodeOverride = "Smoke";
+				},
+			);
+		},
+	);
+}

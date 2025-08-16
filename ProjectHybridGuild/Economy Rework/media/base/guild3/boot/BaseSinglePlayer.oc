@@ -1,0 +1,75 @@
+BaseSinglePlayer extends NewGameData
+{
+    LocalMaps = array
+    {
+	map1 extends SLocalMap
+	{
+	    ID = 0;
+	    Filename = "./Maps/aaSteKo.Map";
+	    //Filename = "./Maps/_BuildingsAndCharacters.Map";
+	    //Filename = "./Maps/_TreeTest.Map";
+	    //Filename = "./Maps/Archbishopric_Magdeburg.Map";
+	    //Filename = "./Maps/Augsburg.Map";
+	    //Filename = "./Maps/Birmingham.Map";
+	    //Filename = "./Maps/Bohemia.Map";
+	    //Filename = "./Maps/Burgundy.Map";
+	    //Filename = "./Maps/empty.Map";
+	    //Filename = "./Maps/London.Map";
+	    //Filename = "./Maps/MainMenu.Map";
+	    //Filename = "./Maps/Mazovia.Map";
+	    //Filename = "./Maps/Netherlands.Map";
+	    //Filename = "./Maps/Paris.map";
+	    //Filename = "./Maps/Vienna.Map";
+	    //Filename = "./Maps/Visby.Map";
+	};
+    };
+
+    LocalMapID = 0;
+
+    GameType = 2; // EGameType: 2 = ESinglePlayer
+    GameMode = 3; // EGameMode: 3 = PoorFellow, 4 = ScenarioDependant, 5 = Career
+
+    Difficulty = 1; // EGameDifficulty: 1 = EEasy, 2 = ENormal, 3 = EHard, 4 = EImpossible
+    NBAIFamilies = 4;
+    MaxHumanFamilies = 0;
+
+    PlayerNetworkName = "LocalPlayer";
+
+    Character = sysNewGameCharacter
+    {
+	FirstName = "Bob";
+	LastName = "Forrester";
+	IsMale = true;
+
+	ActorValues = map
+	{
+	    "Strength" = 5.0f;
+	    "Dexterity" = 2.0f;
+	    "Intelligence" = 1.0f;
+	    "Charisma" = 1.0f;
+	    "Perception" = 2.0f;
+	};
+
+	StartupSkill = StartupSkill
+	{ 
+	    SkillName = "Handicraft"; 
+	    LocalizationKey = "$Handicraft"; 
+	    Level = 0; 
+	    BonusItemNames = array {"Iron", "Pinewood"};
+	};
+
+	Crest = 1;
+	Model = 110;
+	VoiceType = 1;
+	ModelTexture = 1;
+	Portrait = 1;
+	Religion = "Catholic"; // Catholic, Protestant or NoReligion see ReligionSettings.oc
+
+	HeadTextureNameDiff = "MaleHead07_DIFF";
+	HeadTextureNameNorm = "MaleHead07_norm";
+	HeadTextureNameMask = "MaleHead07_MASK";
+	BodyTextureNameDiff = "Commoner4_male_DIFF";
+	BodyTextureNameNorm = "Commoner4_male_NORM";
+	BodyTextureNameMask = "Commoner4_male_MASK";
+    };
+};

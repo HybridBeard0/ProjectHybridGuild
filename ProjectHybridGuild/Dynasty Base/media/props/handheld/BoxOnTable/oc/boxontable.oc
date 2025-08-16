@@ -1,0 +1,14 @@
+boxontable extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "boxontable";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Foot";
+		AttachChildNode = "Snap";		
+	};
+	EditorName = "BoxOnTable";
+	EditorIcon = "media/UserInterface/PropIcons/Longsword.png";
+	EditorCategory = 3;
+}

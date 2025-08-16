@@ -1,0 +1,10 @@
+interiorprop_deco_sackwheatflour extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "interiorprop_deco_sackwheatflour";
+	};
+	EditorName = "InteriorProp Deco Sackwheatflour";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

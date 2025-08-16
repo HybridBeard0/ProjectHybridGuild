@@ -1,0 +1,74 @@
+G3DefaultEnvironment extends G3EnvironmentDescriptions
+{
+	Environments = map
+	{
+		"Default" = G3OutsideEnvironment
+		{
+			WorldName = "New";
+			RegionName = "Region_01";
+		};
+	};
+	
+	TerrainTextureSets = map
+	{
+		"Default" = G3TerrainTextureSet
+		{
+			TextureDirectory = "media/G3Terrain/Sets";
+			DetailHint1 = "Rich Ground";
+			DetailHint2 = "Normal Street";
+			DetailHint3 = "Old Street";
+			DetailHint4 = "Country Road";
+			GroundHint1 = "Grass";
+			GroundHint2 = "Mixed Grass";
+			GroundHint3 = "Earth/Mud";
+			GroundHint4 = "Stone";
+			GroundHint5 = "Stone/Mud";
+			GroundHint6 = "Stone/Mud";
+		};
+		
+		"Urban" = G3TerrainTextureSet
+		{
+			TextureDirectory = "media/G3Terrain/Sets";
+			DetailHint1 = "Urban Ground";
+			DetailHint2 = "Normal Street";
+			DetailHint3 = "Old Street";
+			DetailHint4 = "Country Road";
+			GroundHint1 = "Grass";
+			GroundHint2 = "Mixed Grass";
+			GroundHint3 = "Earth/Mud";
+			GroundHint4 = "Stone";
+			GroundHint5 = "Stone/Mud";
+			GroundHint6 = "Stone/Mud";
+		};
+		
+		"Heligo" = G3TerrainTextureSet
+		{
+			TextureDirectory = "media/G3Terrain/Sets";
+			DetailHint1 = "Urban Ground";
+			DetailHint2 = "Normal Street";
+			DetailHint3 = "Old Street";
+			DetailHint4 = "Country Road";
+			GroundHint1 = "Grass";
+			GroundHint2 = "Mixed Grass";
+			GroundHint3 = "Earth/Mud";
+			GroundHint4 = "Stone";
+			GroundHint5 = "Stone/Mud";
+			GroundHint6 = "Stone/Mud";
+		};
+		
+		"Elegant" = G3TerrainTextureSet
+		{
+			TextureDirectory = "media/G3Terrain/Sets";
+			DetailHint1 = "Urban Ground";
+			DetailHint2 = "Normal Street";
+			DetailHint3 = "Old Street";
+			DetailHint4 = "Country Road";
+			GroundHint1 = "Grass";
+			GroundHint2 = "Mixed Grass";
+			GroundHint3 = "Earth/Mud";
+			GroundHint4 = "Stone";
+			GroundHint5 = "Stone/Mud";
+			GroundHint6 = "Stone/Mud";
+		};
+	};
+};

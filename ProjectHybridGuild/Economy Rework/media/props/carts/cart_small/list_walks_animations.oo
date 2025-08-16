@@ -1,0 +1,30 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1490206249;
+			Name = "idle1";
+			AnimationName = "idle1";
+		},
+		AnimationDesc
+		{
+			ID = 1436205262;
+			Name = "walk1";
+			AnimationName = "walk1";
+			Speed = 2.000;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					IsRequired = true;
+					SoundEvent = 1077;
+					EventLoops = true;
+					FadeStart = 200.000;
+					FadeOut = 1700.000;
+				},
+			);
+		},
+	);
+}

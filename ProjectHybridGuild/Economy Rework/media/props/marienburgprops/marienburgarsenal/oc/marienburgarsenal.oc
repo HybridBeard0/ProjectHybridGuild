@@ -1,0 +1,10 @@
+marienburgarsenal extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "marienburgarsenal";
+	};
+	EditorName = "marienburgarsenal";
+	EditorIcon = "media/UserInterface/PropIcons/Kiosque01.png";
+	EditorCategory = 5;		
+}

@@ -1,0 +1,11 @@
+ActorDesc
+{
+	Visual = "neighbor_selection_RED";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#neighbor_selection_RED/list_idles_animations,
+		);
+	};
+}

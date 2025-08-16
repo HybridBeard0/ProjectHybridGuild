@@ -1,0 +1,210 @@
+fishingspot extends Building
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "fishing_spot_01";
+		
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc {
+					Name = "streetconnection";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "enter";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "exit";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+				},
+				SnapPointDesc
+				{
+					Name = "employee00"; // fishing
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "idle";
+							Animation = "SitFadeIn";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "sit_idle1";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "idle";
+							Animation = "SitFadeOut";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "SitFadeIn";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "work";
+							Animation = "fishing_idle1";
+							Prop = "fishingrod/fishingrod";
+							Repeat = 10;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "SitFadeOut";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee01"; // fishing
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "idle";
+							Animation = "SitFadeIn";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "sit_idle1";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "idle";
+							Animation = "SitFadeOut";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "SitFadeIn";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "work";
+							Animation = "fishing_idle1";
+							Prop = "fishingrod/fishingrod";
+							Repeat = 10;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "SitFadeOut";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee02"; // drying fish
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "work";
+							Animation = "CleaningFish";
+							Repeat = 10;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee03"; // looking into the water
+					Position = ( -15.0, -50.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "work";
+							Animation = "tailor1";
+							Repeat = 10;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "gofishing1"; // fishing
+					Position = ( 48.0, 160.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 135.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "GoFishing";
+							Animation = "SitFadeIn";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "GoFishing";
+							Animation = "fishing_idle1";
+							Prop = "fishingrod/fishingrod";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "GoFishing";
+							Animation = "SitFadeOut";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "gofishing2"; // fishing
+					Position = ( 48.0, 120.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 135.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "GoFishing";
+							Animation = "SitFadeIn";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "GoFishing";
+							Animation = "fishing_idle1";
+							Prop = "fishingrod/fishingrod";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "GoFishing";
+							Animation = "SitFadeOut";
+						},
+					};
+				},
+			};
+		};
+	};
+	EditorName = "Fishing Spot";
+	EditorIcon = "media/UserInterface/Icons/BuildingImages/Other/FishingSpot.png";
+	EditorCategory = 3;			
+}

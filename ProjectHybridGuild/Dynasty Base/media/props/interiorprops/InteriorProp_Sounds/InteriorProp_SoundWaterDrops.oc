@@ -1,0 +1,10 @@
+InteriorProp_SoundWaterDrops extends InteriorProp_Sounds/InteriorProp_SoundBase
+{
+	SoundSettings = G3SoundSettings {
+		EditorName = "WaterDrops";
+		MinInterval = 3.0;
+		MaxInterval = 4.0;
+	};
+
+	EditorName = "Interior sound_prop waterdrops";
+}

@@ -1,0 +1,13 @@
+G3ActorDesc
+{
+	Visual = "effect_poison";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#Effect_Poison/list_idles_animations,
+		);
+	};
+	AttachType = "AttachToNode";
+	AttachChildNode = "Snap_Particles";
+}

@@ -1,0 +1,10 @@
+wheat_field_2X3 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "wheat_field_2X3";
+	};
+	EditorName = "wheat_field_2X3";
+	EditorIcon = "media/UserInterface/PropIcons/wheat_field_2X3.png";
+	EditorCategory = 1;		
+}

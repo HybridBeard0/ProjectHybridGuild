@@ -1,0 +1,11 @@
+ActorDesc
+{
+	Visual = "building_broken_large";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#buildingbrokenlarge/list_walks_animations,
+		);
+	};
+}

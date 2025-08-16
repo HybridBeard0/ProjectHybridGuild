@@ -1,0 +1,9 @@
+interior_arsenal extends InteriorScene
+{
+	static var Description = #Interior_arsenal/interior_arsenal_anim_desc;
+	
+	EditorName = "Interior arsenal";
+	EditorIcon = "media/UserInterface/BusinessIcons/Other/Arsenal.png";
+	EditorCategory = 0;	
+
+}

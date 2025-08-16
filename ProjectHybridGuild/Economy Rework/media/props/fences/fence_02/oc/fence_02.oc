@@ -1,0 +1,10 @@
+fence_02 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "fence_02";
+	};
+	EditorName = "Fence02";
+	EditorIcon = "media/UserInterface/PropIcons/Fence02.png";
+	EditorCategory = 3;		
+}

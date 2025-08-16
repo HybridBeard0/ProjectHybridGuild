@@ -1,0 +1,10 @@
+trademarketland extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "trademarketland";
+	};
+	EditorName = "trademarketland";
+	EditorIcon = "media/UserInterface/PropIcons/trademarketland.png";
+	EditorCategory = 9;
+}
