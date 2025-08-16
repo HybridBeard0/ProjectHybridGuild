@@ -71567,46 +71567,6 @@ LocDirectData
 		},
 		LocDirectEntry
 		{
-			Key = "$gui.UICategory.Artifact";
-			Text = "Consumables";
-		},
-		LocDirectEntry
-		{
-			Key = "$gui.UICategory.Building";
-			Text = "Building";
-		},
-		LocDirectEntry
-		{
-			Key = "$gui.UICategory.Diplomacy";
-			Text = "Diplomacy & politics";
-		},
-		LocDirectEntry
-		{
-			Key = "$gui.UICategory.Family";
-			Text = "Dynasty & businesses";
-		},
-		LocDirectEntry
-		{
-			Key = "$gui.UICategory.Fighting";
-			Text = "Aggression & protection";
-		},
-		LocDirectEntry
-		{
-			Key = "$gui.UICategory.Rogue";
-			Text = "Dubious & covert";
-		},
-		LocDirectEntry
-		{
-			Key = "$gui.UICategory.SecretSociety";
-			Text = "Guild";
-		},
-		LocDirectEntry
-		{
-			Key = "$gui.UICategory.Urgent";
-			Text = "Urgent & needs";
-		},
-		LocDirectEntry
-		{
 			Key = "$gui.unload";
 			Text = "Unload";
 		},
@@ -84059,11 +84019,6 @@ LocDirectData
 		},
 		LocDirectEntry
 		{
-			Key = "$gui.UICategory.Covert";
-			Text = "Covert";
-		},
-		LocDirectEntry
-		{
 			Key = "$feedback.block";
 			Text = "Blocked!";
 		},
@@ -84866,11 +84821,6 @@ LocDirectData
 		{
 			Key = "$action.DemotivatedWorkers";
 			Text = "Unmotivated workers";
-		},
-		LocDirectEntry
-		{
-			Key = "$gui.UICategory.Business";
-			Text = "Business";
 		},
 		LocDirectEntry
 		{
@@ -100045,16 +99995,6 @@ LocDirectData
 		{
 			Key = "$gui.Religion.NoReligionDesc2";
 			Text = "Secular Christians believe in God, but follow a more secular way of faith. They try not to interfere in the struggles between the Catholics and the Protestants.";
-		},
-		LocDirectEntry
-		{
-			Key = "$gui.UICategory.Religion";
-			Text = "Religion";
-		},
-		LocDirectEntry
-		{
-			Key = "$gui.UICategory.Romance";
-			Text = "Romances and liaisons";
 		},
 		LocDirectEntry
 		{
