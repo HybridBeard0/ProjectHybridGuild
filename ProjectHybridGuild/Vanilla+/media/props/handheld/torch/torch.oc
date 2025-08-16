@@ -1,4 +1,0 @@
-torch extends G3PropsInstance
-{
-	static var Description = #torch/torch_desc;
-};

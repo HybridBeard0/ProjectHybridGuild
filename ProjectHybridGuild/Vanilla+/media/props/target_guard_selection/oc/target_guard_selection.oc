@@ -1,9 +1,0 @@
-target_guard_selection extends G3Actor
-{
-	static var Description = #target_guard_selection/target_guard_selection_desc;
-
-	function onInit()
-	{
-		this.playAnimationByName("idle1");
-	}
-};
