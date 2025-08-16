@@ -1,5 +1,0 @@
-teleport_hole extends G3Actor
-{
-	static var Description = #teleport_hole/teleport_hole_desc;
-
-};
