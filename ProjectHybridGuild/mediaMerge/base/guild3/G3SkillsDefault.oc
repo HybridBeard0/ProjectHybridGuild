@@ -1658,7 +1658,7 @@ G3SkillsDefault extends G3SkillsContainer
 					{
 						UnlockEffect
 						{
-							Names = array { "ThiefHideout" };
+							Names = array { "ThiefHideout", "Heist" };
 							Level = 3;
 						},
 						ModifierEffect
@@ -2027,7 +2027,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array { "CollectProtectionMoney" };
+							Names = array { "CollectProtectionMoney", "TollRoad", "HiredGuardBuilding" };
 						},
 						ModifierEffect
 						{
@@ -2061,7 +2061,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array {"Intervene"};
+							Names = array {"Intervene", "FeudAttack", "FeudGuard"};
 						}
 					};
 				};
