@@ -33604,6 +33604,11 @@ LocDirectData
 		},
 		LocDirectEntry
 		{
+			Key = "$gui.marketCategory.BlackMarket";
+			Text = "Magasin Noir";
+		},
+		LocDirectEntry
+		{
 			Key = "$help.Products.Trinkets";
 			Text = "Babioles";
 		},
