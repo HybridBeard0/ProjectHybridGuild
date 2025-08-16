@@ -71867,11 +71867,6 @@ LocDirectData
 		},
 		LocDirectEntry
 		{
-			Key = "$help.Resources.Blackmarket";
-			Text = "Black market";
-		},
-		LocDirectEntry
-		{
 			Key = "$help.Resources.Cemetary";
 			Text = "Cemetery";
 		},
