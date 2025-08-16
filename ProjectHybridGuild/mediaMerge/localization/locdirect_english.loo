@@ -26147,7 +26147,7 @@ LocDirectData
 		LocDirectEntry
 		{
 			Key = "$CollectProtectionMoneyDesc";
-			Text = "You can use this to send your lansquenet to a business and make its owner aware that your protection is not for nothing. If they pay, then any rogue around will know they should stay well away from the building.";
+			Text = "You can use this to send your robber to a business and make its owner aware that your protection is not for nothing. If they pay, then any rogue around will know they should stay well away from the building.";
 		},
 		LocDirectEntry
 		{
@@ -33042,17 +33042,17 @@ LocDirectData
 		LocDirectEntry
 		{
 			Key = "$gui.marketCategory.Food";
-			Text = "Food and beverages";
+			Text = "Food & Beverages";
 		},
 		LocDirectEntry
 		{
 			Key = "$gui.marketCategory.WeaponArmor";
-			Text = "Weapons and armour";
+			Text = "Weapons & Armour";
 		},
 		LocDirectEntry
 		{
 			Key = "$gui.marketCategory.Clothing";
-			Text = "Clothing";
+			Text = "Clothing & Jewellery";
 		},
 		LocDirectEntry
 		{
@@ -57461,21 +57461,29 @@ LocDirectData
 		{
 			Key = "$Marijuana";
 			Text = "Marijuana";
+			Key = "$action.FeudAttack";
+			Text = "Search and fight feuding characters";
 		},
 		LocDirectEntry
 		{
 			Key = "$MarijuanaDesc";
 			Text = "These flowering buds, known as marijuana, are smoked for their calming and mind-altering effects. Cultivated for both ritual and recreation.";
+			Key = "$action.FeudAttackDesc";
+			Text = "The character will carry out attacks targeting both employees and family members of a rival household, prioritizing capable opponents to strike at the heart of their power in an ongoing feud.";
 		},
 		LocDirectEntry
 		{
 			Key = "$Joint";
 			Text = "Rolled Marijuana";
+			Key = "$action.FeudGuard";
+			Text = "Guard against feuding characters";
 		},
 		LocDirectEntry
 		{
 			Key = "$SmokeJoint";
 			Text = "Smoke Marijuana";
+			Key = "$action.FeudGuardDesc";
+			Text = "The character will guard a designated area from attacks by a feuding family, defending it against both their hired employees and family members.";
 		},
 		LocDirectEntry
 		{
@@ -116044,22 +116052,30 @@ LocDirectData
 		{
 			Key = "$gui.Options.hungarian";
 			Text = "Magyar (Közösségi fordítás)";
+			Key = "$action.HiredGuardBuilding";
+			Text = "Guard building";
 		},
 // *** EggMod ***
 		LocDirectEntry
 		{
 			Key = "$Chicken";
 			Text = "Hen";
+			Key = "$action.HiredGuardBuildingDesc";
+			Text = "The character will guard and defend a building against attacks and acts of sabotage in exchange for payment.";
 		},
 		LocDirectEntry
 		{
 			Key = "$ChickenDesc";
 			Text = "This fowl is raised for its eggs and meat.";
+			Key = "$action.HiredGuardNotPaid";
+			Text = "Turned away paid guards";
 		},
 		LocDirectEntry
 		{
 			Key = "$EggBasket";
 			Text = "Eggs";
+			Key = "$action.HiredGuardPaid";
+			Text = "Hired paid guard";
 		},
 		LocDirectEntry
 		{
@@ -116075,46 +116091,64 @@ LocDirectData
 		{
 			Key = "$EggDesc";
 			Text = "Boiled eggs are an important food and are enjoyed by people of all social classes.";
+			Key = "$action.Heist";
+			Text = "Steal from dynasty's treasury";
 		},
 		LocDirectEntry
 		{
 			Key = "$FriedChicken";
 			Text = "Fried chicken";
+			Key = "$action.HeistDesc";
+			Text = "Stealing from a dynasty’s treasury is a daring and treacherous act, involving the secret diversion of coins, jewels, or resources meant for the family’s use. Such theft not only lines the pockets of the thief but also drains the dynasty’s wealth, potentially crippling their ability to fund projects, maintain influence, or defend their power.";
 		},
 		LocDirectEntry
 		{
 			Key = "$FriedChickenDesc";
 			Text = "Fried chicken tastes rather bland, but it fills the stomach.";
+			Key = "$action.Heist.FailureTargetHeadline";
+			Text = "Someone has tried to steal from your treasury!";
 		},
 		LocDirectEntry
 		{
 			Key = "$ChickenCompanion";
 			Text = "Tame chicken";
+			Key = "$action.Heist.FailureTarget";
+			Text = "Someone tried to break into your %BuildingTarget% building, but luckily they were disturbed before they could steal anything.";
 		},
 		LocDirectEntry
 		{
 			Key = "$ChickenCompanionDesc";
 			Text = "This chicken was lovingly raised by a child. It now follows them wherever it goes.";
+			Key = "$action.Heist.SuccessTargetHeadline";
+			Text = "Someone has stolen from your treasury!";
 		},
 		LocDirectEntry
 		{
 			Key = "$action.HatchChicken";
 			Text = "Hatch a chicken";
+			Key = "$action.Heist.SuccessTarget";
+			Text = "Someone broke into your %BuildingTarget% building. You'd better go and see what has been stolen!";
 		},
 		LocDirectEntry
 		{
 			Key = "$action.HatchChickenDesc";
 			Text = "You can try to hatch a tame chicken out of an egg. But you need to do it right and be patient. Can you do that?";
+			Key = "$action.MusicBoostBusiness";
+			Text = "Play music inside business";
 		},
 		LocDirectEntry
 		{
 			Key = "$action.HandOverItem";
 			Text = "Hand over item";
+			Key = "$action.MusicBoostBusinessDesc";
+			Text = "Playing music inside a business helps create a pleasant and inviting atmosphere, lifting the mood of patrons and encouraging them to stay longer, feel more at ease, and return in the future—subtly enhancing their overall satisfaction.";
 		},
 		LocDirectEntry
 		{
 			Key = "$action.HandOverItemDesc";
 			Text = "You can hand over the selected item to another member of your dynasty. Make sure the person has enough inventory space!\n\nNote: The handover will not work in case the item is equipped!";
+			Key = "$effect.MusicBoostBusiness";
+			Text = "Minstrel performance - increased customer satisfaction";
 		},
 		LocDirectEntry
 		{
@@ -116130,11 +116164,15 @@ LocDirectData
 		{
 			Key = "$iron.buff.wellRested.body";
 			Text = "%character% is well rested and has improved productivity and perception";
+			Key = "$action.TollRoad";
+			Text = "Toll transporters";
 		},
 		LocDirectEntry
 		{
 			Key = "$ui.messageCategory.Characters";
 			Text = "Characters";
+			Key = "$action.TollRoadDesc";
+			Text = "Tolling transporters on the road is a bold and deceptive act, involving the imposition of fake fees on passing transports under the pretense of authority.";
 		},
 	);
 };
