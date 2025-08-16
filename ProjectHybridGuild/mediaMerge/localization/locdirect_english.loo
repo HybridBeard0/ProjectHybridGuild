@@ -114212,16 +114212,6 @@ LocDirectData
 		},
 		LocDirectEntry
 		{
-			Key = "$MoAClothes";
-			Text = "Master Leather Armor";
-		},
-		LocDirectEntry
-		{
-			Key = "$MoAClothesDesc";
-			Text = "This is the leather armor suit of an honorable Master of the Arsenal.";
-		},
-		LocDirectEntry
-		{
 			Key = "$profession.Jailor";
 			Text = "Jailor";
 		},

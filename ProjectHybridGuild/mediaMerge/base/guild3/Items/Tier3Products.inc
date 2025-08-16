@@ -1801,3 +1801,32 @@
 		RequiredBuilding = array { "Smithy", 1 }
 	};
 };
+"Tobacco" = G3Item
+{
+	Type = 1;
+	SubType = 8;
+
+	DisplayName = "$Tobacco";
+	Description = "$TobaccoDesc";
+	DisplayCategories = array("All", "Components");
+
+	Production = 1;
+	BuildTime = 100.0;
+	Price = 90;
+	Tier = 3;
+	SocialClass = 1;
+	
+	Requirements = array
+	{
+		comp1 extends G3ItemComponent
+		{
+			Name = "BucketOfWater";
+			Number = 5;
+		};
+	};
+	
+	RequiredBuildings = array
+	{
+		RequiredBuilding = array { "Farm", 2 }
+	};
+};
