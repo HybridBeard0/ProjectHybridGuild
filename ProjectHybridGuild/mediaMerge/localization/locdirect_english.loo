@@ -91614,41 +91614,6 @@ LocDirectData
 		},
 		LocDirectEntry
 		{
-			Key = "$gui.marketCategory.All";
-			Text = "All goods";
-		},
-		LocDirectEntry
-		{
-			Key = "$gui.marketCategory.Important";
-			Text = "All important goods";
-		},
-		LocDirectEntry
-		{
-			Key = "$gui.marketCategory.RawMaterial";
-			Text = "Raw materials";
-		},
-		LocDirectEntry
-		{
-			Key = "$gui.marketCategory.Food";
-			Text = "Food and beverages";
-		},
-		LocDirectEntry
-		{
-			Key = "$gui.marketCategory.WeaponArmor";
-			Text = "Weapons and armour";
-		},
-		LocDirectEntry
-		{
-			Key = "$gui.marketCategory.Clothing";
-			Text = "Clothing";
-		},
-		LocDirectEntry
-		{
-			Key = "$gui.marketCategory.Luxury";
-			Text = "Luxury items";
-		},
-		LocDirectEntry
-		{
 			Key = "$gui.LOD.tutorial";
 			Text = "Tutorial";
 		},
@@ -92159,11 +92124,6 @@ LocDirectData
 		},
 		LocDirectEntry
 		{
-			Key = "$gui.marketCategory.Relevant";
-			Text = "Relevant goods";
-		},
-		LocDirectEntry
-		{
 			Key = "$gui.economies";
 			Text = "Markets";
 		},
@@ -92171,31 +92131,6 @@ LocDirectData
 		{
 			Key = "$church.NotreDame";
 			Text = "Notre Dame de Paris";
-		},
-		LocDirectEntry
-		{
-			Key = "$gui.marketCategory.Trinkets";
-			Text = "Trinkets";
-		},
-		LocDirectEntry
-		{
-			Key = "$gui.marketCategory.Tinctures";
-			Text = "Tinctures";
-		},
-		LocDirectEntry
-		{
-			Key = "$gui.marketCategory.Components";
-			Text = "Intermediate";
-		},
-		LocDirectEntry
-		{
-			Key = "$gui.marketCategory.Transportation";
-			Text = "Transport";
-		},
-		LocDirectEntry
-		{
-			Key = "$gui.marketCategory.Livestock";
-			Text = "Livestock";
 		},
 		LocDirectEntry
 		{
