@@ -1,0 +1,21 @@
+interiorprop_bookofdynasties extends G3PropsInstance
+{
+	static var Description = G3PropDesc
+	{
+		Visual = "interiorprop_bookofdynasties";
+		
+		Interaction = G3ActorInteraction 
+		{
+			Name = "$props.name.BookOfDynasties";
+			TooltipText = "$action.OpenBookOfDynasties";
+			TooltipIcon = "MoreInfos";
+			UiEvent = "ToggleDynastyWindow";
+		};
+	};
+	
+	Interactable = true;
+	
+	EditorName = "Interiorprop BookofDynasties";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

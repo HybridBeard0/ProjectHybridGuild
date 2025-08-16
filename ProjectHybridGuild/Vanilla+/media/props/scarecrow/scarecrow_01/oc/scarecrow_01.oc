@@ -1,0 +1,23 @@
+scarecrow_01 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "scarecrow";
+			AnimationArray = AnimationListArray
+			{
+			AnimationLists = array
+			(
+				#scarecrow_01/scarecrow_animationlist,
+			);
+		};
+	};
+	
+	function onSpawn()
+	{
+		this.playAnimationByName("Idle");
+	}
+	
+	EditorName = "scarecrow";
+	EditorIcon = "media/UserInterface/PropIcons/sacrecrow.png";
+	EditorCategory = 3;		
+}

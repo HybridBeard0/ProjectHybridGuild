@@ -1,0 +1,15 @@
+base/standardg3characterdesc
+{
+	Visual = "bull1";
+	WalkSpeed = 60;
+	TrotSpeed = 120;
+	RunSpeed = 300;
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#bulls/list_idles_animations,
+			#bulls/list_walks_animations,
+		);
+	};
+}

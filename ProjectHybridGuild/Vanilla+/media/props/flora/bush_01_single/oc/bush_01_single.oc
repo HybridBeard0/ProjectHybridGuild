@@ -1,0 +1,11 @@
+bush_01_single extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "bush_01_single";
+		AttachType = "AttachToNode";
+	};
+	EditorName = "Bush01 (single)";
+	EditorIcon = "media/UserInterface/PropIcons/Bush01single.png";
+	EditorCategory = 1;		
+}

@@ -1,0 +1,230 @@
+thiefhideout extends Building
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "thiefhideout";
+		
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc {
+					Name = "streetconnection";
+					Position = ( 70.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "enter";
+					Position = ( 160.0, 440.0, 10.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+				},
+				SnapPointDesc {
+					Name = "exit";
+					Position = ( 160.0, 440.0, 10.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+
+				SnapPointDesc {
+					Name = "master01";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Master"; // actions: OverseeWorkers, WhipTransporters, MotivateWorkers, Smear, Commend
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "master02";
+					Position = ( 135.0, 350.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 160.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Master"; // actions: OverseeWorkers, WhipTransporters, MotivateWorkers, Smear, Commend
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "master03";
+					Position = ( 40.0, 300.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 170.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Master"; // actions: OverseeWorkers, WhipTransporters, MotivateWorkers, Smear, Commend
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "artefact01";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Artefact"; // actions: ApplyPowderOfHygeia, UsePestAway, UseStrongDoorLatch, ApplyMuralPainting, ApplySlateTile, FreemasonsGift
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "artefact02";
+					Position = ( -95.0, 380.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 270.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Artefact"; // actions: ApplyPowderOfHygeia, UsePestAway, UseStrongDoorLatch, ApplyMuralPainting, ApplySlateTile, FreemasonsGift
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "artefact03";
+					Position = ( 265.0, 460.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 210.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Artefact"; // actions: ApplyPowderOfHygeia, UsePestAway, UseStrongDoorLatch, ApplyMuralPainting, ApplySlateTile, FreemasonsGift
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "intruder01";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Intruder"; // actions: AuditBooks, Vandalize, CatchRats, RaidTheKitchens, Sabotage
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "intruder02";
+					Position = ( 260.0, 220.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 280.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Intruder"; // actions: AuditBooks, Vandalize, CatchRats, RaidTheKitchens, Sabotage
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "raid01";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Intruder"; // actions: AuditBooks, Vandalize, CatchRats, RaidTheKitchens, Sabotage
+						},
+					};
+				},
+
+				SnapPointDesc
+				{
+					Name = "CollectProtectionMoney";
+					Position = ( 130.0, 30.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 230.0 );
+				},
+				
+				SnapPointDesc
+				{
+					Name = "employee00";
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "idle";
+							Animation = "idle_sneak1";
+							Repeat = 3;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee01";
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "idle";
+							Animation = "idle_sneak1";
+							Repeat = 3;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee02";
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "idle";
+							Animation = "idle_sneak1";
+							Repeat = 3;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee03";
+					Level = 2;
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "idle";
+							Animation = "idle_sneak1";
+							Repeat = 3;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee04";
+					Level = 3;
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "idle";
+							Animation = "idle_sneak1";
+							Repeat = 3;
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee05";
+					Position = ( 30.0, 400.0, 10.0 );
+					Rotation = ( 0.0, 0.0, 90.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "idle";
+							Animation = "idle_sneak1";
+							Repeat = 3;
+						},
+					};
+				},
+			};
+		};
+	};
+	
+	EditorName = "Thief Hideout";
+	EditorIcon = "media/UserInterface/Icons/BuildingImages/Businesses/Thiefhideout1.png";
+	EditorCategory = 1;	
+}

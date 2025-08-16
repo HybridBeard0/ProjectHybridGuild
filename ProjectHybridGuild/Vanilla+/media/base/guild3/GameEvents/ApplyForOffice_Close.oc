@@ -1,0 +1,6 @@
+ApplyForOffice_Close extends GameEventApplyForOfficeClose
+{
+	Title = "Vote for an office";
+	Public = true;
+	Political = true;
+};

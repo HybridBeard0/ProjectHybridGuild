@@ -1,0 +1,11 @@
+/*wheat_mature extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "wheat_mature";
+	};
+	EditorName = "Wheat_Single";
+	EditorIcon = "media/UserInterface/PropIcons/Wheat_Single.png";
+	EditorCategory = 1;		
+}
+*/

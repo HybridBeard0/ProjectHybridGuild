@@ -1,0 +1,37 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1480436414;
+			Name = "Idle";
+			AnimationName = "Idle";
+			Looping = true;
+			Triggers = array
+			(
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "dummy_candle_01";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "dummy_candle_02";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "dummy_candle_03";
+				},
+			);
+		},
+	);
+}

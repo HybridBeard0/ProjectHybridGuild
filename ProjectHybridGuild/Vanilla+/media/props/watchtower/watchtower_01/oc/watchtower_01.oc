@@ -1,0 +1,10 @@
+watchtower_01 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "watchtower_01";
+	};
+	EditorName = "Watchtower01";
+	EditorIcon = "media/UserInterface/PropIcons/Watchtower01.png";
+	EditorCategory = 4;		
+}

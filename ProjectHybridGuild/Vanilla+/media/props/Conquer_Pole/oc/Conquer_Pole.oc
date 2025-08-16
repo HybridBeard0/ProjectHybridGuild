@@ -1,0 +1,10 @@
+Conquer_Pole extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "Conquer_Pole";
+	};
+	EditorName = "Conquer_Pole";
+	EditorIcon = "media/UserInterface/PropIcons/Conquer_Pole.png";
+	EditorCategory = 3;		
+}

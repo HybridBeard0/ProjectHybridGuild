@@ -1,0 +1,10 @@
+baseplate_decal_02 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "baseplate_decal_02";
+	};
+	EditorName = "baseplate_decal_02";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 2;		
+}

@@ -1,0 +1,20 @@
+interiorprop_abacus extends G3PropsInstance
+{
+	static var Description = G3PropDesc
+	{
+		Visual = "interiorprop_abacus";
+		
+		Interaction = G3ActorInteraction {
+			Name = "$WindowTitleSkillTree";
+			TooltipText = "$action.SkillTree";
+			TooltipIcon = "MoreInfos";
+			UiEvent = "ToggleSkillTree";
+		};
+	};
+
+	Interactable = true;
+	
+	EditorName = "Interiorprop Abacus";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

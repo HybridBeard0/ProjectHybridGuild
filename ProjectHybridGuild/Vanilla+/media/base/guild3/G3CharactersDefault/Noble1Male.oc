@@ -1,0 +1,69 @@
+Noble1Male extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = false;
+	MiddleClass = false;
+	Rich = true;
+	
+	Male = true;
+	Player = true;
+	Employee = false;
+	Profession = false;
+
+	LowResCharacter = "noble1";
+	HighResCharacter = "noble1";
+	
+	HairTexturesDiff= array
+	{
+		"Noble1Male_Hair_LOD01_diff",
+		"Noble1Male_Hair_02_LOD01_diff",		
+		"Noble1Male_Hair_03_LOD01_diff",
+		"Noble1Male_Hair_04_LOD01_diff",
+		"Noble1Male_Hair_05_LOD01_diff",
+		"Noble1Male_Hair_06_LOD01_diff"
+	};
+	HairTexturesNorm= array
+	{
+		"Noble1Male_Hair_LOD01_NRM",
+		"Noble1Male_Hair_LOD01_NRM",		
+		"Noble1Male_Hair_LOD01_NRM",
+		"Noble1Male_Hair_LOD01_NRM",
+		"Noble1Male_Hair_LOD01_NRM",
+		"Noble1Male_Hair_LOD01_NRM"
+	};	
+	HairTexturesMask= array
+	{
+		"Noble1Male_Hair_LOD01_MASK",
+		"Noble1Male_Hair_LOD01_MASK",
+		"Noble1Male_Hair_LOD01_MASK",		
+		"Noble1Male_Hair_LOD01_MASK",
+		"Noble1Male_Hair_LOD01_MASK",
+		"Noble1Male_Hair_LOD01_MASK"
+	};	
+
+	
+	BodyTexturesDiff= array
+	{
+		"Noble1Male_diff",
+		"Noble1Male_diff",
+		"Noble1Male_diff",
+		"Noble1Male_diff",		
+	};
+	BodyTexturesNorm= array
+	{
+		"Noble1Male_NORM",
+		"Noble1Male_NORM",
+		"Noble1Male_NORM",
+		"Noble1Male_NORM"
+	};
+	BodyTexturesMask= array
+	{
+		"Noble1Male_MASK",
+		"Noble1Male_MASK",
+		"Noble1Male_MASK",
+		"Noble1Male_MASK"
+	};
+}

@@ -1,0 +1,5 @@
+RubinStaff extends G3Actor
+{
+	static var Description = #RubinStaff/RubinStaff_desc;
+
+};

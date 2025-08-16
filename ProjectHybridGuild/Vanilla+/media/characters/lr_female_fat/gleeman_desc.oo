@@ -1,0 +1,9 @@
+lr_female_fat/lr_female_fat_desc
+{
+	Visual = "gleeman_female_fat_game";
+	Poor = true;
+	MiddleClass = true;
+	Player = true;
+	Employee = true;
+	CustomCollisionRadius = 0.000;
+}

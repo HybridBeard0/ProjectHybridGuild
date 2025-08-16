@@ -1,0 +1,1677 @@
+G3BuildingNamesDefault extends G3BuildingNamesDatabase
+{
+	NamesByType = map
+	{
+		"Apothecary" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.ApothecaryLevel1,
+				$build.ApothecaryLevel2,
+				$build.ApothecaryLevel3
+			};
+			
+			Names = array
+			{
+				$build.ApothecaryName1,
+				$build.ApothecaryName2,
+				$build.ApothecaryName3,
+				$build.ApothecaryName4,
+				$build.ApothecaryName5,
+				$build.ApothecaryName6,
+				$build.ApothecaryName7,
+				$build.ApothecaryName8,
+				$build.ApothecaryName9,
+				$build.ApothecaryName10,
+				$build.ApothecaryName11,
+				$build.ApothecaryName12,
+				$build.ApothecaryName13,
+				$build.ApothecaryName14,
+				$build.ApothecaryName15,
+				$build.ApothecaryName16,
+				$build.ApothecaryName17,
+				$build.ApothecaryName18,
+				$build.ApothecaryName19,
+				$build.ApothecaryName20,
+				$build.ApothecaryName21,
+				$build.ApothecaryName22,
+				$build.ApothecaryName23,
+				$build.ApothecaryName24,
+				$build.ApothecaryName25,
+				$build.ApothecaryName26,
+				$build.ApothecaryName27,
+				$build.ApothecaryName28,
+				$build.ApothecaryName29,
+				$build.ApothecaryName30
+			};
+		};
+		
+		"AlchemistShop" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.AlchemistShopLevel1,
+				$build.AlchemistShopLevel2,
+				$build.AlchemistShopLevel3
+			};
+			
+			Names = array
+			{
+				$build.AlchemistShopName1,
+				$build.AlchemistShopName2,
+				$build.AlchemistShopName3,
+				$build.AlchemistShopName4,
+				$build.AlchemistShopName5,
+				$build.AlchemistShopName6,
+				$build.AlchemistShopName7,
+				$build.AlchemistShopName8,
+				$build.AlchemistShopName9,
+				$build.AlchemistShopName10,
+				$build.AlchemistShopName11,
+				$build.AlchemistShopName12,
+				$build.AlchemistShopName13,
+				$build.AlchemistShopName14,
+				$build.AlchemistShopName15,
+				$build.AlchemistShopName16,
+				$build.AlchemistShopName17,
+				$build.AlchemistShopName18,
+				$build.AlchemistShopName19,
+				$build.AlchemistShopName20,
+				$build.AlchemistShopName21,
+				$build.AlchemistShopName22,
+				$build.AlchemistShopName23,
+				$build.AlchemistShopName24,
+				$build.AlchemistShopName25,
+				$build.AlchemistShopName26,
+				$build.AlchemistShopName27,
+				$build.AlchemistShopName28,
+				$build.AlchemistShopName29,
+				$build.AlchemistShopName30
+			};
+		};
+		
+		"Artisan" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.ArtisanLevel1
+			};
+			
+			Names = array
+			{
+				$build.ArtisanName1,
+				$build.ArtisanName2,
+				$build.ArtisanName3,
+				$build.ArtisanName4,
+				$build.ArtisanName5,
+				$build.ArtisanName6,
+				$build.ArtisanName7,
+				$build.ArtisanName8,
+				$build.ArtisanName9,
+				$build.ArtisanName10,
+				$build.ArtisanName11,
+				$build.ArtisanName12,
+				$build.ArtisanName13,
+				$build.ArtisanName14,
+				$build.ArtisanName15,
+				$build.ArtisanName16,
+				$build.ArtisanName17,
+				$build.ArtisanName18,
+				$build.ArtisanName19,
+				$build.ArtisanName20,
+				$build.ArtisanName21,
+				$build.ArtisanName22,
+				$build.ArtisanName23,
+				$build.ArtisanName24,
+				$build.ArtisanName25,
+				$build.ArtisanName26,
+				$build.ArtisanName27,
+				$build.ArtisanName28,
+				$build.ArtisanName29,
+				$build.ArtisanName30
+			};
+		};
+
+		"Tinker" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.TinkerLevel1
+			};
+			
+			Names = array
+			{
+				$build.TinkerName1,
+				$build.TinkerName2,
+				$build.TinkerName3,
+				$build.TinkerName4,
+				$build.TinkerName5,
+				$build.TinkerName6,
+				$build.TinkerName7,
+				$build.TinkerName8,
+				$build.TinkerName9,
+				$build.TinkerName10,
+				$build.TinkerName11,
+				$build.TinkerName12,
+				$build.TinkerName13,
+				$build.TinkerName14,
+				$build.TinkerName15
+			};
+		};
+
+		"Masonery" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.MasoneryLevel1
+			};
+			
+			Names = array
+			{
+				$build.MasoneryName1,
+				$build.MasoneryName2,
+				$build.MasoneryName3,
+				$build.MasoneryName4,
+				$build.MasoneryName5,
+				$build.MasoneryName6,
+				$build.MasoneryName7,
+				$build.MasoneryName8,
+				$build.MasoneryName9,
+				$build.MasoneryName10,
+				$build.MasoneryName11,
+				$build.MasoneryName12,
+				$build.MasoneryName13,
+				$build.MasoneryName14,
+				$build.MasoneryName15
+			};
+		};
+
+		"Preacher" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.PreacherLevel1
+			};
+			
+			Names = array
+			{
+				$build.PreacherName1,
+				$build.PreacherName2,
+				$build.PreacherName3,
+				$build.PreacherName4,
+				$build.PreacherName5,
+				$build.PreacherName6,
+				$build.PreacherName7,
+				$build.PreacherName8,
+				$build.PreacherName9,
+				$build.PreacherName10,
+				$build.PreacherName11,
+				$build.PreacherName12,
+				$build.PreacherName13,
+				$build.PreacherName14,
+				$build.PreacherName15
+			};
+		};
+
+		"CityPreacher" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.CityPreacherLevel1
+			};
+			
+			Names = array
+			{
+				$build.CityPreacherName1,
+				$build.CityPreacherName2,
+				$build.CityPreacherName3,
+				$build.CityPreacherName4,
+				$build.CityPreacherName5,
+				$build.CityPreacherName6,
+				$build.CityPreacherName7,
+				$build.CityPreacherName8,
+				$build.CityPreacherName9,
+				$build.CityPreacherName10,
+				$build.CityPreacherName11,
+				$build.CityPreacherName12,
+				$build.CityPreacherName13,
+				$build.CityPreacherName14,
+				$build.CityPreacherName15
+			};
+		};
+
+		"Barber" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.BarberLevel1
+			};
+			
+			Names = array
+			{
+				$build.BarberName1,
+				$build.BarberName2,
+				$build.BarberName3,
+				$build.BarberName4,
+				$build.BarberName5,
+				$build.BarberName6,
+				$build.BarberName7,
+				$build.BarberName8,
+				$build.BarberName9,
+				$build.BarberName10,
+				$build.BarberName11,
+				$build.BarberName12,
+				$build.BarberName13,
+				$build.BarberName14,
+				$build.BarberName15
+			};
+		};
+				
+		"Bakery" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.BakeryLevel1,
+				$build.BakeryLevel2,
+				$build.BakeryLevel3
+			};
+			
+			Names = array
+			{
+				$build.BakeryName1,
+				$build.BakeryName2,
+				$build.BakeryName3,
+				$build.BakeryName4,
+				$build.BakeryName5,
+				$build.BakeryName6,
+				$build.BakeryName7,
+				$build.BakeryName8,
+				$build.BakeryName9,
+				$build.BakeryName10,
+				$build.BakeryName11,
+				$build.BakeryName12,
+				$build.BakeryName13,
+				$build.BakeryName14,
+				$build.BakeryName15,
+				$build.BakeryName16,
+				$build.BakeryName17,
+				$build.BakeryName18,
+				$build.BakeryName19,
+				$build.BakeryName20,
+				$build.BakeryName21,
+				$build.BakeryName22,
+				$build.BakeryName23,
+				$build.BakeryName24,
+				$build.BakeryName25,
+				$build.BakeryName26,
+				$build.BakeryName27,
+				$build.BakeryName28,
+				$build.BakeryName29,
+				$build.BakeryName30
+			};
+		};
+		
+		"Smithy" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.SmithyLevel1,
+				$build.SmithyLevel2,
+				$build.SmithyLevel3
+			};
+			
+			Names = array
+			{
+				$build.SmithyName1,
+				$build.SmithyName2,
+				$build.SmithyName3,
+				$build.SmithyName4,
+				$build.SmithyName5,
+				$build.SmithyName6,
+				$build.SmithyName7,
+				$build.SmithyName8,
+				$build.SmithyName9,
+				$build.SmithyName10,
+				$build.SmithyName11,
+				$build.SmithyName12,
+				$build.SmithyName13,
+				$build.SmithyName14,
+				$build.SmithyName15,
+				$build.SmithyName16,
+				$build.SmithyName17,
+				$build.SmithyName18,
+				$build.SmithyName19,
+				$build.SmithyName20,
+				$build.SmithyName21,
+				$build.SmithyName22,
+				$build.SmithyName23,
+				$build.SmithyName24,
+				$build.SmithyName25,
+				$build.SmithyName26,
+				$build.SmithyName27,
+				$build.SmithyName28,
+				$build.SmithyName29,
+				$build.SmithyName30
+			};
+		};
+		
+		"CarpenterShop" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.CarpenterShopLevel1,
+				$build.CarpenterShopLevel2,
+				$build.CarpenterShopLevel3
+			};
+			
+			Names = array
+			{
+				$build.CarpenterShopName1,
+				$build.CarpenterShopName2,
+				$build.CarpenterShopName3,
+				$build.CarpenterShopName4,
+				$build.CarpenterShopName5,
+				$build.CarpenterShopName6,
+				$build.CarpenterShopName7,
+				$build.CarpenterShopName8,
+				$build.CarpenterShopName9,
+				$build.CarpenterShopName10,
+				$build.CarpenterShopName11,
+				$build.CarpenterShopName12,
+				$build.CarpenterShopName13,
+				$build.CarpenterShopName14,
+				$build.CarpenterShopName15,
+				$build.CarpenterShopName16,
+				$build.CarpenterShopName17,
+				$build.CarpenterShopName18,
+				$build.CarpenterShopName19,
+				$build.CarpenterShopName20,
+				$build.CarpenterShopName21,
+				$build.CarpenterShopName22,
+				$build.CarpenterShopName23,
+				$build.CarpenterShopName24,
+				$build.CarpenterShopName25,
+				$build.CarpenterShopName26,
+				$build.CarpenterShopName27,
+				$build.CarpenterShopName28,
+				$build.CarpenterShopName29,
+				$build.CarpenterShopName30
+			};
+		};
+		
+		"Scholar" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.ScholarLevel1,
+				$build.ScholarLevel2,
+				$build.ScholarLevel3
+			};
+			
+			Names = array
+			{
+				$build.ScholarName1,
+				$build.ScholarName2,
+				$build.ScholarName3,
+				$build.ScholarName4,
+				$build.ScholarName5,
+				$build.ScholarName6,
+				$build.ScholarName7,
+				$build.ScholarName8,
+				$build.ScholarName9,
+				$build.ScholarName10,
+				$build.ScholarName11,
+				$build.ScholarName12,
+				$build.ScholarName13,
+				$build.ScholarName14,
+				$build.ScholarName15,
+				$build.ScholarName16,
+				$build.ScholarName17,
+				$build.ScholarName18,
+				$build.ScholarName19,
+				$build.ScholarName20,
+				$build.ScholarName21,
+				$build.ScholarName22,
+				$build.ScholarName23,
+				$build.ScholarName24,
+				$build.ScholarName25,
+				$build.ScholarName26,
+				$build.ScholarName27,
+				$build.ScholarName28,
+				$build.ScholarName29,
+				$build.ScholarName30
+			};
+		};
+		
+		"Farm" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.FarmLevel1,
+				$build.FarmLevel2,
+				$build.FarmLevel3
+			};
+			
+			Names = array
+			{
+				$build.FarmName1,
+				$build.FarmName2,
+				$build.FarmName3,
+				$build.FarmName4,
+				$build.FarmName5,
+				$build.FarmName6,
+				$build.FarmName7,
+				$build.FarmName8,
+				$build.FarmName9,
+				$build.FarmName10,
+				$build.FarmName11,
+				$build.FarmName12,
+				$build.FarmName13,
+				$build.FarmName14,
+				$build.FarmName15,
+				$build.FarmName16,
+				$build.FarmName17,
+				$build.FarmName18,
+				$build.FarmName19,
+				$build.FarmName20,
+				$build.FarmName21,
+				$build.FarmName22,
+				$build.FarmName23,
+				$build.FarmName24,
+				$build.FarmName25,
+				$build.FarmName26,
+				$build.FarmName27,
+				$build.FarmName28,
+				$build.FarmName29,
+				$build.FarmName30
+			};
+		};
+		
+		"GuardPost" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.GuardPostLevel1,
+				$build.GuardPostLevel2,
+				$build.GuardPostLevel3
+			};
+			
+			Names = array
+			{
+				$build.GuardPostName1,
+				$build.GuardPostName2,
+				$build.GuardPostName3,
+				$build.GuardPostName4,
+				$build.GuardPostName5,
+				$build.GuardPostName6,
+				$build.GuardPostName7,
+				$build.GuardPostName8,
+				$build.GuardPostName9,
+				$build.GuardPostName10,
+				$build.GuardPostName11,
+				$build.GuardPostName12,
+				$build.GuardPostName13,
+				$build.GuardPostName14,
+				$build.GuardPostName15,
+				$build.GuardPostName16,
+				$build.GuardPostName17,
+				$build.GuardPostName18,
+				$build.GuardPostName19,
+				$build.GuardPostName20,
+				$build.GuardPostName21,
+				$build.GuardPostName22,
+				$build.GuardPostName23,
+				$build.GuardPostName24,
+				$build.GuardPostName25,
+				$build.GuardPostName26,
+				$build.GuardPostName27,
+				$build.GuardPostName28,
+				$build.GuardPostName29,
+				$build.GuardPostName30
+			};
+		};
+		
+		"Inn" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.InnLevel1,
+				$build.InnLevel2,
+				$build.InnLevel3
+			};
+			
+			Names = array
+			{
+				$build.InnName1,
+				$build.InnName2,
+				$build.InnName3,
+				$build.InnName4,
+				$build.InnName5,
+				$build.InnName6,
+				$build.InnName7,
+				$build.InnName8,
+				$build.InnName9,
+				$build.InnName10,
+				$build.InnName11,
+				$build.InnName12,
+				$build.InnName13,
+				$build.InnName14,
+				$build.InnName15,
+				$build.InnName16,
+				$build.InnName17,
+				$build.InnName18,
+				$build.InnName19,
+				$build.InnName20,
+				$build.InnName21,
+				$build.InnName22,
+				$build.InnName23,
+				$build.InnName24,
+				$build.InnName25,
+				$build.InnName26,
+				$build.InnName27,
+				$build.InnName28,
+				$build.InnName29,
+				$build.InnName30
+			};
+		};
+				
+		"StoneMasonShop" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.StoneMasonShopLevel1,
+				$build.StoneMasonShopLevel2,
+				$build.StoneMasonShopLevel3
+			};
+			
+			Names = array
+			{
+				$build.StoneMasonShopName1,
+				$build.StoneMasonShopName2,
+				$build.StoneMasonShopName3,
+				$build.StoneMasonShopName4,
+				$build.StoneMasonShopName5,
+				$build.StoneMasonShopName6,
+				$build.StoneMasonShopName7,
+				$build.StoneMasonShopName8,
+				$build.StoneMasonShopName9,
+				$build.StoneMasonShopName10,
+				$build.StoneMasonShopName11,
+				$build.StoneMasonShopName12,
+				$build.StoneMasonShopName13,
+				$build.StoneMasonShopName14,
+				$build.StoneMasonShopName15,
+				$build.StoneMasonShopName16,
+				$build.StoneMasonShopName17,
+				$build.StoneMasonShopName18,
+				$build.StoneMasonShopName19,
+				$build.StoneMasonShopName20,
+				$build.StoneMasonShopName21,
+				$build.StoneMasonShopName22,
+				$build.StoneMasonShopName23,
+				$build.StoneMasonShopName24,
+				$build.StoneMasonShopName25,
+				$build.StoneMasonShopName26,
+				$build.StoneMasonShopName27,
+				$build.StoneMasonShopName28,
+				$build.StoneMasonShopName29,
+				$build.StoneMasonShopName30
+			};
+		};
+		
+		"TailorShop" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.TailorShopLevel1,
+				$build.TailorShopLevel2,
+				$build.TailorShopLevel3
+			};
+			
+			Names = array
+			{
+				$build.TailorShopName1,
+				$build.TailorShopName2,
+				$build.TailorShopName3,
+				$build.TailorShopName4,
+				$build.TailorShopName5,
+				$build.TailorShopName6,
+				$build.TailorShopName7,
+				$build.TailorShopName8,
+				$build.TailorShopName9,
+				$build.TailorShopName10,
+				$build.TailorShopName11,
+				$build.TailorShopName12,
+				$build.TailorShopName13,
+				$build.TailorShopName14,
+				$build.TailorShopName15,
+				$build.TailorShopName16,
+				$build.TailorShopName17,
+				$build.TailorShopName18,
+				$build.TailorShopName19,
+				$build.TailorShopName20,
+				$build.TailorShopName21,
+				$build.TailorShopName22,
+				$build.TailorShopName23,
+				$build.TailorShopName24,
+				$build.TailorShopName25,
+				$build.TailorShopName26,
+				$build.TailorShopName27,
+				$build.TailorShopName28,
+				$build.TailorShopName29,
+				$build.TailorShopName30
+			};
+		};
+		
+		"ThiefHideout" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.ThiefHideoutLevel1,
+				$build.ThiefHideoutLevel2,
+				$build.ThiefHideoutLevel3
+			};
+			
+			Names = array
+			{
+				$build.ThiefHideoutName1,
+				$build.ThiefHideoutName2,
+				$build.ThiefHideoutName3,
+				$build.ThiefHideoutName4,
+				$build.ThiefHideoutName5,
+				$build.ThiefHideoutName6,
+				$build.ThiefHideoutName7,
+				$build.ThiefHideoutName8,
+				$build.ThiefHideoutName9,
+				$build.ThiefHideoutName10,
+				$build.ThiefHideoutName11,
+				$build.ThiefHideoutName12,
+				$build.ThiefHideoutName13,
+				$build.ThiefHideoutName14,
+				$build.ThiefHideoutName15,
+				$build.ThiefHideoutName16,
+				$build.ThiefHideoutName17,
+				$build.ThiefHideoutName18,
+				$build.ThiefHideoutName19,
+				$build.ThiefHideoutName20,
+				$build.ThiefHideoutName21,
+				$build.ThiefHideoutName22,
+				$build.ThiefHideoutName23,
+				$build.ThiefHideoutName24,
+				$build.ThiefHideoutName25,
+				$build.ThiefHideoutName26,
+				$build.ThiefHideoutName27,
+				$build.ThiefHideoutName28,
+				$build.ThiefHideoutName29,
+				$build.ThiefHideoutName30
+			};
+		};
+
+		"Smuggler" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.SmugglerLevel1,
+				$build.SmugglerLevel2,
+				$build.SmugglerLevel3
+			};
+			
+			Names = array
+			{
+				$build.SmugglerName1,
+				$build.SmugglerName2,
+				$build.SmugglerName3,
+				$build.SmugglerName4,
+				$build.SmugglerName5,
+				$build.SmugglerName6,
+				$build.SmugglerName7,
+				$build.SmugglerName8,
+				$build.SmugglerName9,
+				$build.SmugglerName10,
+				$build.SmugglerName11,
+				$build.SmugglerName12,
+				$build.SmugglerName13,
+				$build.SmugglerName14,
+				$build.SmugglerName15,
+				$build.SmugglerName16,
+				$build.SmugglerName17,
+				$build.SmugglerName18,
+				$build.SmugglerName19,
+				$build.SmugglerName20
+			};
+		};
+
+		"Medicus" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.MedicusLevel1,
+				$build.MedicusLevel2,
+				$build.MedicusLevel3
+			};
+			
+			Names = array
+			{
+				$build.MedicusName1,
+				$build.MedicusName2,
+				$build.MedicusName3,
+				$build.MedicusName4,
+				$build.MedicusName5,
+				$build.MedicusName6,
+				$build.MedicusName7,
+				$build.MedicusName8,
+				$build.MedicusName9,
+				$build.MedicusName10,
+				$build.MedicusName11,
+				$build.MedicusName12,
+				$build.MedicusName13,
+				$build.MedicusName14,
+				$build.MedicusName15,
+				$build.MedicusName16,
+				$build.MedicusName17,
+				$build.MedicusName18,
+				$build.MedicusName19,
+				$build.MedicusName20,
+				$build.MedicusName21,
+				$build.MedicusName22,
+				$build.MedicusName23,
+				$build.MedicusName24,
+				$build.MedicusName25,
+				$build.MedicusName26,
+				$build.MedicusName27,
+				$build.MedicusName28,
+				$build.MedicusName29,
+				$build.MedicusName30
+			};
+		};
+		
+		"Warehouse" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.WarehouseLevel1
+			};
+			
+			Names = array
+			{
+				$build.WarehouseName1,
+				$build.WarehouseName2,
+				$build.WarehouseName3,
+				$build.WarehouseName4,
+				$build.WarehouseName5,
+				$build.WarehouseName6,
+				$build.WarehouseName7,
+				$build.WarehouseName8,
+				$build.WarehouseName9,
+				$build.WarehouseName10
+			};
+		};
+
+		"Warehouse_Country" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.Warehouse_CountryLevel1
+			};
+			
+			Names = array
+			{
+				$build.Warehouse_CountryName1,
+				$build.Warehouse_CountryName2,
+				$build.Warehouse_CountryName3,
+				$build.Warehouse_CountryName4,
+				$build.Warehouse_CountryName5,
+				$build.Warehouse_CountryName6,
+				$build.Warehouse_CountryName7,
+				$build.Warehouse_CountryName8,
+				$build.Warehouse_CountryName9,
+				$build.Warehouse_CountryName10
+			};
+		};
+		
+		"Cemetery" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.CemetaryLevel1,
+				$build.CemetaryLevel1
+			};
+			
+			Names = array
+			{
+				$build.CemetaryName1,
+				$build.CemetaryName2,
+				$build.CemetaryName3,
+				$build.CemetaryName4,
+				$build.CemetaryName5,
+				$build.CemetaryName6,
+				$build.CemetaryName7,
+				$build.CemetaryName8,
+				$build.CemetaryName9,
+				$build.CemetaryName10
+			};
+		};
+		
+		"Mine" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.MineLevel1
+			};
+			
+			Names = array
+			{
+				$build.MineName1,
+				$build.MineName2,
+				$build.MineName3,
+				$build.MineName4,
+				$build.MineName5,
+				$build.MineName6,
+				$build.MineName7,
+				$build.MineName8,
+				$build.MineName9,
+				$build.MineName10
+			};
+		};
+		
+		"Quarry" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.QuarryLevel1
+			};
+			
+			Names = array
+			{
+				$build.QuarryName1,
+				$build.QuarryName2,
+				$build.QuarryName3,
+				$build.QuarryName4,
+				$build.QuarryName5,
+				$build.QuarryName6,
+				$build.QuarryName7,
+				$build.QuarryName8,
+				$build.QuarryName9,
+				$build.QuarryName10
+			};
+		};
+		
+		"LumberYard" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.LumberYardLevel1
+			};
+			
+			Names = array
+			{
+				$build.LumberYardName1,
+				$build.LumberYardName2,
+				$build.LumberYardName3,
+				$build.LumberYardName4,
+				$build.LumberYardName5,
+				$build.LumberYardName6,
+				$build.LumberYardName7,
+				$build.LumberYardName8,
+				$build.LumberYardName9,
+				$build.LumberYardName10
+			};
+		};
+		
+		
+		"PoorHouse" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.PoorHouseLevel1
+			};
+			
+			Names = array
+			{
+				$build.PoorHouseName1,
+				$build.PoorHouseName2,
+				$build.PoorHouseName3,
+				$build.PoorHouseName4,
+				$build.PoorHouseName5,
+				$build.PoorHouseName6,
+				$build.PoorHouseName7,
+				$build.PoorHouseName8,
+				$build.PoorHouseName9,
+				$build.PoorHouseName10,
+				$build.PoorHouseName11,
+				$build.PoorHouseName12,
+				$build.PoorHouseName13,
+				$build.PoorHouseName14,
+				$build.PoorHouseName15,
+				$build.PoorHouseName16,
+				$build.PoorHouseName17,
+				$build.PoorHouseName18,
+				$build.PoorHouseName19,
+				$build.PoorHouseName20,
+				$build.PoorHouseName21,
+				$build.PoorHouseName22,
+				$build.PoorHouseName23,
+				$build.PoorHouseName24,
+				$build.PoorHouseName25,
+				$build.PoorHouseName26,
+				$build.PoorHouseName27,
+				$build.PoorHouseName28,
+				$build.PoorHouseName29,
+				$build.PoorHouseName30,
+				$build.PoorHouseName31,
+				$build.PoorHouseName32,
+				$build.PoorHouseName33,
+				$build.PoorHouseName34,
+				$build.PoorHouseName35,
+				$build.PoorHouseName36,
+				$build.PoorHouseName37,
+				$build.PoorHouseName38,
+				$build.PoorHouseName39,
+				$build.PoorHouseName40,
+				$build.PoorHouseName41,
+				$build.PoorHouseName42,
+				$build.PoorHouseName43,
+				$build.PoorHouseName44,
+				$build.PoorHouseName45,
+				$build.PoorHouseName46,
+				$build.PoorHouseName47,
+				$build.PoorHouseName48,
+				$build.PoorHouseName49,
+				$build.PoorHouseName50
+			};
+		};
+		"CountryHouse" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.CountryHouseLevel1
+			};
+			
+			Names = array
+			{
+				$build.CountryHouseName1,
+				$build.CountryHouseName2,
+				$build.CountryHouseName3,
+				$build.CountryHouseName4,
+				$build.CountryHouseName5,
+				$build.CountryHouseName6,
+				$build.CountryHouseName7,
+				$build.CountryHouseName8,
+				$build.CountryHouseName9,
+				$build.CountryHouseName10,
+				$build.CountryHouseName11,
+				$build.CountryHouseName12,
+				$build.CountryHouseName13,
+				$build.CountryHouseName14,
+				$build.CountryHouseName15,
+				$build.CountryHouseName16,
+				$build.CountryHouseName17,
+				$build.CountryHouseName18,
+				$build.CountryHouseName19,
+				$build.CountryHouseName20
+			};
+		};
+		"CityHouse" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.CityHouseLevel1
+			};
+			
+			Names = array
+			{
+				$build.CityHouseName1,
+				$build.CityHouseName2,
+				$build.CityHouseName3,
+				$build.CityHouseName4,
+				$build.CityHouseName5,
+				$build.CityHouseName6,
+				$build.CityHouseName7,
+				$build.CityHouseName8,
+				$build.CityHouseName9,
+				$build.CityHouseName10,
+				$build.CityHouseName11,
+				$build.CityHouseName12,
+				$build.CityHouseName13,
+				$build.CityHouseName14,
+				$build.CityHouseName15,
+				$build.CityHouseName16,
+				$build.CityHouseName17,
+				$build.CityHouseName18,
+				$build.CityHouseName19,
+				$build.CityHouseName20,
+				$build.CityHouseName21,
+				$build.CityHouseName22,
+				$build.CityHouseName23,
+				$build.CityHouseName24,
+				$build.CityHouseName25,
+				$build.CityHouseName26,
+				$build.CityHouseName27,
+				$build.CityHouseName28,
+				$build.CityHouseName29,
+				$build.CityHouseName30,
+				$build.CityHouseName31,
+				$build.CityHouseName32,
+				$build.CityHouseName33,
+				$build.CityHouseName34,
+				$build.CityHouseName35,
+				$build.CityHouseName36,
+				$build.CityHouseName37,
+				$build.CityHouseName38,
+				$build.CityHouseName39,
+				$build.CityHouseName40,
+				$build.CityHouseName41,
+				$build.CityHouseName42,
+				$build.CityHouseName43,
+				$build.CityHouseName44,
+				$build.CityHouseName45,
+				$build.CityHouseName46,
+				$build.CityHouseName47,
+				$build.CityHouseName48,
+				$build.CityHouseName49,
+				$build.CityHouseName50
+			};
+		};
+		"Mansion" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.MansionLevel1
+			};
+			
+			Names = array
+			{
+				$build.MansionName1,
+				$build.MansionName2,
+				$build.MansionName3,
+				$build.MansionName4,
+				$build.MansionName5,
+				$build.MansionName6,
+				$build.MansionName7,
+				$build.MansionName8,
+				$build.MansionName9,
+				$build.MansionName10,
+				$build.MansionName11,
+				$build.MansionName12,
+				$build.MansionName13,
+				$build.MansionName14,
+				$build.MansionName15,
+				$build.MansionName16,
+				$build.MansionName17,
+				$build.MansionName18,
+				$build.MansionName19,
+				$build.MansionName20
+			};
+		};
+		"Cityhall" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.CityHallLevel1
+			};
+			
+			Names = array
+			{
+				$build.CityHallName1
+			};
+		};
+		"Market" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.MarketLevel1
+			};
+			
+			Names = array
+			{
+				$build.MarketName1
+			};
+		};
+		"School" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.SchoolLevel1
+			};
+			
+			Names = array
+			{
+				$build.SchoolName1
+			};
+		};
+		"Well" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.WellLevel1
+			};
+			
+			Names = array
+			{
+				$build.WellName1,
+				$build.WellName2,
+				$build.WellName3,
+				$build.WellName4,
+				$build.WellName5,
+				$build.WellName6,
+				$build.WellName7,
+				$build.WellName8,
+				$build.WellName9,
+				$build.WellName10,
+				$build.WellName11,
+				$build.WellName12,
+				$build.WellName13,
+				$build.WellName14,
+				$build.WellName15,
+				$build.WellName16,
+				$build.WellName17,
+				$build.WellName18,
+				$build.WellName19,
+				$build.WellName20
+			};
+		};
+		"Statue" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.StatueLevel1,
+			};
+			
+			Names = array
+			{
+				$build.StatueName1,
+				$build.StatueName2,
+				$build.StatueName3,
+				$build.StatueName4,
+				$build.StatueName5,
+				$build.StatueName6,
+				$build.StatueName7,
+				$build.StatueName8,
+				$build.StatueName9,
+				$build.StatueName10,
+				$build.StatueName11,
+				$build.StatueName12,
+				$build.StatueName13,
+				$build.StatueName14,
+				$build.StatueName15,
+				$build.StatueName16,
+				$build.StatueName17,
+				$build.StatueName18,
+				$build.StatueName19,
+				$build.StatueName20,
+				$build.StatueName21
+			};
+		};
+		"Stage" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.StageLevel1,
+			};
+			
+			Names = array
+			{
+				$build.StageName1,
+				$build.StageName2,
+				$build.StageName3,
+				$build.StageName4,
+				$build.StageName5,
+				$build.StageName6,
+				$build.StageName7,
+				$build.StageName8,
+				$build.StageName9,
+				$build.StageName10,
+				$build.StageName11,
+				$build.StageName12,
+				$build.StageName13,
+				$build.StageName14,
+				$build.StageName15,
+				$build.StageName16,
+				$build.StageName17,
+				$build.StageName18,
+				$build.StageName19,
+				$build.StageName20
+			};
+		};
+		"Fountain" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.FountainLevel1
+			};
+			
+			Names = array
+			{
+				$build.FountainName1
+			};
+		};
+		"Gate" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.CityGateLevel1
+			};
+			
+			Names = array
+			{
+				$build.CityGateName1
+			};
+		};
+		"Port" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.portLevel1
+			};
+			
+			Names = array
+			{
+				$build.portName1
+			};
+		};
+		"execution" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.executionLevel1
+			};
+			
+			Names = array
+			{
+				$build.executionName1
+			};
+		};
+		"trademarket" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.trademarketLevel1
+			};
+			
+			Names = array
+			{
+				$build.trademarketName1
+			};
+		};
+		"Arsenal" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.arsenalLevel1
+			};
+			
+			Names = array
+			{
+				$build.arsenalName1
+			};
+		};
+		"Windmill" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.WindmillLevel1
+			};
+			
+			Names = array
+			{
+				$build.WindmillName1,
+				$build.WindmillName2,
+				$build.WindmillName3,
+				$build.WindmillName4,
+				$build.WindmillName5,
+				$build.WindmillName6,
+				$build.WindmillName7,
+				$build.WindmillName8,
+				$build.WindmillName9,
+				$build.WindmillName10,
+				$build.WindmillName11,
+				$build.WindmillName12,
+				$build.WindmillName13,
+				$build.WindmillName14,
+				$build.WindmillName15,
+				$build.WindmillName16,
+				$build.WindmillName17,
+				$build.WindmillName18,
+				$build.WindmillName19,
+				$build.WindmillName20
+			};
+		};
+		"Butcher" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.ButcherLevel1
+			};
+			
+			Names = array
+			{
+				$build.ButcherName1,
+				$build.ButcherName2,
+				$build.ButcherName3,
+				$build.ButcherName4,
+				$build.ButcherName5,
+				$build.ButcherName6,
+				$build.ButcherName7,
+				$build.ButcherName8,
+				$build.ButcherName9,
+				$build.ButcherName10,
+				$build.ButcherName11,
+				$build.ButcherName12,
+				$build.ButcherName13,
+				$build.ButcherName14,
+				$build.ButcherName15,
+				$build.ButcherName16,
+				$build.ButcherName17,
+				$build.ButcherName18,
+				$build.ButcherName19,
+				$build.ButcherName20
+			};
+		};
+		"Orchardist" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.OrchardistLevel1
+			};
+			
+			Names = array
+			{
+				$build.OrchardistName1,
+				$build.OrchardistName2,
+				$build.OrchardistName3,
+				$build.OrchardistName4,
+				$build.OrchardistName5,
+				$build.OrchardistName6,
+				$build.OrchardistName7,
+				$build.OrchardistName8,
+				$build.OrchardistName9,
+				$build.OrchardistName10,
+				$build.OrchardistName11,
+				$build.OrchardistName12,
+				$build.OrchardistName13,
+				$build.OrchardistName14,
+				$build.OrchardistName15
+			};
+		};
+		"FishingHut" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.FishingHutLevel1
+			};
+			
+			Names = array
+			{
+				$build.FishingHutName1,
+				$build.FishingHutName2,
+				$build.FishingHutName3,
+				$build.FishingHutName4,
+				$build.FishingHutName5,
+				$build.FishingHutName6,
+				$build.FishingHutName7,
+				$build.FishingHutName8,
+				$build.FishingHutName9,
+				$build.FishingHutName10,
+				$build.FishingHutName11,
+				$build.FishingHutName12,
+				$build.FishingHutName13,
+				$build.FishingHutName14,
+				$build.FishingHutName15
+			};
+		};
+		"FishingSpot" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.FishingSpotLevel1
+			};
+			
+			Names = array
+			{
+				$build.FishingSpotName1,
+				$build.FishingSpotName2,
+				$build.FishingSpotName3,
+				$build.FishingSpotName4,
+				$build.FishingSpotName5,
+				$build.FishingSpotName6,
+				$build.FishingSpotName7,
+				$build.FishingSpotName8,
+				$build.FishingSpotName9,
+				$build.FishingSpotName10
+			};
+		};
+		"Schloss" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.SchlossLevel1
+			};
+			
+			Names = array
+			{
+				$build.SchlossName1,
+				$build.SchlossName2,
+				$build.SchlossName3,
+				$build.SchlossName4,
+				$build.SchlossName5,
+				$build.SchlossName6,
+				$build.SchlossName7,
+				$build.SchlossName8,
+				$build.SchlossName9,
+				$build.SchlossName10
+			};
+		};
+		"Church" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.ChurchLevel1
+			};
+			
+			Names = array
+			{
+				$build.ChurchName1,
+				$build.ChurchName2,
+				$build.ChurchName3,
+				$build.ChurchName4,
+				$build.ChurchName5,
+				$build.ChurchName6,
+				$build.ChurchName7,
+				$build.ChurchName8,
+				$build.ChurchName9,
+				$build.ChurchName10,
+				$build.ChurchName11,
+				$build.ChurchName12,
+				$build.ChurchName13,
+				$build.ChurchName14,
+				$build.ChurchName15,
+				$build.ChurchName16,
+				$build.ChurchName17,
+				$build.ChurchName18,
+				$build.ChurchName19,
+				$build.ChurchName20
+			};
+		};
+		"cathedrale" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.cathedraleLevel1
+			};
+			
+			Names = array
+			{
+				$build.cathedraleName1,
+				$build.cathedraleName2,
+				$build.cathedraleName3,
+				$build.cathedraleName4,
+				$build.cathedraleName5,
+				$build.cathedraleName6,
+				$build.cathedraleName7,
+				$build.cathedraleName8,
+				$build.cathedraleName9,
+				$build.cathedraleName10
+			};
+		};
+		"Grove" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.GroveLevel1
+			};
+
+			Names = array
+			{
+				$build.GroveName1,
+				$build.GroveName2,
+				$build.GroveName3,
+				$build.GroveName4,
+				$build.GroveName5,
+				$build.GroveName6,
+				$build.GroveName7,
+				$build.GroveName8,
+				$build.GroveName9,
+				$build.GroveName10
+			};
+		};
+		"Brushwood" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.BrushwoodLevel1
+			};
+
+			Names = array
+			{
+				$build.BrushwoodName1,
+				$build.BrushwoodName2,
+				$build.BrushwoodName3,
+				$build.BrushwoodName4,
+				$build.BrushwoodName5,
+				$build.BrushwoodName6,
+				$build.BrushwoodName7,
+				$build.BrushwoodName8,
+				$build.BrushwoodName9,
+				$build.BrushwoodName10
+			};
+		};
+		"RobberCamp" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.RobberCampLevel1
+			};
+			
+			Names = array
+			{
+				$build.RobberCampName1,
+				$build.RobberCampName2,
+				$build.RobberCampName3,
+				$build.RobberCampName4,
+				$build.RobberCampName5,
+				$build.RobberCampName6,
+				$build.RobberCampName7,
+				$build.RobberCampName8,
+				$build.RobberCampName9,
+				$build.RobberCampName10,
+				$build.RobberCampName11,
+				$build.RobberCampName12,
+				$build.RobberCampName13,
+				$build.RobberCampName14,
+				$build.RobberCampName15,
+				$build.RobberCampName16,
+				$build.RobberCampName17,
+				$build.RobberCampName18,
+				$build.RobberCampName19,
+				$build.RobberCampName20
+			};
+		};
+
+		"Gravedigger" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.GravediggerLevel1
+			};
+			
+			Names = array
+			{
+				$build.GravediggerName1,
+				$build.GravediggerName2,
+				$build.GravediggerName3,
+				$build.GravediggerName4,
+				$build.GravediggerName5,
+				$build.GravediggerName6,
+				$build.GravediggerName7,
+				$build.GravediggerName8,
+				$build.GravediggerName9,
+				$build.GravediggerName10,
+				$build.GravediggerName11,
+				$build.GravediggerName12,
+				$build.GravediggerName13,
+				$build.GravediggerName14,
+				$build.GravediggerName15
+			};
+		};
+
+		"Gleeman" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.GleemanLevel1
+			};
+			
+			Names = array
+			{
+				$build.GleemanName1,
+				$build.GleemanName2,
+				$build.GleemanName3,
+				$build.GleemanName4,
+				$build.GleemanName5,
+				$build.GleemanName6,
+				$build.GleemanName7,
+				$build.GleemanName8,
+				$build.GleemanName9,
+				$build.GleemanName10,
+				$build.GleemanName11,
+				$build.GleemanName12,
+				$build.GleemanName13,
+				$build.GleemanName14,
+				$build.GleemanName15
+			};
+		};
+
+    	"Shaman" = G3BuildingNamesList
+		{
+			Levels = array
+			{
+				$build.ShamanLevel1
+			};
+			
+			Names = array
+			{
+				$build.ShamanName1,
+				$build.ShamanName2,
+				$build.ShamanName3,
+				$build.ShamanName4,
+				$build.ShamanName5,
+				$build.ShamanName6,
+				$build.ShamanName7,
+				$build.ShamanName8,
+				$build.ShamanName9,
+				$build.ShamanName10,
+				$build.ShamanName11,
+				$build.ShamanName12,
+				$build.ShamanName13,
+				$build.ShamanName14,
+				$build.ShamanName15,
+				$build.ShamanName16,
+				$build.ShamanName17,
+				$build.ShamanName18,
+				$build.ShamanName19,
+				$build.ShamanName20
+			};
+		};
+	};
+};
+	

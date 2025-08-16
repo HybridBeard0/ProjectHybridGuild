@@ -1,0 +1,16 @@
+base/standardg3characterdesc
+{
+	Visual = "dog3";
+	WalkSpeed = 33.75;
+	TrotSpeed = 100;
+	RunSpeed = 400;
+	
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#dog3/list_idles_animations,
+			#dog3/list_walks_animations,
+		);
+	};
+}

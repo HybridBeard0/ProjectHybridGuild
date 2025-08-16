@@ -1,0 +1,12 @@
+buildingbrokenmedium extends G3PropsInstance
+{
+	static var Description = #buildingbrokenmedium/buildingbrokenmedium_desc;
+
+	function onInit()
+	{
+		this.playAnimationByName("idle1");
+	}
+	EditorName = "Building broken medium";
+	EditorIcon = "media/UserInterface/PropIcons/Buildingbrokenmedium.png";
+	EditorCategory = 4;		
+};

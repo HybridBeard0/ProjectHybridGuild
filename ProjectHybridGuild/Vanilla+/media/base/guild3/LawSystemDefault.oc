@@ -1,0 +1,391 @@
+LawSystemDefault extends LawSystem
+{
+	OfficeGroups = array
+	{
+		SovereignGroup extends OfficeGroup
+		{
+			ID = "SovereignGroup";
+			HStringName = "$gui.politics.officegroup.Sovereign";
+			Level = 1;
+			HStringIconName = "Sovereign";
+			
+			Results = array
+			{
+				UnlockEffect
+				{
+					Names = array{"PowerSovereignLawmaker"};
+				},
+				ModifierEffect
+				{
+					ActorValue = "ReligionStolidity";
+					Mod = 3.0;
+					Recover = true;
+				},
+				VIPProtectionEffect
+				{
+					GuardsPerCharacter = 2;
+					GuardsPerResidence = 2;
+				},
+			};
+			
+			Offices = array
+			{
+				Office
+				{
+					ID = "Sovereign";
+					DisplayName = "$gui.politics.office.Sovereign";
+					IsLifeTime = true;
+					ApplicationFee = 1500;
+					AnnualSalary = 4000;
+					AnnualPrestige = 1000;
+					Stage = 7;
+				};
+			};
+		};
+		MayorGroup extends OfficeGroup
+		{
+			ID = "MayorGroup";
+			Level = 2;
+			HStringName = "$gui.politics.officegroup.Mayor";
+			HStringIconName = "Leadership";
+			
+			MeetingTime = 10.0; // Fixed time of day (e.g. 16.0 for 16:00 o'clock) when office meetings take place.
+			MinimumMeetingDelayRounds = 0.25; // Minimum delay in rounds between submitting a proposal and when the meeting takes place. If the remaining time until the next meeting is shorter than that, then this proposal gets scheduled for a meeting one round later.
+			
+			Results = array
+			{
+				UnlockEffect
+				{
+					Names = array{"PowerLawmaker", "PowerHeretic", "AwardKeyToCity", "PowerExpropriate"};
+				}
+			};
+			
+			Offices = array
+			{
+				Office
+				{
+					ID = "Mayor";
+					DisplayName = "$gui.politics.office.Mayor";
+					NumRoundPerTerm = 4;
+					AnnualSalary = 2000;
+					AnnualPrestige = 500;
+					UpperOfficeIDs = array{ "Sovereign" };
+					Stage = 6;
+					ApplicationFee = 500;
+					MissedMeetingFine = "100 + 50 * SocialLevel";
+				};
+				Office
+				{
+					ID = "CityLegate";
+					DisplayName = "$gui.politics.office.CityLegate";
+					NumRoundPerTerm = 4;
+					AnnualSalary = 1750;
+					AnnualPrestige = 350;
+					UpperOfficeIDs = array{ "Sovereign" };
+					Stage = 5;
+					ApplicationFee = 350;
+					MissedMeetingFine = "100 + 50 * SocialLevel";
+				};
+				Office
+				{
+					ID = "Treasurer";
+					DisplayName = "$gui.politics.office.Treasurer";
+					NumRoundPerTerm = 4;
+					AnnualSalary = 1750;
+					AnnualPrestige = 350;
+					UpperOfficeIDs = array{ "Sovereign" };
+					Stage = 5;
+					ApplicationFee = 350;
+					MissedMeetingFine = "100 + 50 * SocialLevel";
+				};
+			};
+		};
+		JudgeGroup extends OfficeGroup
+		{
+			ID = "JudgeGroup";
+			HStringName = "$gui.politics.officegroup.Judge";
+			Level = 3;
+			HStringIconName = "Justice";
+			
+			Results = array
+			{
+				LawImmunityEffect
+				{
+					Tags = array{ "LawImmunity", "CannotBeTrialAccuser" };
+				},
+			};
+
+			Offices = array
+			{
+				Office
+				{
+					ID = "ChiefJudge";
+					DisplayName = "$gui.politics.office.ChiefJudge";
+					NumRoundPerTerm = 4;
+					AnnualSalary = 1350;
+					AnnualPrestige = 250;
+					UpperOfficeIDs = array{ "Mayor", "CityLegate", "Treasurer" };
+					Stage = 4;
+					ApplicationFee = 250;
+					MissedMeetingFine = "80 + 40 * SocialLevel";
+				};
+				Office
+				{
+					ID = "Judge1";
+					DisplayName = "$gui.politics.office.Judge1";
+					NumRoundPerTerm = 4;
+					AnnualSalary = 1000;
+					AnnualPrestige = 175;
+					UpperOfficeIDs = array{ "Mayor", "CityLegate", "Treasurer" };
+					Stage = 3;
+					ApplicationFee = 175;
+					MissedMeetingFine = "80 + 40 * SocialLevel";
+				};
+				Office
+				{
+					ID = "Judge2";
+					DisplayName = "$gui.politics.office.Judge2";
+					NumRoundPerTerm = 4;
+					AnnualSalary = 1000;
+					AnnualPrestige = 175;
+					UpperOfficeIDs = array{ "Mayor", "CityLegate", "Treasurer" };
+					Stage = 3;
+					ApplicationFee = 175;
+					MissedMeetingFine = "80 + 40 * SocialLevel";
+				};
+			};
+		};
+		CaptainGroup extends OfficeGroup
+		{
+			ID = "CaptainGroup";
+			HStringName = "$gui.politics.officegroup.Captain";
+			Level = 3;
+			HStringIconName = "Treasury";
+			
+			MeetingTime = 12.0; // Fixed time of day (e.g. 16.0 for 16:00 o'clock) when office meetings take place.
+			MinimumMeetingDelayRounds = 0.25; // Minimum delay in rounds between submitting a proposal and when the meeting takes place. If the remaining time until the next meeting is shorter than that, then this proposal gets scheduled for a meeting one round later.
+			
+			Results = array
+			{
+				UnlockEffect
+				{
+					Names = array{"PowerLawmaker", "PowerCityGuards", "MarkAsOutlaw", "PromoteBusiness"};
+				}
+			};
+			
+			Offices = array
+			{
+				Office
+				{
+					ID = "Captain";
+					DisplayName = "$gui.politics.office.Captain";
+					NumRoundPerTerm = 4;
+					AnnualSalary = 1350;
+					AnnualPrestige = 250;
+					UpperOfficeIDs = array{ "Mayor", "CityLegate", "Treasurer" };
+					Stage = 4;
+					ApplicationFee = 250;
+					MissedMeetingFine = "80 + 40 * SocialLevel";
+				};
+				Office
+				{
+					ID = "ArsenalMaster";
+					DisplayName = "$gui.politics.office.ArsenalMaster";
+					NumRoundPerTerm = 4;
+					AnnualSalary = 1000;
+					AnnualPrestige = 175;
+					UpperOfficeIDs = array{ "Mayor", "CityLegate", "Treasurer" };
+					Stage = 3;
+					ApplicationFee = 175;
+					MissedMeetingFine = "80 + 40 * SocialLevel";
+				};
+				Office
+				{
+					ID = "DungeonMaster";
+					DisplayName = "$gui.politics.office.DungeonMaster";
+					NumRoundPerTerm = 4;
+					AnnualSalary = 1000;
+					AnnualPrestige = 175;
+					UpperOfficeIDs = array{ "Mayor", "CityLegate", "Treasurer" };
+					Stage = 3;
+					ApplicationFee = 175;
+					MissedMeetingFine = "80 + 40 * SocialLevel";
+				};
+			};
+		};
+		CouncilAssistantGroup extends OfficeGroup
+		{
+			ID = "CouncilAssistantGroup";
+			HStringName = "$gui.politics.officegroup.CouncilAssistant";
+			Level = 4;
+			HStringIconName = "Counciling";
+			
+			MeetingTime = 14.0; // Fixed time of day (e.g. 16.0 for 16:00 o'clock) when office meetings take place.
+			MinimumMeetingDelayRounds = 0.25; // Minimum delay in rounds between submitting a proposal and when the meeting takes place. If the remaining time until the next meeting is shorter than that, then this proposal gets scheduled for a meeting one round later.
+			
+			Results = array
+			{
+				UnlockEffect
+				{
+					Names = array{"PowerLawmaker", "PowerCityRecord", "PublicShaming", "PublicPraise"};
+				}
+			};
+			
+			Offices = array
+			{
+				Office
+				{
+					ID = "CouncilAssistant";
+					DisplayName = "$gui.politics.office.CouncilAssistant";
+					NumRoundPerTerm = 4;
+					AnnualSalary = 750;
+					AnnualPrestige = 125;
+					UpperOfficeIDs = array{ "ChiefJudge", "Judge1", "Judge2" };
+					Stage = 2;
+					ApplicationFee = 125;
+					MissedMeetingFine = "60 + 30 * SocialLevel";
+				};
+				Office
+				{
+					ID = "TownClerk";
+					DisplayName = "$gui.politics.office.TownClerk";
+					NumRoundPerTerm = 4;
+					AnnualSalary = 500;
+					AnnualPrestige = 85;
+					UpperOfficeIDs = array{ "ChiefJudge", "Judge1", "Judge2" };
+					Stage = 1;
+					ApplicationFee = 85;
+					MissedMeetingFine = "60 + 30 * SocialLevel";
+				};
+				Office
+				{
+					ID = "TownClerk2";
+					DisplayName = "$gui.politics.office.TownClerk";
+					NumRoundPerTerm = 4;
+					AnnualSalary = 500;
+					AnnualPrestige = 85;
+					UpperOfficeIDs = array{ "ChiefJudge", "Judge1", "Judge2" };
+					Stage = 1;
+					ApplicationFee = 85;
+					MissedMeetingFine = "60 + 30 * SocialLevel";
+				};
+			};
+		};
+		CouncilInformerGroup extends OfficeGroup
+		{
+			ID = "CouncilInformerGroup";
+			HStringName = "$gui.politics.officegroup.CouncilInformer";
+			Level = 4;
+			HStringIconName = "CityGuard";
+			
+			MeetingTime = 16.0; // Fixed time of day (e.g. 16.0 for 16:00 o'clock) when office meetings take place.
+			MinimumMeetingDelayRounds = 0.25; // Minimum delay in rounds between submitting a proposal and when the meeting takes place. If the remaining time until the next meeting is shorter than that, then this proposal gets scheduled for a meeting one round later.
+			
+			Results = array
+			{
+				UnlockEffect
+				{
+					Names = array{"PowerLawmaker", "AuditBooks", "FakeEvidence"};
+				}
+			};
+			
+			Offices = array
+			{
+				Office
+				{
+					ID = "CouncilInformer";
+					DisplayName = "$gui.politics.office.CouncilInformer";
+					NumRoundPerTerm = 4;
+					AnnualSalary = 750;
+					AnnualPrestige = 125;
+					UpperOfficeIDs = array{ "Captain", "ArsenalMaster", "DungeonMaster" };
+					Stage = 2;
+					ApplicationFee = 125;
+					MissedMeetingFine = "60 + 30 * SocialLevel";
+				};
+				Office
+				{
+					ID = "Informer";
+					DisplayName = "$gui.politics.office.Informer";
+					NumRoundPerTerm = 4;
+					AnnualSalary = 500;
+					AnnualPrestige = 85;
+					UpperOfficeIDs = array{ "Captain", "ArsenalMaster", "DungeonMaster" };
+					Stage = 1;
+					ApplicationFee = 85;
+					MissedMeetingFine = "60 + 30 * SocialLevel";
+				};
+				Office
+				{
+					ID = "Informer2";
+					DisplayName = "$gui.politics.office.Informer";
+					NumRoundPerTerm = 4;
+					AnnualSalary = 500;
+					AnnualPrestige = 85;
+					UpperOfficeIDs = array{ "Captain", "ArsenalMaster", "DungeonMaster" };
+					Stage = 1;
+					ApplicationFee = 85;
+					MissedMeetingFine = "60 + 30 * SocialLevel";
+				};
+			};
+		};
+		CouncilGuardianGroup extends OfficeGroup
+		{
+			ID = "CouncilGuardianGroup";
+			HStringName = "$gui.politics.officegroup.CouncilGuardian";
+			Level = 4;
+			HStringIconName = "Prison";
+			
+			MeetingTime = 18.0; // Fixed time of day (e.g. 16.0 for 16:00 o'clock) when office meetings take place.
+			MinimumMeetingDelayRounds = 0.25; // Minimum delay in rounds between submitting a proposal and when the meeting takes place. If the remaining time until the next meeting is shorter than that, then this proposal gets scheduled for a meeting one round later.
+			
+			Results = array
+			{
+				UnlockEffect
+				{
+					Names = array{"PowerLawmaker", "PowerPrisons", "SendAwayGuard"};
+				}
+			};
+			
+			Offices = array
+			{
+				Office
+				{
+					ID = "CouncilGuardian";
+					DisplayName = "$gui.politics.office.CouncilGuardian";
+					NumRoundPerTerm = 4;
+					AnnualSalary = 750;
+					AnnualPrestige = 125;
+					UpperOfficeIDs = array{ "Captain", "ArsenalMaster", "DungeonMaster" };
+					Stage = 2;
+					ApplicationFee = 125;
+					MissedMeetingFine = "60 + 30 * SocialLevel";
+				};
+				Office
+				{
+					ID = "GateGuardian";
+					DisplayName = "$gui.politics.office.GateGuardian";
+					NumRoundPerTerm = 4;
+					AnnualSalary = 500;
+					AnnualPrestige = 85;
+					UpperOfficeIDs = array{ "Captain", "ArsenalMaster", "DungeonMaster" };
+					Stage = 1;
+					ApplicationFee = 85;
+					MissedMeetingFine = "60 + 30 * SocialLevel";
+				};
+				Office
+				{
+					ID = "GateGuardian2";
+					DisplayName = "$gui.politics.office.GateGuardian";
+					NumRoundPerTerm = 4;
+					AnnualSalary = 500;
+					AnnualPrestige = 85;
+					UpperOfficeIDs = array{ "Captain", "ArsenalMaster", "DungeonMaster" };
+					Stage = 1;
+					ApplicationFee = 85;
+					MissedMeetingFine = "60 + 30 * SocialLevel";
+				};
+			};
+		};
+	};
+};

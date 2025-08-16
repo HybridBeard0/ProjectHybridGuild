@@ -1,0 +1,401 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1490282383;
+			Name = "Idle";
+			AnimationName = "Idle";
+			Looping = true;
+			Triggers = array
+			(
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire000";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire001";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire002";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire003";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire004";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire005";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire006";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire007";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire008";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire009";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire010";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire011";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire012";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire013";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire014";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire015";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire016";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire017";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire018";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire019";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire020";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire021";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire022";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire023";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire024";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire025";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire026";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire027";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire028";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire029";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire030";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire031";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire032";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire033";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire034";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire035";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire036";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire037";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire038";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Candel_01";
+					RefNodeOverride = "DummyFire039";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "cutscene_dust_01";
+					RefNodeOverride = "Dummy_dusteffect";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Pointlight_01";
+					RefNodeOverride = "Dummy001";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Pointlight_01";
+					RefNodeOverride = "Dummy002";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Pointlight_01";
+					RefNodeOverride = "Dummy003";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Pointlight_01";
+					RefNodeOverride = "Dummy004";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Pointlight_01";
+					RefNodeOverride = "Dummy005";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Pointlight_01";
+					RefNodeOverride = "Dummy006";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Pointlight_01";
+					RefNodeOverride = "Dummy007";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Pointlight_01";
+					RefNodeOverride = "Dummy008";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Pointlight_01";
+					RefNodeOverride = "Dummy009";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Pointlight_01";
+					RefNodeOverride = "Dummy010";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Pointlight_01";
+					RefNodeOverride = "Dummy011";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Pointlight_01";
+					RefNodeOverride = "Dummy012";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Pointlight_01";
+					RefNodeOverride = "Dummy013";
+				},
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					EffectName = "Interior_Pointlight_01";
+					RefNodeOverride = "Dummy014";
+				},
+			);
+		},
+	);
+}

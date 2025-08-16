@@ -1,0 +1,185 @@
+Well extends Building
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "well";
+		
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc {
+					Name = "streetconnection";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "enter";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "exit";
+					Position = ( 0.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+				},
+				SnapPointDesc
+				{
+					Name = "employee0"; // down-left
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "ManipulateMiddle";
+							Repeat = 8;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "PoisonNeighborhood";
+							Animation = "dumpdown_liquid";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "PrayForLuck";
+							Animation = "giving_money1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee1"; // up-left
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "ManipulateMiddle";
+							Repeat = 5;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "WipeForehead";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "ManipulateMiddle";
+							Repeat = 3;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "PoisonNeighborhood";
+							Animation = "dumpdown_liquid";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "PrayForLuck";
+							Animation = "giving_money1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "employee2"; // up-right
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "ManipulateMiddle";
+							Repeat = 8;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "PoisonNeighborhood";
+							Animation = "dumpdown_liquid";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "PrayForLuck";
+							Animation = "giving_money1";
+						},
+				};
+				},
+				SnapPointDesc
+				{
+					Name = "employee3"; // down-right
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle1";
+						},
+						G3SnapPointAnimation 
+						{
+							Context = "idle";
+							Animation = "idle2";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "ManipulateMiddle";
+							Repeat = 4;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "WipeForehead";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "work";
+							Animation = "ManipulateMiddle";
+							Repeat = 4;
+						},
+						G3SnapPointAnimation
+						{
+							Context = "PoisonNeighborhood";
+							Animation = "dumpdown_liquid";
+						},
+						G3SnapPointAnimation
+						{
+							Context = "PrayForLuck";
+							Animation = "giving_money1";
+						},
+					};
+				},
+			};
+		};
+	};
+
+	EditorName = "Well";
+	EditorIcon = "media/UserInterface/Icons/BuildingImages/Other/Well.png";
+	EditorCategory = 3;		
+}

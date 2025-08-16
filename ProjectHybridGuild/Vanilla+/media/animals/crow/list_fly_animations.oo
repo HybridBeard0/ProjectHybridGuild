@@ -1,0 +1,36 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1431546010;
+			Name = "crowfly";
+			AnimationName = "crowfly";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger 
+				{
+					SoundEvent = 40;
+					FadeOut = 800.0;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1643362533;
+			Name = "crowfly_circle";
+			AnimationName = "crowfly_circle";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger 
+				{
+					SoundEvent = 40;
+					FadeOut = 800.0;
+				},
+			);
+		},
+	);
+}

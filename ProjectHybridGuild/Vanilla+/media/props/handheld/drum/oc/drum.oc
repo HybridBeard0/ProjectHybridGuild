@@ -1,0 +1,14 @@
+drum extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "drum";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 L Hand";
+		AttachChildNode = "Snap";		
+	};
+	EditorName = "Drum";
+	EditorIcon = "media/UserInterface/PropIcons/Longsword.png";
+	EditorCategory = 3;
+}

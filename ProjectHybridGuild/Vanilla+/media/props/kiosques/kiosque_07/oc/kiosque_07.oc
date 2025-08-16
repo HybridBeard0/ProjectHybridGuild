@@ -1,0 +1,44 @@
+kiosque_07 extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "kiosque_07";
+		
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc
+				{
+					Name = "employee00";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Animation = "talk1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "customer00";
+					Position = ( 30.0, -95.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Animation = "talk1";
+							Context = "ChatWithMarketVendor";
+						},
+					};
+				},
+			};
+		};
+	};
+
+	Interactable = true;
+
+	EditorName = "Kiosque07";
+	EditorIcon = "media/UserInterface/PropIcons/Kiosque07.png";
+	EditorCategory = 9;		
+}

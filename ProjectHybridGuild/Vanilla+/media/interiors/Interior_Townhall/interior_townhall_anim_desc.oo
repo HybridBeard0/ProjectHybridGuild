@@ -1,0 +1,11 @@
+G3ActorDesc
+{
+	Visual = "interior_townhall";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#Interior_Townhall/interior_townhall_idles_animations,
+		);
+	};
+}

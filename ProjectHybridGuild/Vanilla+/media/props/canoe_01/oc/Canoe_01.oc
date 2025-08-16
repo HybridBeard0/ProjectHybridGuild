@@ -1,0 +1,10 @@
+Canoe_01 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "Canoe_01";
+	};
+	EditorName = "Rowing Boat_01";
+	EditorIcon = "media/UserInterface/PropIcons/Canoe_01.png";
+	EditorCategory = 3;		
+}

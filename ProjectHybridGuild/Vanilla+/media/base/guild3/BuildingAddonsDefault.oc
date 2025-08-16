@@ -1,0 +1,3308 @@
+BuildingAddonsDefault extends BuildingAddonsContainer
+{
+	Addons = map
+	{
+		"Health_1" = BuildingAddon
+		{
+			Name = "Health_1";
+			TypeName = "Health";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 500;
+					IconName = "Health";
+					DisplayName = "$addOn.Health1";
+					Description = "$addOn.Health1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Health";
+							Mod = 100.0;
+							Recover = true;
+						};
+					};
+				};
+				
+			};
+		};
+		"Health_1b" = BuildingAddon
+		{
+			Name = "Health_1b";
+			TypeName = "Health";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 1000;
+					IconName = "Health";
+					DisplayName = "$addOn.Health2";
+					Description = "$addOn.Health2Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Health";
+							Mod = 150.0;
+							Recover = true;
+						};
+					};
+				};
+				
+			};
+		};
+		"Health_1c" = BuildingAddon
+		{
+			Name = "Health_1c";
+			TypeName = "Health";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 2000;
+					IconName = "Health";
+					DisplayName = "$addOn.Health3";
+					Description = "$addOn.Health3Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Health";
+							Mod = 200.0;
+							Recover = true;
+						};
+					};
+				};
+				
+			};
+		};
+		"Health_1d" = BuildingAddon
+		{
+			Name = "Health_1d";
+			TypeName = "Health";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 4000;
+					IconName = "Health";
+					DisplayName = "$addOn.Health4";
+					Description = "$addOn.Health4Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Health";
+							Mod = 250.0;
+							Recover = true;
+						};
+					};
+				};
+				
+			};
+		};
+		"Health_2" = BuildingAddon
+		{
+			Name = "Health_2";
+			TypeName = "Health";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 1000;
+					IconName = "Health";
+					DisplayName = "$addOn.Health2";
+					Description = "$addOn.Health2Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Health";
+							Mod = 150.0;
+							Recover = true;
+						};
+					};
+				};
+				
+			};
+		};
+		"Health_3" = BuildingAddon
+		{
+			Name = "Health_3";
+			TypeName = "Health";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 2000;
+					IconName = "Health";
+					DisplayName = "$addOn.Health3";
+					Description = "$addOn.Health3Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Health";
+							Mod = 200.0;
+							Recover = true;
+						};
+					};
+				};
+				
+			};
+		};
+		"FireProtection_1_1" = BuildingAddon
+		{
+			Name = "FireProtection_1_1";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 300;
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection1.1";
+					Description = "$addOn.FireProtection1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+				
+			};
+		};
+		"FireProtection_1_1b" = BuildingAddon
+		{
+			Name = "FireProtection_1_1b";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 600;
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection1.1";
+					Description = "$addOn.FireProtection1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FireProtection_2_1b" = BuildingAddon
+		{
+			Name = "FireProtection_2_1b";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 1200;
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection2.1";
+					Description = "$addOn.FireProtection1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FireProtection_3_1b" = BuildingAddon
+		{
+			Name = "FireProtection_3_1b";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 2400;
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection3.1";
+					Description = "$addOn.FireProtection1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FireProtection_1_2" = BuildingAddon
+		{
+			Name = "FireProtection_1_2";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 600;
+					
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection1.2";
+					Description = "$addOn.FireProtection1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};				
+			};
+		};
+		"FireProtection_1_2b" = BuildingAddon
+		{
+			Name = "FireProtection_1_2b";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 1200;
+					
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection1.2";
+					Description = "$addOn.FireProtection1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};				
+			};
+		};
+		"FireProtection_1_3" = BuildingAddon
+		{
+			Name = "FireProtection_1_3";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 1200;
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection1.3";
+					Description = "$addOn.FireProtection1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};				
+			};
+		};
+		"FireProtection_1_3b" = BuildingAddon
+		{
+			Name = "FireProtection_1_3b";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 2400;
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection1.3";
+					Description = "$addOn.FireProtection1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};				
+			};
+		};
+				
+		"FireProtection_2_1" = BuildingAddon
+		{
+			Name = "FireProtection_2_1";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 600;
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection2.1";
+					Description = "$addOn.FireProtection2Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FireProtection_2_2" = BuildingAddon
+		{
+			Name = "FireProtection_2_2";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 2400;
+					
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection2.2";
+					Description = "$addOn.FireProtection2Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FireProtection_2_3" = BuildingAddon
+		{
+			Name = "FireProtection_2_3";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 4800;
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection2.3";
+					Description = "$addOn.FireProtection2Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+				
+		"FireProtection_3_1" = BuildingAddon
+		{
+			Name = "FireProtection_3_1";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 1200;
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection3.1";
+					Description = "$addOn.FireProtection3Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		
+		"FireProtection_3_2" = BuildingAddon
+		{
+			Name = "FireProtection_3_2";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 3600;
+					
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection3.2";
+					Description = "$addOn.FireProtection3Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FireProtection_3_2a" = BuildingAddon
+		{
+			Name = "FireProtection_3_2a";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 4800;
+					
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection3.2";
+					Description = "$addOn.FireProtection3Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FireProtection_3_3" = BuildingAddon
+		{
+			Name = "FireProtection_3_3";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 6000;
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection3.3";
+					Description = "$addOn.FireProtection3Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FireProtection_3_3a" = BuildingAddon
+		{
+			Name = "FireProtection_3_3a";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 7200;
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection3.3";
+					Description = "$addOn.FireProtection3Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FireProtection_3_3b" = BuildingAddon
+		{
+			Name = "FireProtection_3_3b";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 8400;
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection3.3";
+					Description = "$addOn.FireProtection3Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FireProtection_other_small_1" = BuildingAddon
+		{
+			Name = "FireProtection_other_small_1";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 300;
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection.Other";
+					Description = "$addOn.FireProtectionOtherDesc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FireProtection_other_small_2" = BuildingAddon
+		{
+			Name = "FireProtection_other_small_2";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 600;
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection.Other";
+					Description = "$addOn.FireProtectionOtherDesc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FireProtection_other_small_3" = BuildingAddon
+		{
+			Name = "FireProtection_other_small_3";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 2400;
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection.Other";
+					Description = "$addOn.FireProtectionOtherDesc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FireProtection_other_medium_1" = BuildingAddon
+		{
+			Name = "FireProtection_other_medium_1";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 600;
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection.Other";
+					Description = "$addOn.FireProtectionOtherDesc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FireProtection_other_medium_2" = BuildingAddon
+		{
+			Name = "FireProtection_other_medium_2";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 1200;
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection.Other";
+					Description = "$addOn.FireProtectionOtherDesc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};		
+		"FireProtection_other_medium_3" = BuildingAddon
+		{
+			Name = "FireProtection_other_medium_3";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 2400;
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection.Other";
+					Description = "$addOn.FireProtectionOtherDesc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};		
+		"FireProtection_other_large_1" = BuildingAddon
+		{
+			Name = "FireProtection_other_large_1";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 1200;
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection.Other";
+					Description = "$addOn.FireProtectionOtherDesc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};	
+		"FireProtection_other_large_2" = BuildingAddon
+		{
+			Name = "FireProtection_other_large_2";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 2400;
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection.Other";
+					Description = "$addOn.FireProtectionOtherDesc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FireProtection_other_large_3" = BuildingAddon
+		{
+			Name = "FireProtection_other_large_3";
+			TypeName = "FireProtection";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 4800;
+					IconName = "FireProtection";
+					DisplayName = "$addOn.FireProtection.Other";
+					Description = "$addOn.FireProtectionOtherDesc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FireProtection";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};		
+		
+		"BurglaryProtection_1_1" = BuildingAddon
+		{
+			Name = "BurglaryProtection_1_1";
+			TypeName = "BuildingSecurity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 300;
+					
+					IconName = "BuildingSecurity";
+					DisplayName = "$addOn.BuildingSecurity1.1";
+					Description = "$addOn.BuildingSecurity1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "BuildingSecurity";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"BurglaryProtection_1_1b" = BuildingAddon
+		{
+			Name = "BurglaryProtection_1_1b";
+			TypeName = "BuildingSecurity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 600;
+					
+					IconName = "BuildingSecurity";
+					DisplayName = "$addOn.BuildingSecurity1.1";
+					Description = "$addOn.BuildingSecurity1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "BuildingSecurity";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		
+		"BurglaryProtection_1_2" = BuildingAddon
+		{
+			Name = "BurglaryProtection_1_2";
+			TypeName = "BuildingSecurity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 600;
+					
+					IconName = "BuildingSecurity";
+					DisplayName = "$addOn.BuildingSecurity1.2";
+					Description = "$addOn.BuildingSecurity1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "BuildingSecurity";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		
+		"BurglaryProtection_1_3" = BuildingAddon
+		{
+			Name = "BurglaryProtection_1_3";
+			TypeName = "BuildingSecurity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 1200;
+					
+					IconName = "BuildingSecurity";
+					DisplayName = "$addOn.BuildingSecurity1.3";
+					Description = "$addOn.BuildingSecurity1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "BuildingSecurity";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		
+		"BurglaryProtection_2_1" = BuildingAddon
+		{
+			Name = "BurglaryProtection_2_1";
+			TypeName = "BuildingSecurity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 600;
+					
+					IconName = "BuildingSecurity";
+					DisplayName = "$addOn.BuildingSecurity2.1";
+					Description = "$addOn.BuildingSecurity2Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "BuildingSecurity";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+
+		"BurglaryProtection_2_1b" = BuildingAddon
+		{
+			Name = "BurglaryProtection_2_1b";
+			TypeName = "BuildingSecurity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 1200;
+					
+					IconName = "BuildingSecurity";
+					DisplayName = "$addOn.BuildingSecurity2.1";
+					Description = "$addOn.BuildingSecurity2Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "BuildingSecurity";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		
+		"BurglaryProtection_2_2" = BuildingAddon
+		{
+			Name = "BurglaryProtection_2_2";
+			TypeName = "BuildingSecurity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 2400;
+					
+					IconName = "BuildingSecurity";
+					DisplayName = "$addOn.BuildingSecurity2.2";
+					Description = "$addOn.BuildingSecurity2Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "BuildingSecurity";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		
+		"BurglaryProtection_2_3" = BuildingAddon
+		{
+			Name = "BurglaryProtection_2_3";
+			TypeName = "BuildingSecurity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 4800;
+					
+					IconName = "BuildingSecurity";
+					DisplayName = "$addOn.BuildingSecurity2.3";
+					Description = "$addOn.BuildingSecurity2Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "BuildingSecurity";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		
+		"BurglaryProtection_3_1" = BuildingAddon
+		{
+			Name = "BurglaryProtection_3_1";
+			TypeName = "BuildingSecurity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 1200;
+					
+					IconName = "BuildingSecurity";
+					DisplayName = "$addOn.BuildingSecurity3.1";
+					Description = "$addOn.BuildingSecurity3Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "BuildingSecurity";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+
+		"BurglaryProtection_3_1b" = BuildingAddon
+		{
+			Name = "BurglaryProtection_3_1b";
+			TypeName = "BuildingSecurity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 2400;
+					
+					IconName = "BuildingSecurity";
+					DisplayName = "$addOn.BuildingSecurity3.1";
+					Description = "$addOn.BuildingSecurity3Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "BuildingSecurity";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		
+		"BurglaryProtection_3_2" = BuildingAddon
+		{
+			Name = "BurglaryProtection_3_2";
+			TypeName = "BuildingSecurity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 3600;
+					
+					IconName = "BuildingSecurity";
+					DisplayName = "$addOn.BuildingSecurity3.2";
+					Description = "$addOn.BuildingSecurity3Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "BuildingSecurity";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+
+		"BurglaryProtection_3_2a" = BuildingAddon
+		{
+			Name = "BurglaryProtection_3_2a";
+			TypeName = "BuildingSecurity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 4800;
+					
+					IconName = "BuildingSecurity";
+					DisplayName = "$addOn.BuildingSecurity3.2";
+					Description = "$addOn.BuildingSecurity3Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "BuildingSecurity";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};		
+		"BurglaryProtection_3_2b" = BuildingAddon
+		{
+			Name = "BurglaryProtection_3_2b";
+			TypeName = "BuildingSecurity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 6000;
+					
+					IconName = "BuildingSecurity";
+					DisplayName = "$addOn.BuildingSecurity3.2";
+					Description = "$addOn.BuildingSecurity3Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "BuildingSecurity";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"BurglaryProtection_3_3" = BuildingAddon
+		{
+			Name = "BurglaryProtection_3_3";
+			TypeName = "BuildingSecurity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 6000;
+					
+					IconName = "BuildingSecurity";
+					DisplayName = "$addOn.BuildingSecurity3.3";
+					Description = "$addOn.BuildingSecurity3Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "BuildingSecurity";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"BurglaryProtection_3_3a" = BuildingAddon
+		{
+			Name = "BurglaryProtection_3_3a";
+			TypeName = "BuildingSecurity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 7200;
+					
+					IconName = "BuildingSecurity";
+					DisplayName = "$addOn.BuildingSecurity3.3";
+					Description = "$addOn.BuildingSecurity3Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "BuildingSecurity";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"BurglaryProtection_3_3b" = BuildingAddon
+		{
+			Name = "BurglaryProtection_3_3b";
+			TypeName = "BuildingSecurity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 8400;
+					
+					IconName = "BuildingSecurity";
+					DisplayName = "$addOn.BuildingSecurity3.3";
+					Description = "$addOn.BuildingSecurity3Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "BuildingSecurity";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		/*
+		"Productivity" = BuildingAddon
+		{
+			Name = "Productivity";
+			TypeName = "Productivity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 600;
+					IconName = "Productivity";
+					DisplayName = "$addOn.Productivity1";
+					Description = "$addOn.Productivity1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Productivity";
+							Mod = 0.05;
+							Recover = true;
+						};
+					};
+				};
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 1200;
+					
+					IconName = "Productivity";
+					DisplayName = "$addOn.Productivity2";
+					Description = "$addOn.Productivity2Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Productivity";
+							Mod = 0.05;
+							Recover = true;
+						};
+					};
+				};
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 2400;
+					
+					IconName = "Productivity";
+					DisplayName = "$addOn.Productivity3";
+					Description = "$addOn.Productivity3Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Productivity";
+							Mod = 0.1;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		*/
+		
+		"Productivity_Level1_1" = BuildingAddon
+		{
+			Name = "Productivity_Level1_1";
+			TypeName = "Productivity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 600;
+					IconName = "Productivity";
+					DisplayName = "$addOn.Productivity1";
+					Description = "$addOn.Productivity1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Productivity";
+							Mod = 0.05;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		
+		"Productivity_Level1_2" = BuildingAddon
+		{
+			Name = "Productivity_Level1_2";
+			TypeName = "Productivity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 1200;
+					
+					IconName = "Productivity";
+					DisplayName = "$addOn.Productivity2";
+					Description = "$addOn.Productivity2Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Productivity";
+							Mod = 0.05;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		
+		"Productivity_Level1_3" = BuildingAddon
+		{
+			Name = "Productivity_Level1_3";
+			TypeName = "Productivity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 2400;
+					
+					IconName = "Productivity";
+					DisplayName = "$addOn.Productivity3";
+					Description = "$addOn.Productivity3Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Productivity";
+							Mod = 0.1;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+
+		"Productivity_1a" = BuildingAddon
+		{
+			Name = "Productivity_1a";
+			TypeName = "Productivity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 600;
+					IconName = "Productivity";
+					DisplayName = "$addOn.Productivity1";
+					Description = "$addOn.Productivity1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Productivity";
+							Mod = 0.05;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+
+		"Productivity_1b" = BuildingAddon
+		{
+			Name = "Productivity_1b";
+			TypeName = "Productivity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 1200;
+					
+					IconName = "Productivity";
+					DisplayName = "$addOn.Productivity2";
+					Description = "$addOn.Productivity2Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Productivity";
+							Mod = 0.05;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+
+		"Productivity_1_2" = BuildingAddon
+		{
+			Name = "Productivity_1_2";
+			TypeName = "Productivity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 3600;
+					IconName = "Productivity";
+					DisplayName = "$addOn.Productivity1";
+					Description = "$addOn.Productivity1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Productivity";
+							Mod = 0.05;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+
+		"Productivity_1_3" = BuildingAddon
+		{
+			Name = "Productivity_1_3";
+			TypeName = "Productivity";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 4800;
+					
+					IconName = "Productivity";
+					DisplayName = "$addOn.Productivity2";
+					Description = "$addOn.Productivity2Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Productivity";
+							Mod = 0.05;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		
+		/*"AttractCrowd" = BuildingAddon
+		{
+			Name = "AttractCrowd";
+			TypeName = "Attractiveness";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 600;
+					
+					IconName = "Attractiveness";
+					DisplayName = "$addOn.Attractiveness1";
+					Description = "$addOn.Attractiveness1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Attractiveness";
+							Mod = 10.0;
+							Recover = true;
+						};
+					};
+				};
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 1200;
+					
+					IconName = "Attractiveness";
+					DisplayName = "$addOn.Attractiveness2";
+					Description = "$addOn.Attractiveness2Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Attractiveness";
+							Mod = 20.0;
+							Recover = true;
+						};
+					};
+				};
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 2400;
+					
+					IconName = "Attractiveness";
+					DisplayName = "$addOn.Attractiveness3";
+					Description = "$addOn.Attractiveness3Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Attractiveness";
+							Mod = 20.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		*/
+		"AttractCrowd_Level1_1" = BuildingAddon
+		{
+			Name = "AttractCrowd_Level1_1";
+			TypeName = "Attractiveness";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 600;
+					
+					IconName = "Attractiveness";
+					DisplayName = "$addOn.Attractiveness1";
+					Description = "$addOn.Attractiveness1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Attractiveness";
+							Mod = 10.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		
+		"AttractCrowd_Level1_2" = BuildingAddon
+		{
+			Name = "AttractCrowd_Level1_2";
+			TypeName = "Attractiveness";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 1200;
+					
+					IconName = "Attractiveness";
+					DisplayName = "$addOn.Attractiveness2";
+					Description = "$addOn.Attractiveness2Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Attractiveness";
+							Mod = 20.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		
+		"AttractCrowd_Level1_3" = BuildingAddon
+		{
+			Name = "AttractCrowd_Level1_3 ";
+			TypeName = "Attractiveness";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 2400;
+					
+					IconName = "Attractiveness";
+					DisplayName = "$addOn.Attractiveness3";
+					Description = "$addOn.Attractiveness3Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Attractiveness";
+							Mod = 20.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		
+		"AttractCrowd_1a" = BuildingAddon
+		{
+			Name = "AttractCrowd_1a";
+			TypeName = "Attractiveness";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 600;
+					
+					IconName = "Attractiveness";
+					DisplayName = "$addOn.Attractiveness1";
+					Description = "$addOn.Attractiveness1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Attractiveness";
+							Mod = 10.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"AttractCrowd_1b" = BuildingAddon
+		{
+			Name = "AttractCrowd_1b";
+			TypeName = "Attractiveness";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 1200;
+					
+					IconName = "Attractiveness";
+					DisplayName = "$addOn.Attractiveness2";
+					Description = "$addOn.Attractiveness2Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Attractiveness";
+							Mod = 10.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"AttractCrowd_3a" = BuildingAddon
+		{
+			Name = "AttractCrowd_3a";
+			TypeName = "Attractiveness";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 3600;
+					
+					IconName = "Attractiveness";
+					DisplayName = "$addOn.Attractiveness3";
+					Description = "$addOn.Attractiveness3Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "Attractiveness";
+							Mod = 10.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"MoreEmployees1_1" = BuildingAddon
+		{
+			Name = "MoreEmployees1_1";
+			TypeName = "MaxEmployees";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 600;
+					
+					IconName = "MaxEmployees";
+					DisplayName = "$addOn.MaxEmployees1";
+					Description = "$addOn.MaxEmployees1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "MaxEmployees";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"MoreEmployees1_2" = BuildingAddon
+		{
+			Name = "MoreEmployees1_2";
+			TypeName = "MaxEmployees";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 1200;
+					
+					IconName = "MaxEmployees";
+					DisplayName = "$addOn.MaxEmployees1";
+					Description = "$addOn.MaxEmployees1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "MaxEmployees";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"MoreEmployees1_3" = BuildingAddon
+		{
+			Name = "MoreEmployees1_3";
+			TypeName = "MaxEmployees";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 2400;
+					
+					IconName = "MaxEmployees";
+					DisplayName = "$addOn.MaxEmployees1";
+					Description = "$addOn.MaxEmployees1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "MaxEmployees";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"MoreEmployees2_1" = BuildingAddon
+		{
+			Name = "MoreEmployees2_1";
+			TypeName = "MaxEmployees";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 1200;
+					
+					IconName = "MaxEmployees";
+					DisplayName = "$addOn.MaxEmployees1";
+					Description = "$addOn.MaxEmployees1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "MaxEmployees";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"MoreEmployees2_2" = BuildingAddon
+		{
+			Name = "MoreEmployees2_2";
+			TypeName = "MaxEmployees";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 2400;
+					
+					IconName = "MaxEmployees";
+					DisplayName = "$addOn.MaxEmployees1";
+					Description = "$addOn.MaxEmployees1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "MaxEmployees";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"MoreEmployees2_3" = BuildingAddon
+		{
+			Name = "MoreEmployees2_3";
+			TypeName = "MaxEmployees";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 4800;
+					
+					IconName = "MaxEmployees";
+					DisplayName = "$addOn.MaxEmployees1";
+					Description = "$addOn.MaxEmployees1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "MaxEmployees";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"MoreEmployeesTransport_1_1" = BuildingAddon
+		{
+			Name = "MoreEmployeesTransport_1_1";
+			TypeName = "MaxTransporters";
+
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 600;
+					
+					IconName = "MaxTransporters";
+					DisplayName = "$addOn.MaxTransporters1";
+					Description = "$addOn.MaxTransporters1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "MaxTransporters";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"MoreEmployeesTransport_2_1" = BuildingAddon
+		{
+			Name = "MoreEmployeesTransport_2_1";
+			TypeName = "MaxTransporters";
+
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 1200;
+					
+					IconName = "MaxTransporters";
+					DisplayName = "$addOn.MaxTransporters1";
+					Description = "$addOn.MaxTransporters1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "MaxTransporters";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"MoreEmployeesTransport_3_1" = BuildingAddon
+		{
+			Name = "MoreEmployeesTransport_3_1";
+			TypeName = "MaxTransporters";
+
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 2400;
+					
+					IconName = "MaxTransporters";
+					DisplayName = "$addOn.MaxTransporters1";
+					Description = "$addOn.MaxTransporters1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "MaxTransporters";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"MoreEmployeesTransport_1_2" = BuildingAddon
+		{
+			Name = "MoreEmployeesTransport_1_2";
+			TypeName = "MaxTransporters";
+
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 1200;
+					
+					IconName = "MaxTransporters";
+					DisplayName = "$addOn.MaxTransporters1";
+					Description = "$addOn.MaxTransporters1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "MaxTransporters";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"MoreEmployeesTransport_2_2" = BuildingAddon
+		{
+			Name = "MoreEmployeesTransport_2_2";
+			TypeName = "MaxTransporters";
+
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 2400;
+					
+					IconName = "MaxTransporters";
+					DisplayName = "$addOn.MaxTransporters1";
+					Description = "$addOn.MaxTransporters1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "MaxTransporters";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"MoreEmployeesTransport_1_3" = BuildingAddon
+		{
+			Name = "MoreEmployeesTransport_1_3";
+			TypeName = "MaxTransporters";
+
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 2400;
+					
+					IconName = "MaxTransporters";
+					DisplayName = "$addOn.MaxTransporters1";
+					Description = "$addOn.MaxTransporters1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "MaxTransporters";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"MoreEmployeesTransport_2_3" = BuildingAddon
+		{
+			Name = "MoreEmployeesTransport_2_3";
+			TypeName = "MaxTransporters";
+
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 4800;
+					
+					IconName = "MaxTransporters";
+					DisplayName = "$addOn.MaxTransporters1";
+					Description = "$addOn.MaxTransporters1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "MaxTransporters";
+							Mod = 1.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		
+		"StorageSlots_1_1" = BuildingAddon
+		{
+			Name = "StorageSlots_1_1";
+			TypeName = "StorageSlots";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 600;
+					
+					IconName = "StorageSlots";
+					DisplayName = "$addOn.StorageSlots1";
+					Description = "$addOn.StorageSlots1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "StorageSlots";
+							Mod = 2.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"StorageSlots_2_1" = BuildingAddon
+		{
+			Name = "StorageSlots_2_1";
+			TypeName = "StorageSlots";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 1200;
+					
+					IconName = "StorageSlots";
+					DisplayName = "$addOn.StorageSlots1";
+					Description = "$addOn.StorageSlots1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "StorageSlots";
+							Mod = 2.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"StorageSlots_3_1" = BuildingAddon
+		{
+			Name = "StorageSlots_3_1";
+			TypeName = "StorageSlots";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 2400;
+					
+					IconName = "StorageSlots";
+					DisplayName = "$addOn.StorageSlots1";
+					Description = "$addOn.StorageSlots1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "StorageSlots";
+							Mod = 2.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"StorageSlots_4_1" = BuildingAddon
+		{
+			Name = "StorageSlots_4_1";
+			TypeName = "StorageSlots";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 3600;
+					
+					IconName = "StorageSlots";
+					DisplayName = "$addOn.StorageSlots1";
+					Description = "$addOn.StorageSlots1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "StorageSlots";
+							Mod = 2.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"StorageSlots_1_2" = BuildingAddon
+		{
+			Name = "StorageSlots_1_2";
+			TypeName = "StorageSlots";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 1200;
+					
+					IconName = "StorageSlots";
+					DisplayName = "$addOn.StorageSlots1";
+					Description = "$addOn.StorageSlots1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "StorageSlots";
+							Mod = 2.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"StorageSlots_2_2" = BuildingAddon
+		{
+			Name = "StorageSlots_2_2";
+			TypeName = "StorageSlots";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 2400;
+					
+					IconName = "StorageSlots";
+					DisplayName = "$addOn.StorageSlots1";
+					Description = "$addOn.StorageSlots1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "StorageSlots";
+							Mod = 2.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"StorageSlots_3_2" = BuildingAddon
+		{
+			Name = "StorageSlots_3_2";
+			TypeName = "StorageSlots";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 4800;
+					
+					IconName = "StorageSlots";
+					DisplayName = "$addOn.StorageSlots1";
+					Description = "$addOn.StorageSlots1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "StorageSlots";
+							Mod = 2.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"StorageSlots_4_2" = BuildingAddon
+		{
+			Name = "StorageSlots_4_2";
+			TypeName = "StorageSlots";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 6000;
+					
+					IconName = "StorageSlots";
+					DisplayName = "$addOn.StorageSlots1";
+					Description = "$addOn.StorageSlots1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "StorageSlots";
+							Mod = 2.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"StorageSlots_1_3" = BuildingAddon
+		{
+			Name = "StorageSlots_1_3";
+			TypeName = "StorageSlots";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 2400;
+					
+					IconName = "StorageSlots";
+					DisplayName = "$addOn.StorageSlots1";
+					Description = "$addOn.StorageSlots1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "StorageSlots";
+							Mod = 2.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"StorageSlots_2_3" = BuildingAddon
+		{
+			Name = "StorageSlots_2_3";
+			TypeName = "StorageSlots";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 7200;
+					
+					IconName = "StorageSlots";
+					DisplayName = "$addOn.StorageSlots1";
+					Description = "$addOn.StorageSlots1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "StorageSlots";
+							Mod = 2.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"StorageSlots_3_3" = BuildingAddon
+		{
+			Name = "StorageSlots_3_3";
+			TypeName = "StorageSlots";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 9600;
+					
+					IconName = "StorageSlots";
+					DisplayName = "$addOn.StorageSlots1";
+					Description = "$addOn.StorageSlots1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "StorageSlots";
+							Mod = 2.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"StorageSpace_1_1" = BuildingAddon
+		{
+			Name = "StorageSpace_1_1";
+			TypeName = "StorageSpace";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 1000;
+					
+					IconName = "StorageSpace";
+					DisplayName = "$addOn.StorageSpace1";
+					Description = "$addOn.StorageSpace1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "StorageSpace";
+							Mod = 5.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"StorageSpace_2_1" = BuildingAddon
+		{
+			Name = "StorageSpace_2_1";
+			TypeName = "StorageSpace";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 2000;
+					
+					IconName = "StorageSpace";
+					DisplayName = "$addOn.StorageSpace1";
+					Description = "$addOn.StorageSpace1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "StorageSpace";
+							Mod = 5.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"StorageSpace_3_1" = BuildingAddon
+		{
+			Name = "StorageSpace_3_1";
+			TypeName = "StorageSpace";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 4000;
+					
+					IconName = "StorageSpace";
+					DisplayName = "$addOn.StorageSpace1";
+					Description = "$addOn.StorageSpace1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "StorageSpace";
+							Mod = 10.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"StorageSpace_4_1" = BuildingAddon
+		{
+			Name = "StorageSpace_4_1";
+			TypeName = "StorageSpace";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 6000;
+					
+					IconName = "StorageSpace";
+					DisplayName = "$addOn.StorageSpace1";
+					Description = "$addOn.StorageSpace1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "StorageSpace";
+							Mod = 10.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"StorageSpace_1_2" = BuildingAddon
+		{
+			Name = "StorageSpace_1_2";
+			TypeName = "StorageSpace";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 3000;
+					
+					IconName = "StorageSpace";
+					DisplayName = "$addOn.StorageSpace1";
+					Description = "$addOn.StorageSpace1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "StorageSpace";
+							Mod = 5.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"StorageSpace_2_2" = BuildingAddon
+		{
+			Name = "StorageSpace_2_2";
+			TypeName = "StorageSpace";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 4000;
+					
+					IconName = "StorageSpace";
+					DisplayName = "$addOn.StorageSpace1";
+					Description = "$addOn.StorageSpace1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "StorageSpace";
+							Mod = 5.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"StorageSpace_3_2" = BuildingAddon
+		{
+			Name = "StorageSpace_3_2";
+			TypeName = "StorageSpace";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 8000;
+					
+					IconName = "StorageSpace";
+					DisplayName = "$addOn.StorageSpace1";
+					Description = "$addOn.StorageSpace1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "StorageSpace";
+							Mod = 10.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"StorageSpace_1_3" = BuildingAddon
+		{
+			Name = "StorageSpace_1_3";
+			TypeName = "StorageSpace";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 5000;
+					
+					IconName = "StorageSpace";
+					DisplayName = "$addOn.StorageSpace1";
+					Description = "$addOn.StorageSpace1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "StorageSpace";
+							Mod = 5.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"StorageSpace_2_3" = BuildingAddon
+		{
+			Name = "StorageSpace_2_3";
+			TypeName = "StorageSpace";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 6000;
+					
+					IconName = "StorageSpace";
+					DisplayName = "$addOn.StorageSpace1";
+					Description = "$addOn.StorageSpace1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "StorageSpace";
+							Mod = 5.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"StorageSpace_3_3" = BuildingAddon
+		{
+			Name = "StorageSpace_3_3";
+			TypeName = "StorageSpace";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 10000;
+					
+					IconName = "StorageSpace";
+					DisplayName = "$addOn.StorageSpace1";
+					Description = "$addOn.StorageSpace1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "StorageSpace";
+							Mod = 10.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		
+		"FrontStoreSlots_1_1" = BuildingAddon
+		{
+			Name = "FrontStoreSlots_1_1";
+			TypeName = "FrontStoreSlots";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 1000;
+					
+					IconName = "FrontStoreSlots";
+					DisplayName = "$addOn.FrontStoreSlots1";
+					Description = "$addOn.FrontStoreSlots1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FrontStoreSlots";
+							Mod = 2.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FrontStoreSlots_2_1" = BuildingAddon
+		{
+			Name = "FrontStoreSlots_2_1";
+			TypeName = "FrontStoreSlots";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 2000;
+					
+					IconName = "FrontStoreSlots";
+					DisplayName = "$addOn.FrontStoreSlots1";
+					Description = "$addOn.FrontStoreSlots1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FrontStoreSlots";
+							Mod = 2.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FrontStoreSlots_3_1" = BuildingAddon
+		{
+			Name = "FrontStoreSlots_3_1";
+			TypeName = "FrontStoreSlots";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 4000;
+					
+					IconName = "FrontStoreSlots";
+					DisplayName = "$addOn.FrontStoreSlots1";
+					Description = "$addOn.FrontStoreSlots1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FrontStoreSlots";
+							Mod = 2.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FrontStoreSlots_1_2" = BuildingAddon
+		{
+			Name = "FrontStoreSlots_1_2";
+			TypeName = "FrontStoreSlots";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 2000;
+					
+					IconName = "FrontStoreSlots";
+					DisplayName = "$addOn.FrontStoreSlots1";
+					Description = "$addOn.FrontStoreSlots1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FrontStoreSlots";
+							Mod = 2.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FrontStoreSlots_2_2" = BuildingAddon
+		{
+			Name = "FrontStoreSlots_2_2";
+			TypeName = "FrontStoreSlots";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 4000;
+					
+					IconName = "FrontStoreSlots";
+					DisplayName = "$addOn.FrontStoreSlots1";
+					Description = "$addOn.FrontStoreSlots1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FrontStoreSlots";
+							Mod = 2.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FrontStoreSlots_3_2" = BuildingAddon
+		{
+			Name = "FrontStoreSlots_3_2";
+			TypeName = "FrontStoreSlots";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 8000;
+					
+					IconName = "FrontStoreSlots";
+					DisplayName = "$addOn.FrontStoreSlots1";
+					Description = "$addOn.FrontStoreSlots1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FrontStoreSlots";
+							Mod = 2.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FrontStoreSlots_1_3" = BuildingAddon
+		{
+			Name = "FrontStoreSlots_1_3";
+			TypeName = "FrontStoreSlots";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 6000;
+					
+					IconName = "FrontStoreSlots";
+					DisplayName = "$addOn.FrontStoreSlots1";
+					Description = "$addOn.FrontStoreSlots1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FrontStoreSlots";
+							Mod = 2.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FrontStoreSlots_2_3" = BuildingAddon
+		{
+			Name = "FrontStoreSlots_2_3";
+			TypeName = "FrontStoreSlots";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 8000;
+					
+					IconName = "FrontStoreSlots";
+					DisplayName = "$addOn.FrontStoreSlots1";
+					Description = "$addOn.FrontStoreSlots1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FrontStoreSlots";
+							Mod = 2.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FrontStoreSlots_3_3" = BuildingAddon
+		{
+			Name = "FrontStoreSlots_3_3";
+			TypeName = "FrontStoreSlots";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 16000;
+					
+					IconName = "FrontStoreSlots";
+					DisplayName = "$addOn.FrontStoreSlots1";
+					Description = "$addOn.FrontStoreSlots1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FrontStoreSlots";
+							Mod = 2.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FrontStoreSpace_1_1" = BuildingAddon
+		{
+			Name = "FrontStoreSpace_1_1";
+			TypeName = "FrontStoreSpace";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 1000;
+					
+					IconName = "FrontStoreSpace";
+					DisplayName = "$addOn.FrontStoreSpace1";
+					Description = "$addOn.FrontStoreSpace1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FrontStoreSpace";
+							Mod = 5.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FrontStoreSpace_2_1" = BuildingAddon
+		{
+			Name = "FrontStoreSpace_2_1";
+			TypeName = "FrontStoreSpace";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 2000;
+					
+					IconName = "FrontStoreSpace";
+					DisplayName = "$addOn.FrontStoreSpace1";
+					Description = "$addOn.FrontStoreSpace1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FrontStoreSpace";
+							Mod = 5.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FrontStoreSpace_3_1" = BuildingAddon
+		{
+			Name = "FrontStoreSpace_3_1";
+			TypeName = "FrontStoreSpace";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 1;
+					Cost = 4000;
+					
+					IconName = "FrontStoreSpace";
+					DisplayName = "$addOn.FrontStoreSpace1";
+					Description = "$addOn.FrontStoreSpace1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FrontStoreSpace";
+							Mod = 10.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FrontStoreSpace_1_2" = BuildingAddon
+		{
+			Name = "FrontStoreSpace_1_2";
+			TypeName = "FrontStoreSpace";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 3000;
+					
+					IconName = "FrontStoreSpace";
+					DisplayName = "$addOn.FrontStoreSpace1";
+					Description = "$addOn.FrontStoreSpace1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FrontStoreSpace";
+							Mod = 5.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FrontStoreSpace_2_2" = BuildingAddon
+		{
+			Name = "FrontStoreSpace_2_2";
+			TypeName = "FrontStoreSpace";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 4000;
+					
+					IconName = "FrontStoreSpace";
+					DisplayName = "$addOn.FrontStoreSpace1";
+					Description = "$addOn.FrontStoreSpace1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FrontStoreSpace";
+							Mod = 5.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FrontStoreSpace_3_2" = BuildingAddon
+		{
+			Name = "FrontStoreSpace_3_2";
+			TypeName = "FrontStoreSpace";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 2;
+					Cost = 8000;
+					
+					IconName = "FrontStoreSpace";
+					DisplayName = "$addOn.FrontStoreSpace1";
+					Description = "$addOn.FrontStoreSpace1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FrontStoreSpace";
+							Mod = 10.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FrontStoreSpace_1_3" = BuildingAddon
+		{
+			Name = "FrontStoreSpace_1_3";
+			TypeName = "FrontStoreSpace";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 5000;
+					
+					IconName = "FrontStoreSpace";
+					DisplayName = "$addOn.FrontStoreSpace1";
+					Description = "$addOn.FrontStoreSpace1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FrontStoreSpace";
+							Mod = 5.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FrontStoreSpace_2_3" = BuildingAddon
+		{
+			Name = "FrontStoreSpace_2_3";
+			TypeName = "FrontStoreSpace";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 6000;
+					
+					IconName = "FrontStoreSpace";
+					DisplayName = "$addOn.FrontStoreSpace1";
+					Description = "$addOn.FrontStoreSpace1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FrontStoreSpace";
+							Mod = 5.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+		"FrontStoreSpace_3_3" = BuildingAddon
+		{
+			Name = "FrontStoreSpace_3_3";
+			TypeName = "FrontStoreSpace";
+			
+			Levels = array
+			{
+				BuildingAddonLevel
+				{
+					RequiredBuildingLevel = 3;
+					Cost = 16000;
+					
+					IconName = "FrontStoreSpace";
+					DisplayName = "$addOn.FrontStoreSpace1";
+					Description = "$addOn.FrontStoreSpace1Desc";
+					
+					Results = array 
+					{
+						ModifierEffect
+						{
+							ActorValue = "FrontStoreSpace";
+							Mod = 10.0;
+							Recover = true;
+						};
+					};
+				};
+			};
+		};
+	};
+};

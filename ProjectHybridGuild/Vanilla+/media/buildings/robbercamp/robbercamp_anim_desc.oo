@@ -1,0 +1,12 @@
+G3ActorDesc
+{
+	Visual = "robbercamp";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#robbercamp/animation,
+		);
+	};
+//	CrowdControlRadius = -60288328124521364000000.000;
+}

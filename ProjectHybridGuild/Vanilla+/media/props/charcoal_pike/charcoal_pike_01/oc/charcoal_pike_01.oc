@@ -1,0 +1,16 @@
+charcoal_pike_01 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "charcoal_pike_01";
+	};
+	
+	function onSpawn()
+	{
+		this.playAnimationByName("Idle");
+	}
+	
+	EditorName = "Charcoal pike01";
+	EditorIcon = "media/UserInterface/PropIcons/Charcoalpike01.png";
+	EditorCategory = 3;		
+}

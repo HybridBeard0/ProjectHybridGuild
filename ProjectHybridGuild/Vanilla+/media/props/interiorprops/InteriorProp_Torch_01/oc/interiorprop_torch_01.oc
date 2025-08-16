@@ -1,0 +1,18 @@
+interiorprop_torch_01 extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "interiorprop_torch_01";
+		AnimationArray = AnimationListArray
+		{
+			AnimationLists = array
+			(
+				#interiorprop_torch_01/torch_01_idles_animations,
+			);
+		};
+
+	};
+	EditorName = "InteriorProp Torch 01";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

@@ -1,0 +1,30 @@
+interiorprop_townhallreceptionistchair extends G3PropsInstance
+{
+	static var Description = G3PropDesc
+	{
+		Visual = "interiorprop_mansionchair1";
+
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc
+				{
+					Name = "sit00";
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Animation = "sit_idle1";
+							Context = "SitOnBench";
+						},
+					};
+				},
+			};
+		};
+	};
+	
+	Interactable = false;
+	
+	EditorName = "InteriorProp Town Hall Receptionist Chair";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

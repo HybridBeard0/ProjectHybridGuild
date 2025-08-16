@@ -1,0 +1,13 @@
+Mountain_03 extends G3PropsInstance
+{
+	CustomFadeAlpha = 1.0;
+	Destructible = false;
+
+	static var Description = ActorDesc
+	{
+		Visual = "mountain_03";
+	};
+	EditorName = "Mountain_03";
+	EditorIcon = "media/UserInterface/PropIcons/Mountain_03.png";
+	EditorCategory = 8;
+}

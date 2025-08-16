@@ -1,0 +1,607 @@
+cityhouse_08 extends Building
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "cityhouse_08";
+
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc {
+					Name = "enter";
+					Position = ( -19.0, 80.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+				},
+				SnapPointDesc {
+					Name = "exit";
+					Position = ( -19.0, 80.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "streetconnection";
+					Position = ( -19.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "master01";
+					Position = ( 50.0, 35.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 220.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Master"; // actions: OverseeWorkers, WhipTransporters, MotivateWorkers, Smear, Commend
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "master02";
+					Position = ( -50.0, 55.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 150.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Master"; // actions: OverseeWorkers, WhipTransporters, MotivateWorkers, Smear, Commend
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "artefact01";
+					Position = ( 30.0, 80.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Artefact"; // actions: ApplyPowderOfHygeia, UsePestAway, UseStrongDoorLatch, ApplyMuralPainting, ApplySlateTile, FreemasonsGift
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "artefact02";
+					Position = ( 70.0, 80.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Context = "Artefact"; // actions: ApplyPowderOfHygeia, UsePestAway, UseStrongDoorLatch, ApplyMuralPainting, ApplySlateTile, FreemasonsGift
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "intruder01";
+					Position = ( -156.0, 80.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Intruder"; // actions: AuditBooks, Vandalize, CatchRats, RaidTheKitchens, Sabotage
+						},
+					};
+				},
+				SnapPointDesc {
+					Name = "raid01";
+					Position = ( -96.0, 80.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+					Animations = array 
+					{
+						G3SnapPointAnimation 
+						{
+							Context = "Intruder"; // actions: AuditBooks, Vandalize, CatchRats, RaidTheKitchens, Sabotage
+						},
+					};
+				},
+
+				SnapPointDesc
+				{
+					Name = "CollectProtectionMoney";
+					Position = ( -80.0, 30.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 50.0 );
+				},
+			};
+		};
+	};
+	EditorName = "City House 8";
+	EditorIcon = "media/UserInterface/Icons/BuildingImages/Other/cityhouse_08.png";
+	EditorCategory = 0;		
+
+	static var InteriorSetup = SnapPointSetDesc {
+		Setup = array {
+			SnapPointDesc {
+				Name = "seat1";
+				Animations = array {
+					G3SnapPointAnimation {
+						Animation = "SitWritingTable2";
+						Context = "Family-Studies";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitWritingTable2";
+						Context = "Family-Studies";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitWritingTable2";
+						Context = "Family-Studies";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitWritingTable2";
+						Context = "Family-Studies";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitWritingTable2";
+						Context = "Family-Studies";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitWritingTable2";
+						Context = "Family-Studies";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitWritingTable2";
+						Context = "Family-Studies";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitWritingTable2";
+						Context = "Family-Studies";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitWritingTable2";
+						Context = "Family-Studies";
+					},
+				};
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_Cityhousechair02/InteriorProp_Cityhousechair02";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "seat2";
+				Animations = array {
+					G3SnapPointAnimation {
+						Animation = "sit_idle1";
+						Context = "Family-Bored";
+					},
+					G3SnapPointAnimation {
+						Animation = "sit_idle1";
+						Context = "Family-Bored";
+					},
+					G3SnapPointAnimation {
+						Animation = "sit_idle1";
+						Context = "Family-Bored";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitFadeIn";
+						Context = "Idle";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitLookAround";
+						Context = "Idle";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitAndStretch";
+						Context = "Idle";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitAndYawn";
+						Context = "Idle";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitFadeOut";
+						Context = "Idle";
+					},
+				};
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_Cityhousechair02/InteriorProp_Cityhousechair02";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "seat3";
+				Animations = array {
+					G3SnapPointAnimation {
+						Animation = "Interior_Eat_01";
+						Prop = "plate_cheese/plate_cheese";
+						Context = "Family-Eating";
+					},
+					G3SnapPointAnimation {
+						Animation = "Interior_Eat_01";
+						Prop = "plate_cheese/plate_cheese";
+						Context = "Family-Eating";
+					},
+					G3SnapPointAnimation {
+						Animation = "Interior_Eat_01";
+						Prop = "plate_cheese/plate_cheese";
+						Context = "Family-Eating";
+					},
+				};
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_Cityhousechair02/InteriorProp_Cityhousechair02";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "seat4";
+				Animations = array {
+					G3SnapPointAnimation {
+						Animation = "Interior_Eat_01";
+						Prop = "plate_pork/plate_pork";
+						Context = "Family-Eating";
+					},
+					G3SnapPointAnimation {
+						Animation = "Interior_Eat_01";
+						Prop = "plate_pork/plate_pork";
+						Context = "Family-Eating";
+					},
+					G3SnapPointAnimation {
+						Animation = "Interior_Eat_01";
+						Prop = "plate_pork/plate_pork";
+						Context = "Family-Eating";
+					},
+				};
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_Cityhousechair02/InteriorProp_Cityhousechair02";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "seat5";
+				Animations = array {
+					G3SnapPointAnimation {
+						Animation = "sit_drinking_01";
+						Prop = "beaker/beaker";
+						Context = "Family-Eating";
+					},
+					G3SnapPointAnimation {
+						Animation = "sit_drinking_01";
+						Prop = "beaker/beaker";
+						Context = "Family-Eating";
+					},
+					G3SnapPointAnimation {
+						Animation = "sit_drinking_01";
+						Prop = "beaker/beaker";
+						Context = "Family-Eating";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitFadeIn";
+						Context = "Idle";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitLookAround";
+						Context = "Idle";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitAndStretch";
+						Context = "Idle";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitAndYawn";
+						Context = "Idle";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitFadeOut";
+						Context = "Idle";
+					},
+				};
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_Cityhousechair02/InteriorProp_Cityhousechair02";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "seat6";
+				Animations = array {
+					G3SnapPointAnimation {
+						Animation = "SitFadeIn";
+						Context = "Family-Studies";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitWritingTable2";
+						Context = "Family-Studies";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitWritingTable2";
+						Context = "Family-Studies";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitWritingTable2";
+						Context = "Family-Studies";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitFadeOut";
+						Context = "Family-Studies";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitFadeIn";
+						Context = "Idle";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitLookAround";
+						Context = "Idle";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitAndStretch";
+						Context = "Idle";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitAndYawn";
+						Context = "Idle";
+					},
+					G3SnapPointAnimation {
+						Animation = "SitFadeOut";
+						Context = "Idle";
+					},
+				};
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_Cityhousechair02/InteriorProp_Cityhousechair02";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "wall1";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "wall2";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_DeerAntler01/InteriorProp_DeerAntler01";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "wall3";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "interiorprop_boardwithnails1/interiorprop_boardwithnails1";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "wall4";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_ClothWall_01/InteriorProp_ClothWall_01";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "wall5";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "interiorprop_hamonthebonewall_01/interiorprop_hamonthebonewall_01";
+					},
+				};
+				//Scale = (0.75, 1, 1);
+			},
+			SnapPointDesc {
+				Name = "wall6";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "wall7";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "wall8";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "wall9";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "interiorprop_dirtyclothwall_01/interiorprop_dirtyclothwall_01";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "shelftools1";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "shelftools2";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "hangingstuff1";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_Hanging_Vegetables/InteriorProp_Hanging_Vegetables";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "tools1";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "carpet1";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "";
+						//RandomAngle = 22.0;
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "carpet2";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_Carpetcityhouse01/InteriorProp_Carpetcityhouse01";
+						//RandomAngle = 22.0;
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "carpet3";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_CarpetcityhouseSmall02/InteriorProp_CarpetcityhouseSmall02";
+					},
+				};
+			},
+			// can be used as decosmall as well, make sure to change the animation for searching01 as well
+			SnapPointDesc {
+				Name = "chest1";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "interiorprop_simpleboxstuff/interiorprop_simpleboxstuff";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "chest2";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_ChestOpenClothBooks/InteriorProp_ChestOpenClothBooks";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "cupboard1";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_SimpleCupboard2/InteriorProp_SimpleCupboard2";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "cupboard2";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_SimpleCupboard3/InteriorProp_SimpleCupboard3";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "cupboardstuff1";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "decosmall1";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_Deco_Firewood/InteriorProp_Deco_Firewood";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "decosmall2";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_Deco_Barrel/InteriorProp_Deco_Barrel";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "decosmall3";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_Deco_Barrel/InteriorProp_Deco_Barrel";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "decosmall4";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_Crate03/InteriorProp_Crate03";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "decosmall5";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "decomedium1";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_Deco_SimpleChestClosed/InteriorProp_Deco_SimpleChestClosed";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "window1";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_Curtain_Cityhouse_Large03/InteriorProp_Curtain_Cityhouse_Large03";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "window2";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_Curtain_Cityhouse_Small03/InteriorProp_Curtain_Cityhouse_Small03";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "window3";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_Curtain_Cityhouse_Small03/InteriorProp_Curtain_Cityhouse_Small03";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "window4";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_Curtain_Cityhouse_Large03/InteriorProp_Curtain_Cityhouse_Large03";
+					},
+				};
+			},
+			SnapPointDesc {
+				Name = "window5";
+				Props = array {
+					G3SnapPointProp {
+						Prop = "InteriorProp_Curtain_Cityhouse_Large03/InteriorProp_Curtain_Cityhouse_Large03";
+					},
+				};
+			},
+			@base/AdditionalSnapPointsCityHouse
+		};
+	};
+}

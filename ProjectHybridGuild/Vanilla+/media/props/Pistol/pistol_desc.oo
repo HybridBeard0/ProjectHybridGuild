@@ -1,0 +1,18 @@
+G3ActorDesc
+{
+	Visual = "pistol";
+	MoveStateListArray = MoveStateListArray
+	{
+	};
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#Pistol/list_fight_animations,
+		);
+	};
+	AttachType = "AttachToNode";
+	AttachParentNode = "Bip001 R Hand";
+	AttachChildNode = "Bone_Main";
+	CrowdControlRadius = -0.000;
+}

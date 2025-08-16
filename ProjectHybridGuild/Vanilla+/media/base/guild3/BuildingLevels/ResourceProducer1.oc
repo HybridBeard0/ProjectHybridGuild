@@ -1,0 +1,46 @@
+ResourceProducer1 extends G3BuildingTemplateLevel
+{	
+	Results = array 
+	{
+		TagEffect
+		{
+			Tags = array{ "NoWeatherEffects" };
+		},
+		ModifierEffect
+		{
+			ActorValue = "MaxTransporters";
+			Mod = 4.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "MaxEmployees";
+			Mod = 11.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "StorageSlots";
+			Mod = 100.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "StorageSpace";
+			Mod = 120.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "FrontStoreSlots";
+			Mod = 100.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "FrontStoreSpace";
+			Mod = 120.0;
+			Recover = true;
+		};
+	};
+};

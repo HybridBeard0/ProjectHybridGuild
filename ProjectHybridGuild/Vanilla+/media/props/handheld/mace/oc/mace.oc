@@ -1,0 +1,14 @@
+mace extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "mace";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";			
+	};
+	EditorName = "Mace";
+	EditorIcon = "media/UserInterface/PropIcons/Mace.png";
+	EditorCategory = 3;		
+}

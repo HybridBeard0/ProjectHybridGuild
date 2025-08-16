@@ -1,0 +1,11 @@
+Ambush extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "ambush";
+		AttachType = "AttachToNode";
+	};
+	EditorName = "Ambush";
+	EditorIcon = "media/UserInterface/PropIcons/Ambush.png";
+	EditorCategory = 3;		
+}

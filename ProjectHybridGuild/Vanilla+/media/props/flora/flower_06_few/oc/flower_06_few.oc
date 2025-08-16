@@ -1,0 +1,10 @@
+flower_06_few extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "flower_06_few";
+	};
+	EditorName = "Flower06 (few)";
+	EditorIcon = "media/UserInterface/PropIcons/Flower06few.png";
+	EditorCategory = 1;		
+}

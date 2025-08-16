@@ -1,0 +1,9 @@
+target_selection extends G3Actor
+{
+	static var Description = #target_selection/target_selection_desc;
+
+	function onInit()
+	{
+		this.playAnimationByName("idle1");
+	}
+};

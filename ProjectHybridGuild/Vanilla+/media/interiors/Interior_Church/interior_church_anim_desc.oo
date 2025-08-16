@@ -1,0 +1,11 @@
+G3ActorDesc
+{
+	Visual = "interior_church";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#Interior_Church/interior_church_idles_animations,
+		);
+	};
+}

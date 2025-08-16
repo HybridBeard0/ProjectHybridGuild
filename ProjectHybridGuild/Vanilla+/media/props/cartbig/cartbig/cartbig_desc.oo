@@ -1,0 +1,19 @@
+G3ActorDesc
+{
+	Visual = "cartbig";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#cartbig/list_actions_animations,
+		);
+	};
+	
+	AttachType = "AttachVehicle";
+	AttachChildNode = "Dummy_Character";
+	CrowdControlRadius = 60.000;
+	CrowdControlNeighborAvoidanceEnabled = false;
+	//animation played by the character
+	ParentIdleAnimation = "cartbig_idle1";
+	ParentMoveAnimation = "cartbig_walk1";
+}

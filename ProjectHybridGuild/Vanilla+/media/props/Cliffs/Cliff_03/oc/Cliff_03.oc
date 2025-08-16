@@ -1,0 +1,15 @@
+Cliff_03 extends G3PropsInstance
+{
+	CustomFadeAlpha = 1.0;
+
+	Destructible = false;
+	BlocksBuildings = true;
+
+	static var Description = ActorDesc
+	{
+		Visual = "Cliff_03";
+	};
+	EditorName = "Cliff03";
+	EditorIcon = "media/UserInterface/PropIcons/Cliff03.png";
+	EditorCategory = 2;		
+}

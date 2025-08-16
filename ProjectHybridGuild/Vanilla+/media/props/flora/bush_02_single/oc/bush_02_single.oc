@@ -1,0 +1,10 @@
+bush_02_single extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "bush_02_single";
+	};
+	EditorName = "Bush02  (single)";
+	EditorIcon = "media/UserInterface/PropIcons/Bush02.png";
+	EditorCategory = 1;		
+}

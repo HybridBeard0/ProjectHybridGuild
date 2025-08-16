@@ -1,0 +1,14 @@
+pike extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "pike";
+		
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";		
+	};
+	EditorName = "Pike";
+	EditorIcon = "media/UserInterface/PropIcons/Pike.png";
+	EditorCategory = 3;		
+}

@@ -1,0 +1,21 @@
+interiorprop_bookofquests extends G3PropsInstance
+{
+	static var Description = G3PropDesc
+	{
+		Visual = "interiorprop_bookofquests";
+		
+		Interaction = G3ActorInteraction 
+		{
+			Name = "$props.name.BookOfQuests";
+			TooltipText = "$action.OpenBookOfQuests";
+			TooltipIcon = "MoreInfos";
+			UiEvent = "ToggleQuestsWindow";
+		};
+	};
+	
+	Interactable = true;
+	
+	EditorName = "Interiorprop Bookofquests";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}
