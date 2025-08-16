@@ -13279,7 +13279,7 @@ LocDirectData
 		},
 		LocDirectEntry
 		{
-			Key = "$help.Resources.Blackmarket";
+			Key = "$help.Resources.BlackMarket";
 			Text = "Black market";
 		},
 		LocDirectEntry

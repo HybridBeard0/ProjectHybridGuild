@@ -3,57 +3,60 @@ G3ItemsDefault extends G3ItemsContainer
 	SocialItemsScore = 40.0; // Base score used in production to sort orders
 
 	MarketCategoryWhitelist = array(
-		"All","Important","RawMaterial","Food","WeaponArmor","Clothing","Trinkets","Luxury","Tinctures","Components","Transportation","Livestock","BlackMarket", "Tiered"
+		"All","Important","RawMaterial","Food","WeaponArmor","Clothing","Trinkets","Luxury","Tinctures","Components","Transportation","Livestock","BlackMarket"
 	);
 	
 	Items = map
 	{		
-		//"PotGrenade" = G3Item
-		//{
-		//	Type = 1;
-		//	SubType = 9;
-        //
-		//	DisplayName = "$PotGrenade";
-		//	Description = "$PotGrenadeDesc";
-		//	DisplayCategories = array("All", "BlackMarket");
-        //
-		//	Tier = 1;
-		//	SocialClass = 1;
-		//	BuildTime = 25;
-		//	PriceModifier = 1.1;
-		//	Production = 1;
-        //
-		//	Requirements = array
-		//	{
-		//		comp1 extends G3ItemComponent
-		//		{
-		//			Name = "Polish";
-		//			Number = 2;
-		//		};
-		//		comp2 extends G3ItemComponent
-		//		{
-		//			Name = "Ethanol";
-		//			Number = 1;
-		//		};
-		//		comp3 extends G3ItemComponent
-		//		{
-		//			Name = "ClayVase";
-		//			Number = 1;
-		//		};
-		//	};
-		//	Results = array
-		//	{
-		//		UnlockEffect
-		//		{
-		//			Names = array {"ThrowPotGrenade"};
-		//		}
-		//	};
-		//	
-		//	RequiredBuildings = array
-		//	{
-		//		RequiredBuilding = array { "AlchemistShop", 3 }
-		//	};
-		//};
+		"PotGrenade" = G3Item
+		{
+			Type = 1;
+			SubType = 9;
+        
+			DisplayName = "$PotGrenade";
+			Description = "$PotGrenadeDesc";
+			DisplayCategories = array("All", "BlackMarket");
+        
+			Tier = 1;
+			SocialClass = 1;
+			BuildTime = 25;
+			PriceModifier = 1.1;
+			Production = 1;
+			
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+
+			Requirements = array
+			{
+				comp1 extends G3ItemComponent
+				{
+					Name = "Polish";
+					Number = 2;
+				};
+				comp2 extends G3ItemComponent
+				{
+					Name = "Ethanol";
+					Number = 1;
+				};
+				comp3 extends G3ItemComponent
+				{
+					Name = "ClayVase";
+					Number = 1;
+				};
+			};
+			Results = array
+			{
+				UnlockEffect
+				{
+					Names = array {"ThrowPotGrenade"};
+				}
+			};
+			
+			RequiredBuildings = array
+			{
+				RequiredBuilding = array { "AlchemistShop", 3 }
+			};
+		};
 		
 		//--------------LONG DISNTANCE JOURNEY ITEMS----------------
 		"Silk" = G3Item
