@@ -672,7 +672,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array { "Grindstone", "SandingBlock", "MuralPainting", "LesserQualitySalt" };
+							Names = array { "Grindstone", "SandingBlock", "MuralPainting", "LesserQualitySalt", "LesserQualitySaltStone" };
 						}
 					};
 				};
