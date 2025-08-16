@@ -966,7 +966,7 @@
 	SubType = 8;
 
 	DisplayName = "$FlowerPot.iron.name";
-	Description = "$FlowerPot.iron.description";
+	Description = "$FlowerPot.iron.desc";
 	DisplayCategories = array("All", "Trinkets");
 	IconName = "FlowerPot";
 
