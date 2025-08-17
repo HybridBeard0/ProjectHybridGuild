@@ -1218,7 +1218,7 @@ GameplayDefault extends GameplayElements
 		};
 		2 = GNobilityData // Commoner
 		{
-			Money = 1000;
+			Money = 7500;
 			Prestige = 0;
 			NonEssentialsPotPerc = 0.0;
 			
@@ -1277,7 +1277,7 @@ GameplayDefault extends GameplayElements
 		};
 		3 = GNobilityData // Yeoman
 		{
-			Money = 1500;
+			Money = 22000;
 			Prestige = 0;
 			NonEssentialsPotPerc = 0.0;
 		
@@ -1335,7 +1335,7 @@ GameplayDefault extends GameplayElements
 		};
 		4 = GNobilityData // Resident
 		{
-			Money = 2500;
+			Money = 40000;
 			Prestige = 0;
 			NonEssentialsPotPerc = 0.0;
 			
@@ -1393,8 +1393,8 @@ GameplayDefault extends GameplayElements
 		};
 		5 = GNobilityData // Citizen
 		{
-			Money = 4000;
-			Prestige = 250;
+			Money = 30000;
+			Prestige = 2000;
 			NonEssentialsPotPerc = 0.15;
 			
 			ObjectiveWeights = array
@@ -1492,8 +1492,8 @@ GameplayDefault extends GameplayElements
 		};
 		6 = GNobilityData // FreeCitizen
 		{
-			Money = 8000;
-			Prestige = 500;
+			Money = 50000;
+			Prestige = 4000;
 			NonEssentialsPotPerc = 0.20;
 			
 			ObjectiveWeights = array
@@ -1563,8 +1563,8 @@ GameplayDefault extends GameplayElements
 		};
 		7 = GNobilityData // Patrician
 		{
-			Money = 12000;
-			Prestige = 750;
+			Money = 100000;
+			Prestige = 7500;
 			NonEssentialsPotPerc = 0.20;
 			
 			ObjectiveWeights = array
@@ -1629,8 +1629,8 @@ GameplayDefault extends GameplayElements
 		};
 		8 = GNobilityData // Nobleman
 		{
-			Money = 20000;
-			Prestige = 1000;
+			Money = 250000;
+			Prestige = 12000;
 			NonEssentialsPotPerc = 0.21;
 			
 			ObjectiveWeights = array
@@ -1711,8 +1711,8 @@ GameplayDefault extends GameplayElements
 		};
 		9 = GNobilityData // Squire
 		{
-			Money = 30000;
-			Prestige = 1500;
+			Money = 400000;
+			Prestige = 15500;
 			NonEssentialsPotPerc = 0.22;
 			
 			ObjectiveWeights = array
@@ -1780,8 +1780,8 @@ GameplayDefault extends GameplayElements
 		};
 		10 = GNobilityData // Lord
 		{
-			Money = 42000;
-			Prestige = 2500;
+			Money = 490000;
+			Prestige = 20000;
 			NonEssentialsPotPerc = 0.23;
 			
 			ObjectiveWeights = array
@@ -1847,8 +1847,8 @@ GameplayDefault extends GameplayElements
 
 		11 = GNobilityData // Baron
 		{
-			Money = 80000;
-			Prestige = 4000;
+			Money = 660000;
+			Prestige = 30000;
 			NonEssentialsPotPerc = 0.24;
 			
 			ObjectiveWeights = array
@@ -1912,8 +1912,8 @@ GameplayDefault extends GameplayElements
 
 		12 = GNobilityData // Count
 		{
-			Money = 160000;
-			Prestige = 6000;
+			Money = 700000;
+			Prestige = 32000;
 			NonEssentialsPotPerc = 0.25;
 			
 			ObjectiveWeights = array
@@ -1967,8 +1967,8 @@ GameplayDefault extends GameplayElements
 		};
 		13 = GNobilityData // Marquis
 		{
-			Money = 320000;
-			Prestige = 8500;
+			Money = 900000;
+			Prestige = 42000;
 			NonEssentialsPotPerc = 0.26;
 			
 			ObjectiveWeights = array
@@ -2023,8 +2023,8 @@ GameplayDefault extends GameplayElements
 
 		14 = GNobilityData // Duke
 		{
-			Money = 640000;
-			Prestige = 12000;
+			Money = 1000000;
+			Prestige = 50000;
 			NonEssentialsPotPerc = 0.27;
 			
 			ObjectiveWeights = array
@@ -2079,8 +2079,8 @@ GameplayDefault extends GameplayElements
 
 		15 = GNobilityData // Archduke
 		{
-			Money = 1280000;
-			Prestige = 16000;
+			Money = 12800000;
+			Prestige = 62000;
 			NonEssentialsPotPerc = 0.60;
 			
 			ObjectiveWeights = array

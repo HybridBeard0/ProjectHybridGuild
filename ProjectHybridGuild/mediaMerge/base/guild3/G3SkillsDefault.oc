@@ -479,7 +479,7 @@ G3SkillsDefault extends G3SkillsContainer
 					{
 						UnlockEffect
 						{
-							Names = array{"Well", "Mine", "Quarry", "LumberYard", "LumberYardPlayer" };
+							Names = array{"Well" };
 						}
 					};
 				};

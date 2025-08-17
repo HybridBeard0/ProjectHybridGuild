@@ -917,28 +917,6 @@ G3BuildingNamesDefault extends G3BuildingNamesDatabase
 				$build.LumberYardName10
 			};
 		};
-		"LumberYardPlayer" = G3BuildingNamesList
-		{
-			Levels = array
-			{
-				$build.LumberYardPlayerLevel1
-			};
-			
-			Names = array
-			{
-				$build.LumberYardPlayerName1,
-				$build.LumberYardPlayerName2,
-				$build.LumberYardPlayerName3,
-				$build.LumberYardPlayerName4,
-				$build.LumberYardPlayerName5,
-				$build.LumberYardPlayerName6,
-				$build.LumberYardPlayerName7,
-				$build.LumberYardPlayerName8,
-				$build.LumberYardPlayerName9,
-				$build.LumberYardPlayerName10
-			};
-		};
-		
 		
 		"PoorHouse" = G3BuildingNamesList
 		{
