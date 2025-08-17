@@ -317,7 +317,7 @@ GameplayDefault extends GameplayElements
 	History_MarketDataMaxRoundsMultiplayer = 10; // In Multiplayer: The maximum time that market needs and price data is recorded for, in rounds. This is recorded monthly, so we have 12 * 10 = 120 record entries max.
 	History_MarketDataDefaultRounds = 4; // The default number of rounds that the market needs and price history will show.
 	
-	Leasing_RentPeriodRounds = 1000; // 1 Round per rent.
+	Leasing_RentPeriodRounds = 4; // 1 Round per rent.
 	Leasing_RentPeriodDaytime = 0.5; // This makes the rent period expire at noon.
 	Leasing_RentPeriodEndWarningTime = 0.0416; // Warning about bidding end comes 1 hour before the period ends.
 	Leasing_MinimumBid = 15000;
@@ -488,9 +488,9 @@ GameplayDefault extends GameplayElements
 	NeedsDecay = 0.1; // Factor by which leftover item needs will decay at midnight, so the population and markets have a chance to catch up when understocked.
 	ServiceNeedsDecay = 0.1; // Factor by which leftover service needs will decay at midnight, so the population have a chance to catch up
 	
-	PopulationChangeFactor = 0.0; // Factor by which a population will shrink/grow. Fractional people will be random rounded.
-	PopulationGrowthThreshold = 0.9f; // If ALL needs are at least this satisfied (e.g. 0.9 == 90%), population will grow at the end of the year.
-	PopulationShrinkThreshold = 0.5f; // If ANY need is less than this satisfied (e.g. 0.5 == 50%), population will shrink at the end of the year.
+	PopulationChangeFactor = 0.01; // Factor by which a population will shrink/grow. Fractional people will be random rounded.
+	PopulationGrowthThreshold = 0.09f; // If ALL needs are at least this satisfied (e.g. 0.9 == 90%), population will grow at the end of the year.
+	PopulationShrinkThreshold = 0.05f; // If ANY need is less than this satisfied (e.g. 0.5 == 50%), population will shrink at the end of the year.
 	
 	StartupSkills = map
 	{
@@ -783,7 +783,7 @@ GameplayDefault extends GameplayElements
 			DifficultyEntry
 			{
 				Id = "impossible";
-				StartMoney = 500;
+				StartMoney = 1500;
 				StartPrestige = 1;
 				StartNobilityTitle = 1;
 				XPBonusFactor = 1.0f;
