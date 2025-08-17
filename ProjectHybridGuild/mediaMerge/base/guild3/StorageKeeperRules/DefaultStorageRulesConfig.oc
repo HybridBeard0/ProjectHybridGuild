@@ -46,7 +46,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 		{
 			UseForAI = true;
 			BuildingType = "Mine";
-			SalesPriceMultiplier = 0.75f;
+			SalesPriceMultiplier = 0.80f;
 			
 			BuildableResourcesMinStorageAmount = 0;
 			BuildableResourcesMaxStorageAmount = -1;
@@ -63,7 +63,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 		{
 			UseForAI = true;
 			BuildingType = "Quarry";
-			SalesPriceMultiplier = 0.75f;
+			SalesPriceMultiplier = 0.80f;
 
 			BuildableResourcesMinStorageAmount = 0;
 			BuildableResourcesMaxStorageAmount = -1;
@@ -97,7 +97,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 		{
 			UseForAI = true;
 			BuildingType = "LumberYardPlayer";
-			SalesPriceMultiplier = 0.75f;
+			SalesPriceMultiplier = 0.80f;
 
 			BuildableResourcesMinStorageAmount = 0;
 			BuildableResourcesMaxStorageAmount = -1;
@@ -122,6 +122,8 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			UseForAI = true;
 			BuildingType = "Warehouse";
 			
+			SalesPriceMultiplier = 0.80f;
+			
 			ExternalMinStorageAmount = 0;
 			ExternalMaxStorageAmount = 240;
 			
@@ -141,6 +143,8 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 		{
 			UseForAI = false;
 			BuildingType = "Warehouse";
+			
+			SalesPriceMultiplier = 0.80f;
 			
 			ExternalMinStorageAmount = 0;
 			ExternalMaxStorageAmount = -1;
@@ -162,6 +166,8 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			UseForAI = true;
 			BuildingType = "Warehouse_Country";
 			
+			SalesPriceMultiplier = 0.80f;
+			
 			ExternalMinStorageAmount = 0;
 			ExternalMaxStorageAmount = 240;
 			
@@ -181,6 +187,8 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 		{
 			UseForAI = false;
 			BuildingType = "Warehouse_Country";
+			
+			SalesPriceMultiplier = 0.80f;
 			
 			ExternalMinStorageAmount = 0;
 			ExternalMaxStorageAmount = -1;
@@ -202,6 +210,8 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			UseForAI = false;
 			BuildingType = "RobberCamp";
 			
+			SalesPriceMultiplier = 0.80f;
+			
 			ExternalMinStorageAmount = 0;
 			ExternalMaxStorageAmount = -1;
 			
@@ -217,16 +227,16 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			BuildableProductsMinStorageAmount = 0;
 			BuildableProductsMaxStorageAmount = -1;
 			
-			BuildableProductsInFrontStoreAmount = 2;
+			BuildableProductsInFrontStoreAmount = 5;
 			BuildableComponentsInFrontStoreAmount = 5;
-			BuildableResourcesInFrontStoreAmount = 2;
+			BuildableResourcesInFrontStoreAmount = 5;
 		},
 		DefaultStorageRule
 		{
 			UseForAI = true;
 			BuildingType = "RobberCamp";
 			
-			SalesPriceMultiplier = 0.85f;
+			SalesPriceMultiplier = 0.80f;
 			
 			ExternalMinStorageAmount = 0;
 			ExternalMaxStorageAmount = -1;
@@ -252,6 +262,8 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			UseForAI = false;
 			BuildingType = "ThiefHideout";
 			
+			SalesPriceMultiplier = 0.80f;
+			
 			ExternalMinStorageAmount = 0;
 			ExternalMaxStorageAmount = -1;
 			
@@ -267,16 +279,16 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			BuildableProductsMinStorageAmount = 0;
 			BuildableProductsMaxStorageAmount = -1;
 			
-			BuildableProductsInFrontStoreAmount = 2;
-			BuildableComponentsInFrontStoreAmount = 2;
-			BuildableResourcesInFrontStoreAmount = 2;
+			BuildableProductsInFrontStoreAmount = 5;
+			BuildableComponentsInFrontStoreAmount = 5;
+			BuildableResourcesInFrontStoreAmount = 5;
 		},	
 		DefaultStorageRule
 		{
 			UseForAI = true;
 			BuildingType = "ThiefHideout";
 			
-			SalesPriceMultiplier = 0.85f;
+			SalesPriceMultiplier = 0.80f;
 			
 			ExternalMinStorageAmount = 0;
 			ExternalMaxStorageAmount = -1;
@@ -303,7 +315,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			UseForAI = false;
 			BuildingType = "Barber";
 			
-			SalesPriceMultiplier = 1.0f; // default: 1.0f, only applied to product items
+			SalesPriceMultiplier = 0.80f; // default: 1.0f, only applied to product items
 			
 			ExternalMinStorageAmount = 0;
 			ExternalMaxStorageAmount = -1;
@@ -320,13 +332,13 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			BuildableProductsMinStorageAmount = 0;
 			BuildableProductsMaxStorageAmount = -1;
 			
-			BuildableProductsInFrontStoreAmount = 2;
+			BuildableProductsInFrontStoreAmount = 5;
 			BuildableComponentsInFrontStoreAmount = 0;
 			BuildableResourcesInFrontStoreAmount = 0;
 
 			ItemOverrides = array {
 				// Item ID (e.g. "Torch")	neverSellItem	procureItem		numMinStorage		numMaxStorage		numKeepInFrontStore		salesPriceMultiplier		wasChangedByPlayer
-				("Soap",	 				false,			false,			5,					-1,					2,						1.0f,						false)
+				("Soap",	 				false,			false,			10,					-1,					0,						0.80f,						false)
 			};
 		},
 		DefaultStorageRule
@@ -334,7 +346,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			UseForAI = true;
 			BuildingType = "Barber";
 			
-			SalesPriceMultiplier = 0.9f; // default: 1.0f, only applied to product items
+			SalesPriceMultiplier = 0.80f; // default: 1.0f, only applied to product items
 			
 			ExternalMinStorageAmount = 0;
 			ExternalMaxStorageAmount = -1;
@@ -357,7 +369,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 
 			ItemOverrides = array {
 				// Item ID (e.g. "Torch")	neverSellItem	procureItem		numMinStorage		numMaxStorage		numKeepInFrontStore		salesPriceMultiplier		wasChangedByPlayer
-				("Soap",	 				false,			false,			5,					-1,					5,						1.0f,						false)
+				("Soap",	 				false,			false,			10,					-1,					0,						0.80f,						false)
 			};
 		},
 
@@ -366,7 +378,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			UseForAI = false;
 			BuildingType = "Shaman"; // HerbHut
 			
-			SalesPriceMultiplier = 1.0f; // default: 1.0f, only applied to product items
+			SalesPriceMultiplier = 0.80f; // default: 1.0f, only applied to product items
 			
 			ExternalMinStorageAmount = 0;
 			ExternalMaxStorageAmount = -1;
@@ -383,14 +395,14 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			BuildableProductsMinStorageAmount = 0;
 			BuildableProductsMaxStorageAmount = -1;
 			
-			BuildableProductsInFrontStoreAmount = 2;
+			BuildableProductsInFrontStoreAmount = 5;
 			BuildableComponentsInFrontStoreAmount = 0;
 			BuildableResourcesInFrontStoreAmount = 0;
 
 			ItemOverrides = array {
 				// Item ID (e.g. "Torch")	neverSellItem	procureItem		numMinStorage		numMaxStorage		numKeepInFrontStore		salesPriceMultiplier		wasChangedByPlayer
-				("HerbBandage", 			false,			false,			7,					-1,					4,						1.0f,						false),
-				("HerbTea", 				false,			false,			5,					-1,					2,						1.0f,						false)
+				("HerbBandage", 			false,			false,			10,					-1,					0,						0.80f,						false),
+				("HerbTea", 				false,			false,			10,					-1,					0,						0.80f,						false)
 			};
 		},
 		DefaultStorageRule
@@ -398,7 +410,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			UseForAI = true;
 			BuildingType = "Shaman"; // HerbHut
 			
-			SalesPriceMultiplier = 0.9f; // default: 1.0f, only applied to product items
+			SalesPriceMultiplier = 0.80f; // default: 1.0f, only applied to product items
 			
 			ExternalMinStorageAmount = 0;
 			ExternalMaxStorageAmount = -1;
@@ -421,8 +433,8 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 
 			ItemOverrides = array {
 				// Item ID (e.g. "Torch")	neverSellItem	procureItem		numMinStorage		numMaxStorage		numKeepInFrontStore		salesPriceMultiplier		wasChangedByPlayer
-				("HerbBandage", 			false,			false,			7,					-1,					5,						1.0f,						false),
-				("HerbTea", 				false,			false,			5,					-1,					5,						1.0f,						false)
+				("HerbBandage", 			false,			false,			10,					-1,					0,						0.80f,						false),
+				("HerbTea", 				false,			false,			10,					-1,					0,						0.80f,						false)
 			};
 		},
 
@@ -431,7 +443,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			UseForAI = false;
 			BuildingType = "Inn";
 			
-			SalesPriceMultiplier = 1.0f; // default: 1.0f, only applied to product items
+			SalesPriceMultiplier = 0.80f; // default: 1.0f, only applied to product items
 			
 			ExternalMinStorageAmount = 0;
 			ExternalMaxStorageAmount = -1;
@@ -448,16 +460,16 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			BuildableProductsMinStorageAmount = 0;
 			BuildableProductsMaxStorageAmount = -1;
 			
-			BuildableProductsInFrontStoreAmount = 2;
+			BuildableProductsInFrontStoreAmount = 5;
 			BuildableComponentsInFrontStoreAmount = 0;
 			BuildableResourcesInFrontStoreAmount = 0;
 
 			ItemOverrides = array {
 				// Item ID (e.g. "Torch")	neverSellItem	procureItem		numMinStorage		numMaxStorage		numKeepInFrontStore		salesPriceMultiplier		wasChangedByPlayer
-				("SmallBeer", 				false,			false,			5,					-1,					3,						1.0f,						false),
-				("Sausage", 				false,			false,			5,					-1,					3,						1.0f,						false),
-				("WheatBeer", 				false,			false,			5,					-1,					3,						1.0f,						false),
-				("RoastBeef", 				false,			false,			5,					-1,					3,						1.0f,						false)
+				("SmallBeer", 				false,			false,			10,					-1,					0,						0.80f,						false),
+				("Sausage", 				false,			false,			10,					-1,					0,						0.80f,						false),
+				("WheatBeer", 				false,			false,			10,					-1,					0,						0.80f,						false),
+				("RoastBeef", 				false,			false,			10,					-1,					0,						0.80f,						false)
 			};
 		},
 		DefaultStorageRule
@@ -465,7 +477,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			UseForAI = true;
 			BuildingType = "Inn";
 			
-			SalesPriceMultiplier = 0.9f; // default: 1.0f, only applied to product items
+			SalesPriceMultiplier = 0.80f; // default: 1.0f, only applied to product items
 			
 			ExternalMinStorageAmount = 0;
 			ExternalMaxStorageAmount = -1;
@@ -488,10 +500,10 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 
 			ItemOverrides = array {
 				// Item ID (e.g. "Torch")	neverSellItem	procureItem		numMinStorage		numMaxStorage		numKeepInFrontStore		salesPriceMultiplier		wasChangedByPlayer
-				("SmallBeer", 				false,			false,			5,					-1,					5,						1.0f,						false),
-				("Sausage", 				false,			false,			5,					-1,					5,						1.0f,						false),
-				("WheatBeer", 				false,			false,			5,					-1,					5,						1.0f,						false),
-				("RoastBeef", 				false,			false,			5,					-1,					5,						1.0f,						false)
+				("SmallBeer", 				false,			false,			10,					-1,					0,						0.80f,						false),
+				("Sausage", 				false,			false,			10,					-1,					0,						0.80f,						false),
+				("WheatBeer", 				false,			false,			10,					-1,					0,						0.80f,						false),
+				("RoastBeef", 				false,			false,			10,					-1,					0,						0.80f,						false)
 			};
 		},
 
@@ -500,38 +512,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			UseForAI = false;
 			BuildingType = "Smuggler";
 			
-			SalesPriceMultiplier = 1.0f; // default: 1.0f, only applied to product items
-			
-			ExternalMinStorageAmount = 0;
-			ExternalMaxStorageAmount = -1;
-			
-			ExternalComponentMinStorageAmount = 20;
-			ExternalComponentMaxStorageAmount = -1;
-				
-			BuildableResourcesMinStorageAmount = 40; // default = 0, applies to products buildable in business
-			BuildableResourcesMaxStorageAmount = -1;
-			
-			BuildableComponentsMinStorageAmount = 0;
-			BuildableComponentsMaxStorageAmount = -1;
-			
-			BuildableProductsMinStorageAmount = 0;
-			BuildableProductsMaxStorageAmount = -1;
-			
-			BuildableProductsInFrontStoreAmount = 2;
-			BuildableComponentsInFrontStoreAmount = 0;
-			BuildableResourcesInFrontStoreAmount = 0;
-
-			ItemOverrides = array {
-				// Item ID (e.g. "Torch")	neverSellItem	procureItem		numMinStorage		numMaxStorage		numKeepInFrontStore		salesPriceMultiplier		wasChangedByPlayer
-				("Rum",	 					false,			false,			7,					-1,					0,						1.0f,						false)
-			};
-		},
-		DefaultStorageRule
-		{
-			UseForAI = true;
-			BuildingType = "Smuggler";
-			
-			SalesPriceMultiplier = 0.9f; // default: 1.0f, only applied to product items
+			SalesPriceMultiplier = 0.80f; // default: 1.0f, only applied to product items
 			
 			ExternalMinStorageAmount = 0;
 			ExternalMaxStorageAmount = -1;
@@ -554,7 +535,38 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 
 			ItemOverrides = array {
 				// Item ID (e.g. "Torch")	neverSellItem	procureItem		numMinStorage		numMaxStorage		numKeepInFrontStore		salesPriceMultiplier		wasChangedByPlayer
-				("Rum",	 					false,			false,			7,					-1,					0,						1.0f,						false)
+				("Rum",	 					false,			false,			10,					-1,					0,						0.80f,						false)
+			};
+		},
+		DefaultStorageRule
+		{
+			UseForAI = true;
+			BuildingType = "Smuggler";
+			
+			SalesPriceMultiplier = 0.80f; // default: 1.0f, only applied to product items
+			
+			ExternalMinStorageAmount = 0;
+			ExternalMaxStorageAmount = -1;
+			
+			ExternalComponentMinStorageAmount = 20;
+			ExternalComponentMaxStorageAmount = -1;
+				
+			BuildableResourcesMinStorageAmount = 40; // default = 0, applies to products buildable in business
+			BuildableResourcesMaxStorageAmount = -1;
+			
+			BuildableComponentsMinStorageAmount = 0;
+			BuildableComponentsMaxStorageAmount = -1;
+			
+			BuildableProductsMinStorageAmount = 0;
+			BuildableProductsMaxStorageAmount = -1;
+			
+			BuildableProductsInFrontStoreAmount = 5;
+			BuildableComponentsInFrontStoreAmount = 0;
+			BuildableResourcesInFrontStoreAmount = 0;
+
+			ItemOverrides = array {
+				// Item ID (e.g. "Torch")	neverSellItem	procureItem		numMinStorage		numMaxStorage		numKeepInFrontStore		salesPriceMultiplier		wasChangedByPlayer
+				("Rum",	 					false,			false,			10,					-1,					0,						0.80f,						false)
 			};
 		},
 
@@ -563,38 +575,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			UseForAI = false;
 			BuildingType = "Apothecary";
 			
-			SalesPriceMultiplier = 1.0f; // default: 1.0f, only applied to product items
-			
-			ExternalMinStorageAmount = 0;
-			ExternalMaxStorageAmount = -1;
-			
-			ExternalComponentMinStorageAmount = 20;
-			ExternalComponentMaxStorageAmount = -1;
-				
-			BuildableResourcesMinStorageAmount = 40; // default = 0, applies to products buildable in business
-			BuildableResourcesMaxStorageAmount = -1;
-			
-			BuildableComponentsMinStorageAmount = 0;
-			BuildableComponentsMaxStorageAmount = -1;
-			
-			BuildableProductsMinStorageAmount = 0;
-			BuildableProductsMaxStorageAmount = -1;
-			
-			BuildableProductsInFrontStoreAmount = 2;
-			BuildableComponentsInFrontStoreAmount = 0;
-			BuildableResourcesInFrontStoreAmount = 0;
-
-			ItemOverrides = array {
-				// Item ID (e.g. "Torch")	neverSellItem	procureItem		numMinStorage		numMaxStorage		numKeepInFrontStore		salesPriceMultiplier		wasChangedByPlayer
-				("Antidote",	 			false,			false,			5,					-1,					3,						1.0f,						false)
-			};
-		},
-		DefaultStorageRule
-		{
-			UseForAI = true;
-			BuildingType = "Apothecary";
-			
-			SalesPriceMultiplier = 0.9f; // default: 1.0f, only applied to product items
+			SalesPriceMultiplier = 0.80f; // default: 1.0f, only applied to product items
 			
 			ExternalMinStorageAmount = 0;
 			ExternalMaxStorageAmount = -1;
@@ -617,7 +598,38 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 
 			ItemOverrides = array {
 				// Item ID (e.g. "Torch")	neverSellItem	procureItem		numMinStorage		numMaxStorage		numKeepInFrontStore		salesPriceMultiplier		wasChangedByPlayer
-				("Antidote",	 			false,			false,			5,					-1,					5,						1.0f,						false)
+				("Antidote",	 			false,			false,			10,					-1,					0,						0.80f,						false)
+			};
+		},
+		DefaultStorageRule
+		{
+			UseForAI = true;
+			BuildingType = "Apothecary";
+			
+			SalesPriceMultiplier = 0.80f; // default: 1.0f, only applied to product items
+			
+			ExternalMinStorageAmount = 0;
+			ExternalMaxStorageAmount = -1;
+			
+			ExternalComponentMinStorageAmount = 20;
+			ExternalComponentMaxStorageAmount = -1;
+				
+			BuildableResourcesMinStorageAmount = 40; // default = 0, applies to products buildable in business
+			BuildableResourcesMaxStorageAmount = -1;
+			
+			BuildableComponentsMinStorageAmount = 0;
+			BuildableComponentsMaxStorageAmount = -1;
+			
+			BuildableProductsMinStorageAmount = 0;
+			BuildableProductsMaxStorageAmount = -1;
+			
+			BuildableProductsInFrontStoreAmount = 5;
+			BuildableComponentsInFrontStoreAmount = 0;
+			BuildableResourcesInFrontStoreAmount = 0;
+
+			ItemOverrides = array {
+				// Item ID (e.g. "Torch")	neverSellItem	procureItem		numMinStorage		numMaxStorage		numKeepInFrontStore		salesPriceMultiplier		wasChangedByPlayer
+				("Antidote",	 			false,			false,			10,					-1,					0,						0.80f,						false)
 			};
 		},
 
@@ -626,7 +638,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			UseForAI = false;
 			BuildingType = "StoneMasonShop";
 			
-			SalesPriceMultiplier = 1.0f; // default: 1.0f, only applied to product items
+			SalesPriceMultiplier = 0.80f; // default: 1.0f, only applied to product items
 			
 			ExternalMinStorageAmount = 0;
 			ExternalMaxStorageAmount = -1;
@@ -643,7 +655,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			BuildableProductsMinStorageAmount = 0;
 			BuildableProductsMaxStorageAmount = -1;
 			
-			BuildableProductsInFrontStoreAmount = 2;
+			BuildableProductsInFrontStoreAmount = 5;
 			BuildableComponentsInFrontStoreAmount = 0;
 			BuildableResourcesInFrontStoreAmount = 0;
 
@@ -658,7 +670,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			UseForAI = true;
 			BuildingType = "StoneMasonShop";
 			
-			SalesPriceMultiplier = 0.9f; // default: 1.0f, only applied to product items
+			SalesPriceMultiplier = 0.80f; // default: 1.0f, only applied to product items
 			
 			ExternalMinStorageAmount = 0;
 			ExternalMaxStorageAmount = -1;
@@ -691,41 +703,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			UseForAI = false;
 			BuildingType = "Medicus";
 			
-			SalesPriceMultiplier = 1.0f; // default: 1.0f, only applied to product items
-			
-			ExternalMinStorageAmount = 0;
-			ExternalMaxStorageAmount = -1;
-			
-			ExternalComponentMinStorageAmount = 20;
-			ExternalComponentMaxStorageAmount = -1;
-				
-			BuildableResourcesMinStorageAmount = 40; // default = 0, applies to products buildable in business
-			BuildableResourcesMaxStorageAmount = -1;
-			
-			BuildableComponentsMinStorageAmount = 0;
-			BuildableComponentsMaxStorageAmount = -1;
-			
-			BuildableProductsMinStorageAmount = 0;
-			BuildableProductsMaxStorageAmount = -1;
-			
-			BuildableProductsInFrontStoreAmount = 2;
-			BuildableComponentsInFrontStoreAmount = 0;
-			BuildableResourcesInFrontStoreAmount = 0;
-
-			ItemOverrides = array {
-				// Item ID (e.g. "Torch")	neverSellItem	procureItem		numMinStorage		numMaxStorage		numKeepInFrontStore		salesPriceMultiplier		wasChangedByPlayer
-				("Bandage",					false,			false,			7,					-1,					4,						1.0f,						false),
-				("FeverSyrup",				false,			false,			5,					-1,					2,						1.0f,						false),
-				("PainKiller",				false,			false,			3,					-1,					2,						1.0f,						false),
-				("WonderCure",				false,			false,			3,					-1,					2,						1.0f,						false)
-			};
-		},
-		DefaultStorageRule
-		{
-			UseForAI = true;
-			BuildingType = "Medicus";
-			
-			SalesPriceMultiplier = 0.9f; // default: 1.0f, only applied to product items
+			SalesPriceMultiplier = 0.80f; // default: 1.0f, only applied to product items
 			
 			ExternalMinStorageAmount = 0;
 			ExternalMaxStorageAmount = -1;
@@ -748,10 +726,44 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 
 			ItemOverrides = array {
 				// Item ID (e.g. "Torch")	neverSellItem	procureItem		numMinStorage		numMaxStorage		numKeepInFrontStore		salesPriceMultiplier		wasChangedByPlayer
-				("Bandage",					false,			false,			7,					-1,					7,						1.0f,						false),
-				("FeverSyrup",				false,			false,			5,					-1,					5,						1.0f,						false),
-				("PainKiller",				false,			false,			5,					-1,					5,						1.0f,						false),
-				("WonderCure",				false,			false,			5,					-1,					5,						1.0f,						false)
+				("Bandage",					false,			false,			10,					-1,					0,						0.80f,						false),
+				("FeverSyrup",				false,			false,			10,					-1,					0,						0.80f,						false),
+				("PainKiller",				false,			false,			10,					-1,					0,						0.80f,						false),
+				("WonderCure",				false,			false,			10,					-1,					0,						0.80f,						false)
+			};
+		},
+		DefaultStorageRule
+		{
+			UseForAI = true;
+			BuildingType = "Medicus";
+			
+			SalesPriceMultiplier = 0.80f; // default: 1.0f, only applied to product items
+			
+			ExternalMinStorageAmount = 0;
+			ExternalMaxStorageAmount = -1;
+			
+			ExternalComponentMinStorageAmount = 20;
+			ExternalComponentMaxStorageAmount = -1;
+				
+			BuildableResourcesMinStorageAmount = 40; // default = 0, applies to products buildable in business
+			BuildableResourcesMaxStorageAmount = -1;
+			
+			BuildableComponentsMinStorageAmount = 0;
+			BuildableComponentsMaxStorageAmount = -1;
+			
+			BuildableProductsMinStorageAmount = 0;
+			BuildableProductsMaxStorageAmount = -1;
+			
+			BuildableProductsInFrontStoreAmount = 5;
+			BuildableComponentsInFrontStoreAmount = 0;
+			BuildableResourcesInFrontStoreAmount = 0;
+
+			ItemOverrides = array {
+				// Item ID (e.g. "Torch")	neverSellItem	procureItem		numMinStorage		numMaxStorage		numKeepInFrontStore		salesPriceMultiplier		wasChangedByPlayer
+				("Bandage",					false,			false,			10,					-1,					0,						0.80f,						false),
+				("FeverSyrup",				false,			false,			10,					-1,					0,						0.80f,						false),
+				("PainKiller",				false,			false,			10,					-1,					0,						0.80f,						false),
+				("WonderCure",				false,			false,			10,					-1,					0,						0.80f,						false)
 			};
 		},
 		
@@ -760,7 +772,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			UseForAI = false;
 			BuildingType = "Bakery";
 		
-			SalesPriceMultiplier = 1.0f;
+			SalesPriceMultiplier = 0.80f;
 			
 			ExternalMinStorageAmount = 0;
 			ExternalMaxStorageAmount = -1;
@@ -777,7 +789,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			BuildableProductsMinStorageAmount = 0;
 			BuildableProductsMaxStorageAmount = -1;
 			
-			BuildableProductsInFrontStoreAmount = 10;
+			BuildableProductsInFrontStoreAmount = 5;
 			BuildableComponentsInFrontStoreAmount = 0;
 			BuildableResourcesInFrontStoreAmount = 0;
 		},
@@ -787,7 +799,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			UseForAI = true;
 			BuildingType = "Bakery";
 			
-			SalesPriceMultiplier = 0.9f;
+			SalesPriceMultiplier = 0.80f;
 			
 			ExternalMinStorageAmount = 0;
 			ExternalMaxStorageAmount = -1;
@@ -804,7 +816,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 			BuildableProductsMinStorageAmount = 0;
 			BuildableProductsMaxStorageAmount = -1;
 			
-			BuildableProductsInFrontStoreAmount = 10;
+			BuildableProductsInFrontStoreAmount = 5;
 			BuildableComponentsInFrontStoreAmount = 0;
 			BuildableResourcesInFrontStoreAmount = 0;
 		},
@@ -812,7 +824,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 	
 	DefaultRulePlayer = DefaultStorageRule
 	{		
-		SalesPriceMultiplier = 1.0f; // default: 1.0f, only applied to product items
+		SalesPriceMultiplier = 0.80f; // default: 1.0f, only applied to product items
 		
 		ExternalMinStorageAmount = 0;
 		ExternalMaxStorageAmount = -1;
@@ -829,7 +841,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 		BuildableProductsMinStorageAmount = 0;
 		BuildableProductsMaxStorageAmount = -1;
 		
-		BuildableProductsInFrontStoreAmount = 2;
+		BuildableProductsInFrontStoreAmount = 5;
 		BuildableComponentsInFrontStoreAmount = 0;
 		BuildableResourcesInFrontStoreAmount = 0;
 	};
@@ -838,7 +850,7 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 	{
 		UseForAI = true; // default: false
 		
-		SalesPriceMultiplier = 0.9f; // default: 1.0f, only applied to product items
+		SalesPriceMultiplier = 0.80f; // default: 1.0f, only applied to product items
 		
 		ExternalMinStorageAmount = 0;
 		ExternalMaxStorageAmount = -1;
@@ -860,6 +872,6 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 		BuildableResourcesInFrontStoreAmount = 0;
 	};
 	
-	SalesPriceMultiplierLowerBound = 0.5f; // default: 0.5f
-	SalesPriceMultiplierUpperBound = 1.5f; // default: 1.5f
+	SalesPriceMultiplierLowerBound = 0.40f; // default: 0.5f
+	SalesPriceMultiplierUpperBound = 1.20f; // default: 1.5f
 }
