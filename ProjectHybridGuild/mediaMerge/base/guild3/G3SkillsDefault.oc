@@ -228,7 +228,9 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				3 = G3SkillLevel
 				{
-					NeededSocialLevel = 10;							NeededCurrency = 20000;
+					NeededSocialLevel = 10;
+					NeededCurrency = 20000;
+					
 					Results = array
 					{
 						UnlockEffect
@@ -1298,8 +1300,6 @@ G3SkillsDefault extends G3SkillsContainer
 					
 					Results = array
 					{
-						UnlockEffect
-						{
 //							Names = array { "WildRose", "RoseWater", "Soap" };
 							Names = array { "BatBlood", "JasmineOil", "MakeUp" };
 						}
@@ -1462,7 +1462,7 @@ G3SkillsDefault extends G3SkillsContainer
 						UnlockEffect
 						{
 							Names = array {"BeltOfMetaphysics", "Nightcap", "StinkBomb", "CamouflageCloak", "MakeEvocation"};
-						};
+						}
 					};
 				};
 			};
@@ -1994,7 +1994,7 @@ G3SkillsDefault extends G3SkillsContainer
 					{
 						UnlockEffect
 						{
-							Names = array { "PlayPipe", "PalmistryCoordinate", Palmistry };
+							Names = array { "PlayPipe", "PalmistryCoordinate", "Palmistry" };
 						},
 						ModifierEffect
 						{
@@ -2023,7 +2023,7 @@ G3SkillsDefault extends G3SkillsContainer
 					{
 						UnlockEffect
 						{
-							Names = array { "PlayMusicOnStage", PublicEntertainmentOnStage };
+							Names = array { "PlayMusicOnStage", "PublicEntertainmentOnStage" };
 						}
 					};
 				};
@@ -2107,6 +2107,7 @@ G3SkillsDefault extends G3SkillsContainer
 						UnlockEffect
 						{
 							Names = array { "GuardBuilding" };
+						},
 						ModifierEffect
 						{
 							Filter = "IsFamilyMember";
@@ -2137,7 +2138,7 @@ G3SkillsDefault extends G3SkillsContainer
 				3 = G3SkillLevel
 				{
 					NeededSocialLevel = 10;
-					NeededCurrency = 15000;
+					NeededCurrency = 20000;
 					
 					Results = array
 					{
@@ -3351,4 +3352,4 @@ G3SkillsDefault extends G3SkillsContainer
 			};
 		};
 	};
-};
+};};

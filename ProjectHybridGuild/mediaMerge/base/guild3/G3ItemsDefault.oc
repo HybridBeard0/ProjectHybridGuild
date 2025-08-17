@@ -58,7 +58,7 @@ G3ItemsDefault extends G3ItemsContainer
 			};
 		};
 		
-		//--------------LONG DISNTANCE JOURNEY ITEMS----------------
+		//--------------LONG DISTANCE JOURNEY ITEMS----------------
 		"Silk" = G3Item
 		{
 			Type = 2;
