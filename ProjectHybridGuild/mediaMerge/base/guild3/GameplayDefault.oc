@@ -61,13 +61,13 @@ GameplayDefault extends GameplayElements
 	CityNormalStockProductsLvl3 = 0.25;
 	
 	MinItemNormalStock = 10;			//! Minimum normal stock an Item should get, to prevent prices jumping from min to max all the time if normal for an item is very small
-	MaxItemNormalStock = 3300;			//! Maximum normal stock an Item should get, so that items with huge normal stock aren't constantly on the cheapest price
+	MaxItemNormalStock = 20000;			//! Maximum normal stock an Item should get, so that items with huge normal stock aren't constantly on the cheapest price
 	
 	StockFractionForMaxMarketPrice = 0.1;		//Percentage of NormalStock at which the price modifier reaches it's Maximum
 	StockFractionForMinMarketPrice = 3.0;		//Percentage of NormalStock at which the price modifier reaches it's minimum
-	MarketVariationLower = -0.4;			//! maximum down variation from the base price (in %) ATTENTION: this will be added to a value of 1.0f, so if you want min price to be 50% of the base price you need to set this to -0.5
-	MarketVariationUpper = 0.4;			//! maximum up variation from the base price (in %) ATTENTION: this will be added to a value of 1.0f, so if you want min price to be 200% of the base price you need to set this to 1.0
-	MarketSellingProfit = 0.5;				//! difference between the market purchasing and selling price (in %)
+	MarketVariationLower = -0.32;			//! maximum down variation from the base price (in %) ATTENTION: this will be added to a value of 1.0f, so if you want min price to be 50% of the base price you need to set this to -0.5
+	MarketVariationUpper = 0.32;			//! maximum up variation from the base price (in %) ATTENTION: this will be added to a value of 1.0f, so if you want min price to be 200% of the base price you need to set this to 1.0
+	MarketSellingProfit = 0.25;				//! difference between the market purchasing and selling price (in %)
 	MaxBargainingBonus = 50;				//! If bargaining bonus is higher than this, it won't have any additional affect on prices MUST NOT BE 0!
 	MarketCommonFrontstoreSlots = 400;		//! Number of inventory slots the market has for products.
 	MarketCommonFrontstoreSlotSize = 20000; //! How many copies of one item the market can have.
@@ -75,31 +75,31 @@ GameplayDefault extends GameplayElements
 // *** market restocking *** -->
 
 	// Constants needed to drive the refilling of components
-	AllowedUnderstockPercentage = 0.25;		// fraction of the minimum understock currently allowed - this is when the system will start filling the market
-	FillStockUpToPercentage = 0.5;			// percentage of the normal stock at which the system should stop refilling an item.
-	StockRefillDelay = 0.15; 				// fraction of a year till we start refilling components
-	RefillItemPercentage = 0.5;				// Percentage of normal stock of an item that is added to the market with each caravan load when refilling
+	AllowedUnderstockPercentage = 0.775;		// fraction of the minimum understock currently allowed - this is when the system will start filling the market
+	FillStockUpToPercentage = 0.775;			// percentage of the normal stock at which the system should stop refilling an item.
+	StockRefillDelay = 0.08; 				// fraction of a year till we start refilling components
+	RefillItemPercentage = 0.1;				// Percentage of normal stock of an item that is added to the market with each caravan load when refilling
 
 	// Constants needed to drive the reduction of products
-	AllowedOverstockPercentage = 3.5f;		// fraction of maximum overstock percentage currently allowed
-	StockMaxAllowedItems = 25;				// For low normal stock items, a second barrier, the amount of items allowed, defines allowed overstock
-	StockReductionDelay = 0.35;				// 25% of a year till we start to reduce products
-	StockToKeepPercentage = 2.0;			// Percentage of the normal stock to keep after reduction (so a value of 1.0 would keep 100% of the normal stock)
-	MonthlyReductionItemPercengtage = 0.1; 	// Percentage of current stock of an item that is removed from the market each month when reducing stock.
+	AllowedOverstockPercentage = 1.5f;		// fraction of maximum overstock percentage currently allowed
+	StockMaxAllowedItems = 0;				// For low normal stock items, a second barrier, the amount of items allowed, defines allowed overstock
+	StockReductionDelay = 0.08;				// 25% of a year till we start to reduce products
+	StockToKeepPercentage = 1.5;			// Percentage of the normal stock to keep after reduction (so a value of 1.0 would keep 100% of the normal stock)
+	MonthlyReductionItemPercengtage = 0.05; 	// Percentage of current stock of an item that is removed from the market each month when reducing stock.
 	
 	MaxPriceChangePercentage = 0.025f;
 	
-	StockCheckDelayMin = 0.04;				// Min. delay between economies checking their stock.
-	StockCheckDelayMax = 0.06;				// Max. delay between economies checking their stock.
+	StockCheckDelayMin = 0.14;				// Min. delay between economies checking their stock.
+	StockCheckDelayMax = 0.20;				// Max. delay between economies checking their stock.
 	
 	ResupplyCaravanGuards = 2;				// Number of guards that protect the resupply transporter.
 
 // *** market restocking *** <--
 	
-	FrontstorePriceDifferencePositiveEffectThreshold = 0.95; //! Difference to market price in percent when the front store price will start having a positive effect
-	FrontstorePriceDifferenceNegativeEffectThreshold = 1.05;  //! Difference to market price in percent when the front store price will start having a negative effect
-	MaxReputationChangeFrontstoreTrade = 3;					  //! Maximum the reputation can change per trade
-	MaxAttractivenessChangeFrontstoreTrade = 5;				  //! Maximum the Customer Satisfaction can be affected per trade (temporarily)
+	FrontstorePriceDifferencePositiveEffectThreshold = 0.76; //! Difference to market price in percent when the front store price will start having a positive effect
+	FrontstorePriceDifferenceNegativeEffectThreshold = 0.76;  //! Difference to market price in percent when the front store price will start having a negative effect
+	MaxReputationChangeFrontstoreTrade = 5;					  //! Maximum the reputation can change per trade
+	MaxAttractivenessChangeFrontstoreTrade = 0;				  //! Maximum the Customer Satisfaction can be affected per trade (temporarily)
 	
 	ProductivityLeaderBonus = 1.25;
 	ProductivityLevel1Bonus = 0.9;
@@ -162,7 +162,7 @@ GameplayDefault extends GameplayElements
 	FractionFamPrestigeMember = 0.5;
 	FractionPrestigeCitizen = 0.1;
 
-	NpcWealthMoney = array { 2500, 20000, 75000 };
+	NpcWealthMoney = array { 550, 3000, 8400 };
 	NpcWealthPrestige = array { 500, 2000, 5000 };
 
 	//Health formula: CharacterMinHealth + actorLevel * HpPerCharLevel + Sum(CharacterHealthAttrArray) * CharacterHealthAttrMultiplier
@@ -393,44 +393,44 @@ GameplayDefault extends GameplayElements
 		//Poor person need per month
 		0 = array
 		{
-			1.25, // RawMaterial = 1,
-			0.25, // Food,
-			0.125, // WeaponArmor,
-			0.21, // Clothing,
-			0.42, // Trinkets,
-			0.09, // Luxury,
-			0.42, // Tinctures,
-			13.0, // Components,
-			1.09, // Transportation,
-			0.90, // Livestock,
+			0.01,	// Raw Material
+			1.00,	// Food & Beverages
+			1.42,	// Weapons & Armour
+			0.71,	// Clothing & Jewellery
+			1.25,	// Trinkets
+			0.01,	// Artefacts
+			0.59,	// Consumables & Covert
+			3.50,	// Intermediates
+			1.13,	// Transport
+			0.42,	// Livestock
 		},
 		//Middle person need per month
 		1 = array
 		{
-			1.0, // RawMaterial = 1,
-			1.0, // Food,
-			0.5, // WeaponArmor,
-			0.7, // Clothing,
-			0.90, // Trinkets,
-			0.42, // Luxury,
-			0.42, // Tinctures,
-			0.75, // Components,
-			0.17, // Transportation,
-			0.5, // Livestock,
+			0.01,	// Raw Material
+			1.18,	// Food & Beverages
+			0.80,	// Weapons & Armour
+			0.59,	// Clothing & Jewellery
+			0.21,	// Trinkets
+			0.80,	// Artefacts
+			1.39,	// Consumables & Covert
+			1.68,	// Intermediates
+			0.12,	// Transport
+			0.12,	// Livestock
 		},
 		//Rich person need per month
 		2 = array
 		{
-			0.42, // RawMaterial = 1,
-			2.0, // Food,
-			1.25, // WeaponArmor,
-			1.7, // Clothing,
-			0.34, // Trinkets,
-			1.25, // Luxury,
-			0.75, // Tinctures,
-			0.42, // Components,
-			0.67, // Transportation,
-			0.42, // Livestock,
+			0.01,	// Raw Material
+			0.86,	// Food & Beverages
+			1.08,	// Weapons & Armour
+			0.97,	// Clothing & Jewellery
+			0.15,	// Trinkets
+			0.97,	// Artefacts
+			1.33,	// Consumables & Covert
+			0.15,	// Intermediates
+			0.25,	// Transport
+			0.25,	// Livestock
 		}
 	};
 	
@@ -473,16 +473,16 @@ GameplayDefault extends GameplayElements
 	// A factor of 12.0 means that the market will consider one year's supply (12 months) as its nominal target.
 	NominalStockAmounts = array
 	{
-		12.0, 	// RawMaterial = 1,
-		12.0, 	// Food,
-		12.0, 	// WeaponArmor,
-		12.0, 	// Clothing,
-		12.0, 	// Trinkets,
-		12.0, 	// Luxury,
-		12.0, 	// Tinctures,
-		12.0, 	// Components,
-		12.0, 	// Transportation,
-		12.0, 	// Livestock = 10
+		12.0, 	// Raw Material
+		12.0, 	// Food & Beverages
+		12.0, 	// Weapons & Armour
+		12.0, 	// Clothing & Jewellery
+		12.0, 	// Trinkets
+		12.0, 	// Artefacts
+		12.0, 	// Consumables & Covert
+		12.0, 	// Intermediates
+		12.0, 	// Transport
+		12.0, 	// Livestock
 	};
 	
 	NeedsDecay = 0.1; // Factor by which leftover item needs will decay at midnight, so the population and markets have a chance to catch up when understocked.
