@@ -4,7 +4,7 @@
 	SubType = 2;
 
 	DisplayName = "$IngredientsSmokedPerch.iron.name";
-	Description = "$IngredientsSmokedPerch.iron.title";
+	Description = "$IngredientsSmokedPerch.iron.desc";
 	DisplayCategories = array("All", "RawMaterial");
 
 	Tier = 1;

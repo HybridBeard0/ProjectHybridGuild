@@ -58021,7 +58021,7 @@ LocDirectData
 		},
 		LocDirectEntry
 		{
-			Key = "$Duck.iron.desc";
+			Key = "$DuckMeat.iron.desc";
 			Text = "Delicious salted Duck Meat";
 		},
 		LocDirectEntry
@@ -58473,7 +58473,10 @@ LocDirectData
 			Key = "$IngredientsSmokedPerch.iron.name";
 			Text = "Ingredients Smoked Perch";
 		},
-
+		{
+			Key = "$IngredientsSmokedPerch.iron.desc";
+			Text = "Ingredients Smoked Perch";
+		},
 		LocDirectEntry
 		{
 			Key = "$Pipe.iron.name";
@@ -58481,7 +58484,7 @@ LocDirectData
 		},
 		LocDirectEntry
 		{
-			Key = "$Pipe.iron.desc";
+			Key = "$Pipe.iron.desccription";
 			Text = "Pipe to sell";
 		},
 

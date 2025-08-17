@@ -93,7 +93,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array{"Sheep", "Wool", "Marijuana", "Cabbage"};
+							Names = array{"Sheep", "Wool", "Marijuana", "Cabbage", "Tobacco"};
 						}
 					};
 				};
@@ -228,9 +228,8 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				3 = G3SkillLevel
 				{
-					NeededSocialLevel = 10;
+					NeededSocialLevel = 10;							
 					NeededCurrency = 20000;
-					
 					Results = array
 					{
 						UnlockEffect
@@ -404,7 +403,7 @@ G3SkillsDefault extends G3SkillsContainer
 					{
 						UnlockEffect
 						{
-							Names = array { "Pike", "FishOil", "BoneNeedle", "GoFishing", "FishSoup", "LivingTrout" };
+							Names = array { "Pike", "FishOil", "BoneNeedle", "GoFishing", "FishSoup", "LivingTrout", "IngredientsSmokedPerch" };
 						}
 					};
 				};
@@ -635,7 +634,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array { "ClayVase", "Beaker", "WeightStone", "BucketOfWater" };
+							Names = array { "ClayVase", "Beaker", "WeightStone", "BucketOfWater", "ThrowingStones", "ClayBowl" };
 						}
 					};
 				};
@@ -1287,8 +1286,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-//							Names = array{ "Jasmin", "BatBlood", "JasmineOil", "MakeUp", "BodyCareService", "MassageOil"  };
-							Names = array{ "Jasmin", "WildRose", "RoseWater", "Soap", "BodyCareService", "AuDeToilette" };
+							Names = array{ "Jasmin", "BatBlood", "JasmineOil", "MakeUp", "BodyCareService", "MassageOil", "AuDeToilette", "WildRose", "RoseWater", "Soap", "MassageOil"};
 						}
 					};
 				};
@@ -1300,8 +1298,9 @@ G3SkillsDefault extends G3SkillsContainer
 					
 					Results = array
 					{
-//							Names = array { "WildRose", "RoseWater", "Soap" };
-							Names = array { "BatBlood", "JasmineOil", "MakeUp" };
+						UnlockEffect
+						{
+							Names = array { "BatBlood", "JasmineOil", "MakeUp", "WildRose", "RoseWater", "Soap" };
 						}
 					};
 				};
@@ -1462,7 +1461,7 @@ G3SkillsDefault extends G3SkillsContainer
 						UnlockEffect
 						{
 							Names = array {"BeltOfMetaphysics", "Nightcap", "StinkBomb", "CamouflageCloak", "MakeEvocation"};
-						}
+						};
 					};
 				};
 			};
@@ -1994,7 +1993,7 @@ G3SkillsDefault extends G3SkillsContainer
 					{
 						UnlockEffect
 						{
-							Names = array { "PlayPipe", "PalmistryCoordinate", "Palmistry" };
+							Names = array { "PlayPipe", "PalmistryCoordinate", Palmistry };
 						},
 						ModifierEffect
 						{
@@ -2023,7 +2022,7 @@ G3SkillsDefault extends G3SkillsContainer
 					{
 						UnlockEffect
 						{
-							Names = array { "PlayMusicOnStage", "PublicEntertainmentOnStage" };
+							Names = array { "PlayMusicOnStage", PublicEntertainmentOnStage };
 						}
 					};
 				};
@@ -2107,7 +2106,6 @@ G3SkillsDefault extends G3SkillsContainer
 						UnlockEffect
 						{
 							Names = array { "GuardBuilding" };
-						},
 						ModifierEffect
 						{
 							Filter = "IsFamilyMember";
@@ -2138,7 +2136,7 @@ G3SkillsDefault extends G3SkillsContainer
 				3 = G3SkillLevel
 				{
 					NeededSocialLevel = 10;
-					NeededCurrency = 20000;
+					NeededCurrency = 15000;
 					
 					Results = array
 					{
@@ -3352,4 +3350,4 @@ G3SkillsDefault extends G3SkillsContainer
 			};
 		};
 	};
-};};
+};

@@ -245,7 +245,7 @@
 	
 	RequiredBuildings = array
 	{
-		RequiredBuilding = array { "Miller", 1 }
+		RequiredBuilding = array { "Windmill", 1 }
 	};
 };
 
