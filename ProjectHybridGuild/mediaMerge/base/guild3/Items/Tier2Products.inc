@@ -968,7 +968,7 @@
 	DisplayName = "$FlowerPot.iron.name";
 	Description = "$FlowerPot.iron.desc";
 	DisplayCategories = array("All", "Trinkets");
-	IconName = "FlowerPot";
+	IconName = "Flowerpot";
 
 	Production = 1;
 	BuildTime = 42.00;
@@ -1034,7 +1034,7 @@
 	
 	RequiredBuildings = array
 	{
-		RequiredBuilding = array { "Miller", 1 }
+		RequiredBuilding = array { "Windmill", 1 }
 	};
 };
 
