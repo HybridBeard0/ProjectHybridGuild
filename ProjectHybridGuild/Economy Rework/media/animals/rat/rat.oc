@@ -1,9 +1,0 @@
-rat extends G3Animal
-{
-	static var Description = #rat/rat_desc;
-	Behaviour = "Cat";
-	EditorName = "Rat";
-	
-	MaxRoamingDistance = 1000;
-	RoamingDivFactor = 5;
-};

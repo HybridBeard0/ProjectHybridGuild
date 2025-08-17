@@ -1,5 +1,0 @@
-crossbow extends G3Actor
-{
-	static var Description = #crossbow/crossbow_desc;
-
-};

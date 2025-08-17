@@ -1,8 +1,0 @@
-DefaultNewNeighborhood extends Neighborhood
-{
-	HStringName = "New Neighborhood";
-	
-	NumRichPeople = 0;
-	NumMiddlePeople = 50;
-	NumPoorPeople = 150;
-};

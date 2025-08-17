@@ -1,5 +1,0 @@
-highpriest extends G3Character
-{
-	static var Description = #lr_male_standard/highpriest_desc;
-
-};

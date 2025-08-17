@@ -1,5 +1,0 @@
-PotGrenade extends G3Actor
-{
-	static var Description = #PotGrenade/PotGrenade_desc;
-
-};

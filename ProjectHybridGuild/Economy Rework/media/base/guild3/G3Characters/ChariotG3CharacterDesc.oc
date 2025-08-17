@@ -1,5 +1,0 @@
-ChariotG3CharacterDesc extends G3CharacterDesc
-{
-	WalkSpeed = 75.000;
-	RunSpeed = 75.000;
-};

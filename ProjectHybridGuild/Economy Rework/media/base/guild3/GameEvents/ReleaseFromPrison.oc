@@ -1,5 +1,0 @@
-ReleaseFromPrison extends GameEventReleaseFromPrison
-{
-	Title = "The prisoner has been release from prison";
-	Public = true;
-};

@@ -1,9 +1,0 @@
-apothecary_02 extends BuildingVisualUpgrade
-{
-	static var Description = ActorDesc
-	{
-		Visual = "apothecary_02";
-	};
-	BusinessLevel = 2;
-	UpgradeOf = apothecary;
-}

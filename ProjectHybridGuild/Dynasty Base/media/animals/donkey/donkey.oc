@@ -1,9 +1,0 @@
-donkey extends G3Animal
-{
-	static var Description = #donkey/donkey_desc;
-	Behaviour = "Donkey";
-	EditorName = "Donkey";
-	
-	MaxRoamingDistance = 5000;
-	RoamingDivFactor = 2.5;
-};

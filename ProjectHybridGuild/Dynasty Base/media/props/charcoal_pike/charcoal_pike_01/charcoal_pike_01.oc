@@ -1,5 +1,0 @@
-charcoal_pike_01 extends G3Actor
-{
-	static var Description = #charcoal_pike_01/charcoal_pike_01_anim_desc;
-}
-

@@ -1,9 +1,0 @@
-smuggler_02 extends BuildingVisualUpgrade
-{
-	static var Description = ActorDesc
-	{
-		Visual = "smuggler_02";
-	};
-	BusinessLevel = 2;
-	UpgradeOf = smuggler;
-}
