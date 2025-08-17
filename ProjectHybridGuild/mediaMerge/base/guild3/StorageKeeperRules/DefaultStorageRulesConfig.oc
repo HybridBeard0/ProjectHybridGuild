@@ -96,6 +96,23 @@ DefaultStorageRulesConfig extends DefaultStorageRules
 		DefaultStorageRule
 		{
 			UseForAI = true;
+			BuildingType = "LumberYardPlayer";
+			SalesPriceMultiplier = 0.75f;
+
+			BuildableResourcesMinStorageAmount = 0;
+			BuildableResourcesMaxStorageAmount = -1;
+			
+			BuildableComponentsMinStorageAmount = 0;
+			BuildableComponentsMaxStorageAmount = -1;
+			
+			BuildableProductsMinStorageAmount = 0;
+			BuildableProductsMaxStorageAmount = -1;
+
+			BuildableResourcesInFrontStoreAmount = 120;
+		},
+		DefaultStorageRule
+		{
+			UseForAI = true;
 			BuildingType = "Market";
 			
 			SalesPriceMultiplier = 1.0f;
