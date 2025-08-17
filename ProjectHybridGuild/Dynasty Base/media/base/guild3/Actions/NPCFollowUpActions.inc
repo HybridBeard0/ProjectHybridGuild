@@ -109,7 +109,7 @@
 		TargetProfileBuilding
 		{
 			CloseToActor = 2;
-			ExcludedTypes = array{"Mine", "Quarry", "LumberYard", "Cemetary", "Grove", "Brushwood", "trademarket", "RobberCamp"};
+			ExcludedTypes = array{"Mine", "Quarry", "LumberYard", "Cemetary", "Grove", "Brushwood", "trademarket", "RobberCamp", "LumberYardPlayer"};
 			MaxDistance = 8000;
 		}
 	};

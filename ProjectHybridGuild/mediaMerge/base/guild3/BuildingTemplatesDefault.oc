@@ -1071,9 +1071,9 @@ BuildingTemplatesDefault extends G3BuildingTemplateContainer
 			ConstructionTime = 0.042;
 			
 			MoralAlignment = MoralAlignment
-			{
-				Values = array{0.000, 0.000, 0.000};
-			};
+            {
+                Values = array{0.000, 0.000, 0.000};
+            };
 
 			BuildingLevels = map
 			{
@@ -2572,12 +2572,11 @@ BuildingTemplatesDefault extends G3BuildingTemplateContainer
 				"FireProtection_1_1",
 				"FireProtection_2_1",
 				"FireProtection_3_1",
-				"FireProtection_3_1b",
 				"BurglaryProtection_1_1",
 				"BurglaryProtection_2_1",
 				"BurglaryProtection_3_1",
-				"BurglaryProtection_3_1b",
 				"MoreEmployees1_1",
+				"MoreEmployees2_1",
 				"StorageSlots_1_1",
 				"StorageSlots_2_1",
 				"StorageSlots_3_1",
@@ -2941,12 +2940,13 @@ BuildingTemplatesDefault extends G3BuildingTemplateContainer
 		};
 		"LumberYardPlayer" = G3BuildingTemplate
 		{
-			EnumType = 104;			DisplayCategories = array("All", "Handicraft", "Village");
+			EnumType = 104;
+			DisplayCategories = array("All", "Handicraft", "Village");
 			
 			EnableCity = false;
 			EnableHouse = false;
 			EnableBusiness = true;
-			EnableFrontStore = false;
+			EnableFrontStore = true;
 			EnableServiceProvider = false;
 			EnableSeller = true;
 			EnableResourceProducer = false;
@@ -2956,6 +2956,8 @@ BuildingTemplatesDefault extends G3BuildingTemplateContainer
 			Visuals = array { "lumberyard/lumberyard" };
 			NPCHomePriority = 1;
 
+			ConstructionTime = 0.03125;
+
 			MoralAlignment = MoralAlignment
             {
                 Values = array{0.000, 0.000, 0.000};
@@ -2963,11 +2965,13 @@ BuildingTemplatesDefault extends G3BuildingTemplateContainer
 
 			BuildingLevels = map
 			{
-				1 = base/ResourceProducer1
+				1 = base/LumberYardPlayerLevel1
 				{
-					Cost = 100;
-					RepairCost = 2250;
-					MaximumHealth = 3000;
+					Cost = 2500;
+					RepairCost = 1250;
+					MaximumHealth = 750;
+					EnableExterior = true;
+					EnableInterior = false;
 				};
 			};
 			
@@ -3548,7 +3552,6 @@ BuildingTemplatesDefault extends G3BuildingTemplateContainer
 				"Priest-Cleaning" = 0.05,
 				"Priest-Praying" = 0.4,
 			};
-
 			BuildingLevels = map
 			{
 				1 = base/PublicBuilding

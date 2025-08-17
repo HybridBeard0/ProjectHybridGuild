@@ -325,10 +325,10 @@ LumberYardPlayer extends Building
 						},
 						G3SnapPointAnimation
 						{
-							Context = "work";
-							Animation = "woodcutteraxe";
-							Prop = "woodcutteraxe/woodcutteraxe";
-							Repeat = 2;
+						 Context = "work";
+						 Animation = "woodcutteraxe";
+						 Prop = "woodcutteraxe/woodcutteraxe";
+						 Repeat = 2;
 						},
 						G3SnapPointAnimation
 						{
@@ -565,7 +565,10 @@ LumberYardPlayer extends Building
 		};
 	};
 	
-	EditorName = "LuberyardPlayer";
-	EditorIcon = "media/UserInterface/Icons/BuildingImages/Businesses/Lumberyard.png";
-	EditorCategory = 3;			
+	DisplayName = "$LumberYardPlayer";
+	Description = "$LumberYardPlayerDesc";
+	
+	EditorName = "LumberYardPlayer";
+	EditorIcon = "media/UserInterface/Icons/BuildingImages/Other/Lumberyard.png";
+	EditorCategory = 3;
 }
