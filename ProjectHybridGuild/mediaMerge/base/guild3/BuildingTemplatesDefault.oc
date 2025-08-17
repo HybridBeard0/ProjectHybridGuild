@@ -2938,69 +2938,69 @@ BuildingTemplatesDefault extends G3BuildingTemplateContainer
 				};
 			};
 		};
-		"LumberYardPlayer" = G3BuildingTemplate
-		{
-			EnumType = 104;
-			DisplayCategories = array("All", "Handicraft", "Village");
-			
-			EnableCity = false;
-			EnableHouse = false;
-			EnableBusiness = true;
-			EnableFrontStore = true;
-			EnableServiceProvider = false;
-			EnableSeller = true;
-			EnableResourceProducer = false;
-			EnableDecay = true;
-			SelectSound = 57; // Lumberyard
-			ConstructionSite = "construction_site_08/cs8";
-			Visuals = array { "lumberyard/lumberyard" };
-			NPCHomePriority = 1;
-
-			ConstructionTime = 0.03125;
-
-			MoralAlignment = MoralAlignment
-            {
-                Values = array{0.000, 0.000, 0.000};
-            };
-
-			BuildingLevels = map
-			{
-				1 = base/LumberYardPlayerLevel1
-				{
-					Cost = 2500;
-					RepairCost = 1250;
-					MaximumHealth = 750;
-					EnableExterior = true;
-					EnableInterior = false;
-				};
-			};
-			
-			AvailableAddons = array
-			{
-				"FireProtection_1_1",
-				"FireProtection_2_1",
-				"BurglaryProtection_1_1",
-				"BurglaryProtection_2_1",
-				"Productivity_Level1_1",
-				"Productivity_Level1_2",
-				"Productivity_Level1_3",
-				"AttractCrowd_1a",
-				"AttractCrowd_1b",
-				"MoreEmployees1_1",
-				"MoreEmployees2_1",
-				"MoreEmployeesTransport_1_1",
-				"StorageSlots_1_1",
-				"StorageSlots_2_1",
-				"StorageSpace_1_1",
-				"StorageSpace_2_1",
-				"FrontStoreSlots_1_1",
-				"FrontStoreSlots_2_1",
-				"FrontStoreSpace_1_1",
-				"FrontStoreSpace_2_1",
-				"Health_1",
-			};
-
-		};
+		//"LumberYardPlayer" = G3BuildingTemplate
+		//{
+		//	EnumType = 104;
+		//	DisplayCategories = array("All", "Handicraft", "Village");
+		//	
+		//	EnableCity = false;
+		//	EnableHouse = false;
+		//	EnableBusiness = true;
+		//	EnableFrontStore = true;
+		//	EnableServiceProvider = false;
+		//	EnableSeller = true;
+		//	EnableResourceProducer = false;
+		//	EnableDecay = true;
+		//	SelectSound = 57; // Lumberyard
+		//	ConstructionSite = "construction_site_08/cs8";
+		//	Visuals = array { "lumberyard/lumberyard" };
+		//	NPCHomePriority = 1;
+		//
+		//	ConstructionTime = 0.03125;
+		//
+		//	MoralAlignment = MoralAlignment
+        //    {
+        //        Values = array{0.000, 0.000, 0.000};
+        //    };
+		//
+		//	BuildingLevels = map
+		//	{
+		//		1 = base/LumberYardPlayerLevel1
+		//		{
+		//			Cost = 2500;
+		//			RepairCost = 1250;
+		//			MaximumHealth = 750;
+		//			EnableExterior = true;
+		//			EnableInterior = false;
+		//		};
+		//	};
+		//	
+		//	AvailableAddons = array
+		//	{
+		//		"FireProtection_1_1",
+		//		"FireProtection_2_1",
+		//		"BurglaryProtection_1_1",
+		//		"BurglaryProtection_2_1",
+		//		"Productivity_Level1_1",
+		//		"Productivity_Level1_2",
+		//		"Productivity_Level1_3",
+		//		"AttractCrowd_1a",
+		//		"AttractCrowd_1b",
+		//		"MoreEmployees1_1",
+		//		"MoreEmployees2_1",
+		//		"MoreEmployeesTransport_1_1",
+		//		"StorageSlots_1_1",
+		//		"StorageSlots_2_1",
+		//		"StorageSpace_1_1",
+		//		"StorageSpace_2_1",
+		//		"FrontStoreSlots_1_1",
+		//		"FrontStoreSlots_2_1",
+		//		"FrontStoreSpace_1_1",
+		//		"FrontStoreSpace_2_1",
+		//		"Health_1",
+		//	};
+		//
+		//};
 		"Cemetary" = G3BuildingTemplate
 		{
 			EnumType = 5;

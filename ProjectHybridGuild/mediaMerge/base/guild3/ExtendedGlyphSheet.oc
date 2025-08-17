@@ -643,12 +643,12 @@ ExtendedGlyphSheet extends TextSymbolSheet
 			Origin = array { 441, 21 };
 			Dimensions = array { 21, 21 };
 		},
-		TextSymbol
-		{
-			Name = "LumberYardPlayer";
-			Origin = array { 441, 21 };
-			Dimensions = array { 21, 21 };
-		},
+		//TextSymbol
+		//{
+		//	Name = "LumberYardPlayer";
+		//	Origin = array { 441, 21 };
+		//	Dimensions = array { 21, 21 };
+		//},
 		TextSymbol
 		{
 			Name = "Mansion";

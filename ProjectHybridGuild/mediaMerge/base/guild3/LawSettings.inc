@@ -6,7 +6,7 @@ LawSettings
 		"Anyone" = 8;
 		"DynastyMember" = 14;
 		"PartyMember" = 18;
-		"DynastyLeader" = -1;
+		"DynastyLeader" = 14;
 	};
 	
 	// During trial: This formula defines how the severity of an evidence bundle gets influenced by a couple of factors. Returns the adjusted severity.
@@ -93,8 +93,26 @@ LawSettings
 		},
 		Crime
 		{
+			ActionName = "GiftOfficeHolder";
+			ResponsibleOfficeGroup = "MayorGroup";
+			Severity = 4;
+			EvidenceBaseValue = 250;
+			IsLegalByDefault = true;
+			CanChangeBy = "Office";
+		},
+		Crime
+		{
+			ActionName = "Divorce";
+			ResponsibleOfficeGroup = "MayorGroup";
+			Severity = 15;
+			EvidenceBaseValue = 500;
+			IsLegalByDefault = false;
+			CanChangeBy = "Office";
+		},
+		Crime
+		{
 			ActionName = "KillCharacter";
-			ResponsibleOfficeGroup = "";
+			ResponsibleOfficeGroup = "MayorGroup";
 			Severity = 31;
 			EvidenceBaseValue = 1500;
 			IsLegalByDefault = false;
@@ -103,7 +121,7 @@ LawSettings
 		Crime
 		{
 			ActionName = "StealthKillCharacter";
-			ResponsibleOfficeGroup = "";
+			ResponsibleOfficeGroup = "MayorGroup";
 			Severity = 31;
 			EvidenceBaseValue = 1500;
 			IsLegalByDefault = false;

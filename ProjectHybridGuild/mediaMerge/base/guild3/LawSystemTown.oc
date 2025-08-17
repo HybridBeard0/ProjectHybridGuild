@@ -26,7 +26,7 @@ LawSystemTown extends LawSystem
 				{
 					ID = "Mayor";
 					DisplayName = "$gui.politics.office.Mayor";
-					NumRoundPerTerm = 4;
+					IsLifeTime = true;
 					AnnualSalary = 2000;
 					AnnualPrestige = 500;
 					UpperOfficeIDs = array{ "Sovereign" };
@@ -38,7 +38,7 @@ LawSystemTown extends LawSystem
 				{
 					ID = "CityLegate";
 					DisplayName = "$gui.politics.office.CityLegate";
-					NumRoundPerTerm = 4;
+					NumRoundPerTerm = 8;
 					AnnualSalary = 1750;
 					AnnualPrestige = 350;
 					UpperOfficeIDs = array{ "Sovereign" };
@@ -50,7 +50,7 @@ LawSystemTown extends LawSystem
 				{
 					ID = "Treasurer";
 					DisplayName = "$gui.politics.office.Treasurer";
-					NumRoundPerTerm = 4;
+					NumRoundPerTerm = 8;
 					AnnualSalary = 1750;
 					AnnualPrestige = 350;
 					UpperOfficeIDs = array{ "Sovereign" };
@@ -73,6 +73,10 @@ LawSystemTown extends LawSystem
 				{
 					Tags = array{ "LawImmunity", "CannotBeTrialAccuser" };
 				},
+				VIPProtectionEffect
+				{
+					GuardsPerCharacter = 1;
+				},
 			};
 
 			Offices = array
@@ -81,9 +85,9 @@ LawSystemTown extends LawSystem
 				{
 					ID = "ChiefJudge";
 					DisplayName = "$gui.politics.office.ChiefJudge";
-					NumRoundPerTerm = 4;
+					IsLifeTime = true;
 					AnnualSalary = 1350;
-					AnnualPrestige = 250;
+					AnnualPrestige = 100;
 					UpperOfficeIDs = array{ "Mayor", "CityLegate", "Treasurer" };
 					Stage = 4;
 					ApplicationFee = 250;
@@ -93,24 +97,24 @@ LawSystemTown extends LawSystem
 				{
 					ID = "Judge1";
 					DisplayName = "$gui.politics.office.Judge1";
-					NumRoundPerTerm = 4;
+					NumRoundPerTerm = 8;
 					AnnualSalary = 1000;
-					AnnualPrestige = 175;
+					AnnualPrestige = 75;
 					UpperOfficeIDs = array{ "Mayor", "CityLegate", "Treasurer" };
 					Stage = 3;
-					ApplicationFee = 175;
+					ApplicationFee = 100;
 					MissedMeetingFine = "80 + 40 * SocialLevel";
 				};
 				Office
 				{
 					ID = "Judge2";
 					DisplayName = "$gui.politics.office.Judge2";
-					NumRoundPerTerm = 4;
+					NumRoundPerTerm = 8;
 					AnnualSalary = 1000;
-					AnnualPrestige = 175;
+					AnnualPrestige = 75;
 					UpperOfficeIDs = array{ "Mayor", "CityLegate", "Treasurer" };
 					Stage = 3;
-					ApplicationFee = 175;
+					ApplicationFee = 100;
 					MissedMeetingFine = "80 + 40 * SocialLevel";
 				};
 			};
@@ -139,9 +143,9 @@ LawSystemTown extends LawSystem
 				{
 					ID = "Captain";
 					DisplayName = "$gui.politics.office.Captain";
-					NumRoundPerTerm = 4;
+					IsLifeTime = true;
 					AnnualSalary = 1350;
-					AnnualPrestige = 250;
+					AnnualPrestige = 100;
 					UpperOfficeIDs = array{ "Mayor", "CityLegate", "Treasurer" };
 					Stage = 4;
 					ApplicationFee = 250;
@@ -151,24 +155,24 @@ LawSystemTown extends LawSystem
 				{
 					ID = "ArsenalMaster";
 					DisplayName = "$gui.politics.office.ArsenalMaster";
-					NumRoundPerTerm = 4;
+					NumRoundPerTerm = 8;
 					AnnualSalary = 1000;
-					AnnualPrestige = 175;
+					AnnualPrestige = 75;
 					UpperOfficeIDs = array{ "Mayor", "CityLegate", "Treasurer" };
 					Stage = 3;
-					ApplicationFee = 175;
+					ApplicationFee = 100;
 					MissedMeetingFine = "80 + 40 * SocialLevel";
 				};
 				Office
 				{
 					ID = "DungeonMaster";
 					DisplayName = "$gui.politics.office.DungeonMaster";
-					NumRoundPerTerm = 4;
+					NumRoundPerTerm = 8;
 					AnnualSalary = 1000;
-					AnnualPrestige = 175;
+					AnnualPrestige = 75;
 					UpperOfficeIDs = array{ "Mayor", "CityLegate", "Treasurer" };
 					Stage = 3;
-					ApplicationFee = 175;
+					ApplicationFee = 100;
 					MissedMeetingFine = "80 + 40 * SocialLevel";
 				};
 			};
@@ -197,7 +201,7 @@ LawSystemTown extends LawSystem
 				{
 					ID = "CouncilAssistant";
 					DisplayName = "$gui.politics.office.CouncilAssistant";
-					NumRoundPerTerm = 4;
+					NumRoundPerTerm = 8;
 					AnnualSalary = 750;
 					AnnualPrestige = 125;
 					UpperOfficeIDs = array{ "ChiefJudge", "Judge1", "Judge2" };
@@ -209,7 +213,7 @@ LawSystemTown extends LawSystem
 				{
 					ID = "TownClerk";
 					DisplayName = "$gui.politics.office.TownClerk";
-					NumRoundPerTerm = 4;
+					NumRoundPerTerm = 8;
 					AnnualSalary = 500;
 					AnnualPrestige = 85;
 					UpperOfficeIDs = array{ "ChiefJudge", "Judge1", "Judge2" };
@@ -221,7 +225,7 @@ LawSystemTown extends LawSystem
 				{
 					ID = "TownClerk2";
 					DisplayName = "$gui.politics.office.TownClerk";
-					NumRoundPerTerm = 4;
+					NumRoundPerTerm = 8;
 					AnnualSalary = 500;
 					AnnualPrestige = 85;
 					UpperOfficeIDs = array{ "ChiefJudge", "Judge1", "Judge2" };
@@ -255,7 +259,7 @@ LawSystemTown extends LawSystem
 				{
 					ID = "CouncilInformer";
 					DisplayName = "$gui.politics.office.CouncilInformer";
-					NumRoundPerTerm = 4;
+					NumRoundPerTerm = 8;
 					AnnualSalary = 750;
 					AnnualPrestige = 125;
 					UpperOfficeIDs = array{ "Captain", "ArsenalMaster", "DungeonMaster" };
@@ -267,7 +271,7 @@ LawSystemTown extends LawSystem
 				{
 					ID = "Informer";
 					DisplayName = "$gui.politics.office.Informer";
-					NumRoundPerTerm = 4;
+					NumRoundPerTerm = 8;
 					AnnualSalary = 500;
 					AnnualPrestige = 85;
 					UpperOfficeIDs = array{ "Captain", "ArsenalMaster", "DungeonMaster" };
@@ -279,7 +283,7 @@ LawSystemTown extends LawSystem
 				{
 					ID = "Informer2";
 					DisplayName = "$gui.politics.office.Informer";
-					NumRoundPerTerm = 4;
+					NumRoundPerTerm = 8;
 					AnnualSalary = 500;
 					AnnualPrestige = 85;
 					UpperOfficeIDs = array{ "Captain", "ArsenalMaster", "DungeonMaster" };
@@ -313,7 +317,7 @@ LawSystemTown extends LawSystem
 				{
 					ID = "CouncilGuardian";
 					DisplayName = "$gui.politics.office.CouncilGuardian";
-					NumRoundPerTerm = 4;
+					NumRoundPerTerm = 8;
 					AnnualSalary = 750;
 					AnnualPrestige = 125;
 					UpperOfficeIDs = array{ "Captain", "ArsenalMaster", "DungeonMaster" };
@@ -325,7 +329,7 @@ LawSystemTown extends LawSystem
 				{
 					ID = "GateGuardian";
 					DisplayName = "$gui.politics.office.GateGuardian";
-					NumRoundPerTerm = 4;
+					NumRoundPerTerm = 8;
 					AnnualSalary = 500;
 					AnnualPrestige = 85;
 					UpperOfficeIDs = array{ "Captain", "ArsenalMaster", "DungeonMaster" };
@@ -337,7 +341,7 @@ LawSystemTown extends LawSystem
 				{
 					ID = "GateGuardian2";
 					DisplayName = "$gui.politics.office.GateGuardian";
-					NumRoundPerTerm = 4;
+					NumRoundPerTerm = 8;
 					AnnualSalary = 500;
 					AnnualPrestige = 85;
 					UpperOfficeIDs = array{ "Captain", "ArsenalMaster", "DungeonMaster" };
