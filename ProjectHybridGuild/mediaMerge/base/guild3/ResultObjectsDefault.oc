@@ -2133,9 +2133,9 @@ ResultObjectsDefault extends ResultObjectContainer
 				{
 					ApplyTo = "Target";
 					Tags = array{"NegativeFrontstoreTrade"};
-					DisplayGroup = "debuffed";
+					DisplayGroup = "buffed";
 					Duration = 30;
-					DisplayName = "$effect.UnhappyCustomer";
+					DisplayName = "$BusinessTitleTooltipFrontStoreDesc";
 				},
 				FunctionUpdateRelationship
 				{
@@ -2143,12 +2143,6 @@ ResultObjectsDefault extends ResultObjectContainer
 				},
 				ModifierEffect
 				{
-					ApplyTo = "Target";
-					Tags = array{"NegativeFrontstoreTrade"};
-					ActorValue = "Attractiveness";
-					Mod = 0.0f; //will be set in code
-					Duration = 30;
-					Recover = true;
 				}
 			};
 		},
@@ -2163,7 +2157,7 @@ ResultObjectsDefault extends ResultObjectContainer
 					Tags = array{"PositiveFrontstoreTrade"};
 					DisplayGroup = "buffed";
 					Duration = 30;
-					DisplayName = "$effect.HappyCustomer";
+					DisplayName = "$BusinessTitleTooltipFrontStoreDesc";
 				},
 				FunctionUpdateRelationship
 				{
@@ -2171,12 +2165,6 @@ ResultObjectsDefault extends ResultObjectContainer
 				},
 				ModifierEffect
 				{
-					ApplyTo = "Target";
-					Tags = array{"PositiveFrontstoreTrade"};
-					ActorValue = "Attractiveness";
-					Mod = 0.0f; //will be set in code
-					Duration = 30;
-					Recover = true;
 				}
 			};
 		},
