@@ -180,11 +180,11 @@ AIConstValues extends AIConstants
 	// - isMarketWeight -> 1 if building is not a market, AI constant NpcNeeds_IsMarketWeight if it is a market
 	// - homeNeighborhoodWeight -> 1 if the building is in the NPCs home neighborhood, AI Constant NpcNeeds_OtherNeighborhoodWeight if it's a different neighborhood
 	// NPC needs: constants for calculating the likeliness of visiting a certain business when an NPC attempts to buy items to satisfy his needs
-	NpcNeeds_NeutralBuildingDistance = 1000.0f; // A 'base' distance for calculating a distance multiplier
-	NpcNeeds_CustomerSatisfactionWeight = 2.0f; // The weight for the 'attractiveness' actor value of a business 
-	NpcNeeds_MinBuildingDistance = 100.f; //Min distance from a building for it to be considered as a store, to prevent that characters will always go to the same market
-	NpcNeeds_IsMarketWeight = 0.1f; //Weight to reduce a building's rating if it is a market, so that NPC that go shopping prefer businesses
-	NpcNeeds_OtherNeighborhoodWeight = 0.2f; //Weight to reduce building's rating if it is not from a NPC's home neighborhood, so they don't stray too far away from their home neighborhoods
+	NpcNeeds_NeutralBuildingDistance = 3850.0f; // A 'base' distance for calculating a distance multiplier
+	NpcNeeds_CustomerSatisfactionWeight = 1.0f; // The weight for the 'attractiveness' actor value of a business 
+	NpcNeeds_MinBuildingDistance = 100.0f; //Min distance from a building for it to be considered as a store, to prevent that characters will always go to the same market
+	NpcNeeds_IsMarketWeight = 1.0f; //Weight to reduce a building's rating if it is a market, so that NPC that go shopping prefer businesses
+	NpcNeeds_OtherNeighborhoodWeight = 0.35f; //Weight to reduce building's rating if it is not from a NPC's home neighborhood, so they don't stray too far away from their home neighborhoods
 	
 	NpcManager_MaxDialoguesInPoi = 2; // max number of people talking simultaneously around a POI 
 	NpcManager_MaxSpotsInPoi = 10; // max number of spots available around a POI
