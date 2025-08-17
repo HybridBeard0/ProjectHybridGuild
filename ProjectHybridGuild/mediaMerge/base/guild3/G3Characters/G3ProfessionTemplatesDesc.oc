@@ -38,8 +38,9 @@ G3ProfessionTemplatesDesc extends G3ProfessionTemplates{
 			CharacterType = 2;
 			Icon = "Transporter";
 			SkillGroup = "Transporter";
-			BodyArmor = "TransporterClothes";
+			Equipment = array{ "TransporterClothes", "TransporterBackpack" };
 			AttributeWeights = array { 0.0f, 0.5f, 0.1f, 0.0f, 1.0f }; // Strength, Dexterity, Intelligence, Perception, Charisma
+			ResultObjects = array { "IgnoringWorktimeBuff" };
 		},
 		
 		G3CharacterProfession

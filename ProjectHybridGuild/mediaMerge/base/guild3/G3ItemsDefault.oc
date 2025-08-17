@@ -738,6 +738,39 @@ G3ItemsDefault extends G3ItemsContainer
 				}
 			};
 		};
+		"TransporterBackpack" = G3Item
+		{
+			Type = 3;
+			
+			DisplayName = "$Backpack";
+			Description = "$BackpackDesc";
+			DisplayCategories = array("All");
+			IconName = "Backpack";
+
+			EquippedCharacterDesc = "commoner1";
+			EquipmentType = 6;
+			EquipmentAdultsOnly = true;
+			UsableBy = array{ "$characters.Age.Adult" };
+
+			SoldAtMarket = false;
+			BoughtByMarket = false;
+			
+			Results = array
+			{
+				ModifierEffect
+				{
+					ActorValue = "MovementSpeedMult";
+					Mod = 0.015;
+					Recover = true;
+				},
+				ModifierEffect
+				{
+					ActorValue = "StorageSlots";
+					Mod = 1;
+					Recover = true;
+				}
+			};
+		};
 		
 		"HenchmenArmor" = G3Item
 		{

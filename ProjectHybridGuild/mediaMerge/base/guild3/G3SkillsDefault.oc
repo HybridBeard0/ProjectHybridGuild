@@ -23,10 +23,14 @@ G3SkillsDefault extends G3SkillsContainer
 				{
 					NeededSocialLevel = 1;
 					CurrencyType = "Prestige";
-					NeededCurrency = 500;
+					NeededCurrency = 1000;
 					
 					Results = array
 					{
+						UnlockEffect
+						{
+							Names = array{"Well"};
+						}
 					};
 				};
 			};
@@ -45,8 +49,6 @@ G3SkillsDefault extends G3SkillsContainer
 				0 = G3SkillLevel
 				{
 					NeededSocialLevel = 1;
-					CurrencyType = "Money"; // Money by default - can be set to Prestige
-					NeededCurrency = 1000;
 					
 					Results = array
 					{
@@ -66,7 +68,8 @@ G3SkillsDefault extends G3SkillsContainer
 				1 = G3SkillLevel
 				{
 					NeededSocialLevel = 3;
-					NeededCurrency = 2500;
+					CurrencyType = "Prestige";
+					NeededCurrency = 150;
 					
 					Results = array
 					{
@@ -128,7 +131,6 @@ G3SkillsDefault extends G3SkillsContainer
 				0 = G3SkillLevel
 				{
 					NeededSocialLevel = 1;
-					NeededCurrency = 1000;
 					
 					Results = array
 					{
@@ -146,7 +148,8 @@ G3SkillsDefault extends G3SkillsContainer
 				1 = G3SkillLevel
 				{
 					NeededSocialLevel = 3;
-					NeededCurrency = 750;
+					CurrencyType = "Prestige";
+					NeededCurrency = 150;
 					
 					Results = array
 					{
@@ -161,8 +164,8 @@ G3SkillsDefault extends G3SkillsContainer
 
 		"Baker" = G3Skill
 		{
-			RequiredSkillName = "Culinary";
-			RequiredSkillLevel = 1;
+			RequiredSkillName = "HuntingFarming";
+			RequiredSkillLevel = 0;
 			
 			DisplayName = "$Baker";
 			Description = "$BakerDesc";
@@ -171,8 +174,7 @@ G3SkillsDefault extends G3SkillsContainer
 			{
 				0 = G3SkillLevel
 				{
-					NeededSocialLevel = 5;
-					NeededCurrency = 1750;
+					NeededSocialLevel = 1;
 					
 					Results = array
 					{
@@ -189,8 +191,9 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				1 = G3SkillLevel
 				{
-					NeededSocialLevel = 7;
-					NeededCurrency = 3500;
+					NeededSocialLevel = 5;
+					CurrencyType = "Prestige";
+					NeededCurrency = 200;
 					
 					Results = array
 					{
@@ -207,8 +210,8 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				2 = G3SkillLevel
 				{
-					NeededSocialLevel = 9;
-					NeededCurrency = 7000;
+					NeededSocialLevel = 7;
+					NeededCurrency = 10000;
 					
 					Results = array
 					{
@@ -225,8 +228,7 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				3 = G3SkillLevel
 				{
-					NeededSocialLevel = 11;
-					NeededCurrency = 15000;
+					NeededSocialLevel = 10;							NeededCurrency = 20000;
 					Results = array
 					{
 						UnlockEffect
@@ -251,7 +253,6 @@ G3SkillsDefault extends G3SkillsContainer
 				0 = G3SkillLevel
 				{
 					NeededSocialLevel = 1;
-					NeededCurrency = 1000;
 					
 					Results = array
 					{
@@ -269,7 +270,8 @@ G3SkillsDefault extends G3SkillsContainer
 				1 = G3SkillLevel
 				{
 					NeededSocialLevel = 3;
-					NeededCurrency = 750;
+					CurrencyType = "Prestige";
+					NeededCurrency = 150;
 					
 					Results = array
 					{
@@ -284,7 +286,7 @@ G3SkillsDefault extends G3SkillsContainer
 
 		"CrowdManagement" = G3Skill
 		{
-			RequiredSkillName = "Orchardist";
+			RequiredSkillName = "HuntingFarming";
 			RequiredSkillLevel = 0;
 			
 			DisplayName = "$CrowdManagement";
@@ -294,8 +296,7 @@ G3SkillsDefault extends G3SkillsContainer
 			{
 				0 = G3SkillLevel
 				{
-					NeededSocialLevel = 5;
-					NeededCurrency = 2500;
+					NeededSocialLevel = 1;
 					
 					Results = array
 					{
@@ -312,8 +313,9 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				1 = G3SkillLevel
 				{
-					NeededSocialLevel = 7;
-					NeededCurrency = 6500;
+					NeededSocialLevel = 5;
+					CurrencyType = "Prestige";
+					NeededCurrency = 200;
 					
 					Results = array
 					{
@@ -330,8 +332,8 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				2 = G3SkillLevel
 				{
-					NeededSocialLevel = 9;
-					NeededCurrency = 15000;
+					NeededSocialLevel = 7;
+					NeededCurrency = 10000;
 					
 					Results = array
 					{
@@ -348,8 +350,8 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				3 = G3SkillLevel
 				{
-					NeededSocialLevel = 11;
-					NeededCurrency = 35000;
+					NeededSocialLevel = 10;
+					NeededCurrency = 20000;
 					
 					
 					Results = array
@@ -376,7 +378,6 @@ G3SkillsDefault extends G3SkillsContainer
 				0 = G3SkillLevel
 				{
 					NeededSocialLevel = 1;
-					NeededCurrency = 1000;
 					
 					Results = array
 					{
@@ -394,7 +395,8 @@ G3SkillsDefault extends G3SkillsContainer
 				1 = G3SkillLevel
 				{
 					NeededSocialLevel = 3;
-					NeededCurrency = 750;
+					CurrencyType = "Prestige";
+					NeededCurrency = 150;
 					
 					Results = array
 					{
@@ -409,8 +411,8 @@ G3SkillsDefault extends G3SkillsContainer
 
 		"Butcher" = G3Skill
 		{
-			RequiredSkillName = "Fishing";
-			RequiredSkillLevel = 1;
+			RequiredSkillName = "HuntingFarming";
+			RequiredSkillLevel = 0;
 			
 			DisplayName = "$Butcher";
 			Description = "$ButcherDesc";
@@ -419,8 +421,7 @@ G3SkillsDefault extends G3SkillsContainer
 			{
 				0 = G3SkillLevel
 				{
-					NeededSocialLevel = 3;
-					NeededCurrency = 1750;
+					NeededSocialLevel = 1;
 					
 					Results = array
 					{
@@ -438,7 +439,8 @@ G3SkillsDefault extends G3SkillsContainer
 				1 = G3SkillLevel
 				{
 					NeededSocialLevel = 5;
-					NeededCurrency = 3500;
+					CurrencyType = "Prestige";
+					NeededCurrency = 175;
 					
 					Results = array
 					{
@@ -471,10 +473,14 @@ G3SkillsDefault extends G3SkillsContainer
 				{
 					NeededSocialLevel = 1;
 					CurrencyType = "Prestige";
-					NeededCurrency = 500;
+					NeededCurrency = 1000;
 					
 					Results = array
 					{
+						UnlockEffect
+						{
+							Names = array{"Well", "Mine", "Quarry", "LumberYard"};
+						}
 					};
 				};
 			};
@@ -493,7 +499,6 @@ G3SkillsDefault extends G3SkillsContainer
 				0 = G3SkillLevel
 				{
 					NeededSocialLevel = 1;
-					NeededCurrency = 1000;
 					
 					Results = array
 					{
@@ -511,7 +516,8 @@ G3SkillsDefault extends G3SkillsContainer
 				1 = G3SkillLevel
 				{
 					NeededSocialLevel = 3;
-					NeededCurrency = 750;
+					CurrencyType = "Prestige";
+					NeededCurrency = 150;
 					
 					Results = array
 					{
@@ -526,8 +532,8 @@ G3SkillsDefault extends G3SkillsContainer
 		
 		"HandicraftMetal" = G3Skill
 		{
-			RequiredSkillName = "Artisan";
-			RequiredSkillLevel = 1;
+			RequiredSkillName = "Handicraft";
+			RequiredSkillLevel = 0;
 			
 			DisplayName = "$HandicraftMetal";
 			Description = "$HandicraftMetalDesc";
@@ -536,8 +542,7 @@ G3SkillsDefault extends G3SkillsContainer
 			{
 				0 = G3SkillLevel
 				{
-					NeededSocialLevel = 5;
-					NeededCurrency = 1750;
+					NeededSocialLevel = 1;
 					
 					Results = array
 					{
@@ -554,8 +559,9 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				1 = G3SkillLevel
 				{
-					NeededSocialLevel = 7;
-					NeededCurrency = 3500;
+					NeededSocialLevel = 5;
+					CurrencyType = "Prestige";
+					NeededCurrency = 200;
 					
 					Results = array
 					{
@@ -572,7 +578,7 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				2 = G3SkillLevel
 				{
-					NeededSocialLevel = 9;
+					NeededSocialLevel = 7;
 					NeededCurrency = 7000;
 					
 					Results = array
@@ -590,7 +596,7 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				3 = G3SkillLevel 
 				{
-					NeededSocialLevel = 11;
+					NeededSocialLevel = 10;
 					NeededCurrency = 15000;
 
 					Results = array
@@ -617,7 +623,6 @@ G3SkillsDefault extends G3SkillsContainer
 				0 = G3SkillLevel
 				{
 					NeededSocialLevel = 1;
-					NeededCurrency = 1000;
 					
 					Results = array
 					{
@@ -628,14 +633,15 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array { "ClayVase", "Beaker", "WeightStone", "BucketOfWater", "ClayBowl", "ThrowingStones" };
+							Names = array { "ClayVase", "Beaker", "WeightStone", "BucketOfWater" };
 						}
 					};
 				};
 				1 = G3SkillLevel
 				{
 					NeededSocialLevel = 3;
-					NeededCurrency = 750;
+					CurrencyType = "Prestige";
+					NeededCurrency = 150;
 					
 					Results = array
 					{
@@ -650,8 +656,8 @@ G3SkillsDefault extends G3SkillsContainer
 		
 		"HandicraftStone" = G3Skill
 		{
-			RequiredSkillName = "Masonery";
-			RequiredSkillLevel = 1;
+			RequiredSkillName = "Handicraft";
+			RequiredSkillLevel = 0;
 			
 			DisplayName = "$HandicraftStone";
 			Description = "$HandicraftStoneDesc";
@@ -660,8 +666,7 @@ G3SkillsDefault extends G3SkillsContainer
 			{
 				0 = G3SkillLevel
 				{
-					NeededSocialLevel = 5;
-					NeededCurrency = 1750;
+					NeededSocialLevel = 1;
 					
 					Results = array
 					{
@@ -678,8 +683,9 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				1 = G3SkillLevel
 				{
-					NeededSocialLevel = 7;
-					NeededCurrency = 3500;
+					NeededSocialLevel = 5;
+					CurrencyType = "Prestige";
+					NeededCurrency = 200;
 					
 					Results = array
 					{
@@ -696,8 +702,8 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				2 = G3SkillLevel
 				{
-					NeededSocialLevel = 9;
-					NeededCurrency = 7000;
+					NeededSocialLevel = 7;
+					NeededCurrency = 10000;
 					
 					Results = array
 					{
@@ -714,7 +720,7 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				3 = G3SkillLevel
 				{
-					NeededSocialLevel = 11;
+					NeededSocialLevel = 10;
 					NeededCurrency = 15000;
 					
 					
@@ -757,7 +763,6 @@ G3SkillsDefault extends G3SkillsContainer
 				0 = G3SkillLevel
 				{
 					NeededSocialLevel = 1;
-					NeededCurrency = 1000;
 					
 					Results = array
 					{
@@ -775,7 +780,8 @@ G3SkillsDefault extends G3SkillsContainer
 				1 = G3SkillLevel
 				{
 					NeededSocialLevel = 3;
-					NeededCurrency = 750;
+					CurrencyType = "Prestige";
+					NeededCurrency = 150;
 					
 					Results = array
 					{
@@ -790,8 +796,8 @@ G3SkillsDefault extends G3SkillsContainer
 		
 		"HandicraftWood" = G3Skill
 		{
-			RequiredSkillName = "Tinker";
-			RequiredSkillLevel = 1;
+			RequiredSkillName = "Handicraft";
+			RequiredSkillLevel = 0;
 			
 			DisplayName = "$HandicraftWood";
 			Description = "$HandicraftWoodDesc";
@@ -800,8 +806,7 @@ G3SkillsDefault extends G3SkillsContainer
 			{
 				0 = G3SkillLevel
 				{
-					NeededSocialLevel = 5;
-					NeededCurrency = 1750;
+					NeededSocialLevel = 1;
 					
 					Results = array
 					{
@@ -818,8 +823,9 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				1 = G3SkillLevel
 				{
-					NeededSocialLevel = 7;
-					NeededCurrency = 3500;
+					NeededSocialLevel = 5;
+					CurrencyType = "Prestige";
+					NeededCurrency = 200;
 					
 					Results = array
 					{
@@ -836,8 +842,8 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				2 = G3SkillLevel
 				{
-					NeededSocialLevel = 9;
-					NeededCurrency = 6500;
+					NeededSocialLevel = 7;
+					NeededCurrency = 10000;
 					
 					Results = array
 					{
@@ -854,7 +860,7 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				3 = G3SkillLevel
 				{
-					NeededSocialLevel = 11;
+					NeededSocialLevel = 10;
 					NeededCurrency = 15000;
 
 					Results = array
@@ -880,8 +886,7 @@ G3SkillsDefault extends G3SkillsContainer
 			{
 				0 = G3SkillLevel
 				{
-					NeededSocialLevel = 5;
-					NeededCurrency = 3500;
+					NeededSocialLevel = 1;
 					
 					Results = array
 					{
@@ -898,8 +903,9 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				1 = G3SkillLevel
 				{
-					NeededSocialLevel = 7;
-					NeededCurrency = 6500;
+					NeededSocialLevel = 5;
+					CurrencyType = "Prestige";
+					NeededCurrency = 200;
 					
 					Results = array
 					{
@@ -916,7 +922,7 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				2 = G3SkillLevel
 				{
-					NeededSocialLevel = 9;
+					NeededSocialLevel = 7;
 					NeededCurrency = 15000;
 					
 					Results = array
@@ -934,7 +940,7 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				3 = G3SkillLevel
 				{
-					NeededSocialLevel = 11;
+					NeededSocialLevel = 10;
 					NeededCurrency = 35000;
 					
 					Results = array
@@ -968,10 +974,14 @@ G3SkillsDefault extends G3SkillsContainer
 				{
 					NeededSocialLevel = 1;
 					CurrencyType = "Prestige";
-					NeededCurrency = 500;
+					NeededCurrency = 1000;
 					
 					Results = array
 					{
+						UnlockEffect
+						{
+							Names = array{"Well"};
+						}
 					};
 				};
 			};
@@ -990,12 +1000,12 @@ G3SkillsDefault extends G3SkillsContainer
 				0 = G3SkillLevel
 				{
 					NeededSocialLevel = 1;
-					NeededCurrency = 1000;
+
 					Results = array
 					{
 						UnlockEffect
 						{
-							Names = array { "Shaman"};
+							Names = array { "Shaman" };
 							Level = 1;
 						},
 						UnlockEffect
@@ -1007,7 +1017,8 @@ G3SkillsDefault extends G3SkillsContainer
 				1 = G3SkillLevel
 				{
 					NeededSocialLevel = 3;
-					NeededCurrency = 750;
+					CurrencyType = "Prestige";
+					NeededCurrency = 150;
 					
 					Results = array
 					{
@@ -1022,8 +1033,8 @@ G3SkillsDefault extends G3SkillsContainer
 
 		"Apothecary" = G3Skill
 		{
-			RequiredSkillName = "Herbalist";
-			RequiredSkillLevel = 1;
+			RequiredSkillName = "Herbalism";
+			RequiredSkillLevel = 0;
 			
 			DisplayName = "$Apothecary";
 			Description = "$ApothecaryDesc";
@@ -1032,8 +1043,7 @@ G3SkillsDefault extends G3SkillsContainer
 			{
 				0 = G3SkillLevel
 				{
-					NeededSocialLevel = 5;
-					NeededCurrency = 1750;
+					NeededSocialLevel = 1;
 					
 					Results = array
 					{
@@ -1050,8 +1060,9 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				1 = G3SkillLevel
 				{
-					NeededSocialLevel = 7;
-					NeededCurrency = 3500;
+					NeededSocialLevel = 5;
+					CurrencyType = "Prestige";
+					NeededCurrency = 200;
 					
 					Results = array
 					{
@@ -1068,8 +1079,8 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				2 = G3SkillLevel
 				{
-					NeededSocialLevel = 9;
-					NeededCurrency = 6500;
+					NeededSocialLevel = 7;
+					NeededCurrency = 10000;
 					
 					Results = array
 					{
@@ -1086,7 +1097,7 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				3 = G3SkillLevel
 				{
-					NeededSocialLevel = 11;
+					NeededSocialLevel = 10;
 					NeededCurrency = 15000;
 					Results = array
 					{
@@ -1112,7 +1123,6 @@ G3SkillsDefault extends G3SkillsContainer
 				0 = G3SkillLevel
 				{
 					NeededSocialLevel = 1;
-					NeededCurrency = 1000;
 					Results = array
 					{
 						UnlockEffect
@@ -1129,7 +1139,8 @@ G3SkillsDefault extends G3SkillsContainer
 				1 = G3SkillLevel
 				{
 					NeededSocialLevel = 3;
-					NeededCurrency = 750;
+					CurrencyType = "Prestige";
+					NeededCurrency = 150;
 					
 					Results = array
 					{
@@ -1142,7 +1153,7 @@ G3SkillsDefault extends G3SkillsContainer
 				2 = G3SkillLevel
 				{
 					NeededSocialLevel = 5;
-					NeededCurrency = 1750;
+					NeededCurrency = 5000;
 					
 					Results = array
 					{
@@ -1160,7 +1171,7 @@ G3SkillsDefault extends G3SkillsContainer
 				3 = G3SkillLevel
 				{
 					NeededSocialLevel = 7;
-					NeededCurrency = 3500;
+					NeededCurrency = 10000;
 					
 					Results = array
 					{
@@ -1175,8 +1186,8 @@ G3SkillsDefault extends G3SkillsContainer
 
 		"Scholarly" = G3Skill
 		{
-			RequiredSkillName = "Preacher";
-			RequiredSkillLevel = 1;
+			RequiredSkillName = "Herbalism";
+			RequiredSkillLevel = 0;
 			
 			DisplayName = "$Scholarly";
 			Description = "$ScholarlyDesc";
@@ -1185,8 +1196,7 @@ G3SkillsDefault extends G3SkillsContainer
 			{
 				0 = G3SkillLevel
 				{
-					NeededSocialLevel = 5;
-					NeededCurrency = 1750;
+					NeededSocialLevel = 1;
 					
 					Results = array
 					{
@@ -1203,8 +1213,9 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				1 = G3SkillLevel
 				{
-					NeededSocialLevel = 7;
-					NeededCurrency = 3500;
+					NeededSocialLevel = 5;
+					CurrencyType = "Prestige";
+					NeededCurrency = 200;
 					
 					Results = array
 					{
@@ -1221,8 +1232,8 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				2 = G3SkillLevel
 				{
-					NeededSocialLevel = 9;
-					NeededCurrency = 6500;
+					NeededSocialLevel = 7;
+					NeededCurrency = 10000;
 					
 					Results = array
 					{
@@ -1239,7 +1250,7 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				3 = G3SkillLevel
 				{
-					NeededSocialLevel = 11;
+					NeededSocialLevel = 10;
 					NeededCurrency = 15000;
 					Results = array
 					{
@@ -1265,7 +1276,6 @@ G3SkillsDefault extends G3SkillsContainer
 				0 = G3SkillLevel
 				{
 					NeededSocialLevel = 1;
-					NeededCurrency = 1000;
 					Results = array
 					{
 						UnlockEffect
@@ -1283,13 +1293,14 @@ G3SkillsDefault extends G3SkillsContainer
 				1 = G3SkillLevel
 				{
 					NeededSocialLevel = 3;
-					NeededCurrency = 750;
+					CurrencyType = "Prestige";
+					NeededCurrency = 150;
 					
 					Results = array
 					{
 						UnlockEffect
 						{
-//							Names = array { "WildRose", "RoseWater", "Soap", "Roses" };
+//							Names = array { "WildRose", "RoseWater", "Soap" };
 							Names = array { "BatBlood", "JasmineOil", "MakeUp" };
 						}
 					};
@@ -1299,7 +1310,7 @@ G3SkillsDefault extends G3SkillsContainer
 
 		"Medecine" = G3Skill
 		{
-			RequiredSkillName = "Barber";
+			RequiredSkillName = "Herbalism";
 			RequiredSkillLevel = 0;
 			
 			DisplayName = "$Medecine";
@@ -1309,8 +1320,7 @@ G3SkillsDefault extends G3SkillsContainer
 			{
 				0 = G3SkillLevel
 				{
-					NeededSocialLevel = 5;
-					NeededCurrency = 2500;
+					NeededSocialLevel = 1;
 					
 					Results = array
 					{
@@ -1327,8 +1337,9 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				1 = G3SkillLevel
 				{
-					NeededSocialLevel = 7;
-					NeededCurrency = 7000;
+					NeededSocialLevel = 5;
+					CurrencyType = "Prestige";
+					NeededCurrency = 200;
 					
 					Results = array
 					{
@@ -1345,7 +1356,7 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				2 = G3SkillLevel
 				{
-					NeededSocialLevel = 9;
+					NeededSocialLevel = 7;
 					NeededCurrency = 15000;
 					
 					Results = array
@@ -1363,7 +1374,7 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				3 = G3SkillLevel
 				{
-					NeededSocialLevel = 11;
+					NeededSocialLevel = 10;
 					NeededCurrency = 35000;
 					
 					Results = array
@@ -1389,8 +1400,7 @@ G3SkillsDefault extends G3SkillsContainer
 			{
 				0 = G3SkillLevel
 				{
-					NeededSocialLevel = 5;
-					NeededCurrency = 3500;
+					NeededSocialLevel = 1;
 
 					Results = array
 					{
@@ -1407,8 +1417,9 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				1 = G3SkillLevel
 				{
-					NeededSocialLevel = 7;
-					NeededCurrency = 7000;
+					NeededSocialLevel = 5;
+					CurrencyType = "Prestige";
+					NeededCurrency = 200;
 
 					Results = array
 					{
@@ -1425,7 +1436,7 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				2 = G3SkillLevel
 				{
-					NeededSocialLevel = 9;
+					NeededSocialLevel = 7;
 					NeededCurrency = 15000;
 					
 					Results = array
@@ -1443,7 +1454,7 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				3 = G3SkillLevel
 				{
-					NeededSocialLevel = 11;
+					NeededSocialLevel = 10;
 					NeededCurrency = 35000;
 
 					Results = array
@@ -1451,7 +1462,7 @@ G3SkillsDefault extends G3SkillsContainer
 						UnlockEffect
 						{
 							Names = array {"BeltOfMetaphysics", "Nightcap", "StinkBomb", "CamouflageCloak", "MakeEvocation"};
-						}
+						};
 					};
 				};
 			};
@@ -1475,7 +1486,7 @@ G3SkillsDefault extends G3SkillsContainer
 				0 = G3SkillLevel
 				{
 					NeededSocialLevel = 1;
-					NeededCurrency = 500;
+					NeededCurrency = 1500;
 					CurrencyType = "Prestige";
 					
 					Results = array
@@ -1498,7 +1509,6 @@ G3SkillsDefault extends G3SkillsContainer
 				0 = G3SkillLevel
 				{
 					NeededSocialLevel = 1;
-					NeededCurrency = 1000;
 					
 					Results = array
 					{
@@ -1509,7 +1519,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array {"PublicEntertainment", "PalmistryCoordinate", "Palmistry"}; 
+							Names = array {"AmbushAndAttack"}; 
 						},
 						ModifierEffect
 						{
@@ -1532,13 +1542,14 @@ G3SkillsDefault extends G3SkillsContainer
 				1 = G3SkillLevel
 				{
 					NeededSocialLevel = 3;
-					NeededCurrency = 750;
+					CurrencyType = "Prestige";
+					NeededCurrency = 150;
 					
 					Results = array
 					{
 						UnlockEffect
 						{
-							Names = array {"AmbushAndAttack"}; 
+							Names = array {"CollectProtectionMoney"}; 
 						},
 						//buff family members (we could also use the forward to apply this, but then we wouldn't see it in the tooltips)
 						ModifierEffect
@@ -1562,13 +1573,27 @@ G3SkillsDefault extends G3SkillsContainer
 				2 = G3SkillLevel
 				{
 					NeededSocialLevel = 6;
-					NeededCurrency = 1750;
+					NeededCurrency = 2500;
 					
 					Results = array
 					{
-						UnlockEffect
+						ModifierEffect
 						{
-							Names = array {"PublicEntertainmentOnStage"}; 
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "AttackPower";
+							Mod = 1;
+							Duration = 0;
+							Recover = true;
+						},
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "DefensePower";
+							Mod = 1;
+							Duration = 0;
+							Recover = true;
 						},
 					};
 				};
@@ -1577,8 +1602,8 @@ G3SkillsDefault extends G3SkillsContainer
 
 		"SleightOfHand" = G3Skill
 		{
-			RequiredSkillName = "Robber";
-			RequiredSkillLevel = 1;
+			RequiredSkillName = "Rogue";
+			RequiredSkillLevel = 0;
 			
 			DisplayName = "$SleightOfHand";
 			Description = "$SleightOfHandDesc";
@@ -1587,8 +1612,7 @@ G3SkillsDefault extends G3SkillsContainer
 			{
 				0 = G3SkillLevel
 				{
-					NeededSocialLevel = 5;
-					NeededCurrency = 1750;
+					NeededSocialLevel = 1;
 					
 					Results = array
 					{
@@ -1617,8 +1641,9 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				1 = G3SkillLevel
 				{
-					NeededSocialLevel = 7;
-					NeededCurrency = 6500;
+					NeededSocialLevel = 5;
+					CurrencyType = "Prestige";
+					NeededCurrency = 200;
 					
 					Results = array
 					{
@@ -1629,7 +1654,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array { "StealHouse" };
+							Names = array { "PickPocketCoordinate", "PickPocket" };
 						},
 						ModifierEffect
 						{
@@ -1651,14 +1676,14 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				2 = G3SkillLevel
 				{
-					NeededSocialLevel = 9;
-					NeededCurrency = 15000;
+					NeededSocialLevel = 7;
+					NeededCurrency = 10000;
 
 					Results = array
 					{
 						UnlockEffect
 						{
-							Names = array { "ThiefHideout", "Heist" };
+							Names = array { "ThiefHideout", "StealHouse", "Heist" };
 							Level = 3;
 						},
 						ModifierEffect
@@ -1681,8 +1706,8 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				3 = G3SkillLevel
 				{
-					NeededSocialLevel = 11;
-					NeededCurrency = 35000;
+					NeededSocialLevel = 10;
+					NeededCurrency = 20000;
 					
 					Results = array
 					{
@@ -1719,8 +1744,7 @@ G3SkillsDefault extends G3SkillsContainer
 			{
 				0 = G3SkillLevel
 				{
-					NeededSocialLevel = 5;
-					NeededCurrency = 3500;
+					NeededSocialLevel = 1;
 					
 					Results = array
 					{
@@ -1737,8 +1761,9 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				1 = G3SkillLevel
 				{
-					NeededSocialLevel = 7;
-					NeededCurrency = 6500;
+					NeededSocialLevel = 5;
+					CurrencyType = "Prestige";
+					NeededCurrency = 200;
 					
 					Results = array
 					{
@@ -1755,8 +1780,8 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				2 = G3SkillLevel
 				{
-					NeededSocialLevel = 9;
-					NeededCurrency = 15000;
+					NeededSocialLevel = 7;
+					NeededCurrency = 10000;
 
 					Results = array
 					{
@@ -1787,7 +1812,6 @@ G3SkillsDefault extends G3SkillsContainer
 				0 = G3SkillLevel
 				{
 					NeededSocialLevel = 1;
-					NeededCurrency = 1000;
 					
 					Results = array
 					{
@@ -1821,7 +1845,8 @@ G3SkillsDefault extends G3SkillsContainer
 				1 = G3SkillLevel
 				{
 					NeededSocialLevel = 3;
-					NeededCurrency = 750;
+					CurrencyType = "Prestige";
+					NeededCurrency = 150;
 					
 					Results = array
 					{
@@ -1836,8 +1861,8 @@ G3SkillsDefault extends G3SkillsContainer
 
 		"SleightOfHandStealth" = G3Skill
 		{
-			RequiredSkillName = "Gravediggery";
-			RequiredSkillLevel = 1;
+			RequiredSkillName = "Rogue";
+			RequiredSkillLevel = 0;
 			
 			DisplayName = "$SleightOfHandStealth";
 			Description = "$SleightOfHandStealthDesc";
@@ -1846,8 +1871,9 @@ G3SkillsDefault extends G3SkillsContainer
 			{
 				0 = G3SkillLevel
 				{
-					NeededSocialLevel = 9;
-					NeededCurrency = 15000;
+					NeededSocialLevel = 7;
+					CurrencyType = "Prestige";
+					NeededCurrency = 3000;
 					
 					Results = array
 					{
@@ -1875,8 +1901,9 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				1 = G3SkillLevel
 				{
-					NeededSocialLevel = 11;
-					NeededCurrency = 35000;
+					NeededSocialLevel = 10;
+					CurrencyType = "Prestige";
+					NeededCurrency = 3000;
 					
 					Results = array
 					{
@@ -1927,7 +1954,6 @@ G3SkillsDefault extends G3SkillsContainer
 				0 = G3SkillLevel
 				{
 					NeededSocialLevel = 1;
-					NeededCurrency = 1000;
 					
 					Results = array
 					{
@@ -1938,7 +1964,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array {"PlayMusic", "StageConcert", "PromoteYourBusinessesIron" }; 
+							Names = array { "StageConcert", "PublicEntertainment", "PlayMusic", "PromoteYourBusinessesIron" }; 
 						},
 						ModifierEffect
 						{
@@ -1961,13 +1987,14 @@ G3SkillsDefault extends G3SkillsContainer
 				1 = G3SkillLevel
 				{
 					NeededSocialLevel = 3;
-					NeededCurrency = 750;
+					CurrencyType = "Prestige";
+					NeededCurrency = 150;
 					
 					Results = array
 					{
 						UnlockEffect
 						{
-							Names = array { "PlayPipe" };
+							Names = array { "PlayPipe", "PalmistryCoordinate", Palmistry };
 						},
 						ModifierEffect
 						{
@@ -1996,7 +2023,7 @@ G3SkillsDefault extends G3SkillsContainer
 					{
 						UnlockEffect
 						{
-							Names = array { "PlayMusicOnStage" };
+							Names = array { "PlayMusicOnStage", PublicEntertainmentOnStage };
 						}
 					};
 				};
@@ -2005,8 +2032,8 @@ G3SkillsDefault extends G3SkillsContainer
 
 		"Fighting" = G3Skill
 		{
-			RequiredSkillName = "Gleeman";
-			RequiredSkillLevel = 1;
+			RequiredSkillName = "Rogue";
+			RequiredSkillLevel = 0;
 			
 			DisplayName = "$Fighting";
 			Description = "$FightingDesc";
@@ -2015,8 +2042,7 @@ G3SkillsDefault extends G3SkillsContainer
 			{
 				0 = G3SkillLevel
 				{
-					NeededSocialLevel = 5;
-					NeededCurrency = 1750;
+					NeededSocialLevel = 1;
 					
 					Results = array
 					{
@@ -2027,7 +2053,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array { "CollectProtectionMoney", "TollRoad", "HiredGuardBuilding" };
+							Names = array { "Intervene", "CollectProtectionMoney", "TollRoad", "HiredGuardBuilding" };
 						},
 						ModifierEffect
 						{
@@ -2049,8 +2075,9 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				1 = G3SkillLevel
 				{
-					NeededSocialLevel = 7;
-					NeededCurrency = 2900;
+					NeededSocialLevel = 5;
+					CurrencyType = "Prestige";
+					NeededCurrency = 200;
 					
 					Results = array
 					{
@@ -2061,13 +2088,13 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array {"Intervene", "FeudAttack", "FeudGuard"};
+							Names = array {"SurveyCrimes"};
 						}
 					};
 				};
 				2 = G3SkillLevel
 				{
-					NeededSocialLevel = 9;
+					NeededSocialLevel = 7;
 					NeededCurrency = 6500;
 					
 					Results = array
@@ -2079,13 +2106,37 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array { "GuardBuilding", "SurveyCrimes" };
-						}
+							Names = array { "GuardBuilding" };
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "AttackPower";
+							Mod = 2;
+							Duration = 0;
+							Recover = true;
+						},
+						ModifierEffect
+						{
+							Filter = "IsFamilyMember";
+							ApplyTo = "Target";
+							ActorValue = "DefensePower";
+							Mod = 1;
+							Duration = 0;
+							Recover = true;
+						},
+						//Forward the same buff to employees
+						ForwardEffect
+						{
+							Filter = "IsLeader";
+							Relation = "Family";
+							ResultObjectId = "ForwardFightingThree";
+						},
 					};
 				};
 				3 = G3SkillLevel
 				{
-					NeededSocialLevel = 11;
+					NeededSocialLevel = 10;
 					NeededCurrency = 15000;
 					
 					Results = array
@@ -2122,8 +2173,8 @@ G3SkillsDefault extends G3SkillsContainer
 
 		"FightingCombat" = G3Skill
 		{
-			RequiredSkillName = "Fighting";
-			RequiredSkillLevel = 1;
+			RequiredSkillName = "Robber";
+			RequiredSkillLevel = 0;
 			
 			DisplayName = "$FightingSabotage";
 			Description = "$FightingSabotageDesc";
@@ -2132,8 +2183,9 @@ G3SkillsDefault extends G3SkillsContainer
 			{
 				0 = G3SkillLevel
 				{
-					NeededSocialLevel = 9;
-					NeededCurrency = 15000;
+					NeededSocialLevel = 5;
+					CurrencyType = "Prestige";
+					NeededCurrency = 1500;
 
 					Results = array
 					{
@@ -2145,8 +2197,9 @@ G3SkillsDefault extends G3SkillsContainer
 				};
 				1 = G3SkillLevel
 				{
-					NeededSocialLevel = 11;
-					NeededCurrency = 35000;
+					NeededSocialLevel = 10;
+					CurrencyType = "Prestige";
+					NeededCurrency = 1500;
 
 					Results = array
 					{
