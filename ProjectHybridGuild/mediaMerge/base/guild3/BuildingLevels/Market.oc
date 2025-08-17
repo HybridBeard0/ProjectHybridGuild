@@ -17,7 +17,7 @@ Market extends G3BuildingTemplateLevel
 		ModifierEffect
 		{
 			ActorValue = "Attractiveness";
-			Mod = 100.0;
+			Mod = 80.0;
 			Recover = true;
 		};
 		ModifierEffect
