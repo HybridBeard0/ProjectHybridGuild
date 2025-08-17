@@ -58315,7 +58315,6 @@ LocDirectData
 			Key = "$FlowerPot.iron.desc";
 			Text = "A nice Flower in a Pot";
 		},
-
 		LocDirectEntry
 		{
 			Key = "$Worm.iron.name";
@@ -58337,8 +58336,6 @@ LocDirectData
 			Key = "$FishSoup.iron.desc";
 			Text = "Poor people dish Fish Soup";
 		},
-
-
 		LocDirectEntry
 		{
 			Key = "$ClayBowl.iron.name";
@@ -58473,6 +58470,7 @@ LocDirectData
 			Key = "$IngredientsSmokedPerch.iron.name";
 			Text = "Ingredients Smoked Perch";
 		},
+		LocDirectEntry
 		{
 			Key = "$IngredientsSmokedPerch.iron.desc";
 			Text = "Ingredients Smoked Perch";
@@ -58484,7 +58482,7 @@ LocDirectData
 		},
 		LocDirectEntry
 		{
-			Key = "$Pipe.iron.desccription";
+			Key = "$Pipe.iron.description";
 			Text = "Pipe to sell";
 		},
 
@@ -116234,66 +116232,5 @@ LocDirectData
 			Key = "$action.TollRoadDesc";
 			Text = "Tolling transporters on the road is a bold and deceptive act, involving the imposition of fake fees on passing transports under the pretense of authority.";
 		},
-		//NewBuildings
-		//LocDirectEntry
-		//{
-		//	Key = "$build.LumberYardPlayerdesc";
-		//	Text = "Oak and pine wood is cut down and sold here.";
-		//},
-		//LocDirectEntry
-		//{
-		//	Key = "$build.LumberYardPlayerLevel1";
-		//	Text = "LumberYard";
-		//},
-		//LocDirectEntry
-		//{
-		//	Key = "$build.LumberYardPlayerName1";
-		//	Text = "Knock on Wood";
-		//},
-		//LocDirectEntry
-		//{
-		//	Key = "$build.LumberYardPlayerName10";
-		//	Text = "Mushrooms Galore";
-		//},
-		//LocDirectEntry
-		//{
-		//	Key = "$build.LumberYardPlayerName2";
-		//	Text = "Forest Grove";
-		//},
-		//LocDirectEntry
-		//{
-		//	Key = "$build.LumberYardPlayerName3";
-		//	Text = "The Branch Office";
-		//},
-		//LocDirectEntry
-		//{
-		//	Key = "$build.LumberYardPlayerName4";
-		//	Text = "Root and Branch";
-		//},
-		//LocDirectEntry
-		//{
-		//	Key = "$build.LumberYardPlayerName5";
-		//	Text = "Busy Beavers";
-		//},
-		//LocDirectEntry
-		//{
-		//	Key = "$build.LumberYardPlayerName6";
-		//	Text = "Underbrush";
-		//},
-		//LocDirectEntry
-		//{
-		//	Key = "$build.LumberYardPlayerName7";
-		//	Text = "Eco Lumber";
-		//},
-		//LocDirectEntry
-		//{
-		//	Key = "$build.LumberYardPlayerName8";
-		//	Text = "Sharp Axes";
-		//},
-		//LocDirectEntry
-		//{
-		//	Key = "$build.LumberYardPlayerName9";
-		//	Text = "Forest downfall";
-		//},
 	);
 };

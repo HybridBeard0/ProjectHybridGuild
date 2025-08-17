@@ -1014,7 +1014,7 @@
 	SubType = 8;
 
 	DisplayName = "$GrindedBlackPepper.iron.name";
-	Description = "$GrindedBlackPepper.iron.description";
+	Description = "$GrindedBlackPepper.iron.desc";
 	DisplayCategories = array("All", "Food");
 	IconName = "GrindedBlackPepper";
 
