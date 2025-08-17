@@ -968,7 +968,7 @@
 	DisplayName = "$FlowerPot.iron.name";
 	Description = "$FlowerPot.iron.desc";
 	DisplayCategories = array("All", "Trinkets");
-	IconName = "Flowerpot";
+	IconName = "FlowerPot";
 
 	Production = 1;
 	BuildTime = 42.00;
