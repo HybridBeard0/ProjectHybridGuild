@@ -2751,7 +2751,7 @@
     
     Cooldown = 0.015;
     
-	PriceFormula = "(SocialLevel * 10) * ((25 * hasTag.BuffEasy) + (50 * hasTag.BuffNormal) + (75 * hasTag.BuffHard) + (100 * hasTag.BuffImpossible))";
+	PriceFormula = "(SocialLevel * 40) * ((25 * hasTag.BuffEasy) + (50 * hasTag.BuffNormal) + (75 * hasTag.BuffHard) + (100 * hasTag.BuffImpossible))";
 
 	BudgetPot = "Expansion";
 	BudgetPost = "Family";
