@@ -115,7 +115,7 @@ GameplayDefault extends GameplayElements
 	ChildAge = 5;
 	MaturityAge = 15;
 	
-	InitialLeaderAge = 18;
+	InitialLeaderAge = 16;
 	InitialChildrenAge = 0;
 	InitialEmployeeAge = 16;
 	
@@ -166,48 +166,48 @@ GameplayDefault extends GameplayElements
 	NpcWealthPrestige = array { 500, 2000, 5000 };
 
 	//Health formula: CharacterMinHealth + actorLevel * HpPerCharLevel + Sum(CharacterHealthAttrArray) * CharacterHealthAttrMultiplier
-	CharacterMinHealth = 100;
-	HpPerCharLevel = 8;
+	CharacterMinHealth = 60;
+	HpPerCharLevel = 13;
 	CharacterHealthAttrArray = array {"Strength", "Dexterity"};
 	CharacterHealthAttrMultiplier = 0.5;
-	Character_HealingTickFrequency = 20.0; // How often healing ticks happen, one tick every n seconds scaled realtime. (standard: 10)
+	Character_HealingTickFrequency = 0.25; // How often healing ticks happen, one tick every n seconds scaled realtime. (standard: 10)
 	
 	// Character attribute formulas.
 	// Hardcoded derived actor values:
 	// - Productivity (only one left!)
 	// Don't bother using "Source." and "Target." in here, as there is no separate source or target - only the character itself.
 	Character_ActorValue_Expressions = map {
-		"AttackPower" 			= "max(1, 1 + (Dexterity + Perception) * 0.5)";
-		"BargainingBonus" 		= "max(0, (Intelligence + Charisma) * 0.25)";
+		"AttackPower" 			= "max(1, 1 + (Dexterity + Perception) * 0.4)";
+		"BargainingBonus" 		= "max(0, (Intelligence + Charisma) * 0.2)";
 		"Damage"				= "max(12, 12 + Strength * 0.25 + Perception * 0.25)";
 		"DamageReduction"		= "(Armor > Gameplay.MaxArmorAmount) ? Gameplay.MaxArmorDamageReduction : Gameplay.MaxArmorDamageReduction * ((Armor / Gameplay.MaxArmorAmount) / (1 - Gameplay.ArmorDamageReductionCurve * (1 - (Armor / Gameplay.MaxArmorAmount))))";
 		"DefensePower" 			= "max(0, Dexterity * 0.5)";
-		"Entertainment"			= "Dexterity * 0.75 + Charisma";
-		"ExperienceGainMult"	= "max(0.5, 1 + Intelligence * 0.02)";
+		"Entertainment"			= "Dexterity * 0.55 + Charisma";
+		"ExperienceGainMult"	= "max(0.5, 1 + Intelligence * 0.005)";
 		"Fertility"				= "IsMale ? 1 : sqrt(clamp(invlerp(Gameplay.MenopauseAge, Gameplay.FullFertilityAge, Age) / (1 + 0.5 * LiveBirths), 0, 1))"; // Full fertility until FullFertilityAge, then decay until Menopause, sqrt so decay is slow at start and fast at end. Attenuated with no. of live births.
-		"GoodGenetics"			= "max(0, Level * 0.003 + Intelligence * 0.003 + Strength * 0.01 + Charisma * 0.005)";
-		"Health"				= "100 + Level * 8 + (Strength + Dexterity) * 0.5";
-		//"HealthRegeneration" 	= "0.75 + Strength * 0.125 + Level * 0.25";
-		"HealthRegeneration" 	= "Strength * 0.125 + Level * 0.25";
+		"GoodGenetics"			= "max(0, Level * 0.005 + Intelligence * 0.005 + Strength * 0.005 + Charisma * 0.005 + Perception * 0.005 + Dexterity * 0.005)";
+		"Health"				= "60 + Level * 8 + (Strength + Dexterity) * 0.25";
+		//"HealthRegeneration" 	= "0.75 + Strength + Dexterity * 0.125 + Level * 0.35";
+		"HealthRegeneration" 	= "Strength * 0.125 + Level * 0.15";
 		"Intimidation"			= "max(0, Strength * 0.5 + Charisma * 0.25)";
 		"MedicineMastery"		= "max(0, Intelligence * 1.75 + Perception * 0.5)";
 		"MovementSpeedMult"		= "max(0.5, 1.0 + Strength * 0.005 + Dexterity * 0.005)";
 		"PrestigeGainMult"		= "max(0.5, 1 + Charisma * 0.02)";
-		"ReputationBonus"		= "max(0, Charisma * 0.075)";
-		"Resistance" 			= "max(0, Level * 0.25 + Perception + Strength * 0.5)";
-		"Stealth" 				= "max(0, Dexterity * 0.85 + Perception * 0.5)";
+		"ReputationBonus"		= "max(0, Charisma * 0.055)";
+		"Resistance" 			= "max(0, Level * 0.2 + Perception + Strength * 0.4)";
+		"Stealth" 				= "max(0, Dexterity * 0.85 + Perception * 0.4)";
 	};
 	
 	/// Pregnancy Values
-	FullFertilityAge = 30; // Age until which fertility is 100%.
-	MenopauseAge = 48;
+	FullFertilityAge = 18; // Age until which fertility is 100%.
+	MenopauseAge = 38;
 	
-	PregnancyChildrenLimit = 6; // Used by ProduceOffspring action to limit the number of children you can have.
+	PregnancyChildrenLimit = 3; // Used by ProduceOffspring action to limit the number of children you can have.
 	
 	BuildingDecayFormula = "Health.max / 600"; // decay is reducing building health every month; / 600 = means without repair a building last for 50 years
 	
 	BuildingAlmostDestroyedThreshold = 0.1;
-	BuildingRepairThreshold = 0.75; 					// as percentage of the max health: defines when should the AI master trigger a repair building action
+	BuildingRepairThreshold = 0.50; 					// as percentage of the max health: defines when should the AI master trigger a repair building action
 
 	/// Prestige Multipliers
 	RichPeoplePrestigeMult = 0.75;
@@ -218,17 +218,17 @@ GameplayDefault extends GameplayElements
 	
 	MaxArmorDamageReduction = 0.85; // Maximum achievable damage reduction through armor. 0.85 = only 15% of incoming damage is actually taken.
 	MaxArmorAmount = 1000.0; // Armor amount at which the maximum damage reduction is reached. Higher armor amounts don't improve damage reduction beyond this.
-	ArmorDamageReductionCurve = 0.75; // How steep the curve is. 0.5 is no curve - linear. 0.99999 is maximum curvature, so strong early gains.
+	ArmorDamageReductionCurve = 0.85999; // How steep the curve is. 0.5 is no curve - linear. 0.99999 is maximum curvature, so strong early gains.
 	
-	UnconsciousThreshold = 0.05; // 0.0, ..., 1.0 fraction of Health that will make the character unconscious (when below)
-	ReviveThreshold = 0.1; // [0...1], fraction of health at which an unconscious character will get up again
+	UnconsciousThreshold = 0.075; // 0.0, ..., 1.0 fraction of Health that will make the character unconscious (when below)
+	ReviveThreshold = 0.09; // [0...1], fraction of health at which an unconscious character will get up again
 	CombatFirstStrikeDamageModifier = 2.0; // Multiplier for character damage when using a first strike weapon
 	CombatDamageVariation = 0.5; // Variation in percent, damage will be between dmg * CombatDamageVariation and dmg * (1.0f+CombatDamageVariation)
 
 	DynastyFinancesLowerLimit = 500; // Any families' money value lower than this is considered a threat to the dynasty, in this case the family AI will start SaveDynastyFinancesObjective (critical priority)
 	DynastyMembersLowerLimit = 4; // Any families' member count lower than this is considered a threat to the dynasty, in this case the family AI will start SaveDynastyReproduction (critical priority). It counts members younger than 'DynastyMembersLowerLimitMaxAge'. Unborn babies (pregnancies) already count as members of the family!
 	DynastyMembersLowerLimitMaxAge = 35.0f; // A max age for 'DynastyMembersLowerLimit'. Characters that are older than that are not counted!
-	Trade_RelationshipChangeValue = 50.0f; // Defines the amount by which the relationship is changed (+/-) on proposal accept/deny
+	Trade_RelationshipChangeValue = 20.0f; // Defines the amount by which the relationship is changed (+/-) on proposal accept/deny
 	Trade_NumMaxMarriageProposalsPerTrade = 4; // Defines the max number of marriage proposals allowed in a single trade
 	DiplomacyTradeRequests_ScoreWeight = 80.0f; // defines the impact of the score on the money value calculation of AskAllianceRequests/BreakFeudRequests (DynastyTrade)
 	/// Morality Parameters
@@ -256,11 +256,11 @@ GameplayDefault extends GameplayElements
 	NumMaxRouteNodes = 10; // Maximum number of route nodes a manual route is allowed to have
 	RouteStartRetryDelayYears = 0.007f; // The duration a character will wait before retrying, when a route fails to 'fill', i.e. find any items that need to be transported.
 	RouteStopMinDelayYears = 0.005f; 	// The minimum duration a character will wait at each stop in the route before moving on.
-	RouteStopMaxDelayYears = 0.015f; 	// The maximum duration a character will wait at each stop in the route before moving on. This duration is used when the transporter failed to transfer all items he wanted (e.g. something was sold out). He will then do a second attempt to transfer the missing items after wait time is over.
+	RouteStopMaxDelayYears = 0.005f; 	// The maximum duration a character will wait at each stop in the route before moving on. This duration is used when the transporter failed to transfer all items he wanted (e.g. something was sold out). He will then do a second attempt to transfer the missing items after wait time is over.
 	
 	PoorPeopleOpinionWeight = 1.0; 		// Multiplied with the number of poor people in a neighborhood to get how much impact a neighborhood has on the "Expected Sentence" of a trial
-	CommonPeopleOpinionWeight = 5.0;	// Multiplied with the number of common people in a neighborhood to get how much impact a neighborhood has on the "Expected Sentence" of a trial
-	RichPeopleOpinionWeight = 20.0;		// Multiplied with the number of rich people in a neighborhood to get how much impact a neighborhood has on the "Expected Sentence" of a trial
+	CommonPeopleOpinionWeight = 10.0;	// Multiplied with the number of common people in a neighborhood to get how much impact a neighborhood has on the "Expected Sentence" of a trial
+	RichPeopleOpinionWeight = 15.0;		// Multiplied with the number of rich people in a neighborhood to get how much impact a neighborhood has on the "Expected Sentence" of a trial
 	
 	AllowedDistanceFromWarehouse = 15000.0f;
 
@@ -278,13 +278,13 @@ GameplayDefault extends GameplayElements
     Distance_Close = 500.0;
 	
 	ProductionStallNotificationDelay = 0.5f; // (in-game years) Describes the delay between the stall of a production and the point in time where an urgent notification is send (also the interval in which a player can receive those notifications in a worst case, per building)
-//	MaxWaitingCustomers = 12; // Defines the default maximum size of the waiting customers queue (is set on building initialization and saved later)
-//	WaitingCustomersPerEmployee = 5; // Defines for how many waiting customers an employee is responsible (ex.: for 4 waiting customers, we would tell 2 employees to service them)
-//	HealthcareServiceInterval = 5;
+//	MaxWaitingCustomers = 6; // Defines the default maximum size of the waiting customers queue (is set on building initialization and saved later)
+//	WaitingCustomersPerEmployee = 3; // Defines for how many waiting customers an employee is responsible (ex.: for 4 waiting customers, we would tell 2 employees to service them)
+//	HealthcareServiceInterval = 6;
 
 	MaxWaitingCustomers = 6; // A hard upper limit for the maximum number of waiting customers in the queue
-	WaitingCustomersPerEmployee = 2; // Defines the number of customers that are allowed to wait in the queue for each service worker present. Even with many service workers, the value can never exceed 'MaxWaitingCustomers'
-	HealthcareServiceInterval = 5;
+	WaitingCustomersPerEmployee = 3; // Defines the number of customers that are allowed to wait in the queue for each service worker present. Even with many service workers, the value can never exceed 'MaxWaitingCustomers'
+	HealthcareServiceInterval = 12;
 
 
 	// keep them sorted (ascending) by RelationshipValue (first value in array)
@@ -300,7 +300,7 @@ GameplayDefault extends GameplayElements
 		RelationshipModifier = array{ -100.0f, -0.50f }; // RelationshipValue, ProductionModifier
 		RelationshipModifier = array{ -80.0f, -0.25f }; // Relationship with neighborhood between -80 and -100, productivity mod -50% for the current production
 		RelationshipModifier = array{ -50.0f, -0.10f };
-		RelationshipModifier = array{ 89.0f, 0.0f }; // range from -39 to 89 is not giving any production boost
+		RelationshipModifier = array{ 89.0f, 0.05f }; // range from -39 to 89 is not giving any production boost
 		RelationshipModifier = array{ 90.0f, 0.10f }; // Relationship with neighborhood between 90 and 100, productivity mod +10% for the current production
 	};
 	
@@ -317,17 +317,17 @@ GameplayDefault extends GameplayElements
 	History_MarketDataMaxRoundsMultiplayer = 10; // In Multiplayer: The maximum time that market needs and price data is recorded for, in rounds. This is recorded monthly, so we have 12 * 10 = 120 record entries max.
 	History_MarketDataDefaultRounds = 4; // The default number of rounds that the market needs and price history will show.
 	
-	Leasing_RentPeriodRounds = 1; // 1 Round per rent.
+	Leasing_RentPeriodRounds = 1000; // 1 Round per rent.
 	Leasing_RentPeriodDaytime = 0.5; // This makes the rent period expire at noon.
 	Leasing_RentPeriodEndWarningTime = 0.0416; // Warning about bidding end comes 1 hour before the period ends.
-	Leasing_MinimumBid = 1500;
-	Leasing_MinimumRaise = 50;
-	Leasing_StartingFee = 1600;
-	Leasing_AdjustmentFee = 20;
+	Leasing_MinimumBid = 15000;
+	Leasing_MinimumRaise = 500;
+	Leasing_StartingFee = 0;
+	Leasing_AdjustmentFee = 0;
 	Leasing_AllowConsecutiveLeases = true;
 	
 	OrphanMinAge = 5.0; // years; has to be at least old enough to be allowed to run around the game world, and not just be shackled at home
-	OrphanMaxAge = 6.0; // years
+	OrphanMaxAge = 14.0; // years
 
 	OrphanAdoptionLimit = 2; // If a couple has this many living children, they can no longer adopt more children. This will consider all living, non banished children in the same family.
 
@@ -741,10 +741,10 @@ GameplayDefault extends GameplayElements
 			DifficultyEntry
 			{
 				Id = "easy";
-				StartMoney = 5000;
-				StartPrestige = 200;
+				StartMoney = 10000;
+				StartPrestige = 1000;
 				StartNobilityTitle = 1;
-				XPBonusFactor = 2.0f;
+				XPBonusFactor = 1.0f;
 				StartupItemCount = 20;
 				LeaderGetsBackpack = true;
 				ResultObjectIds = array{"EasyDifficultyPlayerForward", "TagNotAI"};
@@ -755,10 +755,10 @@ GameplayDefault extends GameplayElements
 			DifficultyEntry
 			{
 				Id = "normal";
-				StartMoney = 3000;
-				StartPrestige = 100;
+				StartMoney = 5000;
+				StartPrestige = 250;
 				StartNobilityTitle = 1;
-				XPBonusFactor = 1.2f;
+				XPBonusFactor = 1.0f;
 				StartupItemCount = 10;
 				LeaderGetsBackpack = false;
 				ResultObjectIds = array{"NormalDifficultyPlayerForward", "TagNotAI"};
@@ -769,8 +769,8 @@ GameplayDefault extends GameplayElements
 			DifficultyEntry
 			{
 				Id = "hard";
-				StartMoney = 2600;
-				StartPrestige = 50;
+				StartMoney = 2000;
+				StartPrestige = 100;
 				StartNobilityTitle = 1;
 				XPBonusFactor = 1.0f;
 				StartupItemCount = 5;
@@ -783,15 +783,15 @@ GameplayDefault extends GameplayElements
 			DifficultyEntry
 			{
 				Id = "impossible";
-				StartMoney = 2100;
-				StartPrestige = 0;
+				StartMoney = 500;
+				StartPrestige = 1;
 				StartNobilityTitle = 1;
-				XPBonusFactor = 0.8f;
-				StartupItemCount = 5;
+				XPBonusFactor = 1.0f;
+				StartupItemCount = 0;
 				LeaderGetsBackpack = false;
 				ResultObjectIds = array{"ImpossibleDifficultyPlayerForward", "TagNotAI"};
-				FamilySizeLowerLimit = 12;
-				FamilySizeUpperLimit = 15;
+				FamilySizeLowerLimit = 10;
+				FamilySizeUpperLimit = 20;
 				FamilySizeAdoptionLimit = 15;
 			},
 		};
@@ -802,7 +802,7 @@ GameplayDefault extends GameplayElements
 			{
 				Id = "tutorialdifficulty";
 				StartMoney = 3000;
-				StartPrestige = 0;
+				StartPrestige = 1000;
 				StartNobilityTitle = 1;
 				XPBonusFactor = 0.75f;
 				StartupItemCount = 5;
@@ -816,13 +816,13 @@ GameplayDefault extends GameplayElements
 			DifficultyEntry
 			{
 				Id = "easy";
-				StartMoney = 3000;
-				StartPrestige = 0;
+				StartMoney = 2500;
+				StartPrestige = 125;
 				StartNobilityTitle = 1;
-				XPBonusFactor = 0.75f;
+				XPBonusFactor = 1.0f;
 				StartupItemCount = 5;
 				LeaderGetsBackpack = false;
-				AIFamilyDecisionsPerYear = 24;
+				AIFamilyDecisionsPerYear = 50;
 				ResultObjectIds = array{"HardDifficultyAIForward", "TagAI"};
 				FamilySizeLowerLimit = 12;
 				FamilySizeUpperLimit = 24;
@@ -831,47 +831,47 @@ GameplayDefault extends GameplayElements
 			DifficultyEntry
 			{
 				Id = "normal";
-				StartMoney = 4000;
-				StartPrestige = 100;
+				StartMoney = 5000;
+				StartPrestige = 250;
 				StartNobilityTitle = 1;
 				XPBonusFactor = 1.0f;
-				StartupItemCount = 5;
+				StartupItemCount = 10;
 				LeaderGetsBackpack = false;
-				AIFamilyDecisionsPerYear = 36;
+				AIFamilyDecisionsPerYear = 50;
 				ResultObjectIds = array{"NormalDifficultyAIForward", "TagAI"};
 				FamilySizeLowerLimit = 15;
 				FamilySizeUpperLimit = 25;
-				FamilySizeAdoptionLimit = 25;
+				FamilySizeAdoptionLimit = 15;
 			},
 			DifficultyEntry
 			{
 				Id = "hard";
 				StartMoney = 5000;
-				StartPrestige = 200;
+				StartPrestige = 500;
 				StartNobilityTitle = 1;
-				XPBonusFactor = 1.25f;
+				XPBonusFactor = 1.0f;
 				StartupItemCount = 5;
 				LeaderGetsBackpack = false;
-				AIFamilyDecisionsPerYear = 48;
+				AIFamilyDecisionsPerYear = 60;
 				ResultObjectIds = array{"EasyDifficultyAIForward", "TagAI"};
 				FamilySizeLowerLimit = 15;
 				FamilySizeUpperLimit = 30;
-				FamilySizeAdoptionLimit = 25;
+				FamilySizeAdoptionLimit = 15;
 			},
 			DifficultyEntry
 			{
 				Id = "impossible";
-				StartMoney = 7000;
-				StartPrestige = 500;
+				StartMoney = 7500;
+				StartPrestige = 750;
 				StartNobilityTitle = 1;
-				XPBonusFactor = 1.5f;
-				StartupItemCount = 5;
+				XPBonusFactor = 1.0f;
+				StartupItemCount = 10;
 				LeaderGetsBackpack = false;
-				AIFamilyDecisionsPerYear = 50;
+				AIFamilyDecisionsPerYear = 75;
 				ResultObjectIds = array{"EasyDifficultyAIForward", "TagAI"};
 				FamilySizeLowerLimit = 15;
 				FamilySizeUpperLimit = 35;
-				FamilySizeAdoptionLimit = 30;
+				FamilySizeAdoptionLimit = 15;
 			},
 		};
 		
@@ -959,7 +959,7 @@ GameplayDefault extends GameplayElements
 	
 	UnlockDefinitions = UnlockDefinitions
 	{
-		JailTimeMult = 0.8; // Jail time reduced to 80% of normal with JailTimeReduction unlock.
+		JailTimeMult = 0.75; // Jail time reduced to 80% of normal with JailTimeReduction unlock.
 	};
 
 	LawSettings = @base/LawSettings
@@ -1053,6 +1053,12 @@ GameplayDefault extends GameplayElements
 						"PlayOutside",
 						"KissCheek",
 						"SweetTalk",
+						"ForcedMarriage",
+						"Divorce",
+						"GiftingSomeone",
+						"LovingStone",
+						"GiftingSocks",
+						"EngagementRing",
 						"BoastAboutYourExploits",
 						"TearOffTrashLetter",
 						"TrainStrength",
@@ -1060,16 +1066,17 @@ GameplayDefault extends GameplayElements
 						"TrainIntelligence",
 						"TrainPerception",
 						"TrainCharisma",
-						//"MakePeaceBetweenEnemies",
 						"UseMatchmaker",
 						"ActivateForRent",
 						"DeactivateForRent",
+						//"MakePeaceBetweenEnemies",
 					//AI only
 						"AISellItem",
+						"AiUnlockNobilityRankTitle",
 						"BuyBusiness",
 						// "AIBuyOrphan", // This is now covered by DoBuyOrphan, which the AI starts directly.
 						"AISelectNewHeir",
-						// "BuildingLevelUp", // LORDS-9175, AIs no longer autonomously upgrade their buildings
+						//"BuildingLevelUp", // LORDS-9175, AIs no longer autonomously upgrade their buildings
 						"BuildAddOn",
 						"DestroyBuilding",
 						"ChangeMainBuilding",
@@ -1100,7 +1107,7 @@ GameplayDefault extends GameplayElements
 					// Party management
 						"MakeRightHand",
 						"MakeLeftHand",
-						"KickPartyMember",
+//						"KickPartyMember",
 					//test actions
 //						"Test1",
 //						"Test2",
@@ -1133,7 +1140,7 @@ GameplayDefault extends GameplayElements
 				array { "MakeMoneyMed", 0 },
 				array { "MakeMoneyHigh", 0 },
 				array { "BuildingMaintenance", 1.0 },
-				array { "IncreasePrestigeMultistepLOW", 0 },
+				array { "IncreasePrestigeMultistepLOW", 0.5 },
 				array { "IncreasePrestigeMultistepMID", 0 },
 				array { "IncreasePrestigeMultistepHIGH", 0 },
 				array { "IncreaseSecurityMultistepLOW", 0.5 },
@@ -1146,7 +1153,7 @@ GameplayDefault extends GameplayElements
 				array { "DecreaseRelationshipMed", 0 },
 				array { "DecreaseRelationshipHigh", 0 },
 				array { "GuildActions", 0 },
-				array { "IncreaseRankDefault", 0.5 },
+				array { "IncreaseRankDefault", 1.0 },
 				array { "GetLiaison", 0 },
 				array { "ExploitLiaison", 0 },
 				array { "RunForOffice", 0 },
@@ -1182,11 +1189,6 @@ GameplayDefault extends GameplayElements
 					Names = array
 					{
 						"WashCloth",
-						"FlowerBouqet",
-// *** EggMod --> ***
-						"FriedChicken",
-						"Egg"
-// *** <-- EggMod ***
 						"FlowerBouqet"
 					};
 				},
@@ -1227,20 +1229,20 @@ GameplayDefault extends GameplayElements
 				array { "MakeMoneyLow", 1.0 },
 				array { "MakeMoneyMed", 0 },
 				array { "MakeMoneyHigh", 0 },
-				array { "IncreasePrestigeMultistepLOW", 0 },
+				array { "IncreasePrestigeMultistepLOW", 0.5 },
 				array { "IncreasePrestigeMultistepMID", 0 },
 				array { "IncreasePrestigeMultistepHIGH", 0 },
-				array { "IncreaseSecurityMultistepLOW", 1.0 },
+				array { "IncreaseSecurityMultistepLOW", 0.5 },
 				array { "IncreaseSecurityMultistepMID", 0 },
 				array { "IncreaseSecurityMultistepHIGH", 0 },
 				array { "IncreaseRelationshipLow", 0.5 },
 				array { "IncreaseRelationshipMed", 0 },
 				array { "IncreaseRelationshipHigh", 0 },
-				array { "DecreaseRelationshipLow", 0.5 },
+				array { "DecreaseRelationshipLow", 0.1 },
 				array { "DecreaseRelationshipMed", 0 },
 				array { "DecreaseRelationshipHigh", 0 },
 				array { "GuildActions", 0 },
-				array { "IncreaseRankDefault", 0 },
+				array { "IncreaseRankDefault", 0.4 },
 				array { "GetLiaison", 0.5 },
 				array { "ExploitLiaison", 0.05 },
 				array { "RunForOffice", 0 },
@@ -1286,10 +1288,10 @@ GameplayDefault extends GameplayElements
 				array { "MakeMoneyLow", 0.7 },
 				array { "MakeMoneyMed", 0 },
 				array { "MakeMoneyHigh", 0 },
-				array { "IncreasePrestigeMultistepLOW", 0.2 },
-				array { "IncreasePrestigeMultistepMID", 0 },
-				array { "IncreasePrestigeMultistepHIGH", 0 },
-				array { "IncreaseSecurityMultistepLOW", 0.1 },
+				array { "IncreasePrestigeMultistepLOW", 0.5 },
+				array { "IncreasePrestigeMultistepMID", 0.0 },
+				array { "IncreasePrestigeMultistepHIGH", 0.0 },
+				array { "IncreaseSecurityMultistepLOW", 0.05 },
 				array { "IncreaseSecurityMultistepMID", 0 },
 				array { "IncreaseSecurityMultistepHIGH", 0 },
 				array { "IncreaseRelationshipLow", 0.15 },
@@ -1299,7 +1301,7 @@ GameplayDefault extends GameplayElements
 				array { "DecreaseRelationshipMed", 0 },
 				array { "DecreaseRelationshipHigh", 0 },
 				array { "GuildActions", 0 },
-				array { "IncreaseRankDefault", 0 },
+				array { "IncreaseRankDefault", 0.5 },
 				array { "GetLiaison", 0.05 },
 				array { "ExploitLiaison", 0.05 },
 				array { "RunForOffice", 0 },
@@ -1309,7 +1311,7 @@ GameplayDefault extends GameplayElements
 				array { "Archetype-HonestDiplomaticPolitics", 0 },
 				array { "Archetype-HonestDiplomaticActions", 0 },
 				array { "KidnapSomeone", 0 },
-				array { "BuildingMaintenance", 1 },
+				array { "BuildingMaintenance", 0.7 },
 			};
 			
 			Results = array
@@ -1327,6 +1329,7 @@ GameplayDefault extends GameplayElements
 						"PromoteYourBusinesses",
 						"ThrowStones",
 						"AskFavor",
+						"GiftOfficeHolder",
 						"ApologizeToNeighbors",
 						"RaidTheKitchens",
 					};
@@ -1344,10 +1347,10 @@ GameplayDefault extends GameplayElements
 				array { "MakeMoneyLow", 0.5 },
 				array { "MakeMoneyMed", 0.2 },
 				array { "MakeMoneyHigh", 0 },
-				array { "IncreasePrestigeMultistepLOW", 0.75 },
+				array { "IncreasePrestigeMultistepLOW", 0.8 },
 				array { "IncreasePrestigeMultistepMID", 0.3 },
 				array { "IncreasePrestigeMultistepHIGH", 0 },
-				array { "IncreaseSecurityMultistepLOW", 0.15  },
+				array { "IncreaseSecurityMultistepLOW", 0.2  },
 				array { "IncreaseSecurityMultistepMID", 0 },
 				array { "IncreaseSecurityMultistepHIGH", 0 },
 				array { "IncreaseRelationshipLow", 0.3 },
@@ -1357,7 +1360,7 @@ GameplayDefault extends GameplayElements
 				array { "DecreaseRelationshipMed", 0 },
 				array { "DecreaseRelationshipHigh", 0 },
 				array { "GuildActions", 0 },
-				array { "IncreaseRankDefault", 0 },
+				array { "IncreaseRankDefault", 0.2 },
 				array { "GetLiaison", 0.1 },
 				array { "ExploitLiaison", 0.2 },
 				array { "RunForOffice", 0 },
@@ -1367,7 +1370,7 @@ GameplayDefault extends GameplayElements
 				array { "Archetype-HonestDiplomaticPolitics", 0 },
 				array { "Archetype-HonestDiplomaticActions", 0 },
 				array { "KidnapSomeone", 0 },
-				array { "BuildingMaintenance", 1 },
+				array { "BuildingMaintenance", 0.7 },
 			};
 			
 			Results = array
@@ -1443,7 +1446,6 @@ GameplayDefault extends GameplayElements
 						"EscortCharacter",
 						"FindEvidence",
 						"WhipTransporters",
-						"ReadStories",
 						"OpenLeasingPanel", // Should always go together with "ResourceProviderLeasingAvailable"
 						// AI only
 						"AIBidAction", // Should always go together with "ResourceProviderLeasingAvailable"
@@ -1485,7 +1487,7 @@ GameplayDefault extends GameplayElements
 				{
 					Filter = "IsFamilyMember";
 					ActorValue = "MaxAIObjectives";
-					Mod = 1.0; // Total: 5
+					Mod = 1.0; // Total: 5.5
 					Recover = true;
 				}
 			};
@@ -1541,7 +1543,6 @@ GameplayDefault extends GameplayElements
 					Names = array 
 					{
 						// Buildings
-						"Well",
 						"Stage",
 						// Actions
 						"TradeMission",
@@ -1563,8 +1564,8 @@ GameplayDefault extends GameplayElements
 		};
 		7 = GNobilityData // Patrician
 		{
-			Money = 100000;
-			Prestige = 7500;
+			Money = 200000;
+			Prestige = 10000;
 			NonEssentialsPotPerc = 0.20;
 			
 			ObjectiveWeights = array
@@ -1612,6 +1613,7 @@ GameplayDefault extends GameplayElements
 						"GoSpyBuilding",
 						"GreaseTheWheels",
 						"InnDiceGame",
+						"ReadStories",
 						"InitiateIntrigue",
 						"LetterFromInquisition",
 						// General unlocks
@@ -1629,8 +1631,8 @@ GameplayDefault extends GameplayElements
 		};
 		8 = GNobilityData // Nobleman
 		{
-			Money = 250000;
-			Prestige = 12000;
+			Money = 300000;
+			Prestige = 15000;
 			NonEssentialsPotPerc = 0.21;
 			
 			ObjectiveWeights = array
@@ -1711,8 +1713,8 @@ GameplayDefault extends GameplayElements
 		};
 		9 = GNobilityData // Squire
 		{
-			Money = 400000;
-			Prestige = 15500;
+			Money = 500000;
+			Prestige = 20000;
 			NonEssentialsPotPerc = 0.22;
 			
 			ObjectiveWeights = array
@@ -1780,8 +1782,8 @@ GameplayDefault extends GameplayElements
 		};
 		10 = GNobilityData // Lord
 		{
-			Money = 490000;
-			Prestige = 20000;
+			Money = 550000;
+			Prestige = 30000;
 			NonEssentialsPotPerc = 0.23;
 			
 			ObjectiveWeights = array
@@ -1821,7 +1823,7 @@ GameplayDefault extends GameplayElements
 				{
 					Filter = "IsFamilyMember";
 					ActorValue = "MaxOwnedBusinesses";
-					Mod = 2.0; //Total: 11
+					Mod = 3.0; //Total: 12
 					Recover = true;
 				},
 				UnlockEffect
@@ -1831,7 +1833,6 @@ GameplayDefault extends GameplayElements
 						"Statue",
 						// privileges
 						"ManipulateLiaison",
-						"BecomeSovereign",
 						"WarAsOfficer"
 					};
 				},
@@ -1888,7 +1889,7 @@ GameplayDefault extends GameplayElements
 				{
 					Filter = "IsFamilyMember";
 					ActorValue = "MaxOwnedBusinesses";
-					Mod = 1.0; //Total: 12
+					Mod = 2.0; //Total: 15
 					Recover = true;
 				},
 				ModifierEffect
@@ -1953,7 +1954,7 @@ GameplayDefault extends GameplayElements
 				{
 					Filter = "IsFamilyMember";
 					ActorValue = "MaxOwnedBusinesses";
-					Mod = 1.0; //Total: 13
+					Mod = 1.0; //Total: 16
 					Recover = true;
 				},
 				ModifierEffect
@@ -2008,7 +2009,7 @@ GameplayDefault extends GameplayElements
 				{
 					Filter = "IsFamilyMember";
 					ActorValue = "MaxOwnedBusinesses";
-					Mod = 2.0; //Total: 15
+					Mod = 2.0; //Total: 18
 					Recover = true;
 				},
 				ModifierEffect
@@ -2064,9 +2065,21 @@ GameplayDefault extends GameplayElements
 				{
 					Filter = "IsFamilyMember";
 					ActorValue = "MaxOwnedBusinesses";
-					Mod = 1.0; //Total: 16
+					Mod = 2.0; //Total: 16
 					Recover = true;
 				},
+				UnlockEffect
+				{
+					Names = array
+					{
+						"Statue",
+						// privileges
+						"ManipulateLiaison",
+						"BecomeSovereign",
+						"WarAsOfficer"
+					};
+				},
+
 				ModifierEffect
 				{
 					Filter = "IsFamilyMember";
@@ -2127,7 +2140,7 @@ GameplayDefault extends GameplayElements
 				{
 					Filter = "IsFamilyMember";
 					ActorValue = "MaxOwnedBusinesses";
-					Mod = 2; //Total: 18
+					Mod = 10; //Total: 18
 					Recover = true;
 				},
 				ModifierEffect
