@@ -301,3 +301,37 @@
 		RequiredBuilding = array { "Mansion", 1 },
 	};
 };
+"Horseshoe" = G3Item
+{
+	Type = 1;
+	SubType = 8;
+
+	DisplayName = "$Horseshoe";
+	Description = "$Horseshoe.Desc";
+	DisplayCategories = array("All", "Components");
+	IconName = "Horseshoe";
+
+	Production = 2;
+	BuildTime = 35.0;
+	Tier = 1;
+	SocialClass = 0;
+
+	Requirements = array
+	{
+		comp1 extends G3ItemComponent
+		{
+			Name = "Iron";
+			Number = 2;
+		};
+		comp2 extends G3ItemComponent
+		{
+			Name = "Charcoal";
+			Number = 1;
+		};
+	};
+	
+	RequiredBuildings = array
+	{
+		RequiredBuilding = array { "Foundry", 1 }
+	};
+};

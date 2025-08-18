@@ -189,6 +189,11 @@
 			Name = "Leather";
 			Number = 4;
 		};
+		comp4 extends G3ItemComponent
+		{
+			Name = "Horseshoe";
+			Number = 4;
+		};
 	};
 	
 	Results = array

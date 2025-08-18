@@ -116232,5 +116232,15 @@ LocDirectData
 			Key = "$action.TollRoadDesc";
 			Text = "Tolling transporters on the road is a bold and deceptive act, involving the imposition of fake fees on passing transports under the pretense of authority.";
 		},
+		LocDirectEntry
+		{
+			Key = "$Horseshoe";
+			Text = "Horseshoe";
+		},
+		LocDirectEntry
+		{
+			Key = "$Horseshoe.Desc";
+			Text = "Horseshoe needed for Riding Horses";
+		},
 	);
 };

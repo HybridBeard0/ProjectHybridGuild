@@ -554,7 +554,7 @@ G3SkillsDefault extends G3SkillsContainer
 						},
 						UnlockEffect
 						{
-							Names = array { "Silver", "IronBracelet", "SilverChain", "MasonHammer", "Saw" };
+							Names = array { "Silver", "IronBracelet", "SilverChain", "MasonHammer", "Saw", "Horseshoe"};
 						}
 					};
 				};
