@@ -1,0 +1,11 @@
+ActorDesc
+{
+	Visual = "fountain_02";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#fountain_02/list_water_animation,
+		);
+	};
+}

@@ -1,0 +1,30 @@
+school extends Building
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "school";
+
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc {
+					Name = "streetconnection";
+					Position = ( -30.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc {
+					Name = "enter";
+					Position = ( -30.0, 58.0, 20.0 );
+					Rotation = ( 0.0, 0.0, 180.0 );
+				},
+				SnapPointDesc {
+					Name = "exit";
+					Position = ( -30.0, 58.0, 20.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+			};
+		};
+	};
+	EditorName = "School";
+	EditorIcon = "media/UserInterface/Icons/BuildingImages/Other/School.png";
+	EditorCategory = 2;			
+}

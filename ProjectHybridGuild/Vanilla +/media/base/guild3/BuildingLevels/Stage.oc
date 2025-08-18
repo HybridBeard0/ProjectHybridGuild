@@ -1,0 +1,10 @@
+Stage extends G3BuildingTemplateLevel
+{
+	Results = array 
+	{
+		TagEffect
+		{
+			Tags = array{"IsStage", "NoEntry", "NoConquer", "NoRealBuilding", "NoWorkers", "NoWeatherEffects" };
+		},
+	};
+};

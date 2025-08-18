@@ -1,0 +1,19 @@
+base/standardg3characterdesc
+{
+	Visual = "rat_01";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#rat/list_idles_animations,
+			#rat/list_walks_animations,
+		);
+	};
+	Poor = true;
+	MiddleClass = true;
+	Rich = true;
+	Male = true;
+	WalkSpeed = 55.000;
+	TrotSpeed = 150.000;
+	RunSpeed = 250.000;
+}

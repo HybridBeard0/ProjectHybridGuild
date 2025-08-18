@@ -1,0 +1,11 @@
+G3ActorDesc
+{
+	Visual = "interior_mansions";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#Interior_Mansions/interior_mansions_idles_animations,
+		);
+	};
+}

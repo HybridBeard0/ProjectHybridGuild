@@ -1,0 +1,10 @@
+sheet_01 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "sheet_01";
+	};
+	EditorName = "Sheet_01";
+	EditorIcon = "media/UserInterface/PropIcons/Cabbagecrate.png";
+	EditorCategory = 3;		
+}

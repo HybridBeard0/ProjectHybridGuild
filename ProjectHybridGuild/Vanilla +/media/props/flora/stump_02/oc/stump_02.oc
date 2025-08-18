@@ -1,0 +1,10 @@
+stump_02 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "stump_02";
+	};
+	EditorName = "Stump02";
+	EditorIcon = "media/UserInterface/PropIcons/Stump02.png";
+	EditorCategory = 0;		
+}

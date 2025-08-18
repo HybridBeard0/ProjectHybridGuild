@@ -1,0 +1,23 @@
+//Sound_Prop extends G3Character
+//{
+//	static var Description = #Sound_Prop/Sound_Prop_desc;
+//};
+
+
+Sound_Prop extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "sound_prop";
+	};
+	EditorName = "sound_prop";
+	EditorIcon = "media/UserInterface/PropIcons/sound_prop.png";
+	EditorCategory = 7;
+	Destructible = false;
+
+	SoundSettings = G3SoundSettings
+	{
+		//EditorName = "DeathF";
+        Max3DRadius = 1000;
+	};	
+}

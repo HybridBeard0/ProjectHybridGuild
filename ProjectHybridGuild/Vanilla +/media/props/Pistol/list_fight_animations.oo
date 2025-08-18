@@ -1,0 +1,22 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1481137064;
+			Name = "shoot";
+			AnimationName = "shoot";
+			Triggers = array
+			(
+				EffectTrigger
+				{
+					TriggerFrame = 12;
+					NoLoop = true;
+					EffectName = "Pistol";
+					RefNodeOverride = "Snap_Particles";
+				},
+			);
+		},
+	);
+}

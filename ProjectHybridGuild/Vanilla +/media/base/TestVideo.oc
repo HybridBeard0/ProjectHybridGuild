@@ -1,0 +1,36 @@
+TestVideo extends DarksidersVideo
+{
+	ShowUI = false;
+	
+	Media = array
+	{
+		Movie
+		{
+			Name = "NG";
+			GracePeriod = 0;
+			CanInterrupt = true;
+			IsTitleVideo = true;
+		};
+		Movie
+		{
+			Name = "purple_lamp";
+			GracePeriod = 0;
+			CanInterrupt = true;
+			IsTitleVideo = true;
+		};
+		Movie
+		{
+			Name = "Golem";
+			GracePeriod = 0;
+			CanInterrupt = true;
+			IsTitleVideo = true;
+		};
+		Movie
+		{
+			Name = "TheGuild3_Intro";
+			GracePeriod = 0;
+			CanInterrupt = true;
+			IsTitleVideo = true;
+		};
+	};
+};

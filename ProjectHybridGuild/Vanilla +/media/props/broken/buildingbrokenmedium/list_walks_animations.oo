@@ -1,0 +1,24 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1439484476;
+			Name = "idle1";
+			AnimationName = "idle1";
+			Length = 100;
+			Triggers = array
+			(
+				EffectTrigger
+				{
+					IsRequired = true;
+					NoLoop = true;
+					TransferEffect = false;
+					EffectName = "Smoke_Debris";
+					RefNodeOverride = "Smoke";
+				},
+			);
+		},
+	);
+}

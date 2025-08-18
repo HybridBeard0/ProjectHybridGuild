@@ -1,0 +1,11 @@
+/*field_02 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "field_02";
+	};
+	EditorName = "Field_02";
+	EditorIcon = "media/UserInterface/PropIcons/field_02.png";
+	EditorCategory = 1;		
+}
+*/

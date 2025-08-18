@@ -1,0 +1,55 @@
+Tutorial extends TutorialChapters
+{
+	StartObjective = "TutorialQuestBuildBuilding";
+	TutorialSkill = "Artisan";
+	InitialChapter = "HelpTutorialWelcome"; // The default selected chapter when the tutorial window is created
+	
+	Chapters = array
+	{
+		@base/HelpTutorialWelcome
+		@base/HelpTutorialCalendarAppointment
+		@base/HelpTutorialDynastyOverview
+		@base/GameplayConceptTutorialCameraControls
+		@base/GameplayConceptTutorialCharacters
+		@base/HelpTutorialCharacterInspection
+		@base/GameplayConceptTutorialCombat
+		
+		@base/HelpTutorialDialogues
+		@base/HelpTutorialDynastyTrade
+		@base/HelpTutorialBuildBuilding
+		@base/GuidedTutorialConstructBuilding
+		@base/HelpTutorialDynastyTree
+		@base/HelpTutorialFrontStore
+		@base/HelpTutorialGuilds
+		@base/HelpTutorialHUD
+		@base/HelpTutorialHenchmen
+		@base/HelpTutorialInteriorOverview
+		@base/HelpTutorialPoliticsDetails
+		@base/HelpTutorialAreaMap
+		@base/HelpTutorialMarket
+		@base/HelpTutorialMessageLog
+		@base/GameplayConceptTutorialResources
+		@base/HelpTutorialLawsTrials
+		@base/HelpTutorialPolitics
+		@base/HelpTutorialProductionWindow
+		@base/HelpTutorialQuestLog
+		@base/HelpTutorialReligion
+		@base/HelpTutorialPublicBuildings
+		@base/HelpTutorialResourceProviders
+		@base/HelpTutorialShortcuts
+		@base/GameplayConceptTutorialRomancing
+		@base/GameplayConceptTutorialTime
+		@base/GameplayConceptTutorialCharacterControls
+		@base/HelpTutorialStatistics
+		@base/GameplayConceptTutorialReputation
+		@base/HelpTutorialTradeRoutes
+		@base/HelpTutorialTitlesAndSkillTree
+		@base/HelpTutorialResidence
+		
+		@base/GuidedTutorialTutorialHowTo
+		@base/GuidedTutorialProduce
+		//@base/GameplayConceptTutorialAction
+		@base/GuidedTutorialBuyTitle
+		//@base/HelpTutorialTradeRoutesDetail
+	};
+};

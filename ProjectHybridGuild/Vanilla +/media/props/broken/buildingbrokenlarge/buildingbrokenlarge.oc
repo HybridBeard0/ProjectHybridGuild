@@ -1,0 +1,12 @@
+buildingbrokenlarge extends G3PropsInstance
+{
+	static var Description = #buildingbrokenlarge/buildingbrokenlarge_desc;
+
+	function onInit()
+	{
+		this.playAnimationByName("idle1");
+	}
+	EditorName = "BuildingBrokenLarge";
+	EditorIcon = "media/UserInterface/PropIcons/Buildingbrokenlarge.png";
+	EditorCategory = 4;		
+};

@@ -1,0 +1,22 @@
+boat_02b extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "boat_02_static";
+			AnimationArray = AnimationListArray
+			{
+			AnimationLists = array
+			(
+				#boat_02b/boat_02b_animationlist,
+			);
+		};
+	};
+	
+	function onSpawn()
+	{
+		this.playAnimationByName("Idle");
+	}
+	EditorName = "Ship large";
+	EditorIcon = "media/UserInterface/PropIcons/Boat02.png";
+	EditorCategory = 3;
+}

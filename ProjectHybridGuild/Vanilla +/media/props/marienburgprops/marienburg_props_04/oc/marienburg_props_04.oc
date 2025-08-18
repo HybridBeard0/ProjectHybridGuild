@@ -1,0 +1,10 @@
+marienburg_props_04 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "marienburg_props_04";
+	};
+	EditorName = "marienburg_props_04";
+	EditorIcon = "media/UserInterface/PropIcons/Kiosque01.png";
+	EditorCategory = 5;		
+}

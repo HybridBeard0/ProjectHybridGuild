@@ -1,0 +1,41 @@
+LeatherArmorMale extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = false;
+	MiddleClass = true;
+	Rich = false;
+	
+	Male = true;
+	Player = false;
+	Employee = false;
+	Profession = false;
+	
+	
+	LowResCharacter = "leatherarmor";
+	HighResCharacter = "leatherarmor";
+	
+	BodyTexturesDiff= array
+	{
+		"LeatherArmorMale_LOD01_DIFF",
+		"LeatherArmorMale_LOD01_DIFF",
+		"LeatherArmorMale_LOD01_DIFF",		
+		"LeatherArmorMale_LOD01_DIFF"			
+	};
+	BodyTexturesNorm= array
+	{
+		"LeatherArmorMale_LOD01_NORM",
+		"LeatherArmorMale_LOD01_NORM",
+		"LeatherArmorMale_LOD01_NORM",
+		"LeatherArmorMale_LOD01_NORM"
+	};
+	BodyTexturesMask= array
+	{
+		"LeatherArmorMale_LOD01_MASK",
+		"LeatherArmorMale_LOD01_MASK",
+		"LeatherArmorMale_LOD01_MASK",
+		"LeatherArmorMale_LOD01_MASK"
+	};
+}

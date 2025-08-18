@@ -1,0 +1,42 @@
+WarehouseLevel extends G3BuildingTemplateLevel
+{
+    NBAddons = 18;
+
+	Results = array 
+	{
+		TagEffect
+		{
+			Tags = array{"IsHighTier", "NoWorkers"};
+		},
+		ModifierEffect
+		{
+			ActorValue = "MaxTransporters";
+			Mod = 2.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "StorageSlots";
+			Mod = 25.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "StorageSpace";
+			Mod = 120.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "FireProtection";
+			Mod = 1.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "BuildingSecurity";
+			Mod = 1.0;
+			Recover = true;
+		};
+	};
+};

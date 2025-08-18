@@ -1,0 +1,19 @@
+base/standardg3characterdesc
+{
+	Visual = "donkey";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#donkey/list_idles_animations,
+			#donkey/list_walks_animations,
+		);
+	};
+	Poor = true;
+	MiddleClass = true;
+	Rich = true;
+	Male = true;
+	WalkSpeed = 55.000;
+	TrotSpeed = 110;
+	RunSpeed = 220;
+}

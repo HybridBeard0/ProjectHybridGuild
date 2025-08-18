@@ -1,0 +1,54 @@
+execution extends Building
+{
+	static var Description = #execution/execution_anim_desc
+	{
+		Visual = "execution";
+		
+		SnapPointSet = SnapPointSetDesc {
+			Setup = array {
+				SnapPointDesc {
+					Name = "streetconnection";
+					Position = ( -90.0, 0.0, 0.0 );
+					Rotation = ( 0.0, 0.0, 0.0 );
+				},
+				SnapPointDesc
+				{
+					Name = "Snap_Guard";
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Animation = "artisan1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "Snap_Bailiff";
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Animation = "artisan1";
+						},
+					};
+				},
+				SnapPointDesc
+				{
+					Name = "Snap_Character";
+					Animations = array 
+					{
+						G3SnapPointAnimation
+						{
+							Animation = "artisan1";
+						},
+					};
+				},
+			};
+		};
+	};
+	
+	EditorName = "Execution";
+	EditorIcon = "media/UserInterface/Icons/BuildingImages/Other/Execution.png";
+	EditorCategory = 2;		
+}

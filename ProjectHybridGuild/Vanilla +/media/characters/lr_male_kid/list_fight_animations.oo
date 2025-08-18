@@ -1,0 +1,160 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1475344204;
+			Name = "boxing_punch1";
+			AnimationName = "boxing_punch1";
+			Looping = true;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 43;
+					SoundEvent = 1103;
+					FadeStart = 200;
+					FadeOut = 1700.0;
+					EventLoops = false;					
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1484563371;
+			Name = "break_bone_victim";
+			AnimationName = "break_bone_victim";
+			Triggers = array
+			(
+				VoiceTrigger
+				{
+					TriggerFrame = 29;
+					SoundEvent = 286;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;					
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1894183351;
+			Name = "kill_unconscious_character";
+			AnimationName = "break_bone_victim";
+			Triggers = array
+			(
+				SetEquipmentVisibilityTrigger
+				{
+					TriggerFrame = 0;
+					Visibility = false;
+					EquipmentSlot = Weapon;
+				},
+				SpawnAttachmentTrigger
+				{
+					TriggerFrame = 0;
+					DespawnFrame = 65;
+					SpawnName = "dagger/dagger";
+				},
+				VoiceTrigger
+				{
+					TriggerFrame = 29;
+					SoundEvent = 286;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;					
+				},
+				
+				VoiceTrigger
+				{
+					TriggerFrame = 93;
+					SoundEvent = 276;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;					
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1485345572;
+			Name = "dialog_bribe";
+			AnimationName = "dialog_bribe";
+		},
+		AnimationDesc
+		{
+			ID = 1447876267;
+			Name = "fight1";
+			AnimationName = "fight1";
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 38;
+					SoundEvent = 1103;
+					FadeStart = 200; 
+					FadeOut = 1700.0; 
+					EventLoops = false;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1429803133;
+			Name = "fight2";
+			AnimationName = "fight2";
+		},
+		AnimationDesc
+		{
+			ID = 1422303140;
+			Name = "fight3";
+			AnimationName = "fight3";
+			Triggers = array
+			(
+				VoiceTrigger
+				{
+					TriggerFrame = 41;
+					SoundEvent = 286;
+					FadeStart = 200; 
+					FadeOut = 1700.0; 
+					EventLoops = false;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1427113147;
+			Name = "fight4";
+			AnimationName = "fight4";
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 51;
+					SoundEvent = 1200;
+					FadeStart = 200;
+					FadeOut = 1700.0;
+					EventLoops = false;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1427987118;
+			Name = "fightidle1";
+			AnimationName = "fightidle1";
+		},
+		AnimationDesc
+		{
+			ID = 1424447118;
+			Name = "swordlight_attack1";
+			AnimationName = "swordlight_attack1";
+		},
+		AnimationDesc
+		{
+			ID = 1424456718;
+			Name = "swordlight_guard1";
+			AnimationName = "swordlight_guard1";
+		},
+	);
+}

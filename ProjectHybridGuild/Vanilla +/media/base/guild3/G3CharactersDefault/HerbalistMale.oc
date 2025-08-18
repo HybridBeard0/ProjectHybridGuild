@@ -1,0 +1,40 @@
+HerbalistMale extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = true;
+	MiddleClass = false;
+	Rich = false;
+	
+	Male = true;
+	Player = false;
+	Employee = true;
+	Profession = true;
+
+	LowResCharacter = "commoner3";
+	HighResCharacter = "commoner3";
+	
+	BodyTexturesDiff= array
+	{
+		"Commoner3Male_LOD01_DIFF",
+		"Commoner3Male_LOD01_DIFF",
+		"Commoner3Male_LOD01_DIFF",
+		"Commoner3Male_LOD01_DIFF"		
+	};
+	BodyTexturesNorm= array
+	{
+		"Commoner3Male_LOD01_NORM",
+		"Commoner3Male_LOD01_NORM",
+		"Commoner3Male_LOD01_NORM",
+		"Commoner3Male_LOD01_NORM"
+	};
+	BodyTexturesMask= array
+	{
+		"Commoner3Male_LOD01_MASK",
+		"Commoner3Male_LOD01_MASK",
+		"Commoner3Male_LOD01_MASK",
+		"Commoner3Male_LOD01_MASK"
+	};
+}

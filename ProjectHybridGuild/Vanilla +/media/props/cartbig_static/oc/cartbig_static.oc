@@ -1,0 +1,10 @@
+cartbig_static extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "cartbig_static";
+	};
+	EditorName = "cartbig_static";
+	EditorIcon = "media/UserInterface/PropIcons/cartbig.png";
+	EditorCategory = 3;
+}

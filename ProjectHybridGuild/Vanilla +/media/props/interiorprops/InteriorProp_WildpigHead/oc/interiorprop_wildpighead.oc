@@ -1,0 +1,10 @@
+interiorprop_wildpighead extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "interiorprop_wildpighead";
+	};
+	EditorName = "Interiorprop Wildpighead";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

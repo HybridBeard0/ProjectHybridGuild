@@ -1,0 +1,13 @@
+Hood extends G3PropsInstance
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "Hood";
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 Head";
+		AttachChildNode = "Snap";	
+	};
+	EditorName = "Hood";
+	EditorIcon = "media/UserInterface/PropIcons/Hood.png";
+	EditorCategory = 4;		
+}

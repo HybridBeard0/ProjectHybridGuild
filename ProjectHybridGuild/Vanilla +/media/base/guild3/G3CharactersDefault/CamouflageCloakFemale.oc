@@ -1,0 +1,40 @@
+CamouflageCloakFemale extends G3CharacterDesc
+{
+	WalkSpeed = 100;
+	RunSpeed = 205;
+	AverageAge = 21;
+	
+	Poor = false;
+	MiddleClass = true;
+	Rich = false;
+	
+	Male = false;
+	Player = false;
+	Employee = false;
+	Profession = false;
+	
+	LowResCharacter = "camouflagecloak";
+	HighResCharacter = "camouflagecloak";
+	
+	BodyTexturesDiff= array
+	{
+		"CamouflageCloakFemale_DIFF",
+		"CamouflageCloakFemale_DIFF",
+		"CamouflageCloakFemale_DIFF",		
+		"CamouflageCloakFemale_DIFF"			
+	};
+	BodyTexturesNorm= array
+	{
+		"CamouflageCloakFemale_NORM",
+		"CamouflageCloakFemale_NORM",
+		"CamouflageCloakFemale_NORM",
+		"CamouflageCloakFemale_NORM"
+	};
+	BodyTexturesMask= array
+	{
+		"CamouflageCloakFemale_MASK",
+		"CamouflageCloakFemale_MASK",
+		"CamouflageCloakFemale_MASK",
+		"CamouflageCloakFemale_MASK"
+	};
+}

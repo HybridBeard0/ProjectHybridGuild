@@ -1,0 +1,188 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1427903017;
+			Name = "run1";
+			AnimationName = "run1";
+			Looping = true;
+			Motion = 100.000;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 3;
+					SoundEvent = 1201;
+					FadeStart = 50; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 12;
+					SoundEvent = 1201;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1427903018;
+			Name = "run_armor";
+			AnimationName = "run1";
+			Looping = true;
+			Motion = 100.000;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 3;
+					SoundEvent = 1202;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 12;
+					SoundEvent = 1202;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1427903024;
+			Name = "run2";
+			AnimationName = "run2";
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 4;
+					SoundEvent = 1201;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 15;
+					SoundEvent = 1201;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1427903031;
+			Name = "run3";
+			AnimationName = "run3";
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 4;
+					SoundEvent = 1201;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 11;
+					SoundEvent = 1201;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1427903038;
+			Name = "run4";
+			AnimationName = "run4";
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 3;
+					SoundEvent = 1201;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 15;
+					SoundEvent = 1201;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1483732563;
+			Name = "run_torch";
+			AnimationName = "run_torch";
+			Looping = true;
+			Motion = 100.000;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 2;
+					SoundEvent = 1201;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 12;
+					SoundEvent = 1201;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;
+				},
+			);
+		},
+		AnimationDesc
+		{
+			ID = 1482422020;
+			Name = "run_walkstick";
+			AnimationName = "run_walkstick";
+			Motion = 100.000;
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					TriggerFrame = 2;
+					SoundEvent = 1201;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;
+				},
+				SoundTrigger
+				{
+					TriggerFrame = 13;
+					SoundEvent = 1201;
+					FadeStart = 200; // Faster silent
+					FadeOut = 1700.0; // Not too loud
+					EventLoops = false;
+				},
+			);
+		},
+	);
+}

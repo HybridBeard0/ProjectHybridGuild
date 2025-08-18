@@ -1,0 +1,6 @@
+TowncrierSettings extends TowncrierLogic
+{
+	SpeakTimes = array { 8.0, 12.0, 16.0, 20.0 };
+	AnnouncementSoundId = 77; // Voice over sound id which is triggered when towncrier has something important to say!
+	WaitTimeBuffer = 10.0f; // Wait time buffer which is added to the duration of the path so town crier starts early enough and waits a little bit at target point
+};

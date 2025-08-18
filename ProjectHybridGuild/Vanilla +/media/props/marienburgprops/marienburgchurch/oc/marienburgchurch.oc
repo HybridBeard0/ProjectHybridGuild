@@ -1,0 +1,10 @@
+marienburgchurch extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "marienburgchurch";
+	};
+	EditorName = "marienburgchurch";
+	EditorIcon = "media/UserInterface/PropIcons/Kiosque01.png";
+	EditorCategory = 5;		
+}

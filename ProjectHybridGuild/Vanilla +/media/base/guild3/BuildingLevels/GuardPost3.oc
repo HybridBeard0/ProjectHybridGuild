@@ -1,0 +1,8 @@
+GuardPost3 extends G3BuildingTemplateLevel
+{
+    NBAddons = 8;
+	
+	Results = array 
+	{
+	};
+};

@@ -1,0 +1,29 @@
+stonebrick extends G3Actor
+{
+	static var Description = G3ActorDesc
+	{
+		Visual = "stonebrick";
+		AnimationArray = AnimationListArray
+		{
+			AnimationLists = array
+			{
+				AnimationList
+				{
+					Animations = array
+					(
+						AnimationDesc
+						{
+							ID = 1598269301;
+							Name = "packing_lumber";
+							AnimationName = "packing_lumber";
+						},
+					);
+				};
+			};
+		};
+		CrowdControlRadius = 0.000;
+		AttachType = "AttachToNode";
+		AttachParentNode = "Bip001 R Hand";
+		AttachChildNode = "Snap";
+	};
+};

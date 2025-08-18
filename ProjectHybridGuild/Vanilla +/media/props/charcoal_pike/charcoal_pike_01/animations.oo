@@ -1,0 +1,27 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1490282383;
+			Name = "Idle";
+			AnimationName = "Idle";
+			Triggers = array
+			(
+				EffectTrigger
+				{
+					IsRequired = true;
+					EffectName = "RobbercampFire";
+					RefNodeOverride = "DummyFire";
+				},
+				SoundTrigger
+				{
+					IsRequired = true;
+					SoundEvent = 1001;
+					EventLoops = true;
+				},
+			);
+		},
+	);
+}

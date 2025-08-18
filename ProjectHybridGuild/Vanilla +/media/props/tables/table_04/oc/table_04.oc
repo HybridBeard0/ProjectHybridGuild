@@ -1,0 +1,10 @@
+table_04 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "table_04";
+	};
+	EditorName = "Table04";
+	EditorIcon = "media/UserInterface/PropIcons/Table01.png";
+	EditorCategory = 3;		
+}

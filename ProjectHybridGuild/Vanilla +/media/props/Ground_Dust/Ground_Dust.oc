@@ -1,0 +1,4 @@
+Ground_Dust extends G3Character
+{
+	static var Description = #Ground_Dust/Ground_Dust_desc;
+};

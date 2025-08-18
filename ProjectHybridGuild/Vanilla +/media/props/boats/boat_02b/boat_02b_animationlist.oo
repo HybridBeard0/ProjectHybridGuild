@@ -1,0 +1,20 @@
+AnimationList
+{
+	Animations = array
+	(
+		AnimationDesc
+		{
+			ID = 1611743126;
+			Name = "Idle";
+			AnimationName = "boatfloat2";
+			Triggers = array
+			(
+				SoundTrigger
+				{
+					SoundEvent = 1075;
+					FadeOut = 2000.0;
+				},
+			);
+		},
+	);
+}

@@ -1,0 +1,10 @@
+tombstone_05 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "tombstone_05";
+	};
+	EditorName = "Tombstone05";
+	EditorIcon = "media/UserInterface/PropIcons/Tombstone05.png";
+	EditorCategory = 3;		
+}

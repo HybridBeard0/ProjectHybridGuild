@@ -1,0 +1,7 @@
+Parallax_Box extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "parallaxbox";
+	};
+}

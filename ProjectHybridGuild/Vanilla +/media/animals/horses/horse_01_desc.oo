@@ -1,0 +1,20 @@
+base/standardg3characterdesc
+{
+	Visual = "horse_01";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#horses/list_idles_animations,
+			#horses/list_walks_animations,
+			#horses/list_runs_animations,
+		);
+	};
+	Poor = false;
+	MiddleClass = false;
+	Rich = false;
+	Male = false;
+	WalkSpeed = 40.000;
+	TrotSpeed = 87.500;
+	RunSpeed = 300.000;
+}

@@ -1,0 +1,4 @@
+Effect_Poison extends G3PropsInstance
+{
+	static var Description = #Effect_Poison/Effect_Poison_desc;
+};

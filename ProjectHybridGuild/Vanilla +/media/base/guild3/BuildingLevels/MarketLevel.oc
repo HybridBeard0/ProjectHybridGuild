@@ -1,0 +1,40 @@
+MarketLevel extends G3BuildingTemplateLevel
+{
+	Results = array 
+	{
+		TagEffect
+		{
+			Tags = array{ "NoWeatherEffects" };
+		},
+		ModifierEffect
+		{
+			ActorValue = "FrontStoreSlots";
+			Mod = 300.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "FrontStoreSpace";
+			Mod = 9999.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "Attractiveness";
+			Mod = 100.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "BuildingSecurity";
+			Mod = 10.0;
+			Recover = true;
+		};
+		ModifierEffect
+		{
+			ActorValue = "FireProtection";
+			Mod = 10.0;
+			Recover = true;
+		};
+	};
+};

@@ -1,0 +1,14 @@
+ResourcePackageNames
+{
+	Names = array
+	{
+		"interior_base",
+		"interior_countryhouses",
+		"interior_church",
+		"interior_church_village",
+		"interior_poorhouses",
+		"interior_cityhouses",
+		"interior_mansions",
+	};
+}
+		

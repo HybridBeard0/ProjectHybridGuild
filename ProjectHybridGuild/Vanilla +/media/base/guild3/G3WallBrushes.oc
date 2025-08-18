@@ -1,0 +1,186 @@
+G3WallBrushes extends G3WallsBrushesContainer
+{
+	Definitions = map
+	{
+		"CityWall_1" = G3WallToolBrush
+		{
+			PivotNode="citywalltower/citywalltower";
+			RoadIntersectionNode="citygate/citygate";
+			RoadIntersectionWallOffset = 100;
+
+			Segments = array
+			{
+				G3WallSection
+				{
+					Model = "citywall/citywall";
+					Width = 800;
+				};				
+				G3WallSection
+				{
+					Model = "citywall_medium/citywall_medium";
+					Width = 570;
+				};
+				G3WallSection
+				{
+					Model = "citywall_small/citywall_small";
+					Width = 370;
+				};
+			
+			};
+		};
+		
+		"CityWall_2" = G3WallToolBrush
+		{
+			PivotNode="citywalltower_02/citywalltower_02";
+			RoadIntersectionNode="citygate_02/citygate_02";
+			RoadIntersectionWallOffset = 100;
+
+			Segments = array
+			{
+				G3WallSection
+				{
+					Model = "citywall_02/citywall_02";
+					Width = 800;
+				};				
+				G3WallSection
+				{
+					Model = "citywall_02_medium/citywall_02_medium";
+					Width = 570;
+				};
+				G3WallSection
+				{
+					Model = "citywall_02_small/citywall_02_small";
+					Width = 370;
+				};
+			
+			};
+		};		
+
+		"CityWall_3" = G3WallToolBrush
+		{
+			PivotNode="citywalltower_03/citywalltower_03";
+			RoadIntersectionNode="citygate_03/citygate_03";
+			RoadIntersectionWallOffset = 100;
+
+			Segments = array
+			{
+				G3WallSection
+				{
+					Model = "citywall_03/citywall_03";
+					Width = 800;
+				};				
+				G3WallSection
+				{
+					Model = "citywall_03_medium/citywall_03_medium";
+					Width = 570;
+				};
+				G3WallSection
+				{
+					Model = "citywall_03_small/citywall_03_small";
+					Width = 370;
+				};
+			
+			};
+		};	
+
+		"CityWall_4" = G3WallToolBrush
+		{
+			PivotNode="citywalltower_04/citywalltower_04";
+			RoadIntersectionNode="citygate_04/citygate_04";
+			RoadIntersectionWallOffset = 100;
+
+			Segments = array
+			{
+				G3WallSection
+				{
+					Model = "citywall_04/citywall_04";
+					Width = 800;
+				};				
+				G3WallSection
+				{
+					Model = "citywall_04_medium/citywall_04_medium";
+					Width = 570;
+				};
+				G3WallSection
+				{
+					Model = "citywall_04_small/citywall_04_small";
+					Width = 370;
+				};
+			
+			};
+		};	
+
+		
+		"Wooden fences" = G3WallToolBrush
+		{
+			PivotNode="fence_pole/fence_pole";
+			RoadIntersectionNode="fence_gate/fence_gate";
+			HasIntermediatePosts = true;
+			HasInclinedWallSections = true;
+			Destructable = true;
+			
+			Segments = array
+			{
+				G3WallSection
+				{
+					Model = "fence_wall01/fence_wall01";
+					Width = 100;
+				};
+				G3WallSection
+				{
+					Model = "fence_wall02/fence_wall02";
+					Width = 75;
+				};
+				G3WallSection
+				{
+					Model = "fence_wall03/fence_wall03";
+					Width = 50;
+				};
+
+			};
+		};
+		
+		"Rope fences" = G3WallToolBrush
+		{
+			PivotNode="fence_pole/fence_pole";
+			RoadIntersectionNode="fence_gate/fence_gate";
+			HasIntermediatePosts = false;
+			HasInclinedWallSections = false;
+			Destructable = true;
+			
+			Segments = array
+			{
+				G3WallSection
+				{
+					Model = "fence_01/fence_01";
+					Width = 50;
+				};
+				G3WallSection
+				{
+					Model = "fence_02/fence_02";
+					Width = 100;
+				};
+			};
+		};
+		
+//		"Walls_Village" = G3WallToolBrush
+//		{
+//			PivotNode="fence_pole/fence_pole";
+//			RoadIntersectionNode="";
+//
+//			Segments = array
+//			{
+//				G3WallSection
+//				{
+//					Model = "Brickwall01/Brickwall01";
+//					Width = 800;
+//				};
+//				G3WallSection
+//				{
+//					Model = "Brickwall02/Brickwall02";
+//					Width = 570;
+//				};
+//			};
+//		}; 
+	};
+};

@@ -1,0 +1,10 @@
+interiorprop_deerantler01 extends G3PropsInstance
+{
+	static var Description = ActorDesc
+	{
+		Visual = "interiorprop_deerantler01";
+	};
+	EditorName = "Interiorprop DeerAntler01";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}

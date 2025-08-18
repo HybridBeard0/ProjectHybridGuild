@@ -1,0 +1,11 @@
+base/standardg3characterdesc
+{
+	Visual = "bird";
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#birds/list_fly_animations,
+		);
+	};
+}

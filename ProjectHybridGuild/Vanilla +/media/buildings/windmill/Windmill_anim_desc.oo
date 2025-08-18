@@ -1,0 +1,13 @@
+G3ActorDesc
+{
+	Visual = "windmill";	
+	AnimationArray = AnimationListArray
+	{
+		AnimationLists = array
+		(
+			#windmill/animation,
+		);
+	};
+}
+
+

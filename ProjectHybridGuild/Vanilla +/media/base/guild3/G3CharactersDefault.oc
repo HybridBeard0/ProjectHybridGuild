@@ -1,0 +1,1600 @@
+//----------------------------------------------------------------------------
+// MALE  	 1-1000        	(Citizens 1-100) 		(Commoners 101-200)		(Nobles 201-300)  	(CityGuard 	(301-400)	 KIDS male 401 a 405 (Henchmen 901-910)
+// FEMALE	 1001-2000		(Citizens 1001-1100)	(Commoners 1101-1200)	(Nobles 1201-1300)	(CityGuard 1301-1400)	 KIDS female 1401 a 1405 (Henchmen 1901-1910)
+//----------------------------------------------------------------------------
+
+G3CharactersDefault extends G3CharactersInfo
+{
+	MaleHeadTexturesDiff = array
+	{
+		"MaleHead01_LOD01_diff",
+		"MaleHead02_Lod01_diff",
+		"MaleHead03_Lod01_diff",
+		"MaleHead04_Lod01_diff",
+		"MaleHead05_DIFF",
+		"MaleHead06_Lod01_diff",
+		"MaleHead07_DIFF",
+		"MaleHead09_Lod01_diff"
+	};
+
+	MaleHeadTexturesNorm = array
+	{
+		"MaleHead01_LOD01_nrm",
+		"MaleHead02_Lod01_nrm",
+		"MaleHead03_Lod01_nrm",
+		"MaleHead04_Lod01_nrm",
+		"MaleHead05_NORM",
+		"MaleHead06_Lod01_nrm",
+		"MaleHead07_NORM",
+		"MaleHead09_Lod01_nrm"
+	};
+
+	MaleHeadTexturesMask = array
+	{
+		"MaleHead01_LOD01_MASK",
+		"MaleHead02_Lod01_MASK",
+		"MaleHead03_Lod01_MASK",
+		"MaleHead04_Lod01_MASK",
+		"MaleHead05_MASK",
+		"MaleHead06_Lod01_MASK",
+		"MaleHead07_MASK",
+		"MaleHead09_Lod01_MASK"
+	};
+	
+	FemaleHeadTexturesDiff = array
+	{
+		"FemaleHead01_Lod01_diff",
+		"FemaleHead03_LOD01_diff",
+		"FemaleHead04_Lod01_diff",
+		"FemaleHead05_LOD01_diff",
+		"FemaleHead07_Lod01_diff",
+		"FemaleHead08_Lod01_diff"
+	};
+
+	FemaleHeadTexturesNorm = array
+	{
+		"FemaleHead01_Lod01_nrm",
+		"FemaleHead03_LOD01_nrm",
+		"FemaleHead04_Lod01_nrm",
+		"FemaleHead05_LOD01_nrm",
+		"FemaleHead07_Lod01_nrm",
+		"FemaleHead08_Lod01_nrm"
+	};
+
+	FemaleHeadTexturesMask = array
+	{
+		"FemaleHead01_Lod01_MASK",
+		"FemaleHead03_LOD01_MASK",
+		"FemaleHead04_Lod01_MASK",
+		"FemaleHead05_LOD01_MASK",
+		"FemaleHead07_Lod01_MASK",
+		"FemaleHead08_Lod01_MASK"
+	};
+
+
+	G3Desc = map
+	{	
+		// ---------------------------------  MALE 1-1000  ----------------------------------------------------------------------------
+		// ---------------------------------  Citizens male 1-100 --------------------------------------------------------------------
+		1 = base/Citizen1Male
+		{		
+			LowResPackage = "lr_male_standard";			
+			HighResPackage = "lr_male_standard";
+		};
+		2 = base/Citizen1Male // Medium
+		{			
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		3 = base/Citizen1Male
+		{			
+			LowResPackage = "lr_male_fat";
+			HighResPackage = "lr_male_fat";
+		};
+		4 = base/Citizen2Male
+		{			
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		5 = base/Citizen2Male
+		{			
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		6 = base/Citizen2Male
+		{
+			LowResPackage = "lr_male_fat";
+			HighResPackage = "lr_male_fat";
+		};
+		7 = base/Citizen3Male
+		{			
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		8 = base/Citizen3Male
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		9 = base/Citizen3Male
+		{
+			LowResPackage = "lr_male_fat";
+			HighResPackage = "lr_male_fat";
+		};
+		10 = base/Citizen4Male
+		{
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		11 = base/Citizen4Male
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		12 = base/Citizen4Male
+		{
+			LowResPackage = "lr_male_fat";
+			HighResPackage = "lr_male_fat";
+		};
+		
+		// ---------------------------------  Commoners male 101-200   --------------------------------------------------------------------
+		101 = base/Commoner1Male
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		102 = base/Commoner1Male
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		103 = base/Commoner1Male
+		{
+			LowResPackage = "lr_male_fat";
+			HighResPackage = "lr_male_fat";
+		};
+		104 = base/Commoner2Male
+		{	
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		105 = base/Commoner2Male
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		106 = base/Commoner2Male
+		{
+			LowResPackage = "lr_male_fat";
+			HighResPackage = "lr_male_fat";
+		};
+		107 = base/Commoner3Male
+		{	
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		108 = base/Commoner3Male
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		109 = base/Commoner3Male
+		{
+			LowResPackage = "lr_male_fat";
+			HighResPackage = "lr_male_fat";
+		};
+		110 = base/Commoner4Male
+		{	
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		111 = base/Commoner4Male
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		112 = base/Commoner4Male
+		{
+			LowResPackage = "lr_male_fat";
+			HighResPackage = "lr_male_fat";
+		};
+//		113 = base/GleemanMale
+//		{	
+//			LowResPackage = "lr_male_standard";
+//			HighResPackage = "lr_male_standard";
+//		};
+//		114 = base/GleemanMale
+//		{
+//			LowResPackage = "lr_male_medium";		
+//			HighResPackage = "lr_male_medium";
+//		};
+//		115 = base/GleemanMale
+//		{
+//			LowResPackage = "lr_male_fat";
+//			HighResPackage = "lr_male_fat";
+//		};
+				
+		// ---------------------------------  Nobles male 201-300  --------------------------------------------------------------------
+		201 = base/Noble1Male
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		202 = base/Noble1Male
+		{			
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		203 = base/Noble1Male
+		{
+			LowResPackage = "lr_male_fat";
+			HighResPackage = "lr_male_fat";
+		};
+		204 = base/Noble2Male
+		{			
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		205 = base/Noble2Male
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		206 = base/Noble2Male
+		{		
+			LowResPackage = "lr_male_fat";
+			HighResPackage = "lr_male_fat";
+		};
+		207 = base/Noble3Male
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		208 = base/Noble3Male
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		209 = base/Noble3Male
+		{	
+			LowResPackage = "lr_male_fat";
+			HighResPackage = "lr_male_fat";
+		};
+		210 = base/Noble4Male
+		{
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		211 = base/Noble4Male
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		212 = base/Noble4Male
+		{		
+			LowResPackage = "lr_male_fat";
+			HighResPackage = "lr_male_fat";
+		};
+		
+		// ---------------------------------  City guard male 301-400 --------------------------------------------------------------------
+		301 = G3CharacterDesc
+		{
+			WalkSpeed = 100;
+			RunSpeed = 210;
+			
+			AverageAge = 21;
+			
+			Poor = false;
+			MiddleClass = true;
+			Rich = false;
+			
+			Male = true;
+			Player = false;
+			Employee = false;
+			CityGuard = true;
+			Profession = true;
+		
+			LowResPackage = "lr_male_standard";
+			LowResCharacter = "guard2";
+			HighResPackage = "lr_male_standard";
+			HighResCharacter = "citizen1"; //TODO
+		};
+		
+		// ---------------------------------  KIDS male 401-405 --------------------------------------------------------------------
+		401 = G3CharacterDesc
+		{
+			WalkSpeed = 100;
+			RunSpeed = 210;
+			
+			AverageAge = 10;
+			
+			Poor = false;
+			MiddleClass = true;
+			Rich = false;
+			
+			Male = true;
+			Player = false;
+			Employee = false;
+			Adult = false;
+			Profession = false;
+		
+			LowResPackage = "lr_male_kid";
+			LowResCharacter = "kid1male";
+			HighResPackage = "lr_male_kid";
+			HighResCharacter = "kid1male"; //TODO
+		};
+		
+		// ---------------------------------  Priest male 406-410 --------------------------------------------------------------------
+		406 = G3CharacterDesc
+		{
+			WalkSpeed = 100;
+			RunSpeed = 205;
+			
+			AverageAge = 24;
+			
+			Poor = true;
+			MiddleClass = false;
+			Rich = false;
+			
+			Male = true;
+			Player = false;
+			Employee = false;
+			Adult = true;
+			Profession = true;
+		
+			LowResPackage = "lr_male_fat";
+			HighResPackage = "lr_male_fat";
+			LowResCharacter = "priest";
+			HighResCharacter = "priest";
+			
+			Interaction = G3ActorInteraction
+			{
+				TooltipText = "$NPC.Conversation";
+				TooltipIcon = "NPCTalk";
+				ContextAction = "TalkToPriest";
+				ActionFailureMessage = "NPCTalkInteractionError";
+			};
+		};
+		
+		// ---------------------------------  Master of the Arsenal male 411-411 --------------------------------------------------------------------
+		411 = G3CharacterDesc
+		{
+			WalkSpeed = 100;
+			RunSpeed = 205;
+			
+			AverageAge = 30;
+			
+			Poor = false;
+			MiddleClass = true;
+			Rich = false;
+			
+			Male = true;
+			Player = false;
+			Employee = false;
+			Adult = true;
+			Profession = true;
+		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+			LowResCharacter = "moa";
+			HighResCharacter = "moa";
+			
+			Interaction = G3ActorInteraction
+			{
+				TooltipText = "$NPC.Conversation";
+				TooltipIcon = "NPCTalk";
+				ContextAction = "TalkToMoA";
+				ActionFailureMessage = "NPCTalkInteractionError";
+			};
+		};
+
+		// ---------------------------------  Jailor male 412-412 --------------------------------------------------------------------
+		412 = G3CharacterDesc
+		{
+			WalkSpeed = 100;
+			RunSpeed = 205;
+			
+			AverageAge = 30;
+			
+			Poor = true;
+			MiddleClass = false;
+			Rich = false;
+			
+			Male = true;
+			Player = false;
+			Employee = false;
+			Adult = true;
+			Profession = true;
+		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+			LowResCharacter = "jailor";
+			HighResCharacter = "jailor";
+
+			Interaction = G3ActorInteraction
+			{
+				TooltipText = "$NPC.Conversation";
+				TooltipIcon = "NPCTalk";
+				ContextAction = "TalkToJailor";
+				ActionFailureMessage = "NPCTalkInteractionError";
+			};
+		};
+		
+		// ---------------------------------  Town hall receptionist male 415-415 --------------------------------------------------------------------
+		415 = G3CharacterDesc
+		{
+			WalkSpeed = 100;
+			RunSpeed = 205;
+			
+			AverageAge = 40;
+			AverageAge = 30;
+			
+			Poor = false;
+			Poor = true;
+			MiddleClass = false;
+			Rich = true;
+			Rich = false;
+			
+			Male = true;
+			Player = false;
+			Employee = false;
+			Adult = true;
+			Profession = true;
+		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+			LowResCharacter = "receptionist";
+			HighResCharacter = "receptionist";
+			
+			Interaction = G3ActorInteraction
+			{
+				TooltipText = "$NPC.Conversation";
+				TooltipIcon = "NPCTalk";
+				ContextAction = "TalkToReceptionist";
+				ActionFailureMessage = "NPCTalkInteractionError";
+			};
+		};
+		
+		// ---------------------------------  LeatherArmor male 501-600  --------------------------------------------------------------------
+		501 = base/LeatherArmorMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		502 = base/LeatherArmorMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		503 = base/LeatherArmorMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+		// ---------------------------------  PlagueSuit male 601-650  --------------------------------------------------------------------
+		601 = base/PlagueSuitMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		602 = base/PlagueSuitMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		603 = base/PlagueSuitMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+		// ---------------------------------  Platemail male 651-700  --------------------------------------------------------------------
+		651 = base/PlatemailMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		652 = base/PlatemailMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		653 = base/PlatemailMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+		// ---------------------------------  Chainmail male 751-800  --------------------------------------------------------------------
+		751 = base/ChainmailMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		752 = base/ChainmailMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		753 = base/ChainmailMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+		// ---------------------------------  Gambeson male 801-850  --------------------------------------------------------------------
+		801 = base/GambesonMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		802 = base/GambesonMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		803 = base/GambesonMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+		// ---------------------------------  CamouflageCloak male 851-900  --------------------------------------------------------------------
+		851 = base/CamouflageCloakMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		852 = base/CamouflageCloakMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		853 = base/CamouflageCloakMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+		// ---------------------------------  Henchmen male 901-905  --------------------------------------------------------------------
+		901 = base/HenchmenMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		902 = base/HenchmenMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		903 = base/HenchmenMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+		// ---------------------------------  Transporter male 906-910  --------------------------------------------------------------------
+		906 = base/TransporterMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		907 = base/TransporterMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		908 = base/TransporterMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+		// ---------------------------------  Miller male 911-915  --------------------------------------------------------------------
+		911 = base/MillerMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		912 = base/MillerMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		913 = base/MillerMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+		// ---------------------------------  Butcher male 916-920  --------------------------------------------------------------------
+		916 = base/ButcherMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		917 = base/ButcherMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		918 = base/ButcherMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+		// ---------------------------------  Baker male 921-925  --------------------------------------------------------------------
+		921 = base/BakerMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		922 = base/BakerMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		923 = base/BakerMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+		// ---------------------------------  Farmer male 926-930  --------------------------------------------------------------------
+		926 = base/FarmerMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		927 = base/FarmerMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		928 = base/FarmerMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+		// ---------------------------------  Innkeeper male 931-935  --------------------------------------------------------------------
+		931 = base/InnkeeperMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		932 = base/InnkeeperMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		933 = base/InnkeeperMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+		// ---------------------------------  Artisan male 936-940  --------------------------------------------------------------------
+		936 = base/ArtisanMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		937 = base/ArtisanMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		938 = base/ArtisanMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+		// ---------------------------------  Tailor male 941-945  --------------------------------------------------------------------
+		941 = base/TailorMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		942 = base/TailorMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		943 = base/TailorMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+		// ---------------------------------  Carpenter male 946-950  --------------------------------------------------------------------
+		946 = base/CarpenterMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		947 = base/CarpenterMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		948 = base/CarpenterMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+			// ---------------------------------  Stonemason male 951-955  --------------------------------------------------------------------
+		951 = base/StonemasonMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		952 = base/StonemasonMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		953 = base/StonemasonMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+		// ---------------------------------  Smith male 956-960  --------------------------------------------------------------------
+		956 = base/SmithMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		957 = base/SmithMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		958 = base/SmithMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+			// ---------------------------------  Herbalist male 961-965  --------------------------------------------------------------------
+		961 = base/HerbalistMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		962 = base/HerbalistMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		963 = base/HerbalistMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+		// ---------------------------------  Apothecary male 966-970  --------------------------------------------------------------------
+		966 = base/ApothecaryMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		967 = base/ApothecaryMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		968 = base/ApothecaryMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+			// ---------------------------------  Alchemist male 971-975  --------------------------------------------------------------------
+		971 = base/AlchemistMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		972 = base/AlchemistMale
+		{
+			LowResPackage = "lr_male_medium";
+			HighResPackage = "lr_male_medium";
+		};
+		973 = base/AlchemistMale
+		{
+			LowResPackage = "lr_male_fat";
+			HighResPackage = "lr_male_fat";
+		};
+		
+		// ---------------------------------  Medicus male 976-980  --------------------------------------------------------------------
+		976 = base/MedicusMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		977 = base/MedicusMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		978 = base/MedicusMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+				// ---------------------------------  Scholar male 981-985  --------------------------------------------------------------------
+		981 = base/ScholarMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		982 = base/ScholarMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		983 = base/ScholarMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+		// ---------------------------------  Robber male 986-990  --------------------------------------------------------------------
+		986 = base/RobberMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		987 = base/RobberMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		988 = base/RobberMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+				// ---------------------------------  Mercenary male 991-995  --------------------------------------------------------------------
+		991 = base/MercenaryMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		992 = base/MercenaryMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		993 = base/MercenaryMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		
+			// ---------------------------------  Thief male 996-1000  --------------------------------------------------------------------
+		996 = base/ThiefMale
+		{		
+			LowResPackage = "lr_male_standard";
+			HighResPackage = "lr_male_standard";
+		};
+		997 = base/ThiefMale
+		{
+			LowResPackage = "lr_male_medium";		
+			HighResPackage = "lr_male_medium";
+		};
+		998 = base/ThiefMale
+		{
+			LowResPackage = "lr_male_fat";		
+			HighResPackage = "lr_male_fat";
+		};
+		//-------------------------  FEMALE 1001-2000  ------------------------------------------------------------------
+		// ------------------------  Citizens female 1001-1100 ----------------------------------------------------------
+		
+		1001 = base/Citizen1Female
+		{	
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1002 = base/Citizen1Female
+		{	
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1003 = base/Citizen1Female
+		{
+			LowResPackage = "lr_female_fat";
+			HighResPackage = "lr_female_fat";
+		};
+		1004 = base/Citizen2Female
+		{	
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1005 = base/Citizen2Female
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1006 = base/Citizen2Female
+		{
+			LowResPackage = "lr_female_fat";
+			HighResPackage = "lr_female_fat";
+		};
+		1007 = base/Citizen3Female
+		{			
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1008 = base/Citizen3Female
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1009 = base/Citizen3Female
+		{	
+			LowResPackage = "lr_female_fat";
+			HighResPackage = "lr_female_fat";
+		};
+		1010 = base/Citizen4Female
+		{	
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1011 = base/Citizen4Female
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1012 = base/Citizen4Female
+		{				
+			LowResPackage = "lr_female_fat";
+			HighResPackage = "lr_female_fat";
+		};
+
+		// ---------------------------------  Commoners female 1101-1200   --------------------------------------------------------------------
+		1101 = base/Commoner1Female
+		{
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1102 = base/Commoner1Female
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1103 = base/Commoner1Female
+		{
+			LowResPackage = "lr_female_fat";			
+			HighResPackage = "lr_female_fat";
+		};
+		1104 = base/Commoner2Female
+		{
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1105 = base/Commoner2Female
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1106 = base/Commoner2Female
+		{
+			LowResPackage = "lr_female_fat";
+			HighResPackage = "lr_female_fat";
+		};
+		1107 = base/Commoner3Female
+		{
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1108 = base/Commoner3Female
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1109 = base/Commoner3Female
+		{
+			LowResPackage = "lr_female_fat";
+			HighResPackage = "lr_female_fat";
+		};
+		1110 = base/Commoner4Female
+		{
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1111 = base/Commoner4Female
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1112 = base/Commoner4Female
+		{
+			LowResPackage = "lr_female_fat";
+			HighResPackage = "lr_female_fat";
+		};
+//		1113 = base/GleemanFemale
+//		{	
+//			LowResPackage = "lr_female_standard";
+//			HighResPackage = "lr_female_standard";
+//		};
+//		1114 = base/GleemanFemale
+//		{
+//			LowResPackage = "lr_female_medium";		
+//			HighResPackage = "lr_female_medium";
+//		};
+//		1115 = base/GleemanFemale
+//		{
+//			LowResPackage = "lr_female_fat";
+//			HighResPackage = "lr_female_fat";
+//		};		
+		
+		// ---------------------------------  Nobles female 1201-1300  --------------------------------------------------------------------
+		1201 = base/Noble1Female
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1202 = base/Noble1Female
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1203 = base/Noble1Female
+		{
+			LowResPackage = "lr_female_fat";
+			HighResPackage = "lr_female_fat";
+		};
+		1204 = base/Noble2Female
+		{	
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1205 =  base/Noble2Female
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1206 =  base/Noble2Female
+		{
+			LowResPackage = "lr_female_fat";
+			HighResPackage = "lr_female_fat";
+		};
+		1207 = base/Noble3Female
+		{			
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1208 = base/Noble3Female
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1209 = base/Noble3Female
+		{	
+			LowResPackage = "lr_female_fat";
+			HighResPackage = "lr_female_fat";
+		};
+		1210 = base/Noble4Female
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1211 = base/Noble4Female
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1212 = base/Noble4Female
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};					
+		
+		// ---------------------------------  KIDS female 1401-1405 --------------------------------------------------------------------
+		1401 = G3CharacterDesc
+		{
+			WalkSpeed = 100;
+			RunSpeed = 210;
+			
+			AverageAge = 10;
+			
+			Poor = false;
+			MiddleClass = true;
+			Rich = false;
+			
+			Male = false;
+			Player = false;
+			Employee = false;
+			Adult = false;
+			Profession = false;
+		
+			LowResPackage = "lr_female_kid";
+			LowResCharacter = "kid1female";
+			HighResPackage = "lr_female_kid";
+			HighResCharacter = "kid1female"; //TODO
+		};
+		
+		// ---------------------------------  Master of the Arsenal female 1411-1411 --------------------------------------------------------------------
+		1411 = G3CharacterDesc
+		{
+			WalkSpeed = 100;
+			RunSpeed = 205;
+			
+			AverageAge = 30;
+			
+			Poor = false;
+			MiddleClass = true;
+			Rich = false;
+			
+			Male = false;
+			Player = false;
+			Employee = false;
+			Adult = true;
+			Profession = true;
+		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+			LowResCharacter = "moa";
+			HighResCharacter = "moa";
+			
+			Interaction = G3ActorInteraction
+			{
+				TooltipText = "$NPC.Conversation";
+				TooltipIcon = "NPCTalk";
+				ContextAction = "TalkToMoA";
+				ActionFailureMessage = "NPCTalkInteractionError";
+			};
+		};
+		
+		// ---------------------------------  LeatherArmor female 1501-1600  --------------------------------------------------------------------
+		1501 = base/LeatherArmorFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1502 = base/LeatherArmorFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1503 = base/LeatherArmorFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+		// ---------------------------------  PlagueSuit female 1601-1650  --------------------------------------------------------------------
+		1601 = base/PlagueSuitFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1602 = base/PlagueSuitFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1603 = base/PlagueSuitFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+		// ---------------------------------  Platemail female 1651-1700  --------------------------------------------------------------------
+		1651 = base/PlatemailFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1652 = base/PlatemailFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1653 = base/PlatemailFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		// ---------------------------------  Chainmail female 1751-1800  --------------------------------------------------------------------
+		1751 = base/ChainmailFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1752 = base/ChainmailFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1753 = base/ChainmailFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+		// ---------------------------------  Gambeson female 1801-1850  --------------------------------------------------------------------
+		1801 = base/GambesonFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1802 = base/GambesonFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1803 = base/GambesonFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+		// ---------------------------------  CamouflageCloak female 1851-1900  --------------------------------------------------------------------
+		1851 = base/CamouflageCloakFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1852 = base/CamouflageCloakFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1853 = base/CamouflageCloakFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+		// ---------------------------------  Henchmen female 1901-1910  --------------------------------------------------------------------
+		1901 = base/HenchmenFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1902 = base/HenchmenFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1903 = base/HenchmenFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+		// ---------------------------------  Transporter female 1906-1910  --------------------------------------------------------------------
+		1906 = base/TransporterFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1907 = base/TransporterFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1908 = base/TransporterFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+		// ---------------------------------  Miller female 1911-1915  --------------------------------------------------------------------
+		1911 = base/MillerFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1912 = base/MillerFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1913 = base/MillerFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+		// ---------------------------------  Butcher female 1916-1920  --------------------------------------------------------------------
+		1916 = base/ButcherFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1917 = base/ButcherFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1918 = base/ButcherFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+		// ---------------------------------  Baker female 1921-1925  --------------------------------------------------------------------
+		1921 = base/BakerFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1922 = base/BakerFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1923 = base/BakerFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+		// ---------------------------------  Farmer female 1926-1930  --------------------------------------------------------------------
+		1926 = base/FarmerFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1927 = base/FarmerFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1928 = base/FarmerFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+		// ---------------------------------  Innkeeper female 1931-1935  --------------------------------------------------------------------
+		1931 = base/InnkeeperFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1932 = base/InnkeeperFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1933 = base/InnkeeperFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+		// ---------------------------------  Artisan female 1936-1940  --------------------------------------------------------------------
+		1936 = base/ArtisanFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1937 = base/ArtisanFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1938 = base/ArtisanFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+		// ---------------------------------  Tailor female 1941-1945  --------------------------------------------------------------------
+		1941 = base/TailorFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1942 = base/TailorFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1943 = base/TailorFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+		// ---------------------------------  Carpenter female 1946-1950  --------------------------------------------------------------------
+		1946 = base/CarpenterFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1947 = base/CarpenterFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1948 = base/CarpenterFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+			// ---------------------------------  Stonemason female 1951-1955  --------------------------------------------------------------------
+		1951 = base/StonemasonFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1952 = base/StonemasonFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1953 = base/StonemasonFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+		// ---------------------------------  Smith female 1956-1960  --------------------------------------------------------------------
+		1956 = base/SmithFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1957 = base/SmithFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1958 = base/SmithFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+			// ---------------------------------  Herbalist female 1961-1965  --------------------------------------------------------------------
+		1961 = base/HerbalistFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1962 = base/HerbalistFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1963 = base/HerbalistFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+		// ---------------------------------  Apothecary female 1966-1970  --------------------------------------------------------------------
+		1966 = base/ApothecaryFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1967 = base/ApothecaryFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1968 = base/ApothecaryFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+			// ---------------------------------  Alchemist female 1971-1975  --------------------------------------------------------------------
+		1971 = base/AlchemistFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1972 = base/AlchemistFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1973 = base/AlchemistFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+		// ---------------------------------  Medicus female 1976-1980  --------------------------------------------------------------------
+		1976 = base/MedicusFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1977 = base/MedicusFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1978 = base/MedicusFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+				// ---------------------------------  Scholar female 1981-1985  --------------------------------------------------------------------
+		1981 = base/ScholarFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1982 = base/ScholarFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1983 = base/ScholarFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+		// ---------------------------------  Robber female 1986-19190  --------------------------------------------------------------------
+		1986 = base/RobberFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1987 = base/RobberFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1988 = base/RobberFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+				// ---------------------------------  Mercenary female 1991-1995  --------------------------------------------------------------------
+		1991 = base/MercenaryFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1992 = base/MercenaryFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1993 = base/MercenaryFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+		
+			// ---------------------------------  Thief female 1996-2000  --------------------------------------------------------------------
+		1996 = base/ThiefFemale
+		{		
+			LowResPackage = "lr_female_standard";
+			HighResPackage = "lr_female_standard";
+		};
+		1997 = base/ThiefFemale
+		{
+			LowResPackage = "lr_female_medium";		
+			HighResPackage = "lr_female_medium";
+		};
+		1998 = base/ThiefFemale
+		{
+			LowResPackage = "lr_female_fat";		
+			HighResPackage = "lr_female_fat";
+		};
+	};
+};
+

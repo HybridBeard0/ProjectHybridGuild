@@ -1,0 +1,20 @@
+interiorprop_workbench_mansion extends G3PropsInstance
+{
+	static var Description = G3PropDesc
+	{
+		Visual = "interiorprop_workbench_mansion";
+	
+		Interaction = G3ActorInteraction {
+			Name = "$props.name.Workbench";
+			TooltipText = "$action.MoreInfos";
+			TooltipIcon = "MoreInfos";
+			UiEvent = "ToggleBusinessWindow";
+		};
+	};
+	
+	Interactable = true;
+	
+	EditorName = "InteriorProp Workbench Mansion";
+	EditorIcon = "media/UserInterface/PropIcons/Barrel01.png";
+	EditorCategory = 3;		
+}
