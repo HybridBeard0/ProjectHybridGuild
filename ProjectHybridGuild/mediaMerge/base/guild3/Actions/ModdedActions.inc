@@ -3541,6 +3541,86 @@
 	};
 };
 
+"Heist" = G3ActionTemplate //"Heist family"
+{
+	GUIPresent = true;
+	UICategory = "Fighting";
+	OrderIndex = 36;
+
+	ActionClassName = "SimpleExecutionAction";
+	
+	GUIData = array
+	{
+		@base/OwnFamilyAdults,
+		@base/Henchmen,
+		ActionGUIData // Employee in the action bar
+		{
+			IsCharacter = 1;
+			HasProfession = "Thief";
+			BelongsToOwnFamily = 1;
+			IsAdult = 1;
+		},
+	};
+	UsableBy = array{ "$gui.item.UsableByAdultFamilyMembers", "$gui.item.UsableByHenchmen", "$profession.Thief" };
+	
+	IconName = "HireStealHouse";
+	ActionName = "Heist";
+	DisplayName = "$action.Heist";
+	Description = "$action.HeistDesc";
+	Instruction = "$callToAction.ResidenceBusinessNotPlayersAllies";
+	ActionActor = "Character";
+	TargetActor = "Building";
+
+	Duration = 0.12; //year
+	BaseRewardXP = 100;
+
+	Cooldown = 2.0;
+	CooldownFamilyWide = true;
+
+	SourceScoreFormula = "2 + Stealth * 0.75 + Dexterity * 0.5 + Motivation + (Source.hasTag.LockPicking*5) + (Source.hasTag.eventbuffQuickChangeArtist) * 3";
+	TargetScoreFormula = "Level + BuildingSecurity";
+
+	IsImmediatelyKnownByTarget = false;
+	IsAggression = true;
+	
+	CanFail = true;
+	
+	EnterBuilding = "ForceEnterStealthy";
+
+	TargetTags = array{"Alerted", "FreemasonsGift"};			
+	DesiredProfiles = array
+	{
+		TargetProfileBuilding
+		{
+			ExcludedTypes = array{"Statue", "Stage"};
+			ActiveResidence = 3;
+			Burning = -3;
+			Business = -3;		 
+			CloseToActor = 2;
+			Guarded = -2;
+			CityBuilding = -3;
+			ResourceProducer = -3;
+			MatchTargetTags = -3;
+			FamilyProfile = TargetProfileFamily
+			{
+				MyFamily = -3;
+				Alliance = -3;
+				IsDynasty = 3;
+				GoodRelationWithMe = -2;
+				SocialHigher = 1;
+				Feud = 1;
+				Rich = 2;
+			};
+		};
+	};
+	
+	MoralAlignmentShift = 0.08;
+	MoralAlignment = MoralAlignment
+	{
+		Values = array{-0.3,-0.6,-0.5};
+	};
+};
+
 "TollRoad2" = G3ActionTemplate
 {
 	GUIPresent = false;

@@ -1,5 +1,0 @@
-pistol extends G3Actor
-{
-	static var Description = #pistol/pistol_desc;
-
-};

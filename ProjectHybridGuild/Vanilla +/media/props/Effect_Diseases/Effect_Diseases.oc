@@ -1,4 +1,0 @@
-Effect_Diseases extends G3PropsInstance
-{
-	static var Description = #Effect_Diseases/Effect_Diseases_desc;
-};

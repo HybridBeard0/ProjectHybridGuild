@@ -433,6 +433,15 @@ LawSettings
 			IsLegalByDefault = false;
 			CanChangeBy = "Office";
 		},
+		Crime
+		{
+			ActionName = "Heist";
+			ResponsibleOfficeGroup = "MayorGroup";
+			Severity = 18;
+			EvidenceBaseValue = 800;
+			IsLegalByDefault = false;
+			CanChangeBy = "Office";
+		},
 	};
 	
 	Punishments = array 

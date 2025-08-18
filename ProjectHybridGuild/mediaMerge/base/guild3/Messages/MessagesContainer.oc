@@ -7480,6 +7480,31 @@ MessagesContainer extends MessageRegistrar
 		        };
 		    };	
 		};
+//Heist
+		// FunctionSendMessage
+		"HeistSuccess" = MessageDescription //An has heist a family house 
+		{
+			Title = "$action.Heist.SuccessTargetHeadline";
+			Body = "$action.Heist.SuccessTarget";
+			Effect = "";
+			Icon = "Building";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+			VO = 130;
+		};
+		"HeistFailure" = MessageDescription 
+		{
+			Title = "$action.Heist.FailureTargetHeadline";
+			Body = "$action.Heist.FailureTarget";
+			Effect = "";
+			Icon = "Building";
+			Type = "Negative";
+			Duration = 45;
+			IsUrgent = false;
+			SFX = 34;
+		};
 // ForRent CHANGE
 		// FunctionSendMessage
 		"ForRent-NPCStayedTheNight" = MessageDescription
