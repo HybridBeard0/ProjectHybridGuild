@@ -37,7 +37,7 @@ ResultObject
 			ApplyTo = "Self";
 			Tags = array{"Pregnant"};
 			ActorValue = "Charisma";
-			Mod = +5;
+			Mod = +2;
 			Duration = 1350.0; // 9 months
 			Recover = true;
 		},
@@ -55,7 +55,7 @@ ResultObject
 			ApplyTo = "Self";
 			Tags = array{"Pregnant"};
 			ActorValue = "Resistance";
-			Mod = +3;
+			Mod = -2;
 			Duration = 1350.0; // 9 months
 			Recover = true;
 		}
