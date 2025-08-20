@@ -540,6 +540,7 @@ AIObjectives extends AIObjectivesContainer
 						"MournDeceasedRelative" = 0.1,
 						//ForRent CHANGE
 						"ActivateForRent" = 0.1,
+						"GiftOfficeHolder" = 0.02,
 					};
 				},
 				
@@ -668,6 +669,7 @@ AIObjectives extends AIObjectivesContainer
 						"MournDeceasedRelative" = 0.1,	
 						//ForRent CHANGE
 						"ActivateForRent" = 0.1,
+						"GiftOfficeHolder" = 0.4,
 					};
 				},
 								
@@ -766,6 +768,7 @@ AIObjectives extends AIObjectivesContainer
 						//religion actions
 						"DonateToChurch" = 0.1,
 						"UseObligation" = 0.1,
+						"GiftOfficeHolder" = 0.2,
 						"InitiateIntrigue" = 0.15,
 						"LetterFromInquisition" = 0.15,
 						"HoldPublicPrayer" = 0.15,	
@@ -949,7 +952,7 @@ AIObjectives extends AIObjectivesContainer
 				"SitOnBench" = 0.2,
 				"ChatWithMarketVendor" = 0.2,
 				"MournDeceasedRelative" = 0.1,
-				
+				"GiftOfficeHolder" = 0.2,
 				//"ApplyBlackWidowPoison" = 0.05,
 				//"BuyBusiness" = 0.5,
 				//"PoisonNeighborhood" = 0.05,
@@ -1521,6 +1524,7 @@ AIObjectives extends AIObjectivesContainer
 				"MournDeceasedRelative" = 0.1,
 				//ForRent CHANGE
 				"ActivateForRent" = 0.1,
+				"GiftOfficeHolder" = 0.2,
 			
 			};
 		},
@@ -1591,6 +1595,7 @@ AIObjectives extends AIObjectivesContainer
 				"MournDeceasedRelative" = 0.1,
 				//ForRent CHANGE
 				"ActivateForRent" = 0.1,
+				"GiftOfficeHolder" = 0.1,
 			};
 		},
 		
@@ -1662,6 +1667,7 @@ AIObjectives extends AIObjectivesContainer
 				"MournDeceasedRelative" = 0.1,
 				//ForRent CHANGE
 				"ActivateForRent" = 0.1,
+				"GiftOfficeHolder" = 0.2,
 			};
 		},
 		

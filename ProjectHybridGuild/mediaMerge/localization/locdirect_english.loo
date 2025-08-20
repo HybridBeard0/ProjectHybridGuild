@@ -116242,5 +116242,15 @@ LocDirectData
 			Key = "$Horseshoe.Desc";
 			Text = "Horseshoe needed for Riding Horses";
 		},
+		LocDirectEntry
+		{
+			Key = "$action.GiftOfficeHolder";
+			Text = "Gift Office Holder";
+		},
+		LocDirectEntry
+		{
+			Key = "$action.GiftOfficeHolderDesc";
+			Text = "Who don't like a gift..";
+		},
 	);
 };

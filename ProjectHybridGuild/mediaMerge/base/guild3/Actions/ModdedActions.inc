@@ -3737,3 +3737,92 @@
 		}
 	};
 };
+"GiftOfficeHolder" = G3ActionTemplate //copyright Steve
+{
+	GUIPresent = true;
+	UICategory = "Diplomacy";
+	OrderIndex = 103;
+
+	GUIData = array
+	{
+		@base/MainThreeCharacters
+	};
+	UsableBy = array{ "$gui.item.UsableByAdultPartyMembers" };
+
+	ActionClassName = "SimpleExecutionAction";
+	
+	ActionName = "GiftOfficeHolder";
+	DisplayName = "$action.GiftOfficeHolder";
+	Description = "$action.GiftOfficeHolderDesc";
+	Instruction = "$callToAction.CharacterOfficeHolder";
+
+	ActionActor = "Character";
+	TargetActor = "Character";
+	
+	BaseRewardXP = 100;
+	BaseRewardPrestige = 25;
+	
+	PriceFormula = "150",
+	
+	CooldownFamilyWide = true;
+	Cooldown = 0.30;
+	SourceRun = true;
+
+	EnterBuilding = "TryEnter";
+	SuppressBuildingEnterBehavior = true;
+	
+	CanFail = true;
+	
+	ShowSelectionPrompt = "OfficeHolders";
+	SelectionPromptNoTargetMessage = "$gui.no.office.holders";
+	
+	MoralAlignmentShift = 0.3;
+	MoralAlignment = MoralAlignment
+	{
+		Values = array{-0.3,-0.4,0.3};
+	};
+
+	DesiredProfiles = array
+	{
+		TargetProfileCharacter 
+		{
+			CloseToActor = 3;
+			OfficeHolder = 3;
+			FamilyProfile = TargetProfileFamily
+			{
+				MyFamily = -3;
+			};
+			CurrentBuildingProfiles = array
+			{
+				TargetProfileBuilding // somewhere in the world
+				{
+					Exists = -3;
+				},
+				TargetProfileBuilding // inside my residence
+				{
+					Residence = 3;
+					Burning = -3;
+					FamilyProfile = TargetProfileFamily
+					{
+						MyFamily = 3;
+					};
+				},
+				TargetProfileBuilding // inside the residence of an ally
+				{
+					Residence = 3;
+					Burning = -3;
+					FamilyProfile = TargetProfileFamily
+					{
+						Alliance = 3;
+					};
+				},
+				TargetProfileBuilding // inside a city building
+				{
+					IncludedTypes = array{"Cityhall", "Church", "cathedrale", "Arsenal"};
+				},
+			};
+		},
+	};
+	
+	Dialogue = array{ "ACTION", "d.act.GiftOfficeHolder" };	
+};

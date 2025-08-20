@@ -332,6 +332,6 @@
 	
 	RequiredBuildings = array
 	{
-		RequiredBuilding = array { "Foundry", 1 }
+		RequiredBuilding = array { "Smithy", 1 }
 	};
 };
