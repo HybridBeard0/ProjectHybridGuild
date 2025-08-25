@@ -918,7 +918,7 @@
 	SubType = 8;
 
 	DisplayName = "$BucketOfFruits.iron.name";
-	Description = "$BucketOfFruits.iron.description";
+	Description = "$BucketOfFruits.iron.desc";
 	DisplayCategories = array( "All", "Food");
 	IconName = "BucketOfFruits";
 

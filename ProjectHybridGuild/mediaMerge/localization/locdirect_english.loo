@@ -58515,7 +58515,7 @@ LocDirectData
 		},
 		LocDirectEntry
 		{
-			Key = "$Berry";
+			Key = "$Berry.iron.desc";
 			Text = "Simple delicious berries";
 		},
 

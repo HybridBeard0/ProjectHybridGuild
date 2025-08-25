@@ -81,7 +81,7 @@
 	SubType = 8;
 
 	DisplayName = "$Bucket.iron.name";
-	Description = "$Bucket.iron.description";
+	Description = "$Bucket.iron.desc";
 	DisplayCategories = array("All", "Components");
 	IconName = "Bucket";
 
